@@ -14,10 +14,37 @@
         <script type="text/javascript" src="http://cdn.bootcss.com/es6-shim/0.35.1/es6-shim.min.js"></script>
         <script type="text/javascript" src="http://cdn.bootcss.com/es6-shim/0.35.1/es6-sham.min.js"></script>
     <![endif]-->
-<link href="index.css?ebef4360951f599165ac" rel="stylesheet"></head>
+<link href="index.css?ed725b4fd3c610eb3fb3" rel="stylesheet"></head>
+
 <body>
     <div id="root">
-        Loading...
+        <style>
+            .rsuite-site-loading span{
+                font-size: 24px;
+            }
+            .rsuite-site-loading span:first-child{
+                color:#0ae;
+            }
+        </style>
+        <div class="rsuite-site-loading"  >
+            <div id="loading-text">RSuite</div>
+        </div>
+        <script>
+            (function() {
+                var content = document.getElementById('loading-text');
+                content.innerHTML = content.innerHTML.split('').map(function(letter, i) {
+                    var className = '';
+                    if (i > 0 && i < content.innerText.length - 1) {
+                        className = 'rsuite-letter-' + (i % 6);
+                    }
+                    if (letter.trim() === '') {
+                        className += ' blank';
+                    }
+                    return '<span class="' + className + '">' + letter + '</span>';
+                }).join('');
+            })();
+        </script>
     </div>
-<script type="text/javascript" src="babel.bundle.js?ebef4360951f599165ac"></script><script type="text/javascript" src="vendor.bundle.js?ebef4360951f599165ac"></script><script type="text/javascript" src="index.bundle.js?ebef4360951f599165ac"></script></body>
+<script type="text/javascript" src="babel.bundle.js?ed725b4fd3c610eb3fb3"></script><script type="text/javascript" src="vendor.bundle.js?ed725b4fd3c610eb3fb3"></script><script type="text/javascript" src="index.bundle.js?ed725b4fd3c610eb3fb3"></script></body>
+
 </html>
