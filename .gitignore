@@ -35,5 +35,11 @@ node_modules
 
 .vscode
 _build
+build
 .DS_Store
+lib/
+docs/assets
+
+# custom
+.idea
 
