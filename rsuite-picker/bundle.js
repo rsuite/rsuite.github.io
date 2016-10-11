@@ -1,4 +1,4 @@
-/*! Last update: Mon Oct 10 2016 17:27:07 GMT+0800 (CST) */
+/*! Last update: Tue Oct 11 2016 10:26:09 GMT+0800 (CST) */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -136,7 +136,7 @@
 	                            { pullRight: true },
 	                            _react2.default.createElement(
 	                                _rsuite.Nav.Item,
-	                                { href: 'https://github.com/rsuite/rsuite-table' },
+	                                { href: 'https://github.com/rsuite/rsuite-picker' },
 	                                'GitHub'
 	                            )
 	                        )
@@ -242,6 +242,12 @@
 	                        { md: 6 },
 	                        _react2.default.createElement(_MultipleExample2.default, null)
 	                    )
+	                ),
+	                _react2.default.createElement('hr', null),
+	                _react2.default.createElement(
+	                    'a',
+	                    { href: 'https://github.com/rsuite/rsuite-picker/tree/master/examples', target: '_blank' },
+	                    'More Examples'
 	                ),
 	                _react2.default.createElement(
 	                    _Markdown2.default,
