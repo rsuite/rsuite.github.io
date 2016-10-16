@@ -1,4 +1,4 @@
-/*! Last update: Tue Oct 11 2016 10:26:09 GMT+0800 (CST) */
+/*! Last update: Mon Oct 17 2016 00:06:19 GMT+0800 (CST) */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -82,15 +82,15 @@
 
 	var _SimpleExample2 = _interopRequireDefault(_SimpleExample);
 
-	var _OptionGroupExample = __webpack_require__(309);
+	var _OptionGroupExample = __webpack_require__(308);
 
 	var _OptionGroupExample2 = _interopRequireDefault(_OptionGroupExample);
 
-	var _CustomLabelExample = __webpack_require__(311);
+	var _CustomLabelExample = __webpack_require__(310);
 
 	var _CustomLabelExample2 = _interopRequireDefault(_CustomLabelExample);
 
-	var _MultipleExample = __webpack_require__(312);
+	var _MultipleExample = __webpack_require__(311);
 
 	var _MultipleExample2 = _interopRequireDefault(_MultipleExample);
 
@@ -165,7 +165,7 @@
 	                        _react2.default.createElement(
 	                            _Markdown2.default,
 	                            null,
-	                            __webpack_require__(315)
+	                            __webpack_require__(314)
 	                        )
 	                    ),
 	                    _react2.default.createElement(
@@ -188,7 +188,7 @@
 	                        _react2.default.createElement(
 	                            _Markdown2.default,
 	                            null,
-	                            __webpack_require__(316)
+	                            __webpack_require__(315)
 	                        )
 	                    ),
 	                    _react2.default.createElement(
@@ -211,7 +211,7 @@
 	                        _react2.default.createElement(
 	                            _Markdown2.default,
 	                            null,
-	                            __webpack_require__(317)
+	                            __webpack_require__(316)
 	                        )
 	                    ),
 	                    _react2.default.createElement(
@@ -234,7 +234,7 @@
 	                        _react2.default.createElement(
 	                            _Markdown2.default,
 	                            null,
-	                            __webpack_require__(318)
+	                            __webpack_require__(317)
 	                        )
 	                    ),
 	                    _react2.default.createElement(
@@ -252,7 +252,7 @@
 	                _react2.default.createElement(
 	                    _Markdown2.default,
 	                    null,
-	                    __webpack_require__(319)
+	                    __webpack_require__(318)
 	                )
 	            )
 	        );
@@ -45322,7 +45322,7 @@
 
 	var _Picker2 = _interopRequireDefault(_Picker);
 
-	var _users = __webpack_require__(308);
+	var _users = __webpack_require__(307);
 
 	var _users2 = _interopRequireDefault(_users);
 
@@ -45357,19 +45357,19 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _Container = __webpack_require__(270);
+	var _DropdownToggle = __webpack_require__(270);
 
-	var _Container2 = _interopRequireDefault(_Container);
+	var _DropdownToggle2 = _interopRequireDefault(_DropdownToggle);
 
 	var _Dropdown = __webpack_require__(271);
 
 	var _Dropdown2 = _interopRequireDefault(_Dropdown);
 
-	var _FormGroupMixin = __webpack_require__(306);
+	var _FormGroupMixin = __webpack_require__(305);
 
 	var _FormGroupMixin2 = _interopRequireDefault(_FormGroupMixin);
 
-	var _PickerMixin = __webpack_require__(307);
+	var _PickerMixin = __webpack_require__(306);
 
 	var _PickerMixin2 = _interopRequireDefault(_PickerMixin);
 
@@ -45441,7 +45441,7 @@
 
 
 	        return {
-	            active: false,
+	            open: false,
 	            currentSelected: this.getOptionByValue(groupValue || value, options) || this.getDefaultSelect(options)
 	        };
 	    },
@@ -45454,12 +45454,12 @@
 	        var groupValue = _getFormGroup2.value;
 
 	        this.setState({
-	            active: false,
+	            open: false,
 	            currentSelected: this.getOptionByValue(groupValue || value, options) || this.getDefaultSelect(options)
 	        });
 	    },
 	    handleSelect: function handleSelect(item) {
-	        var active = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+	        var open = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 	        var onChange = this.props.onChange;
 
 	        var _getFormGroup3 = this.getFormGroup();
@@ -45468,7 +45468,7 @@
 
 	        this.setState({
 	            currentSelected: item,
-	            active: active
+	            open: open
 	        });
 
 	        var currentSelectedValue = item.value;
@@ -45483,29 +45483,33 @@
 	        var className = _props2.className;
 	        var inverse = _props2.inverse;
 	        var _state = this.state;
-	        var active = _state.active;
+	        var open = _state.open;
 	        var currentSelected = _state.currentSelected;
 	        var dropup = _state.dropup;
 
 	        var formattedOptions = options.map(this.formatOption);
 	        var classes = (0, _classnames2.default)('rsuite-Picker', className, {
-	            'expand': active,
+	            'expand': open,
 	            'inverse': inverse
 	        });
 
 	        return _react2.default.createElement(
 	            'div',
 	            { className: classes },
-	            _react2.default.createElement(_Container2.default, {
+	            _react2.default.createElement(_DropdownToggle2.default, {
 	                placeholder: currentSelected.label,
-	                onClick: this.toggleDropdown
+	                onClick: this.toggleDropdown,
+	                onKeyDown: this.handleKeyDown
 	            }),
-	            active && _react2.default.createElement(_Dropdown2.default, {
+	            open && _react2.default.createElement(_Dropdown2.default, {
+	                ref: 'dropdown',
 	                value: currentSelected.value,
 	                options: formattedOptions,
 	                height: height,
 	                onSelect: this.handleSelect,
-	                dropup: dropup
+	                onKeyDown: this.handleKeyDown,
+	                dropup: dropup,
+	                onClose: this.handleClose
 	            })
 	        );
 	    }
@@ -45529,25 +45533,26 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var Container = function Container() {
+	var DropdownToggle = function DropdownToggle() {
 	    var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : props;
 
 	    var _ref$placeholder = _ref.placeholder;
 	    var placeholder = _ref$placeholder === undefined ? '' : _ref$placeholder;
 	    var onClick = _ref.onClick;
+	    var onKeyDown = _ref.onKeyDown;
 	    return _react2.default.createElement(
-	        'div',
-	        { className: 'selectContainer', onClick: onClick },
+	        'button',
+	        { className: 'toggle', onClick: onClick, onKeyDown: onKeyDown },
 	        _react2.default.createElement(
 	            'div',
-	            { className: 'selectContainer-placeholder' },
+	            { className: 'toggle-placeholder' },
 	            placeholder
 	        ),
-	        _react2.default.createElement('span', { className: 'selectContainer-arrow' })
+	        _react2.default.createElement('span', { className: 'toggle-arrow' })
 	    );
 	};
 
-	exports.default = Container;
+	exports.default = DropdownToggle;
 
 /***/ },
 /* 271 */
@@ -45567,23 +45572,34 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _server = __webpack_require__(272);
-
-	var _server2 = _interopRequireDefault(_server);
-
 	var _classnames = __webpack_require__(163);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _SearchBar = __webpack_require__(273);
+	var _SearchBar = __webpack_require__(272);
 
 	var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
-	var _DropdownMenu = __webpack_require__(274);
+	var _DropdownMenu = __webpack_require__(273);
 
 	var _DropdownMenu2 = _interopRequireDefault(_DropdownMenu);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function reactToString(element) {
+	    var nodes = [];
+	    function recursion(element) {
+	        _react2.default.Children.forEach(element.props.children, function (child) {
+	            if (_react2.default.isValidElement(child)) {
+	                recursion(child);
+	            } else if (typeof child === 'string') {
+	                nodes.push(child);
+	            }
+	        });
+	    }
+	    recursion(element);
+	    return nodes;
+	}
 
 	var Dropdown = _react2.default.createClass({
 	    displayName: 'Dropdown',
@@ -45597,7 +45613,6 @@
 	        dropup: _react.PropTypes.bool,
 	        multiple: _react.PropTypes.bool
 	    },
-
 	    getDefaultProps: function getDefaultProps() {
 	        return {
 	            options: []
@@ -45617,17 +45632,17 @@
 	    shouldDisplay: function shouldDisplay(item) {
 	        var searchText = this.state.searchText;
 
+
 	        if (typeof item.label === 'string') {
 	            return ~item.label.toLocaleLowerCase().indexOf(searchText.toLocaleLowerCase());
-	        }
-
-	        if (_react2.default.isValidElement(item.label)) {
-	            return ~_server2.default.renderToStaticMarkup(item.label).toLocaleLowerCase().indexOf(searchText.toLocaleLowerCase());
+	        } else if (_react2.default.isValidElement(item.label)) {
+	            var nodes = reactToString(item.label);
+	            return ~nodes.join('').toLocaleLowerCase().indexOf(searchText.toLocaleLowerCase());
 	        }
 
 	        return false;
 	    },
-	    handleListClick: function handleListClick(item) {
+	    handleListSelect: function handleListSelect(item) {
 	        var onSelect = this.props.onSelect;
 
 	        onSelect && onSelect(item);
@@ -45641,52 +45656,10 @@
 	            }
 	        }
 	    },
-	    handleKeyDown: function handleKeyDown(event) {
-	        var _props = this.props;
-	        var onSelect = _props.onSelect;
-	        var value = _props.value;
-	        var multiple = _props.multiple;
+	    focusNextMenuItem: function focusNextMenuItem() {
+	        var menu = this.refs.menu;
 
-
-	        if (multiple) {
-	            return;
-	        }
-
-	        this._displayOptionsNoGroup = [];
-	        this.findNextOption(this.getDisplayOptions());
-
-	        var keyCode = event.keyCode;
-	        var options = this._displayOptionsNoGroup;
-
-	        var activeIndex = -1;
-	        var activeItem = null;
-	        var showDorpdown = true;
-
-	        for (var i = 0; i < options.length; i++) {
-	            if (options[i].value === value) {
-	                activeIndex = i;
-	            }
-	        }
-
-	        switch (keyCode) {
-	            //down
-	            case 40:
-	                activeItem = options[activeIndex + 1];
-	                break;
-	            //up
-	            case 38:
-	                activeItem = options[activeIndex - 1];
-	                break;
-	            //enter
-	            case 13:
-	                activeItem = options[activeIndex];
-	                showDorpdown = false;
-	                break;
-	            default:
-	                break;
-	        }
-
-	        activeItem && onSelect && onSelect(activeItem, showDorpdown);
+	        menu.focusNextItem && menu.focusNextItem();
 	    },
 	    getDisplayOptions: function getDisplayOptions() {
 	        var _this = this;
@@ -45709,13 +45682,14 @@
 	        }) || [];
 	    },
 	    render: function render() {
-	        var _props2 = this.props;
-	        var value = _props2.value;
-	        var dropup = _props2.dropup;
-	        var height = _props2.height;
-	        var className = _props2.className;
-	        var multiple = _props2.multiple;
-	        var onClearSelected = _props2.onClearSelected;
+	        var _props = this.props;
+	        var value = _props.value;
+	        var dropup = _props.dropup;
+	        var height = _props.height;
+	        var className = _props.className;
+	        var multiple = _props.multiple;
+	        var onClearSelected = _props.onClearSelected;
+	        var onKeyDown = _props.onKeyDown;
 
 	        var classes = (0, _classnames2.default)('selectDropdown', {
 	            'checkListDropdown': multiple,
@@ -45724,14 +45698,19 @@
 
 	        return _react2.default.createElement(
 	            'div',
-	            { className: classes, onKeyDown: this.handleKeyDown },
-	            _react2.default.createElement(_SearchBar2.default, { onChange: this.handleSearchTextChange, value: this.state.searchText }),
+	            { className: classes },
+	            _react2.default.createElement(_SearchBar2.default, {
+	                onKeyDown: onKeyDown,
+	                onChange: this.handleSearchTextChange,
+	                value: this.state.searchText }),
 	            _react2.default.createElement(_DropdownMenu2.default, {
+	                ref: 'menu',
 	                multiple: multiple,
 	                selected: value,
 	                onClearSelected: onClearSelected,
 	                items: this.getDisplayOptions(),
-	                onClick: this.handleListClick,
+	                onSelect: this.handleListSelect,
+	                onClose: this.props.onClose,
 	                height: height
 	            })
 	        );
@@ -45742,15 +45721,6 @@
 
 /***/ },
 /* 272 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	module.exports = __webpack_require__(150);
-
-
-/***/ },
-/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45774,20 +45744,25 @@
 
 	    propTypes: {
 	        value: _react2.default.PropTypes.string,
-	        onChange: _react2.default.PropTypes.func
-	    },
-	    componentDidMount: function componentDidMount() {
-	        _reactDom2.default.findDOMNode(this.refs.input).focus();
+	        onChange: _react2.default.PropTypes.func,
+	        onKeyDown: _react2.default.PropTypes.func
 	    },
 	    render: function render() {
 	        var _props = this.props;
 	        var value = _props.value;
 	        var onChange = _props.onChange;
+	        var onKeyDown = _props.onKeyDown;
 
 	        return _react2.default.createElement(
 	            'div',
 	            { className: 'searchBar' },
-	            _react2.default.createElement('input', { className: 'searchBar-input', ref: 'input', value: value, onChange: onChange })
+	            _react2.default.createElement('input', {
+	                className: 'searchBar-input',
+	                ref: 'input',
+	                value: value,
+	                onKeyDown: onKeyDown,
+	                onChange: onChange
+	            })
 	        );
 	    }
 	});
@@ -45795,7 +45770,7 @@
 	exports.default = SearchBar;
 
 /***/ },
-/* 274 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45812,21 +45787,21 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _domLib = __webpack_require__(275);
+	var _domLib = __webpack_require__(274);
 
-	var _OptionGroup = __webpack_require__(302);
+	var _OptionGroup = __webpack_require__(301);
 
 	var _OptionGroup2 = _interopRequireDefault(_OptionGroup);
 
-	var _Option = __webpack_require__(303);
+	var _Option = __webpack_require__(302);
 
 	var _Option2 = _interopRequireDefault(_Option);
 
-	var _CheckGroup = __webpack_require__(304);
+	var _CheckGroup = __webpack_require__(303);
 
 	var _CheckGroup2 = _interopRequireDefault(_CheckGroup);
 
-	var _CheckItem = __webpack_require__(305);
+	var _CheckItem = __webpack_require__(304);
 
 	var _CheckItem2 = _interopRequireDefault(_CheckItem);
 
@@ -45839,7 +45814,7 @@
 	        selected: _react.PropTypes.any,
 	        items: _react.PropTypes.array,
 	        height: _react.PropTypes.number,
-	        onClick: _react.PropTypes.func,
+	        onSelect: _react.PropTypes.func,
 	        multiple: _react.PropTypes.bool
 	    },
 	    componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
@@ -45856,7 +45831,7 @@
 	            }
 
 	            var itemHeight = (0, _domLib.getHeight)(options[0]) || 32;
-	            var dropdownDOM = _reactDom2.default.findDOMNode(this.refs.menu);
+	            var dropdownDOM = _reactDom2.default.findDOMNode(this);
 	            var activeIndex = 0;
 
 	            for (var i = 0; i < options.length; i++) {
@@ -45872,17 +45847,126 @@
 	            (0, _domLib.scrollTop)(dropdownDOM, (activeIndex + 2) * itemHeight - height);
 	        }
 	    },
-	    renderOptions: function renderOptions() {
-	        var _props = this.props;
-	        var selected = _props.selected;
-	        var items = _props.items;
-	        var onClick = _props.onClick;
+	    getItemsAndActiveIndex: function getItemsAndActiveIndex() {
+	        var items = this.getFocusableMenuItems();
+	        var activeIndex = items.indexOf(document.activeElement);
+	        return { items: items, activeIndex: activeIndex };
+	    },
+	    getFocusableMenuItems: function getFocusableMenuItems() {
+	        var node = _reactDom2.default.findDOMNode(this);
+	        if (!node) {
+	            return [];
+	        }
+	        return Array.from(node.querySelectorAll('.selectOption'));
+	    },
+	    focusNextItem: function focusNextItem() {
+	        var _getItemsAndActiveInd = this.getItemsAndActiveIndex();
 
-	        return items.map(function (item, idx) {
-	            if (item.items) {
-	                return _react2.default.createElement(_OptionGroup2.default, { key: idx, selected: selected, items: item.items, label: item.label, onClick: onClick });
+	        var items = _getItemsAndActiveInd.items;
+	        var activeIndex = _getItemsAndActiveInd.activeIndex;
+
+	        if (items.length === 0) {
+	            return;
+	        }
+
+	        var nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+	        items[nextIndex].focus();
+	    },
+	    focusPreviousItem: function focusPreviousItem() {
+	        var _getItemsAndActiveInd2 = this.getItemsAndActiveIndex();
+
+	        var items = _getItemsAndActiveInd2.items;
+	        var activeIndex = _getItemsAndActiveInd2.activeIndex;
+
+
+	        if (items.length === 0) {
+	            return;
+	        }
+
+	        var prevIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+	        items[prevIndex].focus();
+	    },
+	    getActiveElementOption: function getActiveElementOption(options, value) {
+	        for (var i = 0; i < options.length; i++) {
+	            if (options[i].value === value) {
+	                return options[i];
+	            } else if (options[i].items && options[i].items.length) {
+	                var active = this.getActiveElementOption(options[i].items, value);
+	                if (active) {
+	                    return active;
+	                }
 	            }
-	            return _react2.default.createElement(_Option2.default, { key: idx, select: selected === item.value, label: item.label, onClick: onClick.bind(null, item) });
+	        }
+	        return false;
+	    },
+	    selectActiveItem: function selectActiveItem() {
+	        var _props = this.props;
+	        var items = _props.items;
+	        var onSelect = _props.onSelect;
+
+	        var activeItem = document.activeElement;
+	        var option = this.getActiveElementOption(items, activeItem.dataset.value);
+	        onSelect(option);
+	    },
+	    handleKeyDown: function handleKeyDown(event) {
+	        var _props2 = this.props;
+	        var onClose = _props2.onClose;
+	        var multiple = _props2.multiple;
+
+
+	        switch (event.keyCode) {
+	            //down
+	            case 40:
+	                this.focusNextItem();
+	                event.preventDefault();
+	                break;
+	            //up
+	            case 38:
+	                this.focusPreviousItem();
+	                event.preventDefault();
+	                break;
+	            //enter
+	            case 13:
+	                this.selectActiveItem();
+	                !multiple && onClose && onClose(event);
+	                event.preventDefault();
+	                break;
+	            //esc | tab
+	            case 27:
+	            case 9:
+	                onClose && onClose(event);
+	            default:
+	        }
+
+	        event.preventDefault();
+	    },
+	    renderOptions: function renderOptions() {
+	        var _this = this;
+
+	        var _props3 = this.props;
+	        var selected = _props3.selected;
+	        var items = _props3.items;
+	        var onSelect = _props3.onSelect;
+
+	        return items.map(function (item, index) {
+	            if (item.items) {
+	                return _react2.default.createElement(_OptionGroup2.default, {
+	                    key: index,
+	                    selected: selected,
+	                    items: item.items,
+	                    label: item.label,
+	                    onSelect: onSelect,
+	                    onKeyDown: _this.handleKeyDown
+	                });
+	            }
+	            return _react2.default.createElement(_Option2.default, {
+	                key: index,
+	                onKeyDown: _this.handleKeyDown,
+	                selected: selected === item.value,
+	                label: item.label,
+	                value: item.value,
+	                onClick: onSelect.bind(null, item)
+	            });
 	        });
 	    },
 	    getCheckedItem: function getCheckedItem(checkedItem) {
@@ -45904,15 +45988,15 @@
 	        });
 	        return Object.assign({}, checkedItem, {
 	            check: checked
-	        });;
+	        });
 	    },
 	    renderCheckList: function renderCheckList() {
-	        var _this = this;
+	        var _this2 = this;
 
-	        var _props2 = this.props;
-	        var items = _props2.items;
-	        var onClick = _props2.onClick;
-	        var onClearSelected = _props2.onClearSelected;
+	        var _props4 = this.props;
+	        var items = _props4.items;
+	        var onSelect = _props4.onSelect;
+	        var onClearSelected = _props4.onClearSelected;
 	        var _state$checkedItems = this.state.checkedItems;
 	        var checkedItems = _state$checkedItems === undefined ? [] : _state$checkedItems;
 
@@ -45926,16 +46010,35 @@
 	            return flag;
 	        }).map(function (item, idx) {
 	            if (item.items) {
-	                return _react2.default.createElement(_CheckGroup2.default, { key: idx, label: item.label, items: item.items, excludeItems: checkedItems, onClick: onClick });
+	                return _react2.default.createElement(_CheckGroup2.default, {
+	                    key: idx,
+	                    label: item.label,
+	                    items: item.items,
+	                    excludeItems: checkedItems,
+	                    onSelect: onSelect,
+	                    onKeyDown: _this2.handleKeyDown
+	                });
 	            }
-	            return _react2.default.createElement(_CheckItem2.default, { key: idx, check: item.check, label: item.label, onClick: onClick.bind(null, item) });
+	            return _react2.default.createElement(_CheckItem2.default, {
+	                key: idx, check: item.check,
+	                label: item.label,
+	                value: item.value,
+	                onSelect: onSelect.bind(null, item),
+	                onKeyDown: _this2.handleKeyDown
+	            });
 	        });
 
 	        if (checkedItems.length) {
 	            options.unshift(_react2.default.createElement('hr', { key: Math.random() * 1E18 }));
 	            options.unshift(checkedItems.map(function (item, idx) {
-	                var newItem = _this.getCheckedItem(item);
-	                return _react2.default.createElement(_CheckItem2.default, { key: idx, check: newItem.check, label: newItem.label, onClick: onClick.bind(null, newItem) });
+	                var newItem = _this2.getCheckedItem(item);
+	                return _react2.default.createElement(_CheckItem2.default, {
+	                    key: idx,
+	                    check: newItem.check,
+	                    label: newItem.label,
+	                    onSelect: onSelect.bind(null, newItem),
+	                    onKeyDown: _this2.handleKeyDown
+	                });
 	            }));
 	            options.unshift(_react2.default.createElement(
 	                'div',
@@ -45969,14 +46072,14 @@
 	        this.setState({ checkedItems: checkedItems });
 	    },
 	    render: function render() {
-	        var _props3 = this.props;
-	        var multiple = _props3.multiple;
-	        var height = _props3.height;
+	        var _props5 = this.props;
+	        var multiple = _props5.multiple;
+	        var height = _props5.height;
 
 	        var classes = multiple ? 'checkList' : 'selectList';
 	        return _react2.default.createElement(
 	            'div',
-	            { className: classes, key: true, ref: 'menu', style: { maxHeight: height } },
+	            { className: classes, style: { maxHeight: height } },
 	            multiple ? this.renderCheckList() : this.renderOptions()
 	        );
 	    }
@@ -45985,22 +46088,22 @@
 	exports.default = DropdownMenu;
 
 /***/ },
-/* 275 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var className = __webpack_require__(276);
-	var style = __webpack_require__(281);
-	var query = __webpack_require__(289);
-	var events = __webpack_require__(290);
-	var transition = __webpack_require__(294);
-	var animation = __webpack_require__(295);
-	var getVendorPrefixedName = __webpack_require__(299);
-	var BrowserSupportCore = __webpack_require__(300);
-	var DOMMouseMoveTracker = __webpack_require__(301);
+	var className = __webpack_require__(275);
+	var style = __webpack_require__(280);
+	var query = __webpack_require__(288);
+	var events = __webpack_require__(289);
+	var transition = __webpack_require__(293);
+	var animation = __webpack_require__(294);
+	var getVendorPrefixedName = __webpack_require__(298);
+	var BrowserSupportCore = __webpack_require__(299);
+	var DOMMouseMoveTracker = __webpack_require__(300);
 
 	module.exports = _extends({}, className, style, query, events, animation, {
 	    transition: transition,
@@ -46010,25 +46113,25 @@
 	});
 
 /***/ },
-/* 276 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	module.exports = {
-	    addClass: __webpack_require__(277),
-	    hasClass: __webpack_require__(278),
-	    removeClass: __webpack_require__(279),
-	    toggleClass: __webpack_require__(280)
+	    addClass: __webpack_require__(276),
+	    hasClass: __webpack_require__(277),
+	    removeClass: __webpack_require__(278),
+	    toggleClass: __webpack_require__(279)
 	};
 
 /***/ },
-/* 277 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var hasClass = __webpack_require__(278);
+	var hasClass = __webpack_require__(277);
 
 	module.exports = function addClass(target, className) {
 	    if (className) {
@@ -46042,7 +46145,7 @@
 	};
 
 /***/ },
-/* 278 */
+/* 277 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -46055,12 +46158,12 @@
 	};
 
 /***/ },
-/* 279 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var hasClass = __webpack_require__(278);
+	var hasClass = __webpack_require__(277);
 
 	module.exports = function removeClass(target, className) {
 	    if (className) {
@@ -46075,14 +46178,14 @@
 	};
 
 /***/ },
-/* 280 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var hasClass = __webpack_require__(278);
-	var addClass = __webpack_require__(277);
-	var removeClass = __webpack_require__(279);
+	var hasClass = __webpack_require__(277);
+	var addClass = __webpack_require__(276);
+	var removeClass = __webpack_require__(278);
 
 	module.exports = function toggleClass(target, className) {
 	    if (hasClass(target, className)) {
@@ -46092,17 +46195,31 @@
 	};
 
 /***/ },
-/* 281 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	module.exports = {
 
-	    getStyle: __webpack_require__(282),
-	    removeStyle: __webpack_require__(287),
-	    addStyle: __webpack_require__(288),
-	    getComputedStyle: __webpack_require__(285)
+	    getStyle: __webpack_require__(281),
+	    removeStyle: __webpack_require__(286),
+	    addStyle: __webpack_require__(287),
+	    getComputedStyle: __webpack_require__(284)
+	};
+
+/***/ },
+/* 281 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var camelizeStyleName = __webpack_require__(282);
+	var getComputedStyle = __webpack_require__(284);
+	var hyphenateStyleName = __webpack_require__(285);
+
+	module.exports = function getStyle(node, property) {
+	    return node.style[camelizeStyleName(property)] || getComputedStyle(node).getPropertyValue(hyphenateStyleName(property));
 	};
 
 /***/ },
@@ -46111,21 +46228,7 @@
 
 	'use strict';
 
-	var camelizeStyleName = __webpack_require__(283);
-	var getComputedStyle = __webpack_require__(285);
-	var hyphenateStyleName = __webpack_require__(286);
-
-	module.exports = function getStyle(node, property) {
-	    return node.style[camelizeStyleName(property)] || getComputedStyle(node).getPropertyValue(hyphenateStyleName(property));
-	};
-
-/***/ },
-/* 283 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _require = __webpack_require__(284);
+	var _require = __webpack_require__(283);
 
 	var camelize = _require.camelize;
 
@@ -46136,7 +46239,7 @@
 	};
 
 /***/ },
-/* 284 */
+/* 283 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -46193,7 +46296,7 @@
 	};
 
 /***/ },
-/* 285 */
+/* 284 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -46255,12 +46358,12 @@
 	};
 
 /***/ },
-/* 286 */
+/* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _require = __webpack_require__(284);
+	var _require = __webpack_require__(283);
 
 	var hyphenate = _require.hyphenate;
 
@@ -46271,7 +46374,7 @@
 	};
 
 /***/ },
-/* 287 */
+/* 286 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -46281,13 +46384,13 @@
 	};
 
 /***/ },
-/* 288 */
+/* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var hyphenateStyleName = __webpack_require__(286);
-	var removeStyle = __webpack_require__(287);
+	var hyphenateStyleName = __webpack_require__(285);
+	var removeStyle = __webpack_require__(286);
 
 	module.exports = function addStyle(node, property, value) {
 	    var css = '';
@@ -46310,7 +46413,7 @@
 	};
 
 /***/ },
-/* 289 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46319,7 +46422,7 @@
 
 	var ReactDOM = __webpack_require__(160);
 
-	var _require = __webpack_require__(281);
+	var _require = __webpack_require__(280);
 
 	var getStyle = _require.getStyle;
 
@@ -46550,19 +46653,19 @@
 	};
 
 /***/ },
-/* 290 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	module.exports = {
-	    on: __webpack_require__(291),
-	    off: __webpack_require__(292),
-	    onFocus: __webpack_require__(293)
+	    on: __webpack_require__(290),
+	    off: __webpack_require__(291),
+	    onFocus: __webpack_require__(292)
 	};
 
 /***/ },
-/* 291 */
+/* 290 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -46591,7 +46694,7 @@
 	};
 
 /***/ },
-/* 292 */
+/* 291 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -46616,7 +46719,7 @@
 	};
 
 /***/ },
-/* 293 */
+/* 292 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -46643,12 +46746,12 @@
 	};
 
 /***/ },
-/* 294 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _query = __webpack_require__(289);
+	var _query = __webpack_require__(288);
 
 	var has = Object.prototype.hasOwnProperty,
 	    transform = 'transform',
@@ -46711,19 +46814,19 @@
 	};
 
 /***/ },
-/* 295 */
+/* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	module.exports = {
-	    cancelAnimationFramePolyfill: __webpack_require__(296),
-	    nativeRequestAnimationFrame: __webpack_require__(297),
-	    requestAnimationFramePolyfill: __webpack_require__(298)
+	    cancelAnimationFramePolyfill: __webpack_require__(295),
+	    nativeRequestAnimationFrame: __webpack_require__(296),
+	    requestAnimationFramePolyfill: __webpack_require__(297)
 	};
 
 /***/ },
-/* 296 */
+/* 295 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {"use strict";
@@ -46734,7 +46837,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 297 */
+/* 296 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {"use strict";
@@ -46745,12 +46848,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 298 */
+/* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
 
-	var nativeRequestAnimationFrame = __webpack_require__(297);
+	var nativeRequestAnimationFrame = __webpack_require__(296);
 	var emptyFunction = function emptyFunction() {};
 	var lastTime = 0;
 
@@ -46774,14 +46877,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 299 */
+/* 298 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _query = __webpack_require__(289);
+	var _query = __webpack_require__(288);
 
-	var _stringFormatter = __webpack_require__(284);
+	var _stringFormatter = __webpack_require__(283);
 
 	var memoized = {};
 	var prefixes = ['Webkit', 'ms', 'Moz', 'O'];
@@ -46818,12 +46921,12 @@
 	module.exports = getVendorPrefixedName;
 
 /***/ },
-/* 300 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _getVendorPrefixedName = __webpack_require__(299);
+	var _getVendorPrefixedName = __webpack_require__(298);
 
 	var _getVendorPrefixedName2 = _interopRequireDefault(_getVendorPrefixedName);
 
@@ -46862,16 +46965,16 @@
 	module.exports = BrowserSupportCore;
 
 /***/ },
-/* 301 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var on = __webpack_require__(291);
-	var cancelAnimationFramePolyfill = __webpack_require__(296);
-	var requestAnimationFramePolyfill = __webpack_require__(298);
+	var on = __webpack_require__(290);
+	var cancelAnimationFramePolyfill = __webpack_require__(295);
+	var requestAnimationFramePolyfill = __webpack_require__(297);
 
 	var DOMMouseMoveTracker = function () {
 	    /**
@@ -47004,7 +47107,7 @@
 	module.exports = DOMMouseMoveTracker;
 
 /***/ },
-/* 302 */
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47021,11 +47124,11 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _Option = __webpack_require__(303);
+	var _Option = __webpack_require__(302);
 
 	var _Option2 = _interopRequireDefault(_Option);
 
-	var _domLib = __webpack_require__(275);
+	var _domLib = __webpack_require__(274);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -47040,7 +47143,8 @@
 	        var selected = _props.selected;
 	        var label = _props.label;
 	        var items = _props.items;
-	        var onClick = _props.onClick;
+	        var onSelect = _props.onSelect;
+	        var onKeyDown = _props.onKeyDown;
 
 	        return _react2.default.createElement(
 	            'div',
@@ -47055,14 +47159,77 @@
 	                ),
 	                _react2.default.createElement('span', { className: 'arrow' })
 	            ),
-	            items.map(function (item, idx) {
-	                return _react2.default.createElement(_Option2.default, { key: idx, select: selected === item.value, label: item.label, onClick: onClick.bind(null, item) });
+	            items.map(function (item, index) {
+	                return _react2.default.createElement(_Option2.default, {
+	                    key: index,
+	                    onKeyDown: onKeyDown,
+	                    selected: selected === item.value,
+	                    label: item.label,
+	                    value: item.value,
+	                    onClick: onSelect.bind(null, item)
+	                });
 	            })
 	        );
 	    }
 	});
 
 	exports.default = OptionGroup;
+
+/***/ },
+/* 302 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+	var Option = _react2.default.createClass({
+	    displayName: 'Option',
+
+	    propTypes: {
+	        selected: _react2.default.PropTypes.bool,
+	        value: _react2.default.PropTypes.any,
+	        label: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.element]),
+	        onClick: _react2.default.PropTypes.func
+	    },
+	    render: function render() {
+	        var _props = this.props;
+	        var selected = _props.selected;
+	        var label = _props.label;
+	        var value = _props.value;
+	        var _onClick = _props.onClick;
+
+	        var props = _objectWithoutProperties(_props, ['selected', 'label', 'value', 'onClick']);
+
+	        return _react2.default.createElement(
+	            'a',
+	            _extends({}, props, {
+	                className: 'selectOption' + (selected ? ' active' : ''),
+	                href: '',
+	                role: 'menuitem',
+	                'data-value': value,
+	                onClick: function onClick(event) {
+	                    _onClick && _onClick(event);
+	                    event.preventDefault();
+	                } }),
+	            label
+	        );
+	    }
+	});
+
+	exports.default = Option;
 
 /***/ },
 /* 303 */
@@ -47078,55 +47245,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Option = _react2.default.createClass({
-	    displayName: 'Option',
-
-	    propTypes: {
-	        select: _react2.default.PropTypes.bool,
-	        label: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.element]),
-	        onClick: _react2.default.PropTypes.func
-	    },
-	    render: function render() {
-	        var _props = this.props;
-	        var select = _props.select;
-	        var label = _props.label;
-	        var onClick = _props.onClick;
-
-	        return _react2.default.createElement(
-	            'div',
-	            { className: 'selectOption' + (select ? ' active' : ''), onClick: onClick },
-	            label
-	        );
-	    }
-	});
-
-	exports.default = Option;
-
-/***/ },
-/* 304 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _react = __webpack_require__(8);
-
-	var _react2 = _interopRequireDefault(_react);
-
 	var _reactDom = __webpack_require__(160);
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _CheckItem = __webpack_require__(305);
+	var _CheckItem = __webpack_require__(304);
 
 	var _CheckItem2 = _interopRequireDefault(_CheckItem);
 
-	var _domLib = __webpack_require__(275);
+	var _domLib = __webpack_require__(274);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -47137,7 +47264,7 @@
 	        items: _react2.default.PropTypes.array,
 	        excludeItems: _react2.default.PropTypes.array,
 	        label: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.element]),
-	        onClick: _react2.default.PropTypes.func
+	        onSelect: _react2.default.PropTypes.func
 	    },
 	    handleClickGroup: function handleClickGroup() {
 	        (0, _domLib.toggleClass)(_reactDom2.default.findDOMNode(this.refs.title).parentNode, 'contract');
@@ -47147,7 +47274,8 @@
 	        var _props$items = _props.items;
 	        var items = _props$items === undefined ? [] : _props$items;
 	        var label = _props.label;
-	        var onClick = _props.onClick;
+	        var onSelect = _props.onSelect;
+	        var onKeyDown = _props.onKeyDown;
 	        var _props$excludeItems = _props.excludeItems;
 	        var excludeItems = _props$excludeItems === undefined ? [] : _props$excludeItems;
 
@@ -47166,7 +47294,14 @@
 	        }
 
 	        checkList = checkList.map(function (item, idx) {
-	            return _react2.default.createElement(_CheckItem2.default, { key: idx, check: item.check, label: item.label, onClick: onClick.bind(null, item) });
+	            return _react2.default.createElement(_CheckItem2.default, {
+	                key: idx,
+	                check: item.check,
+	                label: item.label,
+	                value: item.value,
+	                onSelect: onSelect.bind(null, item),
+	                onKeyDown: onKeyDown
+	            });
 	        });
 
 	        return _react2.default.createElement(
@@ -47190,7 +47325,7 @@
 	exports.default = CheckGroup;
 
 /***/ },
-/* 305 */
+/* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47199,29 +47334,44 @@
 	    value: true
 	});
 
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 	var _react = __webpack_require__(8);
 
 	var _react2 = _interopRequireDefault(_react);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
 	var CheckItem = _react2.default.createClass({
 	    displayName: 'CheckItem',
 
 	    propTypes: {
 	        check: _react2.default.PropTypes.bool,
+	        value: _react2.default.PropTypes.any,
 	        label: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.element]),
-	        onClick: _react2.default.PropTypes.func
+	        onSelect: _react2.default.PropTypes.func
 	    },
 	    render: function render() {
 	        var _props = this.props;
 	        var check = _props.check;
 	        var label = _props.label;
-	        var onClick = _props.onClick;
+	        var value = _props.value;
+	        var onSelect = _props.onSelect;
+
+	        var props = _objectWithoutProperties(_props, ['check', 'label', 'value', 'onSelect']);
 
 	        return _react2.default.createElement(
-	            'div',
-	            { className: 'selectOption checkItem' + (check ? ' check' : ''), onClick: onClick },
+	            'a',
+	            _extends({}, props, {
+	                className: 'selectOption checkItem' + (check ? ' check' : ''),
+	                href: '',
+	                'data-value': value,
+	                onClick: function onClick(event) {
+	                    onSelect && onSelect(event);
+	                    event.preventDefault();
+	                } }),
 	            _react2.default.createElement('input', { className: 'checkItem-checkbox', type: 'checkbox' }),
 	            _react2.default.createElement(
 	                'label',
@@ -47234,7 +47384,7 @@
 	exports.default = CheckItem;
 
 /***/ },
-/* 306 */
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47261,7 +47411,7 @@
 	exports.default = FormGroupMinxin;
 
 /***/ },
-/* 307 */
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47278,7 +47428,7 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _domLib = __webpack_require__(275);
+	var _domLib = __webpack_require__(274);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -47291,17 +47441,20 @@
 	    },
 	    handleDocumentClick: function handleDocumentClick(e) {
 	        if (!_reactDom2.default.findDOMNode(this).contains(e.target)) {
-	            this.setState({ active: false });
+	            this.setState({ open: false });
 	        }
 	    },
+	    handleClose: function handleClose() {
+	        this.setState({ open: false });
+	    },
 	    toggleDropdown: function toggleDropdown() {
-	        this.setState({ active: !this.state.active });
+	        this.setState({ open: !this.state.open });
 	    },
 	    autoAdjustDropdownPosition: function autoAdjustDropdownPosition() {
 	        var _props = this.props;
 	        var height = _props.height;
 	        var dropup = _props.dropup;
-	        var active = this.state.active;
+	        var open = this.state.open;
 
 	        if (dropup) {
 	            this.setState({ dropup: dropup });
@@ -47312,6 +47465,28 @@
 	            this.setState({ dropup: true });
 	        } else {
 	            this.setState({ dropup: false });
+	        }
+	    },
+	    handleKeyDown: function handleKeyDown(event) {
+	        var dropdown = this.refs.dropdown;
+
+
+	        switch (event.keyCode) {
+	            //down
+	            case 40:
+	                if (!this.state.open) {
+	                    this.toggleDropdown();
+	                } else if (dropdown.focusNextMenuItem) {
+	                    dropdown.focusNextMenuItem();
+	                }
+	                event.preventDefault();
+	                break;
+	            //esc | tab
+	            case 27:
+	            case 9:
+	                this.handleClose(event);
+	            default:
+
 	        }
 	    },
 	    componentDidMount: function componentDidMount() {
@@ -47330,7 +47505,7 @@
 	exports.default = PickerMixin;
 
 /***/ },
-/* 308 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47399,7 +47574,7 @@
 	}];
 
 /***/ },
-/* 309 */
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47416,7 +47591,7 @@
 
 	var _Picker2 = _interopRequireDefault(_Picker);
 
-	var _userGroups = __webpack_require__(310);
+	var _userGroups = __webpack_require__(309);
 
 	var _userGroups2 = _interopRequireDefault(_userGroups);
 
@@ -47430,7 +47605,7 @@
 	});
 
 /***/ },
-/* 310 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47515,7 +47690,7 @@
 	}];
 
 /***/ },
-/* 311 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47532,7 +47707,7 @@
 
 	var _Picker2 = _interopRequireDefault(_Picker);
 
-	var _userGroups = __webpack_require__(310);
+	var _userGroups = __webpack_require__(309);
 
 	var _userGroups2 = _interopRequireDefault(_userGroups);
 
@@ -47574,7 +47749,7 @@
 	});
 
 /***/ },
-/* 312 */
+/* 311 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47587,11 +47762,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _src = __webpack_require__(313);
+	var _src = __webpack_require__(312);
 
 	var _src2 = _interopRequireDefault(_src);
 
-	var _userGroups = __webpack_require__(310);
+	var _userGroups = __webpack_require__(309);
 
 	var _userGroups2 = _interopRequireDefault(_userGroups);
 
@@ -47605,7 +47780,7 @@
 	});
 
 /***/ },
-/* 313 */
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47622,7 +47797,7 @@
 
 	var _Picker2 = _interopRequireDefault(_Picker);
 
-	var _CheckListPicker = __webpack_require__(314);
+	var _CheckListPicker = __webpack_require__(313);
 
 	var _CheckListPicker2 = _interopRequireDefault(_CheckListPicker);
 
@@ -47650,7 +47825,7 @@
 	});
 
 /***/ },
-/* 314 */
+/* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47671,21 +47846,21 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _domLib = __webpack_require__(275);
+	var _domLib = __webpack_require__(274);
 
-	var _Container = __webpack_require__(270);
+	var _DropdownToggle = __webpack_require__(270);
 
-	var _Container2 = _interopRequireDefault(_Container);
+	var _DropdownToggle2 = _interopRequireDefault(_DropdownToggle);
 
 	var _Dropdown = __webpack_require__(271);
 
 	var _Dropdown2 = _interopRequireDefault(_Dropdown);
 
-	var _FormGroupMixin = __webpack_require__(306);
+	var _FormGroupMixin = __webpack_require__(305);
 
 	var _FormGroupMixin2 = _interopRequireDefault(_FormGroupMixin);
 
-	var _PickerMixin = __webpack_require__(307);
+	var _PickerMixin = __webpack_require__(306);
 
 	var _PickerMixin2 = _interopRequireDefault(_PickerMixin);
 
@@ -47756,7 +47931,7 @@
 	        var options = this.props.options;
 
 	        return {
-	            active: false,
+	            open: false,
 	            currentCheckedItems: this.getAllCheckedItems(options)
 	        };
 	    },
@@ -47802,7 +47977,7 @@
 	        var height = _props.height;
 	        var getPlaceholder = _props.getPlaceholder;
 	        var _state = this.state;
-	        var active = _state.active;
+	        var open = _state.open;
 	        var currentCheckedItems = _state.currentCheckedItems;
 	        var dropup = _state.dropup;
 
@@ -47812,15 +47987,21 @@
 	        })) : currentCheckedItems.length + ' selected';
 	        return _react2.default.createElement(
 	            'div',
-	            { className: 'rsuite-Picker rsuite-CheckListPicker' + (active ? ' CheckListSelect--expand' : '') },
-	            _react2.default.createElement(_Container2.default, { placeholder: placeholderText, onClick: this.toggleDropdown }),
-	            active && _react2.default.createElement(_Dropdown2.default, {
+	            { className: 'rsuite-Picker rsuite-CheckListPicker' + (open ? ' CheckListSelect--expand' : '') },
+	            _react2.default.createElement(_DropdownToggle2.default, {
+	                placeholder: placeholderText,
+	                onClick: this.toggleDropdown,
+	                onKeyDown: this.handleKeyDown
+	            }),
+	            open && _react2.default.createElement(_Dropdown2.default, {
+	                ref: 'dropdown',
 	                options: updatedCheckList,
 	                height: height,
 	                onSelect: this.handleCheck,
+	                onKeyDown: this.handleKeyDown,
+	                onClose: this.handleClose,
 	                onClearSelected: this.handleClearSelected,
 	                dropup: dropup,
-	                ref: 'dropdown',
 	                multiple: true
 	            })
 	        );
@@ -47829,31 +48010,31 @@
 	exports.default = CheckListPicker;
 
 /***/ },
-/* 315 */
+/* 314 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> Picker <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n    <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n    <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>\n},{\n    <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Kariane'</span>,\n    <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>\n},\n    ...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Picker</span> <span class=\"hljs-attr\">options</span>=<span class=\"hljs-string\">{users}</span> /&gt;</span>\n        );\n    }\n});</span></code></pre></div>";
 
 /***/ },
-/* 316 */
+/* 315 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> Picker <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n        <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">items</span>: [\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>\n            },\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Kariane'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>\n            }\n            ...\n        ]\n    }\n    ...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Picker</span> <span class=\"hljs-attr\">options</span>=<span class=\"hljs-string\">{users}</span> /&gt;</span>\n        );\n    }\n});</span></code></pre></div>";
 
 /***/ },
-/* 317 */
+/* 316 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> Picker <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n    <span class=\"hljs-attr\">label</span>: <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">i</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">\"fa fa-group\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">i</span>&gt;</span> Master <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span></span>,\n    <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Master'</span>,\n    <span class=\"hljs-attr\">items</span>: [\n        {\n            <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n            <span class=\"hljs-attr\">label</span>: <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">i</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">\"fa fa-user\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">i</span>&gt;</span>Eugenia<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span></span>\n        },\n        {\n            <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>,\n            <span class=\"hljs-attr\">label</span>: <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">i</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">\"fa fa-user\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">i</span>&gt;</span>Eugenia<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span></span>\n        }\n        ...\n    ]\n}\n...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Picker</span> <span class=\"hljs-attr\">options</span>=<span class=\"hljs-string\">{users}</span> /&gt;</span>\n        );\n    }\n});</span></code></pre></div>";
 
 /***/ },
-/* 318 */
+/* 317 */
 /***/ function(module, exports) {
 
 	module.exports = "<p>Picker also supports multi-value pickers. The select below is declared with the <code>multiple</code> attribute.</p>\n<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> Picker <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n        <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">items</span>: [\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>\n            },\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Kariane'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>\n            }\n            ...\n        ]\n    }\n    ...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Picker</span> <span class=\"hljs-attr\">options</span>=<span class=\"hljs-string\">{users}</span> <span class=\"hljs-attr\">multiple</span> /&gt;</span>\n        );\n    }\n});</span></code></pre></div>";
 
 /***/ },
-/* 319 */
+/* 318 */
 /***/ function(module, exports) {
 
 	module.exports = "<h2 id=\"props\">Props</h2>\n<table>\n<thead>\n<tr>\n<th>Prop name</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>options</td>\n<td>array</td>\n<td></td>\n<td>It&#39;s required.</td>\n</tr>\n<tr>\n<td>height</td>\n<td>number</td>\n<td>300</td>\n<td>Dropdown height.</td>\n</tr>\n<tr>\n<td>dropup</td>\n<td>bool</td>\n<td>false</td>\n<td>After you click, expanding upward.</td>\n</tr>\n<tr>\n<td>value</td>\n<td>boolean</td>\n<td></td>\n<td>Default value of single pickers.</td>\n</tr>\n<tr>\n<td>getPlaceholder</td>\n<td>function</td>\n<td></td>\n<td>Custom placeholder.</td>\n</tr>\n<tr>\n<td>onChange</td>\n<td>function</td>\n<td></td>\n<td>Callback function of after value change.</td>\n</tr>\n</tbody>\n</table>\n";
