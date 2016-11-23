@@ -1,4 +1,4 @@
-/*! Last update: Mon Oct 17 2016 00:06:19 GMT+0800 (CST) */
+/*! Last update: Wed Nov 23 2016 22:55:44 GMT+0800 (CST) */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -82,15 +82,15 @@
 
 	var _SimpleExample2 = _interopRequireDefault(_SimpleExample);
 
-	var _OptionGroupExample = __webpack_require__(308);
+	var _OptionGroupExample = __webpack_require__(310);
 
 	var _OptionGroupExample2 = _interopRequireDefault(_OptionGroupExample);
 
-	var _CustomLabelExample = __webpack_require__(310);
+	var _CustomLabelExample = __webpack_require__(312);
 
 	var _CustomLabelExample2 = _interopRequireDefault(_CustomLabelExample);
 
-	var _MultipleExample = __webpack_require__(311);
+	var _MultipleExample = __webpack_require__(313);
 
 	var _MultipleExample2 = _interopRequireDefault(_MultipleExample);
 
@@ -45318,11 +45318,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Picker = __webpack_require__(269);
+	var _src = __webpack_require__(269);
 
-	var _Picker2 = _interopRequireDefault(_Picker);
+	var _src2 = _interopRequireDefault(_src);
 
-	var _users = __webpack_require__(307);
+	var _users = __webpack_require__(309);
 
 	var _users2 = _interopRequireDefault(_users);
 
@@ -45330,13 +45330,110 @@
 
 	exports.default = _react2.default.createClass({
 	    displayName: 'SimpleExample',
+	    handleSelect: function handleSelect(value) {
+	        console.log(value);
+	        this.setState({
+	            value: value
+	        });
+	    },
+	    getInitialState: function getInitialState() {
+	        return {
+	            value: ''
+	        };
+	    },
 	    render: function render() {
-	        return _react2.default.createElement(_Picker2.default, { options: _users2.default });
+	        return _react2.default.createElement(_src2.default, {
+	            options: _users2.default,
+	            defaultValue: this.state.value,
+	            onChange: this.handleSelect });
 	    }
 	});
 
 /***/ },
 /* 269 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _Picker = __webpack_require__(270);
+
+	var _Picker2 = _interopRequireDefault(_Picker);
+
+	var _CheckListPicker = __webpack_require__(307);
+
+	var _CheckListPicker2 = _interopRequireDefault(_CheckListPicker);
+
+	var _FormGroupMixin = __webpack_require__(308);
+
+	var _FormGroupMixin2 = _interopRequireDefault(_FormGroupMixin);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+	exports.default = _react2.default.createClass({
+	    displayName: 'src',
+
+	    mixins: [_FormGroupMixin2.default],
+	    propTypes: {
+	        multiple: _react.PropTypes.bool,
+	        onChange: _react.PropTypes.func,
+	        height: _react.PropTypes.number
+	    },
+	    getDefaultProps: function getDefaultProps() {
+	        return {
+	            height: 320
+	        };
+	    },
+	    handleChange: function handleChange(value) {
+	        var onChange = this.props.onChange;
+
+	        var _getFormGroup = this.getFormGroup();
+
+	        var onFormGroupChange = _getFormGroup.onChange;
+
+
+	        onFormGroupChange && onFormGroupChange(value);
+	        onChange && onChange(value);
+	    },
+	    render: function render() {
+	        var _props = this.props;
+	        var multiple = _props.multiple;
+
+	        var props = _objectWithoutProperties(_props, ['multiple']);
+
+	        var _getFormGroup2 = this.getFormGroup();
+
+	        var value = _getFormGroup2.value;
+
+	        var customProps = _extends({}, props, {
+	            onChange: this.handleChange
+	        });
+
+	        if (multiple) {
+	            return _react2.default.createElement(_CheckListPicker2.default, customProps);
+	        }
+
+	        if (value) {
+	            customProps = Object.assign({}, customProps, { value: value });
+	        }
+
+	        return _react2.default.createElement(_Picker2.default, customProps);
+	    }
+	});
+
+/***/ },
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45357,17 +45454,13 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _DropdownToggle = __webpack_require__(270);
+	var _DropdownToggle = __webpack_require__(271);
 
 	var _DropdownToggle2 = _interopRequireDefault(_DropdownToggle);
 
-	var _Dropdown = __webpack_require__(271);
+	var _Dropdown = __webpack_require__(272);
 
 	var _Dropdown2 = _interopRequireDefault(_Dropdown);
-
-	var _FormGroupMixin = __webpack_require__(305);
-
-	var _FormGroupMixin2 = _interopRequireDefault(_FormGroupMixin);
 
 	var _PickerMixin = __webpack_require__(306);
 
@@ -45378,13 +45471,14 @@
 	var Picker = _react2.default.createClass({
 	    displayName: 'Picker',
 
-	    mixins: [_FormGroupMixin2.default, _PickerMixin2.default],
+	    mixins: [_PickerMixin2.default],
 	    propTypes: {
-	        options: _react.PropTypes.array,
+	        options: _react.PropTypes.array.isRequired,
 	        onChange: _react.PropTypes.func,
 	        height: _react.PropTypes.number,
 	        dropup: _react.PropTypes.bool,
-	        value: _react.PropTypes.any // default value
+	        value: _react.PropTypes.any,
+	        defaultValue: _react.PropTypes.any
 	    },
 	    formatOption: function formatOption(option) {
 	        if (typeof option === 'string') {
@@ -45432,53 +45526,44 @@
 	        return this.formatOption(firstOption);
 	    },
 	    getInitialState: function getInitialState() {
-	        var _getFormGroup = this.getFormGroup();
-
-	        var groupValue = _getFormGroup.value;
 	        var _props = this.props;
-	        var value = _props.value;
-	        var options = _props.options;
+	        var defaultValue = _props.defaultValue;
+	        var _props$options = _props.options;
+	        var options = _props$options === undefined ? [] : _props$options;
 
 
 	        return {
 	            open: false,
-	            currentSelected: this.getOptionByValue(groupValue || value, options) || this.getDefaultSelect(options)
+	            currentSelected: this.getOptionByValue(defaultValue, options) || this.getDefaultSelect(options)
 	        };
 	    },
 	    componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
 	        var value = nextProps.value;
-	        var options = nextProps.options;
+	        var _nextProps$options = nextProps.options;
+	        var options = _nextProps$options === undefined ? [] : _nextProps$options;
 
-	        var _getFormGroup2 = this.getFormGroup();
 
-	        var groupValue = _getFormGroup2.value;
-
-	        this.setState({
-	            open: false,
-	            currentSelected: this.getOptionByValue(groupValue || value, options) || this.getDefaultSelect(options)
-	        });
+	        if (value) {
+	            this.setState({
+	                open: false,
+	                currentSelected: this.getOptionByValue(value, options) || this.getDefaultSelect(options)
+	            });
+	        }
 	    },
 	    handleSelect: function handleSelect(item) {
 	        var open = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 	        var onChange = this.props.onChange;
 
-	        var _getFormGroup3 = this.getFormGroup();
-
-	        var onGroupChange = _getFormGroup3.onChange;
-
 	        this.setState({
 	            currentSelected: item,
 	            open: open
 	        });
-
-	        var currentSelectedValue = item.value;
-
-	        onChange && onChange(currentSelectedValue);
-	        onGroupChange && onGroupChange(item.value);
+	        onChange && onChange(item.value);
 	    },
 	    render: function render() {
 	        var _props2 = this.props;
-	        var options = _props2.options;
+	        var _props2$options = _props2.options;
+	        var options = _props2$options === undefined ? [] : _props2$options;
 	        var height = _props2.height;
 	        var className = _props2.className;
 	        var inverse = _props2.inverse;
@@ -45489,6 +45574,7 @@
 
 	        var formattedOptions = options.map(this.formatOption);
 	        var classes = (0, _classnames2.default)('rsuite-Picker', className, {
+	            'rsuite-Picker--dropup': dropup,
 	            'expand': open,
 	            'inverse': inverse
 	        });
@@ -45518,7 +45604,7 @@
 	exports.default = Picker;
 
 /***/ },
-/* 270 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45542,7 +45628,7 @@
 	    var onKeyDown = _ref.onKeyDown;
 	    return _react2.default.createElement(
 	        'button',
-	        { className: 'toggle', onClick: onClick, onKeyDown: onKeyDown },
+	        { type: 'button', className: 'toggle', onClick: onClick, onKeyDown: onKeyDown },
 	        _react2.default.createElement(
 	            'div',
 	            { className: 'toggle-placeholder' },
@@ -45555,7 +45641,7 @@
 	exports.default = DropdownToggle;
 
 /***/ },
-/* 271 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45576,11 +45662,11 @@
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _SearchBar = __webpack_require__(272);
+	var _SearchBar = __webpack_require__(273);
 
 	var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
-	var _DropdownMenu = __webpack_require__(273);
+	var _DropdownMenu = __webpack_require__(274);
 
 	var _DropdownMenu2 = _interopRequireDefault(_DropdownMenu);
 
@@ -45720,7 +45806,7 @@
 	exports.default = Dropdown;
 
 /***/ },
-/* 272 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45770,7 +45856,7 @@
 	exports.default = SearchBar;
 
 /***/ },
-/* 273 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45778,6 +45864,8 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+
+	var _React$createClass;
 
 	var _react = __webpack_require__(8);
 
@@ -45787,27 +45875,29 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _domLib = __webpack_require__(274);
+	var _domLib = __webpack_require__(275);
 
-	var _OptionGroup = __webpack_require__(301);
+	var _OptionGroup = __webpack_require__(302);
 
 	var _OptionGroup2 = _interopRequireDefault(_OptionGroup);
 
-	var _Option = __webpack_require__(302);
+	var _Option = __webpack_require__(303);
 
 	var _Option2 = _interopRequireDefault(_Option);
 
-	var _CheckGroup = __webpack_require__(303);
+	var _CheckGroup = __webpack_require__(304);
 
 	var _CheckGroup2 = _interopRequireDefault(_CheckGroup);
 
-	var _CheckItem = __webpack_require__(304);
+	var _CheckItem = __webpack_require__(305);
 
 	var _CheckItem2 = _interopRequireDefault(_CheckItem);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var DropdownMenu = _react2.default.createClass({
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	var DropdownMenu = _react2.default.createClass((_React$createClass = {
 	    displayName: 'DropdownMenu',
 
 	    propTypes: {
@@ -45888,7 +45978,7 @@
 	    },
 	    getActiveElementOption: function getActiveElementOption(options, value) {
 	        for (var i = 0; i < options.length; i++) {
-	            if (options[i].value === value) {
+	            if (options[i].value + '' === value + '') {
 	                return options[i];
 	            } else if (options[i].items && options[i].items.length) {
 	                var active = this.getActiveElementOption(options[i].items, value);
@@ -45906,6 +45996,7 @@
 
 	        var activeItem = document.activeElement;
 	        var option = this.getActiveElementOption(items, activeItem.dataset.value);
+
 	        onSelect(option);
 	    },
 	    handleKeyDown: function handleKeyDown(event) {
@@ -45965,7 +46056,7 @@
 	                selected: selected === item.value,
 	                label: item.label,
 	                value: item.value,
-	                onClick: onSelect.bind(null, item)
+	                onSelect: onSelect.bind(null, item)
 	            });
 	        });
 	    },
@@ -46036,6 +46127,7 @@
 	                    key: idx,
 	                    check: newItem.check,
 	                    label: newItem.label,
+	                    value: item.value,
 	                    onSelect: onSelect.bind(null, newItem),
 	                    onKeyDown: _this2.handleKeyDown
 	                });
@@ -46053,13 +46145,11 @@
 
 	        return options;
 	    },
-	    componentWillMount: function componentWillMount() {
-	        var items = this.props.items;
+	    setCheckedItems: function setCheckedItems(items) {
 
 	        var checkedItems = items.filter(function (item) {
 	            return item.check;
 	        });
-
 	        items.forEach(function (group) {
 	            if (group.items && group.items.length) {
 	                var subItems = group.items.filter(function (item) {
@@ -46071,39 +46161,63 @@
 
 	        this.setState({ checkedItems: checkedItems });
 	    },
-	    render: function render() {
-	        var _props5 = this.props;
-	        var multiple = _props5.multiple;
-	        var height = _props5.height;
+	    _getItemsLength: function _getItemsLength() {
+	        var items = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 
-	        var classes = multiple ? 'checkList' : 'selectList';
-	        return _react2.default.createElement(
-	            'div',
-	            { className: classes, style: { maxHeight: height } },
-	            multiple ? this.renderCheckList() : this.renderOptions()
-	        );
+	        var length = items.length;
+
+	        var size = items.map(function (item) {
+	            return item.items ? item.items.length : 0;
+	        });
+
+	        if (size.length) {
+	            length += size.reduce(function (previous, current) {
+	                return previous + current;
+	            });
+	        }
+
+	        return length;
+	    },
+	    componentWillMount: function componentWillMount() {
+	        this.setCheckedItems(this.props.items);
 	    }
-	});
+	}, _defineProperty(_React$createClass, 'componentWillReceiveProps', function componentWillReceiveProps(nextProps) {
+
+	    if (this._getItemsLength(nextProps.items) !== this._getItemsLength(this.props.items)) {
+	        this.setCheckedItems(nextProps.items);
+	    }
+	}), _defineProperty(_React$createClass, 'render', function render() {
+	    var _props5 = this.props;
+	    var multiple = _props5.multiple;
+	    var height = _props5.height;
+
+	    var classes = multiple ? 'checkList' : 'selectList';
+	    return _react2.default.createElement(
+	        'div',
+	        { className: classes, style: { maxHeight: height } },
+	        multiple ? this.renderCheckList() : this.renderOptions()
+	    );
+	}), _React$createClass));
 
 	exports.default = DropdownMenu;
 
 /***/ },
-/* 274 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var className = __webpack_require__(275);
-	var style = __webpack_require__(280);
-	var query = __webpack_require__(288);
-	var events = __webpack_require__(289);
-	var transition = __webpack_require__(293);
-	var animation = __webpack_require__(294);
-	var getVendorPrefixedName = __webpack_require__(298);
-	var BrowserSupportCore = __webpack_require__(299);
-	var DOMMouseMoveTracker = __webpack_require__(300);
+	var className = __webpack_require__(276);
+	var style = __webpack_require__(281);
+	var query = __webpack_require__(289);
+	var events = __webpack_require__(290);
+	var transition = __webpack_require__(294);
+	var animation = __webpack_require__(295);
+	var getVendorPrefixedName = __webpack_require__(299);
+	var BrowserSupportCore = __webpack_require__(300);
+	var DOMMouseMoveTracker = __webpack_require__(301);
 
 	module.exports = _extends({}, className, style, query, events, animation, {
 	    transition: transition,
@@ -46113,25 +46227,25 @@
 	});
 
 /***/ },
-/* 275 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	module.exports = {
-	    addClass: __webpack_require__(276),
-	    hasClass: __webpack_require__(277),
-	    removeClass: __webpack_require__(278),
-	    toggleClass: __webpack_require__(279)
-	};
-
-/***/ },
 /* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var hasClass = __webpack_require__(277);
+	module.exports = {
+	    addClass: __webpack_require__(277),
+	    hasClass: __webpack_require__(278),
+	    removeClass: __webpack_require__(279),
+	    toggleClass: __webpack_require__(280)
+	};
+
+/***/ },
+/* 277 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var hasClass = __webpack_require__(278);
 
 	module.exports = function addClass(target, className) {
 	    if (className) {
@@ -46145,7 +46259,7 @@
 	};
 
 /***/ },
-/* 277 */
+/* 278 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -46158,12 +46272,12 @@
 	};
 
 /***/ },
-/* 278 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var hasClass = __webpack_require__(277);
+	var hasClass = __webpack_require__(278);
 
 	module.exports = function removeClass(target, className) {
 	    if (className) {
@@ -46178,14 +46292,14 @@
 	};
 
 /***/ },
-/* 279 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var hasClass = __webpack_require__(277);
-	var addClass = __webpack_require__(276);
-	var removeClass = __webpack_require__(278);
+	var hasClass = __webpack_require__(278);
+	var addClass = __webpack_require__(277);
+	var removeClass = __webpack_require__(279);
 
 	module.exports = function toggleClass(target, className) {
 	    if (hasClass(target, className)) {
@@ -46195,31 +46309,17 @@
 	};
 
 /***/ },
-/* 280 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	module.exports = {
 
-	    getStyle: __webpack_require__(281),
-	    removeStyle: __webpack_require__(286),
-	    addStyle: __webpack_require__(287),
-	    getComputedStyle: __webpack_require__(284)
-	};
-
-/***/ },
-/* 281 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var camelizeStyleName = __webpack_require__(282);
-	var getComputedStyle = __webpack_require__(284);
-	var hyphenateStyleName = __webpack_require__(285);
-
-	module.exports = function getStyle(node, property) {
-	    return node.style[camelizeStyleName(property)] || getComputedStyle(node).getPropertyValue(hyphenateStyleName(property));
+	    getStyle: __webpack_require__(282),
+	    removeStyle: __webpack_require__(287),
+	    addStyle: __webpack_require__(288),
+	    getComputedStyle: __webpack_require__(285)
 	};
 
 /***/ },
@@ -46228,7 +46328,21 @@
 
 	'use strict';
 
-	var _require = __webpack_require__(283);
+	var camelizeStyleName = __webpack_require__(283);
+	var getComputedStyle = __webpack_require__(285);
+	var hyphenateStyleName = __webpack_require__(286);
+
+	module.exports = function getStyle(node, property) {
+	    return node.style[camelizeStyleName(property)] || getComputedStyle(node).getPropertyValue(hyphenateStyleName(property));
+	};
+
+/***/ },
+/* 283 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _require = __webpack_require__(284);
 
 	var camelize = _require.camelize;
 
@@ -46239,7 +46353,7 @@
 	};
 
 /***/ },
-/* 283 */
+/* 284 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -46296,7 +46410,7 @@
 	};
 
 /***/ },
-/* 284 */
+/* 285 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -46358,12 +46472,12 @@
 	};
 
 /***/ },
-/* 285 */
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _require = __webpack_require__(283);
+	var _require = __webpack_require__(284);
 
 	var hyphenate = _require.hyphenate;
 
@@ -46374,7 +46488,7 @@
 	};
 
 /***/ },
-/* 286 */
+/* 287 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -46384,13 +46498,13 @@
 	};
 
 /***/ },
-/* 287 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var hyphenateStyleName = __webpack_require__(285);
-	var removeStyle = __webpack_require__(286);
+	var hyphenateStyleName = __webpack_require__(286);
+	var removeStyle = __webpack_require__(287);
 
 	module.exports = function addStyle(node, property, value) {
 	    var css = '';
@@ -46413,7 +46527,7 @@
 	};
 
 /***/ },
-/* 288 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46422,7 +46536,7 @@
 
 	var ReactDOM = __webpack_require__(160);
 
-	var _require = __webpack_require__(280);
+	var _require = __webpack_require__(281);
 
 	var getStyle = _require.getStyle;
 
@@ -46653,19 +46767,19 @@
 	};
 
 /***/ },
-/* 289 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	module.exports = {
-	    on: __webpack_require__(290),
-	    off: __webpack_require__(291),
-	    onFocus: __webpack_require__(292)
+	    on: __webpack_require__(291),
+	    off: __webpack_require__(292),
+	    onFocus: __webpack_require__(293)
 	};
 
 /***/ },
-/* 290 */
+/* 291 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -46694,7 +46808,7 @@
 	};
 
 /***/ },
-/* 291 */
+/* 292 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -46719,7 +46833,7 @@
 	};
 
 /***/ },
-/* 292 */
+/* 293 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -46746,12 +46860,12 @@
 	};
 
 /***/ },
-/* 293 */
+/* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _query = __webpack_require__(288);
+	var _query = __webpack_require__(289);
 
 	var has = Object.prototype.hasOwnProperty,
 	    transform = 'transform',
@@ -46814,19 +46928,19 @@
 	};
 
 /***/ },
-/* 294 */
+/* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	module.exports = {
-	    cancelAnimationFramePolyfill: __webpack_require__(295),
-	    nativeRequestAnimationFrame: __webpack_require__(296),
-	    requestAnimationFramePolyfill: __webpack_require__(297)
+	    cancelAnimationFramePolyfill: __webpack_require__(296),
+	    nativeRequestAnimationFrame: __webpack_require__(297),
+	    requestAnimationFramePolyfill: __webpack_require__(298)
 	};
 
 /***/ },
-/* 295 */
+/* 296 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {"use strict";
@@ -46837,7 +46951,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 296 */
+/* 297 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {"use strict";
@@ -46848,12 +46962,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 297 */
+/* 298 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
 
-	var nativeRequestAnimationFrame = __webpack_require__(296);
+	var nativeRequestAnimationFrame = __webpack_require__(297);
 	var emptyFunction = function emptyFunction() {};
 	var lastTime = 0;
 
@@ -46877,14 +46991,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 298 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _query = __webpack_require__(288);
+	var _query = __webpack_require__(289);
 
-	var _stringFormatter = __webpack_require__(283);
+	var _stringFormatter = __webpack_require__(284);
 
 	var memoized = {};
 	var prefixes = ['Webkit', 'ms', 'Moz', 'O'];
@@ -46921,12 +47035,12 @@
 	module.exports = getVendorPrefixedName;
 
 /***/ },
-/* 299 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _getVendorPrefixedName = __webpack_require__(298);
+	var _getVendorPrefixedName = __webpack_require__(299);
 
 	var _getVendorPrefixedName2 = _interopRequireDefault(_getVendorPrefixedName);
 
@@ -46965,16 +47079,16 @@
 	module.exports = BrowserSupportCore;
 
 /***/ },
-/* 300 */
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var on = __webpack_require__(290);
-	var cancelAnimationFramePolyfill = __webpack_require__(295);
-	var requestAnimationFramePolyfill = __webpack_require__(297);
+	var on = __webpack_require__(291);
+	var cancelAnimationFramePolyfill = __webpack_require__(296);
+	var requestAnimationFramePolyfill = __webpack_require__(298);
 
 	var DOMMouseMoveTracker = function () {
 	    /**
@@ -47107,7 +47221,7 @@
 	module.exports = DOMMouseMoveTracker;
 
 /***/ },
-/* 301 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47115,6 +47229,8 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _react = __webpack_require__(8);
 
@@ -47124,31 +47240,52 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _Option = __webpack_require__(302);
+	var _Option = __webpack_require__(303);
 
 	var _Option2 = _interopRequireDefault(_Option);
 
-	var _domLib = __webpack_require__(274);
+	var _domLib = __webpack_require__(275);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 	var OptionGroup = _react2.default.createClass({
 	    displayName: 'OptionGroup',
 	    handleClickGroup: function handleClickGroup() {
-
-	        (0, _domLib.toggleClass)(_reactDom2.default.findDOMNode(this.refs.title).parentNode, 'contract');
+	        (0, _domLib.toggleClass)(_reactDom2.default.findDOMNode(this), 'shrink');
 	    },
-	    render: function render() {
+	    renderOption: function renderOption(item, index) {
 	        var _props = this.props;
 	        var selected = _props.selected;
-	        var label = _props.label;
-	        var items = _props.items;
 	        var onSelect = _props.onSelect;
 	        var onKeyDown = _props.onKeyDown;
 
+	        return _react2.default.createElement(_Option2.default, {
+	            key: index,
+	            onKeyDown: onKeyDown,
+	            selected: selected === item.value,
+	            label: item.label,
+	            value: item.value,
+	            onSelect: onSelect && onSelect.bind(null, item)
+	        });
+	    },
+	    render: function render() {
+	        var _this = this;
+
+	        var _props2 = this.props;
+	        var label = _props2.label;
+	        var _props2$items = _props2.items;
+	        var items = _props2$items === undefined ? [] : _props2$items;
+	        var children = _props2.children;
+
+	        var props = _objectWithoutProperties(_props2, ['label', 'items', 'children']);
+
 	        return _react2.default.createElement(
 	            'div',
-	            { className: 'selectGroup' },
+	            _extends({
+	                className: 'selectGroup'
+	            }, props),
 	            _react2.default.createElement(
 	                'div',
 	                { className: 'selectGroup-title', ref: 'title', onClick: this.handleClickGroup },
@@ -47159,16 +47296,9 @@
 	                ),
 	                _react2.default.createElement('span', { className: 'arrow' })
 	            ),
-	            items.map(function (item, index) {
-	                return _react2.default.createElement(_Option2.default, {
-	                    key: index,
-	                    onKeyDown: onKeyDown,
-	                    selected: selected === item.value,
-	                    label: item.label,
-	                    value: item.value,
-	                    onClick: onSelect.bind(null, item)
-	                });
-	            })
+	            items.length ? items.map(function (item, index) {
+	                return _this.renderOption(item, index);
+	            }) : children
 	        );
 	    }
 	});
@@ -47176,7 +47306,7 @@
 	exports.default = OptionGroup;
 
 /***/ },
-/* 302 */
+/* 303 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47202,16 +47332,16 @@
 	        selected: _react2.default.PropTypes.bool,
 	        value: _react2.default.PropTypes.any,
 	        label: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.element]),
-	        onClick: _react2.default.PropTypes.func
+	        onSelect: _react2.default.PropTypes.func
 	    },
 	    render: function render() {
 	        var _props = this.props;
 	        var selected = _props.selected;
 	        var label = _props.label;
 	        var value = _props.value;
-	        var _onClick = _props.onClick;
+	        var onSelect = _props.onSelect;
 
-	        var props = _objectWithoutProperties(_props, ['selected', 'label', 'value', 'onClick']);
+	        var props = _objectWithoutProperties(_props, ['selected', 'label', 'value', 'onSelect']);
 
 	        return _react2.default.createElement(
 	            'a',
@@ -47221,8 +47351,8 @@
 	                role: 'menuitem',
 	                'data-value': value,
 	                onClick: function onClick(event) {
-	                    _onClick && _onClick(event);
 	                    event.preventDefault();
+	                    onSelect && onSelect(event);
 	                } }),
 	            label
 	        );
@@ -47232,7 +47362,7 @@
 	exports.default = Option;
 
 /***/ },
-/* 303 */
+/* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47249,11 +47379,11 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _CheckItem = __webpack_require__(304);
+	var _CheckItem = __webpack_require__(305);
 
 	var _CheckItem2 = _interopRequireDefault(_CheckItem);
 
-	var _domLib = __webpack_require__(274);
+	var _domLib = __webpack_require__(275);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -47325,7 +47455,7 @@
 	exports.default = CheckGroup;
 
 /***/ },
-/* 304 */
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47384,33 +47514,6 @@
 	exports.default = CheckItem;
 
 /***/ },
-/* 305 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _react = __webpack_require__(8);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var FormGroupMinxin = {
-	    contextTypes: {
-	        formGroup: _react2.default.PropTypes.object
-	    },
-	    getFormGroup: function getFormGroup() {
-	        return this.context.formGroup || {};
-	    }
-	};
-
-	exports.default = FormGroupMinxin;
-
-/***/ },
 /* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -47428,17 +47531,11 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _domLib = __webpack_require__(274);
+	var _domLib = __webpack_require__(275);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var PickerMixin = {
-	    getDefaultProps: function getDefaultProps() {
-	        return {
-	            height: 320,
-	            options: []
-	        };
-	    },
 	    handleDocumentClick: function handleDocumentClick(e) {
 	        if (!_reactDom2.default.findDOMNode(this).contains(e.target)) {
 	            this.setState({ open: false });
@@ -47469,7 +47566,6 @@
 	    },
 	    handleKeyDown: function handleKeyDown(event) {
 	        var dropdown = this.refs.dropdown;
-
 
 	        switch (event.keyCode) {
 	            //down
@@ -47518,326 +47614,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = [{
-	    label: 'Eugenia',
-	    value: 'Eugenia'
-	}, {
-	    label: 'Kariane',
-	    value: 'Kariane'
-	}, {
-	    label: 'Louisa',
-	    value: 'Louisa'
-	}, {
-	    label: 'Marty',
-	    value: 'Marty'
-	}, {
-	    label: 'Kenya',
-	    value: 'Kenya'
-	}, {
-	    label: 'Hal',
-	    value: 'Hal'
-	}, {
-	    label: 'Julius',
-	    value: 'Julius'
-	}, {
-	    label: 'Travon',
-	    value: 'Travon'
-	}, {
-	    label: 'Vincenza',
-	    value: 'Vincenza'
-	}, {
-	    label: 'Dominic',
-	    value: 'Dominic'
-	}, {
-	    label: 'Dave',
-	    value: 'Dave'
-	}, {
-	    label: 'Maya',
-	    value: 'Maya'
-	}, {
-	    label: 'Kristoffer',
-	    value: 'Kristoffer'
-	}, {
-	    label: 'Pearlie',
-	    value: 'Pearlie'
-	}, {
-	    label: 'Tyrel',
-	    value: 'Tyrel'
-	}, {
-	    label: 'Jaylen',
-	    value: 'Jaylen'
-	}, {
-	    label: 'Rogelio',
-	    value: 'Rogelio'
-	}];
-
-/***/ },
-/* 308 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _react = __webpack_require__(8);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Picker = __webpack_require__(269);
-
-	var _Picker2 = _interopRequireDefault(_Picker);
-
-	var _userGroups = __webpack_require__(309);
-
-	var _userGroups2 = _interopRequireDefault(_userGroups);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createClass({
-	    displayName: 'OptionGroupExample',
-	    render: function render() {
-	        return _react2.default.createElement(_Picker2.default, { options: _userGroups2.default });
-	    }
-	});
-
-/***/ },
-/* 309 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _react = __webpack_require__(8);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = [{
-	    label: 'Master',
-	    value: 'Master',
-	    items: [{
-	        label: 'Eugenia',
-	        value: 'Eugenia'
-	    }, {
-	        label: 'Kariane',
-	        value: 'Kariane'
-	    }, {
-	        label: 'Louisa',
-	        value: 'Louisa'
-	    }, {
-	        label: 'Marty',
-	        value: 'Marty'
-	    }, {
-	        label: 'Kenya',
-	        value: 'Kenya'
-	    }]
-	}, {
-	    label: 'Developer',
-	    value: 'Developer',
-	    items: [{
-	        label: 'Hal',
-	        value: 'Hal'
-	    }, {
-	        label: 'Julius',
-	        value: 'Julius'
-	    }, {
-	        label: 'Travon',
-	        value: 'Travon'
-	    }, {
-	        label: 'Vincenza',
-	        value: 'Vincenza'
-	    }, {
-	        label: 'Dominic',
-	        value: 'Dominic'
-	    }]
-	}, {
-	    label: 'Reporter',
-	    value: 'Reporter',
-	    items: [{
-	        label: 'Dave',
-	        value: 'Dave'
-	    }, {
-	        label: 'Maya',
-	        value: 'Maya'
-	    }, {
-	        label: 'Kristoffer',
-	        value: 'Kristoffer'
-	    }]
-	}, {
-	    label: 'Guest',
-	    value: 'Guest',
-	    items: [{
-	        label: 'Pearlie',
-	        value: 'Pearlie'
-	    }, {
-	        label: 'Tyrel',
-	        value: 'Tyrel'
-	    }, {
-	        label: 'Jaylen',
-	        value: 'Jaylen'
-	    }, {
-	        label: 'Rogelio',
-	        value: 'Rogelio'
-	    }]
-	}];
-
-/***/ },
-/* 310 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _react = __webpack_require__(8);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Picker = __webpack_require__(269);
-
-	var _Picker2 = _interopRequireDefault(_Picker);
-
-	var _userGroups = __webpack_require__(309);
-
-	var _userGroups2 = _interopRequireDefault(_userGroups);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createClass({
-	    displayName: 'CustomLabelExample',
-	    render: function render() {
-
-	        var options = _userGroups2.default.map(function (group) {
-	            var items = group.items || [];
-	            return {
-	                value: group.value,
-	                label: _react2.default.createElement(
-	                    'div',
-	                    null,
-	                    _react2.default.createElement('i', { className: 'fa fa-group' }),
-	                    '  ',
-	                    group.label
-	                ),
-	                items: items.map(function (item) {
-	                    return {
-	                        value: item.value,
-	                        label: _react2.default.createElement(
-	                            'div',
-	                            null,
-	                            _react2.default.createElement('i', { className: 'fa fa-user' }),
-	                            '  ',
-	                            item.label,
-	                            ' '
-	                        )
-	                    };
-	                })
-	            };
-	        });
-
-	        return _react2.default.createElement(_Picker2.default, { options: options });
-	    }
-	});
-
-/***/ },
-/* 311 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _react = __webpack_require__(8);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _src = __webpack_require__(312);
-
-	var _src2 = _interopRequireDefault(_src);
-
-	var _userGroups = __webpack_require__(309);
-
-	var _userGroups2 = _interopRequireDefault(_userGroups);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = _react2.default.createClass({
-	    displayName: 'MultipleExample',
-	    render: function render() {
-	        return _react2.default.createElement(_src2.default, { options: _userGroups2.default, multiple: true });
-	    }
-	});
-
-/***/ },
-/* 312 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _react = __webpack_require__(8);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Picker = __webpack_require__(269);
-
-	var _Picker2 = _interopRequireDefault(_Picker);
-
-	var _CheckListPicker = __webpack_require__(313);
-
-	var _CheckListPicker2 = _interopRequireDefault(_CheckListPicker);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-	exports.default = _react2.default.createClass({
-	    displayName: 'src',
-
-	    propTypes: {
-	        multiple: _react.PropTypes.bool
-	    },
-	    render: function render() {
-	        var _props = this.props;
-	        var multiple = _props.multiple;
-
-	        var props = _objectWithoutProperties(_props, ['multiple']);
-
-	        if (multiple) {
-	            return _react2.default.createElement(_CheckListPicker2.default, props);
-	        }
-	        return _react2.default.createElement(_Picker2.default, props);
-	    }
-	});
-
-/***/ },
-/* 313 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _react = __webpack_require__(8);
-
-	var _react2 = _interopRequireDefault(_react);
-
 	var _classnames = __webpack_require__(163);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
@@ -47846,19 +47622,15 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _domLib = __webpack_require__(274);
+	var _domLib = __webpack_require__(275);
 
-	var _DropdownToggle = __webpack_require__(270);
+	var _DropdownToggle = __webpack_require__(271);
 
 	var _DropdownToggle2 = _interopRequireDefault(_DropdownToggle);
 
-	var _Dropdown = __webpack_require__(271);
+	var _Dropdown = __webpack_require__(272);
 
 	var _Dropdown2 = _interopRequireDefault(_Dropdown);
-
-	var _FormGroupMixin = __webpack_require__(305);
-
-	var _FormGroupMixin2 = _interopRequireDefault(_FormGroupMixin);
 
 	var _PickerMixin = __webpack_require__(306);
 
@@ -47871,7 +47643,7 @@
 	var CheckListPicker = _react2.default.createClass({
 	    displayName: 'CheckListPicker',
 
-	    mixins: [_FormGroupMixin2.default, _PickerMixin2.default],
+	    mixins: [_PickerMixin2.default],
 	    propTypes: {
 	        options: _react.PropTypes.array,
 	        onChange: _react.PropTypes.func,
@@ -47976,6 +47748,8 @@
 	        var options = _props.options;
 	        var height = _props.height;
 	        var getPlaceholder = _props.getPlaceholder;
+	        var className = _props.className;
+	        var inverse = _props.inverse;
 	        var _state = this.state;
 	        var open = _state.open;
 	        var currentCheckedItems = _state.currentCheckedItems;
@@ -47985,9 +47759,16 @@
 	        var placeholderText = getPlaceholder ? getPlaceholder(currentCheckedItems.map(function (i) {
 	            return i.value;
 	        })) : currentCheckedItems.length + ' selected';
+
+	        var classes = (0, _classnames2.default)('rsuite-Picker rsuite-CheckListPicker', className, {
+	            'rsuite-Picker--dropup': dropup,
+	            'expand CheckListSelect--expand': open,
+	            'inverse': inverse
+	        });
+
 	        return _react2.default.createElement(
 	            'div',
-	            { className: 'rsuite-Picker rsuite-CheckListPicker' + (open ? ' CheckListSelect--expand' : '') },
+	            { className: classes },
 	            _react2.default.createElement(_DropdownToggle2.default, {
 	                placeholder: placeholderText,
 	                onClick: this.toggleDropdown,
@@ -48008,6 +47789,308 @@
 	    }
 	});
 	exports.default = CheckListPicker;
+
+/***/ },
+/* 308 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var FormGroupMinxin = {
+	    contextTypes: {
+	        formGroup: _react2.default.PropTypes.object
+	    },
+	    getFormGroup: function getFormGroup() {
+	        return this.context.formGroup || {};
+	    }
+	};
+
+	exports.default = FormGroupMinxin;
+
+/***/ },
+/* 309 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = [{
+	    label: 'Eugenia',
+	    value: 'Eugenia'
+	}, {
+	    label: 'Kariane',
+	    value: 'Kariane'
+	}, {
+	    label: 'Louisa',
+	    value: 'Louisa'
+	}, {
+	    label: 'Marty',
+	    value: 'Marty'
+	}, {
+	    label: 'Kenya',
+	    value: 'Kenya'
+	}, {
+	    label: 'Hal',
+	    value: 'Hal'
+	}, {
+	    label: 'Julius',
+	    value: 'Julius'
+	}, {
+	    label: 'Travon',
+	    value: 'Travon'
+	}, {
+	    label: 'Vincenza',
+	    value: 'Vincenza'
+	}, {
+	    label: 'Dominic',
+	    value: 'Dominic'
+	}, {
+	    label: 'Dave',
+	    value: 'Dave'
+	}, {
+	    label: 'Maya',
+	    value: 'Maya'
+	}, {
+	    label: 'Kristoffer',
+	    value: 'Kristoffer'
+	}, {
+	    label: 'Pearlie',
+	    value: 'Pearlie'
+	}, {
+	    label: 'Tyrel',
+	    value: 'Tyrel'
+	}, {
+	    label: 'Jaylen',
+	    value: 'Jaylen'
+	}, {
+	    label: 'Rogelio',
+	    value: 'Rogelio'
+	}];
+
+/***/ },
+/* 310 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _src = __webpack_require__(269);
+
+	var _src2 = _interopRequireDefault(_src);
+
+	var _userGroups = __webpack_require__(311);
+
+	var _userGroups2 = _interopRequireDefault(_userGroups);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	    displayName: 'OptionGroupExample',
+	    render: function render() {
+	        return _react2.default.createElement(_src2.default, { options: _userGroups2.default });
+	    }
+	});
+
+/***/ },
+/* 311 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = [{
+	    label: 'Master',
+	    value: 'Master',
+	    items: [{
+	        label: 'Eugenia',
+	        value: 'Eugenia'
+	    }, {
+	        label: 'Kariane',
+	        value: 'Kariane'
+	    }, {
+	        label: 'Louisa',
+	        value: 'Louisa'
+	    }, {
+	        label: 'Marty',
+	        value: 'Marty'
+	    }, {
+	        label: 'Kenya',
+	        value: 'Kenya'
+	    }]
+	}, {
+	    label: 'Developer',
+	    value: 'Developer',
+	    items: [{
+	        label: 'Hal',
+	        value: 'Hal'
+	    }, {
+	        label: 'Julius',
+	        value: 'Julius'
+	    }, {
+	        label: 'Travon',
+	        value: 'Travon'
+	    }, {
+	        label: 'Vincenza',
+	        value: 'Vincenza'
+	    }, {
+	        label: 'Dominic',
+	        value: 'Dominic'
+	    }]
+	}, {
+	    label: 'Reporter',
+	    value: 'Reporter',
+	    items: [{
+	        label: 'Dave',
+	        value: 'Dave'
+	    }, {
+	        label: 'Maya',
+	        value: 'Maya'
+	    }, {
+	        label: 'Kristoffer',
+	        value: 'Kristoffer'
+	    }]
+	}, {
+	    label: 'Guest',
+	    value: 'Guest',
+	    items: [{
+	        label: 'Pearlie',
+	        value: 'Pearlie'
+	    }, {
+	        label: 'Tyrel',
+	        value: 'Tyrel'
+	    }, {
+	        label: 'Jaylen',
+	        value: 'Jaylen'
+	    }, {
+	        label: 'Rogelio',
+	        value: 'Rogelio'
+	    }]
+	}];
+
+/***/ },
+/* 312 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _src = __webpack_require__(269);
+
+	var _src2 = _interopRequireDefault(_src);
+
+	var _userGroups = __webpack_require__(311);
+
+	var _userGroups2 = _interopRequireDefault(_userGroups);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	    displayName: 'CustomLabelExample',
+	    render: function render() {
+
+	        var options = _userGroups2.default.map(function (group) {
+	            var items = group.items || [];
+	            return {
+	                value: group.value,
+	                label: _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    _react2.default.createElement('i', { className: 'fa fa-group' }),
+	                    '  ',
+	                    group.label
+	                ),
+	                items: items.map(function (item) {
+	                    return {
+	                        value: item.value,
+	                        label: _react2.default.createElement(
+	                            'div',
+	                            null,
+	                            _react2.default.createElement('i', { className: 'fa fa-user' }),
+	                            '  ',
+	                            item.label,
+	                            ' '
+	                        )
+	                    };
+	                })
+	            };
+	        });
+
+	        return _react2.default.createElement(_src2.default, { options: options });
+	    }
+	});
+
+/***/ },
+/* 313 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _src = __webpack_require__(269);
+
+	var _src2 = _interopRequireDefault(_src);
+
+	var _userGroups = __webpack_require__(311);
+
+	var _userGroups2 = _interopRequireDefault(_userGroups);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	    displayName: 'MultipleExample',
+	    render: function render() {
+	        return _react2.default.createElement(_src2.default, { options: _userGroups2.default, multiple: true });
+	    }
+	});
 
 /***/ },
 /* 314 */
