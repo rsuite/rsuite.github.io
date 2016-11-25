@@ -35,6 +35,7 @@ const DocSidebar = React.createClass({
                     <li><a target="_blank" href="http://rsuite.github.io/rsuite-echarts">RSuite ECharts</a></li>
                     <li><a target="_blank" href="https://rsuite.github.io/rsuite-datepicker/">RSuite Datepicker</a></li>
                     <li><a target="_blank" href="https://rsuite.github.io/rsuite-picker/">RSuite Picker</a></li>
+                    <li><a target="_blank" href="https://rsuite.github.io/rsuite-upload/">RSuite Upload</a></li>
                 </Nav>
             </Sidebar>
         );
