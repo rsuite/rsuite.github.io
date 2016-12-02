@@ -1,4 +1,4 @@
-/*! Last update: Wed Nov 23 2016 22:55:44 GMT+0800 (CST) */
+/*! Last update: Fri Dec 02 2016 13:32:25 GMT+0800 (CST) */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -45388,12 +45388,25 @@
 	    propTypes: {
 	        multiple: _react.PropTypes.bool,
 	        onChange: _react.PropTypes.func,
-	        height: _react.PropTypes.number
+	        height: _react.PropTypes.number,
+	        locale: _react.PropTypes.object
+	    },
+	    childContextTypes: {
+	        locale: _react.PropTypes.object
 	    },
 	    getDefaultProps: function getDefaultProps() {
 	        return {
-	            height: 320
+	            height: 320,
+	            locale: {
+	                placeholder: '${length} selected',
+	                clearSelected: 'Clear Selected'
+	            }
 	        };
+	    },
+	    getChildContext: function getChildContext() {
+	        var locale = this.props.locale;
+
+	        return { locale: locale };
 	    },
 	    handleChange: function handleChange(value) {
 	        var onChange = this.props.onChange;
@@ -45567,6 +45580,7 @@
 	        var height = _props2.height;
 	        var className = _props2.className;
 	        var inverse = _props2.inverse;
+	        var disabled = _props2.disabled;
 	        var _state = this.state;
 	        var open = _state.open;
 	        var currentSelected = _state.currentSelected;
@@ -45576,7 +45590,8 @@
 	        var classes = (0, _classnames2.default)('rsuite-Picker', className, {
 	            'rsuite-Picker--dropup': dropup,
 	            'expand': open,
-	            'inverse': inverse
+	            'inverse': inverse,
+	            'disabled': disabled
 	        });
 
 	        return _react2.default.createElement(
@@ -45907,6 +45922,9 @@
 	        onSelect: _react.PropTypes.func,
 	        multiple: _react.PropTypes.bool
 	    },
+	    contextTypes: {
+	        locale: _react.PropTypes.object.isRequired
+	    },
 	    componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
 
 	        if (!nextProps.multiple && nextProps.selected !== this.props.selected) {
@@ -46088,6 +46106,7 @@
 	        var items = _props4.items;
 	        var onSelect = _props4.onSelect;
 	        var onClearSelected = _props4.onClearSelected;
+	        var clearSelected = this.context.locale.clearSelected;
 	        var _state$checkedItems = this.state.checkedItems;
 	        var checkedItems = _state$checkedItems === undefined ? [] : _state$checkedItems;
 
@@ -46138,7 +46157,7 @@
 	                _react2.default.createElement(
 	                    'a',
 	                    { onClick: onClearSelected, className: 'btnClear' },
-	                    'Clear selected'
+	                    clearSelected || 'Clear selected'
 	                )
 	            ));
 	        }
@@ -47536,6 +47555,9 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var PickerMixin = {
+	    propTypes: {
+	        disabled: _react.PropTypes.bool
+	    },
 	    handleDocumentClick: function handleDocumentClick(e) {
 	        if (!_reactDom2.default.findDOMNode(this).contains(e.target)) {
 	            this.setState({ open: false });
@@ -47545,6 +47567,11 @@
 	        this.setState({ open: false });
 	    },
 	    toggleDropdown: function toggleDropdown() {
+	        var disabled = this.props.disabled;
+
+	        if (disabled) {
+	            return;
+	        }
 	        this.setState({ open: !this.state.open });
 	    },
 	    autoAdjustDropdownPosition: function autoAdjustDropdownPosition() {
@@ -47647,8 +47674,10 @@
 	    propTypes: {
 	        options: _react.PropTypes.array,
 	        onChange: _react.PropTypes.func,
-	        getPlaceholder: _react.PropTypes.func,
 	        height: _react.PropTypes.number
+	    },
+	    contextTypes: {
+	        locale: _react.PropTypes.object.isRequired
 	    },
 	    formatItem: function formatItem(item) {
 	        if (typeof item === 'string') {
@@ -47747,23 +47776,22 @@
 	        var _props = this.props;
 	        var options = _props.options;
 	        var height = _props.height;
-	        var getPlaceholder = _props.getPlaceholder;
 	        var className = _props.className;
 	        var inverse = _props.inverse;
+	        var disabled = _props.disabled;
 	        var _state = this.state;
 	        var open = _state.open;
 	        var currentCheckedItems = _state.currentCheckedItems;
 	        var dropup = _state.dropup;
+	        var placeholder = this.context.locale.placeholder;
 
 	        var updatedCheckList = this.getUpdatedCheckList(options);
-	        var placeholderText = getPlaceholder ? getPlaceholder(currentCheckedItems.map(function (i) {
-	            return i.value;
-	        })) : currentCheckedItems.length + ' selected';
-
+	        var placeholderText = placeholder ? placeholder.replace(/\${\ *length\ *}/g, currentCheckedItems.length) : currentCheckedItems.length + ' selected';
 	        var classes = (0, _classnames2.default)('rsuite-Picker rsuite-CheckListPicker', className, {
 	            'rsuite-Picker--dropup': dropup,
 	            'expand CheckListSelect--expand': open,
-	            'inverse': inverse
+	            'inverse': inverse,
+	            'disabled': disabled
 	        });
 
 	        return _react2.default.createElement(
@@ -48120,7 +48148,7 @@
 /* 318 */
 /***/ function(module, exports) {
 
-	module.exports = "<h2 id=\"props\">Props</h2>\n<table>\n<thead>\n<tr>\n<th>Prop name</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>options</td>\n<td>array</td>\n<td></td>\n<td>It&#39;s required.</td>\n</tr>\n<tr>\n<td>height</td>\n<td>number</td>\n<td>300</td>\n<td>Dropdown height.</td>\n</tr>\n<tr>\n<td>dropup</td>\n<td>bool</td>\n<td>false</td>\n<td>After you click, expanding upward.</td>\n</tr>\n<tr>\n<td>value</td>\n<td>boolean</td>\n<td></td>\n<td>Default value of single pickers.</td>\n</tr>\n<tr>\n<td>getPlaceholder</td>\n<td>function</td>\n<td></td>\n<td>Custom placeholder.</td>\n</tr>\n<tr>\n<td>onChange</td>\n<td>function</td>\n<td></td>\n<td>Callback function of after value change.</td>\n</tr>\n</tbody>\n</table>\n";
+	module.exports = "<h2 id=\"props\">Props</h2>\n<table>\n<thead>\n<tr>\n<th>Prop name</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>options</td>\n<td>array</td>\n<td></td>\n<td>It&#39;s required.</td>\n</tr>\n<tr>\n<td>height</td>\n<td>number</td>\n<td>300</td>\n<td>Dropdown height.</td>\n</tr>\n<tr>\n<td>dropup</td>\n<td>bool</td>\n<td>false</td>\n<td>After you click, expanding upward.</td>\n</tr>\n<tr>\n<td>value</td>\n<td>boolean</td>\n<td></td>\n<td>Default value of single pickers.</td>\n</tr>\n<tr>\n<td>getPlaceholder</td>\n<td>function</td>\n<td></td>\n<td>Custom placeholder.</td>\n</tr>\n<tr>\n<td>onChange</td>\n<td>function</td>\n<td></td>\n<td>Callback function of after value change.</td>\n</tr>\n<tr>\n<td>disabled</td>\n<td>bool</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>inverse</td>\n<td>bool</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>locale</td>\n<td>object</td>\n<td><code>{ clearSelected:&#39;Clear selected&#39;, placeholder: &#39;${length} selected&#39; }</code></td>\n<td></td>\n</tr>\n</tbody>\n</table>\n";
 
 /***/ }
 /******/ ]);

@@ -1,4 +1,4 @@
-/*! Last update: Wed Nov 23 2016 22:55:44 GMT+0800 (CST) */
+/*! Last update: Fri Dec 02 2016 13:32:25 GMT+0800 (CST) */
 /**灰色色阶为公用颜色**/
 /**主题**/
 .rsuite-Picker {
@@ -6,6 +6,13 @@
   position: relative;
   box-sizing: border-box;
   text-align: left;
+}
+.rsuite-Picker.disabled {
+  opacity: .65;
+}
+.rsuite-Picker.disabled .toggle {
+  background: #f5f5f5 !important;
+  cursor: not-allowed;
 }
 .rsuite-Picker .toggle {
   position: relative;
