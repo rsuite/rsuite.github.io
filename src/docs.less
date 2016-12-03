@@ -5,8 +5,9 @@
 
 .logo {
     font-family: "open sans", arial, sans-serif;
+    color: @primary-color;
     .prefix {
-        color: @primary-color;
+        color:#61dafb;
     }
 }
 
@@ -233,11 +234,11 @@ code {
     }
 }
 
-#examples-content {
+.box-wrapper {
 
     .intro-block {
         margin-top: 18px;
-
+        border: 1px solid #eee;
         &:hover {
             box-shadow: 0px 1px 3px #ccc;
         }
@@ -256,6 +257,8 @@ code {
         height: auto;
     }
 
+
+
     .intro {
         color: #999;
         height: 40px;
@@ -273,6 +276,16 @@ code {
         .code {
             color: #999;
             float: right;
+        }
+    }
+
+    .icon-wrapper{
+        text-align: center;
+        padding: 18px;
+        display: block;
+        i{
+            font-size: 90px;
+            color:#61dafb;
         }
     }
 }

@@ -1,10 +1,10 @@
+`RSuite` 是一个基于 React.js 开发的 Web 组件库，参考 Bootstrap 设计，提供其中常用组件，支持响应式布局。
+
+我们的目标就是让 WEB 开发更快捷，同时具有一定的灵活性和扩展性。
 
 ### 安装
 
-`Suite` 是基于 [React](http://facebook.github.io/react/) 开发的一套UI组件，需安装 `React` ，然后安装 Suite。
-
 ```
-npm install react --save
 npm install rsuite --save
 ```
 
