@@ -1,6 +1,7 @@
-`RSuite` 是一个基于 React.js 开发的 Web 组件库，参考 Bootstrap 设计，提供其中常用组件，支持响应式布局。
+`RSuite` 是通过 npm 管理，需要通过 npm 进行安装。
+关于组件的使用，可以参考组件的详细说明。
 
-我们的目标就是让 WEB 开发更快捷，同时具有一定的灵活性和扩展性。
+如果你想参考一个完整的 Demo ,我们也提供一些[案例](https://github.com/rsuite/rsuite/tree/master/examples/)。
 
 ### 安装
 
