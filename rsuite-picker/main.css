@@ -1,4 +1,4 @@
-/*! Last update: Fri Dec 02 2016 13:32:25 GMT+0800 (CST) */
+/*! Last update: Thu Jan 05 2017 16:12:28 GMT+0800 (CST) */
 /**灰色色阶为公用颜色**/
 /**主题**/
 .rsuite-Picker {
@@ -48,6 +48,7 @@
   background: #FFF !important;
   border-color: #dcdcdc !important;
   border-bottom-width: 0;
+  padding: 7px 26px 8px 18px;
 }
 .rsuite-Picker.expand.rsuite-Picker--dropup .toggle {
   border-top-width: 0;
@@ -92,6 +93,34 @@
   -webkit-box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.175);
 }
+.rsuite-Picker .selectDropdown .tree-node {
+  position: relative;
+}
+.rsuite-Picker .selectDropdown .tree-node.open > .node-children {
+  display: block;
+}
+.rsuite-Picker .selectDropdown .tree-node.open > .node-hasChildren .expand-icon:before {
+  content: "\F0D7";
+}
+.rsuite-Picker .selectDropdown .tree-node .node-children {
+  display: none;
+}
+.rsuite-Picker .selectDropdown .tree-node .selectOption {
+  padding: 6px;
+  margin-left: 30px;
+}
+.rsuite-Picker .selectDropdown .tree-node .expand-icon {
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  top: 6px;
+  left: 12px;
+}
+.rsuite-Picker .selectDropdown .tree-node .expand-icon:before {
+  content: "\F0DA";
+}
 .rsuite-Picker .searchBar {
   padding: 6px 10px;
 }
@@ -112,14 +141,25 @@
   display: block;
   text-decoration: none;
 }
-.rsuite-Picker .selectOption:hover {
-  background-color: #eaf6fc;
-  color: #575757;
+.rsuite-Picker .selectOption label {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
 }
+.rsuite-Picker .selectOption.notSelectable {
+  color: #8f8f8f;
+}
+.rsuite-Picker .selectOption.notSelectable:hover,
+.rsuite-Picker .selectOption.notSelectable:focus {
+  color: #8f8f8f;
+  background: none;
+}
+.rsuite-Picker .selectOption:hover,
 .rsuite-Picker .selectOption:focus {
   background-color: #eaf6fc;
   color: #575757;
-  border: 1px dotted #29a7e1;
 }
 .rsuite-Picker .selectOption.active {
   background-color: #29a7e1;
@@ -164,6 +204,18 @@
   background-color: #eaf6fc;
   color: #575757;
 }
+.rsuite-CheckListPicker .checkItem.notSelectable .checkItem-checkbox {
+  display: none;
+}
+.rsuite-CheckListPicker .checkItem.notSelectable .checkItem-label {
+  padding-left: 0;
+}
+.rsuite-CheckListPicker .checkItem.notSelectable .checkItem-label::before,
+.rsuite-CheckListPicker .checkItem.notSelectable .checkItem-label::after {
+  border: none;
+  width: 0;
+  height: 0;
+}
 .rsuite-CheckListPicker .checkItem.check .checkItem-label::after {
   font-family: FontAwesome;
   content: "\F00C";
@@ -185,6 +237,7 @@
   margin-bottom: 0;
   padding-left: 2em;
   outline: 0;
+  cursor: pointer;
 }
 .rsuite-CheckListPicker .checkItem .checkItem-label::before {
   content: '';
@@ -195,6 +248,9 @@
   height: 17px;
   background: #FFF;
   border: 1px solid #CCC;
+}
+.rsuite-CheckListPicker .checkList {
+  overflow-y: auto;
 }
 .rsuite-CheckListPicker .btnClear {
   padding: 6px 10px;

@@ -1,4 +1,4 @@
-/*! Last update: Fri Dec 02 2016 13:32:25 GMT+0800 (CST) */
+/*! Last update: Thu Jan 05 2017 16:12:28 GMT+0800 (CST) */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -94,6 +94,10 @@
 
 	var _MultipleExample2 = _interopRequireDefault(_MultipleExample);
 
+	var _TreeExample = __webpack_require__(314);
+
+	var _TreeExample2 = _interopRequireDefault(_TreeExample);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var App = _react2.default.createClass({
@@ -165,7 +169,7 @@
 	                        _react2.default.createElement(
 	                            _Markdown2.default,
 	                            null,
-	                            __webpack_require__(314)
+	                            __webpack_require__(316)
 	                        )
 	                    ),
 	                    _react2.default.createElement(
@@ -188,7 +192,7 @@
 	                        _react2.default.createElement(
 	                            _Markdown2.default,
 	                            null,
-	                            __webpack_require__(315)
+	                            __webpack_require__(317)
 	                        )
 	                    ),
 	                    _react2.default.createElement(
@@ -211,7 +215,7 @@
 	                        _react2.default.createElement(
 	                            _Markdown2.default,
 	                            null,
-	                            __webpack_require__(316)
+	                            __webpack_require__(318)
 	                        )
 	                    ),
 	                    _react2.default.createElement(
@@ -234,13 +238,36 @@
 	                        _react2.default.createElement(
 	                            _Markdown2.default,
 	                            null,
-	                            __webpack_require__(317)
+	                            __webpack_require__(319)
 	                        )
 	                    ),
 	                    _react2.default.createElement(
 	                        _rsuite.Col,
 	                        { md: 6 },
 	                        _react2.default.createElement(_MultipleExample2.default, null)
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'h2',
+	                    null,
+	                    'Tree pickers'
+	                ),
+	                _react2.default.createElement(
+	                    _rsuite.Row,
+	                    null,
+	                    _react2.default.createElement(
+	                        _rsuite.Col,
+	                        { md: 6 },
+	                        _react2.default.createElement(
+	                            _Markdown2.default,
+	                            null,
+	                            __webpack_require__(320)
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        _rsuite.Col,
+	                        { md: 6 },
+	                        _react2.default.createElement(_TreeExample2.default, null)
 	                    )
 	                ),
 	                _react2.default.createElement('hr', null),
@@ -252,7 +279,7 @@
 	                _react2.default.createElement(
 	                    _Markdown2.default,
 	                    null,
-	                    __webpack_require__(318)
+	                    __webpack_require__(321)
 	                )
 	            )
 	        );
@@ -45389,7 +45416,9 @@
 	        multiple: _react.PropTypes.bool,
 	        onChange: _react.PropTypes.func,
 	        height: _react.PropTypes.number,
-	        locale: _react.PropTypes.object
+	        locale: _react.PropTypes.object,
+	        tree: _react.PropTypes.bool,
+	        expand: _react.PropTypes.bool
 	    },
 	    childContextTypes: {
 	        locale: _react.PropTypes.object
@@ -45508,10 +45537,10 @@
 	        }
 	        for (var i = 0, len = options.length; i < len; i++) {
 	            var option = this.formatOption(options[i]);
-	            // if item has items property, this item is a group
+	            // if item has children property, this item is a group
 	            // try to find target in this group
-	            if (option.items) {
-	                var ret = this.getOptionByValue(value, option.items);
+	            if (option.children) {
+	                var ret = this.getOptionByValue(value, option.children);
 	                if (ret) {
 	                    return ret;
 	                }
@@ -45524,8 +45553,8 @@
 	        var firstOption = function getFirstOption(options) {
 	            for (var i = 0, len = options.length; i < len; i++) {
 	                if (options[i]) {
-	                    if (options[i].items) {
-	                        var ret = getFirstOption(options[i].items);
+	                    if (options[i].children) {
+	                        var ret = getFirstOption(options[i].children);
 	                        if (ret) {
 	                            return ret;
 	                        }
@@ -45581,6 +45610,8 @@
 	        var className = _props2.className;
 	        var inverse = _props2.inverse;
 	        var disabled = _props2.disabled;
+	        var expand = _props2.expand;
+	        var tree = _props2.tree;
 	        var _state = this.state;
 	        var open = _state.open;
 	        var currentSelected = _state.currentSelected;
@@ -45604,6 +45635,8 @@
 	            }),
 	            open && _react2.default.createElement(_Dropdown2.default, {
 	                ref: 'dropdown',
+	                tree: tree,
+	                expand: expand,
 	                value: currentSelected.value,
 	                options: formattedOptions,
 	                height: height,
@@ -45712,7 +45745,9 @@
 	        height: _react.PropTypes.number,
 	        onSelect: _react.PropTypes.func,
 	        dropup: _react.PropTypes.bool,
-	        multiple: _react.PropTypes.bool
+	        multiple: _react.PropTypes.bool,
+	        tree: _react.PropTypes.bool,
+	        expand: _react.PropTypes.bool
 	    },
 	    getDefaultProps: function getDefaultProps() {
 	        return {
@@ -45748,12 +45783,12 @@
 
 	        onSelect && onSelect(item);
 	    },
-	    findNextOption: function findNextOption(items) {
-	        for (var i = 0; i < items.length; i++) {
-	            if (items[i].items && items[i].items.length) {
-	                this.findNextOption(items[i].items);
+	    findNextOption: function findNextOption(children) {
+	        for (var i = 0; i < children.length; i++) {
+	            if (children[i].children && children[i].children.length) {
+	                this.findNextOption(children[i].children);
 	            } else {
-	                this._displayOptionsNoGroup.push(items[i]);
+	                this._displayOptionsNoGroup.push(children[i]);
 	            }
 	        }
 	    },
@@ -45765,13 +45800,15 @@
 	    getDisplayOptions: function getDisplayOptions() {
 	        var _this = this;
 
-	        var options = this.props.options;
+	        var _props = this.props;
+	        var options = _props.options;
+	        var tree = _props.tree;
 
 	        return options.map(function (o) {
 	            // if is a item group
-	            if (o.items) {
+	            if (o.children && !tree) {
 	                return Object.assign({}, o, {
-	                    items: o.items.filter(_this.shouldDisplay)
+	                    children: o.children.filter(_this.shouldDisplay)
 	                });
 	            }
 	            // else is a item
@@ -45779,18 +45816,20 @@
 	                return o;
 	            }
 	        }).filter(function (o) {
-	            return !!o && (!o.items || o.items.length > 0);
+	            return !!o && (!o.children || o.children.length > 0);
 	        }) || [];
 	    },
 	    render: function render() {
-	        var _props = this.props;
-	        var value = _props.value;
-	        var dropup = _props.dropup;
-	        var height = _props.height;
-	        var className = _props.className;
-	        var multiple = _props.multiple;
-	        var onClearSelected = _props.onClearSelected;
-	        var onKeyDown = _props.onKeyDown;
+	        var _props2 = this.props;
+	        var value = _props2.value;
+	        var dropup = _props2.dropup;
+	        var height = _props2.height;
+	        var className = _props2.className;
+	        var multiple = _props2.multiple;
+	        var onClearSelected = _props2.onClearSelected;
+	        var onKeyDown = _props2.onKeyDown;
+	        var tree = _props2.tree;
+	        var expand = _props2.expand;
 
 	        var classes = (0, _classnames2.default)('selectDropdown', {
 	            'checkListDropdown': multiple,
@@ -45800,7 +45839,7 @@
 	        return _react2.default.createElement(
 	            'div',
 	            { className: classes },
-	            _react2.default.createElement(_SearchBar2.default, {
+	            tree ? null : _react2.default.createElement(_SearchBar2.default, {
 	                onKeyDown: onKeyDown,
 	                onChange: this.handleSearchTextChange,
 	                value: this.state.searchText }),
@@ -45809,10 +45848,12 @@
 	                multiple: multiple,
 	                selected: value,
 	                onClearSelected: onClearSelected,
-	                items: this.getDisplayOptions(),
+	                children: this.getDisplayOptions(),
 	                onSelect: this.handleListSelect,
 	                onClose: this.props.onClose,
-	                height: height
+	                height: height,
+	                tree: tree,
+	                expand: expand
 	            })
 	        );
 	    }
@@ -45882,13 +45923,17 @@
 
 	var _React$createClass;
 
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 	var _react = __webpack_require__(8);
 
 	var _react2 = _interopRequireDefault(_react);
 
 	var _reactDom = __webpack_require__(160);
 
-	var _reactDom2 = _interopRequireDefault(_reactDom);
+	var _classnames = __webpack_require__(163);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
 
 	var _domLib = __webpack_require__(275);
 
@@ -45912,15 +45957,19 @@
 
 	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
 	var DropdownMenu = _react2.default.createClass((_React$createClass = {
 	    displayName: 'DropdownMenu',
 
 	    propTypes: {
 	        selected: _react.PropTypes.any,
-	        items: _react.PropTypes.array,
+	        children: _react.PropTypes.array,
 	        height: _react.PropTypes.number,
 	        onSelect: _react.PropTypes.func,
-	        multiple: _react.PropTypes.bool
+	        multiple: _react.PropTypes.bool,
+	        tree: _react.PropTypes.bool,
+	        expand: _react.PropTypes.bool
 	    },
 	    contextTypes: {
 	        locale: _react.PropTypes.object.isRequired
@@ -45929,7 +45978,7 @@
 
 	        if (!nextProps.multiple && nextProps.selected !== this.props.selected) {
 
-	            var node = _reactDom2.default.findDOMNode(this);
+	            var node = (0, _reactDom.findDOMNode)(this);
 	            var options = Array.from(node.querySelectorAll('.selectOption, .selectGroup-title'));
 	            var groups = Array.from(node.querySelectorAll('.selectGroup'));
 	            var height = this.props.height;
@@ -45939,7 +45988,7 @@
 	            }
 
 	            var itemHeight = (0, _domLib.getHeight)(options[0]) || 32;
-	            var dropdownDOM = _reactDom2.default.findDOMNode(this);
+	            var dropdownDOM = (0, _reactDom.findDOMNode)(this);
 	            var activeIndex = 0;
 
 	            for (var i = 0; i < options.length; i++) {
@@ -45949,57 +45998,57 @@
 	            }
 
 	            for (var _i = 0; _i < groups.length; _i++) {
-	                (0, _domLib.removeClass)(groups[_i], 'contract');
+	                (0, _domLib.removeClass)(groups[_i], 'shrink');
 	            }
 
 	            (0, _domLib.scrollTop)(dropdownDOM, (activeIndex + 2) * itemHeight - height);
 	        }
 	    },
 	    getItemsAndActiveIndex: function getItemsAndActiveIndex() {
-	        var items = this.getFocusableMenuItems();
-	        var activeIndex = items.indexOf(document.activeElement);
-	        return { items: items, activeIndex: activeIndex };
+	        var children = this.getFocusableMenuItems();
+	        var activeIndex = children.indexOf(document.activeElement);
+	        return { children: children, activeIndex: activeIndex };
 	    },
 	    getFocusableMenuItems: function getFocusableMenuItems() {
-	        var node = _reactDom2.default.findDOMNode(this);
+	        var node = (0, _reactDom.findDOMNode)(this);
 	        if (!node) {
 	            return [];
 	        }
-	        return Array.from(node.querySelectorAll('.selectOption'));
+	        return Array.from(node.querySelectorAll('.focusable'));
 	    },
 	    focusNextItem: function focusNextItem() {
 	        var _getItemsAndActiveInd = this.getItemsAndActiveIndex();
 
-	        var items = _getItemsAndActiveInd.items;
+	        var children = _getItemsAndActiveInd.children;
 	        var activeIndex = _getItemsAndActiveInd.activeIndex;
 
-	        if (items.length === 0) {
+	        if (children.length === 0) {
 	            return;
 	        }
 
-	        var nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
-	        items[nextIndex].focus();
+	        var nextIndex = activeIndex === children.length - 1 ? 0 : activeIndex + 1;
+	        children[nextIndex].focus();
 	    },
 	    focusPreviousItem: function focusPreviousItem() {
 	        var _getItemsAndActiveInd2 = this.getItemsAndActiveIndex();
 
-	        var items = _getItemsAndActiveInd2.items;
+	        var children = _getItemsAndActiveInd2.children;
 	        var activeIndex = _getItemsAndActiveInd2.activeIndex;
 
 
-	        if (items.length === 0) {
+	        if (children.length === 0) {
 	            return;
 	        }
 
-	        var prevIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
-	        items[prevIndex].focus();
+	        var prevIndex = activeIndex === 0 ? children.length - 1 : activeIndex - 1;
+	        children[prevIndex].focus();
 	    },
 	    getActiveElementOption: function getActiveElementOption(options, value) {
 	        for (var i = 0; i < options.length; i++) {
 	            if (options[i].value + '' === value + '') {
 	                return options[i];
-	            } else if (options[i].items && options[i].items.length) {
-	                var active = this.getActiveElementOption(options[i].items, value);
+	            } else if (options[i].children && options[i].children.length) {
+	                var active = this.getActiveElementOption(options[i].children, value);
 	                if (active) {
 	                    return active;
 	                }
@@ -46009,11 +46058,11 @@
 	    },
 	    selectActiveItem: function selectActiveItem() {
 	        var _props = this.props;
-	        var items = _props.items;
+	        var children = _props.children;
 	        var onSelect = _props.onSelect;
 
 	        var activeItem = document.activeElement;
-	        var option = this.getActiveElementOption(items, activeItem.dataset.value);
+	        var option = this.getActiveElementOption(children, activeItem.dataset.value);
 
 	        onSelect(option);
 	    },
@@ -46054,63 +46103,50 @@
 
 	        var _props3 = this.props;
 	        var selected = _props3.selected;
-	        var items = _props3.items;
+	        var children = _props3.children;
 	        var onSelect = _props3.onSelect;
 
-	        return items.map(function (item, index) {
-	            if (item.items) {
-	                return _react2.default.createElement(_OptionGroup2.default, {
+
+	        return children.map(function (item, index) {
+	            var label = item.label;
+	            var children = item.children;
+	            var value = item.value;
+
+	            var other = _objectWithoutProperties(item, ['label', 'children', 'value']);
+
+	            if (item.children) {
+	                return _react2.default.createElement(_OptionGroup2.default, _extends({}, other, {
 	                    key: index,
 	                    selected: selected,
-	                    items: item.items,
-	                    label: item.label,
+	                    children: children,
+	                    label: label,
 	                    onSelect: onSelect,
 	                    onKeyDown: _this.handleKeyDown
-	                });
+	                }));
 	            }
-	            return _react2.default.createElement(_Option2.default, {
+
+	            return _react2.default.createElement(_Option2.default, _extends({}, other, {
 	                key: index,
 	                onKeyDown: _this.handleKeyDown,
-	                selected: selected === item.value,
-	                label: item.label,
-	                value: item.value,
+	                selected: selected === value,
+	                label: label,
+	                value: value,
 	                onSelect: onSelect.bind(null, item)
-	            });
-	        });
-	    },
-	    getCheckedItem: function getCheckedItem(checkedItem) {
-	        var items = this.props.items;
-
-	        var checked = true;
-
-	        items.forEach(function (group) {
-	            if (checkedItem.value === group.value) {
-	                checked = group.check;
-	            }
-	            if (group.items && group.items.length) {
-	                group.items.forEach(function (item) {
-	                    if (checkedItem.value === item.value) {
-	                        checked = item.check;
-	                    }
-	                });
-	            }
-	        });
-	        return Object.assign({}, checkedItem, {
-	            check: checked
+	            }));
 	        });
 	    },
 	    renderCheckList: function renderCheckList() {
 	        var _this2 = this;
 
 	        var _props4 = this.props;
-	        var items = _props4.items;
+	        var children = _props4.children;
 	        var onSelect = _props4.onSelect;
 	        var onClearSelected = _props4.onClearSelected;
 	        var clearSelected = this.context.locale.clearSelected;
 	        var _state$checkedItems = this.state.checkedItems;
 	        var checkedItems = _state$checkedItems === undefined ? [] : _state$checkedItems;
 
-	        var options = items.filter(function (item) {
+	        var options = children.filter(function (item) {
 	            var flag = true;
 	            checkedItems.forEach(function (excItem) {
 	                if (item.value === excItem.value) {
@@ -46119,25 +46155,34 @@
 	            });
 	            return flag;
 	        }).map(function (item, idx) {
-	            if (item.items) {
-	                return _react2.default.createElement(_CheckGroup2.default, {
+	            var label = item.label;
+	            var children = item.children;
+	            var value = item.value;
+	            var check = item.check;
+
+	            var other = _objectWithoutProperties(item, ['label', 'children', 'value', 'check']);
+
+	            if (item.children) {
+	                return _react2.default.createElement(_CheckGroup2.default, _extends({}, other, {
 	                    key: idx,
-	                    label: item.label,
-	                    items: item.items,
+	                    label: label,
+	                    children: children,
 	                    excludeItems: checkedItems,
 	                    onSelect: onSelect,
 	                    onKeyDown: _this2.handleKeyDown
-	                });
+	                }));
 	            }
-	            return _react2.default.createElement(_CheckItem2.default, {
-	                key: idx, check: item.check,
-	                label: item.label,
-	                value: item.value,
+	            return _react2.default.createElement(_CheckItem2.default, _extends({}, other, {
+	                key: idx,
+	                check: check,
+	                label: label,
+	                value: value,
 	                onSelect: onSelect.bind(null, item),
 	                onKeyDown: _this2.handleKeyDown
-	            });
+	            }));
 	        });
 
+	        //render checked children
 	        if (checkedItems.length) {
 	            options.unshift(_react2.default.createElement('hr', { key: Math.random() * 1E18 }));
 	            options.unshift(checkedItems.map(function (item, idx) {
@@ -46164,14 +46209,118 @@
 
 	        return options;
 	    },
-	    setCheckedItems: function setCheckedItems(items) {
+	    handleExpand: function handleExpand(index, layer) {
+	        var node = this.refs['tree_node_' + index + '_' + layer];
+	        (0, _domLib.toggleClass)((0, _reactDom.findDOMNode)(node), 'open');
+	    },
+	    renderTreeNode: function renderTreeNode(node, index, layer) {
+	        var _this3 = this;
 
-	        var checkedItems = items.filter(function (item) {
+	        var _props5 = this.props;
+	        var selected = _props5.selected;
+	        var onSelect = _props5.onSelect;
+	        var expand = _props5.expand;
+	        var multiple = _props5.multiple;
+	        var label = node.label;
+	        var children = node.children;
+	        var value = node.value;
+	        var check = node.check;
+	        var selectable = node.selectable;
+
+	        var other = _objectWithoutProperties(node, ['label', 'children', 'value', 'check', 'selectable']);
+
+	        var treeNode = multiple ? _react2.default.createElement(_CheckItem2.default, _extends({}, other, {
+	            key: index,
+	            check: check,
+	            label: label,
+	            value: value,
+	            selectable: selectable,
+	            onSelect: onSelect.bind(null, node),
+	            onKeyDown: this.handleKeyDown
+	        })) : _react2.default.createElement(_Option2.default, _extends({}, other, {
+	            key: index,
+	            onKeyDown: this.handleKeyDown,
+	            selected: selected === value,
+	            label: label,
+	            value: value,
+	            selectable: selectable,
+	            onSelect: onSelect.bind(null, node)
+	        }));
+
+	        if (children) {
+	            layer++;
+	            var styles = {
+	                paddingLeft: 10 * layer
+	            };
+	            var nodeClesses = (0, _classnames2.default)({
+	                'tree-node': true,
+	                open: expand
+	            });
+
+	            return _react2.default.createElement(
+	                'div',
+	                { key: index, className: nodeClesses, ref: 'tree_node_' + index + '_' + layer },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'node-hasChildren' },
+	                    _react2.default.createElement('i', { className: 'expand-icon fa', onClick: this.handleExpand.bind(null, index, layer) }),
+	                    treeNode
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { style: styles, className: 'node-children' },
+	                    children.map(function (child, index) {
+	                        return _this3.renderTreeNode(child, index, layer);
+	                    })
+	                )
+	            );
+	        }
+
+	        return treeNode;
+	    },
+	    renderCheckListTree: function renderCheckListTree() {
+	        var _this4 = this;
+
+	        var _props6 = this.props;
+	        var children = _props6.children;
+	        var onSelect = _props6.onSelect;
+	        var onClearSelected = _props6.onClearSelected;
+	        var clearSelected = this.context.locale.clearSelected;
+
+	        return children.map(function (node, index) {
+	            return _this4.renderTreeNode(node, index, 1);
+	        });
+	    },
+	    getCheckedItem: function getCheckedItem(checkedItem) {
+	        var children = this.props.children;
+
+	        var checked = true;
+
+	        children.forEach(function (group) {
+	            if (checkedItem.value === group.value) {
+	                checked = group.check;
+	            }
+	            if (group.children && group.children.length) {
+	                group.children.forEach(function (item) {
+	                    if (checkedItem.value === item.value) {
+	                        checked = item.check;
+	                    }
+	                });
+	            }
+	        });
+	        return Object.assign({}, checkedItem, {
+	            check: checked
+	        });
+	    },
+	    setCheckedItems: function setCheckedItems(children) {
+
+	        var checkedItems = children.filter(function (item) {
 	            return item.check;
 	        });
-	        items.forEach(function (group) {
-	            if (group.items && group.items.length) {
-	                var subItems = group.items.filter(function (item) {
+
+	        children.forEach(function (group) {
+	            if (group.children && group.children.length) {
+	                var subItems = group.children.filter(function (item) {
 	                    return item.check;
 	                });
 	                checkedItems = checkedItems.concat(subItems);
@@ -46181,12 +46330,12 @@
 	        this.setState({ checkedItems: checkedItems });
 	    },
 	    _getItemsLength: function _getItemsLength() {
-	        var items = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+	        var children = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 
-	        var length = items.length;
+	        var length = children.length;
 
-	        var size = items.map(function (item) {
-	            return item.items ? item.items.length : 0;
+	        var size = children.map(function (item) {
+	            return item.children ? item.children.length : 0;
 	        });
 
 	        if (size.length) {
@@ -46198,23 +46347,33 @@
 	        return length;
 	    },
 	    componentWillMount: function componentWillMount() {
-	        this.setCheckedItems(this.props.items);
+	        this.setCheckedItems(this.props.children);
 	    }
 	}, _defineProperty(_React$createClass, 'componentWillReceiveProps', function componentWillReceiveProps(nextProps) {
 
-	    if (this._getItemsLength(nextProps.items) !== this._getItemsLength(this.props.items)) {
-	        this.setCheckedItems(nextProps.items);
+	    if (this._getItemsLength(nextProps.children) !== this._getItemsLength(this.props.children)) {
+	        this.setCheckedItems(nextProps.children);
 	    }
 	}), _defineProperty(_React$createClass, 'render', function render() {
-	    var _props5 = this.props;
-	    var multiple = _props5.multiple;
-	    var height = _props5.height;
+	    var _props7 = this.props;
+	    var multiple = _props7.multiple;
+	    var height = _props7.height;
+	    var tree = _props7.tree;
 
 	    var classes = multiple ? 'checkList' : 'selectList';
+
+	    var options = this.renderOptions();
+
+	    if (tree) {
+	        options = this.renderCheckListTree();
+	    } else if (multiple) {
+	        options = this.renderCheckList();
+	    }
+
 	    return _react2.default.createElement(
 	        'div',
 	        { className: classes, style: { maxHeight: height } },
-	        multiple ? this.renderCheckList() : this.renderOptions()
+	        options
 	    );
 	}), _React$createClass));
 
@@ -47279,26 +47438,29 @@
 	        var selected = _props.selected;
 	        var onSelect = _props.onSelect;
 	        var onKeyDown = _props.onKeyDown;
+	        var label = item.label;
+	        var value = item.value;
 
-	        return _react2.default.createElement(_Option2.default, {
+	        var other = _objectWithoutProperties(item, ['label', 'value']);
+
+	        return _react2.default.createElement(_Option2.default, _extends({}, other, {
 	            key: index,
 	            onKeyDown: onKeyDown,
-	            selected: selected === item.value,
-	            label: item.label,
-	            value: item.value,
+	            selected: selected === value,
+	            label: label,
+	            value: value,
 	            onSelect: onSelect && onSelect.bind(null, item)
-	        });
+	        }));
 	    },
 	    render: function render() {
 	        var _this = this;
 
 	        var _props2 = this.props;
 	        var label = _props2.label;
-	        var _props2$items = _props2.items;
-	        var items = _props2$items === undefined ? [] : _props2$items;
-	        var children = _props2.children;
+	        var _props2$children = _props2.children;
+	        var children = _props2$children === undefined ? [] : _props2$children;
 
-	        var props = _objectWithoutProperties(_props2, ['label', 'items', 'children']);
+	        var props = _objectWithoutProperties(_props2, ['label', 'children']);
 
 	        return _react2.default.createElement(
 	            'div',
@@ -47315,9 +47477,9 @@
 	                ),
 	                _react2.default.createElement('span', { className: 'arrow' })
 	            ),
-	            items.length ? items.map(function (item, index) {
+	            children.map(function (item, index) {
 	                return _this.renderOption(item, index);
-	            }) : children
+	            })
 	        );
 	    }
 	});
@@ -47340,6 +47502,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _classnames = __webpack_require__(163);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -47351,7 +47517,13 @@
 	        selected: _react2.default.PropTypes.bool,
 	        value: _react2.default.PropTypes.any,
 	        label: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.element]),
+	        selectable: _react2.default.PropTypes.bool,
 	        onSelect: _react2.default.PropTypes.func
+	    },
+	    getDefaultProps: function getDefaultProps() {
+	        return {
+	            selectable: true
+	        };
 	    },
 	    render: function render() {
 	        var _props = this.props;
@@ -47359,18 +47531,32 @@
 	        var label = _props.label;
 	        var value = _props.value;
 	        var onSelect = _props.onSelect;
+	        var onKeyDown = _props.onKeyDown;
+	        var title = _props.title;
+	        var selectable = _props.selectable;
 
-	        var props = _objectWithoutProperties(_props, ['selected', 'label', 'value', 'onSelect']);
+	        var props = _objectWithoutProperties(_props, ['selected', 'label', 'value', 'onSelect', 'onKeyDown', 'title', 'selectable']);
+
+	        var classes = (0, _classnames2.default)('selectOption', {
+	            focusable: selectable,
+	            active: selected,
+	            notSelectable: !selectable
+	        });
 
 	        return _react2.default.createElement(
 	            'a',
 	            _extends({}, props, {
-	                className: 'selectOption' + (selected ? ' active' : ''),
+	                title: title || (typeof label === 'string' ? label : ''),
+	                className: classes,
 	                href: '',
 	                role: 'menuitem',
 	                'data-value': value,
+	                onKeyDown: selectable ? onKeyDown : null,
 	                onClick: function onClick(event) {
 	                    event.preventDefault();
+	                    if (!selectable) {
+	                        return;
+	                    }
 	                    onSelect && onSelect(event);
 	                } }),
 	            label
@@ -47390,6 +47576,8 @@
 	    value: true
 	});
 
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 	var _react = __webpack_require__(8);
 
 	var _react2 = _interopRequireDefault(_react);
@@ -47406,29 +47594,31 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
 	var CheckGroup = _react2.default.createClass({
 	    displayName: 'CheckGroup',
 
 	    propTypes: {
-	        items: _react2.default.PropTypes.array,
+	        children: _react2.default.PropTypes.array,
 	        excludeItems: _react2.default.PropTypes.array,
 	        label: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.element]),
 	        onSelect: _react2.default.PropTypes.func
 	    },
 	    handleClickGroup: function handleClickGroup() {
-	        (0, _domLib.toggleClass)(_reactDom2.default.findDOMNode(this.refs.title).parentNode, 'contract');
+	        (0, _domLib.toggleClass)(_reactDom2.default.findDOMNode(this.refs.title).parentNode, 'shrink');
 	    },
 	    render: function render() {
 	        var _props = this.props;
-	        var _props$items = _props.items;
-	        var items = _props$items === undefined ? [] : _props$items;
+	        var _props$children = _props.children;
+	        var children = _props$children === undefined ? [] : _props$children;
 	        var label = _props.label;
 	        var onSelect = _props.onSelect;
 	        var onKeyDown = _props.onKeyDown;
 	        var _props$excludeItems = _props.excludeItems;
 	        var excludeItems = _props$excludeItems === undefined ? [] : _props$excludeItems;
 
-	        var checkList = items.filter(function (item) {
+	        var checkList = children.filter(function (item) {
 	            var flag = true;
 	            excludeItems.forEach(function (excItem) {
 	                if (item.value === excItem.value) {
@@ -47443,14 +47633,20 @@
 	        }
 
 	        checkList = checkList.map(function (item, idx) {
-	            return _react2.default.createElement(_CheckItem2.default, {
+	            var label = item.label;
+	            var value = item.value;
+	            var check = item.check;
+
+	            var other = _objectWithoutProperties(item, ['label', 'value', 'check']);
+
+	            return _react2.default.createElement(_CheckItem2.default, _extends({}, other, {
 	                key: idx,
-	                check: item.check,
-	                label: item.label,
-	                value: item.value,
+	                check: check,
+	                label: label,
+	                value: value,
 	                onSelect: onSelect.bind(null, item),
 	                onKeyDown: onKeyDown
-	            });
+	            }));
 	        });
 
 	        return _react2.default.createElement(
@@ -47489,6 +47685,10 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _classnames = __webpack_require__(163);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -47500,7 +47700,13 @@
 	        check: _react2.default.PropTypes.bool,
 	        value: _react2.default.PropTypes.any,
 	        label: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.element]),
+	        selectable: _react2.default.PropTypes.bool,
 	        onSelect: _react2.default.PropTypes.func
+	    },
+	    getDefaultProps: function getDefaultProps() {
+	        return {
+	            selectable: true
+	        };
 	    },
 	    render: function render() {
 	        var _props = this.props;
@@ -47508,18 +47714,32 @@
 	        var label = _props.label;
 	        var value = _props.value;
 	        var onSelect = _props.onSelect;
+	        var onKeyDown = _props.onKeyDown;
+	        var selectable = _props.selectable;
+	        var title = _props.title;
 
-	        var props = _objectWithoutProperties(_props, ['check', 'label', 'value', 'onSelect']);
+	        var props = _objectWithoutProperties(_props, ['check', 'label', 'value', 'onSelect', 'onKeyDown', 'selectable', 'title']);
+
+	        var classes = (0, _classnames2.default)('selectOption', 'checkItem', {
+	            focusable: selectable,
+	            notSelectable: !selectable,
+	            check: check
+	        });
 
 	        return _react2.default.createElement(
 	            'a',
 	            _extends({}, props, {
-	                className: 'selectOption checkItem' + (check ? ' check' : ''),
+	                title: title || (typeof label === 'string' ? label : ''),
+	                className: classes,
 	                href: '',
 	                'data-value': value,
+	                onKeyDown: selectable ? onKeyDown : null,
 	                onClick: function onClick(event) {
-	                    onSelect && onSelect(event);
 	                    event.preventDefault();
+	                    if (!selectable) {
+	                        return;
+	                    }
+	                    onSelect && onSelect(event);
 	                } }),
 	            _react2.default.createElement('input', { className: 'checkItem-checkbox', type: 'checkbox' }),
 	            _react2.default.createElement(
@@ -47530,6 +47750,7 @@
 	        );
 	    }
 	});
+
 	exports.default = CheckItem;
 
 /***/ },
@@ -47706,22 +47927,24 @@
 
 	        return checkList.map(function (i) {
 	            var item = _this.formatItem(i);
-	            if (item.items) {
+	            if (item.children) {
 	                return Object.assign({}, item, {
-	                    items: _this.getUpdatedCheckList(item.items)
+	                    children: _this.getUpdatedCheckList(item.children),
+	                    check: _this.isItemChecked(i)
 	                });
 	            }
+
 	            return Object.assign({}, item, {
 	                check: _this.isItemChecked(i)
 	            });
 	        });
 	    },
-	    getAllCheckedItems: function getAllCheckedItems(items) {
+	    getAllCheckedItems: function getAllCheckedItems(children) {
 	        var ret = [];
-	        for (var i = 0, len = items.length; i < len; i++) {
-	            var item = this.formatItem(items[i]);
-	            if (item.items) {
-	                ret = ret.concat(this.getAllCheckedItems(item.items));
+	        for (var i = 0, len = children.length; i < len; i++) {
+	            var item = this.formatItem(children[i]);
+	            if (item.children) {
+	                ret = ret.concat(this.getAllCheckedItems(item.children));
 	            } else if (item.check) {
 	                ret.push(item);
 	            }
@@ -47768,6 +47991,10 @@
 	        }));
 	    },
 	    handleClearSelected: function handleClearSelected() {
+	        var onChange = this.props.onChange;
+
+	        onChange && onChange([]);
+
 	        this.setState({
 	            currentCheckedItems: []
 	        });
@@ -47779,6 +48006,8 @@
 	        var className = _props.className;
 	        var inverse = _props.inverse;
 	        var disabled = _props.disabled;
+	        var tree = _props.tree;
+	        var expand = _props.expand;
 	        var _state = this.state;
 	        var open = _state.open;
 	        var currentCheckedItems = _state.currentCheckedItems;
@@ -47806,6 +48035,8 @@
 	                ref: 'dropdown',
 	                options: updatedCheckList,
 	                height: height,
+	                tree: tree,
+	                expand: expand,
 	                onSelect: this.handleCheck,
 	                onKeyDown: this.handleKeyDown,
 	                onClose: this.handleClose,
@@ -47964,11 +48195,12 @@
 	exports.default = [{
 	    label: 'Master',
 	    value: 'Master',
-	    items: [{
+	    children: [{
 	        label: 'Eugenia',
+	        title: 'Eugenia',
 	        value: 'Eugenia'
 	    }, {
-	        label: 'Kariane',
+	        label: 'Kariane-Kariane-Kariane-Kariane-Kariane KarianeKarianeKarianeKarianeKarianeKarianeKarianeKarianeKarianeKarianeKarianeKarianeKarianeKarianeKarianeKarianeKarianeKariane KarianeKarianeKarianeKariane',
 	        value: 'Kariane'
 	    }, {
 	        label: 'Louisa',
@@ -47983,7 +48215,7 @@
 	}, {
 	    label: 'Developer',
 	    value: 'Developer',
-	    items: [{
+	    children: [{
 	        label: 'Hal',
 	        value: 'Hal'
 	    }, {
@@ -48002,7 +48234,7 @@
 	}, {
 	    label: 'Reporter',
 	    value: 'Reporter',
-	    items: [{
+	    children: [{
 	        label: 'Dave',
 	        value: 'Dave'
 	    }, {
@@ -48015,7 +48247,7 @@
 	}, {
 	    label: 'Guest',
 	    value: 'Guest',
-	    items: [{
+	    children: [{
 	        label: 'Pearlie',
 	        value: 'Pearlie'
 	    }, {
@@ -48059,7 +48291,7 @@
 	    render: function render() {
 
 	        var options = _userGroups2.default.map(function (group) {
-	            var items = group.items || [];
+	            var children = group.children || [];
 	            return {
 	                value: group.value,
 	                label: _react2.default.createElement(
@@ -48069,9 +48301,10 @@
 	                    '  ',
 	                    group.label
 	                ),
-	                items: items.map(function (item) {
+	                children: children.map(function (item) {
 	                    return {
 	                        value: item.value,
+	                        title: item.label,
 	                        label: _react2.default.createElement(
 	                            'div',
 	                            null,
@@ -48084,6 +48317,8 @@
 	                })
 	            };
 	        });
+
+	        console.log(options);
 
 	        return _react2.default.createElement(_src2.default, { options: options });
 	    }
@@ -48116,39 +48351,157 @@
 	exports.default = _react2.default.createClass({
 	    displayName: 'MultipleExample',
 	    render: function render() {
-	        return _react2.default.createElement(_src2.default, { options: _userGroups2.default, multiple: true });
+	        return _react2.default.createElement(_src2.default, { options: _userGroups2.default, multiple: true, onChange: function onChange(data) {
+	                console.log(data);
+	            } });
 	    }
 	});
 
 /***/ },
 /* 314 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> Picker <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n    <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n    <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>\n},{\n    <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Kariane'</span>,\n    <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>\n},\n    ...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Picker</span> <span class=\"hljs-attr\">options</span>=<span class=\"hljs-string\">{users}</span> /&gt;</span>\n        );\n    }\n});</span></code></pre></div>";
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _src = __webpack_require__(269);
+
+	var _src2 = _interopRequireDefault(_src);
+
+	var _tree = __webpack_require__(315);
+
+	var _tree2 = _interopRequireDefault(_tree);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	    displayName: 'TreeExample',
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(_src2.default, { options: _tree2.default, multiple: true, tree: true, expand: true, onChange: function onChange(data) {
+	                    console.log(data);
+	                } }),
+	            _react2.default.createElement('hr', null),
+	            _react2.default.createElement(_src2.default, { options: _tree2.default, tree: true, expand: true, onChange: function onChange(data) {
+	                    console.log(data);
+	                } })
+	        );
+	    }
+	});
 
 /***/ },
 /* 315 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> Picker <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n        <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">items</span>: [\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>\n            },\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Kariane'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>\n            }\n            ...\n        ]\n    }\n    ...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Picker</span> <span class=\"hljs-attr\">options</span>=<span class=\"hljs-string\">{users}</span> /&gt;</span>\n        );\n    }\n});</span></code></pre></div>";
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = [{
+	    label: 'Master',
+	    value: 'Master',
+	    children: [{
+	        label: 'Eugenia',
+	        title: 'Eugenia',
+	        value: 'Eugenia'
+	    }, {
+	        label: 'Not selectable node - Kariane',
+	        value: 'Kariane',
+	        selectable: false,
+	        children: [{
+	            label: 'Dave',
+	            value: 'Dave'
+	        }, {
+	            label: 'Maya',
+	            value: 'Maya'
+	        }, {
+	            label: 'Kristoffer',
+	            value: 'Kristoffer'
+	        }]
+	    }, {
+	        label: 'Not selectable node - Louisa',
+	        value: 'Louisa',
+	        selectable: false
+	    }, {
+	        label: 'Marty',
+	        value: 'Marty'
+	    }, {
+	        label: 'Kenya',
+	        value: 'Kenya'
+	    }]
+	}, {
+	    label: 'Developer',
+	    value: 'Developer',
+	    children: [{
+	        label: 'Hal',
+	        value: 'Hal'
+	    }, {
+	        label: 'Julius',
+	        value: 'Julius'
+	    }, {
+	        label: 'Travon',
+	        value: 'Travon'
+	    }, {
+	        label: 'Vincenza',
+	        value: 'Vincenza'
+	    }, {
+	        label: 'Dominic',
+	        value: 'Dominic'
+	    }]
+	}];
 
 /***/ },
 /* 316 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> Picker <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n    <span class=\"hljs-attr\">label</span>: <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">i</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">\"fa fa-group\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">i</span>&gt;</span> Master <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span></span>,\n    <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Master'</span>,\n    <span class=\"hljs-attr\">items</span>: [\n        {\n            <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n            <span class=\"hljs-attr\">label</span>: <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">i</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">\"fa fa-user\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">i</span>&gt;</span>Eugenia<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span></span>\n        },\n        {\n            <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>,\n            <span class=\"hljs-attr\">label</span>: <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">i</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">\"fa fa-user\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">i</span>&gt;</span>Eugenia<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span></span>\n        }\n        ...\n    ]\n}\n...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Picker</span> <span class=\"hljs-attr\">options</span>=<span class=\"hljs-string\">{users}</span> /&gt;</span>\n        );\n    }\n});</span></code></pre></div>";
+	module.exports = "<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> Picker <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n    <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n    <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>\n},{\n    <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Kariane'</span>,\n    <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>\n},\n    ...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Picker</span> <span class=\"hljs-attr\">options</span>=<span class=\"hljs-string\">{users}</span> /&gt;</span>\n        );\n    }\n});</span></code></pre></div>";
 
 /***/ },
 /* 317 */
 /***/ function(module, exports) {
 
-	module.exports = "<p>Picker also supports multi-value pickers. The select below is declared with the <code>multiple</code> attribute.</p>\n<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> Picker <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n        <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">items</span>: [\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>\n            },\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Kariane'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>\n            }\n            ...\n        ]\n    }\n    ...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Picker</span> <span class=\"hljs-attr\">options</span>=<span class=\"hljs-string\">{users}</span> <span class=\"hljs-attr\">multiple</span> /&gt;</span>\n        );\n    }\n});</span></code></pre></div>";
+	module.exports = "<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> Picker <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n        <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">children</span>: [\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>\n            },\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Kariane'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>\n            }\n            ...\n        ]\n    }\n    ...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Picker</span> <span class=\"hljs-attr\">options</span>=<span class=\"hljs-string\">{users}</span> /&gt;</span>\n        );\n    }\n});</span></code></pre></div>";
 
 /***/ },
 /* 318 */
 /***/ function(module, exports) {
 
-	module.exports = "<h2 id=\"props\">Props</h2>\n<table>\n<thead>\n<tr>\n<th>Prop name</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>options</td>\n<td>array</td>\n<td></td>\n<td>It&#39;s required.</td>\n</tr>\n<tr>\n<td>height</td>\n<td>number</td>\n<td>300</td>\n<td>Dropdown height.</td>\n</tr>\n<tr>\n<td>dropup</td>\n<td>bool</td>\n<td>false</td>\n<td>After you click, expanding upward.</td>\n</tr>\n<tr>\n<td>value</td>\n<td>boolean</td>\n<td></td>\n<td>Default value of single pickers.</td>\n</tr>\n<tr>\n<td>getPlaceholder</td>\n<td>function</td>\n<td></td>\n<td>Custom placeholder.</td>\n</tr>\n<tr>\n<td>onChange</td>\n<td>function</td>\n<td></td>\n<td>Callback function of after value change.</td>\n</tr>\n<tr>\n<td>disabled</td>\n<td>bool</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>inverse</td>\n<td>bool</td>\n<td></td>\n<td></td>\n</tr>\n<tr>\n<td>locale</td>\n<td>object</td>\n<td><code>{ clearSelected:&#39;Clear selected&#39;, placeholder: &#39;${length} selected&#39; }</code></td>\n<td></td>\n</tr>\n</tbody>\n</table>\n";
+	module.exports = "<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> Picker <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n    <span class=\"hljs-attr\">label</span>: <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">i</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">\"fa fa-group\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">i</span>&gt;</span> Master <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span></span>,\n    <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Master'</span>,\n    <span class=\"hljs-attr\">children</span>: [\n        {\n            <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n            <span class=\"hljs-attr\">label</span>: <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">i</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">\"fa fa-user\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">i</span>&gt;</span>Eugenia<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span></span>\n        },\n        {\n            <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>,\n            <span class=\"hljs-attr\">label</span>: <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">i</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">\"fa fa-user\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">i</span>&gt;</span>Eugenia<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span></span>\n        }\n        ...\n    ]\n}\n...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Picker</span> <span class=\"hljs-attr\">options</span>=<span class=\"hljs-string\">{users}</span> /&gt;</span>\n        );\n    }\n});</span></code></pre></div>";
+
+/***/ },
+/* 319 */
+/***/ function(module, exports) {
+
+	module.exports = "<p>Picker also supports multi-value pickers. The select below is declared with the <code>multiple</code> attribute.</p>\n<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> Picker <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n        <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">children</span>: [\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>\n            },\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Kariane'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>\n            }\n            ...\n        ]\n    }\n    ...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Picker</span> <span class=\"hljs-attr\">options</span>=<span class=\"hljs-string\">{users}</span> <span class=\"hljs-attr\">multiple</span> /&gt;</span>\n        );\n    }\n});</span></code></pre></div>";
+
+/***/ },
+/* 320 */
+/***/ function(module, exports) {
+
+	module.exports = "<p>Picker also supports tree pickers. The select below is declared with the <code>tree</code> attribute.</p>\n<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> Picker <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n        <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">children</span>: [\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>\n            },\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Kariane'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>\n            }\n            ...\n        ]\n    }\n    ...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            &lt;div&gt;\n                &lt;Picker options={users} multiple tree /&gt;\n                &lt;hr /&gt;\n                &lt;Picker options={options} tree expand /&gt;\n            &lt;/div&gt;\n        );\n    }\n});</code></pre></div>";
+
+/***/ },
+/* 321 */
+/***/ function(module, exports) {
+
+	module.exports = "<h2 id=\"props\">Props</h2>\n<table>\n<thead>\n<tr>\n<th>Prop name</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>options</td>\n<td>array</td>\n<td></td>\n<td>It&#39;s required.</td>\n</tr>\n<tr>\n<td>height</td>\n<td>number</td>\n<td>300</td>\n<td>Dropdown height.</td>\n</tr>\n<tr>\n<td>dropup</td>\n<td>bool</td>\n<td>false</td>\n<td>After you click, expanding upward.</td>\n</tr>\n<tr>\n<td>value</td>\n<td>boolean</td>\n<td></td>\n<td>Default value of single pickers.</td>\n</tr>\n<tr>\n<td>getPlaceholder</td>\n<td>function</td>\n<td></td>\n<td>Custom placeholder.</td>\n</tr>\n<tr>\n<td>onChange</td>\n<td>function</td>\n<td></td>\n<td>Callback function of after value change.</td>\n</tr>\n<tr>\n<td>multiple</td>\n<td>bool</td>\n<td>false</td>\n<td>Supports multi-value pickers.</td>\n</tr>\n<tr>\n<td>disabled</td>\n<td>bool</td>\n<td>false</td>\n<td></td>\n</tr>\n<tr>\n<td>inverse</td>\n<td>bool</td>\n<td>false</td>\n<td></td>\n</tr>\n<tr>\n<td>tree</td>\n<td>bool</td>\n<td>false</td>\n<td>Display a tree in the picker</td>\n</tr>\n<tr>\n<td>expand</td>\n<td>bool</td>\n<td>false</td>\n<td>The default tree node is expanded</td>\n</tr>\n<tr>\n<td>locale</td>\n<td>object</td>\n<td><code>{ clearSelected:&#39;Clear selected&#39;, placeholder: &#39;${length} selected&#39; }</code></td>\n<td></td>\n</tr>\n</tbody>\n</table>\n";
 
 /***/ }
 /******/ ]);
