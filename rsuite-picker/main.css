@@ -1,4 +1,4 @@
-/*! Last update: Thu Jan 05 2017 16:12:28 GMT+0800 (CST) */
+/*! Last update: Mon Jan 09 2017 17:53:03 GMT+0800 (CST) */
 /**灰色色阶为公用颜色**/
 /**主题**/
 .rsuite-Picker {
@@ -216,7 +216,7 @@
   width: 0;
   height: 0;
 }
-.rsuite-CheckListPicker .checkItem.check .checkItem-label::after {
+.rsuite-CheckListPicker .checkItem.checked .checkItem-label::after {
   font-family: FontAwesome;
   content: "\F00C";
   color: #29a7e1;
