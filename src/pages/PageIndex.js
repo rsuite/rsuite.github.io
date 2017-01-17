@@ -13,7 +13,7 @@ const data = [
     {
         icon: 'fa fa-briefcase',
         url: 'http://rsuite.github.io',
-        name: 'RSuite',
+        name: 'Basis Components',
         intro: '基础组件',
         src: 'https://github.com/rsuite/rsuite'
     },{

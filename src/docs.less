@@ -237,10 +237,15 @@ code {
 .box-wrapper {
 
     .intro-block {
+        opacity: 0.6;
         margin-top: 18px;
-        border: 1px solid #eee;
+        text-align: center;
         &:hover {
+            opacity:1;
             box-shadow: 0px 1px 3px #ccc;
+            .icon-wrapper i{
+                color:#141c23;
+            }
         }
     }
 
@@ -276,17 +281,16 @@ code {
         .code {
             color: #999;
             float: right;
+            display: none;
         }
     }
 
     .icon-wrapper{
-        text-align: center;
         padding: 18px;
         display: block;
-        background: #f1f1f1;
         i{
             font-size: 100px;
-            color:#61dafb;
+            color:#aaa;
         }
     }
 }

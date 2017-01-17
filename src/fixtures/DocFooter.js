@@ -10,7 +10,7 @@ const DocFooter = React.createClass({
                 <div className="container">
 
 
-                    Powered by<a href="https://www.hypers.com" target="_blank">Hypers FE</a>
+                    Powered by<a href="http://www.hypers.com" target="_blank">Hypers FE</a>
                     <a href="https://gitter.im/rsuite/rsuite?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge">
                         <img src="https://badges.gitter.im/rsuite/rsuite.svg" alt="Join the chat at https://gitter.im/rsuite/rsuite"  />
                     </a>

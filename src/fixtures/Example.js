@@ -135,7 +135,7 @@ const Example = React.createClass({
         if (this.props.isBanner) {
             return (
                 <Col id={this.props.id} className="banner"  xsHidden>
-                    <div className="triangle-left">
+                    <div className="triangle-left ">
                         {this.renderExample() }
                     </div>
                     <div className="container">

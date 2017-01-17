@@ -7,6 +7,7 @@
     "lib": "lib/"
   },
   "scripts": {
+    "build-css": "node css-build.js",
     "dev": "NODE_ENV=development webpack-dev-server --hot --inline --progress --colors --port 3000 --config webpack.config.js",
     "build": "rm -rf assets &&  NODE_ENV=production webpack --watch --progress -colors --config webpack.config.js",
     "test": "karma start"
@@ -83,6 +84,7 @@
     "webpack-dev-server": "^1.14.1",
     "html-webpack-plugin": "^2.22.0",
     "rsuite-schema": "0.0.1-alpha.2",
-    "rsuite-form": "0.1.6"
+    "rsuite-form": "0.1.6",
+    "rsuite-theme": "^0.2.5-5"
   }
 }
