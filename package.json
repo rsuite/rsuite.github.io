@@ -85,6 +85,6 @@
     "html-webpack-plugin": "^2.22.0",
     "rsuite-schema": "0.0.1-alpha.2",
     "rsuite-form": "0.1.6",
-    "rsuite-theme": "^0.2.5-5"
+    "rsuite-theme": "^0.2.5-7"
   }
 }
