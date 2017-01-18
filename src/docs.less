@@ -1,13 +1,13 @@
 @import './highlight.less';
 
 @primary-color: #FF8533;
-@bg-color: #373c44;
+@bg-color: #373C44;
 
 .logo {
     font-family: "open sans", arial, sans-serif;
     color: @primary-color;
     .prefix {
-        color:#61dafb;
+        color: #61DAFB;
     }
 }
 
@@ -21,7 +21,7 @@
     .navbar-inverse {
         background: @bg-color;
         .active a {
-            background: #141c23;
+            background: #141C23;
         }
     }
 }
@@ -73,13 +73,13 @@
 
 .nav.nav-docs {
 
-    background: #f7f7f7;
+    background: #F7F7F7;
     a {
         color: #575757;
         font-weight: 200;
     }
     .active {
-        background: #eee;
+        background: #EEE;
         font-weight: 500;
     }
     .nav-en {
@@ -95,7 +95,7 @@
         font-size: 16px;
         color: #999;
         font-weight: 100;
-        border-top: 1px solid #e5e5e5;
+        border-top: 1px solid #E5E5E5;
         margin-top: 10px;
     }
 }
@@ -106,7 +106,7 @@
 
 .doc-example {
     padding: 46px 18px 18px;
-    border: 1px solid #eee;
+    border: 1px solid #EEE;
     position: relative;
     &:after {
         position: absolute;
@@ -128,8 +128,8 @@
     margin-top: 10px;
     [class*=col-] {
         padding: 10px 5px;
-        border: 1px solid #ddd;
-        background: #f1f1f1;
+        border: 1px solid #DDD;
+        background: #F1F1F1;
     }
 }
 
@@ -141,10 +141,10 @@
 .markdown table {
     width: 100%;
     th {
-        background: #f1f1f1;
+        background: #F1F1F1;
     }
     td, th {
-        border: 1px solid #eee;
+        border: 1px solid #EEE;
         padding: 10px;
     }
 }
@@ -196,7 +196,7 @@ code {
         }
     }
     .triangle-left {
-        background: #3e484a;
+        background: #3E484A;
         box-shadow: -8px -6px 11px rgba(5, 11, 8, 0.35);
         height: 1000px;
         position: absolute;
@@ -205,6 +205,8 @@ code {
         transform: rotate(-45deg);
         width: 1000px;
         z-index: 100;
+        animation: bounceInRight 1s cubic-bezier(0.215, .61, .355, 1);
+
         .doc-example {
             border: none;
             opacity: 0.3;
@@ -212,6 +214,8 @@ code {
     }
     .typing-wrapper {
         margin-top: 50px;
+        animation: fadeIn 2s cubic-bezier(0.215, .61, .355, 1);
+
         .CodeMirror {
             background: none !important;
             opacity: 0.4;
@@ -241,10 +245,10 @@ code {
         margin-top: 18px;
         text-align: center;
         &:hover {
-            opacity:1;
-            box-shadow: 0px 1px 3px #ccc;
-            .icon-wrapper i{
-                color:#141c23;
+            opacity: 1;
+            box-shadow: 0px 1px 3px #CCC;
+            .icon-wrapper i {
+                color: #141C23;
             }
         }
     }
@@ -256,13 +260,29 @@ code {
     .thumb a {
         color: #333;
         display: block;
+        position: relative;
+        padding-top: 60%;
+        background: #F5F5F5;
+
+        &:before {
+            content: "RSuite";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            text-align: center;
+            height: 20px;
+        }
     }
     .thumb a img {
         width: 100%;
         height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
-
-
 
     .intro {
         color: #999;
@@ -285,12 +305,50 @@ code {
         }
     }
 
-    .icon-wrapper{
+    .icon-wrapper {
         padding: 18px;
         display: block;
-        i{
+        i {
             font-size: 100px;
-            color:#aaa;
+            color: #AAA;
         }
+    }
+}
+
+@keyframes bounceInRight {
+    0%, 100%, 60%, 75%, 90% {
+        animation-timing-function: cubic-bezier(0.215, .61, .355, 1);
+    }
+
+    0% {
+        opacity: 0;
+        transform: rotate(-45deg) translate3d(3000px, 0, 0);
+    }
+
+    60% {
+        opacity: 1;
+        transform: rotate(-45deg) translate3d(-25px, 0, 0);
+    }
+
+    75% {
+        transform: rotate(-45deg) translate3d(10px, 0, 0);
+    }
+
+    90% {
+        transform: rotate(-45deg) translate3d(-5px, 0, 0);
+    }
+
+    100% {
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
     }
 }
