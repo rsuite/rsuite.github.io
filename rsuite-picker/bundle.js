@@ -1,4 +1,4 @@
-/*! Last update: Mon Jan 09 2017 17:53:03 GMT+0800 (CST) */
+/*! Last update: Fri Jan 20 2017 19:17:20 GMT+0800 (CST) */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -82,23 +82,27 @@
 
 	var _SimpleExample2 = _interopRequireDefault(_SimpleExample);
 
-	var _OptionGroupExample = __webpack_require__(310);
+	var _OptionGroupExample = __webpack_require__(313);
 
 	var _OptionGroupExample2 = _interopRequireDefault(_OptionGroupExample);
 
-	var _CustomLabelExample = __webpack_require__(312);
+	var _CustomLabelExample = __webpack_require__(315);
 
 	var _CustomLabelExample2 = _interopRequireDefault(_CustomLabelExample);
 
-	var _MultipleExample = __webpack_require__(313);
+	var _MultipleExample = __webpack_require__(316);
 
 	var _MultipleExample2 = _interopRequireDefault(_MultipleExample);
 
-	var _TreeExample = __webpack_require__(314);
+	var _TreeExample = __webpack_require__(317);
 
 	var _TreeExample2 = _interopRequireDefault(_TreeExample);
 
-	var _DefaultValueExample = __webpack_require__(316);
+	var _CascaderExample = __webpack_require__(319);
+
+	var _CascaderExample2 = _interopRequireDefault(_CascaderExample);
+
+	var _DefaultValueExample = __webpack_require__(320);
 
 	var _DefaultValueExample2 = _interopRequireDefault(_DefaultValueExample);
 
@@ -141,6 +145,25 @@
 	                        null,
 	                        _react2.default.createElement(
 	                            _rsuite.Nav,
+	                            null,
+	                            _react2.default.createElement(
+	                                _rsuite.Nav.Item,
+	                                { href: '#Picker' },
+	                                'Picker'
+	                            ),
+	                            _react2.default.createElement(
+	                                _rsuite.Nav.Item,
+	                                { href: '#TreePicker' },
+	                                'TreePicker'
+	                            ),
+	                            _react2.default.createElement(
+	                                _rsuite.Nav.Item,
+	                                { href: '#Cascader' },
+	                                'Cascader'
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            _rsuite.Nav,
 	                            { pullRight: true },
 	                            _react2.default.createElement(
 	                                _rsuite.Nav.Item,
@@ -155,12 +178,18 @@
 	                'div',
 	                { className: 'container' },
 	                _react2.default.createElement(
+	                    'h2',
+	                    { id: 'Picker' },
+	                    '<Picker />'
+	                ),
+	                _react2.default.createElement('hr', null),
+	                _react2.default.createElement(
 	                    'p',
 	                    { className: 'sub-title' },
 	                    'A react component for replacing default select and dropdown.'
 	                ),
 	                _react2.default.createElement(
-	                    'h2',
+	                    'h3',
 	                    null,
 	                    'Single pickers'
 	                ),
@@ -169,99 +198,7 @@
 	                    null,
 	                    _react2.default.createElement(
 	                        _rsuite.Col,
-	                        { md: 6 },
-	                        _react2.default.createElement(
-	                            _Markdown2.default,
-	                            null,
-	                            __webpack_require__(318)
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        _rsuite.Col,
-	                        { md: 6 },
-	                        _react2.default.createElement(_SimpleExample2.default, null)
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'h2',
-	                    null,
-	                    'Option group support'
-	                ),
-	                _react2.default.createElement(
-	                    _rsuite.Row,
-	                    null,
-	                    _react2.default.createElement(
-	                        _rsuite.Col,
-	                        { md: 6 },
-	                        _react2.default.createElement(
-	                            _Markdown2.default,
-	                            null,
-	                            __webpack_require__(319)
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        _rsuite.Col,
-	                        { md: 6 },
-	                        _react2.default.createElement(_OptionGroupExample2.default, null)
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'h2',
-	                    null,
-	                    'Custom label'
-	                ),
-	                _react2.default.createElement(
-	                    _rsuite.Row,
-	                    null,
-	                    _react2.default.createElement(
-	                        _rsuite.Col,
-	                        { md: 6 },
-	                        _react2.default.createElement(
-	                            _Markdown2.default,
-	                            null,
-	                            __webpack_require__(320)
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        _rsuite.Col,
-	                        { md: 6 },
-	                        _react2.default.createElement(_CustomLabelExample2.default, null)
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'h2',
-	                    null,
-	                    'Multiple pickers'
-	                ),
-	                _react2.default.createElement(
-	                    _rsuite.Row,
-	                    null,
-	                    _react2.default.createElement(
-	                        _rsuite.Col,
-	                        { md: 6 },
-	                        _react2.default.createElement(
-	                            _Markdown2.default,
-	                            null,
-	                            __webpack_require__(321)
-	                        )
-	                    ),
-	                    _react2.default.createElement(
-	                        _rsuite.Col,
-	                        { md: 6 },
-	                        _react2.default.createElement(_MultipleExample2.default, null)
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'h2',
-	                    null,
-	                    'Tree pickers'
-	                ),
-	                _react2.default.createElement(
-	                    _rsuite.Row,
-	                    null,
-	                    _react2.default.createElement(
-	                        _rsuite.Col,
-	                        { md: 6 },
+	                        { md: 8 },
 	                        _react2.default.createElement(
 	                            _Markdown2.default,
 	                            null,
@@ -270,21 +207,21 @@
 	                    ),
 	                    _react2.default.createElement(
 	                        _rsuite.Col,
-	                        { md: 6 },
-	                        _react2.default.createElement(_TreeExample2.default, null)
+	                        { md: 4 },
+	                        _react2.default.createElement(_SimpleExample2.default, null)
 	                    )
 	                ),
 	                _react2.default.createElement(
-	                    'h2',
+	                    'h3',
 	                    null,
-	                    'Default values'
+	                    'Option group support'
 	                ),
 	                _react2.default.createElement(
 	                    _rsuite.Row,
 	                    null,
 	                    _react2.default.createElement(
 	                        _rsuite.Col,
-	                        { md: 6 },
+	                        { md: 8 },
 	                        _react2.default.createElement(
 	                            _Markdown2.default,
 	                            null,
@@ -293,8 +230,135 @@
 	                    ),
 	                    _react2.default.createElement(
 	                        _rsuite.Col,
-	                        { md: 6 },
+	                        { md: 4 },
+	                        _react2.default.createElement(_OptionGroupExample2.default, null)
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    'Custom label'
+	                ),
+	                _react2.default.createElement(
+	                    _rsuite.Row,
+	                    null,
+	                    _react2.default.createElement(
+	                        _rsuite.Col,
+	                        { md: 8 },
+	                        _react2.default.createElement(
+	                            _Markdown2.default,
+	                            null,
+	                            __webpack_require__(324)
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        _rsuite.Col,
+	                        { md: 4 },
+	                        _react2.default.createElement(_CustomLabelExample2.default, null)
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    'Multiple pickers'
+	                ),
+	                _react2.default.createElement(
+	                    _rsuite.Row,
+	                    null,
+	                    _react2.default.createElement(
+	                        _rsuite.Col,
+	                        { md: 8 },
+	                        _react2.default.createElement(
+	                            _Markdown2.default,
+	                            null,
+	                            __webpack_require__(325)
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        _rsuite.Col,
+	                        { md: 4 },
+	                        _react2.default.createElement(_MultipleExample2.default, null)
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    'Default values'
+	                ),
+	                _react2.default.createElement(
+	                    _rsuite.Row,
+	                    null,
+	                    _react2.default.createElement(
+	                        _rsuite.Col,
+	                        { md: 8 },
+	                        _react2.default.createElement(
+	                            _Markdown2.default,
+	                            null,
+	                            __webpack_require__(326)
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        _rsuite.Col,
+	                        { md: 4 },
 	                        _react2.default.createElement(_DefaultValueExample2.default, null)
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'h2',
+	                    { id: 'TreePicker' },
+	                    '<TreePicker />'
+	                ),
+	                _react2.default.createElement('hr', null),
+	                _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    'Tree pickers'
+	                ),
+	                _react2.default.createElement(
+	                    _rsuite.Row,
+	                    null,
+	                    _react2.default.createElement(
+	                        _rsuite.Col,
+	                        { md: 8 },
+	                        _react2.default.createElement(
+	                            _Markdown2.default,
+	                            null,
+	                            __webpack_require__(327)
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        _rsuite.Col,
+	                        { md: 4 },
+	                        _react2.default.createElement(_TreeExample2.default, null)
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'h2',
+	                    { id: 'Cascader' },
+	                    '<Cascader />'
+	                ),
+	                _react2.default.createElement('hr', null),
+	                _react2.default.createElement(
+	                    'h3',
+	                    null,
+	                    'Cascade pickers'
+	                ),
+	                _react2.default.createElement(
+	                    _rsuite.Row,
+	                    null,
+	                    _react2.default.createElement(
+	                        _rsuite.Col,
+	                        { md: 8 },
+	                        _react2.default.createElement(
+	                            _Markdown2.default,
+	                            null,
+	                            __webpack_require__(328)
+	                        )
+	                    ),
+	                    _react2.default.createElement(
+	                        _rsuite.Col,
+	                        { md: 4 },
+	                        _react2.default.createElement(_CascaderExample2.default, null)
 	                    )
 	                ),
 	                _react2.default.createElement('hr', null),
@@ -306,7 +370,7 @@
 	                _react2.default.createElement(
 	                    _Markdown2.default,
 	                    null,
-	                    __webpack_require__(324)
+	                    __webpack_require__(329)
 	                )
 	            )
 	        );
@@ -45498,7 +45562,7 @@
 
 	var _src2 = _interopRequireDefault(_src);
 
-	var _users = __webpack_require__(309);
+	var _users = __webpack_require__(312);
 
 	var _users2 = _interopRequireDefault(_users);
 
@@ -45534,6 +45598,36 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+	exports.Cascader = exports.TreePicker = exports.Picker = undefined;
+
+	var _Picker = __webpack_require__(270);
+
+	var _Picker2 = _interopRequireDefault(_Picker);
+
+	var _TreePicker = __webpack_require__(310);
+
+	var _TreePicker2 = _interopRequireDefault(_TreePicker);
+
+	var _Cascader = __webpack_require__(311);
+
+	var _Cascader2 = _interopRequireDefault(_Cascader);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _Picker2.default;
+	exports.Picker = _Picker2.default;
+	exports.TreePicker = _TreePicker2.default;
+	exports.Cascader = _Cascader2.default;
+
+/***/ },
+/* 270 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -45541,15 +45635,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Picker = __webpack_require__(270);
+	var _SinglePicker = __webpack_require__(271);
 
-	var _Picker2 = _interopRequireDefault(_Picker);
+	var _SinglePicker2 = _interopRequireDefault(_SinglePicker);
 
-	var _CheckListPicker = __webpack_require__(307);
+	var _CheckListPicker = __webpack_require__(308);
 
 	var _CheckListPicker2 = _interopRequireDefault(_CheckListPicker);
 
-	var _FormGroupMixin = __webpack_require__(308);
+	var _FormGroupMixin = __webpack_require__(309);
 
 	var _FormGroupMixin2 = _interopRequireDefault(_FormGroupMixin);
 
@@ -45557,8 +45651,8 @@
 
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-	exports.default = _react2.default.createClass({
-	    displayName: 'src',
+	var Picker = _react2.default.createClass({
+	    displayName: 'Picker',
 
 	    mixins: [_FormGroupMixin2.default],
 	    propTypes: {
@@ -45566,14 +45660,15 @@
 	        onChange: _react.PropTypes.func,
 	        height: _react.PropTypes.number,
 	        locale: _react.PropTypes.object,
-	        tree: _react.PropTypes.bool,
-	        expand: _react.PropTypes.bool
+	        expand: _react.PropTypes.bool,
+	        type: _react.PropTypes.oneOf(['default', 'tree', 'cascade'])
 	    },
 	    childContextTypes: {
 	        locale: _react.PropTypes.object
 	    },
 	    getDefaultProps: function getDefaultProps() {
 	        return {
+	            type: 'default',
 	            height: 320,
 	            locale: {
 	                placeholder: '${length} selected',
@@ -45615,12 +45710,14 @@
 	            customProps = Object.assign({}, customProps, { value: value });
 	        }
 
-	        return _react2.default.createElement(_Picker2.default, customProps);
+	        return _react2.default.createElement(_SinglePicker2.default, customProps);
 	    }
 	});
 
+	exports.default = Picker;
+
 /***/ },
-/* 270 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45641,22 +45738,22 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _DropdownToggle = __webpack_require__(271);
+	var _DropdownToggle = __webpack_require__(272);
 
 	var _DropdownToggle2 = _interopRequireDefault(_DropdownToggle);
 
-	var _Dropdown = __webpack_require__(272);
+	var _Dropdown = __webpack_require__(273);
 
 	var _Dropdown2 = _interopRequireDefault(_Dropdown);
 
-	var _PickerMixin = __webpack_require__(306);
+	var _PickerMixin = __webpack_require__(307);
 
 	var _PickerMixin2 = _interopRequireDefault(_PickerMixin);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var Picker = _react2.default.createClass({
-	    displayName: 'Picker',
+	var SinglePicker = _react2.default.createClass({
+	    displayName: 'SinglePicker',
 
 	    mixins: [_PickerMixin2.default],
 	    propTypes: {
@@ -45665,7 +45762,8 @@
 	        height: _react.PropTypes.number,
 	        dropup: _react.PropTypes.bool,
 	        value: _react.PropTypes.any,
-	        defaultValue: _react.PropTypes.any
+	        defaultValue: _react.PropTypes.any,
+	        cascader: _react.PropTypes.bool
 	    },
 	    formatOption: function formatOption(option) {
 	        if (typeof option === 'string') {
@@ -45755,15 +45853,15 @@
 	            className = _props2.className,
 	            inverse = _props2.inverse,
 	            disabled = _props2.disabled,
-	            expand = _props2.expand,
-	            tree = _props2.tree;
+	            type = _props2.type,
+	            expand = _props2.expand;
 	        var _state = this.state,
 	            open = _state.open,
 	            currentSelected = _state.currentSelected,
 	            dropup = _state.dropup;
 
 	        var formattedOptions = options.map(this.formatOption);
-	        var classes = (0, _classnames2.default)('rsuite-Picker', className, {
+	        var classes = (0, _classnames2.default)('rsuite-Picker', type, className, {
 	            'rsuite-Picker--dropup': dropup,
 	            'expand': open,
 	            'inverse': inverse,
@@ -45780,24 +45878,24 @@
 	            }),
 	            open && _react2.default.createElement(_Dropdown2.default, {
 	                ref: 'dropdown',
-	                tree: tree,
+	                type: type,
 	                expand: expand,
+	                dropup: dropup,
 	                value: currentSelected.value,
 	                options: formattedOptions,
 	                height: height,
 	                onSelect: this.handleSelect,
 	                onKeyDown: this.handleKeyDown,
-	                dropup: dropup,
 	                onClose: this.handleClose
 	            })
 	        );
 	    }
 	});
 
-	exports.default = Picker;
+	exports.default = SinglePicker;
 
 /***/ },
-/* 271 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45834,7 +45932,7 @@
 	exports.default = DropdownToggle;
 
 /***/ },
-/* 272 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45855,11 +45953,11 @@
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _SearchBar = __webpack_require__(273);
+	var _SearchBar = __webpack_require__(274);
 
 	var _SearchBar2 = _interopRequireDefault(_SearchBar);
 
-	var _DropdownMenu = __webpack_require__(274);
+	var _DropdownMenu = __webpack_require__(275);
 
 	var _DropdownMenu2 = _interopRequireDefault(_DropdownMenu);
 
@@ -45891,7 +45989,6 @@
 	        onSelect: _react.PropTypes.func,
 	        dropup: _react.PropTypes.bool,
 	        multiple: _react.PropTypes.bool,
-	        tree: _react.PropTypes.bool,
 	        expand: _react.PropTypes.bool
 	    },
 	    getDefaultProps: function getDefaultProps() {
@@ -45947,11 +46044,11 @@
 
 	        var _props = this.props,
 	            options = _props.options,
-	            tree = _props.tree;
+	            type = _props.type;
 
 	        return options.map(function (o) {
 	            // if is a item group
-	            if (o.children && !tree) {
+	            if (o.children && type !== 'tree') {
 	                return Object.assign({}, o, {
 	                    children: o.children.filter(_this.shouldDisplay)
 	                });
@@ -45973,7 +46070,7 @@
 	            multiple = _props2.multiple,
 	            onClearSelected = _props2.onClearSelected,
 	            onKeyDown = _props2.onKeyDown,
-	            tree = _props2.tree,
+	            type = _props2.type,
 	            expand = _props2.expand;
 
 	        var classes = (0, _classnames2.default)('selectDropdown', {
@@ -45984,10 +46081,10 @@
 	        return _react2.default.createElement(
 	            'div',
 	            { className: classes },
-	            tree ? null : _react2.default.createElement(_SearchBar2.default, {
+	            type === 'default' ? _react2.default.createElement(_SearchBar2.default, {
 	                onKeyDown: onKeyDown,
 	                onChange: this.handleSearchTextChange,
-	                value: this.state.searchText }),
+	                value: this.state.searchText }) : null,
 	            _react2.default.createElement(_DropdownMenu2.default, {
 	                ref: 'menu',
 	                multiple: multiple,
@@ -45997,7 +46094,7 @@
 	                onSelect: this.handleListSelect,
 	                onClose: this.props.onClose,
 	                height: height,
-	                tree: tree,
+	                type: type,
 	                expand: expand
 	            })
 	        );
@@ -46007,7 +46104,7 @@
 	exports.default = Dropdown;
 
 /***/ },
-/* 273 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46057,7 +46154,7 @@
 	exports.default = SearchBar;
 
 /***/ },
-/* 274 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46074,27 +46171,31 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _lodash = __webpack_require__(210);
+
+	var _lodash2 = _interopRequireDefault(_lodash);
+
 	var _reactDom = __webpack_require__(160);
 
 	var _classnames = __webpack_require__(163);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _domLib = __webpack_require__(275);
+	var _domLib = __webpack_require__(276);
 
-	var _OptionGroup = __webpack_require__(302);
+	var _OptionGroup = __webpack_require__(303);
 
 	var _OptionGroup2 = _interopRequireDefault(_OptionGroup);
 
-	var _Option = __webpack_require__(303);
+	var _Option = __webpack_require__(304);
 
 	var _Option2 = _interopRequireDefault(_Option);
 
-	var _CheckGroup = __webpack_require__(304);
+	var _CheckGroup = __webpack_require__(305);
 
 	var _CheckGroup2 = _interopRequireDefault(_CheckGroup);
 
-	var _CheckItem = __webpack_require__(305);
+	var _CheckItem = __webpack_require__(306);
 
 	var _CheckItem2 = _interopRequireDefault(_CheckItem);
 
@@ -46113,11 +46214,16 @@
 	        height: _react.PropTypes.number,
 	        onSelect: _react.PropTypes.func,
 	        multiple: _react.PropTypes.bool,
-	        tree: _react.PropTypes.bool,
 	        expand: _react.PropTypes.bool
 	    },
+
 	    contextTypes: {
 	        locale: _react.PropTypes.object.isRequired
+	    },
+	    getInitialState: function getInitialState() {
+	        return {
+	            cascadeItems: []
+	        };
 	    },
 	    componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
 
@@ -46418,7 +46524,7 @@
 
 	        return treeNode;
 	    },
-	    renderCheckListTree: function renderCheckListTree() {
+	    renderTree: function renderTree() {
 	        var _this4 = this;
 
 	        var _props6 = this.props,
@@ -46430,6 +46536,85 @@
 	        return children.map(function (node, index) {
 	            return _this4.renderTreeNode(node, index, 1);
 	        });
+	    },
+	    handleCascadeSelect: function handleCascadeSelect(node, layer, index) {
+	        var onSelect = this.props.onSelect;
+	        var _node$children = node.children,
+	            children = _node$children === undefined ? [] : _node$children;
+
+	        if (children.length) {
+	            this.setCascadeCache(children, layer + 1, index);
+	            return;
+	        }
+	        onSelect(node);
+	    },
+	    renderCascadeNode: function renderCascadeNode(node, index, layer, hover) {
+	        var _props7 = this.props,
+	            selected = _props7.selected,
+	            onSelect = _props7.onSelect,
+	            expand = _props7.expand;
+
+	        var label = node.label,
+	            children = node.children,
+	            value = node.value,
+	            checked = node.checked,
+	            selectable = node.selectable,
+	            other = _objectWithoutProperties(node, ['label', 'children', 'value', 'checked', 'selectable']);
+
+	        var treeNode = _react2.default.createElement(_Option2.default, _extends({}, other, {
+	            key: index,
+	            className: 'cascade-node',
+	            hover: hover,
+	            selected: selected === value,
+	            label: label,
+	            value: value,
+	            onSelect: this.handleCascadeSelect.bind(null, node, layer, index)
+	        }));
+
+	        if (children) {
+
+	            return _react2.default.createElement(
+	                'div',
+	                { key: index, className: 'has-children' },
+	                treeNode,
+	                ' ',
+	                _react2.default.createElement('span', { className: 'more-arrow' })
+	            );
+	        }
+
+	        return treeNode;
+	    },
+	    renderCascade: function renderCascade() {
+	        var _this5 = this;
+
+	        var _state = this.state,
+	            cascadeItems = _state.cascadeItems,
+	            cascadePathIds = _state.cascadePathIds;
+
+	        var styles = {
+	            width: cascadeItems.length * 120
+	        };
+	        var i = 0;
+
+	        var cascadeNodes = cascadeItems.map(function (children, layer) {
+	            var node = _react2.default.createElement(
+	                'div',
+	                { key: layer, className: 'cascader-menu' },
+	                children.map(function (node, index) {
+	                    return _this5.renderCascadeNode(node, index, layer, cascadePathIds[i] === index);
+	                })
+	            );
+	            i++;
+	            return node;
+	        });
+
+	        return _react2.default.createElement(
+	            'div',
+	            { style: styles },
+	            ' ',
+	            cascadeNodes,
+	            ' '
+	        );
 	    },
 	    getCheckedItem: function getCheckedItem(checkedItem) {
 	        var children = this.props.children;
@@ -46452,7 +46637,7 @@
 	            checked: checked
 	        });
 	    },
-	    setCheckedItems: function setCheckedItems(children) {
+	    setCache: function setCache(children) {
 
 	        var checkedItems = children.filter(function (item) {
 	            return item.checked;
@@ -46468,44 +46653,99 @@
 	        });
 
 	        this.setState({ checkedItems: checkedItems });
+
+	        if (this.props.type === 'cascade') {
+	            this._treeToCascade();
+	        }
 	    },
-	    _getItemsLength: function _getItemsLength() {
-	        var children = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+	    _treeToCascade: function _treeToCascade() {
+	        var _props8 = this.props,
+	            children = _props8.children,
+	            selected = _props8.selected;
 
-	        var length = children.length;
+	        var nextItems = [];
+	        var nextPathIds = [];
 
-	        var size = children.map(function (item) {
-	            return item.children ? item.children.length : 0;
-	        });
+	        function findNode(items) {
+	            for (var i = 0; i < items.length; i++) {
+	                items[i].active = false;
+	                if (items[i].value === selected) {
+	                    return {
+	                        items: items,
+	                        index: i
+	                    };
+	                } else if (items[i].children) {
 
-	        if (size.length) {
-	            length += size.reduce(function (previous, current) {
-	                return previous + current;
-	            });
+	                    var _v = findNode(items[i].children);
+	                    if (_v) {
+	                        nextItems.push(items[i].children);
+	                        nextPathIds.push(_v.index);
+
+	                        return {
+	                            items: items,
+	                            index: i
+	                        };
+	                    }
+	                }
+	            }
 	        }
 
-	        return length;
+	        var v = findNode(children);
+
+	        nextItems.push(children);
+	        nextPathIds.push(v.index);
+
+	        this.setState({
+	            cascadeItems: nextItems.reverse(),
+	            cascadePathIds: nextPathIds.reverse()
+	        });
+	    },
+	    setCascadeCache: function setCascadeCache(items, layer, index) {
+	        var _state2 = this.state,
+	            _state2$cascadeItems = _state2.cascadeItems,
+	            cascadeItems = _state2$cascadeItems === undefined ? [] : _state2$cascadeItems,
+	            cascadePathIds = _state2.cascadePathIds;
+
+	        var nextItems = [];
+	        var nextPathIds = [];
+
+	        for (var i = 0; i < cascadeItems.length && i < layer; i++) {
+	            nextItems.push(cascadeItems[i]);
+	            if (i < layer - 1) {
+	                nextPathIds.push(cascadePathIds[i]);
+	            }
+	        }
+
+	        nextItems.push(items);
+	        nextPathIds.push(index);
+
+	        this.setState({
+	            cascadeItems: nextItems,
+	            cascadePathIds: nextPathIds
+	        });
 	    },
 	    componentWillMount: function componentWillMount() {
-	        this.setCheckedItems(this.props.children);
+	        this.setCache(this.props.children);
 	    }
 	}, _defineProperty(_React$createClass, 'componentWillReceiveProps', function componentWillReceiveProps(nextProps) {
 
-	    if (this._getItemsLength(nextProps.children) !== this._getItemsLength(this.props.children)) {
-	        this.setCheckedItems(nextProps.children);
+	    if (!_lodash2.default.isEqual(nextProps.children, this.props.children)) {
+	        this.setCache(nextProps.children);
 	    }
 	}), _defineProperty(_React$createClass, 'render', function render() {
-	    var _props7 = this.props,
-	        multiple = _props7.multiple,
-	        height = _props7.height,
-	        tree = _props7.tree;
+	    var _props9 = this.props,
+	        multiple = _props9.multiple,
+	        height = _props9.height,
+	        type = _props9.type;
 
 	    var classes = multiple ? 'checkList' : 'selectList';
 
 	    var options = this.renderOptions();
 
-	    if (tree) {
-	        options = this.renderCheckListTree();
+	    if (type === 'tree') {
+	        options = this.renderTree();
+	    } else if (type === 'cascade') {
+	        options = this.renderCascade();
 	    } else if (multiple) {
 	        options = this.renderCheckList();
 	    }
@@ -46520,22 +46760,22 @@
 	exports.default = DropdownMenu;
 
 /***/ },
-/* 275 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var className = __webpack_require__(276);
-	var style = __webpack_require__(281);
-	var query = __webpack_require__(289);
-	var events = __webpack_require__(290);
-	var transition = __webpack_require__(294);
-	var animation = __webpack_require__(295);
-	var getVendorPrefixedName = __webpack_require__(299);
-	var BrowserSupportCore = __webpack_require__(300);
-	var DOMMouseMoveTracker = __webpack_require__(301);
+	var className = __webpack_require__(277);
+	var style = __webpack_require__(282);
+	var query = __webpack_require__(290);
+	var events = __webpack_require__(291);
+	var transition = __webpack_require__(295);
+	var animation = __webpack_require__(296);
+	var getVendorPrefixedName = __webpack_require__(300);
+	var BrowserSupportCore = __webpack_require__(301);
+	var DOMMouseMoveTracker = __webpack_require__(302);
 
 	module.exports = _extends({}, className, style, query, events, animation, {
 	    transition: transition,
@@ -46545,25 +46785,25 @@
 	});
 
 /***/ },
-/* 276 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	module.exports = {
-	    addClass: __webpack_require__(277),
-	    hasClass: __webpack_require__(278),
-	    removeClass: __webpack_require__(279),
-	    toggleClass: __webpack_require__(280)
-	};
-
-/***/ },
 /* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var hasClass = __webpack_require__(278);
+	module.exports = {
+	    addClass: __webpack_require__(278),
+	    hasClass: __webpack_require__(279),
+	    removeClass: __webpack_require__(280),
+	    toggleClass: __webpack_require__(281)
+	};
+
+/***/ },
+/* 278 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var hasClass = __webpack_require__(279);
 
 	module.exports = function addClass(target, className) {
 	    if (className) {
@@ -46577,7 +46817,7 @@
 	};
 
 /***/ },
-/* 278 */
+/* 279 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -46590,12 +46830,12 @@
 	};
 
 /***/ },
-/* 279 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var hasClass = __webpack_require__(278);
+	var hasClass = __webpack_require__(279);
 
 	module.exports = function removeClass(target, className) {
 	    if (className) {
@@ -46610,14 +46850,14 @@
 	};
 
 /***/ },
-/* 280 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var hasClass = __webpack_require__(278);
-	var addClass = __webpack_require__(277);
-	var removeClass = __webpack_require__(279);
+	var hasClass = __webpack_require__(279);
+	var addClass = __webpack_require__(278);
+	var removeClass = __webpack_require__(280);
 
 	module.exports = function toggleClass(target, className) {
 	    if (hasClass(target, className)) {
@@ -46627,31 +46867,17 @@
 	};
 
 /***/ },
-/* 281 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	module.exports = {
 
-	    getStyle: __webpack_require__(282),
-	    removeStyle: __webpack_require__(287),
-	    addStyle: __webpack_require__(288),
-	    getComputedStyle: __webpack_require__(285)
-	};
-
-/***/ },
-/* 282 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var camelizeStyleName = __webpack_require__(283);
-	var getComputedStyle = __webpack_require__(285);
-	var hyphenateStyleName = __webpack_require__(286);
-
-	module.exports = function getStyle(node, property) {
-	    return node.style[camelizeStyleName(property)] || getComputedStyle(node).getPropertyValue(hyphenateStyleName(property));
+	    getStyle: __webpack_require__(283),
+	    removeStyle: __webpack_require__(288),
+	    addStyle: __webpack_require__(289),
+	    getComputedStyle: __webpack_require__(286)
 	};
 
 /***/ },
@@ -46660,7 +46886,21 @@
 
 	'use strict';
 
-	var _require = __webpack_require__(284);
+	var camelizeStyleName = __webpack_require__(284);
+	var getComputedStyle = __webpack_require__(286);
+	var hyphenateStyleName = __webpack_require__(287);
+
+	module.exports = function getStyle(node, property) {
+	    return node.style[camelizeStyleName(property)] || getComputedStyle(node).getPropertyValue(hyphenateStyleName(property));
+	};
+
+/***/ },
+/* 284 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _require = __webpack_require__(285);
 
 	var camelize = _require.camelize;
 
@@ -46671,7 +46911,7 @@
 	};
 
 /***/ },
-/* 284 */
+/* 285 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -46728,7 +46968,7 @@
 	};
 
 /***/ },
-/* 285 */
+/* 286 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -46790,12 +47030,12 @@
 	};
 
 /***/ },
-/* 286 */
+/* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _require = __webpack_require__(284);
+	var _require = __webpack_require__(285);
 
 	var hyphenate = _require.hyphenate;
 
@@ -46806,7 +47046,7 @@
 	};
 
 /***/ },
-/* 287 */
+/* 288 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -46816,13 +47056,13 @@
 	};
 
 /***/ },
-/* 288 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var hyphenateStyleName = __webpack_require__(286);
-	var removeStyle = __webpack_require__(287);
+	var hyphenateStyleName = __webpack_require__(287);
+	var removeStyle = __webpack_require__(288);
 
 	module.exports = function addStyle(node, property, value) {
 	    var css = '';
@@ -46845,7 +47085,7 @@
 	};
 
 /***/ },
-/* 289 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46854,7 +47094,7 @@
 
 	var ReactDOM = __webpack_require__(160);
 
-	var _require = __webpack_require__(281);
+	var _require = __webpack_require__(282);
 
 	var getStyle = _require.getStyle;
 
@@ -47085,19 +47325,19 @@
 	};
 
 /***/ },
-/* 290 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	module.exports = {
-	    on: __webpack_require__(291),
-	    off: __webpack_require__(292),
-	    onFocus: __webpack_require__(293)
+	    on: __webpack_require__(292),
+	    off: __webpack_require__(293),
+	    onFocus: __webpack_require__(294)
 	};
 
 /***/ },
-/* 291 */
+/* 292 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -47126,7 +47366,7 @@
 	};
 
 /***/ },
-/* 292 */
+/* 293 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -47151,7 +47391,7 @@
 	};
 
 /***/ },
-/* 293 */
+/* 294 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -47178,12 +47418,12 @@
 	};
 
 /***/ },
-/* 294 */
+/* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _query = __webpack_require__(289);
+	var _query = __webpack_require__(290);
 
 	var has = Object.prototype.hasOwnProperty,
 	    transform = 'transform',
@@ -47246,19 +47486,19 @@
 	};
 
 /***/ },
-/* 295 */
+/* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	module.exports = {
-	    cancelAnimationFramePolyfill: __webpack_require__(296),
-	    nativeRequestAnimationFrame: __webpack_require__(297),
-	    requestAnimationFramePolyfill: __webpack_require__(298)
+	    cancelAnimationFramePolyfill: __webpack_require__(297),
+	    nativeRequestAnimationFrame: __webpack_require__(298),
+	    requestAnimationFramePolyfill: __webpack_require__(299)
 	};
 
 /***/ },
-/* 296 */
+/* 297 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {"use strict";
@@ -47269,7 +47509,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 297 */
+/* 298 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {"use strict";
@@ -47280,12 +47520,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 298 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
 
-	var nativeRequestAnimationFrame = __webpack_require__(297);
+	var nativeRequestAnimationFrame = __webpack_require__(298);
 	var emptyFunction = function emptyFunction() {};
 	var lastTime = 0;
 
@@ -47309,14 +47549,14 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 299 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _query = __webpack_require__(289);
+	var _query = __webpack_require__(290);
 
-	var _stringFormatter = __webpack_require__(284);
+	var _stringFormatter = __webpack_require__(285);
 
 	var memoized = {};
 	var prefixes = ['Webkit', 'ms', 'Moz', 'O'];
@@ -47353,12 +47593,12 @@
 	module.exports = getVendorPrefixedName;
 
 /***/ },
-/* 300 */
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _getVendorPrefixedName = __webpack_require__(299);
+	var _getVendorPrefixedName = __webpack_require__(300);
 
 	var _getVendorPrefixedName2 = _interopRequireDefault(_getVendorPrefixedName);
 
@@ -47397,16 +47637,16 @@
 	module.exports = BrowserSupportCore;
 
 /***/ },
-/* 301 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var on = __webpack_require__(291);
-	var cancelAnimationFramePolyfill = __webpack_require__(296);
-	var requestAnimationFramePolyfill = __webpack_require__(298);
+	var on = __webpack_require__(292);
+	var cancelAnimationFramePolyfill = __webpack_require__(297);
+	var requestAnimationFramePolyfill = __webpack_require__(299);
 
 	var DOMMouseMoveTracker = function () {
 	    /**
@@ -47539,7 +47779,7 @@
 	module.exports = DOMMouseMoveTracker;
 
 /***/ },
-/* 302 */
+/* 303 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47558,11 +47798,11 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _Option = __webpack_require__(303);
+	var _Option = __webpack_require__(304);
 
 	var _Option2 = _interopRequireDefault(_Option);
 
-	var _domLib = __webpack_require__(275);
+	var _domLib = __webpack_require__(276);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -47627,7 +47867,7 @@
 	exports.default = OptionGroup;
 
 /***/ },
-/* 303 */
+/* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47658,7 +47898,8 @@
 	        value: _react2.default.PropTypes.any,
 	        label: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.element]),
 	        selectable: _react2.default.PropTypes.bool,
-	        onSelect: _react2.default.PropTypes.func
+	        onSelect: _react2.default.PropTypes.func,
+	        hover: _react2.default.PropTypes.bool
 	    },
 	    getDefaultProps: function getDefaultProps() {
 	        return {
@@ -47674,11 +47915,13 @@
 	            onKeyDown = _props.onKeyDown,
 	            title = _props.title,
 	            selectable = _props.selectable,
-	            props = _objectWithoutProperties(_props, ['selected', 'label', 'value', 'onSelect', 'onKeyDown', 'title', 'selectable']);
+	            hover = _props.hover,
+	            props = _objectWithoutProperties(_props, ['selected', 'label', 'value', 'onSelect', 'onKeyDown', 'title', 'selectable', 'hover']);
 
 	        var classes = (0, _classnames2.default)('selectOption', {
 	            focusable: selectable,
 	            active: selected,
+	            hover: hover,
 	            notSelectable: !selectable
 	        });
 
@@ -47706,7 +47949,7 @@
 	exports.default = Option;
 
 /***/ },
-/* 304 */
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47725,11 +47968,11 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _CheckItem = __webpack_require__(305);
+	var _CheckItem = __webpack_require__(306);
 
 	var _CheckItem2 = _interopRequireDefault(_CheckItem);
 
-	var _domLib = __webpack_require__(275);
+	var _domLib = __webpack_require__(276);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -47808,7 +48051,7 @@
 	exports.default = CheckGroup;
 
 /***/ },
-/* 305 */
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47891,7 +48134,7 @@
 	exports.default = CheckItem;
 
 /***/ },
-/* 306 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47908,7 +48151,7 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _domLib = __webpack_require__(275);
+	var _domLib = __webpack_require__(276);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -47986,7 +48229,7 @@
 	exports.default = PickerMixin;
 
 /***/ },
-/* 307 */
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48007,17 +48250,17 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _domLib = __webpack_require__(275);
+	var _domLib = __webpack_require__(276);
 
-	var _DropdownToggle = __webpack_require__(271);
+	var _DropdownToggle = __webpack_require__(272);
 
 	var _DropdownToggle2 = _interopRequireDefault(_DropdownToggle);
 
-	var _Dropdown = __webpack_require__(272);
+	var _Dropdown = __webpack_require__(273);
 
 	var _Dropdown2 = _interopRequireDefault(_Dropdown);
 
-	var _PickerMixin = __webpack_require__(306);
+	var _PickerMixin = __webpack_require__(307);
 
 	var _PickerMixin2 = _interopRequireDefault(_PickerMixin);
 
@@ -48143,7 +48386,7 @@
 	            className = _props.className,
 	            inverse = _props.inverse,
 	            disabled = _props.disabled,
-	            tree = _props.tree,
+	            type = _props.type,
 	            expand = _props.expand;
 	        var _state = this.state,
 	            open = _state.open,
@@ -48172,7 +48415,7 @@
 	                ref: 'dropdown',
 	                options: updatedCheckList,
 	                height: height,
-	                tree: tree,
+	                type: type,
 	                expand: expand,
 	                onSelect: this.handleCheck,
 	                onKeyDown: this.handleKeyDown,
@@ -48187,7 +48430,7 @@
 	exports.default = CheckListPicker;
 
 /***/ },
-/* 308 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48214,7 +48457,69 @@
 	exports.default = FormGroupMinxin;
 
 /***/ },
-/* 309 */
+/* 310 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _Picker = __webpack_require__(270);
+
+	var _Picker2 = _interopRequireDefault(_Picker);
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var TreePicker = _react2.default.createClass({
+	    displayName: 'TreePicker',
+	    render: function render() {
+	        return _react2.default.createElement(_Picker2.default, _extends({ type: 'tree' }, this.props));
+	    }
+	});
+
+	exports.default = TreePicker;
+
+/***/ },
+/* 311 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _Picker = __webpack_require__(270);
+
+	var _Picker2 = _interopRequireDefault(_Picker);
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Cascader = _react2.default.createClass({
+	    displayName: 'Cascader',
+	    render: function render() {
+	        return _react2.default.createElement(_Picker2.default, _extends({ type: 'cascade' }, this.props));
+	    }
+	});
+
+	exports.default = Cascader;
+
+/***/ },
+/* 312 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48284,7 +48589,7 @@
 	}];
 
 /***/ },
-/* 310 */
+/* 313 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48301,7 +48606,7 @@
 
 	var _src2 = _interopRequireDefault(_src);
 
-	var _userGroups = __webpack_require__(311);
+	var _userGroups = __webpack_require__(314);
 
 	var _userGroups2 = _interopRequireDefault(_userGroups);
 
@@ -48315,7 +48620,7 @@
 	});
 
 /***/ },
-/* 311 */
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48401,7 +48706,7 @@
 	}];
 
 /***/ },
-/* 312 */
+/* 315 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48418,7 +48723,7 @@
 
 	var _src2 = _interopRequireDefault(_src);
 
-	var _userGroups = __webpack_require__(311);
+	var _userGroups = __webpack_require__(314);
 
 	var _userGroups2 = _interopRequireDefault(_userGroups);
 
@@ -48463,7 +48768,7 @@
 	});
 
 /***/ },
-/* 313 */
+/* 316 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48480,7 +48785,7 @@
 
 	var _src2 = _interopRequireDefault(_src);
 
-	var _userGroups = __webpack_require__(311);
+	var _userGroups = __webpack_require__(314);
 
 	var _userGroups2 = _interopRequireDefault(_userGroups);
 
@@ -48496,7 +48801,7 @@
 	});
 
 /***/ },
-/* 314 */
+/* 317 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48511,9 +48816,7 @@
 
 	var _src = __webpack_require__(269);
 
-	var _src2 = _interopRequireDefault(_src);
-
-	var _tree = __webpack_require__(315);
+	var _tree = __webpack_require__(318);
 
 	var _tree2 = _interopRequireDefault(_tree);
 
@@ -48525,11 +48828,21 @@
 	        return _react2.default.createElement(
 	            'div',
 	            null,
-	            _react2.default.createElement(_src2.default, { options: _tree2.default, multiple: true, tree: true, expand: true, onChange: function onChange(data) {
+	            _react2.default.createElement(
+	                'p',
+	                null,
+	                'Multiple'
+	            ),
+	            _react2.default.createElement(_src.TreePicker, { options: _tree2.default, multiple: true, expand: true, onChange: function onChange(data) {
 	                    console.log(data);
 	                } }),
 	            _react2.default.createElement('hr', null),
-	            _react2.default.createElement(_src2.default, { options: _tree2.default, tree: true, expand: true, onChange: function onChange(data) {
+	            _react2.default.createElement(
+	                'p',
+	                null,
+	                'Single'
+	            ),
+	            _react2.default.createElement(_src.TreePicker, { options: _tree2.default, expand: true, onChange: function onChange(data) {
 	                    console.log(data);
 	                } })
 	        );
@@ -48537,7 +48850,7 @@
 	});
 
 /***/ },
-/* 315 */
+/* 318 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48568,7 +48881,11 @@
 	            value: 'Dave'
 	        }, {
 	            label: 'Maya',
-	            value: 'Maya'
+	            value: 'Maya',
+	            children: [{
+	                label: 'tester',
+	                value: 'tester'
+	            }]
 	        }, {
 	            label: 'Kristoffer',
 	            value: 'Kristoffer'
@@ -48603,10 +48920,48 @@
 	        label: 'Dominic',
 	        value: 'Dominic'
 	    }]
+	}, {
+	    label: 'Kaka',
+	    value: 'Kaka'
 	}];
 
 /***/ },
-/* 316 */
+/* 319 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _src = __webpack_require__(269);
+
+	var _tree = __webpack_require__(318);
+
+	var _tree2 = _interopRequireDefault(_tree);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = _react2.default.createClass({
+	    displayName: 'CascaderExample',
+	    render: function render() {
+	        return _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(_src.Cascader, { options: _tree2.default, onChange: function onChange(data) {
+	                    console.log(data);
+	                } })
+	        );
+	    }
+	});
+
+/***/ },
+/* 320 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48623,11 +48978,11 @@
 
 	var _src2 = _interopRequireDefault(_src);
 
-	var _users = __webpack_require__(309);
+	var _users = __webpack_require__(312);
 
 	var _users2 = _interopRequireDefault(_users);
 
-	var _defalutValueForUserGroups = __webpack_require__(317);
+	var _defalutValueForUserGroups = __webpack_require__(321);
 
 	var _defalutValueForUserGroups2 = _interopRequireDefault(_defalutValueForUserGroups);
 
@@ -48651,7 +49006,7 @@
 	});
 
 /***/ },
-/* 317 */
+/* 321 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48739,43 +49094,49 @@
 	}];
 
 /***/ },
-/* 318 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> Picker <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n    <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n    <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>\n},{\n    <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Kariane'</span>,\n    <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>\n},\n    ...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Picker</span> <span class=\"hljs-attr\">options</span>=<span class=\"hljs-string\">{users}</span> /&gt;</span>\n        );\n    }\n});</span></code></pre></div>";
-
-/***/ },
-/* 319 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> Picker <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n        <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">children</span>: [\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>\n            },\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Kariane'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>\n            }\n            ...\n        ]\n    }\n    ...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Picker</span> <span class=\"hljs-attr\">options</span>=<span class=\"hljs-string\">{users}</span> /&gt;</span>\n        );\n    }\n});</span></code></pre></div>";
-
-/***/ },
-/* 320 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> Picker <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n    <span class=\"hljs-attr\">label</span>: <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">i</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">\"fa fa-group\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">i</span>&gt;</span> Master <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span></span>,\n    <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Master'</span>,\n    <span class=\"hljs-attr\">children</span>: [\n        {\n            <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n            <span class=\"hljs-attr\">label</span>: <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">i</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">\"fa fa-user\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">i</span>&gt;</span>Eugenia<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span></span>\n        },\n        {\n            <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>,\n            <span class=\"hljs-attr\">label</span>: <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">i</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">\"fa fa-user\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">i</span>&gt;</span>Eugenia<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span></span>\n        }\n        ...\n    ]\n}\n...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Picker</span> <span class=\"hljs-attr\">options</span>=<span class=\"hljs-string\">{users}</span> /&gt;</span>\n        );\n    }\n});</span></code></pre></div>";
-
-/***/ },
-/* 321 */
-/***/ function(module, exports) {
-
-	module.exports = "<p>Picker also supports multi-value pickers. The select below is declared with the <code>multiple</code> attribute.</p>\n<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> Picker <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n        <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">children</span>: [\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>\n            },\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Kariane'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>\n            }\n            ...\n        ]\n    }\n    ...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Picker</span> <span class=\"hljs-attr\">options</span>=<span class=\"hljs-string\">{users}</span> <span class=\"hljs-attr\">multiple</span> /&gt;</span>\n        );\n    }\n});</span></code></pre></div>";
-
-/***/ },
 /* 322 */
 /***/ function(module, exports) {
 
-	module.exports = "<p>Picker also supports tree pickers. The select below is declared with the <code>tree</code> attribute.</p>\n<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> Picker <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> options = [{\n        <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">children</span>: [\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>\n            },\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Kariane'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>\n            }\n            ...\n        ]\n    }\n    ...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            &lt;div&gt;\n                &lt;Picker options={options} multiple tree /&gt;\n                &lt;hr /&gt;\n                &lt;Picker options={options} tree expand /&gt;\n            &lt;/div&gt;\n        );\n    }\n});</code></pre></div>";
+	module.exports = "<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> { Picker } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n    <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n    <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>\n},{\n    <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Kariane'</span>,\n    <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>\n},\n    ...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Picker</span> <span class=\"hljs-attr\">options</span>=<span class=\"hljs-string\">{users}</span> /&gt;</span>\n        );\n    }\n});</span></code></pre></div>";
 
 /***/ },
 /* 323 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> Picker <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n        <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">children</span>: [\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>\n            },\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Kariane'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>,\n                <span class=\"hljs-comment\">//checked: default value for multiple pickers</span>\n                checked: <span class=\"hljs-literal\">true</span>\n            }\n            ...\n        ]\n    }\n    ...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            &lt;div&gt;\n                &lt;Picker options={options} defaultValue=\"Marty\"  /&gt;\n                &lt;hr /&gt;\n                &lt;Picker options={options} multiple /&gt;\n            &lt;/div&gt;\n        );\n    }\n});</code></pre></div>";
+	module.exports = "<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> { Picker } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n        <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">children</span>: [\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>\n            },\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Kariane'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>\n            }\n            ...\n        ]\n    }\n    ...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Picker</span> <span class=\"hljs-attr\">options</span>=<span class=\"hljs-string\">{users}</span> /&gt;</span>\n        );\n    }\n});</span></code></pre></div>";
 
 /***/ },
 /* 324 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> { Picker } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n    <span class=\"hljs-attr\">label</span>: <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">i</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">\"fa fa-group\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">i</span>&gt;</span> Master <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span></span>,\n    <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Master'</span>,\n    <span class=\"hljs-attr\">children</span>: [\n        {\n            <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n            <span class=\"hljs-attr\">label</span>: <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">i</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">\"fa fa-user\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">i</span>&gt;</span>Eugenia<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span></span>\n        },\n        {\n            <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>,\n            <span class=\"hljs-attr\">label</span>: <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">i</span> <span class=\"hljs-attr\">className</span>=<span class=\"hljs-string\">\"fa fa-user\"</span>&gt;</span><span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">i</span>&gt;</span>Eugenia<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span></span>\n        }\n        ...\n    ]\n}\n...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Picker</span> <span class=\"hljs-attr\">options</span>=<span class=\"hljs-string\">{users}</span> /&gt;</span>\n        );\n    }\n});</span></code></pre></div>";
+
+/***/ },
+/* 325 */
+/***/ function(module, exports) {
+
+	module.exports = "<p>Picker also supports multi-value pickers. The select below is declared with the <code>multiple</code> attribute.</p>\n<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> { Picker } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n        <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">children</span>: [\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>\n            },\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Kariane'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>\n            }\n            ...\n        ]\n    }\n    ...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Picker</span> <span class=\"hljs-attr\">options</span>=<span class=\"hljs-string\">{users}</span> <span class=\"hljs-attr\">multiple</span> /&gt;</span>\n        );\n    }\n});</span></code></pre></div>";
+
+/***/ },
+/* 326 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> { Picker } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> users = [{\n        <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">children</span>: [\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>\n            },\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Kariane'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>,\n                <span class=\"hljs-comment\">//checked: default value for multiple pickers</span>\n                checked: <span class=\"hljs-literal\">true</span>\n            }\n            ...\n        ]\n    }\n    ...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            &lt;div&gt;\n                &lt;Picker options={options} defaultValue=\"Marty\"  /&gt;\n                &lt;hr /&gt;\n                &lt;Picker options={options} multiple /&gt;\n            &lt;/div&gt;\n        );\n    }\n});</code></pre></div>";
+
+/***/ },
+/* 327 */
+/***/ function(module, exports) {
+
+	module.exports = "<p>Picker also supports tree pickers. The select below is declared with the <code>tree</code> attribute.</p>\n<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> { TreePicker } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> options = [{\n        <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">children</span>: [\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>\n            },\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Kariane'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>\n            }\n            ...\n        ]\n    }\n    ...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            &lt;div&gt;\n                &lt;TreePicker options={options} multiple /&gt;\n                &lt;hr /&gt;\n                &lt;TreePicker options={options} expand /&gt;\n            &lt;/div&gt;\n        );\n    }\n});</code></pre></div>";
+
+/***/ },
+/* 328 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"doc-highlight\"><pre><code class=\"javascript\"><span class=\"hljs-keyword\">import</span> React <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'react'</span>;\n<span class=\"hljs-keyword\">import</span> { Cascader } <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'rsuite-picker'</span>;\n\n<span class=\"hljs-keyword\">const</span> options = [{\n        <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Master'</span>,\n        <span class=\"hljs-attr\">children</span>: [\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Eugenia'</span>\n            },\n            {\n                <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Kariane'</span>,\n                <span class=\"hljs-attr\">value</span>: <span class=\"hljs-string\">'Kariane'</span>\n            }\n            ...\n        ]\n    }\n    ...\n];\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> React.createClass({\n    render(){\n        <span class=\"hljs-keyword\">return</span> (\n            <span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">div</span>&gt;</span>\n                <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">Cascader</span> <span class=\"hljs-attr\">options</span>=<span class=\"hljs-string\">{options}</span>  /&gt;</span>\n            <span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">div</span>&gt;</span>\n        );\n    }\n});</span></code></pre></div>";
+
+/***/ },
+/* 329 */
 /***/ function(module, exports) {
 
 	module.exports = "<h2 id=\"props\">Props</h2>\n<table>\n<thead>\n<tr>\n<th>Prop name</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>options</td>\n<td>array</td>\n<td></td>\n<td>It&#39;s required.</td>\n</tr>\n<tr>\n<td>height</td>\n<td>number</td>\n<td>300</td>\n<td>Dropdown height.</td>\n</tr>\n<tr>\n<td>dropup</td>\n<td>bool</td>\n<td>false</td>\n<td>After you click, expanding upward.</td>\n</tr>\n<tr>\n<td>defaultValue</td>\n<td>any</td>\n<td></td>\n<td>Default value of single pickers.</td>\n</tr>\n<tr>\n<td>getPlaceholder</td>\n<td>function</td>\n<td></td>\n<td>Custom placeholder.</td>\n</tr>\n<tr>\n<td>onChange</td>\n<td>function</td>\n<td></td>\n<td>Callback function of after value change.</td>\n</tr>\n<tr>\n<td>multiple</td>\n<td>bool</td>\n<td>false</td>\n<td>Supports multi-value pickers.</td>\n</tr>\n<tr>\n<td>disabled</td>\n<td>bool</td>\n<td>false</td>\n<td></td>\n</tr>\n<tr>\n<td>inverse</td>\n<td>bool</td>\n<td>false</td>\n<td></td>\n</tr>\n<tr>\n<td>tree</td>\n<td>bool</td>\n<td>false</td>\n<td>Display a tree in the picker</td>\n</tr>\n<tr>\n<td>expand</td>\n<td>bool</td>\n<td>false</td>\n<td>The default tree node is expanded</td>\n</tr>\n<tr>\n<td>locale</td>\n<td>object</td>\n<td><code>{ clearSelected:&#39;Clear selected&#39;, placeholder: &#39;${length} selected&#39; }</code></td>\n<td></td>\n</tr>\n</tbody>\n</table>\n";
