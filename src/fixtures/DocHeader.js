@@ -1,12 +1,15 @@
 import React from 'react';
 import classNames from 'classnames';
-import { scrollTop, on} from 'dom-lib';
+import { scrollTop, on } from 'dom-lib';
 import { Router, Route, Link } from 'react-router';
 import { Header, Navbar, Nav } from 'rsuite';
 
 
 const NAV_LINKS = [
     {
+        link: '/',
+        title: '首页'
+    }, {
         link: '/getting-started',
         title: '开始使用'
     }, {
@@ -53,8 +56,11 @@ const DocHeader = React.createClass({
     render() {
 
         let links = NAV_LINKS.map((nav, index) => {
+
+            let isActive = this.context.router.isActive(nav.link) && (nav.link !== '/');
+
             return (
-                <li className={this.context.router.isActive(nav.link) ? 'active' : null} key={index} >
+                <li className={isActive ? 'active' : null} key={index} >
                     <Link to={nav.link}>{nav.title}</Link>
                 </li>
             );
@@ -79,7 +85,7 @@ const DocHeader = React.createClass({
                             {links}
                         </Nav>
                         <Nav pullRight>
-                            <Nav.Item  href="https://github.com/rsuite/rsuite">GitHub</Nav.Item>
+                            <Nav.Item href="https://github.com/rsuite/rsuite">GitHub</Nav.Item>
                         </Nav>
                     </Navbar.Collapse>
                 </div>
