@@ -12,7 +12,7 @@ import IntroBlock from '../fixtures/IntroBlock';
 const data = [
     {
         icon: 'fa fa-briefcase',
-        url: 'http://rsuite.github.io',
+        url: 'http://rsuite.github.io/#/components',
         name: 'Basis Components',
         intro: '基础组件',
         src: 'https://github.com/rsuite/rsuite'
