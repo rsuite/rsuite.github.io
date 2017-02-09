@@ -1,4 +1,4 @@
-/*! Last update: Fri Jan 20 2017 19:17:20 GMT+0800 (CST) */
+/*! Last update: Thu Feb 09 2017 14:31:56 GMT+0800 (CST) */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -45775,9 +45775,14 @@
 	        return option;
 	    },
 	    getOptionByValue: function getOptionByValue(value, options) {
-	        if (!value || !options) {
+	        if (!options) {
 	            return;
 	        }
+
+	        if (value === undefined || value === null) {
+	            return;
+	        }
+
 	        for (var i = 0, len = options.length; i < len; i++) {
 	            var option = this.formatOption(options[i]);
 	            // if item has children property, this item is a group
@@ -45828,7 +45833,7 @@
 	            options = _nextProps$options === undefined ? [] : _nextProps$options;
 
 
-	        if (value) {
+	        if (value !== undefined && value !== null) {
 	            this.setState({
 	                open: false,
 	                currentSelected: this.getOptionByValue(value, options) || this.getDefaultSelect(options)
@@ -46455,8 +46460,8 @@
 
 	        return options;
 	    },
-	    handleExpand: function handleExpand(index, layer) {
-	        var node = this.refs['tree_node_' + index + '_' + layer];
+	    handleExpand: function handleExpand(index, layer, value) {
+	        var node = this.refs['tree_node_' + index + '_' + layer + '_' + value];
 	        (0, _domLib.toggleClass)((0, _reactDom.findDOMNode)(node), 'open');
 	    },
 	    renderTreeNode: function renderTreeNode(node, index, layer) {
@@ -46496,7 +46501,7 @@
 	        if (children) {
 	            layer++;
 	            var styles = {
-	                paddingLeft: 10 * layer
+	                paddingLeft: 20
 	            };
 	            var nodeClesses = (0, _classnames2.default)({
 	                'tree-node': true,
@@ -46505,11 +46510,11 @@
 
 	            return _react2.default.createElement(
 	                'div',
-	                { key: index, className: nodeClesses, ref: 'tree_node_' + index + '_' + layer },
+	                { key: index, className: nodeClesses, ref: 'tree_node_' + index + '_' + layer + '_' + value },
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'node-hasChildren' },
-	                    _react2.default.createElement('i', { className: 'expand-icon fa', onClick: this.handleExpand.bind(null, index, layer) }),
+	                    _react2.default.createElement('i', { className: 'expand-icon fa', onClick: this.handleExpand.bind(null, index, layer, value) }),
 	                    treeNode
 	                ),
 	                _react2.default.createElement(
@@ -46532,6 +46537,7 @@
 	            onSelect = _props6.onSelect,
 	            onClearSelected = _props6.onClearSelected;
 	        var clearSelected = this.context.locale.clearSelected;
+
 
 	        return children.map(function (node, index) {
 	            return _this4.renderTreeNode(node, index, 1);
@@ -48325,7 +48331,8 @@
 	            var item = this.formatItem(children[i]);
 	            if (item.children) {
 	                ret = ret.concat(this.getAllCheckedItems(item.children));
-	            } else if (item.checked) {
+	            }
+	            if (item.checked) {
 	                ret.push(item);
 	            }
 	        }
@@ -48481,7 +48488,10 @@
 	var TreePicker = _react2.default.createClass({
 	    displayName: 'TreePicker',
 	    render: function render() {
-	        return _react2.default.createElement(_Picker2.default, _extends({ type: 'tree' }, this.props));
+	        return _react2.default.createElement(_Picker2.default, _extends({
+	            className: 'TreePicker',
+	            type: 'tree'
+	        }, this.props));
 	    }
 	});
 
@@ -48537,6 +48547,10 @@
 	exports.default = [{
 	    label: 'Eugenia',
 	    value: 'Eugenia'
+
+	}, {
+	    label: 'All',
+	    value: ''
 
 	}, {
 	    label: 'Kariane',
@@ -48868,7 +48882,9 @@
 	exports.default = [{
 	    label: 'Master',
 	    value: 'Master',
+	    checked: true,
 	    children: [{
+	        checked: true,
 	        label: 'Eugenia',
 	        title: 'Eugenia',
 	        value: 'Eugenia'
@@ -48883,8 +48899,44 @@
 	            label: 'Maya',
 	            value: 'Maya',
 	            children: [{
-	                label: 'tester',
-	                value: 'tester'
+	                label: 'tester1',
+	                value: 'tester1',
+	                children: [{
+	                    label: 'tester2',
+	                    value: 'tester2',
+	                    children: [{
+	                        label: 'tester3',
+	                        value: 'tester3',
+	                        children: [{
+	                            label: 'tester4',
+	                            value: 'tester4',
+	                            children: [{
+	                                label: 'tester5',
+	                                value: 'tester5',
+	                                children: [{
+	                                    label: 'tester6',
+	                                    value: 'tester6',
+	                                    children: [{
+	                                        label: 'tester7',
+	                                        value: 'tester7',
+	                                        children: [{
+	                                            label: 'tester8',
+	                                            value: 'tester8',
+	                                            children: [{
+	                                                label: 'tester9',
+	                                                value: 'tester9',
+	                                                children: [{
+	                                                    label: 'tester10',
+	                                                    value: 'tester10'
+	                                                }]
+	                                            }]
+	                                        }]
+	                                    }]
+	                                }]
+	                            }]
+	                        }]
+	                    }]
+	                }]
 	            }]
 	        }, {
 	            label: 'Kristoffer',
@@ -48923,6 +48975,12 @@
 	}, {
 	    label: 'Kaka',
 	    value: 'Kaka'
+	}, {
+	    label: 'Foo',
+	    value: 'Foo'
+	}, {
+	    label: 'Bar',
+	    value: 'Bar'
 	}];
 
 /***/ },
@@ -48994,7 +49052,7 @@
 	        return _react2.default.createElement(
 	            'div',
 	            null,
-	            _react2.default.createElement(_src2.default, { options: _users2.default, defaultValue: 'Marty', onChange: function onChange(data) {
+	            _react2.default.createElement(_src2.default, { options: _users2.default, defaultValue: '', onChange: function onChange(data) {
 	                    console.log(data);
 	                } }),
 	            _react2.default.createElement('hr', null),

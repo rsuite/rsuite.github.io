@@ -1,4 +1,4 @@
-/*! Last update: Fri Jan 20 2017 19:17:20 GMT+0800 (CST) */
+/*! Last update: Thu Feb 09 2017 14:31:56 GMT+0800 (CST) */
 /**灰色色阶为公用颜色**/
 /**主题**/
 .rsuite-Picker {
@@ -41,6 +41,32 @@
 .rsuite-Picker.disabled .toggle {
   background: #f5f5f5 !important;
   cursor: not-allowed;
+}
+.rsuite-Picker:not(.disabled) .toggle {
+  overflow: hidden;
+  position: relative;
+  transition: 'background-color .3s linear, border .0s linear';
+}
+.rsuite-Picker:not(.disabled) .toggle:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #000 10%, rgba(0, 0, 0, 0) 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10);
+  opacity: 0;
+  transition: transform .5s, opacity 1s;
+}
+.rsuite-Picker:not(.disabled) .toggle:active:after {
+  transform: scale(0);
+  opacity: .2;
+  transition: 0s;
 }
 .rsuite-Picker .toggle {
   position: relative;
@@ -221,6 +247,15 @@
 .rsuite-Picker .selectGroup.shrink .selectOption {
   display: none;
 }
+.rsuite-Picker.TreePicker .checkList,
+.rsuite-Picker.TreePicker .selectList {
+  overflow: auto;
+  display: inline-block;
+}
+.rsuite-Picker.TreePicker .checkList > .selectOption,
+.rsuite-Picker.TreePicker .selectList > .selectOption {
+  padding-left: 36px;
+}
 .rsuite-CheckListPicker {
   /* settings */
 }
@@ -277,9 +312,6 @@
   height: 17px;
   background: #FFF;
   border: 1px solid #CCC;
-}
-.rsuite-CheckListPicker .checkList {
-  overflow-y: auto;
 }
 .rsuite-CheckListPicker .btnClear {
   padding: 6px 10px;
