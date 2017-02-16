@@ -3,6 +3,9 @@ var webpack = require('webpack');
 var marked = require('marked');
 var hl = require('highlight.js');
 
+const pkg = require('./package.json');
+;
+
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
 
@@ -27,6 +30,7 @@ var plugins = [
     }),
     new ExtractTextPlugin('[name].css'),
     new HtmlwebpackPlugin({
+        varsion: pkg.version,
         title: 'RSuite | 一个基于 React.js 的 Web 组件库',
         filename: '../index.html',
         template: 'src/index.html',
