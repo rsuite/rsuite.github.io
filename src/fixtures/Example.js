@@ -140,7 +140,8 @@ const Example = React.createClass({
                     </div>
                     <div className="container">
                         {this.props.children}
-                        <div className="typing-wrapper">
+                        <div className="typing-wrapper sublime">
+                            <div className="buttons"></div>
                             <CodeEditor
                                 key='jsx'
                                 onChange={this.handleCodeChange}
