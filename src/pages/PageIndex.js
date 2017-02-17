@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router';
 import { addStyle, getHeight, on } from 'dom-lib';
@@ -8,16 +7,19 @@ import { Container, Content, Row, Col } from 'rsuite';
 import { Markdown } from '../fixtures/Markdown';
 import Banner from '../fixtures/Banner';
 import IntroBlock from '../fixtures/IntroBlock';
+import IntroPanel from '../fixtures/IntroPanel';
 
 const data = [
     {
         icon: 'fa fa-briefcase',
+        bg: '#41a66e',
         url: 'http://rsuite.github.io/#/components',
         name: 'Basis Components',
         intro: '基础组件',
         src: 'https://github.com/rsuite/rsuite'
-    },{
+    }, {
         icon: 'fa fa-table',
+        bg: '#29a7e1',
         url: 'http://rsuite.github.io/rsuite-table',
         name: 'RSuite Table',
         intro: 'Table 组件，支持Tree，自定义列宽，锁定列及表头等功能',
@@ -25,6 +27,7 @@ const data = [
     },
     {
         icon: 'fa fa-calendar',
+        bg: '#9c27b0',
         url: 'http://rsuite.github.io/rsuite-datepicker',
         name: 'RSuite Datepicker',
         intro: '日历选择组件',
@@ -32,6 +35,7 @@ const data = [
     },
     {
         icon: 'fa fa-check',
+        bg: '#41a66e',
         url: 'http://rsuite.github.io/rsuite-picker',
         name: 'RSuite Picker',
         intro: '选择组件，可以替代 Select 和 Dropdown 组件',
@@ -39,13 +43,15 @@ const data = [
     },
     {
         icon: 'fa fa-bar-chart',
+        bg: '#41a66e',
         url: 'http://rsuite.github.io/rsuite-echarts',
         name: 'RSuite ECharts',
         intro: 'ECharts 的 React 组件',
         src: 'https://github.com/rsuite/rsuite-echarts'
     },
     {
-        icon:'fa fa-cloud-upload',
+        icon: 'fa fa-cloud-upload',
+        bg: '#41a66e',
         url: 'http://rsuite.github.io/rsuite-uploader',
         name: 'RSuite Uploader',
         intro: '上传文件组件',
@@ -77,7 +83,7 @@ const PageIndex = React.createClass({
                     <h1 className="logo"><span className="prefix">R</span>Suite</h1>
                     <p className="sub-title">一套基于 React.js 的 Web 组件库</p>
                     <div className="nav">
-                        <Link to="/getting-started" >开始使用</Link>
+                        <Link to="/getting-started">开始使用</Link>
                         <Link to="/components/buttons">组件</Link>
                         <Link to="/examples">实例</Link>
                         <a href="https://github.com/suitejs/suite">GitHub</a>
@@ -91,10 +97,7 @@ const PageIndex = React.createClass({
                         {
                             data.map((info, key) => {
                                 return (
-                                    <IntroBlock
-                                        key={key}
-                                        {...info}
-                                        />
+                                    <IntroPanel key={key} {...info}/>
                                 );
                             })
                         }
