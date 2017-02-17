@@ -1,9 +1,8 @@
 @import './highlight.less';
 
 @primary-color: #FF8533;
-@bg-color: #24292e;
+@bg-color: #24292E;
 @banner-bg-color: #121517;
-
 
 .logo {
     font-family: 'Raleway', 'Hiragino Sans GB', sans-serif;
@@ -13,11 +12,12 @@
         color: #61DAFB;
     }
 }
-.home-page{
+
+.home-page {
     background: @bg-color;
-    color:#AAB2BD;
-    a{
-        color: #fff;
+    color: #AAB2BD;
+    a {
+        color: #FFF;
     }
 }
 
@@ -242,7 +242,7 @@ code {
     a {
         margin: 0 10px;
     }
-    .fa-github{
+    .fa-github {
         font-size: 18px;
         vertical-align: middle;
     }
@@ -336,7 +336,7 @@ code {
 .intro-panel {
     background: white;
     width: 100%;
-    padding-bottom: 107%;
+    padding-bottom: 75%;
     padding-top: 37%;
     border-radius: 2px;
     margin-top: 12%;
@@ -349,6 +349,7 @@ code {
         background: #F7F7FA;
         top: -5.5%;
         left: 9.5%;
+        border-radius: 2px;
 
         .avatar-icon {
             position: absolute;
@@ -358,6 +359,7 @@ code {
             top: 0;
             bottom: 0;
             margin: auto;
+            border-radius: 2px;
 
             &:before {
                 position: absolute;
@@ -400,7 +402,24 @@ code {
             padding-bottom: 56%;
             overflow: hidden;
             max-height: 1px;
-            color: #595f69;
+            color: #595F69;
+        }
+
+        .intro-sub-intro {
+            font-size: 1.3em;
+            text-align: right;
+
+            > a {
+                color: #9BA3AF;
+
+                &:not(:last-child) {
+                    margin-right: 18px;
+                }
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
     }
 }
