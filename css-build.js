@@ -9,7 +9,7 @@ build.importResources({
 });
 
 build.palette({
-    baseColor: '#141c23',
+    baseColor: '#6292f0',
     src: 'css/rsuite.min.css',
     dist: `${outPutDir}/rsuite.min.css`
 });

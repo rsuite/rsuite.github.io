@@ -1,8 +1,20 @@
-@import './highlight.less';
+@import './less/highlight.less';
+@import './less/sublime.less';
 
 @primary-color: #FF8533;
-@bg-color: #24292E;
-@banner-bg-color: #121517;
+@bg-color: #24292e;
+@banner-bg-color: #6292f0;
+
+/* Demo */
+.demo {
+    font-size: 1.2em;
+    text-align: center;
+    font-family: 'Old Standard TT', serif;
+}
+
+a {
+    color: inherit;
+}
 
 .logo {
     font-family: 'Raleway', 'Hiragino Sans GB', sans-serif;
@@ -15,9 +27,9 @@
 
 .home-page {
     background: @bg-color;
-    color: #AAB2BD;
-    a {
-        color: #FFF;
+    color:#fff;
+    a{
+        color: #fff;
     }
 }
 
@@ -29,10 +41,7 @@
 
 .doc-page {
     .navbar-inverse {
-        background: @bg-color;
-        .active a {
-            background: #141C23;
-        }
+        background: @banner-bg-color;
     }
 }
 
@@ -184,8 +193,6 @@ code {
     height: 100%;
     z-index: 1040;
     overflow: hidden;
-    color: #AAB2BD;
-
     .nav {
         top: 32px;
         position: absolute;
@@ -197,7 +204,6 @@ code {
     }
     .nav > a {
         background: transparent;
-        color: #AAB2BD;
         margin-right: 10px;
         padding: 10px 23px;
         text-decoration: none;
@@ -210,7 +216,7 @@ code {
         }
     }
     .triangle-left {
-        background: #3E484A;
+        background: #fff;
         box-shadow: -8px -6px 11px rgba(5, 11, 8, 0.35);
         height: 1000px;
         position: absolute;
@@ -219,11 +225,11 @@ code {
         transform: rotate(-45deg);
         width: 1000px;
         z-index: 100;
+        color: #575757;
         animation: bounceInRight 1s cubic-bezier(0.215, .61, .355, 1);
 
         .doc-example {
             border: none;
-            opacity: 0.3;
         }
     }
     .typing-wrapper {
@@ -239,6 +245,7 @@ code {
 
 .footer {
     padding: 18px 0;
+    text-align: right;
     a {
         margin: 0 10px;
     }
