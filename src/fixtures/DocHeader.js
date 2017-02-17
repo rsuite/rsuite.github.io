@@ -11,13 +11,13 @@ const NAV_LINKS = [
         title: '首页'
     }, {
         link: '/getting-started',
-        title: '开始使用'
+        title: '介绍'
     }, {
         link: '/components',
         title: '组件'
     }, {
         link: '/examples',
-        title: '实例'
+        title: '示例'
     }];
 
 const DocHeader = React.createClass({

@@ -67,7 +67,7 @@ const data = [
 const PageIndex = React.createClass({
     handleWindowResize() {
         let banner = document.getElementById('banner');
-        let height = parseInt(getHeight(banner)) - 50;
+        let height = parseInt(getHeight(banner)) - 20;
         let indexContent = document.getElementById('index-content');
         addStyle(indexContent, 'margin-top', (height < 0 ? 0 : height) + 'px');
     },
@@ -123,19 +123,18 @@ const PageIndex = React.createClass({
                     <h1 className="logo"><span className="prefix">R</span>Suite</h1>
                     <p className="sub-title">一套基于 React 的 Web 组件库</p>
                     <div className="nav">
-                        <Link to="/getting-started">开始使用</Link>
+                        <Link to="/getting-started">介绍</Link>
                         <Link to="/components/buttons">组件</Link>
-                        <Link to="/examples">实例</Link>
+                        <Link to="/examples">示例</Link>
                         <a href="https://github.com/suitejs/suite">GitHub</a>
                     </div>
                 </Banner>
                 <Content id="index-content" className="box-wrapper">
-                    <h3>RSuite</h3>
-                    <p>RSuite 是一套基于 React 开发的 Web 组件库，提供 Bootstrap 设计体系的常用组件，并且会在此基础上持续开发一些高级组件。</p>
-                    <p>我们的目标就是让 WEB 开发更快捷，同时具有一定的灵活性和扩展性。</p>
+
                     <Row >
                         {
                             data.map((info, key) => {
+
                                 return (
                                     <IntroPanel key={key} {...info}/>
                                 );

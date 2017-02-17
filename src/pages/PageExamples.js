@@ -1,6 +1,7 @@
 import React from 'react';
 import { Content, Row, Col, Whisper, Tooltip } from 'rsuite';
 import IntroBlock from '../fixtures/IntroBlock';
+import { Markdown } from '../fixtures/Markdown';
 
 const data = [
     {
@@ -26,6 +27,13 @@ const PageExamples = React.createClass({
 
         return (
             <Content className='box-wrapper'>
+                <Row>
+                    <Col md={12}>
+                        <Markdown>
+                            {require('./examples.md')}
+                        </Markdown>
+                    </Col>
+                </Row>
                 <Row>
                     {introBlocks}
                 </Row>

@@ -1,16 +1,38 @@
-`RSuite` 是通过 npm 管理，需要通过 npm 进行安装。
-关于组件的使用，可以参考组件的详细说明。
 
-如果你想参考一个完整的 Demo ,我们也提供一些[案例](https://github.com/rsuite/rsuite/tree/master/examples/)。
 
-### 安装
+### 关于 RSUITE
+------
+
+RSUITE 是一套基于 React 开发的 UI 组件库，提供 Bootstrap 设计体系的常用组件，并且会在此基础上持续开发一些高级组件。
+
+我们的目标就是让 WEB 开发更快捷，同时具有一定的灵活性和扩展性。
+
+<br/>
+
+#### 特性
+
+- 基于 React 组件化开发模式
+- 丰富、漂亮 UI 组件
+- 支持多主题切换
+- 支持相应式布局
+- 支持 ES2015
+
+<br/>
+
+#### 版本
+
+[![Travis](https://travis-ci.org/rsuite/rsuite.svg?branch=master)](https://travis-ci.org/rsuite/rsuite)
+[![npm](https://badge.fury.io/js/rsuite.svg)](https://www.npmjs.com/package/rsuite)
+
+<br/>
+#### 安装
 
 ```
 npm install rsuite --save
 ```
 
 
-### Javascript
+示例：
 
 ```js
 // ES2015
@@ -29,13 +51,15 @@ define(['rsuite'], function(Suite) {
 ReactDOM.render(<Button>Button</Button>, mountNode);
 ```
 
-### CSS
+css
+
 ```html
 <link rel="stylesheet" href="//t.hypers.com.cn/libs/rsuite/css/0.1.0/rsuite.min.css">
 ```
-[code](https://github.com/rsuite/rsuite-theme)
+[rsuite-theme](https://github.com/rsuite/rsuite-theme)
 
-### 浏览器支持
+<br/>
+#### 浏览器支持
 
 针对IE8及以下的浏览器，需要引入 `html5shiv`、`es5-shim`, 来处理对 `HTML5 标签`、`ECMAScript5` 兼容性问题
 
