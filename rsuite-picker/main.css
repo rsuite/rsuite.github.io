@@ -1,26 +1,87 @@
-/*! Last update: Thu Feb 09 2017 14:31:56 GMT+0800 (CST) */
+/*! Last update: Fri Feb 17 2017 10:52:23 GMT+0800 (CST) */
+@charset "utf-8";
 /**灰色色阶为公用颜色**/
 /**主题**/
+@keyframes slideUpIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0% 0%;
+    transform: scaleY(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 0% 0%;
+    transform: scaleY(1);
+  }
+}
+@keyframes slideDownIn {
+  0% {
+    opacity: 0;
+    transform-origin: 100% 100%;
+    transform: scaleY(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 100% 100%;
+    transform: scaleY(1);
+  }
+}
+@keyframes slideLeftIn {
+  0% {
+    opacity: 0;
+    transform-origin: 0% 0%;
+    transform: scaleX(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 0% 0%;
+    transform: scaleX(1);
+  }
+}
 .rsuite-Picker {
   /* settings */
   position: relative;
   box-sizing: border-box;
   text-align: left;
 }
-.rsuite-Picker.cascade .toggle {
-  border-bottom-width: 1px !important;
+.rsuite-Picker.cascade.expand .toggle {
+  padding: 7px 26px 7px 26px;
+}
+.rsuite-Picker.cascade.expand.rsuite-Picker--dropup .toggle {
+  border-top-width: 1px;
+  padding: 7px 26px 7px 26px;
+}
+.rsuite-Picker.cascade.expand.rsuite-Picker--dropup .toggle .toggle-arrow {
+  top: 14px;
+}
+.rsuite-Picker.cascade.expand.rsuite-Picker--dropup .selectDropdown.dropup {
+  border-top: medium none;
 }
 .rsuite-Picker.cascade .selectDropdown {
+  border: medium none;
   width: auto;
   min-width: auto;
   height: 200px;
+}
+.rsuite-Picker.cascade .toggle {
+  border-bottom-width: 1px !important;
 }
 .rsuite-Picker.cascade .cascader-menu {
   width: 120px;
   display: inline-block;
   height: 200px;
-  border-right: 1px solid #f1f1f1;
   overflow-y: auto;
+  float: left;
+  border-top: 1px solid #DCDCDC;
+  border-bottom: 1px solid #DCDCDC;
+  border-right: 1px solid #DCDCDC;
+  animation: slideLeftIn 0.3s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+.rsuite-Picker.cascade .cascader-menu:first-child {
+  border-left: 1px solid #DCDCDC;
+}
+.rsuite-Picker.cascade .cascader-menu:last-child {
+  border-right-color: #DCDCDC;
 }
 .rsuite-Picker.cascade .has-children {
   position: relative;
@@ -39,7 +100,7 @@
   opacity: .65;
 }
 .rsuite-Picker.disabled .toggle {
-  background: #f5f5f5 !important;
+  background: #F5F5F5 !important;
   cursor: not-allowed;
 }
 .rsuite-Picker:not(.disabled) .toggle {
@@ -74,7 +135,7 @@
   background-color: #FFF;
   color: #333;
   border: 1px solid #CCC;
-  padding: 7px 26px 7px 18px;
+  padding: 7px 26px 7px 26px;
   cursor: pointer;
   outline: none;
   width: 100%;
@@ -100,26 +161,38 @@
 .rsuite-Picker.expand .toggle {
   z-index: 101;
   background: #FFF !important;
-  border-color: #dcdcdc !important;
+  border-color: #DCDCDC !important;
   border-bottom-width: 0;
-  padding: 7px 26px 8px 18px;
+  padding: 7px 26px 8px 26px;
 }
 .rsuite-Picker.expand.rsuite-Picker--dropup .toggle {
   border-top-width: 0;
   border-bottom-width: 1px;
+  padding: 8px 26px 7px 26px;
+}
+.rsuite-Picker.expand.rsuite-Picker--dropup .toggle-arrow {
+  top: 15px;
 }
 .rsuite-Picker.inverse .toggle {
   border-color: #f5f5f5;
   background-color: #f5f5f5;
 }
 .rsuite-Picker.inverse .toggle:hover {
-  background-color: #e8e8e8;
+  background-color: #E8E8E8;
 }
 .rsuite-Picker.inverse .toggle-placeholder {
   color: #575757;
 }
 .rsuite-Picker .selectList {
   overflow-y: auto;
+}
+.rsuite-Picker .selectList:before,
+.rsuite-Picker .selectList:after {
+  content: " ";
+  display: table;
+}
+.rsuite-Picker .selectList:after {
+  clear: both;
 }
 .rsuite-Picker .selectDropdown {
   -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.28);
@@ -136,6 +209,7 @@
   z-index: 100;
   left: 0;
   min-width: 160px;
+  animation: slideUpIn 0.3s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 .rsuite-Picker .selectDropdown.dropup {
   top: auto;
@@ -146,6 +220,7 @@
   -moz-box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.175);
   -webkit-box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.175);
+  animation: slideDownIn 0.3s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 .rsuite-Picker .selectDropdown .tree-node {
   position: relative;
@@ -203,11 +278,11 @@
   -o-text-overflow: ellipsis;
 }
 .rsuite-Picker .selectOption.notSelectable {
-  color: #8f8f8f;
+  color: #8F8F8F;
 }
 .rsuite-Picker .selectOption.notSelectable:hover,
 .rsuite-Picker .selectOption.notSelectable:focus {
-  color: #8f8f8f;
+  color: #8F8F8F;
   background: none;
 }
 .rsuite-Picker .selectOption:hover,
@@ -218,11 +293,11 @@
 }
 .rsuite-Picker .selectOption.active {
   background-color: #29a7e1;
-  color: #fff;
+  color: #FFF;
 }
 .rsuite-Picker .selectGroup {
   margin-top: 2px;
-  border-bottom: 1px solid #f5f5f5;
+  border-bottom: 1px solid #F5F5F5;
 }
 .rsuite-Picker .selectGroup .selectGroup-title {
   position: relative;
@@ -251,6 +326,8 @@
 .rsuite-Picker.TreePicker .selectList {
   overflow: auto;
   display: inline-block;
+  min-width: 100%;
+  padding-right: 12px;
 }
 .rsuite-Picker.TreePicker .checkList > .selectOption,
 .rsuite-Picker.TreePicker .selectList > .selectOption {
