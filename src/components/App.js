@@ -11,14 +11,16 @@ const App = React.createClass({
         router: React.PropTypes.object.isRequired
     },
     componentWillReceiveProps: function (nextProps) {
-        _ha('send', 'pageview', {
+        _ha && _ha('send', 'pageview', {
             'url': document.location.href
         });
     },
     render: function () {
-        //_ha('send','pageview');
+        const { location } = this.props;
+        console.log(this.props);
+        const className = location.pathname === '/' ? 'home-page' : '';
         return (
-            <div className='doc-page'>
+            <div className={`doc-page ${className}`}>
                 <DocHeader />
                 <Container className='doc-container'>
                     {this.props.children}

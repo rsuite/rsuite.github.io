@@ -1,13 +1,23 @@
 @import './highlight.less';
 
 @primary-color: #FF8533;
-@bg-color: #373C44;
+@bg-color: #24292e;
+@banner-bg-color: #121517;
+
 
 .logo {
-    font-family: "open sans", arial, sans-serif;
+    font-family: 'Raleway', 'Hiragino Sans GB', sans-serif;
     color: @primary-color;
+    text-transform: uppercase;
     .prefix {
         color: #61DAFB;
+    }
+}
+.home-page{
+    background: @bg-color;
+    color:#AAB2BD;
+    a{
+        color: #fff;
     }
 }
 
@@ -168,7 +178,7 @@ code {
 .banner {
     position: absolute;
     width: 100%;
-    background: @bg-color;
+    background: @banner-bg-color;
     top: 0;
     left: 0;
     height: 100%;
@@ -183,10 +193,10 @@ code {
     }
     .sub-title {
         margin-top: 40px;
+        font-size: 16px;
     }
     .nav > a {
         background: transparent;
-        border-radius: 4px;
         color: #AAB2BD;
         margin-right: 10px;
         padding: 10px 23px;
@@ -195,7 +205,8 @@ code {
             border: 1px solid #FF8533;
         }
         &:hover {
-            box-shadow: 0 0 10px #FF8533
+            background: #141C23;
+            transition: background-color .6s linear;
         }
     }
     .triangle-left {
@@ -227,9 +238,13 @@ code {
 }
 
 .footer {
-    margin: 18px 0;
+    padding: 18px 0;
     a {
         margin: 0 10px;
+    }
+    .fa-github{
+        font-size: 18px;
+        vertical-align: middle;
     }
 }
 
