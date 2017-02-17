@@ -17,7 +17,6 @@ const App = React.createClass({
     },
     render: function () {
         const { location } = this.props;
-        console.log(this.props);
         const className = location.pathname === '/' ? 'home-page' : '';
         return (
             <div className={`doc-page ${className}`}>
