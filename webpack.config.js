@@ -31,7 +31,7 @@ var plugins = [
     new ExtractTextPlugin('[name].css'),
     new HtmlwebpackPlugin({
         varsion: pkg.version,
-        title: 'RSuite | 一个基于 React.js 的 Web 组件库',
+        title: 'RSUITE | 一套 React 的 UI 组件库',
         filename: '../index.html',
         template: 'src/index.html',
         inject: true,

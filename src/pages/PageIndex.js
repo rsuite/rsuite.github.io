@@ -121,7 +121,7 @@ const PageIndex = React.createClass({
             <div>
                 <Banner id="banner">
                     <h1 className="logo"><span className="prefix">R</span>Suite</h1>
-                    <p className="sub-title">一套基于 React 的 Web 组件库</p>
+                    <p className="sub-title">一套 React 的 UI 组件库</p>
                     <div className="nav">
                         <Link to="/getting-started">介绍</Link>
                         <Link to="/components/buttons">组件</Link>

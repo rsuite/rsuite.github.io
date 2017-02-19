@@ -1,4 +1,4 @@
-`RSuite` 是一个基于 React.js 开发的 Web 组件库，参考 Bootstrap 设计，提供其中常用组件，支持响应式布局。
+`RSuite` 是一套 React 的 UI 组件库，参考 Bootstrap 设计，提供其中常用组件，支持响应式布局。
 
 我们的目标就是让 WEB 开发更快捷，同时具有一定的灵活性和扩展性。
 
