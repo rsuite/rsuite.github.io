@@ -1,4 +1,4 @@
-/*! Last update: Fri Feb 17 2017 10:52:23 GMT+0800 (CST) */
+/*! Last update: Mon Feb 20 2017 11:13:36 GMT+0800 (CST) */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -46087,7 +46087,7 @@
 
 	        return _react2.default.createElement(
 	            'div',
-	            { className: classes },
+	            { className: classes, style: { maxHeight: height } },
 	            type === 'default' ? _react2.default.createElement(_SearchBar2.default, {
 	                onKeyDown: onKeyDown,
 	                onChange: this.handleSearchTextChange,
@@ -46741,7 +46741,6 @@
 	}), _defineProperty(_React$createClass, 'render', function render() {
 	    var _props9 = this.props,
 	        multiple = _props9.multiple,
-	        height = _props9.height,
 	        type = _props9.type;
 
 	    var classes = multiple ? 'checkList' : 'selectList';
@@ -46758,7 +46757,7 @@
 
 	    return _react2.default.createElement(
 	        'div',
-	        { className: classes, style: { maxHeight: height } },
+	        { className: classes },
 	        options
 	    );
 	}), _React$createClass));
@@ -48546,7 +48545,7 @@
 
 	exports.default = [{
 	    label: 'Eugenia',
-	    value: 'Eugenia'
+	    value: 1
 
 	}, {
 	    label: 'All',
@@ -48554,31 +48553,31 @@
 
 	}, {
 	    label: 'Kariane',
-	    value: 'Kariane'
+	    value: 2
 	}, {
 	    label: 'Louisa',
-	    value: 'Louisa'
+	    value: 3
 	}, {
 	    label: 'Marty',
-	    value: 'Marty'
+	    value: 4
 	}, {
 	    label: 'Kenya',
-	    value: 'Kenya'
+	    value: 5
 	}, {
 	    label: 'Hal',
-	    value: 'Hal'
+	    value: 6
 	}, {
 	    label: 'Julius',
-	    value: 'Julius'
+	    value: 7
 	}, {
 	    label: 'Travon',
-	    value: 'Travon'
+	    value: 8
 	}, {
 	    label: 'Vincenza',
-	    value: 'Vincenza'
+	    value: 9
 	}, {
 	    label: 'Dominic',
-	    value: 'Dominic'
+	    value: 10
 	}, {
 	    label: 'Dave',
 	    value: 'Dave'
@@ -49060,7 +49059,7 @@
 	    displayName: 'DefaultValueExample',
 	    getInitialState: function getInitialState() {
 	        return {
-	            value: 'Kariane'
+	            value: 2
 	        };
 	    },
 	    render: function render() {

@@ -11,16 +11,16 @@ const DocSidebar = React.createClass({
 
             menu.push(
                 <li  key={key} className="nav-header" >
-                    {item.title}
-                    <span className="nav-en">{item.category}</span>
+                    {item.category}
                 </li>
             );
 
             item.components.map((child, index) => {
                 menu.push(
                     <Nav.Item key={index} activeClassName="active" componentClass={Link} to={`/components/${child.id}`} >
-                        {child.title}
-                        <span className="nav-en">{child.name}</span>
+
+                        {child.name}
+                        <span className="nav-chinese">{child.title}</span>
                     </Nav.Item>
                 );
             });
@@ -30,7 +30,7 @@ const DocSidebar = React.createClass({
             <Sidebar >
                 <Nav className="nav-docs">
                     {menu}
-                    <li  className="nav-header">其他组件</li>
+                    <li  className="nav-header">Other</li>
                     <li><a target="_blank" href="http://rsuite.github.io/rsuite-table">RSuite Table</a></li>
                     <li><a target="_blank" href="http://rsuite.github.io/rsuite-echarts">RSuite ECharts</a></li>
                     <li><a target="_blank" href="https://rsuite.github.io/rsuite-datepicker/">RSuite Datepicker</a></li>
