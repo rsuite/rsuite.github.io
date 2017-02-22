@@ -61,7 +61,17 @@ const data = [
         name: 'RSuite Uploader',
         intro: '上传文件组件',
         src: 'https://github.com/rsuite/rsuite-uploader'
+    },
+    {
+        icon: 'fa fa-tree',
+        bg: '#29a7e1',
+        repoName: 'rsuite-tree',
+        url: 'http://rsuite.github.io/rsuite-tree',
+        name: 'RSuite Tree',
+        intro: '树型组件',
+        src: 'https://github.com/rsuite/rsuite-tree'
     }
+
 ];
 
 const PageIndex = React.createClass({
