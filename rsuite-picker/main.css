@@ -1,4 +1,4 @@
-/*! Last update: Mon Feb 20 2017 19:02:47 GMT+0800 (CST) */
+/*! Last update: Fri Feb 24 2017 23:25:38 GMT+0800 (CST) */
 @charset "utf-8";
 /**灰色色阶为公用颜色**/
 /**主题**/
@@ -205,10 +205,9 @@
   overflow: auto;
   position: absolute;
   top: 100%;
-  width: 100%;
   z-index: 100;
   left: 0;
-  min-width: 160px;
+  width: 100%;
   animation: slideUpIn 0.3s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 .rsuite-Picker .selectDropdown.dropup {
@@ -216,7 +215,6 @@
   left: 0;
   bottom: 37px;
   border-top: 1px solid #CCC;
-  border-bottom: 0;
   -moz-box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.175);
   -webkit-box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.175);
@@ -236,7 +234,7 @@
 }
 .rsuite-Picker .selectDropdown .tree-node .selectOption {
   padding: 6px;
-  margin-left: 30px;
+  margin-left: 18px;
 }
 .rsuite-Picker .selectDropdown .tree-node .expand-icon {
   width: 18px;
@@ -244,11 +242,16 @@
   text-align: center;
   cursor: pointer;
   position: absolute;
-  top: 6px;
-  left: 12px;
+  top: 8px;
 }
 .rsuite-Picker .selectDropdown .tree-node .expand-icon:before {
   content: "\F0DA";
+}
+.rsuite-Picker .selectDropdown .selectList .tree-node .item.active {
+  background: #29a7e1;
+}
+.rsuite-Picker .selectDropdown .selectList .tree-node .item.active .expand-icon {
+  color: #fff;
 }
 .rsuite-Picker .searchBar {
   padding: 6px 10px;
@@ -322,16 +325,27 @@
 .rsuite-Picker .selectGroup.shrink .selectOption {
   display: none;
 }
+.rsuite-Picker.TreePicker .item:hover {
+  background: #eaf6fc;
+}
+.rsuite-Picker.TreePicker .selectDropdown {
+  width: auto;
+  min-width: 100%;
+}
 .rsuite-Picker.TreePicker .checkList,
 .rsuite-Picker.TreePicker .selectList {
-  overflow: auto;
   display: inline-block;
   min-width: 100%;
-  padding-right: 12px;
 }
-.rsuite-Picker.TreePicker .checkList > .selectOption,
-.rsuite-Picker.TreePicker .selectList > .selectOption {
-  padding-left: 36px;
+.rsuite-Picker.TreePicker.multilayer .checkList > .item .selectOption,
+.rsuite-Picker.TreePicker.multilayer .selectList > .item .selectOption {
+  padding-left: 24px;
+}
+.rsuite-Picker.TreePicker.multilayer .checkList > .item,
+.rsuite-Picker.TreePicker.multilayer .selectList > .item,
+.rsuite-Picker.TreePicker.multilayer .checkList > .tree-node,
+.rsuite-Picker.TreePicker.multilayer .selectList > .tree-node {
+  margin-left: -10px;
 }
 .rsuite-CheckListPicker {
   /* settings */

@@ -1,4 +1,4 @@
-/*! Last update: Mon Feb 20 2017 19:02:47 GMT+0800 (CST) */
+/*! Last update: Fri Feb 24 2017 23:25:38 GMT+0800 (CST) */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -46170,8 +46170,6 @@
 	    value: true
 	});
 
-	var _React$createClass;
-
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _react = __webpack_require__(9);
@@ -46208,11 +46206,9 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
-	var DropdownMenu = _react2.default.createClass((_React$createClass = {
+	var DropdownMenu = _react2.default.createClass({
 	    displayName: 'DropdownMenu',
 
 	    propTypes: {
@@ -46260,6 +46256,12 @@
 	            }
 
 	            (0, _domLib.scrollTop)(dropdownDOM, (activeIndex + 2) * itemHeight - height);
+	        }
+
+	        if (!_lodash2.default.isEqual(nextProps.children, this.props.children)) {
+	            if (nextProps.type === 'cascade') {
+	                this._treeToCascade();
+	            }
 	        }
 	    },
 	    getItemsAndActiveIndex: function getItemsAndActiveIndex() {
@@ -46361,31 +46363,22 @@
 	            children = _props3.children,
 	            onSelect = _props3.onSelect;
 
-
 	        return children.map(function (item, index) {
 	            var label = item.label,
-	                children = item.children,
+	                options = item.children,
 	                value = item.value,
 	                other = _objectWithoutProperties(item, ['label', 'children', 'value']);
 
-	            if (item.children) {
-	                return _react2.default.createElement(_OptionGroup2.default, _extends({}, other, {
-	                    key: index,
-	                    selected: selected,
-	                    options: children,
-	                    label: label,
-	                    onSelect: onSelect,
-	                    onKeyDown: _this.handleKeyDown
-	                }));
-	            }
-
-	            return _react2.default.createElement(_Option2.default, _extends({}, other, {
-	                key: index,
-	                onKeyDown: _this.handleKeyDown,
+	            var OptionNode = item.children ? _OptionGroup2.default : _Option2.default;
+	            var optionNodeProps = item.children ? { selected: selected, options: options, onSelect: onSelect } : {
 	                selected: selected === value,
+	                onSelect: onSelect.bind(null, item),
+	                value: value
+	            };
+	            return _react2.default.createElement(OptionNode, _extends({}, other, optionNodeProps, {
+	                key: index,
 	                label: label,
-	                value: value,
-	                onSelect: onSelect.bind(null, item)
+	                onKeyDown: _this.handleKeyDown
 	            }));
 	        });
 	    },
@@ -46400,6 +46393,7 @@
 	        var _state$checkedItems = this.state.checkedItems,
 	            checkedItems = _state$checkedItems === undefined ? [] : _state$checkedItems;
 
+
 	        var options = children.filter(function (item) {
 	            var flag = true;
 	            checkedItems.forEach(function (excItem) {
@@ -46408,29 +46402,23 @@
 	                }
 	            });
 	            return flag;
-	        }).map(function (item, idx) {
+	        }).map(function (item, index) {
 	            var label = item.label,
-	                children = item.children,
+	                itemChildren = item.children,
 	                value = item.value,
 	                checked = item.checked,
 	                other = _objectWithoutProperties(item, ['label', 'children', 'value', 'checked']);
 
-	            if (item.children) {
-	                return _react2.default.createElement(_CheckGroup2.default, _extends({}, other, {
-	                    key: idx,
-	                    label: label,
-	                    children: children,
-	                    excludeItems: checkedItems,
-	                    onSelect: onSelect,
-	                    onKeyDown: _this2.handleKeyDown
-	                }));
-	            }
-	            return _react2.default.createElement(_CheckItem2.default, _extends({}, other, {
-	                key: idx,
+	            var CheckNode = itemChildren ? _CheckGroup2.default : _CheckItem2.default;
+	            var checkNodeProps = itemChildren ? { children: itemChildren, excludeItems: checkedItems, onSelect: onSelect } : {
 	                checked: checked,
-	                label: label,
 	                value: value,
-	                onSelect: onSelect.bind(null, item),
+	                onSelect: onSelect.bind(null, item)
+	            };
+
+	            return _react2.default.createElement(CheckNode, _extends({}, other, checkNodeProps, {
+	                key: index,
+	                label: label,
 	                onKeyDown: _this2.handleKeyDown
 	            }));
 	        });
@@ -46482,46 +46470,54 @@
 	            selectable = node.selectable,
 	            other = _objectWithoutProperties(node, ['label', 'children', 'value', 'checked', 'selectable']);
 
-	        var treeNode = multiple ? _react2.default.createElement(_CheckItem2.default, _extends({}, other, {
-	            key: index,
-	            checked: checked,
-	            label: label,
-	            value: value,
-	            selectable: selectable,
-	            onSelect: onSelect.bind(null, node),
-	            onKeyDown: this.handleKeyDown
-	        })) : _react2.default.createElement(_Option2.default, _extends({}, other, {
-	            key: index,
-	            onKeyDown: this.handleKeyDown,
-	            selected: selected === value,
-	            label: label,
-	            value: value,
-	            selectable: selectable,
-	            onSelect: onSelect.bind(null, node)
-	        }));
+	        var styles = {
+	            paddingLeft: 24 * layer
+	        };
 
 	        if (children) {
 	            layer++;
-	            var styles = {
-	                paddingLeft: 20
-	            };
-	            var nodeClesses = (0, _classnames2.default)({
+	        }
+
+	        var TreeNode = multiple ? _CheckItem2.default : _Option2.default;
+	        var active = multiple ? checked : selected === value;
+	        var activeProp = multiple ? { checked: checked } : { selected: selected === value };
+	        var hybridTreeNodeClassName = active ? 'active' : '';
+
+	        var hybridTreeNode = _react2.default.createElement(
+	            'div',
+	            {
+	                key: index,
+	                className: 'item ' + hybridTreeNodeClassName,
+	                style: styles,
+	                tabIndex: '-1'
+	            },
+	            children ? _react2.default.createElement('i', { className: 'expand-icon fa', onClick: this.handleExpand.bind(null, index, layer, value) }) : null,
+	            _react2.default.createElement(TreeNode, _extends({}, other, activeProp, {
+	                checked: checked,
+	                label: label,
+	                value: value,
+	                selectable: selectable,
+	                onSelect: onSelect.bind(null, node),
+	                onKeyDown: this.handleKeyDown
+	            }))
+	        );
+
+	        if (children) {
+	            var nodeClasses = (0, _classnames2.default)({
 	                'tree-node': true,
 	                open: expand
 	            });
-
 	            return _react2.default.createElement(
 	                'div',
-	                { key: index, className: nodeClesses, ref: 'tree_node_' + index + '_' + layer + '_' + value },
+	                { key: index, className: nodeClasses, ref: 'tree_node_' + index + '_' + layer + '_' + value },
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'node-hasChildren' },
-	                    _react2.default.createElement('i', { className: 'expand-icon fa', onClick: this.handleExpand.bind(null, index, layer, value) }),
-	                    treeNode
+	                    hybridTreeNode
 	                ),
 	                _react2.default.createElement(
 	                    'div',
-	                    { style: styles, className: 'node-children' },
+	                    { className: 'node-children' },
 	                    children.map(function (child, index) {
 	                        return _this3.renderTreeNode(child, index, layer);
 	                    })
@@ -46529,7 +46525,7 @@
 	            );
 	        }
 
-	        return treeNode;
+	        return hybridTreeNode;
 	    },
 	    renderTree: function renderTree() {
 	        var _this4 = this;
@@ -46732,35 +46728,31 @@
 	    },
 	    componentWillMount: function componentWillMount() {
 	        this.setCache(this.props.children);
+	    },
+	    render: function render() {
+	        var _props9 = this.props,
+	            multiple = _props9.multiple,
+	            type = _props9.type;
+
+	        var classes = multiple ? 'checkList' : 'selectList';
+
+	        var options = this.renderOptions();
+
+	        if (type === 'tree') {
+	            options = this.renderTree();
+	        } else if (type === 'cascade') {
+	            options = this.renderCascade();
+	        } else if (multiple) {
+	            options = this.renderCheckList();
+	        }
+
+	        return _react2.default.createElement(
+	            'div',
+	            { className: classes },
+	            options
+	        );
 	    }
-	}, _defineProperty(_React$createClass, 'componentWillReceiveProps', function componentWillReceiveProps(nextProps) {
-
-	    if (!_lodash2.default.isEqual(nextProps.children, this.props.children)) {
-	        this.setCache(nextProps.children);
-	    }
-	}), _defineProperty(_React$createClass, 'render', function render() {
-	    var _props9 = this.props,
-	        multiple = _props9.multiple,
-	        type = _props9.type;
-
-	    var classes = multiple ? 'checkList' : 'selectList';
-
-	    var options = this.renderOptions();
-
-	    if (type === 'tree') {
-	        options = this.renderTree();
-	    } else if (type === 'cascade') {
-	        options = this.renderCascade();
-	    } else if (multiple) {
-	        options = this.renderCheckList();
-	    }
-
-	    return _react2.default.createElement(
-	        'div',
-	        { className: classes },
-	        options
-	    );
-	}), _React$createClass));
+	});
 
 	exports.default = DropdownMenu;
 
@@ -48170,6 +48162,7 @@
 	        }
 	    },
 	    handleClose: function handleClose() {
+
 	        this.setState({ open: false });
 	    },
 	    toggleDropdown: function toggleDropdown() {
@@ -48218,16 +48211,21 @@
 
 	        }
 	    },
-	    componentDidMount: function componentDidMount() {
-	        this.autoAdjustDropdownPosition();
-	        this._eventScroll = (0, _domLib.on)(document, 'scroll', this.autoAdjustDropdownPosition);
-	        this._eventResize = (0, _domLib.on)(window, 'resize', this.autoAdjustDropdownPosition);
-	        this._eventClick = (0, _domLib.on)(document, 'click', this.handleDocumentClick);
-	    },
-	    componentWillUnmount: function componentWillUnmount() {
-	        this._eventScroll.off();
-	        this._eventResize.off();
-	        this._eventClick.off();
+	    componentWillUpdate: function componentWillUpdate(nextProps, nextState) {
+	        if (nextState.open === this.state.open) {
+	            return;
+	        }
+
+	        if (nextState.open) {
+	            this.autoAdjustDropdownPosition();
+	            this._eventScroll = (0, _domLib.on)(document, 'scroll', this.autoAdjustDropdownPosition);
+	            this._eventResize = (0, _domLib.on)(window, 'resize', this.autoAdjustDropdownPosition);
+	            this._eventClick = (0, _domLib.on)(document, 'click', this.handleDocumentClick);
+	        } else {
+	            this._eventScroll.off();
+	            this._eventResize.off();
+	            this._eventClick.off();
+	        }
 	    }
 	};
 
@@ -48487,8 +48485,15 @@
 	var TreePicker = _react2.default.createClass({
 	    displayName: 'TreePicker',
 	    render: function render() {
+	        var options = this.props.options;
+
+	        var hasChildren = options.some(function (item) {
+	            return item.children && item.children.length;
+	        });
+
+	        var className = hasChildren ? 'multilayer' : '';
 	        return _react2.default.createElement(_Picker2.default, _extends({
-	            className: 'TreePicker',
+	            className: 'TreePicker ' + className,
 	            type: 'tree'
 	        }, this.props));
 	    }
