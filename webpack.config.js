@@ -81,6 +81,9 @@ module.exports = {
             }, {
                 test: /\.md$/,
                 loader: 'html!markdown'
+            },{
+                test: /\.(jpg|png)$/,
+                loader: 'url?limit=8192'
             }
         ]
     },

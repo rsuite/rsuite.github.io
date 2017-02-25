@@ -4,6 +4,8 @@ import { scrollTop, on } from 'dom-lib';
 import { Router, Route, Link } from 'react-router';
 import { Header, Navbar, Nav } from 'rsuite';
 
+import logo from '../images/logo.png';
+
 
 const NAV_LINKS = [
     {
@@ -76,16 +78,17 @@ const DocHeader = React.createClass({
                 <div className="container">
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <a href="#"><span className="prefix">R</span>Suite</a>
+                            <a href="#"><img  height={32} src={logo} /></a>
                         </Navbar.Brand>
                         <Navbar.Toggle />
                     </Navbar.Header>
                     <Navbar.Collapse>
                         <Nav>
-                            {links}
+
                         </Nav>
                         <Nav pullRight>
-                            <Nav.Item href="https://github.com/rsuite/rsuite"><i className="fa fa-github"></i> GitHub</Nav.Item>
+                            {links}
+                            <Nav.Item href="https://github.com/rsuite/rsuite">GitHub</Nav.Item>
                         </Nav>
                     </Navbar.Collapse>
                 </div>
