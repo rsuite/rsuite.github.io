@@ -4,8 +4,8 @@ import { scrollTop, on } from 'dom-lib';
 import { Router, Route, Link } from 'react-router';
 import { Header, Navbar, Nav } from 'rsuite';
 
-import logo from '../images/logo.png';
 
+const logo = '/resources/images/logo.png';
 
 const NAV_LINKS = [
     {
