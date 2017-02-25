@@ -1,4 +1,4 @@
-/*! Last update: Fri Feb 24 2017 23:25:38 GMT+0800 (CST) */
+/*! Last update: Sat Feb 25 2017 20:35:13 GMT+0800 (CST) */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -46027,7 +46027,16 @@
 
 	        return false;
 	    },
-	    handleListSelect: function handleListSelect(item) {
+	    handleListSelect: function handleListSelect(item, event) {
+
+	        /**
+	         * 其实这里是需要 阻止事件冒泡，
+	         * 在treepicker 的时候，当点击的对象是小icon ，则不执行后面的选择操作
+	         */
+	        if (/expand-icon/.test(event.target.className)) {
+	            return;
+	        }
+
 	        var onSelect = this.props.onSelect;
 
 	        onSelect && onSelect(item);
@@ -46087,7 +46096,7 @@
 
 	        return _react2.default.createElement(
 	            'div',
-	            { className: classes, style: { maxHeight: height } },
+	            { className: classes },
 	            type === 'default' ? _react2.default.createElement(_SearchBar2.default, {
 	                onKeyDown: onKeyDown,
 	                onChange: this.handleSearchTextChange,
@@ -46225,50 +46234,31 @@
 	    },
 	    getInitialState: function getInitialState() {
 	        return {
+	            //级联选项
 	            cascadeItems: []
 	        };
 	    },
 	    componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
-
-	        if (!nextProps.multiple && nextProps.selected !== this.props.selected) {
-
-	            var node = (0, _reactDom.findDOMNode)(this);
-	            var options = Array.from(node.querySelectorAll('.selectOption, .selectGroup-title'));
-	            var groups = Array.from(node.querySelectorAll('.selectGroup'));
-	            var height = this.props.height;
-
-	            if (!options.length) {
-	                return;
-	            }
-
-	            var itemHeight = (0, _domLib.getHeight)(options[0]) || 32;
-	            var dropdownDOM = (0, _reactDom.findDOMNode)(this);
-	            var activeIndex = 0;
-
-	            for (var i = 0; i < options.length; i++) {
-	                if ((0, _domLib.hasClass)(options[i], 'active')) {
-	                    activeIndex = i;
-	                }
-	            }
-
-	            for (var _i = 0; _i < groups.length; _i++) {
-	                (0, _domLib.removeClass)(groups[_i], 'shrink');
-	            }
-
-	            (0, _domLib.scrollTop)(dropdownDOM, (activeIndex + 2) * itemHeight - height);
-	        }
-
-	        if (!_lodash2.default.isEqual(nextProps.children, this.props.children)) {
-	            if (nextProps.type === 'cascade') {
-	                this._treeToCascade();
-	            }
+	        // 当 Props 中 children 更新以后， 需要更新级联组件的数据
+	        if (!_lodash2.default.isEqual(nextProps.children, this.props.children) && nextProps.type === 'cascade') {
+	            this._treeToCascade();
 	        }
 	    },
+
+
+	    /**
+	     * 获取当前Dom 中 Active 的对象
+	     */
 	    getItemsAndActiveIndex: function getItemsAndActiveIndex() {
 	        var children = this.getFocusableMenuItems();
 	        var activeIndex = children.indexOf(document.activeElement);
 	        return { children: children, activeIndex: activeIndex };
 	    },
+
+
+	    /**
+	     * 获取Menu中所有可以 focus 的选项
+	     */
 	    getFocusableMenuItems: function getFocusableMenuItems() {
 	        var node = (0, _reactDom.findDOMNode)(this);
 	        if (!node) {
@@ -46276,6 +46266,11 @@
 	        }
 	        return Array.from(node.querySelectorAll('.focusable'));
 	    },
+
+
+	    /**
+	     *  KeyDown down 键处理
+	     */
 	    focusNextItem: function focusNextItem() {
 	        var _getItemsAndActiveInd = this.getItemsAndActiveIndex(),
 	            children = _getItemsAndActiveInd.children,
@@ -46288,6 +46283,11 @@
 	        var nextIndex = activeIndex === children.length - 1 ? 0 : activeIndex + 1;
 	        children[nextIndex].focus();
 	    },
+
+
+	    /**
+	     * KeyDown Up 键处理
+	     */
 	    focusPreviousItem: function focusPreviousItem() {
 	        var _getItemsAndActiveInd2 = this.getItemsAndActiveIndex(),
 	            children = _getItemsAndActiveInd2.children,
@@ -46300,6 +46300,11 @@
 	        var prevIndex = activeIndex === 0 ? children.length - 1 : activeIndex - 1;
 	        children[prevIndex].focus();
 	    },
+
+
+	    /**
+	     * 获取当前选中节点的数据
+	     */
 	    getActiveElementOption: function getActiveElementOption(options, value) {
 	        for (var i = 0; i < options.length; i++) {
 	            if (options[i].value + '' === value + '') {
@@ -46313,6 +46318,11 @@
 	        }
 	        return false;
 	    },
+
+
+	    /**
+	     * KeyDown 选中某个节点
+	     */
 	    selectActiveItem: function selectActiveItem() {
 	        var _props = this.props,
 	            children = _props.children,
@@ -46323,6 +46333,11 @@
 
 	        onSelect(option);
 	    },
+
+	    /**
+	     * 处理键盘事件
+	     * 上移 下移，回车选中，esc/tab 关闭
+	     */
 	    handleKeyDown: function handleKeyDown(event) {
 	        var _props2 = this.props,
 	            onClose = _props2.onClose,
@@ -46450,9 +46465,13 @@
 
 	        return options;
 	    },
-	    handleExpand: function handleExpand(index, layer, value) {
+	    handleExpand: function handleExpand(index, layer, value, event) {
 	        var node = this.refs['tree_node_' + index + '_' + layer + '_' + value];
 	        (0, _domLib.toggleClass)((0, _reactDom.findDOMNode)(node), 'open');
+
+	        console.log(event.target);
+	        event.preventDefault();
+	        return false;
 	    },
 	    renderTreeNode: function renderTreeNode(node, index, layer) {
 	        var _this3 = this;
@@ -46484,22 +46503,21 @@
 	        var hybridTreeNodeClassName = active ? 'active' : '';
 
 	        var hybridTreeNode = _react2.default.createElement(
-	            'div',
-	            {
+	            TreeNode,
+	            _extends({}, other, activeProp, {
 	                key: index,
 	                className: 'item ' + hybridTreeNodeClassName,
 	                style: styles,
-	                tabIndex: '-1'
-	            },
-	            children ? _react2.default.createElement('i', { className: 'expand-icon fa', onClick: this.handleExpand.bind(null, index, layer, value) }) : null,
-	            _react2.default.createElement(TreeNode, _extends({}, other, activeProp, {
 	                checked: checked,
 	                label: label,
 	                value: value,
 	                selectable: selectable,
 	                onSelect: onSelect.bind(null, node),
 	                onKeyDown: this.handleKeyDown
-	            }))
+	            }),
+	            children ? _react2.default.createElement('i', { className: 'expand-icon fa', onClick: function onClick(event) {
+	                    _this3.handleExpand(index, layer, value, event);
+	                } }) : null
 	        );
 
 	        if (children) {
@@ -46732,7 +46750,8 @@
 	    render: function render() {
 	        var _props9 = this.props,
 	            multiple = _props9.multiple,
-	            type = _props9.type;
+	            type = _props9.type,
+	            height = _props9.height;
 
 	        var classes = multiple ? 'checkList' : 'selectList';
 
@@ -46748,7 +46767,7 @@
 
 	        return _react2.default.createElement(
 	            'div',
-	            { className: classes },
+	            { className: classes, style: { maxHeight: height } },
 	            options
 	        );
 	    }
@@ -47913,7 +47932,8 @@
 	            title = _props.title,
 	            selectable = _props.selectable,
 	            hover = _props.hover,
-	            props = _objectWithoutProperties(_props, ['selected', 'label', 'value', 'onSelect', 'onKeyDown', 'title', 'selectable', 'hover']);
+	            children = _props.children,
+	            props = _objectWithoutProperties(_props, ['selected', 'label', 'value', 'onSelect', 'onKeyDown', 'title', 'selectable', 'hover', 'children']);
 
 	        var classes = (0, _classnames2.default)('selectOption', {
 	            focusable: selectable,
@@ -47938,6 +47958,8 @@
 	                    }
 	                    onSelect && onSelect(event);
 	                } }),
+	            children,
+	            ' ',
 	            label
 	        );
 	    }
@@ -48094,8 +48116,9 @@
 	            onSelect = _props.onSelect,
 	            onKeyDown = _props.onKeyDown,
 	            selectable = _props.selectable,
+	            children = _props.children,
 	            title = _props.title,
-	            props = _objectWithoutProperties(_props, ['checked', 'label', 'value', 'onSelect', 'onKeyDown', 'selectable', 'title']);
+	            props = _objectWithoutProperties(_props, ['checked', 'label', 'value', 'onSelect', 'onKeyDown', 'selectable', 'children', 'title']);
 
 	        var classes = (0, _classnames2.default)('selectOption', 'checkItem', {
 	            focusable: selectable,
@@ -48118,6 +48141,7 @@
 	                    }
 	                    onSelect && onSelect(event);
 	                } }),
+	            children,
 	            _react2.default.createElement('input', { className: 'checkItem-checkbox', type: 'checkbox' }),
 	            _react2.default.createElement(
 	                'label',
@@ -48491,7 +48515,7 @@
 	            return item.children && item.children.length;
 	        });
 
-	        var className = hasChildren ? 'multilayer' : '';
+	        var className = hasChildren ? '' : 'onlyOneLayer';
 	        return _react2.default.createElement(_Picker2.default, _extends({
 	            className: 'TreePicker ' + className,
 	            type: 'tree'

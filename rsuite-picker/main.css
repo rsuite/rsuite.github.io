@@ -1,4 +1,4 @@
-/*! Last update: Fri Feb 24 2017 23:25:38 GMT+0800 (CST) */
+/*! Last update: Sat Feb 25 2017 20:35:13 GMT+0800 (CST) */
 @charset "utf-8";
 /**灰色色阶为公用颜色**/
 /**主题**/
@@ -183,15 +183,19 @@
 .rsuite-Picker.inverse .toggle-placeholder {
   color: #575757;
 }
-.rsuite-Picker .selectList {
-  overflow-y: auto;
+.rsuite-Picker .selectList,
+.rsuite-Picker .checkList {
+  overflow: auto;
 }
 .rsuite-Picker .selectList:before,
-.rsuite-Picker .selectList:after {
+.rsuite-Picker .checkList:before,
+.rsuite-Picker .selectList:after,
+.rsuite-Picker .checkList:after {
   content: " ";
   display: table;
 }
-.rsuite-Picker .selectList:after {
+.rsuite-Picker .selectList:after,
+.rsuite-Picker .checkList:after {
   clear: both;
 }
 .rsuite-Picker .selectDropdown {
@@ -202,7 +206,6 @@
   border: 1px solid #CCC;
   padding: 0px;
   margin-top: -1px;
-  overflow: auto;
   position: absolute;
   top: 100%;
   z-index: 100;
@@ -234,7 +237,6 @@
 }
 .rsuite-Picker .selectDropdown .tree-node .selectOption {
   padding: 6px;
-  margin-left: 18px;
 }
 .rsuite-Picker .selectDropdown .tree-node .expand-icon {
   width: 18px;
@@ -242,6 +244,7 @@
   text-align: center;
   cursor: pointer;
   position: absolute;
+  margin-left: -20px;
   top: 8px;
 }
 .rsuite-Picker .selectDropdown .tree-node .expand-icon:before {
@@ -334,18 +337,13 @@
 }
 .rsuite-Picker.TreePicker .checkList,
 .rsuite-Picker.TreePicker .selectList {
-  display: inline-block;
   min-width: 100%;
 }
-.rsuite-Picker.TreePicker.multilayer .checkList > .item .selectOption,
-.rsuite-Picker.TreePicker.multilayer .selectList > .item .selectOption {
-  padding-left: 24px;
-}
-.rsuite-Picker.TreePicker.multilayer .checkList > .item,
-.rsuite-Picker.TreePicker.multilayer .selectList > .item,
-.rsuite-Picker.TreePicker.multilayer .checkList > .tree-node,
-.rsuite-Picker.TreePicker.multilayer .selectList > .tree-node {
-  margin-left: -10px;
+.rsuite-Picker.TreePicker.onlyOneLayer .checkList > .item,
+.rsuite-Picker.TreePicker.onlyOneLayer .selectList > .item,
+.rsuite-Picker.TreePicker.onlyOneLayer .checkList > .tree-node,
+.rsuite-Picker.TreePicker.onlyOneLayer .selectList > .tree-node {
+  margin-left: -24px;
 }
 .rsuite-CheckListPicker {
   /* settings */
