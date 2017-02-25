@@ -5,7 +5,6 @@ import { Router, Route, Link } from 'react-router';
 import { Header, Navbar, Nav } from 'rsuite';
 
 
-const logo = '/resources/images/logo.png';
 
 const NAV_LINKS = [
     {
@@ -78,7 +77,7 @@ const DocHeader = React.createClass({
                 <div className="container">
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <a href="#"><img  height={32} src={logo} /></a>
+                            <a href="#"><img  height={32} src='resources/images/logo.png' /></a>
                         </Navbar.Brand>
                         <Navbar.Toggle />
                     </Navbar.Header>
