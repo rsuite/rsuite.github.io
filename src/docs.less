@@ -28,8 +28,8 @@ a {
 
 .home-page {
     background: @bg-color;
-    color:#fff;
-    a{
+    color: #fff;
+    a {
         color: #fff;
     }
 }
@@ -56,28 +56,42 @@ a {
         border: none;
     }
     .navbar-right {
-        margin-right: 0
+        margin-right: 0;
+        background-color: @banner-bg-color;
     }
     .navbar-brand {
         height: @header-height;
         padding: 15px 0;
         .logo;
+
+        @media (max-width: 768px) {
+            & {
+                margin-left: 10px;
+            }
+        }
     }
-    .navbar-nav>li>a{
-        line-height:40px;
+
+    @media (max-width: 768px) {
+        .navbar-nav {
+            margin: 0;
+        }
+    }
+
+    .navbar-nav > li > a {
+        line-height: 40px;
         padding: 10px 30px;
     }
 
-    .navbar-nav>li{
-        a{
+    .navbar-nav > li {
+        a {
             background: none !important;
-            &:hover{
+            &:hover {
                 border-bottom: 2px solid #eee;
                 padding-bottom: 8px;
             }
         }
-        &.active a, a:focus, a:active{
-            color:#fff;
+        &.active a, a:focus, a:active {
+            color: #fff;
             border-bottom: 2px solid #fff;
             padding-bottom: 8px;
         }
@@ -87,12 +101,12 @@ a {
 
 .doc-container {
     margin-top: @header-height;
-    .page-header{
+    .page-header {
         margin: 40px 0 32px;
         border: none;
     }
 
-    h3{
+    h3 {
         font-size: 18px;
     }
 
@@ -104,7 +118,6 @@ a {
     }
 }
 
-
 .page-sidebar-wrapper {
     box-shadow: 2px -2px 8px rgba(235, 240, 242, 0.55);
     width: 256px;
@@ -113,12 +126,12 @@ a {
     .page-sidebar {
         padding: 0;
     }
-    .nav>li>a{
+    .nav > li > a {
         padding-left: 0;
-        &:hover{
-            color:#6292f0;
+        &:hover {
+            color: #6292f0;
         }
-        &:focus,&:hover{
+        &:focus, &:hover {
             background: none;
         }
     }
@@ -136,13 +149,13 @@ a {
     }
     .active {
         font-weight: 500;
-        color:#6292f0;
+        color: #6292f0;
     }
     .nav-chinese {
         font-size: 12px;
         margin-left: 10px;
         vertical-align: bottom;
-        opacity:0.67;
+        opacity: 0.67;
     }
     .nav-header {
         &:first-child {
@@ -428,7 +441,7 @@ code {
         padding: 0 10% 10%;
         position: absolute;
         width: 100%;
-        color:#575757;
+        color: #575757;
 
         .intro-name {
             font-weight: 600;
@@ -501,7 +514,6 @@ code {
     }
 }
 
-
-.cm-s-base16-light.CodeMirror{
+.cm-s-base16-light.CodeMirror {
     background: #fbfbfb !important;
 }
