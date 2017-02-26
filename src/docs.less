@@ -60,6 +60,7 @@ a {
     }
     .navbar-brand {
         height: @header-height;
+        padding: 15px 0;
         .logo;
     }
     .navbar-nav>li>a{
@@ -86,6 +87,15 @@ a {
 
 .doc-container {
     margin-top: @header-height;
+    .page-header{
+        margin: 40px 0 32px;
+        border: none;
+    }
+
+    h3{
+        font-size: 18px;
+    }
+
     .page-header-en {
         color: #777;
         font-size: 20px;
@@ -94,23 +104,23 @@ a {
     }
 }
 
-.page-container {
-    margin-top: 50px;
-    color: #575757;
-    .page-header {
-        margin: 10px 0 20px;
-        word-wrap: break-word;
-        word-break: normal;
-    }
-
-}
 
 .page-sidebar-wrapper {
+    box-shadow: 2px -2px 8px rgba(235, 240, 242, 0.55);
+    width: 256px;
+    overflow: auto;
+    background: #fff;
     .page-sidebar {
         padding: 0;
     }
     .nav>li>a{
         padding-left: 0;
+        &:hover{
+            color:#6292f0;
+        }
+        &:focus,&:hover{
+            background: none;
+        }
     }
 }
 
@@ -143,7 +153,6 @@ a {
         font-size: 16px;
         color: #999;
         font-weight: 100;
-        border-top: 1px solid #E5E5E5;
         margin-top: 10px;
     }
 }
@@ -153,8 +162,7 @@ a {
 }
 
 .doc-example {
-    padding: 46px 18px 18px;
-    border: 1px solid #EEE;
+    padding: 10px 0;
     position: relative;
     &:after {
         position: absolute;
@@ -165,7 +173,6 @@ a {
         color: #959595;
         text-transform: uppercase;
         letter-spacing: 1px;
-        content: "Example";
     }
     .container {
         width: auto;
@@ -183,17 +190,16 @@ a {
 
 .CodeMirror {
     padding: 10px;
+    margin: 10px 0;
     height: auto !important;
 }
 
 .markdown table {
     width: 100%;
-    th {
-        background: #F1F1F1;
-    }
+
     td, th {
-        border: 1px solid #EEE;
-        padding: 10px;
+        border-bottom: 1px solid #EEE;
+        padding: 10px 0;
     }
 }
 
@@ -493,4 +499,9 @@ code {
     100% {
         opacity: 1
     }
+}
+
+
+.cm-s-base16-light.CodeMirror{
+    background: #fbfbfb !important;
 }

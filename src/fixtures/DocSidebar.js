@@ -6,6 +6,7 @@ import * as data from './data';
 
 const DocSidebar = React.createClass({
     render() {
+        const { children } = this.props;
         const menu = [];
         data.default.map((item,key) => {
 
@@ -28,6 +29,7 @@ const DocSidebar = React.createClass({
 
         return (
             <Sidebar >
+                {children}
                 <Nav className="nav-docs">
                     {menu}
                     <li  className="nav-header">Other</li>

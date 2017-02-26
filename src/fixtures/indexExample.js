@@ -19,7 +19,7 @@ const FormExample = React.createClass({
         const { data = {}, errors } = this.props;
         return (
             <div className="container">
-                <h1 className="page-title">Form Example</h1>
+                <h3 className="page-title">Form Example</h3>
                 <RSuiteForm ref="form"
                     model={ userModel }
                     errors = { errors }

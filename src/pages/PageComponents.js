@@ -13,16 +13,15 @@ const PageComponents = React.createClass({
     render: function () {
         return (
             <div>
-                <Row>
-                    <Col md={12}>
-                        <Markdown>
-                            {require('./components.md')}
-                        </Markdown>
-                    </Col>
-                </Row>
+
                 <Row>
                     <Col md={3} sm={12}>
-                        <DocSidebar />
+
+                        <DocSidebar >
+                            <Markdown>
+                                {require('./components.md')}
+                            </Markdown>
+                        </DocSidebar>
                     </Col>
                     {this.props.children}
                 </Row>
