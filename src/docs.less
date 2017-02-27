@@ -13,9 +13,6 @@
     font-family: 'Old Standard TT', serif;
 }
 
-a {
-    color: inherit;
-}
 
 .logo {
     font-family: 'Raleway', 'Hiragino Sans GB', sans-serif;
@@ -78,7 +75,8 @@ a {
     }
 
     .navbar-nav > li > a {
-        line-height: 40px;
+        height: @header-height;
+        line-height: 39px;
         padding: 10px 30px;
     }
 
@@ -207,12 +205,19 @@ a {
     height: auto !important;
 }
 
-.markdown table {
-    width: 100%;
 
-    td, th {
-        border-bottom: 1px solid #EEE;
-        padding: 10px 0;
+.markdown {
+    ol,ul{
+        padding: 10px 20px;
+    }
+    table {
+        width: 100%;
+
+
+        td, th {
+            border-bottom: 1px solid #EEE;
+            padding: 10px 0;
+        }
     }
 }
 

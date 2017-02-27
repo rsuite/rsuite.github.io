@@ -8,6 +8,12 @@ RSUITE  `[ɑː(r)swiːt]` 是一套 React 开发的 UI 组件库，提供 Bootst
 我们的目标就是让 WEB 开发更快捷，同时具有一定的灵活性和扩展性。
 
 
+<br/>
+
+
+
+加入 [![Discord](https://img.shields.io/badge/Discord-Join%20chat%20%E2%86%92-738bd7.svg)](https://discord.gg/GmPXTH3)
+ ，直接与开发者沟通。
 
 <br/>
 
@@ -23,8 +29,9 @@ RSUITE  `[ɑː(r)swiːt]` 是一套 React 开发的 UI 组件库，提供 Bootst
 
 #### 版本
 
-[![Travis](https://travis-ci.org/rsuite/rsuite.svg?branch=master)](https://travis-ci.org/rsuite/rsuite)
 [![npm](https://badge.fury.io/js/rsuite.svg)](https://www.npmjs.com/package/rsuite)
+[![Travis](https://travis-ci.org/rsuite/rsuite.svg?branch=master)](https://travis-ci.org/rsuite/rsuite)
+
 
 <br/>
 #### 安装
@@ -53,12 +60,15 @@ define(['rsuite'], function(Suite) {
 ReactDOM.render(<Button>Button</Button>, mountNode);
 ```
 
-css
+#### 主题
+
+- 可以直接引入css
 
 ```html
 <link rel="stylesheet" href="//t.hypers.com.cn/libs/rsuite/css/0.1.0/rsuite.min.css">
 ```
-[rsuite-theme](https://github.com/rsuite/rsuite-theme)
+
+- 可以通过 [rsuite-theme](https://github.com/rsuite/rsuite-theme) 管理，只需要配置一个系统主色，自动生成系统配色方案。
 
 <br/>
 #### 浏览器支持
