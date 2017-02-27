@@ -1,4 +1,4 @@
-/*! Last update: Sat Feb 25 2017 20:35:13 GMT+0800 (CST) */
+/*! Last update: Mon Feb 27 2017 15:14:46 GMT+0800 (CST) */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -46028,12 +46028,13 @@
 	        return false;
 	    },
 	    handleListSelect: function handleListSelect(item, event) {
-
+	        var type = this.props.type;
 	        /**
 	         * 其实这里是需要 阻止事件冒泡，
 	         * 在treepicker 的时候，当点击的对象是小icon ，则不执行后面的选择操作
 	         */
-	        if (/expand-icon/.test(event.target.className)) {
+
+	        if (type === 'tree' && /expand-icon/.test(event.target.className)) {
 	            return;
 	        }
 
@@ -46468,8 +46469,6 @@
 	    handleExpand: function handleExpand(index, layer, value, event) {
 	        var node = this.refs['tree_node_' + index + '_' + layer + '_' + value];
 	        (0, _domLib.toggleClass)((0, _reactDom.findDOMNode)(node), 'open');
-
-	        console.log(event.target);
 	        event.preventDefault();
 	        return false;
 	    },

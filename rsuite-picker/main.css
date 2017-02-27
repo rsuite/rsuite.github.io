@@ -1,4 +1,4 @@
-/*! Last update: Sat Feb 25 2017 20:35:13 GMT+0800 (CST) */
+/*! Last update: Mon Feb 27 2017 15:14:46 GMT+0800 (CST) */
 @charset "utf-8";
 /**灰色色阶为公用颜色**/
 /**主题**/
@@ -275,6 +275,7 @@
   text-overflow: ellipsis;
   display: block;
   text-decoration: none;
+  transition: background-color 0.3s linear, color, 0.2s, ease-in;
 }
 .rsuite-Picker .selectOption label {
   overflow: hidden;
@@ -352,6 +353,7 @@
   position: relative;
   padding: 6px 10px;
   cursor: pointer;
+  transition: background-color 0.3s linear, color, 0.2s, ease-in;
 }
 .rsuite-CheckListPicker .checkItem:hover {
   background-color: #eaf6fc;
@@ -370,15 +372,9 @@
   height: 0;
 }
 .rsuite-CheckListPicker .checkItem.checked .checkItem-label::after {
-  font-family: FontAwesome;
-  content: "\F00C";
-  color: #29a7e1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 17px;
-  height: 17px;
-  text-align: center;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  transform: scale(1);
 }
 .rsuite-CheckListPicker .checkItem .checkItem-checkbox {
   position: absolute;
@@ -401,6 +397,21 @@
   height: 17px;
   background: #FFF;
   border: 1px solid #CCC;
+}
+.rsuite-CheckListPicker .checkItem .checkItem-label::after {
+  font-family: FontAwesome;
+  content: "\F00C";
+  color: #29a7e1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  text-align: center;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  transform: scale(0);
+  transition: all 0.3s linear, transform 0.2s cubic-bezier(0, 0, 0.2, 1);
 }
 .rsuite-CheckListPicker .btnClear {
   padding: 6px 10px;
