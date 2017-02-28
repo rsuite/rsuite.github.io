@@ -8,18 +8,32 @@ const IntroDetail = React.createClass({
         url: React.PropTypes.string,
         stars: React.PropTypes.number
     },
-    render(){
+    render() {
         const {
             intro = '--',
             name = '--',
             url = 'javascript:;',
-            stars = '--'
+            stars = '--',
+            repoName
         } = this.props;
         return (
             <div className="intro-detail">
-                <div className="intro-name">{name}</div>
-                <div className="intro-context">{intro}</div>
+                <div className="intro-name">
+                    {name}
+
+                </div>
+                <div className="intro-context">
+
+                    {intro}
+
+                    <br /><br />
+
+
+                </div>
                 <div className="intro-sub-intro">
+                    <a href={`https://www.npmjs.org/package/${repoName}`} style={{float:'left'}}>
+                        <img src={`https://img.shields.io/npm/v/${repoName}.svg?style=flat-square`} />
+                    </a>
                     <a href={url}><i className="fa fa-star"></i> {stars}</a>
                     <a href={url}><i className="fa fa-github"></i></a>
                 </div>
@@ -27,6 +41,7 @@ const IntroDetail = React.createClass({
         );
     }
 });
+
 
 const IntroPanel = React.createClass({
     propTypes: {
@@ -44,7 +59,8 @@ const IntroPanel = React.createClass({
             name = '--',
             src = 'javascript:;',
             icon,
-            stars
+            stars,
+            repoName
         } = this.props;
 
         const style = {
@@ -60,7 +76,7 @@ const IntroPanel = React.createClass({
                             <i className={`avatar-icon ${icon}`} style={style}></i>
                         </a>
                     </div>
-                    <IntroDetail {...{ name, intro, src, stars }}/>
+                    <IntroDetail {...{ name, intro, src, stars, repoName }} />
                 </div>
             </Col>
         );
