@@ -20,15 +20,9 @@ const IntroDetail = React.createClass({
             <div className="intro-detail">
                 <div className="intro-name">
                     {name}
-
                 </div>
                 <div className="intro-context">
-
                     {intro}
-
-                    <br /><br />
-
-
                 </div>
                 <div className="intro-sub-intro">
                     <a href={`https://www.npmjs.org/package/${repoName}`} style={{float:'left'}}>

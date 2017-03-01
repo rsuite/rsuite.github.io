@@ -2,7 +2,7 @@
 @import './less/sublime.less';
 
 @primary-color: #FF8533;
-@bg-color: #24292e;
+@bg-color: #fbfbfb;
 @banner-bg-color: #6292f0;
 @header-height: 64px;
 
@@ -25,10 +25,6 @@
 
 .home-page {
     background: @bg-color;
-    color: #fff;
-    a {
-        color: #fff;
-    }
 }
 
 .box-shadow(@x:0px, @y:2px, @blur:3px, @color:rgba(0, 0, 0, 0.28)) {
@@ -243,6 +239,7 @@ code {
     height: 100%;
     z-index: 1040;
     overflow: hidden;
+    color:#fff;
     .nav {
         top: 32px;
         position: absolute;
@@ -253,6 +250,7 @@ code {
         font-size: 16px;
     }
     .nav > a {
+        color: #fff;
         background: transparent;
         margin-right: 10px;
         padding: 10px 23px;
@@ -397,6 +395,7 @@ code {
     border-radius: 2px;
     margin-top: 12%;
     position: relative;
+    box-shadow: 0px 0px 4px rgba(0,0,0,.1);
 
     .avatar {
         width: 37%;
