@@ -1,4 +1,4 @@
-/*! Last update: Mon Feb 27 2017 23:26:48 GMT+0800 (CST) */
+/*! Last update: Wed Mar 01 2017 16:44:29 GMT+0800 (CST) */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -45364,7 +45364,7 @@
 	    return _react2.default.createElement(
 	        'div',
 	        { className: 'doc-example' },
-	        _react2.default.createElement(_src2.default, { data: _treeData2.default, height: 300, onSelectNode: function onSelectNode(node) {
+	        _react2.default.createElement(_src2.default, { data: _treeData2.default, height: 300, defaultExpandAll: true, onSelectNode: function onSelectNode(node) {
 	                console.log(node);
 	            } })
 	    );
@@ -46728,7 +46728,7 @@
 
 	    propTypes: {
 	        id: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.number]),
-	        title: _react2.default.PropTypes.string,
+	        title: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.element]),
 	        index: _react2.default.PropTypes.number,
 	        nodeData: _react2.default.PropTypes.any,
 	        active: _react2.default.PropTypes.bool,
@@ -47145,18 +47145,35 @@
 
 /***/ },
 /* 301 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+
+	var _react = __webpack_require__(6);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 	exports.default = [{
-	    label: 'Master',
+	    label: _react2.default.createElement(
+	        'label',
+	        null,
+	        _react2.default.createElement('i', { className: 'fa fa-user' }),
+	        ' Master '
+	    ),
 	    value: 'Master',
 	    children: [{
-	        label: 'Eugenia',
+	        label: _react2.default.createElement(
+	            'label',
+	            null,
+	            _react2.default.createElement('i', { className: 'fa fa-book' }),
+	            ' Eugenia '
+	        ),
 	        value: 'Eugenia'
 	    }, {
 	        label: 'Kariane',
