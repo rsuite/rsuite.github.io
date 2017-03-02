@@ -38,6 +38,11 @@ var plugins = [
     }),
 ];
 
+const output = {
+    path: path.join(__dirname, 'assets'),
+    filename: '[name].bundle.js'
+}
+
 if (process.env.NODE_ENV === 'production') {
 
     plugins.push(new webpack.optimize.CommonsChunkPlugin({
@@ -51,6 +56,8 @@ if (process.env.NODE_ENV === 'production') {
     }));
 
     plugins.push(new webpack.BannerPlugin(`Last update: ${new Date().toString()}`));
+
+    output.publicPath = './assets/';
 }
 
 module.exports = {
@@ -58,11 +65,7 @@ module.exports = {
         index: './src/index',
         vendor: ['react', 'react-router', 'react-dom', 'lodash', 'classnames', 'dom-lib', 'codemirror']
     },
-    output: {
-        path: path.join(__dirname, 'assets'),
-        publicPath: './assets/',
-        filename: '[name].bundle.js'
-    },
+    output,
     node: {
         fs: 'empty'
     },
