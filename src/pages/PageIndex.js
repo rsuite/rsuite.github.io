@@ -5,75 +5,9 @@ import { Container, Content, Row, Col } from 'rsuite';
 
 import Banner from '../fixtures/Banner';
 import IntroPanel from '../fixtures/IntroPanel';
-
 import fetchJsonp from '../uitils/fetchJsonp';
+import data from './components';
 
-
-const data = [
-    {
-        icon: 'fa fa-briefcase',
-        bg: '#41a66e',
-        repoName: 'rsuite',
-        url: 'http://rsuite.github.io/#/components',
-        name: 'Basis Components',
-        intro: '基础组件',
-        src: 'https://github.com/rsuite/rsuite'
-    }, {
-        icon: 'fa fa-table',
-        bg: '#004889',
-        repoName: 'rsuite-table',
-        url: 'http://rsuite.github.io/rsuite-table',
-        name: 'RSuite Table',
-        intro: 'Table 组件，支持Tree，自定义列宽，锁定列及表头等功能',
-        src: 'https://github.com/rsuite/rsuite-table'
-    },
-    {
-        icon: 'fa fa-calendar',
-        bg: '#bd0007',
-        repoName: 'rsuite-datepicker',
-        url: 'http://rsuite.github.io/rsuite-datepicker',
-        name: 'RSuite Datepicker',
-        intro: '日历选择组件',
-        src: 'https://github.com/rsuite/rsuite-datepicker'
-    },
-    {
-        icon: 'fa fa-check',
-        bg: '#ff9800',
-        repoName: 'rsuite-picker',
-        url: 'http://rsuite.github.io/rsuite-picker',
-        name: 'RSuite Picker',
-        intro: '选择组件，可以替代 Select 和 Dropdown 组件',
-        src: 'https://github.com/rsuite/rsuite-picker'
-    },
-    {
-        icon: 'fa fa-bar-chart',
-        bg: '#990066',
-        repoName: 'rsuite-echarts',
-        url: 'http://rsuite.github.io/rsuite-echarts',
-        name: 'RSuite ECharts',
-        intro: 'ECharts 的 React 组件',
-        src: 'https://github.com/rsuite/rsuite-echarts'
-    },
-    {
-        icon: 'fa fa-cloud-upload',
-        bg: '#5677AC',
-        repoName: 'rsuite-uploader',
-        url: 'http://rsuite.github.io/rsuite-uploader',
-        name: 'RSuite Uploader',
-        intro: '上传文件组件',
-        src: 'https://github.com/rsuite/rsuite-uploader'
-    },
-    {
-        icon: 'fa fa-tree',
-        bg: '#29a7e1',
-        repoName: 'rsuite-tree',
-        url: 'http://rsuite.github.io/rsuite-tree',
-        name: 'RSuite Tree',
-        intro: '树型组件',
-        src: 'https://github.com/rsuite/rsuite-tree'
-    }
-
-];
 
 const PageIndex = React.createClass({
     handleWindowResize() {
@@ -82,6 +16,7 @@ const PageIndex = React.createClass({
         let indexContent = document.getElementById('index-content');
         addStyle(indexContent, 'margin-top', (height < 0 ? 0 : height) + 'px');
     },
+
     getInitialState(){
         return {
             data
