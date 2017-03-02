@@ -13,7 +13,6 @@
     font-family: 'Old Standard TT', serif;
 }
 
-
 .logo {
     font-family: 'Raleway', 'Hiragino Sans GB', sans-serif;
     color: @primary-color;
@@ -74,6 +73,7 @@
         height: @header-height;
         line-height: 39px;
         padding: 10px 30px;
+        transition: none;
     }
 
     .navbar-nav > li {
@@ -201,14 +201,12 @@
     height: auto !important;
 }
 
-
 .markdown {
-    ol,ul{
+    ol, ul {
         padding: 10px 20px;
     }
     table {
         width: 100%;
-
 
         td, th {
             border-bottom: 1px solid #EEE;
@@ -239,7 +237,7 @@ code {
     height: 100%;
     z-index: 1040;
     overflow: hidden;
-    color:#fff;
+    color: #fff;
     .nav {
         top: 32px;
         position: absolute;
@@ -316,9 +314,11 @@ code {
         opacity: 0.6;
         margin-top: 18px;
         text-align: center;
+        box-shadow: 0px 1px 3px #CCC;
+        transition: all .3s linear;
+
         &:hover {
             opacity: 1;
-            box-shadow: 0px 1px 3px #CCC;
             .icon-wrapper i {
                 color: #141C23;
             }
@@ -395,7 +395,7 @@ code {
     border-radius: 2px;
     margin-top: 12%;
     position: relative;
-    box-shadow: 0px 0px 4px rgba(0,0,0,.1);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, .1);
 
     .avatar {
         width: 37%;

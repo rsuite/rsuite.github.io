@@ -4,7 +4,6 @@ var marked = require('marked');
 var hl = require('highlight.js');
 
 const pkg = require('./package.json');
-;
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
@@ -61,6 +60,7 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, 'assets'),
+        publicPath: './assets/',
         filename: '[name].bundle.js'
     },
     node: {
@@ -81,7 +81,7 @@ module.exports = {
             }, {
                 test: /\.md$/,
                 loader: 'html!markdown'
-            },{
+            }, {
                 test: /\.(jpg|png)$/,
                 loader: 'url?limit=8192'
             }
