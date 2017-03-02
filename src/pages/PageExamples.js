@@ -17,17 +17,17 @@ const data = [
     },
     {
         thumb: dmpPreview,
-        url: 'http://insight.hypers.com.cn',
+        url: 'http://www.hypers.com/products/hyper-dmp/',
         intro: '帮助广告主或营销人员深度理解媒体投放效果。',
         name: 'HYPER DMP',
-        src: 'http://insight.hypers.com.cn'
+        src: 'http://www.hypers.com/products/hyper-dmp/'
     },
     {
         thumb: dashboardPreview,
-        url: 'http://dashboard.hypers.com.cn',
+        url: 'http://www.hypers.com/solution/',
         intro: '聚合Hyper Data，予以最直观展现',
         name: 'HYPER Dashboard',
-        src: 'http://dashboard.hypers.com.cn'
+        src: 'http://www.hypers.com/solution/'
     }
 ];
 
