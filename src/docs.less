@@ -5,6 +5,8 @@
 @bg-color: #fbfbfb;
 @banner-bg-color: #6292f0;
 @header-height: 64px;
+@media-xs: 768px;
+@media-md: 992px;
 
 /* Demo */
 .demo {
@@ -56,16 +58,10 @@
         padding: 15px 0;
         .logo;
 
-        @media (max-width: 768px) {
+        @media (max-width: @media-xs) {
             & {
                 margin-left: 10px;
             }
-        }
-    }
-
-    @media (max-width: 768px) {
-        .navbar-nav {
-            margin: 0;
         }
     }
 
@@ -425,14 +421,14 @@ code {
                 font-size: 5.2em;
             }
 
-            @media (min-width: 768px) {
+            @media (min-width: @media-xs) {
                 &:before {
                     top: 16%;
                     font-size: 88px;
                 }
             }
 
-            @media (min-width: 992px) {
+            @media (min-width: @media-md) {
                 &:before {
                     top: 16%;
                     font-size: 68px;
@@ -450,6 +446,7 @@ code {
         .intro-name {
             font-weight: 600;
             font-size: 1.2em;
+            white-space: nowrap;
         }
 
         .intro-context {
