@@ -72,7 +72,7 @@ export default [
     },
     {
         icon: 'fa fa-sliders',
-        bg: '#6292f0',
+        bg: '#00d09d',
         repoName: 'rsuite-slider',
         url: 'http://rsuite.github.io/rsuite-slider',
         name: 'RSuite Slider',
