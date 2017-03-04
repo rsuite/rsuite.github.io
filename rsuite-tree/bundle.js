@@ -1,4 +1,4 @@
-/*! Last update: Wed Mar 01 2017 16:44:29 GMT+0800 (CST) */
+/*! Last update: Sat Mar 04 2017 23:10:52 GMT+0800 (CST) */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -142,7 +142,7 @@
 	                ),
 	                _react2.default.createElement('br', null),
 	                _react2.default.createElement(
-	                    'p',
+	                    'h4',
 	                    null,
 	                    '\u9ED8\u8BA4\u7684'
 	                ),
@@ -154,7 +154,7 @@
 	                ),
 	                _react2.default.createElement('br', null),
 	                _react2.default.createElement(
-	                    'p',
+	                    'h4',
 	                    null,
 	                    '\u53EF\u4EE5\u62D6\u62FD\u7684'
 	                ),
@@ -163,6 +163,16 @@
 	                    _Markdown2.default,
 	                    null,
 	                    __webpack_require__(304)
+	                ),
+	                _react2.default.createElement(
+	                    'h4',
+	                    null,
+	                    '\u5C5E\u6027'
+	                ),
+	                _react2.default.createElement(
+	                    _Markdown2.default,
+	                    null,
+	                    __webpack_require__(305)
 	                )
 	            )
 	        );
@@ -45448,7 +45458,7 @@
 	        height: _react2.default.PropTypes.number,
 	        defaultExpandAll: _react2.default.PropTypes.bool,
 	        //可以点击Title展开数节点
-	        titleClickable: _react2.default.PropTypes.bool,
+	        labelClickableExpand: _react2.default.PropTypes.bool,
 	        //可以拖拽节点
 	        draggable: _react2.default.PropTypes.bool,
 	        onSelectNode: _react2.default.PropTypes.func,
@@ -45456,23 +45466,23 @@
 	        onDragEnd: _react2.default.PropTypes.func,
 	        onToggle: _react2.default.PropTypes.func,
 	        disabledList: _react2.default.PropTypes.array,
-	        activeNodeId: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.number])
+	        activeNode: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.number])
 	    },
 	    getInitialState: function getInitialState() {
 	        return {
-	            activeNodeId: this.props.activeNodeId
+	            activeNode: this.props.activeNode
 	        };
 	    },
 	    getDefaultProps: function getDefaultProps() {
 	        return {
 	            defaultExpandAll: false,
-	            titleClickable: false
+	            labelClickableExpand: false
 	        };
 	    },
 	    componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
-	        if (this.props.activeNodeId !== nextProps.activeNodeId && this.state.activeNodeId !== nextProps.activeNodeId) {
-	            var activeNodeId = nextProps.activeNodeId;
-	            var targetNode = this.refs['children_' + activeNodeId];
+	        if (this.props.activeNode !== nextProps.activeNode && this.state.activeNode !== nextProps.activeNode) {
+	            var activeNode = nextProps.activeNode;
+	            var targetNode = this.refs['children_' + activeNode];
 	            var el = (0, _reactDom.findDOMNode)(targetNode);
 	            var container = (0, _reactDom.findDOMNode)(this.refs['treeView']);
 	            var curNode = targetNode;
@@ -45483,7 +45493,7 @@
 	                curNode && (0, _domLib.addClass)((0, _reactDom.findDOMNode)(curNode), 'open');
 	            }
 	            if (el && container) container.scrollTop = el.offsetTop;
-	            this.setState({ activeNodeId: activeNodeId });
+	            this.setState({ activeNode: activeNode });
 	        }
 	    },
 
@@ -45499,7 +45509,7 @@
 	        var _this = this;
 
 	        this.setState({
-	            activeNodeId: node.id
+	            activeNode: node.id
 	        }, function () {
 	            var onSelectNode = _this.props.onSelectNode;
 
@@ -45592,7 +45602,7 @@
 	        var _this2 = this;
 
 	        var _props = this.props,
-	            titleClickable = _props.titleClickable,
+	            labelClickableExpand = _props.labelClickableExpand,
 	            draggable = _props.draggable,
 	            _props$disabledList = _props.disabledList,
 	            disabledList = _props$disabledList === undefined ? [] : _props$disabledList,
@@ -45610,8 +45620,8 @@
 	            onDragMove: this.props.onDragMove,
 	            onDragEnd: this.props.onDragEnd,
 	            onKeyDown: this.handleKeyDown,
-	            active: this.state.activeNodeId === itemData.value,
-	            titleClickable: titleClickable,
+	            active: this.state.activeNode === itemData.value,
+	            labelClickableExpand: labelClickableExpand,
 	            draggable: draggable,
 	            hasChildren: hasChildren,
 	            children: itemData.children,
@@ -46737,7 +46747,7 @@
 	        onTreeToggle: _react2.default.PropTypes.func,
 	        children: _react2.default.PropTypes.array,
 	        hasChildren: _react2.default.PropTypes.bool,
-	        titleClickable: _react2.default.PropTypes.bool,
+	        labelClickableExpand: _react2.default.PropTypes.bool,
 	        onSelect: _react2.default.PropTypes.func,
 	        onDragMove: _react2.default.PropTypes.func,
 	        onDragEnd: _react2.default.PropTypes.func,
@@ -46790,7 +46800,7 @@
 	            onTreeToggle = _props4.onTreeToggle,
 	            onSelect = _props4.onSelect,
 	            hasChildren = _props4.hasChildren,
-	            titleClickable = _props4.titleClickable,
+	            labelClickableExpand = _props4.labelClickableExpand,
 	            id = _props4.id,
 	            title = _props4.title,
 	            layer = _props4.layer,
@@ -46805,7 +46815,7 @@
 	        }
 
 	        //点击title的时候，如果 title 设置为可以点击，同时又拥有子节点，则可以展开数据
-	        titleClickable && hasChildren && onTreeToggle({ id: id, title: title, layer: layer, index: index, children: children }, event);
+	        labelClickableExpand && hasChildren && onTreeToggle({ id: id, title: title, layer: layer, index: index, children: children }, event);
 
 	        onSelect && onSelect({ id: id, title: title, layer: layer }, nodeData, event);
 	    },
@@ -46842,7 +46852,7 @@
 	            draggable = _props6.draggable,
 	            disabled = _props6.disabled,
 	            onKeyDown = _props6.onKeyDown,
-	            titleClickable = _props6.titleClickable,
+	            labelClickableExpand = _props6.labelClickableExpand,
 	            nodeData = _props6.nodeData;
 
 
@@ -46858,7 +46868,7 @@
 
 	        var expandIcon = hasChildren ? _react2.default.createElement('i', { className: 'expand-icon fa',
 	            onClick: function onClick(e) {
-	                if (titleClickable) {
+	                if (labelClickableExpand) {
 	                    return;
 	                }
 	                _this.handleTreeToggle(e);
@@ -47161,18 +47171,18 @@
 
 	exports.default = [{
 	    label: _react2.default.createElement(
-	        'label',
+	        'span',
 	        null,
 	        _react2.default.createElement('i', { className: 'fa fa-user' }),
-	        ' Master '
+	        ' Master'
 	    ),
 	    value: 'Master',
 	    children: [{
 	        label: _react2.default.createElement(
-	            'label',
+	            'span',
 	            null,
 	            _react2.default.createElement('i', { className: 'fa fa-book' }),
-	            ' Eugenia '
+	            ' Eugenia'
 	        ),
 	        value: 'Eugenia'
 	    }, {
@@ -47391,6 +47401,12 @@
 /***/ function(module, exports) {
 
 	module.exports = "<p><br />\n<a href=\"https://github.com/rsuite/rsuite-tree/blob/master/docs/examples/DragTree.js\">代码</a></p>\n";
+
+/***/ },
+/* 305 */
+/***/ function(module, exports) {
+
+	module.exports = "<table>\n<thead>\n<tr>\n<th>属性名称</th>\n<th>类型</th>\n<th>默认值</th>\n<th>描述</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>data</td>\n<td>array</td>\n<td></td>\n<td>组件数据</td>\n</tr>\n<tr>\n<td>height</td>\n<td>number</td>\n<td></td>\n<td>树高度</td>\n</tr>\n<tr>\n<td>defaultExpandAll</td>\n<td>bool</td>\n<td>false</td>\n<td>默认展开所有节点</td>\n</tr>\n<tr>\n<td>labelClickableExpand</td>\n<td>bool</td>\n<td>false</td>\n<td>点击标题的时候是否可以展开节点</td>\n</tr>\n<tr>\n<td>draggable</td>\n<td>bool</td>\n<td>false</td>\n<td>是否可拖拽</td>\n</tr>\n<tr>\n<td>onSelectNode</td>\n<td>function</td>\n<td></td>\n<td>选择节点的回调</td>\n</tr>\n<tr>\n<td>onDragMove</td>\n<td>function</td>\n<td></td>\n<td>拖拽节点的回调</td>\n</tr>\n<tr>\n<td>onDragEnd</td>\n<td>function</td>\n<td></td>\n<td>拖拽节点结束的回调</td>\n</tr>\n<tr>\n<td>onToggle</td>\n<td>function</td>\n<td></td>\n<td>展开节点回调</td>\n</tr>\n<tr>\n<td>disabledList</td>\n<td>array</td>\n<td></td>\n<td>禁用节点列表</td>\n</tr>\n<tr>\n<td>activeNode</td>\n<td>string or number</td>\n<td></td>\n<td>当前默认选中节点 (value)</td>\n</tr>\n</tbody>\n</table>\n<p><br></p>\n<p><code>data</code> 的结构是:</p>\n<div class=\"doc-highlight\"><pre><code class=\"javascript\"> [{\n      <span class=\"hljs-string\">\"value\"</span>:<span class=\"hljs-number\">1</span>\n      <span class=\"hljs-string\">\"label\"</span>:<span class=\"hljs-string\">\"label-1\"</span>,\n      <span class=\"hljs-string\">\"children\"</span>:[{\n          <span class=\"hljs-string\">\"value\"</span>:<span class=\"hljs-number\">2</span>\n          <span class=\"hljs-string\">\"label\"</span>:<span class=\"hljs-string\">\"label-2\"</span>\n      },{\n          <span class=\"hljs-string\">\"value\"</span>:<span class=\"hljs-number\">3</span>\n          <span class=\"hljs-string\">\"label\"</span>:<span class=\"hljs-string\">\"label-3\"</span>\n      }]\n }]</code></pre></div>";
 
 /***/ }
 /******/ ]);
