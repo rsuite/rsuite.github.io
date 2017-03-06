@@ -1,4 +1,4 @@
-/*! Last update: Mon Feb 27 2017 15:18:35 GMT+0800 (CST) */
+/*! Last update: Mon Mar 06 2017 21:25:32 GMT+0800 (CST) */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -48574,7 +48574,6 @@
 	exports.default = [{
 	    label: 'Eugenia',
 	    value: 1
-
 	}, {
 	    label: 'All',
 	    value: ''
@@ -49272,7 +49271,7 @@
 /* 330 */
 /***/ function(module, exports) {
 
-	module.exports = "<h2 id=\"props\">Props</h2>\n<table>\n<thead>\n<tr>\n<th>Prop name</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>options</td>\n<td>array</td>\n<td></td>\n<td>It&#39;s required.</td>\n</tr>\n<tr>\n<td>height</td>\n<td>number</td>\n<td>300</td>\n<td>Dropdown height.</td>\n</tr>\n<tr>\n<td>dropup</td>\n<td>bool</td>\n<td>false</td>\n<td>After you click, expanding upward.</td>\n</tr>\n<tr>\n<td>defaultValue</td>\n<td>any</td>\n<td></td>\n<td>Default value of single pickers.</td>\n</tr>\n<tr>\n<td>getPlaceholder</td>\n<td>function</td>\n<td></td>\n<td>Custom placeholder.</td>\n</tr>\n<tr>\n<td>onChange</td>\n<td>function</td>\n<td></td>\n<td>Callback function of after value change.</td>\n</tr>\n<tr>\n<td>multiple</td>\n<td>bool</td>\n<td>false</td>\n<td>Supports multi-value pickers.</td>\n</tr>\n<tr>\n<td>disabled</td>\n<td>bool</td>\n<td>false</td>\n<td></td>\n</tr>\n<tr>\n<td>inverse</td>\n<td>bool</td>\n<td>false</td>\n<td></td>\n</tr>\n<tr>\n<td>tree</td>\n<td>bool</td>\n<td>false</td>\n<td>Display a tree in the picker</td>\n</tr>\n<tr>\n<td>expand</td>\n<td>bool</td>\n<td>false</td>\n<td>The default tree node is expanded</td>\n</tr>\n<tr>\n<td>locale</td>\n<td>object</td>\n<td><code>{ clearSelected:&#39;Clear selected&#39;, placeholder: &#39;${length} selected&#39; }</code></td>\n<td></td>\n</tr>\n</tbody>\n</table>\n";
+	module.exports = "<h2 id=\"props\">Props</h2>\n<table>\n<thead>\n<tr>\n<th>Prop name</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>options</td>\n<td>array</td>\n<td></td>\n<td>组件数据</td>\n</tr>\n<tr>\n<td>height</td>\n<td>number</td>\n<td>300</td>\n<td>设置 Dropdown 的高度</td>\n</tr>\n<tr>\n<td>dropup</td>\n<td>bool</td>\n<td>false</td>\n<td>向上展开</td>\n</tr>\n<tr>\n<td>defaultValue</td>\n<td>any</td>\n<td></td>\n<td>设置默认值</td>\n</tr>\n<tr>\n<td>getPlaceholder</td>\n<td>function</td>\n<td></td>\n<td>自定义 placeholder</td>\n</tr>\n<tr>\n<td>onChange</td>\n<td>function</td>\n<td></td>\n<td>选择后的回调方法</td>\n</tr>\n<tr>\n<td>multiple</td>\n<td>bool</td>\n<td>false</td>\n<td>是否可以多选</td>\n</tr>\n<tr>\n<td>disabled</td>\n<td>bool</td>\n<td>false</td>\n<td>是否禁用组件</td>\n</tr>\n<tr>\n<td>inverse</td>\n<td>bool</td>\n<td>false</td>\n<td>是否颜色反转</td>\n</tr>\n<tr>\n<td>expand</td>\n<td>bool</td>\n<td>false</td>\n<td>默认全部展开，支持 <code>TreePicker</code></td>\n</tr>\n<tr>\n<td>locale</td>\n<td>object</td>\n<td><code>{ clearSelected:&#39;Clear selected&#39;, placeholder: &#39;${length} selected&#39; }</code></td>\n<td>本地语言处理</td>\n</tr>\n</tbody>\n</table>\n<p><br/></p>\n<p><code>options</code> 数据结构示例：</p>\n<div class=\"doc-highlight\"><pre><code class=\"javascript\">[{\n    <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n    <span class=\"hljs-attr\">value</span>: <span class=\"hljs-number\">1</span>,\n    <span class=\"hljs-attr\">checked</span>: <span class=\"hljs-literal\">true</span>, <span class=\"hljs-comment\">// props multiple 为 true 有效</span>\n    children:[{...}],   <span class=\"hljs-comment\">// 针对 group 分组 或者 &lt;TreePicker&gt; 有效</span>\n    selectable: <span class=\"hljs-literal\">false</span>  <span class=\"hljs-comment\">// selectable 设置为 false 后，改节点不可选择</span>\n},\n...\n]</code></pre></div>";
 
 /***/ }
 /******/ ]);
