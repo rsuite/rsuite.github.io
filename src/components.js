@@ -78,6 +78,15 @@ export default [
         name: 'RSuite Slider',
         intro: '滑动输入条，用于在数值区间选择',
         src: 'https://github.com/rsuite/rsuite-slider'
+    },
+    {
+        icon: 'fa fa-thumb-tack',
+        bg: '#464c5b',
+        repoName: 'rsuite-affix',
+        url: 'http://rsuite.github.io/rsuite-affix',
+        name: 'RSuite Affix',
+        intro: '固钉，将页面元素钉在可视范围',
+        src: 'https://github.com/rsuite/rsuite-affix'
     }
 
 ];

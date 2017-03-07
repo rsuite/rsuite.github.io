@@ -2,16 +2,17 @@ import React from 'react';
 import { Sidebar, Navbar, Nav } from 'rsuite';
 import { Link } from 'react-router';
 import * as data from './data';
+import components from '../components';
 
 
 const DocSidebar = React.createClass({
     render() {
         const { children } = this.props;
         const menu = [];
-        data.default.map((item,key) => {
+        data.default.map((item, key) => {
 
             menu.push(
-                <li  key={key} className="nav-header" >
+                <li key={key} className="nav-header" >
                     {item.category}
                 </li>
             );
@@ -27,18 +28,29 @@ const DocSidebar = React.createClass({
             });
         });
 
+
+
         return (
             <Sidebar >
                 {children}
                 <Nav className="nav-docs">
                     {menu}
-                    <li  className="nav-header">Other</li>
-                    <li><a target="_blank" href="http://rsuite.github.io/rsuite-table">RSuite Table</a></li>
-                    <li><a target="_blank" href="http://rsuite.github.io/rsuite-echarts">RSuite ECharts</a></li>
-                    <li><a target="_blank" href="https://rsuite.github.io/rsuite-datepicker/">RSuite Datepicker</a></li>
-                    <li><a target="_blank" href="https://rsuite.github.io/rsuite-picker/">RSuite Picker</a></li>
-                    <li><a target="_blank" href="https://rsuite.github.io/rsuite-uploader/">RSuite Uploader</a></li>
-                    <li><a target="_blank" href="https://rsuite.github.io/rsuite-tree/">RSuite Tree</a></li>
+                    <li className="nav-header">Other</li>
+                    {
+                        components.filter((item, index) => {
+                            return index !== 0;
+                        }).map((item, index) => {
+
+                            return (
+                                <li key={index}>
+                                    <a target="_blank" href={item.url}>
+                                    <i className={item.icon}></i>{' '}
+                                    {item.name}
+                                    </a>
+                                </li>
+                            );
+                        })
+                    }
                 </Nav>
             </Sidebar>
         );
