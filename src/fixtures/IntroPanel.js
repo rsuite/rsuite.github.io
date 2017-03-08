@@ -25,11 +25,11 @@ const IntroDetail = React.createClass({
                     {intro}
                 </div>
                 <div className="intro-sub-intro">
-                    <a href={`https://www.npmjs.org/package/${repoName}`} style={{float:'left'}}>
+                    <a target="_blank" href={`https://www.npmjs.org/package/${repoName}`} style={{float:'left'}}>
                         <img src={`https://img.shields.io/npm/v/${repoName}.svg?style=flat-square`} />
                     </a>
-                    <a href={url}><i className="fa fa-star"></i> {stars}</a>
-                    <a href={url}><i className="fa fa-github"></i></a>
+                    <a target="_blank" href={url}><i className="fa fa-star"></i> {stars}</a>
+                    <a target="_blank" href={url}><i className="fa fa-github"></i></a>
                 </div>
             </div>
         );
@@ -66,7 +66,7 @@ const IntroPanel = React.createClass({
             <Col lg={3} md={4} sm={6} xs={12}>
                 <div className='intro-panel'>
                     <div className="avatar">
-                        <a href={url}>
+                        <a href={url} target="_blank">
                             <i className={`avatar-icon ${icon}`} style={style}></i>
                         </a>
                     </div>
