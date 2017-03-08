@@ -2,7 +2,7 @@ import React from 'react';
 import { Sidebar, Navbar, Nav } from 'rsuite';
 import { Link } from 'react-router';
 import * as data from './data';
-import components from '../components';
+import components from '../lonelyComponents';
 
 
 const DocSidebar = React.createClass({
