@@ -87,6 +87,15 @@ export default [
         name: 'RSuite Affix',
         intro: '固钉，将页面元素钉在可视范围',
         src: 'https://github.com/rsuite/rsuite-affix'
+    },
+    {
+        icon: 'fa fa-pencil-square-o',
+        bg: '#1d9d74',
+        repoName: 'rsuite-autocomplete',
+        url: 'https://rsuite.github.io/rsuite-autocomplete',
+        name: 'RSuite Autocomplete',
+        intro: '输入框自动完成功能。',
+        src: 'https://github.com/rsuite/rsuite-autocomplete'
     }
 
 ];
