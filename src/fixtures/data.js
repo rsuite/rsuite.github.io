@@ -8,6 +8,10 @@ export default [
                 name: 'Buttons',
                 title: '按钮'
             }, {
+                id: 'iconFont',
+                name: 'Icon Font',
+                title: '字体图标'
+            }, {
                 id: 'buttonGroups',
                 name: 'Button groups',
                 title: '按钮组'
@@ -82,16 +86,16 @@ export default [
     }, {
         category: 'Forms',
         title: '表单',
-        components:[
+        components: [
             {
                 id: 'controls',
                 name: 'Controls',
                 title: '支持的表单控件'
-            },{
+            }, {
                 id: 'formLayout',
                 name: 'Form layout',
                 title: '表单布局'
-            },{
+            }, {
                 id: 'validate',
                 name: 'Validate',
                 title: '表单验证'
