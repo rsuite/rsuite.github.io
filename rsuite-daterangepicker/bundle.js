@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b7ab2eedbb6a290299be"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "06b256dc2a6b7c172e9e"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -866,7 +866,7 @@ module.exports = "<div class=\"doc-highlight\"><pre><code class=\"xml\">import R
 /***/ "./docs/md/props.md":
 /***/ (function(module, exports) {
 
-module.exports = "<table>\n<thead>\n<tr>\n<th>Name</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td> defaultStartDate</td>\n<td>Date</td>\n<td></td>\n<td>默认开始时间</td>\n<td></td>\n</tr>\n<tr>\n<td> defaultEndDate</td>\n<td>Date</td>\n<td></td>\n<td>默认结束时间</td>\n<td></td>\n</tr>\n<tr>\n<td> maxDate</td>\n<td>Date</td>\n<td></td>\n<td>最大可选时间</td>\n<td></td>\n</tr>\n<tr>\n<td> minDate</td>\n<td>Date</td>\n<td></td>\n<td>最小可选时间</td>\n<td></td>\n</tr>\n<tr>\n<td> ranges</td>\n<td>array</td>\n<td>[今日, 昨天, 本周, 本月]</td>\n<td>快捷选项</td>\n<td></td>\n</tr>\n</tbody>\n</table>\n";
+module.exports = "<table>\n<thead>\n<tr>\n<th>Name</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td> defaultStartDate</td>\n<td>Date</td>\n<td></td>\n<td>默认开始时间</td>\n<td></td>\n</tr>\n<tr>\n<td> defaultEndDate</td>\n<td>Date</td>\n<td></td>\n<td>默认结束时间</td>\n<td></td>\n</tr>\n<tr>\n<td> maxDate</td>\n<td>Date</td>\n<td></td>\n<td>最大可选时间</td>\n<td></td>\n</tr>\n<tr>\n<td> minDate</td>\n<td>Date</td>\n<td></td>\n<td>最小可选时间</td>\n<td></td>\n</tr>\n<tr>\n<td> ranges</td>\n<td>array</td>\n<td>[今日, 昨天, 本周, 本月]</td>\n<td>快捷选项</td>\n<td></td>\n</tr>\n<tr>\n<td>placement</td>\n<td>string</td>\n<td><code>bottomRight</code></td>\n<td>日历弹出位置: <code>bottomLeft</code> <code>bottomCenter</code> <code>bottomRight</code> <code>topLeft</code> <code>topCenter</code> <code>topRight</code></td>\n</tr>\n</tbody>\n</table>\n";
 
 /***/ }),
 
@@ -80742,7 +80742,8 @@ exports.default = _react2.default.createClass({
         attachTo: _react.PropTypes.element,
         ranges: _react.PropTypes.array,
         onChange: _react.PropTypes.func,
-        placement: _react.PropTypes.oneOf(['left', 'right'])
+        dropup: _react.PropTypes.bool,
+        placement: _react.PropTypes.oneOf(['bottomLeft', 'bottomCenter', 'bottomRight', 'topLeft', 'topCenter', 'topRight'])
     },
 
     getDefaultProps: function getDefaultProps() {
@@ -80750,6 +80751,7 @@ exports.default = _react2.default.createClass({
         function noop() {}
         return {
             ranges: ranges,
+            placement: 'bottomRight',
             onChange: noop
         };
     },
@@ -80967,9 +80969,15 @@ exports.default = _react2.default.createClass({
         var offset = this.state.offset;
         var placement = this.props.placement;
 
-        var styles = {
-            marginLeft: placement === 'left' ? -offset : offset
-        };
+        var styles = {};
+
+        if (!!~placement.indexOf('Left')) {
+            styles.marginLeft = -offset;
+        }
+
+        if (!!~placement.indexOf('Right')) {
+            styles.marginLeft = offset;
+        }
 
         return _react2.default.createElement(
             'div',
@@ -81023,16 +81031,35 @@ exports.default = _react2.default.createClass({
             )
         );
     },
-    componentDidMount: function componentDidMount() {
-        var containerWidth = (0, _domLib.getWidth)((0, _reactDom.findDOMNode)(this.container));
+    setContainerOffset: function setContainerOffset() {
+        var container = (0, _reactDom.findDOMNode)(this.container);
+        var containerWidth = (0, _domLib.getWidth)(container);
+        var containerOffset = (0, _domLib.getOffset)(container);
+
         var pickerWidth = 472;
         var offset = pickerWidth / 2 - containerWidth / 2;
+
         this.setState({
-            offset: offset
+            offset: containerOffset.left < offset ? containerOffset.left : offset
         });
+    },
+    handleWindowResize: function handleWindowResize() {
+        var _this7 = this;
+
+        setTimeout(function () {
+            _this7.setContainerOffset();
+        }, 1);
+    },
+    componentDidMount: function componentDidMount() {
+        this._resizeListener = (0, _domLib.on)(window, 'resize', this.handleWindowResize);
+        this.setContainerOffset();
+    },
+    componentWillUnmount: function componentWillUnmount() {
+        this._resizeListener && this._resizeListener.off();
     },
     render: function render() {
         var show = this.state.show;
+
 
         return _react2.default.createElement(
             'div',
@@ -81045,7 +81072,7 @@ exports.default = _react2.default.createClass({
                     rootClose: true,
                     onHide: this.discardChanges,
                     target: this.getContainerEl,
-                    placement: 'bottom'
+                    placement: !!~this.props.placement.indexOf('top') ? 'top' : 'bottom'
                 },
                 this.renderDatePicker()
             )

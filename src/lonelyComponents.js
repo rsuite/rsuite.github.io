@@ -89,7 +89,7 @@ export default [
         src: 'https://github.com/rsuite/rsuite-affix'
     },
     {
-        icon: 'fa fa-pencil-square-o',
+        icon: 'fa fa-search',
         bg: '#1d9d74',
         repoName: 'rsuite-autocomplete',
         url: 'https://rsuite.github.io/rsuite-autocomplete',
