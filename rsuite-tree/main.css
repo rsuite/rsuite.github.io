@@ -1,4 +1,4 @@
-/*! Last update: Sat Mar 04 2017 23:10:52 GMT+0800 (CST) */
+/*! Last update: Mon Mar 13 2017 16:56:15 GMT+0800 (CST) */
 /**灰色色阶为公用颜色**/
 /**主题**/
 .tree-view {
@@ -31,6 +31,7 @@
   cursor: pointer;
   position: absolute;
   top: 6px;
+  z-index: 1;
 }
 .tree-view .tree-node .expand-icon:before {
   content: "\F0DA";
@@ -52,6 +53,58 @@
 }
 .tree-view .open > .tree-node .expand-icon:before {
   content: "\F0D7";
+}
+.tree-view.checktree .checknode-label {
+  display: block;
+  position: relative;
+  margin-bottom: 0;
+  padding-left: 40px;
+  outline: 0;
+  cursor: pointer;
+}
+.tree-view.checktree .checknode-label::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 16px;
+  width: 17px;
+  height: 17px;
+  background: #FFF;
+  border: 1px solid #CCC;
+}
+.tree-view.checktree .checknode-label::after {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  font-family: FontAwesome;
+  content: "\F00C";
+  color: #29a7e1;
+  position: absolute;
+  left: 17px;
+  top: 1px;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  transform: scale(0);
+  transition: all 0.3s linear, transform 0.2s cubic-bezier(0, 0, 0.2, 1);
+}
+.tree-view.checktree .tree-node.half-checked .checknode-label::after {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  transform: scale(1);
+  content: "\F0C8";
+  font-size: 12px;
+  top: 3px;
+}
+.tree-view.checktree .tree-node.checked .checknode-label::after {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  transform: scale(1);
+}
+.tree-view.checktree .tree-node.disabled .checknode-label::before {
+  background: #eee;
+}
+.tree-view.checktree .tree-node.disabled .checknode-label::after {
+  color: #aaa;
 }
 /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
 /* Tomorrow Comment */
@@ -172,12 +225,6 @@ code {
 }
 .doc-page {
   margin: 70px 0;
-}
-.header {
-  background: #1c272d;
-}
-.prefix {
-  color: #0ae;
 }
 .sub-title {
   font-size: 16px;
