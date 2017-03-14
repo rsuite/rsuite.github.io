@@ -1,6 +1,6 @@
 export default [
     {
-        icon: 'fa fa-briefcase',
+        icon: 'icon icon-briefcase',
         bg: '#6292f0',
         repoName: 'rsuite',
         url: 'http://rsuite.github.io/#/components',
@@ -8,7 +8,7 @@ export default [
         intro: '基础组件',
         src: 'https://github.com/rsuite/rsuite'
     }, {
-        icon: 'fa fa-table',
+        icon: 'icon icon-table',
         bg: '#004889',
         repoName: 'rsuite-table',
         url: 'http://rsuite.github.io/rsuite-table',
@@ -17,7 +17,7 @@ export default [
         src: 'https://github.com/rsuite/rsuite-table'
     },
     {
-        icon: 'fa fa-calendar-check-o',
+        icon: 'icon icon-calendar-check-o',
         bg: '#d3555a',
         repoName: 'rsuite-datepicker',
         url: 'http://rsuite.github.io/rsuite-datepicker',
@@ -26,7 +26,7 @@ export default [
         src: 'https://github.com/rsuite/rsuite-datepicker'
     },
     {
-        icon: 'fa fa-calendar-minus-o',
+        icon: 'icon icon-calendar-minus-o',
         bg: '#a50006',
         repoName: 'rsuite-daterangepicker',
         url: 'http://rsuite.github.io/rsuite-daterangepicker',
@@ -35,7 +35,7 @@ export default [
         src: 'https://github.com/rsuite/rsuite-daterangepicker'
     },
     {
-        icon: 'fa fa-check',
+        icon: 'icon icon-check',
         bg: '#ff9800',
         repoName: 'rsuite-picker',
         url: 'http://rsuite.github.io/rsuite-picker',
@@ -44,7 +44,7 @@ export default [
         src: 'https://github.com/rsuite/rsuite-picker'
     },
     {
-        icon: 'fa fa-bar-chart',
+        icon: 'icon icon-bar-chart',
         bg: '#990066',
         repoName: 'rsuite-echarts',
         url: 'http://rsuite.github.io/rsuite-echarts',
@@ -53,7 +53,7 @@ export default [
         src: 'https://github.com/rsuite/rsuite-echarts'
     },
     {
-        icon: 'fa fa-cloud-upload',
+        icon: 'icon icon-cloud-upload',
         bg: '#5677AC',
         repoName: 'rsuite-uploader',
         url: 'http://rsuite.github.io/rsuite-uploader',
@@ -62,7 +62,7 @@ export default [
         src: 'https://github.com/rsuite/rsuite-uploader'
     },
     {
-        icon: 'fa fa-sitemap',
+        icon: 'icon icon-sitemap',
         bg: '#29a7e1',
         repoName: 'rsuite-tree',
         url: 'http://rsuite.github.io/rsuite-tree',
@@ -71,7 +71,7 @@ export default [
         src: 'https://github.com/rsuite/rsuite-tree'
     },
     {
-        icon: 'fa fa-sliders',
+        icon: 'icon icon-sliders',
         bg: '#00d09d',
         repoName: 'rsuite-slider',
         url: 'http://rsuite.github.io/rsuite-slider',
@@ -80,7 +80,7 @@ export default [
         src: 'https://github.com/rsuite/rsuite-slider'
     },
     {
-        icon: 'fa fa-thumb-tack',
+        icon: 'icon icon-thumb-tack',
         bg: '#464c5b',
         repoName: 'rsuite-affix',
         url: 'http://rsuite.github.io/rsuite-affix',
@@ -89,7 +89,7 @@ export default [
         src: 'https://github.com/rsuite/rsuite-affix'
     },
     {
-        icon: 'fa fa-search',
+        icon: 'icon icon-search',
         bg: '#1d9d74',
         repoName: 'rsuite-autocomplete',
         url: 'https://rsuite.github.io/rsuite-autocomplete',
