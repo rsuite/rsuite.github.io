@@ -6,7 +6,7 @@ import { Container, Content, Row, Col } from 'rsuite';
 import Banner from '../fixtures/Banner';
 import IntroPanel from '../fixtures/IntroPanel';
 import fetchJsonp from '../uitils/fetchJsonp';
-import data from '../lonelyComponents';
+import data from '../componentList';
 
 
 const PageIndex = React.createClass({

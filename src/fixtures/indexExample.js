@@ -1,83 +1,61 @@
-const userModel = SchemaModel({
-    username: StringType().isRequired('Required'),
-    email: StringType().isEmail('Incorrect Email format'),
-    gender: StringType().isRequired('Required'),
-    skills: ArrayType().minLength(2, 'Select at least two').isRequired('Required'),
-    bio: StringType().rangeLength(0, 200, '200 character maximum')
-});
+/**
+ * RSuite 是由 Hypers 前端团队开发的，面向企业级后台产品的一套前端解决方案，
+ * 并致力于改善前端工程师的开发体验。
+ *
+ * ☐ 待开发：
+ * rsuite-notification  rsuite-switch      rsuite-steps    rsuite-progress
+ * rsuite-timepicker    rsuite-clipboard   rsuite-anchor
+ *
+ * ☑︎ 已完成：
+ * rsuite-autocomplete  rsuite-affix       rsuite-slider   rsuite-tree
+ * rsuite-uploader      rsuite-echarts     rsuite-picker   rsuite-datepangepicker
+ * rsuite-datepicker    rsuite-table       rsuite-theme    rsuite
+ *
+ */
 
-const FormExample = React.createClass({
-    PropTypes: {
-        errors: React.PropTypes.obejct,
-        data: React.PropTypes.obejct
-    },
-    handleSubmit() {
-        const { formData, isValid } = this.refs.form.get();
-        console.log(formData, isValid);
-    },
+const App = React.createClass({
     render() {
-        const { data = {}, errors } = this.props;
         return (
-            <div className="container">
-                <h3 className="page-title">Form Example</h3>
-                <RSuiteForm ref="form"
-                    model={ userModel }
-                    errors = { errors }
-                    formData={ data }
+            <div>
+                <Header inverse>
+                    <div className="page-container">
+                        <Navbar.Header>
+                            <Navbar.Brand className="logo">
+                                RSUITE DEMO
+                            </Navbar.Brand>
+                        </Navbar.Header>
+                    </div>
+                </Header>
+                <div className="container">
+                    <RSTable.Table
+                        height={500}
+                        data={tableData}
                     >
-                    <Field name="username" >
-                        <FormGroup>
-                            <ControlLabel>Text</ControlLabel>
-                            <FormControl  type='text'  />
-                            <HelpBlock>Required</HelpBlock>
-                        </FormGroup>
-                    </Field>
+                        <RSTable.Column width={200} fixed>
+                            <RSTable.HeaderCell>Component</RSTable.HeaderCell>
+                            <NameCell dataKey="name" />
+                        </RSTable.Column>
 
-                    <Field name="email" >
-                        <FormGroup>
-                            <ControlLabel>Email</ControlLabel>
-                            <FormControl  type='text'  />
-                            <HelpBlock>Required</HelpBlock>
-                        </FormGroup>
-                    </Field>
-
-                    <Field name="gender" >
-                        <FormGroup>
-                            <ControlLabel>Gender</ControlLabel>
-                            <RadioList >
-                                <Radio value="male">Male</Radio>
-                                <Radio value="female">Female</Radio>
-                            </RadioList>
-                            <HelpBlock>Required</HelpBlock>
-                        </FormGroup>
-                    </Field>
-
-                    <Field name="skills" >
-                        <FormGroup>
-                            <ControlLabel>Skills</ControlLabel>
-                            <CheckboxList >
-                                <Checkbox value="javascript">javascript</Checkbox>
-                                <Checkbox value="css">css</Checkbox>
-                                <Checkbox value="react">react</Checkbox>
-                            </CheckboxList>
-                            <HelpBlock>Required</HelpBlock>
-                        </FormGroup>
-                    </Field>
-
-                    <Field name="bio" >
-                        <FormGroup>
-                            <ControlLabel>Bio</ControlLabel>
-                            <FormControl componentClass="textarea" />
-                            <HelpBlock></HelpBlock>
-                        </FormGroup>
-                    </Field>
-
-                    <Button shape="primary" onClick={this.handleSubmit}>Submit</Button>
-
-                </RSuiteForm>
+                        <RSTable.Column width={200}  >
+                            <RSTable.HeaderCell>Intro</RSTable.HeaderCell>
+                            <RSTable.Cell dataKey="intro" />
+                        </RSTable.Column>
+                    </RSTable.Table>
+                </div>
             </div>
+
         );
     }
 });
 
-ReactDOM.render(<FormExample />, mountNode);
+export const NameCell = ({ rowData, dataKey, ...props }) => {
+    return (
+        <RSTable.Cell  {...props}>
+            <i className={rowData.icon}></i>
+            {' '}
+            <label>{rowData.name}</label>
+        </RSTable.Cell>
+    );
+};
+
+ReactDOM.render(<App />, mountNode);
