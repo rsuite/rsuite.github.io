@@ -1,4 +1,4 @@
-/*! Last update: Mon Mar 06 2017 21:25:32 GMT+0800 (CST) */
+/*! Last update: Tue Mar 14 2017 17:01:14 GMT+0800 (CST) */
 @charset "utf-8";
 /**灰色色阶为公用颜色**/
 /**主题**/
@@ -284,11 +284,11 @@
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
 }
-.rsuite-Picker .selectOption.notSelectable {
+.rsuite-Picker .selectOption.disabled {
   color: #8F8F8F;
 }
-.rsuite-Picker .selectOption.notSelectable:hover,
-.rsuite-Picker .selectOption.notSelectable:focus {
+.rsuite-Picker .selectOption.disabled:hover,
+.rsuite-Picker .selectOption.disabled:focus {
   color: #8F8F8F;
   background: none;
 }
@@ -359,17 +359,8 @@
   background-color: #eaf6fc;
   color: #575757;
 }
-.rsuite-CheckListPicker .checkItem.notSelectable .checkItem-checkbox {
-  display: none;
-}
-.rsuite-CheckListPicker .checkItem.notSelectable .checkItem-label {
-  padding-left: 0;
-}
-.rsuite-CheckListPicker .checkItem.notSelectable .checkItem-label::before,
-.rsuite-CheckListPicker .checkItem.notSelectable .checkItem-label::after {
-  border: none;
-  width: 0;
-  height: 0;
+.rsuite-CheckListPicker .checkItem.disabled .checkItem-label::before {
+  background: #eee;
 }
 .rsuite-CheckListPicker .checkItem.checked .checkItem-label::after {
   opacity: 1;

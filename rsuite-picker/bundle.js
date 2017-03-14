@@ -1,4 +1,4 @@
-/*! Last update: Mon Mar 06 2017 21:25:32 GMT+0800 (CST) */
+/*! Last update: Tue Mar 14 2017 17:01:14 GMT+0800 (CST) */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -45996,7 +45996,8 @@
 	        onSelect: _react.PropTypes.func,
 	        dropup: _react.PropTypes.bool,
 	        multiple: _react.PropTypes.bool,
-	        expand: _react.PropTypes.bool
+	        expand: _react.PropTypes.bool,
+	        showClearButton: _react.PropTypes.bool
 	    },
 	    getDefaultProps: function getDefaultProps() {
 	        return {
@@ -46088,7 +46089,8 @@
 	            onClearSelected = _props2.onClearSelected,
 	            onKeyDown = _props2.onKeyDown,
 	            type = _props2.type,
-	            expand = _props2.expand;
+	            expand = _props2.expand,
+	            showClearButton = _props2.showClearButton;
 
 	        var classes = (0, _classnames2.default)('selectDropdown', {
 	            'checkListDropdown': multiple,
@@ -46112,6 +46114,7 @@
 	                onClose: this.props.onClose,
 	                height: height,
 	                type: type,
+	                showClearButton: showClearButton,
 	                expand: expand
 	            })
 	        );
@@ -46227,7 +46230,8 @@
 	        height: _react.PropTypes.number,
 	        onSelect: _react.PropTypes.func,
 	        multiple: _react.PropTypes.bool,
-	        expand: _react.PropTypes.bool
+	        expand: _react.PropTypes.bool,
+	        showClearButton: _react.PropTypes.bool
 	    },
 
 	    contextTypes: {
@@ -46404,6 +46408,7 @@
 	        var _props4 = this.props,
 	            children = _props4.children,
 	            onSelect = _props4.onSelect,
+	            showClearButton = _props4.showClearButton,
 	            onClearSelected = _props4.onClearSelected;
 	        var clearSelected = this.context.locale.clearSelected;
 	        var _state$checkedItems = this.state.checkedItems,
@@ -46447,13 +46452,14 @@
 	                return _react2.default.createElement(_CheckItem2.default, {
 	                    key: idx,
 	                    checked: newItem.checked,
+	                    disabled: newItem.disabled,
 	                    label: newItem.label,
 	                    value: item.value,
 	                    onSelect: onSelect.bind(null, newItem),
 	                    onKeyDown: _this2.handleKeyDown
 	                });
 	            }));
-	            options.unshift(_react2.default.createElement(
+	            showClearButton && options.unshift(_react2.default.createElement(
 	                'div',
 	                { key: Math.random() * 1E18 },
 	                _react2.default.createElement(
@@ -46485,8 +46491,8 @@
 	            children = node.children,
 	            value = node.value,
 	            checked = node.checked,
-	            selectable = node.selectable,
-	            other = _objectWithoutProperties(node, ['label', 'children', 'value', 'checked', 'selectable']);
+	            disabled = node.disabled,
+	            other = _objectWithoutProperties(node, ['label', 'children', 'value', 'checked', 'disabled']);
 
 	        var styles = {
 	            paddingLeft: 24 * layer
@@ -46510,7 +46516,7 @@
 	                checked: checked,
 	                label: label,
 	                value: value,
-	                selectable: selectable,
+	                disabled: disabled,
 	                onSelect: onSelect.bind(null, node),
 	                onKeyDown: this.handleKeyDown
 	            }),
@@ -46569,18 +46575,17 @@
 	        }
 	        onSelect(node);
 	    },
+
+	    //渲染级联组件节点
 	    renderCascadeNode: function renderCascadeNode(node, index, layer, hover) {
 	        var _props7 = this.props,
 	            selected = _props7.selected,
-	            onSelect = _props7.onSelect,
-	            expand = _props7.expand;
+	            onSelect = _props7.onSelect;
 
 	        var label = node.label,
 	            children = node.children,
 	            value = node.value,
-	            checked = node.checked,
-	            selectable = node.selectable,
-	            other = _objectWithoutProperties(node, ['label', 'children', 'value', 'checked', 'selectable']);
+	            other = _objectWithoutProperties(node, ['label', 'children', 'value']);
 
 	        var treeNode = _react2.default.createElement(_Option2.default, _extends({}, other, {
 	            key: index,
@@ -46605,6 +46610,11 @@
 
 	        return treeNode;
 	    },
+
+
+	    /**
+	     * 渲染级联组件
+	     */
 	    renderCascade: function renderCascade() {
 	        var _this5 = this;
 
@@ -47912,14 +47922,9 @@
 	        selected: _react2.default.PropTypes.bool,
 	        value: _react2.default.PropTypes.any,
 	        label: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.element]),
-	        selectable: _react2.default.PropTypes.bool,
+	        disabled: _react2.default.PropTypes.bool,
 	        onSelect: _react2.default.PropTypes.func,
 	        hover: _react2.default.PropTypes.bool
-	    },
-	    getDefaultProps: function getDefaultProps() {
-	        return {
-	            selectable: true
-	        };
 	    },
 	    render: function render() {
 	        var _props = this.props,
@@ -47929,16 +47934,16 @@
 	            onSelect = _props.onSelect,
 	            onKeyDown = _props.onKeyDown,
 	            title = _props.title,
-	            selectable = _props.selectable,
+	            disabled = _props.disabled,
 	            hover = _props.hover,
 	            children = _props.children,
-	            props = _objectWithoutProperties(_props, ['selected', 'label', 'value', 'onSelect', 'onKeyDown', 'title', 'selectable', 'hover', 'children']);
+	            props = _objectWithoutProperties(_props, ['selected', 'label', 'value', 'onSelect', 'onKeyDown', 'title', 'disabled', 'hover', 'children']);
 
 	        var classes = (0, _classnames2.default)('selectOption', {
-	            focusable: selectable,
+	            focusable: !disabled,
 	            active: selected,
 	            hover: hover,
-	            notSelectable: !selectable
+	            disabled: disabled
 	        });
 
 	        return _react2.default.createElement(
@@ -47949,10 +47954,10 @@
 	                href: '',
 	                role: 'menuitem',
 	                'data-value': value,
-	                onKeyDown: selectable ? onKeyDown : null,
+	                onKeyDown: disabled ? null : onKeyDown,
 	                onClick: function onClick(event) {
 	                    event.preventDefault();
-	                    if (!selectable) {
+	                    if (disabled) {
 	                        return;
 	                    }
 	                    onSelect && onSelect(event);
@@ -48099,13 +48104,8 @@
 	        checked: _react2.default.PropTypes.bool,
 	        value: _react2.default.PropTypes.any,
 	        label: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.element]),
-	        selectable: _react2.default.PropTypes.bool,
+	        disabled: _react2.default.PropTypes.bool,
 	        onSelect: _react2.default.PropTypes.func
-	    },
-	    getDefaultProps: function getDefaultProps() {
-	        return {
-	            selectable: true
-	        };
 	    },
 	    render: function render() {
 	        var _props = this.props,
@@ -48114,14 +48114,14 @@
 	            value = _props.value,
 	            onSelect = _props.onSelect,
 	            onKeyDown = _props.onKeyDown,
-	            selectable = _props.selectable,
+	            disabled = _props.disabled,
 	            children = _props.children,
 	            title = _props.title,
-	            props = _objectWithoutProperties(_props, ['checked', 'label', 'value', 'onSelect', 'onKeyDown', 'selectable', 'children', 'title']);
+	            props = _objectWithoutProperties(_props, ['checked', 'label', 'value', 'onSelect', 'onKeyDown', 'disabled', 'children', 'title']);
 
 	        var classes = (0, _classnames2.default)('selectOption', 'checkItem', {
-	            focusable: selectable,
-	            notSelectable: !selectable,
+	            focusable: !disabled,
+	            disabled: disabled,
 	            checked: checked
 	        });
 
@@ -48132,10 +48132,10 @@
 	                className: classes,
 	                href: '',
 	                'data-value': value,
-	                onKeyDown: selectable ? onKeyDown : null,
+	                onKeyDown: disabled ? null : onKeyDown,
 	                onClick: function onClick(event) {
 	                    event.preventDefault();
-	                    if (!selectable) {
+	                    if (disabled) {
 	                        return;
 	                    }
 	                    onSelect && onSelect(event);
@@ -48301,10 +48301,17 @@
 	    propTypes: {
 	        options: _react.PropTypes.array,
 	        onChange: _react.PropTypes.func,
-	        height: _react.PropTypes.number
+	        height: _react.PropTypes.number,
+	        onClearSelected: _react.PropTypes.func,
+	        showClearButton: _react.PropTypes.bool
 	    },
 	    contextTypes: {
 	        locale: _react.PropTypes.object.isRequired
+	    },
+	    getDefaultProps: function getDefaultProps() {
+	        return {
+	            showClearButton: true
+	        };
 	    },
 	    formatItem: function formatItem(item) {
 	        if (typeof item === 'string') {
@@ -48398,23 +48405,27 @@
 	        }));
 	    },
 	    handleClearSelected: function handleClearSelected() {
-	        var onChange = this.props.onChange;
+	        var _props = this.props,
+	            onChange = _props.onChange,
+	            onClearSelected = _props.onClearSelected;
 
 	        onChange && onChange([]);
+	        onClearSelected && onClearSelected();
 
 	        this.setState({
 	            currentCheckedItems: []
 	        });
 	    },
 	    render: function render() {
-	        var _props = this.props,
-	            options = _props.options,
-	            height = _props.height,
-	            className = _props.className,
-	            inverse = _props.inverse,
-	            disabled = _props.disabled,
-	            type = _props.type,
-	            expand = _props.expand;
+	        var _props2 = this.props,
+	            options = _props2.options,
+	            height = _props2.height,
+	            className = _props2.className,
+	            inverse = _props2.inverse,
+	            disabled = _props2.disabled,
+	            type = _props2.type,
+	            expand = _props2.expand,
+	            showClearButton = _props2.showClearButton;
 	        var _state = this.state,
 	            open = _state.open,
 	            currentCheckedItems = _state.currentCheckedItems,
@@ -48448,6 +48459,7 @@
 	                onKeyDown: this.handleKeyDown,
 	                onClose: this.handleClose,
 	                onClearSelected: this.handleClearSelected,
+	                showClearButton: showClearButton,
 	                dropup: dropup,
 	                multiple: true
 	            })
@@ -48679,9 +48691,10 @@
 	    label: 'Master',
 	    value: 'Master',
 	    children: [{
-	        label: 'Eugenia',
-	        value: 'Eugenia'
-
+	        label: 'disabled node',
+	        value: 'Eugenia',
+	        checked: true,
+	        disabled: true
 	    }, {
 	        label: 'Kariane-Kariane-Kariane-Kariane-Kariane KarianeKarianeKarianeKarianeKarianeKarianeKarianeKarianeKarianeKarianeKarianeKarianeKarianeKarianeKarianeKarianeKarianeKariane KarianeKarianeKarianeKariane',
 	        value: 'Kariane'
@@ -48834,7 +48847,11 @@
 	exports.default = _react2.default.createClass({
 	    displayName: 'MultipleExample',
 	    render: function render() {
-	        return _react2.default.createElement(_src2.default, { options: _userGroups2.default, multiple: true, onChange: function onChange(data) {
+	        return _react2.default.createElement(_src2.default, {
+	            options: _userGroups2.default,
+	            multiple: true,
+	            showClearButton: true,
+	            onChange: function onChange(data) {
 	                console.log(data);
 	            } });
 	    }
@@ -48915,9 +48932,8 @@
 	        title: 'Eugenia',
 	        value: 'Eugenia'
 	    }, {
-	        label: 'Not selectable node - Kariane',
+	        label: 'Disabled Node',
 	        value: 'Kariane',
-	        selectable: false,
 	        children: [{
 	            label: 'Dave',
 	            value: 'Dave'
@@ -48972,9 +48988,9 @@
 	            value: 'Kristoffer'
 	        }]
 	    }, {
-	        label: 'Not selectable node - Louisa',
+	        label: 'Disabled Node',
 	        value: 'Louisa',
-	        selectable: false
+	        disabled: true
 	    }, {
 	        label: 'Marty',
 	        value: 'Marty'
@@ -49271,7 +49287,7 @@
 /* 330 */
 /***/ function(module, exports) {
 
-	module.exports = "<h2 id=\"props\">Props</h2>\n<table>\n<thead>\n<tr>\n<th>Prop name</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>options</td>\n<td>array</td>\n<td></td>\n<td>组件数据</td>\n</tr>\n<tr>\n<td>height</td>\n<td>number</td>\n<td>300</td>\n<td>设置 Dropdown 的高度</td>\n</tr>\n<tr>\n<td>dropup</td>\n<td>bool</td>\n<td>false</td>\n<td>向上展开</td>\n</tr>\n<tr>\n<td>defaultValue</td>\n<td>any</td>\n<td></td>\n<td>设置默认值</td>\n</tr>\n<tr>\n<td>getPlaceholder</td>\n<td>function</td>\n<td></td>\n<td>自定义 placeholder</td>\n</tr>\n<tr>\n<td>onChange</td>\n<td>function</td>\n<td></td>\n<td>选择后的回调方法</td>\n</tr>\n<tr>\n<td>multiple</td>\n<td>bool</td>\n<td>false</td>\n<td>是否可以多选</td>\n</tr>\n<tr>\n<td>disabled</td>\n<td>bool</td>\n<td>false</td>\n<td>是否禁用组件</td>\n</tr>\n<tr>\n<td>inverse</td>\n<td>bool</td>\n<td>false</td>\n<td>是否颜色反转</td>\n</tr>\n<tr>\n<td>expand</td>\n<td>bool</td>\n<td>false</td>\n<td>默认全部展开，支持 <code>TreePicker</code></td>\n</tr>\n<tr>\n<td>locale</td>\n<td>object</td>\n<td><code>{ clearSelected:&#39;Clear selected&#39;, placeholder: &#39;${length} selected&#39; }</code></td>\n<td>本地语言处理</td>\n</tr>\n</tbody>\n</table>\n<p><br/></p>\n<p><code>options</code> 数据结构示例：</p>\n<div class=\"doc-highlight\"><pre><code class=\"javascript\">[{\n    <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n    <span class=\"hljs-attr\">value</span>: <span class=\"hljs-number\">1</span>,\n    <span class=\"hljs-attr\">checked</span>: <span class=\"hljs-literal\">true</span>, <span class=\"hljs-comment\">// props multiple 为 true 有效</span>\n    children:[{...}],   <span class=\"hljs-comment\">// 针对 group 分组 或者 &lt;TreePicker&gt; 有效</span>\n    selectable: <span class=\"hljs-literal\">false</span>  <span class=\"hljs-comment\">// selectable 设置为 false 后，改节点不可选择</span>\n},\n...\n]</code></pre></div>";
+	module.exports = "<h2 id=\"props\">Props</h2>\n<table>\n<thead>\n<tr>\n<th>Prop name</th>\n<th>Type</th>\n<th>Default</th>\n<th>Description</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>options</td>\n<td>array</td>\n<td></td>\n<td>组件数据</td>\n</tr>\n<tr>\n<td>height</td>\n<td>number</td>\n<td>300</td>\n<td>设置 Dropdown 的高度</td>\n</tr>\n<tr>\n<td>dropup</td>\n<td>bool</td>\n<td>false</td>\n<td>向上展开</td>\n</tr>\n<tr>\n<td>defaultValue</td>\n<td>any</td>\n<td></td>\n<td>设置默认值</td>\n</tr>\n<tr>\n<td>getPlaceholder</td>\n<td>function</td>\n<td></td>\n<td>自定义 placeholder</td>\n</tr>\n<tr>\n<td>onChange</td>\n<td>function</td>\n<td></td>\n<td>选择后的回调方法</td>\n</tr>\n<tr>\n<td>multiple</td>\n<td>bool</td>\n<td>false</td>\n<td>是否可以多选</td>\n</tr>\n<tr>\n<td>disabled</td>\n<td>bool</td>\n<td>false</td>\n<td>是否禁用组件</td>\n</tr>\n<tr>\n<td>inverse</td>\n<td>bool</td>\n<td>false</td>\n<td>是否颜色反转</td>\n</tr>\n<tr>\n<td>showClearButton</td>\n<td>bool</td>\n<td>true</td>\n<td>是否显示<code>清除全部</code>按钮，多选的时候使用</td>\n</tr>\n<tr>\n<td>onClearSelected</td>\n<td>function</td>\n<td></td>\n<td>点击<code>清除全部</code>按钮的回调函数</td>\n</tr>\n<tr>\n<td>expand</td>\n<td>bool</td>\n<td>false</td>\n<td>默认全部展开，支持 <code>TreePicker</code></td>\n</tr>\n<tr>\n<td>locale</td>\n<td>object</td>\n<td><code>{ clearSelected:&#39;Clear selected&#39;, placeholder: &#39;${length} selected&#39; }</code></td>\n<td>本地语言处理</td>\n</tr>\n</tbody>\n</table>\n<p><br/></p>\n<p><code>options</code> 数据结构示例：</p>\n<div class=\"doc-highlight\"><pre><code class=\"javascript\">[{\n    <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">'Eugenia'</span>,\n    <span class=\"hljs-attr\">value</span>: <span class=\"hljs-number\">1</span>,\n    <span class=\"hljs-attr\">checked</span>: <span class=\"hljs-literal\">true</span>, <span class=\"hljs-comment\">// props multiple 为 true 有效</span>\n    children:[{...}],   <span class=\"hljs-comment\">// 针对 group 分组 或者 &lt;TreePicker&gt; 有效</span>\n    disabled: <span class=\"hljs-literal\">false</span>  <span class=\"hljs-comment\">// disabled 设置为 true 后，改节点不可选择</span>\n},\n...\n]</code></pre></div>";
 
 /***/ }
 /******/ ]);
