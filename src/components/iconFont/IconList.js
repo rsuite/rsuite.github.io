@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormControl, IconFont } from 'rsuite';
 
-const ICONS = JSON.parse(require('fs').readFileSync(__dirname + '/icons.json', 'utf8'));
+const ALL_ICONS = JSON.parse(require('fs').readFileSync(__dirname + '/icons.json', 'utf8'));
 
 const IconItem = React.createClass({
     render(){
@@ -18,42 +18,30 @@ const NoneDom = () => <div className="col-md-12">无</div>;
 
 export default React.createClass({
     getInitialState(){
-        return ICONS;
+        return {
+            icons: ALL_ICONS
+        };
     },
     handleSearch(key){
         const filter = (iconName) => iconName.indexOf(key.trim()) > -1;
-        const icon = ICONS.icon.filter(filter);
-        const fa = ICONS.fa.filter(filter);
+        const icons = ALL_ICONS.filter(filter);
         this.setState({
-            icon, fa
+            icons
         })
     },
     renderIcon(icons, classPrefix = ''){
         return icons.map((icon) => <IconItem icon={icon} key={icon} classPrefix={classPrefix}/>)
     },
     render(){
-        const { icon, fa }=this.state;
+        const { icons }=this.state;
         return (
             <div className="icon-list-wrap">
                 <FormControl type='text'
                              placeholder="输入英文关键字进行搜索，比如 play"
                              onChange={this.handleSearch}/>
                 <hr/>
-                <h4>
-                    <span className="page-header-en">
-                        <code>classPrefix="icon"</code>
-                    </span>
-                </h4>
                 <div className="row icon-item-list">
-                    {icon.length > 0 ? this.renderIcon(icon, 'icon') : <NoneDom/>}
-                </div>
-                <h4>
-                    <span className="page-header-en">
-                        <code>classPrefix="fa"</code>
-                    </span>
-                </h4>
-                <div className="row icon-item-list">
-                    {fa.length > 0 ? this.renderIcon(fa, 'fa') : <NoneDom/>}
+                    {icons.length > 0 ? this.renderIcon(icons, 'icon') : <NoneDom/>}
                 </div>
             </div>
         );
