@@ -10,7 +10,6 @@ import 'codemirror/mode/jsx/jsx';
 
 
 import * as RSTable from 'rsuite-table';
-import * as ECharts from 'rsuite-echarts';
 
 const tableData = require('../componentList').default;
 
