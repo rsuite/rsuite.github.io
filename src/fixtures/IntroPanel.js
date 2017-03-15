@@ -28,8 +28,8 @@ const IntroDetail = React.createClass({
                     <a target="_blank" href={`https://www.npmjs.org/package/${repoName}`} style={{float:'left'}}>
                         <img src={`https://img.shields.io/npm/v/${repoName}.svg?style=flat-square`} />
                     </a>
-                    <a target="_blank" href={url}><i className="fa fa-star"></i> {stars}</a>
-                    <a target="_blank" href={url}><i className="fa fa-github"></i></a>
+                    <a target="_blank" href={url}><i className="icon icon-star"></i> {stars}</a>
+                    <a target="_blank" href={url}><i className="icon icon-github"></i></a>
                 </div>
             </div>
         );
