@@ -10,7 +10,7 @@ const IconItem = React.createClass({
                 <IconFont {...this.props} className="icon-content"/>
                 <p className="icon-name-text">{this.props.icon}</p>
             </div>
-        )
+        );
     }
 });
 
@@ -27,13 +27,13 @@ export default React.createClass({
         const icons = ALL_ICONS.filter(filter);
         this.setState({
             icons
-        })
+        });
     },
     renderIcon(icons, classPrefix = ''){
-        return icons.map((icon) => <IconItem icon={icon} key={icon} classPrefix={classPrefix}/>)
+        return icons.map((icon) => <IconItem icon={icon} key={icon} classPrefix={classPrefix}/>);
     },
     render(){
-        const { icons }=this.state;
+        const { icons } = this.state;
         return (
             <div className="icon-list-wrap">
                 <FormControl type='text'
