@@ -8,8 +8,8 @@
     </title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/rsuite.min.css?v=RSUITE | 一套 React 的 UI 组件库">
-
+    <link rel="stylesheet" href="./assets/css/rsuite.min.css?v=0.0.20">
+    <link rel="stylesheet" href="./resources/loading.css" />
     <script type="text/javascript" src="//cdn.bootcss.com/babel-standalone/6.15.0/babel.min.js"></script>
     <!--[if lte IE 9]>
         <script type="text/javascript" src="http://cdn.bootcss.com/es5-shim/4.5.9/es5-shim.min.js"></script>
@@ -17,36 +17,21 @@
         <script type="text/javascript" src="http://cdn.bootcss.com/es6-shim/0.35.1/es6-shim.min.js"></script>
         <script type="text/javascript" src="http://cdn.bootcss.com/es6-shim/0.35.1/es6-sham.min.js"></script>
     <![endif]-->
-<link href="./assets/index.css?77595f083eca2dc1c234" rel="stylesheet"></head>
+<link href="./assets/index.css?d941ee3edb5dc9a17c02" rel="stylesheet"></head>
 
 <body>
     <div id="root">
-        <style>
-            .rsuite-site-loading span{
-                font-size: 24px;
-            }
-            .rsuite-site-loading span:first-child{
-                color:#0ae;
-            }
-        </style>
-        <div class="rsuite-site-loading"  >
-            <div id="loading-text">RSUITE</div>
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
         </div>
-        <script>
-            (function() {
-                var content = document.getElementById('loading-text');
-                content.innerHTML = content.innerHTML.split('').map(function(letter, i) {
-                    var className = '';
-                    if (i > 0 && i < content.innerText.length - 1) {
-                        className = 'rsuite-letter-' + (i % 6);
-                    }
-                    if (letter.trim() === '') {
-                        className += ' blank';
-                    }
-                    return '<span class="' + className + '">' + letter + '</span>';
-                }).join('');
-            })();
-        </script>
     </div>
     <script>
     (function(i,d,t,o,u,h,s,f){i[t]=i[t]||[],i[t].push(h);i[h]=i[h]||function(){
@@ -57,6 +42,6 @@
     _ha("send","pageview");
 
     </script>
-<script type="text/javascript" src="./assets/vendor.bundle.js?77595f083eca2dc1c234"></script><script type="text/javascript" src="./assets/index.bundle.js?77595f083eca2dc1c234"></script></body>
+<script type="text/javascript" src="./assets/vendor.bundle.js?d941ee3edb5dc9a17c02"></script><script type="text/javascript" src="./assets/index.bundle.js?d941ee3edb5dc9a17c02"></script></body>
 
 </html>
