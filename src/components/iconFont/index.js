@@ -20,7 +20,7 @@ export default React.createClass({
                     </span>
                 </h1>
                 <p>RSuite 部分图标使用开源项目 <a href="http://fontawesome.io/icons/">Font Awesome</a></p>
-                <h3>默认样式</h3>
+
                 <Example code={examples.basic}/>
                 <h3>组件属性</h3>
                 <Markdown>

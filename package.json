@@ -25,7 +25,7 @@
     "lodash": "^4.11.1",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
-    "rsuite": "1.0.1",
+    "rsuite": "1.0.4",
     "rsuite-table": "0.0.14"
   },
   "author": "Simon Guo <simonguo.2009@gmail.com>",
@@ -79,7 +79,7 @@
     "react-hot-loader": "^1.3.0",
     "react-router": "2.0.1",
     "rimraf": "^2.5.2",
-    "rsuite-theme": "^0.3.14",
+    "rsuite-theme": "0.3.16",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0",
     "style-loader": "^0.13.1",
