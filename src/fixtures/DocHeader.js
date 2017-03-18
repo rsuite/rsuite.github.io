@@ -73,7 +73,7 @@ const DocHeader = React.createClass({
         });
 
         return (
-            <Header className={classes} inverse>
+            <Header className={classes}>
                 <div className="container">
                     <Navbar.Header>
                         <Navbar.Brand>

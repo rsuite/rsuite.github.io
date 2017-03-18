@@ -2,9 +2,9 @@
 @import './less/sublime.less';
 @import './less/table.less';
 
-@primary-color: #FF8533;
+@primary-color: #6292f0;
 @bg-color: #fbfbfb;
-@banner-bg-color: #6292f0;
+@banner-bg-color: #fff;
 @header-height: 64px;
 @media-xs: 768px;
 @media-md: 992px;
@@ -21,7 +21,7 @@
     color: @primary-color;
     text-transform: uppercase;
     .prefix {
-        color: #61DAFB;
+        color: @primary-color;
     }
 }
 
@@ -43,6 +43,8 @@
 
 .doc-header {
     height: @header-height;
+    background: #fff;
+    border-color: #fff;
     &.navbar-fixed-top.overflow {
         z-index: 1050;
     }
@@ -82,8 +84,9 @@
             }
         }
         &.active a, a:focus, a:active {
-            color: #fff;
-            border-bottom: 2px solid #fff;
+
+            color: @primary-color;
+            border-bottom: 2px solid @primary-color;
             padding-bottom: 8px;
         }
     }
@@ -91,7 +94,7 @@
 }
 
 .doc-container {
-    margin-top: @header-height;
+    margin-top: 70px;
     .page-header {
         margin: 40px 0 32px;
         border: none;
@@ -110,7 +113,6 @@
 }
 
 .page-sidebar-wrapper {
-    box-shadow: 2px -2px 8px rgba(235, 240, 242, 0.55);
     width: 256px;
     overflow: auto;
     background: #fff;
@@ -234,7 +236,6 @@ code {
     height: 100%;
     z-index: 1040;
     overflow: hidden;
-    color: #fff;
     .nav {
         top: 32px;
         position: absolute;
@@ -245,16 +246,17 @@ code {
         font-size: 16px;
     }
     .nav > a {
-        color: #fff;
         background: transparent;
         margin-right: 10px;
         padding: 10px 23px;
         text-decoration: none;
+        color: #575757;
         &.primary {
             border: 1px solid #FF8533;
         }
         &:hover {
-            border-bottom: 2px solid #ddd;
+            color: @primary-color;
+            border-bottom: 2px solid @primary-color;
         }
     }
     .triangle-left {
@@ -273,7 +275,8 @@ code {
         .doc-example {
             border: none;
             .header{
-                background: #1d9d74;
+                background: #5680d2;
+                border-color: #5680d2;
             }
         }
     }
