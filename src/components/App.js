@@ -1,10 +1,9 @@
 import React from 'react';
 
 import DocHeader from '../fixtures/DocHeader';
-import DocSidebar from '../fixtures/DocSidebar';
 import DocFooter from '../fixtures/DocFooter';
-
 import Container from 'rsuite/lib/Container';
+
 
 const App = React.createClass({
     contextTypes: {

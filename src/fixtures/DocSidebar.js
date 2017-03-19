@@ -1,24 +1,23 @@
 import React from 'react';
 import { Sidebar, Navbar, Nav } from 'rsuite';
 import { Link } from 'react-router';
-import * as data from './data';
 import components from '../componentList';
 
 
 const DocSidebar = React.createClass({
     render() {
-        const { children } = this.props;
-        const menu = [];
-        data.default.map((item, key) => {
+        const { children, menu } = this.props;
+        const nodeItems = [];
+        menu.default.map((item, key) => {
 
-            menu.push(
+            nodeItems.push(
                 <li key={key} className="nav-header" >
                     {item.category}
                 </li>
             );
 
             item.components.map((child, index) => {
-                menu.push(
+                nodeItems.push(
                     <Nav.Item key={index} activeClassName="active" componentClass={Link} to={`/components/${child.id}`} >
 
                         {child.name}
@@ -34,7 +33,7 @@ const DocSidebar = React.createClass({
             <Sidebar >
                 {children}
                 <Nav className="nav-docs">
-                    {menu}
+                    {nodeItems}
                     <li className="nav-header">Other</li>
                     {
                         components.filter((item, index) => {

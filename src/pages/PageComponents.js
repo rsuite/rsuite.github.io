@@ -7,7 +7,7 @@ import { Markdown } from '../fixtures/Markdown';
 import DocHeader from '../fixtures/DocHeader';
 import DocSidebar from '../fixtures/DocSidebar';
 
-
+import * as menu from '../components/menu';
 
 const PageComponents = React.createClass({
     render: function () {
@@ -16,8 +16,7 @@ const PageComponents = React.createClass({
 
                 <Row>
                     <Col md={3} sm={12}>
-
-                        <DocSidebar >
+                        <DocSidebar menu={menu}>
                             <Markdown>
                                 {require('./components.md')}
                             </Markdown>

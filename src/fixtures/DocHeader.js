@@ -18,7 +18,7 @@ const NAV_LINKS = [
         title: '组件'
     }, {
         link: '/examples',
-        title: '示例'
+        title: '实践'
     }];
 
 const DocHeader = React.createClass({

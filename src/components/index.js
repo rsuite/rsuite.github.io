@@ -15,3 +15,6 @@ export tables from './tables';
 export controls from './controls';
 export formLayout from './formLayout';
 export validate from './validate';
+export schema from './rsuite-schema';
+export domlib from './dom-lib';
+export theme from './rsuite-theme';
