@@ -56,8 +56,6 @@ if (process.env.NODE_ENV === 'production') {
     }));
 
     plugins.push(new webpack.BannerPlugin(`Last update: ${new Date().toString()}`));
-
-    output.publicPath = './assets/';
 }
 
 module.exports = {
@@ -86,7 +84,12 @@ module.exports = {
                 loader: 'html!markdown'
             }, {
                 test: /\.(jpg|png)$/,
-                loader: 'url?limit=8192'
+                //`publicPath`  only use to assign assets path in build
+                loader: 'url?limit=8192&publicPath=./assets/'
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|svg)($|\?)/,
+                loaders: ['url?limit=1&hash=sha512&digest=hex&size=16&name=resources/[hash].[ext]']
             }
         ]
     },

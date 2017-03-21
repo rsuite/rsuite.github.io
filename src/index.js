@@ -8,7 +8,6 @@ import './docs.less';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/base16-light.css';
 import 'codemirror/theme/base16-dark.css';
-
 //import routes from './routes';
 
 require('./hypers-hire');

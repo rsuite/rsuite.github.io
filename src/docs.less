@@ -1,8 +1,10 @@
+@import '../node_modules/rsuite-theme/dist/less/rsuite.less';
 @import './less/highlight.less';
 @import './less/sublime.less';
 @import './less/table.less';
 
-@primary-color: #6292f0;
+//rewrite base color
+@base-color: #6292f0;
 @bg-color: #fbfbfb;
 @banner-bg-color: #fff;
 @header-height: 64px;
@@ -18,10 +20,10 @@
 
 .logo {
     font-family: 'Raleway', 'Hiragino Sans GB', sans-serif;
-    color: @primary-color;
+    color: @base-color;
     text-transform: uppercase;
     .prefix {
-        color: @primary-color;
+        color: @base-color;
     }
 }
 
@@ -85,8 +87,8 @@
         }
         &.active a, a:focus, a:active {
 
-            color: @primary-color;
-            border-bottom: 2px solid @primary-color;
+            color: @base-color;
+            border-bottom: 2px solid @base-color;
             padding-bottom: 8px;
         }
     }
@@ -166,6 +168,7 @@
 .doc-example-wrapper {
     margin-bottom: 18px;
 }
+
 .doc-example {
     padding: 10px 0;
     position: relative;
@@ -181,7 +184,7 @@
     }
     .container {
         width: auto;
-        padding:60px 20px 20px;
+        padding: 60px 20px 20px;
     }
 }
 
@@ -255,8 +258,8 @@ code {
             border: 1px solid #FF8533;
         }
         &:hover {
-            color: @primary-color;
-            border-bottom: 2px solid @primary-color;
+            color: @base-color;
+            border-bottom: 2px solid @base-color;
         }
     }
     .triangle-left {
@@ -274,7 +277,7 @@ code {
 
         .doc-example {
             border: none;
-            .header{
+            .header {
                 background: #5680d2;
                 border-color: #5680d2;
             }
@@ -551,8 +554,12 @@ code {
         text-align: center;
         height: 30px;
     }
+
+    .text-danger {
+        color: @danger-color;
+    }
 }
 
-.icon-example-list .icon{
+.icon-example-list .icon {
     margin: 10px;
 }
