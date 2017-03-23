@@ -37,7 +37,6 @@
     box-shadow: @arguments;
 }
 
-
 .doc-header {
     height: @header-height;
     background: #fff;
@@ -420,22 +419,24 @@ code {
             &:before {
                 position: absolute;
                 width: 100%;
-                top: 22%;
                 display: block;
                 text-align: center;
                 font-size: 5.2em;
             }
+            @media (max-width: @media-xs) {
+                &:before {
+                    font-size: 88px;
+                }
+            }
 
             @media (min-width: @media-xs) {
                 &:before {
-                    top: 16%;
                     font-size: 88px;
                 }
             }
 
             @media (min-width: @media-md) {
                 &:before {
-                    top: 16%;
                     font-size: 68px;
                 }
             }
