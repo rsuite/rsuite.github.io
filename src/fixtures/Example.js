@@ -10,6 +10,14 @@ import 'codemirror/mode/jsx/jsx';
 
 
 import * as RSTable from 'rsuite-table';
+import * as RForm  from 'rsuite-form';
+import * as Schema from 'rsuite-schema';
+
+const RSuiteForm = RForm.Form;
+const Field = RForm.Field;
+const SchemaModel = Schema.SchemaModel;
+const StringType = Schema.StringType;
+const ArrayType = Schema.ArrayType;
 
 const tableData = require('../componentList').default;
 

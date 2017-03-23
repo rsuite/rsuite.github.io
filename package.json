@@ -85,6 +85,8 @@
     "transform-loader": "^0.2.3",
     "url-loader": "^0.5.7",
     "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "rsuite-schema": "0.0.3",
+    "rsuite-form": "0.1.18"
   }
 }
