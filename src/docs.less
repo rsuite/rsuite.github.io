@@ -256,6 +256,9 @@ code {
             border-bottom: 2px solid @base-color;
         }
     }
+    .container{
+        height: 100%;
+    }
     .triangle-left {
         background: #fff;
         box-shadow: -8px -6px 11px rgba(5, 11, 8, 0.35);
@@ -280,10 +283,14 @@ code {
     .typing-wrapper {
         margin-top: 50px;
         animation: fadeIn 2s cubic-bezier(0.215, .61, .355, 1);
-
+        height: calc(~"100% - 180px");
         .CodeMirror {
             background: none !important;
             opacity: 0.4;
+        }
+        .doc-code{
+            overflow: auto;
+            height: 100%;
         }
     }
 }
