@@ -101,7 +101,7 @@ export default [
         icon: 'icon icon-clipboard',
         bg: '#b94e95',
         repoName: 'rsuite-clipboard',
-        url: 'rsuite.github.io/rsuite-clipboard',
+        url: 'https://rsuite.github.io/rsuite-clipboard',
         name: 'RSuite Clipboard',
         intro: '复制到剪切板',
         src: 'https://github.com/rsuite/rsuite-clipboard'
