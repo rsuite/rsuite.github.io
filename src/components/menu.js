@@ -113,7 +113,7 @@ export default [
             {
                 id: 'theme',
                 name: 'rsuite-theme',
-                title: '主题管理'
+                title: '定制主题'
             }, {
                 id: 'domlib',
                 name: 'dom-lib',

@@ -15,10 +15,10 @@ export default React.createClass({
                 <h1 className="page-header">
                     Modals
                     <span className="page-header-en">
-                        <code>Modal.Header</code>、
-                        <code>Modal.Title</code>、
-                        <code>Modal.Body</code>、
-                        <code>Modal.Footer</code>
+                        <code>{'<Modal.Header>'}</code>、
+                        <code>{'<Modal.Title>'}</code>、
+                        <code>{'<Modal.Body>'}</code>、
+                        <code>{'<Modal.Footer>'}</code>
                     </span>
                 </h1>
 

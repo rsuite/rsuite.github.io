@@ -21,8 +21,8 @@ export default React.createClass({
                 <h1 className="page-header">
                     Button Groups
                     <span className="page-header-en">
-                        <code>ButtonGroup</code>、
-                        <code>ButtonToolbar</code>
+                        <code>{'<ButtonGroup>'}</code>、
+                        <code>{'<ButtonToolbar>'}</code>
                     </span>
                 </h1>
 

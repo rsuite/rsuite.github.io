@@ -14,16 +14,18 @@ export default React.createClass({
         return (
             <Col md={9} sm={12}>
                  <h1 className="page-header">
-                    支持的表单控件
+                    Contorls 支持的表单控件
                     <span className="page-header-en">
-                        <code>Form</code>、
-                        <code>FormGroup</code>、
-                        <code>ControlLabel</code>、
-                        <code>Checkbox</code>、
-                        <code>CheckboxList</code>、
-                        <code>Radio</code>、
-                        <code>RadioList</code>、
-                        <code>HelpBlock</code>
+                        <code>{'<Form>'}</code>、
+                        <code>{'<FormGroup>'}</code>、
+                        <code>{'<ControlLabel>'}</code>、
+
+                        <code>{'<Checkbox>'}</code>、
+                        <code>{'<CheckboxList>'}</code>、
+                        <code>{'<Radio>'}</code>、
+                        <br/>
+                        <code>{'<RadioList>'}</code>、
+                        <code>{'<HelpBlock>'}</code>
                     </span>
                 </h1>
 

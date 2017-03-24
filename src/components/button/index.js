@@ -17,7 +17,7 @@ export default React.createClass({
                 <h1 className="page-header">
                     Buttons
                     <span className="page-header-en">
-                        <code>Button</code>
+                        <code>{'<Button>'}</code>
                     </span>
                 </h1>
 

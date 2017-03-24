@@ -13,10 +13,10 @@ export default React.createClass({
         return (
             <Col md={9} sm={12}>
                  <h1 className="page-header">
-                    表单验证
+                    Form Validate 表单验证
                     <span className="page-header-en">
-                        <code>Form</code>、
-                        <code>Field</code>
+                        <code>{'<Form>'}</code>、
+                        <code>{'<Field>'}</code>
                     </span>
                 </h1>
 

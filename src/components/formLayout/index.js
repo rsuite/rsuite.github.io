@@ -15,7 +15,7 @@ export default React.createClass({
         return (
             <Col md={9} sm={12}>
                  <h1 className="page-header">
-                    表单布局
+                    Form Layout 表单布局
                 </h1>
 
                 <h3>默认布局</h3>

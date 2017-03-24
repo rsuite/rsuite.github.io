@@ -15,8 +15,8 @@ export default React.createClass({
                 <h1 className="page-header">
                     Breadcrumbs
                     <span className="page-header-en">
-                        <code>Breadcrumb</code>、
-                        <code>Breadcrumb.Item</code>
+                        <code>{'<Breadcrumb>'}</code>、
+                        <code>{'<Breadcrumb.Item>'}</code>
                     </span>
                 </h1>
 

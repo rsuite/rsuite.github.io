@@ -16,8 +16,8 @@ export default React.createClass({
                 <h1 className="page-header">
                     Tooltips
                     <span className="page-header-en">
-                        <code>Whisper</code>、
-                        <code>Tooltip</code>
+                        <code>{'<Whisper>'}</code>、
+                        <code>{'<Tooltip>'}</code>
                     </span>
                 </h1>
 

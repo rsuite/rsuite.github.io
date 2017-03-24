@@ -16,8 +16,8 @@ export default React.createClass({
                 <h1 className="page-header">
                     Popovers
                     <span className="page-header-en">
-                        <code>Whisper</code>、
-                        <code>Popover</code>
+                        <code>{'<Whisper>'}</code>、
+                        <code>{'<Popover>'}</code>
                     </span>
                 </h1>
 

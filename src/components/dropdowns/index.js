@@ -20,8 +20,8 @@ export default React.createClass({
                 <h1 className="page-header">
                     Dropdowns
                     <span className="page-header-en">
-                        <code>Dropdown</code>、
-                        <code>Dropdown.Item</code>
+                        <code>{'<Dropdown>'}</code>、
+                        <code>{'<Dropdown.Item>'}</code>
                     </span>
                 </h1>
 

@@ -20,8 +20,8 @@ export default React.createClass({
                 <h1 className="page-header">
                     Navs
                     <span className="page-header-en">
-                        <code>Nav</code>、
-                        <code>Nav.Item</code>
+                        <code>{'<Nav>'}</code>、
+                        <code>{'<Nav.Item>'}</code>
                     </span>
                 </h1>
 

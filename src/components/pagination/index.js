@@ -16,7 +16,7 @@ export default React.createClass({
                 <h1 className="page-header">
                     Pagination
                     <span className="page-header-en">
-                        <code>Pagination</code>
+                        <code>{'<Pagination>'}</code>
                     </span>
                 </h1>
 

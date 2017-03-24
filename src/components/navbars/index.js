@@ -16,11 +16,11 @@ export default React.createClass({
                 <h1 className="page-header">
                     Navbars
                     <span className="page-header-en">
-                        <code>Navbar</code>、
-                        <code>Navbar.Header</code>、
-                        <code>Navbar.Brand</code>、
-                        <code>Navbar.Collapse</code>、
-                        <code>Navbar.Toggle</code>
+                        <code>{'<Navbar>'}</code>、
+                        <code>{'<Navbar.Header>'}</code>、
+                        <code>{'<Navbar.Brand>'}</code>、
+                        <code>{'<Navbar.Collapse>'}</code>、
+                        <code>{'<Navbar.Toggle>'}</code>
                     </span>
                 </h1>
 

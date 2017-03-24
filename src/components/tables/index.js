@@ -16,7 +16,7 @@ export default React.createClass({
                 <h1 className="page-header">
                     Tables
                     <span className="page-header-en">
-                        <code>Table</code>
+                        <code>{'<Table>'}</code>
                     </span>
                 </h1>
 

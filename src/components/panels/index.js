@@ -17,8 +17,8 @@ export default React.createClass({
                 <h1 className="page-header">
                     Panels
                     <span className="page-header-en">
-                        <code>Panel</code>、
-                        <code>PanelGroup</code>
+                        <code>{'<Panel>'}</code>、
+                        <code>{'<PanelGroup>'}</code>
                     </span>
                 </h1>
 

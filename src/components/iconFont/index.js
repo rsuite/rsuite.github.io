@@ -16,7 +16,7 @@ export default React.createClass({
                 <h1 className="page-header">
                     IconFont
                     <span className="page-header-en">
-                        <code>IconFont</code>
+                        <code>{'<IconFont>'}</code>
                     </span>
                 </h1>
                 <p>RSuite 部分图标使用开源项目 <a href="http://fontawesome.io/icons/">Font Awesome</a></p>

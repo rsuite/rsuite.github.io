@@ -15,9 +15,9 @@ export default React.createClass({
                 <h1 className="page-header">
                     Grid
                     <span className="page-header-en">
-                        <code>Grid</code>、
-                        <code>Row</code>、
-                        <code>Col</code>
+                        <code>{'<Grid>'}</code>、
+                        <code>{'<Row>'}</code>、
+                        <code>{'<Col>'}</code>
                     </span>
                 </h1>
 
