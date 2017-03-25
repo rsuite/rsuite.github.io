@@ -23,6 +23,7 @@ export default React.createClass({
                 <Markdown>
                     {require('./overview.md') }
                 </Markdown>
+
                 <h3>基础验证</h3>
                 <Example code={examples.basic} />
 
