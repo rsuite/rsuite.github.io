@@ -65,7 +65,7 @@ ReactDOM.render(<Button>Button</Button>, mountNode);
 - 可以直接引入css
 
 ```html
-<link rel="stylesheet" href="//t.hypers.com.cn/libs/rsuite/css/0.1.0/rsuite.min.css">
+<link rel="stylesheet" href="https://unpkg.com/rsuite-theme/dist/css/rsuite.min.css" />
 ```
 
 - 可以通过 [rsuite-theme](https://github.com/rsuite/rsuite-theme) 管理，只需要配置一个系统主色，自动生成系统配色方案。

@@ -25,7 +25,20 @@
 
 ### 定制方式
 ----------
-#### 1. cli 工具使用
+
+#### 1.引用 less 文件
+用 `less` 文件进行变量覆盖。
+建立一个单独的 `less` 文件如下，再引入这个文件。
+
+```less
+@import '~rsuite-theme/dist/less/rsuite';   // 引入官方提供的 less 样式入口文件
+@import 'custom-variables';   // 用于覆盖上面定义的变量
+... //你自己的样式
+```
+
+<br><br>
+
+#### 2. cli 工具使用
 
 安装
 
@@ -77,7 +90,7 @@ rsuite-theme -h
 ```
 <br><br>
 
-#### 2. require 方式使用
+#### 3. node 脚本方式使用
 创建文件 `css-build.js`
 ```javascript
 
@@ -110,15 +123,4 @@ Object.keys(themes).forEach((key) => {
 
 ```bash
 node css-build.js
-```
-
-<br><br>
-#### 3.引用 less 文件
-用 `less` 文件进行变量覆盖。
-建立一个单独的 `less` 文件如下，再引入这个文件。
-
-```less
-@import '~rsuite-theme/dist/less/rsuite';   // 引入官方提供的 less 样式入口文件
-@import 'custom-variables';   // 用于覆盖上面定义的变量
-... //你自己的样式
 ```

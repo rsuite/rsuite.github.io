@@ -89,7 +89,7 @@ module.exports = {
             },
             {
                 test: /\.(woff|woff2|eot|ttf|svg)($|\?)/,
-                loaders: ['url?limit=1&hash=sha512&digest=hex&size=16&name=resources/[hash].[ext]']
+                loader: 'url?limit=1&hash=sha512&digest=hex&size=16&name=resources/[hash].[ext]'
             }
         ]
     },
