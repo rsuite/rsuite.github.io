@@ -13,9 +13,9 @@
 - 支持 ie9+、chrome 、firefox 等各种主流浏览器
 - 提供开放的定制需求，包括但不仅限于色系、圆角、边框、阴影和组件的视觉定制。
 
-**预览**
+**项目地址**
 
-[http://rsuite.github.io/](http://rsuite.github.io/)
+[https://github.com/rsuite/rsuite-theme](https://github.com/rsuite/rsuite-theme)
 
 **样式变量**
 
@@ -32,7 +32,7 @@
 
 ```less
 @import '~rsuite-theme/dist/less/rsuite';   // 引入官方提供的 less 样式入口文件
-@import 'custom-variables';   // 用于覆盖上面定义的变量
+@base-color:'#6292f0'; //修改主题颜色（更多变量，详见 *默认样式变量*）
 ... //你自己的样式
 ```
 
@@ -75,7 +75,7 @@ module.exports = {
 };
 ```
 
-更多配置详见[配置项](https://github.com/rsuite/rsuite-theme/tree/dev#%E9%85%8D%E7%BD%AE%E9%A1%B9)
+更多配置详见[配置项](https://github.com/rsuite/rsuite-theme/blob/master/README.md#user-content-配置项)
 
 在项目根目录下运行
 
@@ -90,7 +90,7 @@ rsuite-theme -h
 ```
 <br><br>
 
-#### 3. node 脚本方式使用
+#### 3. node 模块方式使用
 创建文件 `css-build.js`
 ```javascript
 
@@ -108,7 +108,6 @@ build.importResources({
     ],
     dist: outputDir
 });
-
 
 Object.keys(themes).forEach((key) => {
     build.palette({

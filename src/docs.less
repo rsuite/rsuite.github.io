@@ -189,6 +189,14 @@
         padding: 10px 5px;
         border: 1px solid #DDD;
         background: #F1F1F1;
+
+        &:not(:last-child),&.col-md-pull-6 {
+            border-right: none;
+        }
+
+        &.col-md-push-6 {
+            border-right: 1px solid #DDD;
+        }
     }
 }
 
@@ -257,7 +265,7 @@ code {
             border-bottom: 2px solid @base-color;
         }
     }
-    .container{
+    .container {
         height: 100%;
     }
     .triangle-left {
@@ -289,7 +297,7 @@ code {
             background: none !important;
             opacity: 0.4;
         }
-        .doc-code{
+        .doc-code {
             overflow: auto;
             height: 100%;
         }
@@ -569,7 +577,7 @@ code {
     margin: 10px;
 }
 
-.markdown blockquote{
+.markdown blockquote {
     padding: 0px 10px;
     margin: 0 0 10px;
     font-size: 14px;
