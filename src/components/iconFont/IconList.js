@@ -14,7 +14,7 @@ export default React.createClass({
         };
     },
     handleSearch(key){
-        const filter = (iconName) => iconName.indexOf(key.trim()) > -1;
+        const filter = (iconName) => iconName.toUpperCase().indexOf(key.trim().toUpperCase()) > -1;
         const icons = ALL_ICONS.filter(filter);
         this.setState({
             icons
