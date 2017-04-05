@@ -19,11 +19,11 @@ const codeRenderer = function (code, lang) {
     return `<div class="doc-highlight"><pre><code class="${lang || ''}">${hlCode}</code></pre></div>`;
 };
 
-var renderer = new marked.Renderer();
+const renderer = new marked.Renderer();
 
 renderer.code = codeRenderer;
 
-var plugins = [
+const plugins = [
     new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
@@ -58,6 +58,9 @@ if (process.env.NODE_ENV === 'production') {
     plugins.push(new webpack.BannerPlugin(`Last update: ${new Date().toString()}`));
 }
 
+//remove style file  comment
+const lessLoaderQuery = JSON.stringify({ discardComments: { removeAll: true } });
+
 module.exports = {
     entry: {
         index: './src/index',
@@ -78,7 +81,7 @@ module.exports = {
                 exclude: /node_modules/
             }, {
                 test: /\.(less|css)$/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader')
+                loader: ExtractTextPlugin.extract('style-loader', `css-loader!less-loader?${lessLoaderQuery}`)
             }, {
                 test: /\.md$/,
                 loader: 'html!markdown'
