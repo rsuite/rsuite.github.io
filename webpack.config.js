@@ -1,103 +1,142 @@
-var path = require('path');
-var webpack = require('webpack');
-var marked = require('marked');
-var hl = require('highlight.js');
-
-const pkg = require('./package.json');
-
+const path = require('path');
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
+const markdownLoader = require('markdownloader').renderer;
 
-const codeRenderer = function (code, lang) {
-    lang = lang === 'js' ? 'javascript' : lang;
-    if (lang === 'html') {
-        lang = 'xml';
-    }
-
-    var hlCode = lang ? hl.highlight(lang, code).value : hl.highlightAuto(code).value;
-
-    return `<div class="doc-highlight"><pre><code class="${lang || ''}">${hlCode}</code></pre></div>`;
-};
-
-const renderer = new marked.Renderer();
-
-renderer.code = codeRenderer;
-
+const { NODE_ENV } = process.env;
+const extractLess = new ExtractTextPlugin({
+    filename: '[contenthash].css',
+    disable: NODE_ENV === 'development'
+});
 const plugins = [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
     new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        'NODE_ENV': JSON.stringify(NODE_ENV)
     }),
-    new ExtractTextPlugin('[name].css'),
+    extractLess,
     new HtmlwebpackPlugin({
-        varsion: pkg.version,
         title: 'RSUITE | 一套 React 的 UI 组件库',
-        filename: '../index.html',
+        filename: (NODE_ENV === 'development' ? '' : '../') + 'index.html',
         template: 'src/index.html',
         inject: true,
         hash: true
-    }),
+    })
 ];
+const publicPath = NODE_ENV === 'development' ? '/' : './assets/';
 
-const output = {
-    path: path.join(__dirname, 'assets'),
-    filename: '[name].bundle.js'
-}
-
-if (process.env.NODE_ENV === 'production') {
-
-    plugins.push(new webpack.optimize.CommonsChunkPlugin({
-        names: ['vendor']
-    }));
-
-    plugins.push(new webpack.optimize.UglifyJsPlugin({
-        compress: {
-            warnings: false
-        }
-    }));
-
+if (NODE_ENV === 'production') {
+    plugins.push(new webpack.optimize.UglifyJsPlugin());
     plugins.push(new webpack.BannerPlugin(`Last update: ${new Date().toString()}`));
 }
 
-//remove style file  comment
-const lessLoaderQuery = JSON.stringify({ discardComments: { removeAll: true } });
-
-module.exports = {
-    entry: {
-        index: './src/index',
-        vendor: ['react', 'react-router', 'react-dom', 'lodash', 'classnames', 'dom-lib', 'codemirror']
+const common = {
+    entry: path.resolve(__dirname, 'src/'),
+    devServer: {
+        hot: true,
+        contentBase: path.resolve(__dirname, ''),
+        publicPath: '/',
     },
-    output,
-    node: {
-        fs: 'empty'
+    output: {
+        path: path.resolve(__dirname, 'assets'),
+        filename: 'bundle.js',
+        publicPath
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
-                loaders: [
-                    'transform/cacheable?brfs',
-                    'babel?babelrc'
+                use: [
+                    'transform-loader/cacheable?brfs',
+                    'babel-loader?babelrc'
                 ],
                 exclude: /node_modules/
-            }, {
+            },
+            {
                 test: /\.(less|css)$/,
-                loader: ExtractTextPlugin.extract('style-loader', `css-loader!less-loader?${lessLoaderQuery}`)
-            }, {
+                loader: extractLess.extract({
+                    use: [
+                        {
+                            loader: 'css-loader',
+                            options: {
+                                minimize: NODE_ENV === 'production'
+                            }
+                        }, {
+                            loader: 'less-loader',
+                            options: {
+                                //remove style file  annotation
+                                discardComments: { removeAll: NODE_ENV === 'production' }
+                            }
+                        }
+                    ],
+                    // use style-loader in development
+                    fallback: 'style-loader?{attrs:{prop: "value"}}'
+                })
+            },
+            {
                 test: /\.md$/,
-                loader: 'html!markdown'
-            }, {
+                use: [
+                    {
+                        loader: 'html-loader'
+                    },
+                    {
+                        loader: 'markdown-loader',
+                        options: {
+                            pedantic: true,
+                            renderer: markdownLoader.renderer
+                        }
+                    }
+                ]
+            },
+            {
                 test: /\.(jpg|png)$/,
                 //`publicPath`  only use to assign assets path in build
-                loader: 'url?limit=8192&publicPath=./assets/'
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8192,
+                            publicPath
+                        }
+                    }
+                ]
             },
             {
                 test: /\.(woff|woff2|eot|ttf|svg)($|\?)/,
-                loader: 'url?limit=1&hash=sha512&digest=hex&size=16&name=resources/[hash].[ext]'
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 1,
+                            size: 16,
+                            hash: 'sha512',
+                            digest: 'hex',
+                            name: 'resources/[hash].[ext]',
+                            publicPath: NODE_ENV === 'development' ? '/' : './'
+                        }
+                    }
+                ]
             }
         ]
     },
-    plugins: plugins,
-    markdownLoader: {
-        renderer: renderer
+    plugins: plugins
+};
+
+module.exports = () => {
+    if (NODE_ENV === 'development') {
+        return Object.assign({}, common, {
+            entry: [
+                'react-hot-loader/patch',
+                'webpack-dev-server/client?http://127.0.0.1:3200',
+                'webpack/hot/only-dev-server',
+                path.resolve(__dirname, 'src/index')
+            ],
+            devtool: 'source-map'
+        });
     }
+
+    return Object.assign({}, common, {
+        entry: path.resolve(__dirname, 'src/index')
+    });
 };
