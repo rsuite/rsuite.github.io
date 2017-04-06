@@ -13,6 +13,8 @@
 - 支持 ie9+、chrome 、firefox 等各种主流浏览器
 - 提供开放的定制需求，包括但不仅限于色系、圆角、边框、阴影和组件的视觉定制。
 
+<image src="http://rsuite.github.io/resources/images/rsuite-preview.png" class="rsuite-theme-preview"/>
+
 **项目地址**
 
 [https://github.com/rsuite/rsuite-theme](https://github.com/rsuite/rsuite-theme)
