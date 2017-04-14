@@ -51,9 +51,11 @@ const App = React.createClass({
 export const NameCell = ({ rowData, dataKey, ...props }) => {
     return (
         <RSTable.Cell  {...props}>
-            <i className={rowData.icon}></i>
-            {' '}
-            <label>{rowData.name}</label>
+            <a target="_blank" href={rowData.url} >
+                <i className={rowData.icon}></i>
+                {' '}
+                <label>{rowData.name}</label>
+            </a>
         </RSTable.Cell>
     );
 };

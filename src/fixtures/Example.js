@@ -8,7 +8,6 @@ import 'codemirror/mode/javascript/javascript';
 import 'codemirror/addon/runmode/runmode';
 import 'codemirror/mode/jsx/jsx';
 
-
 import * as RSTable from 'rsuite-table';
 import * as RForm  from 'rsuite-form';
 import * as Schema from 'rsuite-schema';
@@ -19,11 +18,8 @@ const SchemaModel = Schema.SchemaModel;
 const StringType = Schema.StringType;
 const ArrayType = Schema.ArrayType;
 
-const tableData = require('../componentList').default;
+const tableData = require('../componentList');
 
-
-
-// Buttons
 const Button = require('rsuite/lib/Button').default;
 const ButtonToolbar = require('rsuite/lib/ButtonToolbar').default;
 const Dropdown = require('rsuite/lib/Dropdown').default;

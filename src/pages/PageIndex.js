@@ -17,12 +17,12 @@ const PageIndex = React.createClass({
         addStyle(indexContent, 'margin-top', (height < 0 ? 0 : height) + 'px');
     },
 
-    getInitialState(){
+    getInitialState() {
         return {
             data
         };
     },
-    fetchGithubData(){
+    fetchGithubData() {
         let { data } = this.state;
         fetchJsonp('https://api.github.com/users/rsuite/repos').then((resp) => {
             if (resp.ok) {
@@ -48,7 +48,7 @@ const PageIndex = React.createClass({
             }
         });
     },
-    componentWillMount(){
+    componentWillMount() {
         this.fetchGithubData();
     },
     componentDidMount() {
@@ -67,7 +67,7 @@ const PageIndex = React.createClass({
             <div>
                 <Banner id="banner">
                     <h1 className="logo">
-                        <img src="resources/images/logo.png" height={42}/>
+                        <img src="resources/images/logo.png" height={42} />
                     </h1>
                     <p className="sub-title">一套 React 的 UI 组件库</p>
                     <div className="nav">
@@ -84,7 +84,7 @@ const PageIndex = React.createClass({
                             data.map((info, key) => {
 
                                 return (
-                                    <IntroPanel key={key} {...info}/>
+                                    <IntroPanel key={key} {...info} />
                                 );
                             })
                         }
