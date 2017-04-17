@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import classNames from 'classnames';
-import { Link } from 'react-router';
 import CodeEditor from './CodeEditor';
 
 import 'codemirror/mode/javascript/javascript';
@@ -9,17 +8,18 @@ import 'codemirror/addon/runmode/runmode';
 import 'codemirror/mode/jsx/jsx';
 
 import * as RSTable from 'rsuite-table';
-import * as RForm  from 'rsuite-form';
+import * as RForm from 'rsuite-form';
 import * as Schema from 'rsuite-schema';
+
+
 
 const RSuiteForm = RForm.Form;
 const Field = RForm.Field;
 const SchemaModel = Schema.SchemaModel;
 const StringType = Schema.StringType;
 const ArrayType = Schema.ArrayType;
-
+const Link = require('react-router').Link;
 const tableData = require('../componentList');
-
 const Button = require('rsuite/lib/Button').default;
 const ButtonToolbar = require('rsuite/lib/ButtonToolbar').default;
 const Dropdown = require('rsuite/lib/Dropdown').default;
@@ -126,7 +126,7 @@ const Example = React.createClass({
             <div>{this._initialExample}</div>
         );
         return (
-            <div className={classNames('doc-example', this.props.exampleClassName) }>
+            <div className={classNames('doc-example', this.props.exampleClassName)}>
                 {example}
             </div>
         );
@@ -136,9 +136,9 @@ const Example = React.createClass({
 
         if (this.props.isBanner) {
             return (
-                <Col id={this.props.id} className="banner"  xsHidden>
+                <Col id={this.props.id} className="banner" xsHidden>
                     <div className="triangle-left ">
-                        {this.renderExample() }
+                        {this.renderExample()}
                     </div>
                     <div className="container">
                         {this.props.children}
@@ -150,7 +150,7 @@ const Example = React.createClass({
                                 className='doc-code'
                                 theme='base16-dark'
                                 code={this.state.code}
-                                />
+                            />
                         </div>
                     </div>
                 </Col>
@@ -159,14 +159,14 @@ const Example = React.createClass({
 
         return (
             <div className='doc-example-wrapper'>
-                {this.renderExample() }
+                {this.renderExample()}
                 <CodeEditor
                     key='jsx'
                     onChange={this.handleCodeChange}
                     className='doc-code'
                     theme='base16-light'
                     code={this.state.code}
-                    />
+                />
             </div>
         );
     }

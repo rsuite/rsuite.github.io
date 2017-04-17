@@ -1,13 +1,13 @@
 var instance = (
     <Breadcrumb>
-        <Breadcrumb.Item href="#">
+        <Breadcrumb.Item componentClass={Link} to="/">
             Home
         </Breadcrumb.Item>
-        <Breadcrumb.Item href="#">
-            Library
+        <Breadcrumb.Item componentClass={Link} to="/components">
+            Components
         </Breadcrumb.Item>
         <Breadcrumb.Item active>
-            Data
+            Breadcrumb
         </Breadcrumb.Item>
     </Breadcrumb>
 );
