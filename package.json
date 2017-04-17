@@ -1,5 +1,5 @@
 {
-  "name": "rsuite1",
+  "name": "rsuite",
   "version": "0.0.20",
   "description": "RSuite components built with React",
   "main": "lib/index.js",
