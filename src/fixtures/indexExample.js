@@ -3,14 +3,13 @@
  * 并致力于改善前端工程师的开发体验。
  *
  * ☐ 待开发：
- * rsuite-notification  rsuite-switch      rsuite-steps    rsuite-progress
- * rsuite-timepicker    rsuite-clipboard   rsuite-anchor
+ * rsuite-notification  rsuite-switch      rsuite-anchor    rsuite-progress
  *
  * ☑︎ 已完成：
- * rsuite-autocomplete  rsuite-affix       rsuite-slider   rsuite-tree
+ * rsuite               rsuite-affix       rsuite-slider   rsuite-tree
  * rsuite-uploader      rsuite-echarts     rsuite-picker   rsuite-datepangepicker
- * rsuite-datepicker    rsuite-table       rsuite-theme    rsuite
- *
+ * rsuite-datepicker    rsuite-table       rsuite-theme    rsuite-autocomplete
+ * rsuite-clipboard     rsuite-steps
  */
 
 const App = React.createClass({

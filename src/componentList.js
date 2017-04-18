@@ -105,6 +105,15 @@ export default [
         name: 'RSuite Clipboard',
         intro: '复制到剪切板',
         src: 'https://github.com/rsuite/rsuite-clipboard'
+    },
+    {
+        icon: 'icon icon-check-circle-o',
+        bg: '#00bcd4',
+        repoName: 'rsuite-steps',
+        url: 'https://rsuite.github.io/rsuite-steps',
+        name: 'RSuite Steps',
+        intro: '步骤条，是一个步骤提示组件，可以在步骤繁杂的操作中引导用户',
+        src: 'https://github.com/rsuite/rsuite-steps'
     }
 
 ];
