@@ -114,6 +114,14 @@ export default [
         name: 'RSuite Steps',
         intro: '步骤条，是一个步骤提示组件，可以在步骤繁杂的操作中引导用户',
         src: 'https://github.com/rsuite/rsuite-steps'
+    },{
+        icon: 'icon icon-calculator',
+        bg: '#00ddff',
+        repoName: 'rsuite-inputnumber',
+        url: 'https://rsuite.github.io/rsuite-inputnumber',
+        name: 'RSuite InputNumber',
+        intro: '数字输入框，通过鼠标或键盘，输入范围内的数值',
+        src: 'https://github.com/rsuite/rsuite-inputnumber'
     }
 
 ];

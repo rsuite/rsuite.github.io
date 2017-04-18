@@ -27,7 +27,7 @@ const App = React.createClass({
                 </Header>
                 <div className="container">
                     <RSTable.Table
-                        height={500}
+                        height={600}
                         data={tableData}
                     >
                         <RSTable.Column width={200} fixed>
