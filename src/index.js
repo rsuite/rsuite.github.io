@@ -24,7 +24,7 @@ import PageExamples from './pages/PageExamples';
 import ready from './ready';
 
 const mountApp = (
-    <Router history={browserHistory} >
+    <Router history={hashHistory} >
 
         <Route path="/" component={App}>
             <IndexRoute component={PageIndex} />
