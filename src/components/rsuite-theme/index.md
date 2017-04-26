@@ -34,7 +34,7 @@
 
 ```less
 @import '~rsuite-theme/dist/less/rsuite';   // 引入官方提供的 less 样式入口文件
-@base-color:'#6292f0'; //修改主题颜色（更多变量，详见 *默认样式变量*）
+@base-color: #6292f0; //修改主题颜色（更多变量，详见 *默认样式变量*）
 ... //你自己的样式
 ```
 
