@@ -21,26 +21,87 @@
 
 **样式变量**
 
-`ruiste-theme` 的样式使用 [less](http://less.bootcss.com/) 作为开发语言，并定义了一系列全局 / 组件的样式变量，可以根据需求进行相应调整。
-- [默认样式变量](https://github.com/rsuite/rsuite-theme/blob/master/src/less/variables.less)
+`ruiste-theme` 的样式使用 [less](http://less.bootcss.com/) 作为开发语言，并定义了一系列全局 / 组件的样式变量，可以根据需求给相关的变量重新赋值。
+- [系统预定义变量][defalut-variables]
 
 
 ### 定制方式
 ----------
 
-#### 1.引用 less 文件
-用 `less` 文件进行变量覆盖。
-建立一个单独的 `less` 文件如下，再引入这个文件。
-
+#### 1.引用 less 文件 (**推荐**)
+新建一个文件`main.less`。
 ```less
-@import '~rsuite-theme/dist/less/rsuite';   // 引入官方提供的 less 样式入口文件
-@base-color: #6292f0; //修改主题颜色（更多变量，详见 *默认样式变量*）
-... //你自己的样式
+// 引入组件样式
+//@import "~rsuite-picker/lib/less/index"; 
+// 引入ruiste 样式
+@import "~rsuite-theme/dist/less/rsuite";
+@base-color: #6292f0; //修改主题颜色
+//你自己的样式
+//... 
+```
+> 引入`rsuite`样式文件后，即可使用所有[系统预定义变量][defalut-variables]。</br>
+> 如需引入其他组件样式文件时请 **务必保证**  `rsuite` 样式文件在最后引入，否则可能会造成配色无效。
+
+新建`index.js`文件，并使用`webpack`进行打包。
+
+```javascript
+import React from 'react';
+import { Header, Navbar } from 'rsuite';
+import 'main.less';
+import { render } from 'react-dom';
+
+const App = ()=>{
+    return (
+        <div className="doc-page">
+            <Header inverse>
+                <div className="container">
+                    <Navbar.Header>
+                        <Navbar.Brand>
+                            <a href="#"><span className="prefix">R</span>Suite</a>
+                        </Navbar.Brand>
+                        <Navbar.Toggle />
+                    </Navbar.Header>
+                   
+                </div>
+            </Header>
+
+            <div className="container">
+                <h1 className="page-header">
+                    Hello Word!
+                </h1>
+                <Home/>
+            </div>
+        </div>
+    )
+}
+render(App, document.getElementById('root'));
+```
+
+新建`index.html`文件，查看效果。
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RSuite</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="//cdn.bootcss.com/babel-standalone/6.15.0/babel.min.js"></script>
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+
+</html>
+
 ```
 
 <br><br>
 
-#### 2. cli 工具使用
+#### 2. cli 工具使用（适用于多套主题的情况）
 
 安装
 
@@ -92,7 +153,7 @@ rsuite-theme -h
 ```
 <br><br>
 
-#### 3. node 模块方式使用
+#### 3. node 模块方式使用（适用于多套主题的情况）
 创建文件 `css-build.js`
 ```javascript
 
@@ -125,3 +186,7 @@ Object.keys(themes).forEach((key) => {
 ```bash
 node css-build.js
 ```
+
+
+
+[defalut-variables]:https://github.com/rsuite/rsuite-theme/blob/master/src/less/variables.less
