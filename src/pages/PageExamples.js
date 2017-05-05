@@ -10,7 +10,7 @@ import examplePreview from '../../resources/images/example-preview.png';
 const data = [
     {
         thumb: examplePreview,
-        url: 'http://rsuite.github.io/examples/webpack-rudux-router',
+        url: 'https://rsuitejs.com/examples/webpack-rudux-router',
         intro: 'webpack + react + react-router + redux',
         name: 'RSuite Example',
         src: 'https://github.com/rsuite/rsuite/tree/master/examples/webpack-rudux-router'

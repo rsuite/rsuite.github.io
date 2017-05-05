@@ -3,7 +3,7 @@ export default [
         icon: 'icon icon-briefcase',
         bg: '#6292f0',
         repoName: 'rsuite',
-        url: 'http://rsuite.github.io/#/components',
+        url: 'https://rsuitejs.com/#/components',
         name: 'Basis Components',
         intro: '基础组件',
         src: 'https://github.com/rsuite/rsuite'
@@ -11,7 +11,7 @@ export default [
         icon: 'icon icon-table',
         bg: '#004889',
         repoName: 'rsuite-table',
-        url: 'http://rsuite.github.io/rsuite-table',
+        url: 'https://rsuitejs.com/rsuite-table',
         name: 'RSuite Table',
         intro: 'Table 组件，支持Tree，自定义列宽，锁定列及表头等功能',
         src: 'https://github.com/rsuite/rsuite-table'
@@ -20,7 +20,7 @@ export default [
         icon: 'icon icon-calendar-check-o',
         bg: '#d3555a',
         repoName: 'rsuite-datepicker',
-        url: 'http://rsuite.github.io/rsuite-datepicker',
+        url: 'https://rsuitejs.com/rsuite-datepicker',
         name: 'RSuite DatePicker',
         intro: '日历选择组件',
         src: 'https://github.com/rsuite/rsuite-datepicker'
@@ -29,7 +29,7 @@ export default [
         icon: 'icon icon-calendar-minus-o',
         bg: '#a50006',
         repoName: 'rsuite-daterangepicker',
-        url: 'http://rsuite.github.io/rsuite-daterangepicker',
+        url: 'https://rsuitejs.com/rsuite-daterangepicker',
         name: 'RSuite DateRangePicker',
         intro: '日历范围选择组件',
         src: 'https://github.com/rsuite/rsuite-daterangepicker'
@@ -38,7 +38,7 @@ export default [
         icon: 'icon icon-check',
         bg: '#ff9800',
         repoName: 'rsuite-picker',
-        url: 'http://rsuite.github.io/rsuite-picker',
+        url: 'https://rsuitejs.com/rsuite-picker',
         name: 'RSuite Picker',
         intro: '选择组件，可以替代 Select 和 Dropdown 组件',
         src: 'https://github.com/rsuite/rsuite-picker'
@@ -47,7 +47,7 @@ export default [
         icon: 'icon icon-bar-chart',
         bg: '#990066',
         repoName: 'rsuite-echarts',
-        url: 'http://rsuite.github.io/rsuite-echarts',
+        url: 'https://rsuitejs.com/rsuite-echarts',
         name: 'RSuite ECharts',
         intro: 'ECharts 的 React 组件',
         src: 'https://github.com/rsuite/rsuite-echarts'
@@ -56,7 +56,7 @@ export default [
         icon: 'icon icon-cloud-upload',
         bg: '#5677AC',
         repoName: 'rsuite-uploader',
-        url: 'http://rsuite.github.io/rsuite-uploader',
+        url: 'https://rsuitejs.com/rsuite-uploader',
         name: 'RSuite Uploader',
         intro: '上传文件组件',
         src: 'https://github.com/rsuite/rsuite-uploader'
@@ -65,7 +65,7 @@ export default [
         icon: 'icon icon-sitemap',
         bg: '#29a7e1',
         repoName: 'rsuite-tree',
-        url: 'http://rsuite.github.io/rsuite-tree',
+        url: 'https://rsuitejs.com/rsuite-tree',
         name: 'RSuite Tree',
         intro: '树型组件，支持选择，支持树节点拖拽',
         src: 'https://github.com/rsuite/rsuite-tree'
@@ -74,7 +74,7 @@ export default [
         icon: 'icon icon-sliders',
         bg: '#00d09d',
         repoName: 'rsuite-slider',
-        url: 'http://rsuite.github.io/rsuite-slider',
+        url: 'https://rsuitejs.com/rsuite-slider',
         name: 'RSuite Slider',
         intro: '滑动输入条，用于在数值区间选择',
         src: 'https://github.com/rsuite/rsuite-slider'
@@ -83,7 +83,7 @@ export default [
         icon: 'icon icon-thumb-tack',
         bg: '#464c5b',
         repoName: 'rsuite-affix',
-        url: 'http://rsuite.github.io/rsuite-affix',
+        url: 'https://rsuitejs.com/rsuite-affix',
         name: 'RSuite Affix',
         intro: '固钉，将页面元素钉在可视范围',
         src: 'https://github.com/rsuite/rsuite-affix'

@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { scrollTop, on } from 'dom-lib';
 import { Router, Route, Link } from 'react-router';
 import { Header, Navbar, Nav } from 'rsuite';
-
+import logo from '../../resources/images/logo.png';
 
 
 const NAV_LINKS = [
@@ -19,7 +19,9 @@ const NAV_LINKS = [
     }, {
         link: '/examples',
         title: '实践'
-    }];
+}];
+
+
 
 const DocHeader = React.createClass({
     propTypes: {
@@ -77,14 +79,12 @@ const DocHeader = React.createClass({
                 <div className="container">
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <a href="#"><img  height={32} src='resources/images/logo.png' /></a>
+                            <a href="#"><img  height={32} src={logo} /></a>
                         </Navbar.Brand>
                         <Navbar.Toggle />
                     </Navbar.Header>
                     <Navbar.Collapse>
-                        <Nav>
 
-                        </Nav>
                         <Nav pullRight>
                             {links}
                             <Nav.Item href="https://github.com/rsuite/rsuite">GitHub</Nav.Item>

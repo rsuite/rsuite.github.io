@@ -24,7 +24,7 @@ const plugins = [
         hash: true
     })
 ];
-const publicPath = NODE_ENV === 'development' ? '/' : './assets/';
+const publicPath = NODE_ENV === 'development' ? '/' : '/assets/';
 
 if (NODE_ENV === 'production') {
     plugins.push(new webpack.optimize.UglifyJsPlugin());

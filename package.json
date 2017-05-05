@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server -d --watch --inline --history-api-fallback --progress --colors --port 3200 --host 0.0.0.0 ",
-    "build": "rm -rf assets &&  NODE_ENV=production webpack --progress --colors ",
+    "build": "rm -rf assets &&  NODE_ENV=production webpack --progress --colors && babel-node deploy.js",
     "test": "karma start"
   },
   "keywords": [
@@ -85,7 +85,7 @@
     "rsuite-clipboard": "^1.1.0",
     "rsuite-form": "0.1.18",
     "rsuite-schema": "0.0.3",
-    "rsuite-theme": "0.3.31",
+    "rsuite-theme": "0.3.32",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0",
     "style-loader": "^0.13.1",

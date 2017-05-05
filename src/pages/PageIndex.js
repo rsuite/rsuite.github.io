@@ -67,7 +67,7 @@ const PageIndex = React.createClass({
             <div>
                 <Banner id="banner">
                     <h1 className="logo">
-                        <img src="resources/images/logo.png" height={42} />
+                        <img src="/resources/images/logo.png" height={42} />
                     </h1>
                     <p className="sub-title">一套 React 的 UI 组件库</p>
                     <div className="nav">
