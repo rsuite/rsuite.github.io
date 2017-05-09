@@ -24,16 +24,16 @@ import PageExamples from './pages/PageExamples';
 import ready from './ready';
 
 const mountApp = (
-    <Router history={browserHistory} >
+    <Router history={process.env.NODE_ENV === 'production' ? browserHistory : hashHistory}>
 
         <Route path="/" component={App}>
-            <IndexRoute component={PageIndex} />
-            <Route path="getting-started" component={PageGettingStarted} />
-            <Route path="examples" component={PageExamples} />
+            <IndexRoute component={PageIndex}/>
+            <Route path="getting-started" component={PageGettingStarted}/>
+            <Route path="examples" component={PageExamples}/>
 
             <Route path="components" component={PageComponents}>
-                <Route path=":name" component={PageComponentsDoc} />
-                <IndexRedirect to="buttons" />
+                <Route path=":name" component={PageComponentsDoc}/>
+                <IndexRedirect to="buttons"/>
             </Route>
         </Route>
 

@@ -1,8 +1,10 @@
 const path = require('path');
+const fs = require('fs');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
 const markdownLoader = require('markdownloader').renderer;
+const hotJarTraking = fs.readFileSync('./src/hotjar-tracking.html', 'utf-8');
 
 const { NODE_ENV } = process.env;
 const extractLess = new ExtractTextPlugin({
@@ -20,6 +22,7 @@ const plugins = [
         title: 'RSUITE | 一套 React 的 UI 组件库',
         filename: (NODE_ENV === 'development' ? '' : '../') + 'index.html',
         template: 'src/index.html',
+        hotjarTraking: NODE_ENV === 'production' ? hotJarTraking : '',
         inject: true,
         hash: true
     })
@@ -35,7 +38,6 @@ const common = {
     entry: path.resolve(__dirname, 'src/'),
     devServer: {
         hot: true,
-        contentBase: path.resolve(__dirname, ''),
         publicPath: '/',
     },
     output: {
