@@ -23,8 +23,9 @@ import PageExamples from './pages/PageExamples';
 
 import ready from './ready';
 
+const history = process.env.NODE_ENV === 'production' ? browserHistory : hashHistory;
 const mountApp = (
-    <Router history={process.env.NODE_ENV === 'production' ? browserHistory : hashHistory}>
+    <Router history={history}>
 
         <Route path="/" component={App}>
             <IndexRoute component={PageIndex}/>
