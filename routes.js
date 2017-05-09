@@ -5,9 +5,6 @@ componentMenu.forEach(item => {
     components.push(...item.components.map(c => c.id));
 });
 
-console.log(components);
-
-
 const routes = [
     'getting-started',
     'examples',

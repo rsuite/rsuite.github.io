@@ -122,6 +122,14 @@ export default [
         name: 'RSuite InputNumber',
         intro: '数字输入框，通过鼠标或键盘，输入范围内的数值',
         src: 'https://github.com/rsuite/rsuite-inputnumber'
+    },{
+        icon: 'icon icon-bookmark',
+        bg: '#ca565e',
+        repoName: 'rsuite-tag',
+        url: 'https://github.com/rsuite/rsuite-tag',
+        name: 'RSuite Tag',
+        intro: '对不同维度进行标记和分类的小标签。',
+        src: 'https://github.com/rsuite/rsuite-tag'
     }
 
 ];
