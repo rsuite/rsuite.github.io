@@ -130,6 +130,16 @@ export default [
         name: 'RSuite Tag',
         intro: '对不同维度进行标记和分类的小标签。',
         src: 'https://github.com/rsuite/rsuite-tag'
+    },{
+        icon: 'icon icon-order-form',
+        bg: '#004889',
+        repoName: 'form-lib',
+        url: 'https://rsuitejs.com/form-lib',
+        name: 'form-lib',
+        intro: 'React 实现的 Form 组件',
+        src: 'https://github.com/rsuite/form-lib'
     }
 
 ];
+
+

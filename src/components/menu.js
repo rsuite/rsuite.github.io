@@ -95,10 +95,6 @@ export default [
                 id: 'formLayout',
                 name: 'Form layout',
                 title: '表单布局'
-            }, {
-                id: 'validate',
-                name: 'Validate',
-                title: '表单验证'
             }
         ]
     }, {
