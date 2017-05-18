@@ -19,43 +19,43 @@ var formLayoutInstance = (
 
         <FormGroup controlId='radioList'>
             <Col md={2} componentClass={ControlLabel} >
-                RadioList
+                RadioGroup
             </Col>
             <Col md={10}>
-                 <RadioList name="radioList">
+                 <RadioGroup name="radioList">
                     <Radio checked>Item A</Radio>
                     <Radio>Item B</Radio>
                     <Radio>Item C</Radio>
                     <Radio disabled>Item D</Radio>
-                </RadioList>
+                </RadioGroup>
             </Col>
         </FormGroup>
 
         <FormGroup controlId='radioList'>
             <Col md={2} componentClass={ControlLabel} >
-                RadioList
+                RadioGroup
             </Col>
             <Col md={10}>
-                 <RadioList name="radioList" inline>
+                 <RadioGroup name="radioList" inline>
                     <Radio checked>Item A</Radio>
                     <Radio>Item B</Radio>
                     <Radio>Item C</Radio>
                     <Radio disabled>Item D</Radio>
-                </RadioList>
+                </RadioGroup>
             </Col>
         </FormGroup>
 
         <FormGroup controlId='checkboxList'>
             <Col md={2} componentClass={ControlLabel} >
-                CheckboxList
+                CheckboxGroup
             </Col>
             <Col md={10}>
-                 <CheckboxList name="checkboxList" inline>
+                 <CheckboxGroup name="checkboxList" inline>
                     <Checkbox checked>Item A</Checkbox>
                     <Checkbox>Item B</Checkbox>
                     <Checkbox>Item C</Checkbox>
                     <Checkbox disabled>Item D</Checkbox>
-                </CheckboxList>
+                </CheckboxGroup>
             </Col>
         </FormGroup>
 

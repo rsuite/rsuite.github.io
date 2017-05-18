@@ -49,13 +49,13 @@ const ControlLabel = require('rsuite/lib/ControlLabel').default;
 const FormControl = require('rsuite/lib/FormControl').default;
 const HelpBlock = require('rsuite/lib/HelpBlock').default;
 const Checkbox = require('rsuite/lib/Checkbox').default;
-const CheckboxList = require('rsuite/lib/CheckboxList').default;
+const CheckboxGroup = require('rsuite/lib/CheckboxGroup').default;
 const InputGroup = require('rsuite/lib/InputGroup').default;
 const TextList = require('rsuite/lib/TextList').default;
 
 
 const Radio = require('rsuite/lib/Radio').default;
-const RadioList = require('rsuite/lib/RadioList').default;
+const RadioGroup = require('rsuite/lib/RadioGroup').default;
 const IconFont = require('rsuite/lib/IconFont').default;
 
 //Layout

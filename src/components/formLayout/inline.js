@@ -10,11 +10,11 @@ var formLayoutInstance = (
         </FormGroup>
 
         <FormGroup controlId='checkboxList'>
-            <ControlLabel>CheckboxList</ControlLabel>
-            <CheckboxList name="checkboxList" inline>
+            <ControlLabel>CheckboxGroup</ControlLabel>
+            <CheckboxGroup name="checkboxList" inline>
                 <Checkbox checked>Item A</Checkbox>
                 <Checkbox>Item B</Checkbox>
-            </CheckboxList>
+            </CheckboxGroup>
         </FormGroup>
 
         <Button type="submit" shape="default">

@@ -61,11 +61,11 @@ const FormDemo = React.createClass({
                     <Field name="radioList" >
                         <FormGroup>
                             <ControlLabel>radioList</ControlLabel>
-                            <RadioList name="radioList">
+                            <RadioGroup name="radioList">
                                 <Radio value="A">Item A</Radio>
                                 <Radio value="B">Item B</Radio>
                                 <Radio value="C">Item C</Radio>
-                            </RadioList>
+                            </RadioGroup>
                             <HelpBlock></HelpBlock>
                         </FormGroup>
                     </Field>
@@ -74,12 +74,12 @@ const FormDemo = React.createClass({
 
                     <Field name="checkboxList" >
                         <FormGroup>
-                            <ControlLabel>CheckboxList</ControlLabel>
-                            <CheckboxList name="radioList">
+                            <ControlLabel>CheckboxGroup</ControlLabel>
+                            <CheckboxGroup name="radioList">
                                 <Checkbox value="A">Item A</Checkbox>
                                 <Checkbox value="B">Item B</Checkbox>
                                 <Checkbox value="C">Item C</Checkbox>
-                            </CheckboxList>
+                            </CheckboxGroup>
                             <HelpBlock></HelpBlock>
                         </FormGroup>
                     </Field>

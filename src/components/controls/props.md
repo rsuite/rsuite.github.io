@@ -33,7 +33,7 @@ checked  | boolean     |       |
 onClick  | function    |       |
 onChange | function    |       |
 
-# CheckboxList、RadioList
+# CheckboxGroup、RadioGroup
 
 性名称    | 类型      | 默认值   | 描述
 ------ | ------- | ----- | --

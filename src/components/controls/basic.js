@@ -42,44 +42,44 @@ var instance = (
         </FormGroup>
 
         <FormGroup controlId='checkboxList'>
-            <ControlLabel>CheckboxList</ControlLabel>
-            <CheckboxList name="checkboxList">
+            <ControlLabel>CheckboxGroup</ControlLabel>
+            <CheckboxGroup name="checkboxList">
                 <Checkbox checked>Item A</Checkbox>
                 <Checkbox>Item B</Checkbox>
                 <Checkbox>Item C</Checkbox>
                 <Checkbox disabled>Item D</Checkbox>
-            </CheckboxList>
+            </CheckboxGroup>
         </FormGroup>
 
         <FormGroup controlId='radioList'>
-            <ControlLabel>RadioList</ControlLabel>
-            <RadioList name="radioList" value="C">
+            <ControlLabel>RadioGroup</ControlLabel>
+            <RadioGroup name="radioList" value="C">
                 <Radio value="A">Item A</Radio>
                 <Radio value="B">Item B</Radio>
                 <Radio value="C">Item C</Radio>
                 <Radio value="D" disabled>Item D</Radio>
-            </RadioList>
+            </RadioGroup>
         </FormGroup>
 
 
         <FormGroup controlId='checkboxList' >
-            <ControlLabel>CheckboxList inline</ControlLabel>
-            <CheckboxList name="checkboxList" inline>
+            <ControlLabel>CheckboxGroup inline</ControlLabel>
+            <CheckboxGroup name="checkboxList" inline>
                 <Checkbox checked>Item A</Checkbox>
                 <Checkbox>Item B</Checkbox>
                 <Checkbox>Item C</Checkbox>
                 <Checkbox disabled>Item D</Checkbox>
-            </CheckboxList>
+            </CheckboxGroup>
         </FormGroup>
 
         <FormGroup controlId='radioList'>
-            <ControlLabel>RadioList inline</ControlLabel>
-            <RadioList name="radioList" value="C" inline>
+            <ControlLabel>RadioGroup inline</ControlLabel>
+            <RadioGroup name="radioList" value="C" inline>
                 <Radio value="A">Item A</Radio>
                 <Radio value="B">Item B</Radio>
                 <Radio value="C">Item C</Radio>
                 <Radio value="D" disabled>Item D</Radio>
-            </RadioList>
+            </RadioGroup>
         </FormGroup>
     </Form>
 );
