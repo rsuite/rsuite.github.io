@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server -d --watch --inline --history-api-fallback --progress --colors --port 3200 --host 0.0.0.0 ",
     "build": "rm -rf assets &&  NODE_ENV=production webpack --progress --colors && babel-node deploy.js",
-    "dll":"webpack --config webpack.dll.config.js",
+    "dll": "webpack --config webpack.dll.config.js",
     "test": "karma start"
   },
   "keywords": [
@@ -48,6 +48,7 @@
     "child-process-promise": "^2.0.2",
     "codemirror": "^5.15.2",
     "colors": "^1.1.2",
+    "compression-webpack-plugin": "^0.4.0",
     "css-loader": "^0.23.1",
     "es3ify-loader": "^0.2.0",
     "eslint": "^2.8.0",
