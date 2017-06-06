@@ -8,56 +8,54 @@ import dashboardPreview from '../../resources/images/dashboard-preview.png';
 import examplePreview from '../../resources/images/example-preview.png';
 
 const data = [
-    {
-        thumb: examplePreview,
-        url: 'https://rsuitejs.com/rsuite-example-admin/',
-        intro: 'webpack + react + react-router + redux',
-        name: 'RSuite Example',
-        src: 'https://github.com/rsuite/rsuite/tree/master/examples/webpack-rudux-router'
-    },
-    {
-        thumb: dmpPreview,
-        url: 'http://www.hypers.com/products/hyper-dmp/',
-        intro: '帮助广告主或营销人员深度理解媒体投放效果。',
-        name: 'HYPER DMP',
-        src: 'http://www.hypers.com/products/hyper-dmp/'
-    },
-    {
-        thumb: dashboardPreview,
-        url: 'http://www.hypers.com/solution/',
-        intro: '聚合Hyper Data，予以最直观展现',
-        name: 'HYPER Dashboard',
-        src: 'http://www.hypers.com/solution/'
-    }
+  {
+    thumb: examplePreview,
+    url: 'https://rsuitejs.com/rsuite-example-admin/',
+    intro: 'webpack + react + react-router + redux',
+    name: 'RSuite Example',
+    src: 'https://github.com/rsuite/rsuite/tree/master/examples/webpack-rudux-router'
+  }, {
+    thumb: dmpPreview,
+    url: 'http://www.hypers.com/products/hyper-dmp/',
+    intro: '帮助广告主或营销人员深度理解媒体投放效果。',
+    name: 'HYPER DMP',
+    src: 'http://www.hypers.com/products/hyper-dmp/'
+  }, {
+    thumb: dashboardPreview,
+    url: 'http://www.hypers.com/solution/',
+    intro: '聚合Hyper Data，予以最直观展现',
+    name: 'HYPER Dashboard',
+    src: 'http://www.hypers.com/solution/'
+  }
 ];
 
 
 const PageExamples = React.createClass({
-    render() {
-        let introBlocks = data.map((info, key) => {
-            return (
-                <IntroBlock
-                    key={key}
-                    {...info}
-                />
-            );
-        });
+  render() {
+    let introBlocks = data.map((info, key) => {
+      return (
+        <IntroBlock
+          key={key}
+          {...info}
+        />
+      );
+    });
 
-        return (
-            <Content className='box-wrapper'>
-                <Row>
-                    <Col md={12}>
-                        <Markdown>
-                            {require('./examples.md')}
-                        </Markdown>
-                    </Col>
-                </Row>
-                <Row>
-                    {introBlocks}
-                </Row>
-            </Content>
-        );
-    }
+    return (
+      <Content className='box-wrapper'>
+        <Row>
+          <Col md={12}>
+            <Markdown>
+              {require('./examples.md')}
+            </Markdown>
+          </Col>
+        </Row>
+        <Row>
+          {introBlocks}
+        </Row>
+      </Content>
+    );
+  }
 });
 
 export default PageExamples;

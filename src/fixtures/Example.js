@@ -75,100 +75,100 @@ const Anchor = require('rsuite/lib/Anchor').default;
 
 
 const Example = React.createClass({
-    propTypes: {
-        code: React.PropTypes.string.isRequired,
-        renderCode: React.PropTypes.bool,
-        id: React.PropTypes.string,
-        isBanner: React.PropTypes.bool
-    },
-    getInitialState: function () {
-        return {
-            code: this.props.code
-        };
-    },
+  propTypes: {
+    code: React.PropTypes.string.isRequired,
+    renderCode: React.PropTypes.bool,
+    id: React.PropTypes.string,
+    isBanner: React.PropTypes.bool
+  },
+  getInitialState: function () {
+    return {
+      code: this.props.code
+    };
+  },
 
 
-    executeCode: function () {
+  executeCode: function () {
 
-        const mountNode = this.refs.example;
-        const originalRender = ReactDOM.render;
+    const mountNode = this.refs.example;
+    const originalRender = ReactDOM.render;
 
-        ReactDOM.render = (element) => this._initialExample = element;
+    ReactDOM.render = (element) => this._initialExample = element;
 
-        try {
+    try {
 
-            let code = Babel.transform(this.state.code, {
-                presets: ['stage-0', 'react', 'es2015']
-            }).code;
+      let code = Babel.transform(this.state.code, {
+        presets: ['stage-0', 'react', 'es2015']
+      }).code;
 
-            if (this.props.renderCode) {
-                ReactDOM.render(<CodeEditor code={code} readOnly={true} />, mountNode);
-            } else {
+      if (this.props.renderCode) {
+        ReactDOM.render(<CodeEditor code={code} readOnly={true} />, mountNode);
+      } else {
 
-                /* eslint-disable */
-                eval(code);
-                /* eslint-enable */
-            }
-        } catch (err) {
-            console.log(err);
-        } finally {
-            ReactDOM.render = originalRender;
-        }
-    },
-
-    handleCodeChange: function (val) {
-        this.setState({ code: val });
-        this.executeCode();
-    },
-    renderExample() {
-
-        let example = (
-            <div>{this._initialExample}</div>
-        );
-        return (
-            <div className={classNames('doc-example', this.props.exampleClassName)}>
-                {example}
-            </div>
-        );
-    },
-    render: function () {
-        this.executeCode();
-
-        if (this.props.isBanner) {
-            return (
-                <Col id={this.props.id} className="banner" xsHidden>
-                    <div className="triangle-left ">
-                        {this.renderExample()}
-                    </div>
-                    <div className="container">
-                        {this.props.children}
-                        <div className="typing-wrapper sublime">
-                            <div className="buttons"></div>
-                            <CodeEditor
-                                key='jsx'
-                                onChange={this.handleCodeChange}
-                                className='doc-code'
-                                theme='base16-dark'
-                                code={this.state.code}
-                            />
-                        </div>
-                    </div>
-                </Col>
-            );
-        }
-
-        return (
-            <div className='doc-example-wrapper'>
-                {this.renderExample()}
-                <CodeEditor
-                    key='jsx'
-                    onChange={this.handleCodeChange}
-                    className='doc-code'
-                    theme='base16-light'
-                    code={this.state.code}
-                />
-            </div>
-        );
+        /* eslint-disable */
+        eval(code);
+        /* eslint-enable */
+      }
+    } catch (err) {
+      console.log(err);
+    } finally {
+      ReactDOM.render = originalRender;
     }
+  },
+
+  handleCodeChange: function (val) {
+    this.setState({ code: val });
+    this.executeCode();
+  },
+  renderExample() {
+
+    let example = (
+      <div>{this._initialExample}</div>
+    );
+    return (
+      <div className={classNames('doc-example', this.props.exampleClassName)}>
+        {example}
+      </div>
+    );
+  },
+  render: function () {
+    this.executeCode();
+
+    if (this.props.isBanner) {
+      return (
+        <Col id={this.props.id} className="banner" xsHidden>
+          <div className="triangle-left ">
+            {this.renderExample()}
+          </div>
+          <div className="container">
+            {this.props.children}
+            <div className="typing-wrapper sublime">
+              <div className="buttons"></div>
+              <CodeEditor
+                key='jsx'
+                onChange={this.handleCodeChange}
+                className='doc-code'
+                theme='base16-dark'
+                code={this.state.code}
+              />
+            </div>
+          </div>
+        </Col>
+      );
+    }
+
+    return (
+      <div className='doc-example-wrapper'>
+        {this.renderExample()}
+        <CodeEditor
+          key='jsx'
+          onChange={this.handleCodeChange}
+          className='doc-code'
+          theme='base16-light'
+          code={this.state.code}
+        />
+      </div>
+    );
+  }
 });
 export default Example;

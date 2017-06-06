@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server -d --watch --inline --history-api-fallback --progress --colors --port 3200 --host 0.0.0.0 ",
     "build": "rm -rf assets &&  NODE_ENV=production webpack --progress --colors && babel-node deploy.js",
+    "dll":"webpack --config webpack.dll.config.js",
     "test": "karma start"
   },
   "keywords": [
@@ -35,6 +36,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.7.6",
+    "babel-eslint": "^7.2.3",
     "babel-loader": "^6.2.4",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-runtime": "^6.23.0",

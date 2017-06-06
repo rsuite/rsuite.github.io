@@ -5,34 +5,34 @@ import { Markdown } from '../../fixtures/Markdown';
 
 
 const examples = {
-    basic: require('fs').readFileSync(__dirname + '/basic.js', 'utf8')
+  basic: require('fs').readFileSync(__dirname + '/basic.js', 'utf8')
 };
 
 export default React.createClass({
-    render() {
-        return (
-            <Col md={9} sm={12}>
-                <h1 className="page-header">
-                    Breadcrumbs
+  render() {
+    return (
+      <Col md={9} sm={12}>
+        <h1 className="page-header">
+          Breadcrumbs
                     <span className="page-header-en">
-                        <code>{'<Breadcrumb>'}</code>、
+            <code>{'<Breadcrumb>'}</code>、
                         <code>{'<Breadcrumb.Item>'}</code>
-                    </span>
-                </h1>
+          </span>
+        </h1>
 
 
-                <h3>默认样式</h3>
+        <h3>默认样式</h3>
 
-                <Example code={examples.basic} />
+        <Example code={examples.basic} />
 
 
 
-                <h3>组件属性</h3>
-                <Markdown>
-                    {require('./props.md') }
-                </Markdown>
+        <h3>组件属性</h3>
+        <Markdown>
+          {require('./props.md')}
+        </Markdown>
 
-            </Col>
-        );
-    }
+      </Col>
+    );
+  }
 });

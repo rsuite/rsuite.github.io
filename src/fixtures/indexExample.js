@@ -13,50 +13,50 @@
  */
 
 const App = React.createClass({
-    render() {
-        return (
-            <div>
-                <Header inverse>
-                    <div className="page-container">
-                        <Navbar.Header>
-                            <Navbar.Brand className="logo">
-                                RSUITE DEMO
+  render() {
+    return (
+      <div>
+        <Header inverse>
+          <div className="page-container">
+            <Navbar.Header>
+              <Navbar.Brand className="logo">
+                RSUITE DEMO
                             </Navbar.Brand>
-                        </Navbar.Header>
-                    </div>
-                </Header>
-                <div className="container">
-                    <RSTable.Table
-                        height={600}
-                        data={tableData}
-                    >
-                        <RSTable.Column width={200} fixed>
-                            <RSTable.HeaderCell>Component</RSTable.HeaderCell>
-                            <NameCell dataKey="name" />
-                        </RSTable.Column>
+            </Navbar.Header>
+          </div>
+        </Header>
+        <div className="container">
+          <RSTable.Table
+            height={600}
+            data={tableData}
+          >
+            <RSTable.Column width={200} fixed>
+              <RSTable.HeaderCell>Component</RSTable.HeaderCell>
+              <NameCell dataKey="name" />
+            </RSTable.Column>
 
-                        <RSTable.Column width={200}  >
-                            <RSTable.HeaderCell>Intro</RSTable.HeaderCell>
-                            <RSTable.Cell dataKey="intro" />
-                        </RSTable.Column>
-                    </RSTable.Table>
-                </div>
-            </div>
+            <RSTable.Column width={200}  >
+              <RSTable.HeaderCell>Intro</RSTable.HeaderCell>
+              <RSTable.Cell dataKey="intro" />
+            </RSTable.Column>
+          </RSTable.Table>
+        </div>
+      </div>
 
-        );
-    }
+    );
+  }
 });
 
 export const NameCell = ({ rowData, dataKey, ...props }) => {
-    return (
-        <RSTable.Cell  {...props}>
-            <a target="_blank" href={rowData.url} >
-                <i className={rowData.icon}></i>
-                {' '}
-                <label>{rowData.name}</label>
-            </a>
-        </RSTable.Cell>
-    );
+  return (
+    <RSTable.Cell  {...props}>
+      <a target="_blank" href={rowData.url} >
+        <i className={rowData.icon}></i>
+        {' '}
+        <label>{rowData.name}</label>
+      </a>
+    </RSTable.Cell>
+  );
 };
 
 ReactDOM.render(<App />, mountNode);
