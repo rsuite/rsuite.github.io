@@ -28,13 +28,15 @@ const plugins = [
     hotjarTraking: NODE_ENV === 'production' ? hotJarTraking : '',
     inject: true,
     hash: true
-  }),
-  new webpack.DllReferencePlugin({
-    context: path.resolve(__dirname, 'src/'),
-    manifest: require('./dist/vendor-manifest.json')
   })
 ];
 const publicPath = NODE_ENV === 'development' ? '/' : '/assets/';
+if (NODE_ENV === 'development') {
+  plugins.push(new webpack.DllReferencePlugin({
+    context: path.resolve(__dirname, 'src/'),
+    manifest: require('./dist/vendor-manifest.json')
+  }));
+}
 
 if (NODE_ENV === 'production') {
   plugins.push(new webpack.optimize.UglifyJsPlugin());
