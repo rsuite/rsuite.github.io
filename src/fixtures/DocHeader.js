@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { scrollTop, on } from 'dom-lib';
 import { Router, Route, Link } from 'react-router';
 import { Header, Navbar, Nav } from 'rsuite';
-import logo from '../../resources/images/logo.png';
+import logo from '../../resources/images/logo.svg';
 
 
 const NAV_LINKS = [

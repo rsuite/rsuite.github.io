@@ -9,7 +9,7 @@ const DocFooter = React.createClass({
         <div className="container">
 
 
-          Powered by<a href="http://www.hypers.com" target="_blank">Hypers FE</a>
+          Powered by<a href="http://www.hypers.com" target="_blank">HYPERS</a>
 
           <a href="https://github.com/rsuite/rsuite" target="_blank"><IconFont icon="github" /></a>
 
