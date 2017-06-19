@@ -7,6 +7,7 @@ import Banner from '../fixtures/Banner';
 import IntroPanel from '../fixtures/IntroPanel';
 import fetchJsonp from '../uitils/fetchJsonp';
 import data from '../componentList';
+import Logo from '../fixtures/Logo';
 
 
 const PageIndex = React.createClass({
@@ -67,7 +68,7 @@ const PageIndex = React.createClass({
       <div>
         <Banner id="banner">
           <h1 className="logo">
-            <img src="/resources/images/logo.svg" height={42} />
+            <Logo width={186} height={42} />
           </h1>
           <p className="sub-title">一套 React 的 UI 组件库</p>
           <div className="nav">

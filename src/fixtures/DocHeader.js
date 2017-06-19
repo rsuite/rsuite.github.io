@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { scrollTop, on } from 'dom-lib';
 import { Router, Route, Link } from 'react-router';
 import { Header, Navbar, Nav } from 'rsuite';
-import logo from '../../resources/images/logo.svg';
+import Logo from './Logo';
 
 
 const NAV_LINKS = [
@@ -79,7 +79,9 @@ const DocHeader = React.createClass({
         <div className="container">
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="#"><img height={32} src={logo} /></a>
+              <a href="/">
+                <Logo width={142} height={32} />
+              </a>
             </Navbar.Brand>
             <Navbar.Toggle />
           </Navbar.Header>

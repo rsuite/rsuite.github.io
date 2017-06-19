@@ -101,7 +101,7 @@ const common = {
         }
       }]
     }, {
-      test: /\.(jpg|png)$/,
+      test: /\.(jpg|png|svg)$/,
       //`publicPath`  only use to assign assets path in build
       use: [{
         loader: 'url-loader',
