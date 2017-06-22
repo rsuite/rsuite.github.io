@@ -1,9 +1,20 @@
 import React from 'react';
-import { FormControl } from 'rsuite';
+import {FormControl} from 'rsuite';
 import NotificationSystem from 'react-notification-system';
 import IconItem from './IconItem';
 
 const ALL_ICONS = JSON.parse(require('fs').readFileSync(__dirname + '/icons.json', 'utf8'));
+
+const parseIconByCategory = (obj, conf) => {
+  conf.categories.forEach(category => {
+    if (obj[category]) {
+      obj[category].push(conf);
+      return;
+    }
+    obj[category] = [conf];
+  });
+  return obj;
+};
 
 const NoneDom = () => <div className="col-md-12">无</div>;
 
@@ -14,8 +25,20 @@ export default React.createClass({
     };
   },
   handleSearch(key) {
-    const filter = (iconName) => iconName.toUpperCase().indexOf(key.trim().toUpperCase()) > -1;
-    const icons = ALL_ICONS.filter(filter);
+    key = key.toUpperCase();
+
+    const filterByIconName = (searchKey) => {
+      return searchKey.indexOf(key) > -1;
+    };
+
+    const filterByCatogry = (iconConf) => {
+      const {id, filter = [], categories = []} = iconConf;
+      const searchKeys = [id, ...filter, ...categories].map(key => key.toUpperCase());
+      return searchKeys.filter(filterByIconName).length > 0;
+    };
+
+    const icons = ALL_ICONS.filter(filterByCatogry);
+
     this.setState({
       icons
     });
@@ -29,29 +52,35 @@ export default React.createClass({
       level: 'success'
     });
   },
-  renderIcon(icons, classPrefix = '') {
-    return icons.map(
-      (icon) => {
-        return <IconItem
-          icon={icon}
-          key={icon}
-          classPrefix={classPrefix}
-          handleCopy={this.handleCopy} />;
-      }
-    );
+  renderIcon(icons) {
+    icons = icons.reduce(parseIconByCategory, {});
+
+    return Object.keys(icons).sort((a, b) => a.localeCompare(b)).map((category, i) => {
+      return (
+        <div key={i}>
+          <h4 className="col-md-12">{category}</h4>
+          {
+            icons[category].map((iconConf, j) => {
+              const {id: icon} = iconConf;
+              return <IconItem icon={icon} key={`${j}-${icon}`} handleCopy={this.handleCopy}/>;
+            })
+          }
+        </div>
+      );
+    });
   },
   render() {
-    const { icons } = this.state;
+    const {icons} = this.state;
     return (
       <div className="icon-list-wrap">
         <FormControl type='text'
-          placeholder="输入英文关键字进行搜索，比如 play。点击图标，复制图标名称。"
-          onChange={this.handleSearch} />
+                     placeholder="输入关键字进行搜索，如: hypers。然后点击图标，复制图标名称。"
+                     onChange={this.handleSearch}/>
         <hr />
         <div className="row icon-item-list">
-          {icons.length > 0 ? this.renderIcon(icons, 'icon') : <NoneDom />}
+          {icons.length > 0 ? this.renderIcon(icons) : <NoneDom />}
         </div>
-        <NotificationSystem ref={ref => this._notificationSystem = ref} />
+        <NotificationSystem ref={ref => this._notificationSystem = ref}/>
       </div>
     );
   }
