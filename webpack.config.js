@@ -21,6 +21,7 @@ const plugins = [
     }
   }),
   extractLess,
+  new webpack.optimize.ModuleConcatenationPlugin(),
   new HtmlwebpackPlugin({
     title: 'RSUITE | 一套 React 的 UI 组件库',
     filename: (NODE_ENV === 'development' ? '' : '../') + 'index.html',
