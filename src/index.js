@@ -25,24 +25,24 @@ import ready from './ready';
 
 const history = process.env.NODE_ENV === 'production' ? browserHistory : hashHistory;
 const mountApp = (
-    <Router history={history}>
+  <Router history={history}>
 
-        <Route path="/" component={App}>
-            <IndexRoute component={PageIndex}/>
-            <Route path="getting-started" component={PageGettingStarted}/>
-            <Route path="examples" component={PageExamples}/>
+    <Route path="/" component={App}>
+      <IndexRoute component={PageIndex} />
+      <Route path="getting-started" component={PageGettingStarted} />
+      <Route path="examples" component={PageExamples} />
 
-            <Route path="components" component={PageComponents}>
-                <Route path=":name" component={PageComponentsDoc}/>
-                <IndexRedirect to="buttons"/>
-            </Route>
-        </Route>
+      <Route path="components" component={PageComponents}>
+        <Route path=":name" component={PageComponentsDoc} />
+        <IndexRedirect to="buttons" />
+      </Route>
+    </Route>
 
-    </Router>
+  </Router>
 );
 
 ready((values) => {
-    render(mountApp, document.getElementById('root'));
+  render(mountApp, document.getElementById('root'));
 });
 
 

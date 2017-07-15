@@ -9,5 +9,5 @@ prev                 | boolean     | false        | 显示上一页
 next                 | boolean     | false        | 显示下一页
 ellipsis             | boolean     | false        | 显示省略符
 boundaryLinks        | boolean     | false        | 显示边界分页按钮 1 和 pages
-buttonComponentClass | elementType | Anchor       |
+buttonComponentClass | elementType | SafeAnchor       |
 classPrefix          | string      | `pagination` |

@@ -1,18 +1,9 @@
 /**
  * RSuite 是由 Hypers 前端团队开发的，面向企业级后台产品的一套前端解决方案，
  * 并致力于改善前端工程师的开发体验。
- *
- * ☐ 待开发：
- * rsuite-notification  rsuite-switch      rsuite-anchor    rsuite-progress
- *
- * ☑︎ 已完成：
- * rsuite               rsuite-affix       rsuite-slider   rsuite-tree
- * rsuite-uploader      rsuite-echarts     rsuite-picker   rsuite-datepangepicker
- * rsuite-datepicker    rsuite-table       rsuite-theme    rsuite-autocomplete
- * rsuite-clipboard     rsuite-steps
  */
 
-const App = React.createClass({
+class App extends React.Component {
   render() {
     return (
       <div>
@@ -20,8 +11,8 @@ const App = React.createClass({
           <div className="page-container">
             <Navbar.Header>
               <Navbar.Brand className="logo">
-                RSUITE DEMO
-                            </Navbar.Brand>
+                RSUITE Components
+              </Navbar.Brand>
             </Navbar.Header>
           </div>
         </Header>
@@ -45,9 +36,9 @@ const App = React.createClass({
 
     );
   }
-});
+}
 
-export const NameCell = ({ rowData, dataKey, ...props }) => {
+const NameCell = ({ rowData, dataKey, ...props }) => {
   return (
     <RSTable.Cell  {...props}>
       <a target="_blank" href={rowData.url} >

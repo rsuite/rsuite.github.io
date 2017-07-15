@@ -32,6 +32,7 @@ const plugins = [
   })
 ];
 const publicPath = NODE_ENV === 'development' ? '/' : '/assets/';
+
 if (NODE_ENV === 'development') {
   plugins.push(new webpack.DllReferencePlugin({
     context: path.resolve(__dirname, 'src/'),

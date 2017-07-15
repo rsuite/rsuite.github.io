@@ -2,7 +2,6 @@
 const MyModel = SchemaModel({
   username: StringType().isOneOf(['admin', 'root'], '只能输入admin,root这两个用户').isRequired('该字段必填'),
   email: StringType().isEmail('邮件格式错误'),
-  lables: ArrayType().minLength(2, '至少输入两项，用换行分割').shape(StringType().isOneOf(['数码', '体育', '游戏', '旅途', '其他']), '只能输入：数码,体育,游戏,旅途,其他').unrepeatable('不能重复'),
   radioList: StringType().isRequired('该字段必填'),
   radio: StringType().isRequired('该字段必填'),
   checkboxList: ArrayType().minLength(2, '至少选择2项').isRequired('该字段必填'),
@@ -50,13 +49,7 @@ const FormDemo = React.createClass({
             </FormGroup>
           </Field>
 
-          <Field name="lables" >
-            <FormGroup>
-              <ControlLabel>Lables</ControlLabel>
-              <TextList />
-              <HelpBlock></HelpBlock>
-            </FormGroup>
-          </Field>
+
 
           <Field name="radioList" >
             <FormGroup>

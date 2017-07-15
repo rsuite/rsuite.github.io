@@ -16,15 +16,13 @@ const IntroBlock = React.createClass({
   },
   render() {
     const {
-            thumb,
+      thumb,
       url = 'javascript:;',
       intro = '--',
       name = '--',
       src = 'javascript:;',
       icon
-        } = this.props;
-
-
+    } = this.props;
 
     return (
       <Col lg={3} md={4} sm={6} xs={12}>

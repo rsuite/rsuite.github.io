@@ -130,7 +130,7 @@
     ]
   },
   {
-    "name": "Anchor",
+    "name": "SafeAnchor",
     "id": "anchor",
     "filter": [
       "link"

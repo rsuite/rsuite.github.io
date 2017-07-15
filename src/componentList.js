@@ -3,7 +3,7 @@ export default [
     icon: 'icon icon-briefcase',
     bg: '#6292f0',
     repoName: 'rsuite',
-    url: 'https://rsuitejs.com/#/components',
+    url: 'https://rsuitejs.com/components',
     name: 'Basis Components',
     intro: '基础组件',
     src: 'https://github.com/rsuite/rsuite'
@@ -130,6 +130,14 @@ export default [
     name: 'RSuite Tag',
     intro: '对不同维度进行标记和分类的小标签。',
     src: 'https://github.com/rsuite/rsuite-tag'
+  }, {
+    icon: 'icon icon-bell-o',
+    bg: '#004889',
+    repoName: 'rsuite-notification',
+    url: 'https://rsuitejs.com/rsuite-notification',
+    name: 'rsuite-notification',
+    intro: '提供 Alert 和 Notify 两个组件，用于全局提示消息',
+    src: 'https://rsuitejs.com/rsuite-notification/'
   }, {
     icon: 'icon icon-order-form',
     bg: '#004889',

@@ -2,7 +2,7 @@ var instance = (
   <Navbar inverse>
     <Navbar.Header>
       <Navbar.Brand>
-        <Anchor href="#">Suite</Anchor>
+        <a href="#">Suite</a>
       </Navbar.Brand>
       <Navbar.Toggle />
     </Navbar.Header>

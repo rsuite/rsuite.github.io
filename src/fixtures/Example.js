@@ -22,8 +22,8 @@ const Link = require('react-router').Link;
 const tableData = require('../componentList');
 const Button = require('rsuite/lib/Button').default;
 const ButtonToolbar = require('rsuite/lib/ButtonToolbar').default;
-const Dropdown = require('rsuite/lib/Dropdown').default;
 const ButtonGroup = require('rsuite/lib/ButtonGroup').default;
+const Dropdown = require('rsuite/lib/Dropdown').default;
 
 
 // Whisper
@@ -51,7 +51,6 @@ const HelpBlock = require('rsuite/lib/HelpBlock').default;
 const Checkbox = require('rsuite/lib/Checkbox').default;
 const CheckboxGroup = require('rsuite/lib/CheckboxGroup').default;
 const InputGroup = require('rsuite/lib/InputGroup').default;
-const TextList = require('rsuite/lib/TextList').default;
 
 
 const Radio = require('rsuite/lib/Radio').default;
@@ -69,10 +68,7 @@ const Container = require('rsuite/lib/Container').default;
 const Content = require('rsuite/lib/Content').default;
 const Panel = require('rsuite/lib/Panel').default;
 const PanelGroup = require('rsuite/lib/PanelGroup').default;
-
-
-const Anchor = require('rsuite/lib/Anchor').default;
-
+const SafeAnchor = require('rsuite/lib/SafeAnchor').default;
 
 const Example = React.createClass({
   propTypes: {
@@ -126,7 +122,8 @@ const Example = React.createClass({
       <div>{this._initialExample}</div>
     );
     return (
-      <div className={classNames('doc-example', this.props.exampleClassName)}>
+      <div
+        className={classNames('doc-example', this.props.exampleClassName)}>
         {example}
       </div>
     );
@@ -145,10 +142,10 @@ const Example = React.createClass({
             <div className="typing-wrapper sublime">
               <div className="buttons"></div>
               <CodeEditor
-                key='jsx'
+                key="jsx"
                 onChange={this.handleCodeChange}
-                className='doc-code'
-                theme='base16-dark'
+                className="doc-code"
+                theme="base16-dark"
                 code={this.state.code}
               />
             </div>
@@ -158,17 +155,19 @@ const Example = React.createClass({
     }
 
     return (
-      <div className='doc-example-wrapper'>
+      <div className="doc-example-wrapper">
         {this.renderExample()}
         <CodeEditor
-          key='jsx'
+          key="jsx"
           onChange={this.handleCodeChange}
-          className='doc-code'
-          theme='base16-light'
+          className="doc-code"
+          theme="base16-light"
           code={this.state.code}
         />
       </div>
     );
   }
 });
+
+
 export default Example;
