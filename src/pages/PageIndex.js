@@ -50,7 +50,7 @@ const PageIndex = React.createClass({
     });
   },
   componentWillMount() {
-    //this.fetchGithubData();
+    this.fetchGithubData();
   },
   componentDidMount() {
     this._onWindowResizeListener = on(window, 'resize', this.handleWindowResize);

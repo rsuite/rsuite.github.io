@@ -61,7 +61,6 @@ var instance = (
       </RadioGroup>
     </FormGroup>
 
-
     <FormGroup controlId='checkboxList' >
       <ControlLabel>CheckboxGroup inline</ControlLabel>
       <CheckboxGroup name="checkboxList" value={['A', 'C']} inline>
