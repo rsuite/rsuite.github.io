@@ -44,12 +44,13 @@ const PageIndex = React.createClass({
             return info;
           });
 
-          this.setState({ data });
+          this.isMounted && this.setState({ data });
         });
       }
     });
   },
   componentWillMount() {
+    this.isMounted = true;
     this.fetchGithubData();
   },
   componentDidMount() {
@@ -57,6 +58,7 @@ const PageIndex = React.createClass({
     this.handleWindowResize();
   },
   componentWillUnmount() {
+    this.isMounted = false;
     if (this._onWindowResizeListener) {
       this._onWindowResizeListener.off();
     }
