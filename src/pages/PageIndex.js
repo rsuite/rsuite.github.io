@@ -69,23 +69,24 @@ const PageIndex = React.createClass({
     return (
       <div>
         <Banner id="banner">
-          <h1 className="logo">
-            <Logo width={186} height={42} />
-          </h1>
-          <p className="sub-title">一套 React 的 UI 组件库</p>
-          <div className="nav">
-            <Link to="/getting-started">介绍</Link>
-            <Link to="/components/buttons">组件</Link>
-            <Link to="/examples">实践</Link>
-            <a href="https://github.com/suitejs/suite" target="_blank">GitHub</a>
+          <div className="banner-content">
+            <h1 className="logo">
+              <Logo width={120} />
+              <p>RSUITE</p>
+            </h1>
+            <p className="sub-title">一套 React 的 UI 组件库</p>
+            <div className="menu-nav">
+              <Link to="/getting-started">介绍</Link>
+              <Link to="/components/buttons">组件</Link>
+              <Link to="/examples">实践</Link>
+              <a href="https://github.com/suitejs/suite" target="_blank">GitHub</a>
+            </div>
           </div>
         </Banner>
         <Content id="index-content" className="box-wrapper">
-
-          <Row >
+          <Row>
             {
               data.map((info, key) => {
-
                 return (
                   <IntroPanel key={key} {...info} />
                 );

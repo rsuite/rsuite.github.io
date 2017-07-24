@@ -1,5 +1,5 @@
 /**
- * RSuite 是由 Hypers 前端团队开发的，面向企业级后台产品的一套前端解决方案，
+ * RSUITE 是由 HYPERS 前端团队开发的，面向企业级后台产品的一套前端解决方案，
  * 并致力于改善前端工程师的开发体验。
  */
 
@@ -11,7 +11,7 @@ class App extends React.Component {
           <div className="page-container">
             <Navbar.Header>
               <Navbar.Brand className="logo">
-                RSUITE Components
+                RSUITE
               </Navbar.Brand>
             </Navbar.Header>
           </div>
@@ -33,7 +33,6 @@ class App extends React.Component {
           </RSTable.Table>
         </div>
       </div>
-
     );
   }
 }

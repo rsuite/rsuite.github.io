@@ -2,17 +2,26 @@
 //https://survivejs.com/webpack/styling/loading/#loading-from-node_modules-directory
 @import '~rsuite-theme/dist/less/rsuite.less';
 @import '~rsuite-table/lib/less/index.less';
-@import './less/highlight.less';
-@import './less/sublime.less';
-@import './less/table.less';
+@import '~codemirror/lib/codemirror.css';
+@import '~codemirror/theme/base16-light.css';
+@import '~codemirror/theme/base16-dark.css';
+@import './highlight.less';
+@import './sublime.less';
+@import './table.less';
+
 
 //rewrite base color
 @base-color: #6292f0;
 @bg-color: #fbfbfb;
-@banner-bg-color: #fff;
+@banner-bg-color: #151515;
 @header-height: 64px;
 @media-xs: 768px;
 @media-md: 992px;
+
+body{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+}
 
 /* Demo */
 .demo {
@@ -23,11 +32,7 @@
 
 .logo {
   font-family: 'Raleway', 'Hiragino Sans GB', sans-serif;
-  color: @base-color;
   text-transform: uppercase;
-  .prefix {
-    color: @base-color;
-  }
 }
 
 .home-page {
@@ -54,7 +59,6 @@
   }
   .navbar-right {
     margin-right: 0;
-    background-color: @banner-bg-color;
   }
   .navbar-brand {
     height: @header-height;
@@ -246,6 +250,7 @@ code {
   height: 100%;
   z-index: 1040;
   overflow: hidden;
+  color: #fff;
   .nav {
     top: 32px;
     position: absolute;
@@ -253,14 +258,14 @@ code {
   }
   .sub-title {
     margin-top: 40px;
-    font-size: 16px;
+    font-size: 22px;
   }
-  .nav > a {
+  .menu-nav > a {
     background: transparent;
-    margin-right: 10px;
-    padding: 10px 23px;
+    margin: 0 10px;
     text-decoration: none;
-    color: #575757;
+    color: #aaa;
+    margin-top: 20px;
     &.primary {
       border: 1px solid #FF8533;
     }
@@ -269,49 +274,22 @@ code {
       border-bottom: 2px solid @base-color;
     }
   }
-  .container {
-    height: 100%;
-  }
-  .triangle-left {
-    background: #fff;
-    box-shadow: -8px -6px 11px rgba(5, 11, 8, 0.35);
-    height: 1000px;
-    position: absolute;
-    right: -607px;
-    top: -400px;
-    transform: rotate(-45deg);
-    width: 1000px;
-    z-index: 100;
-    color: #575757;
-    animation: bounceInRight 1s cubic-bezier(0.215, .61, .355, 1);
-
-    a:hover {
-      text-decoration: none;
-    }
-
-    .doc-example {
-      border: none;
-      .header {
-        background: #5680d2;
-        border-color: #5680d2;
-      }
-    }
-  }
-  .typing-wrapper {
-    margin-top: 50px;
-    animation: fadeIn 2s cubic-bezier(0.215, .61, .355, 1);
-    height: calc(~"100% - 180px");
-    .CodeMirror {
-      background: none !important;
-      opacity: 0.4;
-    }
-    .doc-code {
-      overflow: auto;
-      height: 100%;
-    }
+  .doc-code{
+    opacity: 0.3;
+    filter: blur(1px);
   }
 }
 
+.banner-content{
+    width: 500px;
+    text-align: center;
+    top: 50%;
+    z-index: 200;
+    position: absolute;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -155px;
+}
 .footer {
   margin-top: 20px;
   padding: 18px 0;
@@ -419,7 +397,7 @@ code {
   border-radius: 2px;
   margin-top: 12%;
   position: relative;
-  box-shadow: 0 2px 5px 0 #CCCBCB;
+  box-shadow: 0 1px 1px 0 #CCCBCB;
 
   .avatar {
     width: 37%;
@@ -546,8 +524,8 @@ code {
   }
 }
 
-.cm-s-base16-light.CodeMirror {
-  background: #fbfbfb !important;
+.cm-s-base16-dark.CodeMirror {
+  background: none !important;
 }
 
 .icon-list-wrap .page-header-en {

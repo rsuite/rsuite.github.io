@@ -133,24 +133,16 @@ const Example = React.createClass({
 
     if (this.props.isBanner) {
       return (
-        <Col id={this.props.id} className="banner" xsHidden>
-          <div className="triangle-left ">
-            {this.renderExample()}
-          </div>
-          <div className="container">
-            {this.props.children}
-            <div className="typing-wrapper sublime">
-              <div className="buttons"></div>
-              <CodeEditor
-                key="jsx"
-                onChange={this.handleCodeChange}
-                className="doc-code"
-                theme="base16-dark"
-                code={this.state.code}
-              />
-            </div>
-          </div>
-        </Col>
+        <div className="container">
+          <CodeEditor
+            key="jsx"
+            lineNumbers
+            onChange={this.handleCodeChange}
+            className="doc-code"
+            theme="base16-dark"
+            code={this.state.code}
+          />
+        </div>
       );
     }
 

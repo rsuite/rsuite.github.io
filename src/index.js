@@ -1,14 +1,16 @@
 import React from 'react';
 import { render } from 'react-dom';
-
-import { Router, Route, IndexRoute, IndexRedirect, hashHistory, browserHistory } from 'react-router';
+import {
+  Router,
+  Route,
+  IndexRoute,
+  IndexRedirect,
+  hashHistory,
+  browserHistory
+} from 'react-router';
 
 // style
-import './docs.less';
-import 'codemirror/lib/codemirror.css';
-import 'codemirror/theme/base16-light.css';
-import 'codemirror/theme/base16-dark.css';
-//import routes from './routes';
+import './less/index.less';
 
 require('./hypers-hire');
 

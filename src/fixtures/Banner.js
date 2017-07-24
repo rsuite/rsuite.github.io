@@ -6,15 +6,16 @@ import Example from './Example';
 const indexExample = require('fs').readFileSync(__dirname + '/indexExample.js', 'utf8');
 const Banner = React.createClass({
 
-  render: function () {
-
+  render() {
+    const { children } = this.props;
     return (
-      <Example isBanner id="banner" code={indexExample} >
-        {this.props.children}
-      </Example>
+      <div id="banner" className="banner">
+        {children}
+        <Example isBanner code={indexExample} />
+      </div>
+
     );
   }
 });
 
 export default Banner;
-

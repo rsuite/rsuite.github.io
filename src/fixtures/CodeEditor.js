@@ -1,50 +1,76 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import CodeMirror from 'codemirror';
 
 
 const CodeEditor = React.createClass({
   propTypes: {
-    readOnly: React.PropTypes.bool,
-    code: React.PropTypes.string,
-    theme: React.PropTypes.string
+    readOnly: PropTypes.bool,
+    code: PropTypes.string,
+    theme: PropTypes.string,
+    lineNumbers: PropTypes.bool,
+    lineWrapping: PropTypes.bool,
+    tabSize: PropTypes.number
   },
+  getDefaultProps() {
+    return {
+      matchBrackets: true,
+      tabSize: 2,
+      theme: 'default'
+    };
+  },
+  componentDidMount() {
+    const {
+      lineNumbers,
+      lineWrapping,
+      matchBrackets,
+      tabSize,
+      readOnly,
+      theme
+    } = this.props;
 
-  componentDidMount: function () {
     if (CodeMirror === undefined) {
       return;
     }
 
     this.editor = CodeMirror.fromTextArea(this.refs.editor, {
       mode: 'jsx',
-      lineNumbers: false,
-      lineWrapping: false,
-      matchBrackets: true,
-      tabSize: 2,
-      theme: this.props.theme || 'default',
-      readOnly: this.props.readOnly
+      lineNumbers,
+      lineWrapping,
+      matchBrackets,
+      tabSize,
+      readOnly,
+      theme,
+      readOnly
     });
 
     this.editor.on('change', this.handleChange);
   },
 
-  componentDidUpdate: function () {
-    if (this.props.readOnly) {
-      this.editor.setValue(this.props.code);
+  componentDidUpdate() {
+    const { readOnly, onChange } = this.props;
+    if (readOnly) {
+      this.editor.setValue(code);
     }
   },
 
-  handleChange: function () {
-    if (!this.props.readOnly && this.props.onChange) {
-      this.props.onChange(this.editor.getValue());
+  handleChange() {
+    const { readOnly, onChange } = this.props;
+    if (!readOnly && onChange) {
+      onChange(this.editor.getValue());
     }
   },
 
-  render: function () {
-
+  render() {
+    const { style, className, code } = this.props;
     return (
-      <div style={this.props.style} className={this.props.className}>
-        <textarea ref='editor' defaultValue={this.props.code} />
+      <div
+        style={style}
+        className={className}
+      >
+        <textarea
+          ref='editor'
+          defaultValue={code} />
       </div>
     );
   }

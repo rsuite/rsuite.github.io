@@ -12,7 +12,7 @@ export default [
     bg: '#004889',
     repoName: 'rsuite-table',
     url: 'https://rsuitejs.com/rsuite-table',
-    name: 'RSuite Table',
+    name: 'Table',
     intro: 'Table 组件，支持Tree，自定义列宽，锁定列及表头等功能',
     src: 'https://github.com/rsuite/rsuite-table'
   },
@@ -21,7 +21,7 @@ export default [
     bg: '#d3555a',
     repoName: 'rsuite-datepicker',
     url: 'https://rsuitejs.com/rsuite-datepicker',
-    name: 'RSuite DatePicker',
+    name: 'DatePicker',
     intro: '日历选择组件',
     src: 'https://github.com/rsuite/rsuite-datepicker'
   },
@@ -30,7 +30,7 @@ export default [
     bg: '#a50006',
     repoName: 'rsuite-daterangepicker',
     url: 'https://rsuitejs.com/rsuite-daterangepicker',
-    name: 'RSuite DateRangePicker',
+    name: 'DateRangePicker',
     intro: '日历范围选择组件',
     src: 'https://github.com/rsuite/rsuite-daterangepicker'
   },
@@ -39,7 +39,7 @@ export default [
     bg: '#ff9800',
     repoName: 'rsuite-picker',
     url: 'https://rsuitejs.com/rsuite-picker',
-    name: 'RSuite Picker',
+    name: 'Picker',
     intro: '选择组件，可以替代 Select 和 Dropdown 组件',
     src: 'https://github.com/rsuite/rsuite-picker'
   },
@@ -48,7 +48,7 @@ export default [
     bg: '#990066',
     repoName: 'rsuite-echarts',
     url: 'https://rsuitejs.com/rsuite-echarts',
-    name: 'RSuite ECharts',
+    name: 'ECharts',
     intro: 'ECharts 的 React 组件',
     src: 'https://github.com/rsuite/rsuite-echarts'
   },
@@ -57,7 +57,7 @@ export default [
     bg: '#5677AC',
     repoName: 'rsuite-uploader',
     url: 'https://rsuitejs.com/rsuite-uploader',
-    name: 'RSuite Uploader',
+    name: 'Uploader',
     intro: '上传文件组件',
     src: 'https://github.com/rsuite/rsuite-uploader'
   },
@@ -66,7 +66,7 @@ export default [
     bg: '#29a7e1',
     repoName: 'rsuite-tree',
     url: 'https://rsuitejs.com/rsuite-tree',
-    name: 'RSuite Tree',
+    name: 'Tree',
     intro: '树型组件，支持选择，支持树节点拖拽',
     src: 'https://github.com/rsuite/rsuite-tree'
   },
@@ -75,7 +75,7 @@ export default [
     bg: '#00d09d',
     repoName: 'rsuite-slider',
     url: 'https://rsuitejs.com/rsuite-slider',
-    name: 'RSuite Slider',
+    name: 'Slider',
     intro: '滑动输入条，用于在数值区间选择',
     src: 'https://github.com/rsuite/rsuite-slider'
   },
@@ -84,7 +84,7 @@ export default [
     bg: '#464c5b',
     repoName: 'rsuite-affix',
     url: 'https://rsuitejs.com/rsuite-affix',
-    name: 'RSuite Affix',
+    name: 'Affix',
     intro: '固钉，将页面元素钉在可视范围',
     src: 'https://github.com/rsuite/rsuite-affix'
   },
@@ -93,7 +93,7 @@ export default [
     bg: '#1d9d74',
     repoName: 'rsuite-autocomplete',
     url: 'https://rsuite.github.io/rsuite-autocomplete',
-    name: 'RSuite Autocomplete',
+    name: 'Autocomplete',
     intro: '输入框自动完成功能。',
     src: 'https://github.com/rsuite/rsuite-autocomplete'
   },
@@ -102,7 +102,7 @@ export default [
     bg: '#b94e95',
     repoName: 'rsuite-clipboard',
     url: 'https://rsuite.github.io/rsuite-clipboard',
-    name: 'RSuite Clipboard',
+    name: 'Clipboard',
     intro: '复制到剪切板',
     src: 'https://github.com/rsuite/rsuite-clipboard'
   },
@@ -111,7 +111,7 @@ export default [
     bg: '#00bcd4',
     repoName: 'rsuite-steps',
     url: 'https://rsuite.github.io/rsuite-steps',
-    name: 'RSuite Steps',
+    name: 'Steps',
     intro: '步骤条，是一个步骤提示组件，可以在步骤繁杂的操作中引导用户',
     src: 'https://github.com/rsuite/rsuite-steps'
   }, {
@@ -119,7 +119,7 @@ export default [
     bg: '#00ddff',
     repoName: 'rsuite-inputnumber',
     url: 'https://rsuite.github.io/rsuite-inputnumber',
-    name: 'RSuite InputNumber',
+    name: 'InputNumber',
     intro: '数字输入框，通过鼠标或键盘，输入范围内的数值',
     src: 'https://github.com/rsuite/rsuite-inputnumber'
   }, {
@@ -127,7 +127,7 @@ export default [
     bg: '#ca565e',
     repoName: 'rsuite-tag',
     url: 'https://rsuitejs.com/rsuite-tag',
-    name: 'RSuite Tag',
+    name: 'Tag',
     intro: '对不同维度进行标记和分类的小标签。',
     src: 'https://github.com/rsuite/rsuite-tag'
   }, {
@@ -135,7 +135,7 @@ export default [
     bg: '#004889',
     repoName: 'rsuite-notification',
     url: 'https://rsuitejs.com/rsuite-notification',
-    name: 'rsuite-notification',
+    name: 'Notification',
     intro: '提供 Alert 和 Notify 两个组件，用于全局提示消息',
     src: 'https://rsuitejs.com/rsuite-notification/'
   }, {

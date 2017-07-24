@@ -12,13 +12,13 @@ const tableInstance = (
       <tr>
         <td>1</td>
         <td>http://wwww.hypers.com/</td>
-        <td>Hypers</td>
+        <td>HYPERS</td>
         <td>12342</td>
       </tr>
       <tr>
         <td>2</td>
         <td>http://www.hypers.com/about/</td>
-        <td>About - Hypers</td>
+        <td>About - HYPERS</td>
         <td>3253</td>
       </tr>
       <tr>
