@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { addStyle, getHeight, on } from 'dom-lib';
-import { Container, Content, Row, Col } from 'rsuite';
+import { Container, Content, Row, Col, FormControl } from 'rsuite';
+import _ from 'lodash';
 
 import Banner from '../fixtures/Banner';
 import IntroPanel from '../fixtures/IntroPanel';
@@ -20,6 +21,7 @@ const PageIndex = React.createClass({
 
   getInitialState() {
     return {
+      keyword: '',
       data
     };
   },
@@ -63,8 +65,30 @@ const PageIndex = React.createClass({
       this._onWindowResizeListener.off();
     }
   },
+  renderComponents() {
+    const { data, keyword } = this.state;
+    const items = data.filter((item) => {
+      let tags = item.tags || [];
+      return tags.some((tag) => {
+        return tag.indexOf(_.trim(keyword.toLocaleLowerCase())) >= 0;
+      });
+    });
+
+    return (
+      <Row>
+        {
+          items.map((info, key) => {
+            return (
+              <IntroPanel key={key} {...info} />
+            );
+          })
+        }
+      </Row>
+    );
+  },
   render() {
-    const { data } = this.state;
+
+
 
     return (
       <div>
@@ -85,14 +109,15 @@ const PageIndex = React.createClass({
         </Banner>
         <Content id="index-content" className="box-wrapper">
           <Row>
-            {
-              data.map((info, key) => {
-                return (
-                  <IntroPanel key={key} {...info} />
-                );
-              })
-            }
+            <Col className="search-bar" md={6} mdOffset={3}>
+              <FormControl
+                placeholder="搜索组件"
+                onChange={_.debounce((keyword) => {
+                  this.setState({ keyword });
+                }, 400)} />
+            </Col>
           </Row>
+          {this.renderComponents()}
         </Content>
       </div>
     );

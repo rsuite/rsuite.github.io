@@ -6,6 +6,30 @@ export default [
     url: 'https://rsuitejs.com/components',
     name: 'Basis Components',
     intro: '基础组件',
+    tags: [
+      'button',
+      'icon font',
+      'button groups',
+      'dropdown',
+      'tooltips',
+      'popovers',
+      'navs',
+      'breadcrumbs',
+      'pagination',
+      'modals',
+      'grid system',
+      'panels',
+      'tables',
+      'controls',
+      'form',
+      'controlLabel',
+      'checkbox',
+      'radio',
+      'schema',
+      'theme',
+      'dom',
+      'basis components'
+    ],
     src: 'https://github.com/rsuite/rsuite'
   }, {
     icon: 'icon icon-table',
@@ -13,6 +37,7 @@ export default [
     repoName: 'rsuite-table',
     url: 'https://rsuitejs.com/rsuite-table',
     name: 'Table',
+    tags: ['table', 'treetable'],
     intro: 'Table 组件，支持Tree，自定义列宽，锁定列及表头等功能',
     src: 'https://github.com/rsuite/rsuite-table'
   },
@@ -23,6 +48,7 @@ export default [
     url: 'https://rsuitejs.com/rsuite-datepicker',
     name: 'DatePicker',
     intro: '日历选择组件',
+    tags: ['date', 'picker', 'datepicker'],
     src: 'https://github.com/rsuite/rsuite-datepicker'
   },
   {
@@ -32,6 +58,7 @@ export default [
     url: 'https://rsuitejs.com/rsuite-daterangepicker',
     name: 'DateRangePicker',
     intro: '日历范围选择组件',
+    tags: ['date', 'picker', 'datepicker', 'daterangepicker'],
     src: 'https://github.com/rsuite/rsuite-daterangepicker'
   },
   {
@@ -41,6 +68,7 @@ export default [
     url: 'https://rsuitejs.com/rsuite-picker',
     name: 'Picker',
     intro: '选择组件，可以替代 Select 和 Dropdown 组件',
+    tags: ['date', 'picker', 'select', 'dropdown'],
     src: 'https://github.com/rsuite/rsuite-picker'
   },
   {
@@ -50,6 +78,7 @@ export default [
     url: 'https://rsuitejs.com/rsuite-echarts',
     name: 'ECharts',
     intro: 'ECharts 的 React 组件',
+    tags: ['chart', 'echarts', 'charts'],
     src: 'https://github.com/rsuite/rsuite-echarts'
   },
   {
@@ -59,6 +88,7 @@ export default [
     url: 'https://rsuitejs.com/rsuite-uploader',
     name: 'Uploader',
     intro: '上传文件组件',
+    tags: ['uploader'],
     src: 'https://github.com/rsuite/rsuite-uploader'
   },
   {
@@ -68,6 +98,7 @@ export default [
     url: 'https://rsuitejs.com/rsuite-tree',
     name: 'Tree',
     intro: '树型组件，支持选择，支持树节点拖拽',
+    tags: ['tree'],
     src: 'https://github.com/rsuite/rsuite-tree'
   },
   {
@@ -77,6 +108,7 @@ export default [
     url: 'https://rsuitejs.com/rsuite-slider',
     name: 'Slider',
     intro: '滑动输入条，用于在数值区间选择',
+    tags: ['slider'],
     src: 'https://github.com/rsuite/rsuite-slider'
   },
   {
@@ -86,6 +118,7 @@ export default [
     url: 'https://rsuitejs.com/rsuite-affix',
     name: 'Affix',
     intro: '固钉，将页面元素钉在可视范围',
+    tags: ['affix'],
     src: 'https://github.com/rsuite/rsuite-affix'
   },
   {
@@ -95,6 +128,7 @@ export default [
     url: 'https://rsuite.github.io/rsuite-autocomplete',
     name: 'Autocomplete',
     intro: '输入框自动完成功能。',
+    tags: ['autocomplete'],
     src: 'https://github.com/rsuite/rsuite-autocomplete'
   },
   {
@@ -104,6 +138,7 @@ export default [
     url: 'https://rsuite.github.io/rsuite-clipboard',
     name: 'Clipboard',
     intro: '复制到剪切板',
+    tags: ['clipboard'],
     src: 'https://github.com/rsuite/rsuite-clipboard'
   },
   {
@@ -113,6 +148,7 @@ export default [
     url: 'https://rsuite.github.io/rsuite-steps',
     name: 'Steps',
     intro: '步骤条，是一个步骤提示组件，可以在步骤繁杂的操作中引导用户',
+    tags: ['step'],
     src: 'https://github.com/rsuite/rsuite-steps'
   }, {
     icon: 'icon icon-calculator',
@@ -121,6 +157,7 @@ export default [
     url: 'https://rsuite.github.io/rsuite-inputnumber',
     name: 'InputNumber',
     intro: '数字输入框，通过鼠标或键盘，输入范围内的数值',
+    tags: ['input number', 'input', 'number'],
     src: 'https://github.com/rsuite/rsuite-inputnumber'
   }, {
     icon: 'icon icon-bookmark',
@@ -129,6 +166,7 @@ export default [
     url: 'https://rsuitejs.com/rsuite-tag',
     name: 'Tag',
     intro: '对不同维度进行标记和分类的小标签。',
+    tags: ['tag'],
     src: 'https://github.com/rsuite/rsuite-tag'
   }, {
     icon: 'icon icon-bell-o',
@@ -137,6 +175,7 @@ export default [
     url: 'https://rsuitejs.com/rsuite-notification',
     name: 'Notification',
     intro: '提供 Alert 和 Notify 两个组件，用于全局提示消息',
+    tags: ['notification', 'alert', 'notify'],
     src: 'https://rsuitejs.com/rsuite-notification/'
   }, {
     icon: 'icon icon-order-form',
@@ -145,6 +184,7 @@ export default [
     url: 'https://rsuitejs.com/form-lib',
     name: 'form-lib',
     intro: 'React 实现的 Form 组件',
+    tags: ['form', 'form-lib', 'rsuite-form'],
     src: 'https://github.com/rsuite/form-lib'
   }
 
