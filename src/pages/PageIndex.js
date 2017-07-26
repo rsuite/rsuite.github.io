@@ -28,27 +28,19 @@ const PageIndex = React.createClass({
   fetchGithubData() {
     let { data } = this.state;
     fetchJsonp('https://api.github.com/users/rsuite/repos').then((resp) => {
-      if (resp.ok) {
-        resp.json().then((result) => {
-          const respData = Array.isArray(result.data) ? result.data : [];
-          const startCount = respData.reduce((obj, info) => {
-            const { name, stargazers_count } = info;
-            obj[name] = stargazers_count;
-            return obj;
-          }, {});
-
-          data = data.map((info) => {
-            const { repoName } = info;
-            const stars = startCount[repoName];
-            if (stars !== undefined) {
-              info.stars = stars;
-            }
-            return info;
-          });
-
-          this.isMounted && this.setState({ data });
-        });
+      if (!resp.ok) {
+        return;
       }
+
+      resp.json().then((result) => {
+        const repos = _.get(result, ['data']) || [];
+        data = data.map((info) => {
+          let repo = repos.find(item => item.name === info.repoName);
+          return { ...repo, ...info, };
+        });
+        this.isMounted && this.setState({ data });
+      });
+
     });
   },
   componentWillMount() {
@@ -74,12 +66,16 @@ const PageIndex = React.createClass({
       });
     });
 
+
     return (
       <Row>
         {
           items.map((info, key) => {
             return (
-              <IntroPanel key={key} {...info} />
+              <IntroPanel
+                {...info}
+                key={key}
+              />
             );
           })
         }

@@ -68,7 +68,7 @@ export default [
     url: 'https://rsuitejs.com/rsuite-picker',
     name: 'Picker',
     intro: '选择组件，可以替代 Select 和 Dropdown 组件',
-    tags: ['date', 'picker', 'select', 'dropdown'],
+    tags: ['picker', 'select', 'dropdown'],
     src: 'https://github.com/rsuite/rsuite-picker'
   },
   {

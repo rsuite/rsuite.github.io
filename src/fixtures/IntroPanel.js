@@ -1,35 +1,46 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Col, Whisper, Tooltip } from 'rsuite';
 
 const IntroDetail = React.createClass({
   propTypes: {
-    intro: React.PropTypes.string,
-    name: React.PropTypes.string,
-    url: React.PropTypes.string,
-    stars: React.PropTypes.number
+    intro: PropTypes.string,
+    name: PropTypes.string,
+    url: PropTypes.string,
+    stars: PropTypes.number
   },
   render() {
     const {
-            intro = '--',
+      intro = '--',
       name = '--',
       url = 'javascript:;',
       stars = '--',
-      repoName
-        } = this.props;
+      repoName,
+      html_url,
+      watchers_count,
+      stargazers_count,
+      forks_count
+    } = this.props;
+
     return (
       <div className="intro-detail">
         <div className="intro-name">
           {name}
         </div>
+        <div className="intro-status">
+          <a target="_blank" href={`https://www.npmjs.org/package/${repoName}`}>
+            <img src={`https://img.shields.io/npm/v/${repoName}.svg?style=flat-square`} />
+          </a>
+          <a target="_blank" href={`https://travis-ci.org/rsuite/${repoName}`}>
+            <img src={`https://img.shields.io/travis/rsuite/${repoName}.svg?style=flat-square`} />
+          </a>
+        </div>
         <div className="intro-context">
           {intro}
         </div>
+
         <div className="intro-sub-intro">
-          <a target="_blank" href={`https://www.npmjs.org/package/${repoName}`} style={{ float: 'left' }}>
-            <img src={`https://img.shields.io/npm/v/${repoName}.svg?style=flat-square`} />
-          </a>
-          <a target="_blank" href={url}><i className="icon icon-star"></i> {stars}</a>
-          <a target="_blank" href={url}><i className="icon icon-github"></i></a>
+          <a target="_blank" href={html_url}><i className="icon icon-star icon-lg"></i> {stargazers_count}</a>
+          <a target="_blank" href={html_url}><i className="icon icon-code-fork icon-lg"></i> {forks_count}</a>
         </div>
       </div>
     );
@@ -39,27 +50,24 @@ const IntroDetail = React.createClass({
 
 const IntroPanel = React.createClass({
   propTypes: {
-    url: React.PropTypes.string,
-    intro: React.PropTypes.string,
-    name: React.PropTypes.string,
-    src: React.PropTypes.string,
-    stars: React.PropTypes.number
+    url: PropTypes.string,
+    intro: PropTypes.string,
+    name: PropTypes.string,
+    src: PropTypes.string,
   },
   render() {
     const {
-            bg,
+      bg,
       url = 'javascript:;',
-      intro = '--',
-      name = '--',
-      src = 'javascript:;',
       icon,
-      stars,
-      repoName
-        } = this.props;
+      ...props
+    } = this.props;
 
     const style = {
       background: bg
     };
+
+    console.log(props);
 
 
     return (
@@ -70,7 +78,9 @@ const IntroPanel = React.createClass({
               <i className={`avatar-icon ${icon}`} style={style}></i>
             </a>
           </div>
-          <IntroDetail {...{ name, intro, src, stars, repoName }} />
+          <IntroDetail
+            {...props}
+          />
         </div>
       </Col>
     );
