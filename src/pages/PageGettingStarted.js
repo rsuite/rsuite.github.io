@@ -5,16 +5,6 @@ import { Container, Content, Row, Col } from 'rsuite';
 import { Markdown } from '../fixtures/Markdown';
 
 const PageGettingStarted = React.createClass({
-
-  componentWillMount() {
-    setTimeout(() => {
-      console.log('dddd');
-      this.setState({
-        a: 12
-      });
-    }, 5000);
-  },
-
   render: function () {
     return (
       <Content>
