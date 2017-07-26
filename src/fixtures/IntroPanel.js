@@ -67,8 +67,6 @@ const IntroPanel = React.createClass({
       background: bg
     };
 
-    console.log(props);
-
 
     return (
       <Col lg={3} md={4} sm={6} xs={12}>
