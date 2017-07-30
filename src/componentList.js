@@ -72,7 +72,27 @@ export default [
     src: 'https://github.com/rsuite/rsuite-picker'
   },
   {
-    icon: 'icon icon-bar-chart',
+    icon: 'icon icon-reorder',
+    bg: '#3385ff',
+    repoName: 'rsuite-selectpicker',
+    url: 'https://rsuitejs.com/rsuite-selectpicker',
+    name: 'SelectPicker',
+    intro: '单项选择器组件，支持分组，搜索',
+    tags: ['picker', 'select', 'selectpicker', 'dropdown'],
+    src: 'https://github.com/rsuite/rsuite-selectpicker'
+  },
+  {
+    icon: 'icon icon-list',
+    bg: '#3385ff',
+    repoName: 'rsuite-checkpicker',
+    url: 'https://rsuitejs.com/rsuite-checkpicker',
+    name: 'CheckPicker',
+    intro: '多项选择器组件，支持分组，搜索',
+    tags: ['picker', 'select', 'checkpicker', 'dropdown'],
+    src: 'https://github.com/rsuite/rsuite-checkpicker'
+  },
+  {
+    icon: 'icon icon-pie-chart',
     bg: '#990066',
     repoName: 'rsuite-echarts',
     url: 'https://rsuitejs.com/rsuite-echarts',
