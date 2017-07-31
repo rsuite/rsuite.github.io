@@ -1,14 +1,13 @@
 //The tilde character (~) tells webpack that it's not a relative import as by default. If tilde is included
 //https://survivejs.com/webpack/styling/loading/#loading-from-node_modules-directory
-@import '~rsuite-theme/dist/less/rsuite.less';
-@import '~rsuite-table/lib/less/index.less';
+@import '~rsuite-theme/dist/less/rsuite';
+@import '~rsuite-table/lib/less/index';
 @import '~codemirror/lib/codemirror.css';
 @import '~codemirror/theme/base16-light.css';
 @import '~codemirror/theme/base16-dark.css';
-@import './highlight.less';
-@import './sublime.less';
-@import './table.less';
-
+@import './highlight';
+@import './sublime';
+@import './table';
 
 //rewrite base color
 @base-color: #6292f0;
@@ -18,7 +17,7 @@
 @media-xs: 768px;
 @media-md: 992px;
 
-body{
+body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased;
 }
@@ -274,22 +273,23 @@ code {
       border-bottom: 2px solid @base-color;
     }
   }
-  .doc-code{
+  .doc-code {
     opacity: 0.3;
     filter: blur(1px);
   }
 }
 
-.banner-content{
-    width: 500px;
-    text-align: center;
-    top: 50%;
-    z-index: 200;
-    position: absolute;
-    left: 50%;
-    margin-left: -250px;
-    margin-top: -155px;
+.banner-content {
+  width: 500px;
+  text-align: center;
+  top: 50%;
+  z-index: 200;
+  position: absolute;
+  left: 50%;
+  margin-left: -250px;
+  margin-top: -155px;
 }
+
 .footer {
   margin-top: 20px;
   padding: 18px 0;
@@ -302,10 +302,8 @@ code {
   }
 }
 
-
-
 .box-wrapper {
-  .search-bar{
+  .search-bar {
 
     margin-bottom: 20px;
   }
@@ -421,7 +419,7 @@ code {
         display: block;
         text-align: center;
         font-size: 5.2em;
-        top:16px;
+        top: 16px;
       }
       @media (max-width: @media-xs) {
         &:before {
@@ -464,21 +462,21 @@ code {
       color: #595F69;
     }
 
-    .intro-status{
+    .intro-status {
       margin: 10px 0;
-      a{
+      a {
         margin-right: 10px;
       }
     }
 
-    .intro-status a:last-child{
+    .intro-status a:last-child {
       margin-right: 0;
     }
 
     .intro-sub-intro {
       font-size: 1.3em;
       text-align: right;
-      .icon{
+      .icon {
         vertical-align: inherit;
       }
 
@@ -590,70 +588,24 @@ code {
   width: 100%;
 }
 
-
-
-.rsuite-logo{
-  .cls-1{
-    fill:#648cc9;
+.rsuite-logo {
+  .cls-1 {
+    fill: #648cc9;
   }
-  .cls-2{
-    fill:#ec727d;
+  .cls-2 {
+    fill: #ec727d;
   }
-  .cls-1,.cls-2{
-    fill-rule:evenodd;
+  .cls-1, .cls-2 {
+    fill-rule: evenodd;
   }
 
 }
 
-.toggle{
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  height: 22px;
-  min-width: 44px;
-  line-height: 20px;
-  vertical-align: middle;
-  border-radius: 20px;
-  border: 1px solid transparent;
-  background-color: rgba(0,0,0,.25);
-  cursor: pointer;
-  transition: all .36s;
-  user-select: none;
+.doc-example .toggle {
+  margin-right: 8px;
 
-  .toggle-inner{
-    color: #fff;
-    font-size: 12px;
-    margin-left: 24px;
-    margin-right: 6px;
-    display: block;
-  }
-
-  &.disabled{
-    cursor: not-allowed;
-    background: #f4f4f4;
-  }
-
-  &::after{
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    left: 1px;
-    top: 1px;
-    border-radius: 18px;
-    background-color: #fff;
-    content: " ";
-    cursor: pointer;
-    transition: all .36s cubic-bezier(.78,.14,.15,.86);
-  }
-  &-checked{
-    background-color: #108ee9;
-    .toggle-inner{
-      margin-left: 6px;
-      margin-right: 24px;
-    }
-  }
-  &-checked::after{
-    left: 100%;
-    margin-left: -19px;
+  .icon {
+    width: 14px;
+    text-align: center;
   }
 }

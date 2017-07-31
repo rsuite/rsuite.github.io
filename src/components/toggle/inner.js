@@ -1,12 +1,14 @@
 var instance = (
   <div>
     <Toggle
-      checkedChildren="ON"
-      unCheckedChildren="OFF"
+      size='lg'
+      checkedChildren="打开"
+      unCheckedChildren="关闭"
     />
+
     <Toggle
-      checkedChildren={<IconFont icon="check" />}
-      unCheckedChildren={<IconFont icon="close" />}
+      checkedChildren={<IconFont icon="check"/>}
+      unCheckedChildren={<IconFont icon="close"/>}
     />
   </div>
 );
