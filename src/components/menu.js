@@ -19,6 +19,10 @@ export default [
         id: 'dropdowns',
         name: 'Dropdowns',
         title: '下拉按钮'
+      }, {
+        id: 'toggle',
+        name: 'Toggle',
+        title: '开关'
       }
     ]
   }, {

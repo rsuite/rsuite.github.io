@@ -24,7 +24,7 @@ const Button = require('rsuite/lib/Button').default;
 const ButtonToolbar = require('rsuite/lib/ButtonToolbar').default;
 const ButtonGroup = require('rsuite/lib/ButtonGroup').default;
 const Dropdown = require('rsuite/lib/Dropdown').default;
-
+const Toggle = require('rsuite/lib/Toggle').default;
 
 // Whisper
 const Whisper = require('rsuite/lib/Whisper').default;

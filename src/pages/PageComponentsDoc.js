@@ -15,4 +15,4 @@ var PageComponentsDoc = React.createClass({
   }
 });
 
-module.exports = PageComponentsDoc;
+export default PageComponentsDoc;
