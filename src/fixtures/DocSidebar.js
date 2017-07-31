@@ -19,7 +19,6 @@ const DocSidebar = React.createClass({
       item.components.map((child, index) => {
         nodeItems.push(
           <Nav.Item key={index} activeClassName="active" componentClass={Link} to={`/components/${child.id}`} >
-
             {child.name}
             <span className="nav-chinese">{child.title}</span>
           </Nav.Item>
@@ -27,14 +26,12 @@ const DocSidebar = React.createClass({
       });
     });
 
-
-
     return (
       <Sidebar >
         {children}
         <Nav className="nav-docs">
           {nodeItems}
-          <li className="nav-header">Other</li>
+          <li className="nav-header">扩展组件</li>
           {
             components.filter((item, index) => {
               return index !== 0;

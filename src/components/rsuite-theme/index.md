@@ -7,7 +7,6 @@
 在统一不同使用场景的视觉和操作体验的同时，我们建立了完整的规范体系，便于创建项目，也方便统一管理。
 我们以扁平化和简洁为主旨的设计风格，使用块面来进行布局，用线条来表达各个控件，使功能庞杂的系统 既直观又条理清晰，让使用者一目了然。选用清新的色彩为主基调，使界面清晰又不失沉稳。 主要特点：
 
-- 遵循 [HyperS](http://www.hypers.com) 前端框架 [pagurian](http://pagurian.com/design/) 设计规范。并进行了大量改进优化。
 - 配置后一键生成主题样式，多种配置方式
 - 为主流浏览器提供动效，以大幅提升使用体验
 - 支持 ie9+、chrome 、firefox 等各种主流浏览器
@@ -32,12 +31,12 @@
 新建一个文件`main.less`。
 ```less
 // 引入组件样式
-//@import "~rsuite-picker/lib/less/index"; 
+//@import "~rsuite-picker/lib/less/index";
 // 引入ruiste 样式
 @import "~rsuite-theme/dist/less/rsuite";
 @base-color: #6292f0; //修改主题颜色
 //你自己的样式
-//... 
+//...
 ```
 > 引入`rsuite`样式文件后，即可使用所有[系统预定义变量][defalut-variables]。</br>
 > 如需引入其他组件样式文件时请 **务必保证**  `rsuite` 样式文件在最后引入，否则可能会造成配色无效。
@@ -61,7 +60,7 @@ const App = ()=>{
                         </Navbar.Brand>
                         <Navbar.Toggle />
                     </Navbar.Header>
-                   
+
                 </div>
             </Header>
 

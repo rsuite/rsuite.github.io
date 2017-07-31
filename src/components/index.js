@@ -19,3 +19,4 @@ export schema from './rsuite-schema';
 export domlib from './dom-lib';
 export theme from './rsuite-theme';
 export toggle from './toggle';
+export helpBlock from './helpBlock';

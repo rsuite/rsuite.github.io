@@ -1,16 +1,11 @@
 export default [
   {
-    category: 'Buttons',
-    title: '按钮',
+    category: '按钮与图标',
     components: [
       {
         id: 'buttons',
         name: 'Buttons',
         title: '按钮'
-      }, {
-        id: 'iconFont',
-        name: 'Icon Font',
-        title: '字体图标'
       }, {
         id: 'buttonGroups',
         name: 'Button groups',
@@ -23,11 +18,14 @@ export default [
         id: 'toggle',
         name: 'Toggle',
         title: '开关'
-      }
+      }, {
+        id: 'iconFont',
+        name: 'Icon Font',
+        title: '图标'
+      },
     ]
   }, {
-    category: 'Whispers',
-    title: '辅助提示',
+    category: '帮助提示',
     components: [
       {
         id: 'tooltips',
@@ -36,12 +34,15 @@ export default [
       }, {
         id: 'popovers',
         name: 'Popovers',
-        title: '弹出层'
+        title: '弹出框'
+      },{
+        id:'helpBlock',
+        name:'HelpBlock',
+        title: '帮助提醒'
       }
     ]
   }, {
-    category: 'Navigation',
-    title: '导航相关',
+    category: '导航相关',
     components: [
       {
         id: 'navs',
@@ -62,16 +63,14 @@ export default [
       }
     ]
   }, {
-    category: 'Modals',
-    title: '模态窗口',
+    category: '浮层',
     components: [{
       id: 'modals',
       name: 'Modals',
       title: '模态窗口'
     }]
   }, {
-    category: 'Page Layout',
-    title: '页面布局',
+    category: '页面布局',
     components: [
       {
         id: 'grid',
@@ -88,8 +87,7 @@ export default [
       }
     ]
   }, {
-    category: 'Forms',
-    title: '表单',
+    category: '表单相关',
     components: [
       {
         id: 'controls',
@@ -102,8 +100,7 @@ export default [
       }
     ]
   }, {
-    category: 'Tools',
-    title: '工具',
+    category: '工具',
     components: [
       {
         id: 'schema',
