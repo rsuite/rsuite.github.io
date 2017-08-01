@@ -8,7 +8,7 @@ export default [
         title: '按钮'
       }, {
         id: 'buttonGroups',
-        name: 'Button groups',
+        name: 'Button Groups',
         title: '按钮组'
       }, {
         id: 'dropdowns',
@@ -35,9 +35,9 @@ export default [
         id: 'popovers',
         name: 'Popovers',
         title: '弹出框'
-      },{
-        id:'helpBlock',
-        name:'HelpBlock',
+      }, {
+        id: 'helpBlock',
+        name: 'HelpBlock',
         title: '帮助提醒'
       }
     ]
@@ -90,13 +90,29 @@ export default [
     category: '表单相关',
     components: [
       {
-        id: 'controls',
-        name: 'Controls',
-        title: '支持的表单控件'
+        id: 'formControl',
+        name: 'Form Control',
+        title: '表单控件'
+      }, {
+        id: 'checkbox',
+        name: 'Checkbox',
+        title: '复选框'
+      }, {
+        id: 'radio',
+        name: 'Radio',
+        title: '单选框'
+      },{
+        id: 'inputGroup',
+        name: 'InputGroup',
+        title: '输入组'
       }, {
         id: 'formLayout',
         name: 'Form layout',
         title: '表单布局'
+      }, {
+        id: 'formValidation',
+        name: 'Form Validation',
+        title: '表单验证'
       }
     ]
   }, {

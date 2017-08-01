@@ -1,4 +1,4 @@
-var instance = (
+const instance = (
   <div className='icon-example-list'>
     <IconFont icon='star' />
     <h5>动态图标</h5>

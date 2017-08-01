@@ -1,4 +1,4 @@
-var instance = (
+const instance = (
   <ButtonToolbar>
     <Button shape="default">Prev</Button>
     <ButtonGroup >

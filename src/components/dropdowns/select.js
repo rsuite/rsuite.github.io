@@ -1,8 +1,8 @@
 function handleSelect(eventKey) {
-  alert(eventKey);
+  console.log(eventKey);
 }
 
-var instance = (
+const instance = (
   <Dropdown shape='default' activeKey="C" onSelect={handleSelect} select>
     <Dropdown.Item eventKey="A" >Item A</Dropdown.Item>
     <Dropdown.Item eventKey="B" >Item B</Dropdown.Item>

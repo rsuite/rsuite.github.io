@@ -79,7 +79,8 @@ const Example = React.createClass({
   },
   getInitialState: function () {
     return {
-      code: this.props.code
+      code: this.props.code,
+      showCode: false
     };
   },
 
@@ -116,6 +117,11 @@ const Example = React.createClass({
     this.setState({ code: val });
     this.executeCode();
   },
+  handleShowCode() {
+    const showCode = !this.state.showCode;
+    this.setState({ showCode });
+
+  },
   renderExample() {
 
     let example = (
@@ -129,6 +135,7 @@ const Example = React.createClass({
     );
   },
   render: function () {
+
     this.executeCode();
 
     if (this.props.isBanner) {
@@ -146,16 +153,25 @@ const Example = React.createClass({
       );
     }
 
+    const { showCode } = this.state;
+
     return (
       <div className="doc-example-wrapper">
         {this.renderExample()}
+
         <CodeEditor
+          lineNumbers
           key="jsx"
           onChange={this.handleCodeChange}
-          className="doc-code"
+          className={`doc-code ${showCode ? 'show' : ''}`}
           theme="base16-light"
           code={this.state.code}
         />
+        <div className="doc-example-toolbar">
+          <Button size="xs" onClick={this.handleShowCode}>
+            <IconFont icon="code" /> {showCode ? '代码' : '代码'}
+          </Button>
+        </div>
       </div>
     );
   }

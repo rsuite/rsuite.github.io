@@ -7,17 +7,15 @@ exports.Markdown = React.createClass({
     doc: React.PropTypes.bool
   },
   createMarkup: function () {
-
     return { __html: this.props.children };
   },
   render: function () {
-
-    var Tag = this.props.doc ? Doc : 'div';
-
+    const { doc, className } = this.props;
+    const Tag = doc ? Doc : 'div';
     return (
       <Tag
         dangerouslySetInnerHTML={this.createMarkup()}
-        className={this.props.className || 'markdown'}
+        className={className || 'markdown'}
       />
     );
   }

@@ -1,5 +1,5 @@
 
-var instance = (
+const instance = (
   <Nav pills >
     <Nav.Item active eventKey="A">Item A</Nav.Item>
     <Nav.Item eventKey="B">Item B</Nav.Item>

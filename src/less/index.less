@@ -6,9 +6,7 @@
 @import '~codemirror/theme/base16-light.css';
 @import '~codemirror/theme/base16-dark.css';
 @import './highlight';
-@import './sublime';
 @import './table';
-
 //rewrite base color
 @base-color: #6292f0;
 @bg-color: #fbfbfb;
@@ -16,13 +14,14 @@
 @header-height: 64px;
 @media-xs: 768px;
 @media-md: 992px;
-
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased;
 }
 
+
 /* Demo */
+
 .demo {
   font-size: 1.2em;
   text-align: center;
@@ -38,17 +37,15 @@ body {
   background: @bg-color;
 }
 
-.box-shadow(@x:0px, @y:2px, @blur:3px, @color:rgba(0, 0, 0, 0.28)) {
+.box-shadow(@x: 0px, @y: 2px, @blur: 3px, @color: rgba(0, 0, 0, 0.28)) {
   -moz-box-shadow: @arguments;
   -webkit-box-shadow: @arguments;
   box-shadow: @arguments;
 }
 
 .doc-header {
-
   background: #fff;
   border-color: #fff;
-
   &.navbar {
     height: @header-height;
   }
@@ -63,21 +60,18 @@ body {
     height: @header-height;
     padding: 15px 0;
     .logo;
-
     @media (max-width: @media-xs) {
       & {
         margin-left: 10px;
       }
     }
   }
-
   .navbar-nav > li > a {
     height: @header-height;
     line-height: 39px;
     padding: 10px 30px;
     transition: none;
   }
-
   .navbar-nav > li {
     a {
       background: none !important;
@@ -87,13 +81,11 @@ body {
       }
     }
     &.active a, a:focus, a:active {
-
       color: @base-color;
       border-bottom: 2px solid @base-color;
       padding-bottom: 8px;
     }
   }
-
 }
 
 .doc-container {
@@ -103,11 +95,9 @@ body {
     border: none;
     font-size: 24px;
   }
-
   h3 {
-    font-size: 18px;
+    font-size: 16px;
   }
-
   .page-header-en {
     color: #777;
     font-size: 14px;
@@ -139,7 +129,6 @@ body {
 }
 
 .nav.nav-docs {
-
   a {
     color: #575757;
     font-weight: 200;
@@ -168,7 +157,25 @@ body {
 }
 
 .doc-example-wrapper {
+  position: relative;
   margin-bottom: 18px;
+  border: 1px dashed #f1f1f1;
+  padding: 18px 18px 28px 18px;
+  .doc-example-toolbar {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    .btn {
+      border-style: dashed;
+    }
+  }
+  .doc-code {
+    height: 0;
+    overflow: hidden;
+    &.show {
+      height: auto;
+    }
+  }
 }
 
 .doc-example {
@@ -196,11 +203,9 @@ body {
     padding: 10px 5px;
     border: 1px solid #DDD;
     background: #F1F1F1;
-
-    &:not(:last-child), &.col-md-pull-6 {
+    &:not(: last-child), &.col-md-pull-6 {
       border-right: none;
     }
-
     &.col-md-push-6 {
       border-right: 1px solid #DDD;
     }
@@ -211,18 +216,38 @@ body {
   padding: 10px;
   margin: 10px 0;
   height: auto !important;
+  pre {
+    padding: 0 20px;
+  }
 }
 
 .markdown {
+  h1 {
+    font-size: 24px;
+    margin-bottom: 22px;
+    code {
+      font-size: 14px;
+      border-radius: 4px;
+    }
+  }
+  h2 {
+    font-size: 18px;
+    margin-top: 40px;
+    padding: 10px 0;
+    color: #151515;
+    font-weight: bold;
+  }
+  h3 {
+    font-size: 16px;
+  }
   ol, ul {
     padding: 10px 20px;
   }
   table {
     width: 100%;
-
     td, th {
-      border-bottom: 1px solid #EEE;
-      padding: 10px 0;
+      border: 1px dashed #f1f1f1;
+      padding: 10px;
     }
   }
 }
@@ -304,7 +329,6 @@ code {
 
 .box-wrapper {
   .search-bar {
-
     margin-bottom: 20px;
   }
   .intro-block {
@@ -313,7 +337,6 @@ code {
     text-align: center;
     box-shadow: 0px 1px 3px #CCC;
     transition: all .3s linear;
-
     &:hover {
       opacity: 1;
       .icon-wrapper i {
@@ -321,18 +344,15 @@ code {
       }
     }
   }
-
   .intro-content {
     padding: 0 18px 18px;
   }
-
   .thumb a {
     color: #333;
     display: block;
     position: relative;
     padding-top: 60%;
     background: #F5F5F5;
-
     &:before {
       content: "RSuite";
       position: absolute;
@@ -352,7 +372,6 @@ code {
     top: 0;
     left: 0;
   }
-
   .intro {
     color: #999;
     height: 40px;
@@ -360,20 +379,17 @@ code {
     text-overflow: ellipsis;
     white-space: normal;
   }
-
   .info {
     .title {
       color: #333;
       font-weight: bold;
     }
-
     .code {
       color: #999;
       float: right;
       display: none;
     }
   }
-
   .icon-wrapper {
     padding: 18px;
     display: block;
@@ -393,7 +409,6 @@ code {
   margin-top: 16%;
   position: relative;
   box-shadow: 0 1px 1px 0 #CCCBCB;
-
   .avatar {
     width: 37%;
     padding-bottom: 37%;
@@ -402,7 +417,6 @@ code {
     top: -5.5%;
     left: 8%;
     border-radius: 2px;
-
     .avatar-icon {
       position: absolute;
       width: 100%;
@@ -412,7 +426,6 @@ code {
       bottom: 0;
       margin: auto;
       border-radius: 2px;
-
       &:before {
         position: absolute;
         width: 100%;
@@ -426,13 +439,11 @@ code {
           font-size: 88px;
         }
       }
-
       @media (min-width: @media-xs) {
         &:before {
           font-size: 88px;
         }
       }
-
       @media (min-width: @media-md) {
         &:before {
           font-size: 68px;
@@ -440,19 +451,16 @@ code {
       }
     }
   }
-
   .intro-detail {
     padding: 0 8% 8%;
     position: absolute;
     width: 100%;
     color: #575757;
-
     .intro-name {
       font-weight: 600;
       font-size: 1.2em;
       white-space: nowrap;
     }
-
     .intro-context {
       margin-top: 10%;
       display: block;
@@ -461,32 +469,26 @@ code {
       max-height: 1px;
       color: #595F69;
     }
-
     .intro-status {
       margin: 10px 0;
       a {
         margin-right: 10px;
       }
     }
-
     .intro-status a:last-child {
       margin-right: 0;
     }
-
     .intro-sub-intro {
       font-size: 1.3em;
       text-align: right;
       .icon {
         vertical-align: inherit;
       }
-
       > a {
         color: #9BA3AF;
-
-        &:not(:last-child) {
+        &:not(: last-child) {
           margin-right: 18px;
         }
-
         &:hover {
           text-decoration: none;
         }
@@ -499,25 +501,20 @@ code {
   0%, 100%, 60%, 75%, 90% {
     animation-timing-function: cubic-bezier(0.215, .61, .355, 1);
   }
-
   0% {
     opacity: 0;
     transform: rotate(-45deg) translate3d(3000px, 0, 0);
   }
-
   60% {
     opacity: 1;
     transform: rotate(-45deg) translate3d(-25px, 0, 0);
   }
-
   75% {
     transform: rotate(-45deg) translate3d(10px, 0, 0);
   }
-
   90% {
     transform: rotate(-45deg) translate3d(-5px, 0, 0);
   }
-
   100% {
     transform: rotate(-45deg);
   }
@@ -527,7 +524,6 @@ code {
   0% {
     opacity: 0
   }
-
   100% {
     opacity: 1
   }
@@ -552,7 +548,6 @@ code {
       font-size: 36px;
       transition: transform .3s ease-in-out;
       cursor: pointer;
-
       &:hover {
         transform: scale(1.5);
       }
@@ -563,7 +558,6 @@ code {
     text-align: center;
     height: 30px;
   }
-
   .text-danger {
     color: @danger-color;
   }
@@ -598,12 +592,10 @@ code {
   .cls-1, .cls-2 {
     fill-rule: evenodd;
   }
-
 }
 
 .doc-example .toggle {
   margin-right: 8px;
-
   .icon {
     width: 14px;
     text-align: center;

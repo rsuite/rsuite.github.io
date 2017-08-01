@@ -21,7 +21,7 @@ export default React.createClass({
           </span>
         </h1>
 
-        <h3>默认样式</h3>
+        <h3>默认</h3>
         <Example code={examples.basic} />
 
 

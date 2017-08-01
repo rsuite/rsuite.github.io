@@ -1,4 +1,4 @@
-var instance = (
+const instance = (
   <Navbar >
     <Navbar.Header>
       <Navbar.Brand>

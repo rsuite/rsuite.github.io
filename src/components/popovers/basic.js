@@ -3,7 +3,7 @@ const tooltip = (
     This is a <i>popover</i> .
     </Popover>
 );
-var instance = (
+const instance = (
   <ButtonToolbar>
     <Whisper placement="top" speaker={tooltip} >
       <Button shape='default' >Top</Button>

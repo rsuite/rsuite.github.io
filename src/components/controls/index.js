@@ -30,7 +30,7 @@ export default React.createClass({
         </h1>
         <p>表单数据验证，查看 <a href="https://rsuitejs.com/form-lib/" target="_blank">form-lib</a></p>
 
-        <h3>默认样式</h3>
+        <h3>默认</h3>
         <Example code={examples.basic} />
 
 

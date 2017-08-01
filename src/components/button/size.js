@@ -1,4 +1,4 @@
-var instance = (
+const instance = (
   <ButtonToolbar>
     <Button shape='default' size='lg'>Large</Button>
     <Button shape='default' size='md'>Medium</Button>

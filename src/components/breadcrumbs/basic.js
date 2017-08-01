@@ -1,4 +1,4 @@
-var instance = (
+const instance = (
   <Breadcrumb>
     <Breadcrumb.Item componentClass={Link} to="/">
       Home

@@ -13,7 +13,7 @@ function renderButtonGroup(size, index) {
     </ButtonToolbar>
   );
 }
-var instance = (
+const instance = (
   <div>
     {SIZES.map(renderButtonGroup)}
   </div>

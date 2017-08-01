@@ -23,7 +23,7 @@ export default React.createClass({
         <h3>默认</h3>
         <Example code={examples.basic} />
 
-        <h3>多状态</h3>
+        <h3>多形态</h3>
         <Example code={examples.shape} />
 
         <h3>组件属性</h3>

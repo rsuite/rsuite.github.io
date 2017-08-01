@@ -1,5 +1,5 @@
 
-var instance = (
+const instance = (
   <ButtonToolbar>
     <Dropdown shape='default' title="Default" block>
       <Dropdown.Item eventKey="A" >Item A</Dropdown.Item>

@@ -11,23 +11,27 @@ const examples = {
   justified: require('fs').readFileSync(__dirname + '/justified.js', 'utf8'),
   sizing: require('fs').readFileSync(__dirname + '/sizing.js', 'utf8')
 };
+const docs = require('./index.md').split('<!--{demo}-->');
+
 
 export default React.createClass({
   render() {
     return (
       <Col md={9} sm={12}>
-        <h1 className="page-header">
-          Button Groups
-            <span className="page-header-en">
-            <code>{'<ButtonGroup>'}</code>、
-            <code>{'<ButtonToolbar>'}</code>
-          </span>
-        </h1>
+
+        <Markdown>{docs[0]}</Markdown>
 
         <h3>默认</h3>
         <Example code={examples.basic} />
 
-        <h3>大小</h3>
+        <h3>按钮组大小</h3>
+        <Text>
+          <code>size</code>属性设置按钮组大小, 选项包括:
+          <code>lg</code>、
+          <code>md</code>、
+          <code>sm</code>、
+          <code>xs</code>
+        </Text>
         <Example code={examples.sizing} />
 
         <h3>按钮工具栏</h3>
@@ -41,14 +45,10 @@ export default React.createClass({
         <Example code={examples.block} />
 
 
-        <h3>满陈列</h3>
+        <h3>调整使全行排满，两端对齐</h3>
         <Example code={examples.justified} />
 
-
-        <h3>组件属性</h3>
-        <Markdown>
-          {require('./props.md')}
-        </Markdown>
+        <Markdown>{docs[1]}</Markdown>
 
       </Col>
     );

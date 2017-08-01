@@ -1,4 +1,4 @@
-var instance = (
+const instance = (
   <Nav pills justified>
     <Nav.Item active>Item A</Nav.Item>
     <Nav.Item>Item B</Nav.Item>

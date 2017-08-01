@@ -11,7 +11,7 @@ function renderButtonGroup(shape, index) {
     </Dropdown>
   );
 }
-var instance = (
+const instance = (
   <ButtonToolbar>
     {SHAPES.map(renderButtonGroup)}
   </ButtonToolbar>

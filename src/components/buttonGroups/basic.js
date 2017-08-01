@@ -1,4 +1,4 @@
-var instance = (
+const instance = (
   <ButtonGroup>
     <Button shape="default">Left</Button>
     <Button shape="default">Middle</Button>

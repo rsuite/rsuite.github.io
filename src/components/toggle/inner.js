@@ -1,4 +1,4 @@
-var instance = (
+const instance = (
   <div>
     <Toggle
       size='lg'

@@ -1,4 +1,5 @@
+
 const instance = (
-  <Toggle />
+  <Button disabled>Disabled</Button>
 );
 ReactDOM.render(instance, mountNode);

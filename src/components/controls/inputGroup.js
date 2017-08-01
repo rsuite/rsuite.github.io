@@ -1,4 +1,4 @@
-var instance = (
+const instance = (
   <Form >
     <FormGroup>
       <InputGroup>
