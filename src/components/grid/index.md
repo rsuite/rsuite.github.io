@@ -1,17 +1,28 @@
-# Grid
+# Grid [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/grid/index.md)
+网格系统，包含下面组件：
+* `<Grid>`
+* `<Row>`
+* `<Col>`
+
+## 演示
+
+<!--{demo}-->
+
+## Props
+### Grid
 
 属性名称           | 类型          | 默认值   | 描述
 -------------- | ----------- | ----- | --
 componentClass | elementType | `div` |
 fluid          | boolean     | false |
 
-# Row
+### Row
 
 属性名称           | 类型          | 默认值   | 描述
 -------------- | ----------- | ----- | --
 componentClass | elementType | `div` |
 
-# Col
+### Col
 
 属性名称           | 类型                                  | 默认值   | 描述
 -------------- | -------------- | ----- | --------------

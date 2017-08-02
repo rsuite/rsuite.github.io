@@ -1,4 +1,15 @@
-# Panel
+# Panel [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/panels/index.md)
+面板
+
+
+## 演示
+
+<!--{demo}-->
+
+
+
+## Props
+### Panel
 
 属性名称            | 类型                                                                           | 默认值     | 描述
 --------------- | ---------------------------------------------------------------------------- | ------- | --
@@ -18,7 +29,7 @@ onExit          | function                                                      
 onExiting       | function                                                                     |         |
 onExited        | function                                                                     |         |
 
-# PanelGroup
+### PanelGroup
 
 属性名称             | 类型       | 默认值   | 描述
 ---------------- | -------- | ----- | --
