@@ -1,4 +1,8 @@
+### 块级的 Dropdown
 
+创建块级的 `Dropdown`，给组件设置一个 `block` 属性， 如果需要内容非居中，而是两端对齐，设置一个 `bothEnds` 属性。
+
+```js
 const instance = (
   <ButtonToolbar>
     <Dropdown shape='default' title="Default" block>
@@ -18,3 +22,4 @@ const instance = (
   </ButtonToolbar>
 );
 ReactDOM.render(instance, mountNode);
+```

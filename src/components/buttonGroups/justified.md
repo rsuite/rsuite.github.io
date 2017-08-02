@@ -1,3 +1,6 @@
+### 调整使全行排满，两端对齐
+
+```js
 const instance = (
   <ButtonGroup justified>
     <Button shape="default" href="#">Left</Button>
@@ -7,3 +10,4 @@ const instance = (
 );
 
 ReactDOM.render(instance, mountNode);
+```

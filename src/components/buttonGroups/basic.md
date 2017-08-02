@@ -1,3 +1,6 @@
+### 默认
+
+```js
 const instance = (
   <ButtonGroup>
     <Button shape="default">Left</Button>
@@ -6,3 +9,4 @@ const instance = (
   </ButtonGroup>
 );
 ReactDOM.render(instance, mountNode);
+```

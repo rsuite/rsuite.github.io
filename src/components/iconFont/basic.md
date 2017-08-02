@@ -1,3 +1,4 @@
+```js
 const instance = (
   <div className='icon-example-list'>
     <IconFont icon='star' />
@@ -29,3 +30,4 @@ const instance = (
   </div>
 );
 ReactDOM.render(instance, mountNode);
+```

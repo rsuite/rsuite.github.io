@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormControl} from 'rsuite';
+import { FormControl } from 'rsuite';
 import NotificationSystem from 'react-notification-system';
 import IconItem from './IconItem';
 
@@ -32,7 +32,7 @@ export default React.createClass({
     };
 
     const filterByCatogry = (iconConf) => {
-      const {id, filter = [], categories = []} = iconConf;
+      const { id, filter = [], categories = [] } = iconConf;
       const searchKeys = [id, ...filter, ...categories].map(key => key.toUpperCase());
       return searchKeys.filter(filterByIconName).length > 0;
     };
@@ -61,8 +61,8 @@ export default React.createClass({
           <h4 className="col-md-12">{category}</h4>
           {
             icons[category].map((iconConf, j) => {
-              const {id: icon} = iconConf;
-              return <IconItem icon={icon} key={`${j}-${icon}`} handleCopy={this.handleCopy}/>;
+              const { id: icon } = iconConf;
+              return <IconItem icon={icon} key={`${j}-${icon}`} handleCopy={this.handleCopy} />;
             })
           }
         </div>
@@ -70,17 +70,20 @@ export default React.createClass({
     });
   },
   render() {
-    const {icons} = this.state;
+    const { icons } = this.state;
     return (
       <div className="icon-list-wrap">
-        <FormControl type='text'
-                     placeholder="输入关键字进行搜索，如: hypers。然后点击图标，复制图标名称。"
-                     onChange={this.handleSearch}/>
+        <h3>搜索</h3>
+        <FormControl
+          type='text'
+          placeholder="输入关键字进行搜索，如: hypers。然后点击图标，复制图标名称。"
+          onChange={this.handleSearch}
+        />
         <hr />
         <div className="row icon-item-list">
           {icons.length > 0 ? this.renderIcon(icons) : <NoneDom />}
         </div>
-        <NotificationSystem ref={ref => this._notificationSystem = ref}/>
+        <NotificationSystem ref={ref => this._notificationSystem = ref} />
       </div>
     );
   }

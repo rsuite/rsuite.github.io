@@ -1,3 +1,6 @@
+### 默认
+
+```js
 const SHAPES = ['default', 'primary', 'success', 'warning', 'danger', 'info', 'link'];
 
 function renderButtonGroup(shape, index) {
@@ -17,3 +20,4 @@ const instance = (
   </ButtonToolbar>
 );
 ReactDOM.render(instance, mountNode);
+```
