@@ -1,3 +1,5 @@
+### 单行布局
+```js
 var formLayoutInstance = (
   <Form inline>
     <FormGroup controlId='username'>
@@ -23,3 +25,4 @@ var formLayoutInstance = (
   </Form>
 );
 ReactDOM.render(formLayoutInstance, mountNode);
+```

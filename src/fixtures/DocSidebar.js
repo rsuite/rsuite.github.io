@@ -17,12 +17,16 @@ const DocSidebar = React.createClass({
       );
 
       item.components.map((child, index) => {
-        nodeItems.push(
-          <Nav.Item key={index} activeClassName="active" componentClass={Link} to={`/components/${child.id}`} >
+        const item = child.url
+          ? <Nav.Item key={index} activeClassName="active" componentClass="a" target="_blank" href={child.url}>
             {child.name}
             <span className="nav-chinese">{child.title}</span>
           </Nav.Item>
-        );
+          : <Nav.Item key={index} activeClassName="active" componentClass={Link} to={`/components/${child.id}`} >
+            {child.name}
+            <span className="nav-chinese">{child.title}</span>
+          </Nav.Item>;
+        nodeItems.push(item);
       });
     });
 
