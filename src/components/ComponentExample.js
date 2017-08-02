@@ -18,7 +18,7 @@ export function splitDocs(html) {
 export default React.createClass({
 
   render() {
-    const { context, examples } = this.props;
+    const { context, examples, children } = this.props;
     const docs = context.split('<!--{demo}-->');
 
     return (
@@ -30,6 +30,7 @@ export default React.createClass({
           ))
         }
         <Markdown>{docs[1]}</Markdown>
+        {children}
       </Col>
     );
   }
