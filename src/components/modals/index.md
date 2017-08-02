@@ -1,3 +1,15 @@
+# Modal [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/modals/index.md)
+模态框对话框。包含下面组件：
+* `<Modal.Header>`
+* `<Modal.Title>`
+*  `<Modal.Body>`
+* `<Modal.Footer>`
+
+## 演示
+
+<!--{demo}-->
+
+## Props
 属性名称                 | 类型                            | 默认值         | 描述
 -------------------- | ----------------------------- | ----------- | ------
 animation            | boolean                       | true        | show或hide的时候有个渐变的动画
