@@ -77,15 +77,8 @@ const common = {
         use: [
           {
             loader: 'css-loader',
-            options: {
-              minimize: NODE_ENV === 'production'
-            }
           }, {
-            loader: 'less-loader',
-            options: {
-              //remove style file  annotation
-              discardComments: { removeAll: NODE_ENV === 'production' }
-            }
+            loader: 'less-loader'
           }
         ],
         // use style-loader in development
