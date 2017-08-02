@@ -1,3 +1,5 @@
+### 基本用法
+```js
 const ModalsBasic = React.createClass({
   getInitialState() {
     return {
@@ -63,3 +65,4 @@ const ModalsBasic = React.createClass({
 
 
 ReactDOM.render(<ModalsBasic />, mountNode);
+```
