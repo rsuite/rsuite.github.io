@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import ComponentExample, { splitDocs } from '../ComponentExample';
 
