@@ -51,7 +51,7 @@ export default [
       }, {
         id: 'navbars',
         name: 'Navbars',
-        title: '导航条'
+        title: '导航栏'
       }, {
         id: 'breadcrumbs',
         name: 'Breadcrumbs',
