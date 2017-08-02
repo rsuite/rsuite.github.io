@@ -164,6 +164,11 @@ const Example = React.createClass({
         <Markdown>{text}</Markdown>
         <div className="doc-example-wrapper">
           {this.renderExample()}
+          <div className="doc-example-toolbar">
+            <Button size="xs" onClick={this.handleShowCode}>
+              <IconFont icon="code" /> {showCode ? '代码' : '代码'}
+            </Button>
+          </div>
           <CodeEditor
             lineNumbers
             key="jsx"
@@ -172,16 +177,10 @@ const Example = React.createClass({
             theme="base16-light"
             code={this.state.code}
           />
-          <div className="doc-example-toolbar">
-            <Button size="xs" onClick={this.handleShowCode}>
-              <IconFont icon="code" /> {showCode ? '代码' : '代码'}
-            </Button>
-          </div>
         </div>
       </div>
     );
   }
 });
-
 
 export default Example;
