@@ -1,4 +1,9 @@
 
+### 块级按钮
+
+创建块级的按钮，给组件设置一个 `block` 属性
+
+```js
 const instance = (
   <ButtonToolbar>
     <Button shape='default' block>Block</Button>
@@ -6,3 +11,4 @@ const instance = (
   </ButtonToolbar>
 );
 ReactDOM.render(instance, mountNode);
+```

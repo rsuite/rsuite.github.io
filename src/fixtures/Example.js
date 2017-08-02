@@ -11,6 +11,8 @@ import * as RSTable from 'rsuite-table';
 import * as RForm from 'rsuite-form';
 import * as Schema from 'rsuite-schema';
 
+import { Markdown } from './Markdown';
+
 
 
 const RSuiteForm = RForm.Form;
@@ -74,6 +76,7 @@ const Example = React.createClass({
   propTypes: {
     code: React.PropTypes.string.isRequired,
     renderCode: React.PropTypes.bool,
+    text: React.PropTypes.node,
     id: React.PropTypes.string,
     isBanner: React.PropTypes.bool
   },
@@ -136,9 +139,10 @@ const Example = React.createClass({
   },
   render: function () {
 
-    this.executeCode();
+    const { text, isBanner } = this.props;
 
-    if (this.props.isBanner) {
+    this.executeCode();
+    if (isBanner) {
       return (
         <div className="container">
           <CodeEditor
@@ -156,21 +160,23 @@ const Example = React.createClass({
     const { showCode } = this.state;
 
     return (
-      <div className="doc-example-wrapper">
-        {this.renderExample()}
-
-        <CodeEditor
-          lineNumbers
-          key="jsx"
-          onChange={this.handleCodeChange}
-          className={`doc-code ${showCode ? 'show' : ''}`}
-          theme="base16-light"
-          code={this.state.code}
-        />
-        <div className="doc-example-toolbar">
-          <Button size="xs" onClick={this.handleShowCode}>
-            <IconFont icon="code" /> {showCode ? '代码' : '代码'}
-          </Button>
+      <div>
+        <Markdown>{text}</Markdown>
+        <div className="doc-example-wrapper">
+          {this.renderExample()}
+          <CodeEditor
+            lineNumbers
+            key="jsx"
+            onChange={this.handleCodeChange}
+            className={`doc-code ${showCode ? 'show' : ''}`}
+            theme="base16-light"
+            code={this.state.code}
+          />
+          <div className="doc-example-toolbar">
+            <Button size="xs" onClick={this.handleShowCode}>
+              <IconFont icon="code" /> {showCode ? '代码' : '代码'}
+            </Button>
+          </div>
         </div>
       </div>
     );

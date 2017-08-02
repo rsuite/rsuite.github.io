@@ -22,6 +22,7 @@
   "dependencies": {
     "classnames": ">=2.0.0",
     "dom-lib": "^0.0.10",
+    "jquery": "^3.2.1",
     "lodash": "^4.11.1",
     "react": "^0.14.9",
     "react-dom": "^0.14.9",
