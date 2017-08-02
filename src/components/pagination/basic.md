@@ -1,3 +1,6 @@
+### 默认
+
+```js
 const PaginationBasic = React.createClass({
   getInitialState() {
     return {
@@ -18,25 +21,26 @@ const PaginationBasic = React.createClass({
           size="lg"
           pages={10}
           activePage={this.state.activePage}
-          onSelect={this.handleSelect} />
-
+          onSelect={this.handleSelect}
+        />
         <br />
         <Pagination
           size="md"
           pages={10}
           activePage={this.state.activePage}
-          onSelect={this.handleSelect} />
-
+          onSelect={this.handleSelect}
+        />
         <br />
         <Pagination
           size="sm"
           pages={10}
           activePage={this.state.activePage}
-          onSelect={this.handleSelect} />
+          onSelect={this.handleSelect}
+        />
       </div>
     );
   }
 });
 
-
 ReactDOM.render(<PaginationBasic />, mountNode);
+```

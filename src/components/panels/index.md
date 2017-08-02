@@ -7,35 +7,34 @@
 <!--{demo}-->
 
 
-
 ## Props
-### Panel
+### `<Panel>`
 
-属性名称            | 类型                                                                           | 默认值     | 描述
---------------- | ---------------------------------------------------------------------------- | ------- | --
-collapsible     | boolean                                                                      | false   |
-classPrefix     | string                                                                       | `panel` |
-defaultExpanded | boolean                                                                      | false   |
-expanded        | boolean                                                                      |         |
-eventKey        | any                                                                          |         |
-header          | node                                                                         |         |
-id              | string 或者 number                                                             |         |
-shape           | one of: `default`, `primary`, `link`, `success`, `warning`, `danger`, `info` |         |
-onSelect        | function                                                                     |         |
-onEnter         | function                                                                     |         |
-onEntering      | function                                                                     |         |
-onEntered       | function                                                                     |         |
-onExit          | function                                                                     |         |
-onExiting       | function                                                                     |         |
-onExited        | function                                                                     |         |
+| 属性名称            | 类型               | 默认值       | 描述                                                                          |
+|-----------------|------------------|-----------|-----------------------------------------------------------------------------|
+| collapsible     | boolean          |           | 可折叠的                                                                        |
+| classPrefix     | string           | `'panel'` |                                                                             |
+| defaultExpanded | boolean          |           | 默认展开                                                                        |
+| expanded        | boolean          |           | 展开                                                                          |
+| eventKey        | any              |           |                                                                             |
+| header          | node             |           | 头部显示信息                                                                      |
+| id              | string or number |           |                                                                             |
+| shape           | string           |           | 样式，可选项：`default`, `primary`, `link`, `success`, `warning`, `danger`, `info` |
+| onSelect        | function         |           |                                                                             |
+| onEnter         | function         |           |                                                                             |
+| onEntering      | function         |           |                                                                             |
+| onEntered       | function         |           |                                                                             |
+| onExit          | function         |           |                                                                             |
+| onExiting       | function         |           |                                                                             |
+| onExited        | function         |           |                                                                             |
 
-### PanelGroup
+### `<PanelGroup>`
 
-属性名称             | 类型       | 默认值   | 描述
----------------- | -------- | ----- | --
-accordion        | boolean  | false |
-classPrefix      | string   |       |
-children         | node     |       |
-activeKey        | any      |       |
-defaultActiveKey | any      |       |
-onSelect         | function |       |
+| 属性名称             | 类型       | 默认值 | 描述  |
+|------------------|----------|-----|-----|
+| accordion        | boolean  |     |     |
+| classPrefix      | string   |     |     |
+| children         | node     |     |     |
+| activeKey        | any      |     |     |
+| defaultActiveKey | any      |     |     |
+| onSelect         | function |     |     |

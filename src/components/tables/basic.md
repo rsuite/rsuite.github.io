@@ -1,4 +1,4 @@
-### 基本用法
+### 默认
 
 ```js
 const tableInstance = (

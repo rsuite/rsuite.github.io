@@ -1,9 +1,15 @@
+### 响应式
+
+在小屏幕上 `Navbar.Collapse` 中的元素会隐藏， 可以设置一个 `Navbar.Toggle` 按钮，点击后展开被隐藏的元素。
+
+```js
 const instance = (
-  <Navbar >
+  <Navbar inverse>
     <Navbar.Header>
       <Navbar.Brand>
         <a href="#">Suite</a>
       </Navbar.Brand>
+      <Navbar.Toggle />
     </Navbar.Header>
     <Navbar.Collapse>
       <Nav>
@@ -26,3 +32,4 @@ const instance = (
   </Navbar>
 );
 ReactDOM.render(instance, mountNode);
+```

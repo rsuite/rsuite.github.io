@@ -1,11 +1,10 @@
-### RadioGroup 内联
+### Radio Group 内联
 
 
 ```js
 const instance = (
   <Form>
     <FormGroup controlId='radioList'>
-      <ControlLabel>RadioGroup inline</ControlLabel>
       <RadioGroup name="radioList" value="C" inline>
         <Radio value="A">Item A</Radio>
         <Radio value="B">Item B</Radio>

@@ -1,10 +1,12 @@
+### 默认
+
+```js
 const instance = (
-  <Navbar inverse>
+  <Navbar >
     <Navbar.Header>
       <Navbar.Brand>
         <a href="#">Suite</a>
       </Navbar.Brand>
-      <Navbar.Toggle />
     </Navbar.Header>
     <Navbar.Collapse>
       <Nav>
@@ -27,3 +29,4 @@ const instance = (
   </Navbar>
 );
 ReactDOM.render(instance, mountNode);
+```

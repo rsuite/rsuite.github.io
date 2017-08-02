@@ -10,7 +10,7 @@
 
 ## Props
 
-### Checkbox
+### `<Checkbox>`
 属性名称     | 类型          | 默认值   | 描述
 -------- | ----------- | ----- | --
 id       | elementType |       |
@@ -22,7 +22,7 @@ checked  | boolean     |       |
 onClick  | function    |       |
 onChange | function    |       |
 
-### CheckboxGroup
+### `<CheckboxGroup>`
 
 性名称    | 类型      | 默认值   | 描述
 ------ | ------- | ----- | --

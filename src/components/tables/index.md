@@ -10,8 +10,8 @@
 ## Props
 属性名称       | 类型      | 默认值 | 描述
 ---------- | ------- | --- | --
-bordered   | boolean |     |
-condensed  | boolean |     |
-hover      | boolean |     |
-responsive | boolean |     |
-striped    | boolean |     |
+bordered   | boolean |     | 显示边框
+condensed  | boolean |     | 缩小表格
+hover      | boolean |     | hover 行的时候，高亮背景
+responsive | boolean |     | 响应式表格
+striped    | boolean |     | 行间隔高亮

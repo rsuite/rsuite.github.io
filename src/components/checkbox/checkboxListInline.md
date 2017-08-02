@@ -1,11 +1,10 @@
-### CheckboxGroup 内联
+### Checkbox Group 内联
 
 
 ```js
 const instance = (
   <Form>
-    <FormGroup controlId='checkboxList' >
-      <ControlLabel>CheckboxGroup inline</ControlLabel>
+    <FormGroup controlId='checkboxList'>
       <CheckboxGroup name="checkboxList" value={['A', 'C']} inline>
         <Checkbox value="A">Item A</Checkbox>
         <Checkbox value="B">Item B</Checkbox>

@@ -1,10 +1,12 @@
+### 高级选项
+
+```js
 const PaginationAdvanced = React.createClass({
   getInitialState() {
     return {
       activePage: 1
     };
   },
-
   handleSelect(eventKey) {
     this.setState({
       activePage: eventKey
@@ -29,3 +31,4 @@ const PaginationAdvanced = React.createClass({
 });
 
 ReactDOM.render(<PaginationAdvanced />, mountNode);
+```

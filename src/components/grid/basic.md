@@ -1,4 +1,5 @@
-### 基本用法
+
+### 默认
 
 ```js
 const gridInstance = (
@@ -25,5 +26,4 @@ const gridInstance = (
   </Grid>
 );
 ReactDOM.render(gridInstance, mountNode);
-
 ```

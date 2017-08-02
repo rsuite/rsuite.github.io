@@ -10,21 +10,21 @@
 
 
 ## Props
-### FormGroup
+### `<FormGroup>`
 
 属性名称            | 类型                                         | 默认值 | 描述
 --------------- | ------------------------------------------ | --- | --
 controlId       | string                                     |     |
 validationState | one of:`'success'`, `'warning'`, `'error'` |     |
 
-### ControlLabel
+### `<ControlLabel>`
 
 属性名称    | 类型      | 默认值   | 描述
 ------- | ------- | ----- | --
 htmlFor | string  |       |
 srOnly  | boolean | false |
 
-### FormControl
+### `<FormControl>`
 
 属性名称           | 类型          | 默认值   | 描述
 -------------- | ----------- | ----- | --

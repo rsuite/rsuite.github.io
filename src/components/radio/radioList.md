@@ -1,11 +1,10 @@
-### RadioGroup
+### Radio Group
 
 
 ```js
 const instance = (
   <Form>
     <FormGroup controlId='radioList'>
-      <ControlLabel>RadioGroup</ControlLabel>
       <RadioGroup name="radioList" value="C">
         <Radio value="A">Item A</Radio>
         <Radio value="B">Item B</Radio>

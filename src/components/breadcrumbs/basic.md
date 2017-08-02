@@ -1,3 +1,7 @@
+
+### 默认
+
+```js
 const instance = (
   <Breadcrumb>
     <Breadcrumb.Item componentClass={Link} to="/">
@@ -12,3 +16,4 @@ const instance = (
   </Breadcrumb>
 );
 ReactDOM.render(instance, mountNode);
+```

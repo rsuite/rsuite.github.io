@@ -9,21 +9,21 @@
 
 
 ## Props
-### Radio
-属性名称     | 类型          | 默认值   | 描述
--------- | ----------- | ----- | --
-id       | elementType |       |
-name     | string      |       |
-inline   | boolean     | false |
-title    | string      |       |
-disabled | boolean     | false |
-checked  | boolean     |       |
-onClick  | function    |       |
-onChange | function    |       |
+### `<Radio>`
+| 属性名称     | 类型          | 默认值   | 描述  |
+|----------|-------------|-------|-----|
+| id       | elementType |       |     |
+| name     | string      |       |     |
+| inline   | boolean     | false |     |
+| title    | string      |       |     |
+| disabled | boolean     | false |     |
+| checked  | boolean     |       |     |
+| onClick  | function    |       |     |
+| onChange | function    |       |     |
 
-### RadioGroup
+### `<RadioGroup>`
 
-性名称    | 类型      | 默认值   | 描述
------- | ------- | ----- | --
-name   | string  |       |
-inline | boolean | false |
+| 性名称    | 类型      | 默认值   | 描述  |
+|--------|---------|-------|-----|
+| name   | string  |       |     |
+| inline | boolean | false |     |

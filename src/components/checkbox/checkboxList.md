@@ -1,11 +1,10 @@
-### CheckboxGroup
+### Checkbox Group
 
 
 ```js
 const instance = (
   <Form>
     <FormGroup controlId='checkboxList'>
-      <ControlLabel>CheckboxGroup</ControlLabel>
       <CheckboxGroup name="checkboxList">
         <Checkbox checked>Item A</Checkbox>
         <Checkbox>Item B</Checkbox>
