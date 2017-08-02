@@ -1,3 +1,6 @@
+### 水平布局
+
+```js
 var formLayoutInstance = (
   <Form horizontal>
     <FormGroup controlId='username'>
@@ -70,3 +73,5 @@ var formLayoutInstance = (
   </Form>
 );
 ReactDOM.render(formLayoutInstance, mountNode);
+
+```

@@ -4,8 +4,8 @@ import ComponentExample, { splitDocs } from '../ComponentExample';
 const context = require('./index.md');
 const examples = [
   splitDocs(require('./basic.md')),
-  splitDocs(require('./horizontal.md')),
-  splitDocs(require('./inline.md')),
+  splitDocs(require('./checkboxList.md')),
+  splitDocs(require('./checkboxListInline.md')),
 ];
 
 
@@ -17,4 +17,3 @@ export default () => {
     />
   );
 };
-
