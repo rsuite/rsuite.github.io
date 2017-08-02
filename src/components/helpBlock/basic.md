@@ -1,3 +1,6 @@
+### 默认
+
+```js
 const instance = (
   <div>
     <FormControl />
@@ -7,3 +10,4 @@ const instance = (
   </div>
 );
 ReactDOM.render(instance, mountNode);
+```
