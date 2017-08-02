@@ -1,3 +1,6 @@
+### 基本用法
+
+```js
 const tableInstance = (
   <Table>
     <thead>
@@ -31,3 +34,4 @@ const tableInstance = (
 );
 
 ReactDOM.render(tableInstance, mountNode);
+```

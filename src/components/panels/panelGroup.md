@@ -1,3 +1,6 @@
+### 面板组
+
+```js
 const panelGroupInstance = (
   <PanelGroup defaultActiveKey="2" accordion>
     <Panel header="Panel 1" eventKey="1">Panel 1 content</Panel>
@@ -7,3 +10,4 @@ const panelGroupInstance = (
 );
 
 ReactDOM.render(panelGroupInstance, mountNode);
+```

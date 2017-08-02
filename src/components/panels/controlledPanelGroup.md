@@ -1,3 +1,6 @@
+### 受控面板组
+
+```js
 const ControlledPanelGroup = React.createClass({
   getInitialState() {
     return {
@@ -19,3 +22,4 @@ const ControlledPanelGroup = React.createClass({
 });
 
 ReactDOM.render(<ControlledPanelGroup />, mountNode);
+```

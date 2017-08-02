@@ -1,3 +1,6 @@
+### 基本用法
+
+```js
 const gridInstance = (
   <Grid>
     <Row className="show-grid">
@@ -22,3 +25,5 @@ const gridInstance = (
   </Grid>
 );
 ReactDOM.render(gridInstance, mountNode);
+
+```
