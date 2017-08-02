@@ -1,3 +1,14 @@
+# Navs [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/navs/index.md)
+导航组件。包含下面组件：
+* `<Nav>`
+* `<Nav.Item>`
+
+
+## 演示
+
+<!--{demo}-->
+
+## Props
 #### `<Nav>`
 
 属性名称      | 类型       | 默认值   | 描述

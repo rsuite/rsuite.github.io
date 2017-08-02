@@ -1,5 +1,8 @@
+### 标签式导航
+
+```js
 const instance = (
-  <Nav pills>
+  <Nav tabs>
     <Nav.Item active>Item A</Nav.Item>
     <Nav.Item>Item B</Nav.Item>
     <Nav.Item>Item C</Nav.Item>
@@ -7,3 +10,4 @@ const instance = (
   </Nav>
 );
 ReactDOM.render(instance, mountNode);
+```
