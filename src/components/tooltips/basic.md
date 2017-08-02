@@ -1,7 +1,10 @@
+### 默认
+
+```js
 const tooltip = (
   <Tooltip>
     This is a help <i>tooltip</i> .
-    </Tooltip>
+  </Tooltip>
 );
 const instance = (
   <ButtonToolbar>
@@ -24,3 +27,4 @@ const instance = (
   </ButtonToolbar>
 );
 ReactDOM.render(instance, mountNode);
+```

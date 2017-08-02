@@ -1,45 +1,19 @@
+
+
 import React from 'react';
-import { Text, Col } from 'rsuite';
-import Example from '../../fixtures/Example';
-import { Markdown } from '../../fixtures/Markdown';
+import ComponentExample, { splitDocs } from '../ComponentExample';
 
+const context = require('./index.md');
+const examples = [
+  splitDocs(require('./basic.md')),
+  splitDocs(require('./trigger.md')),
+];
 
-const examples = {
-  basic: require('fs').readFileSync(__dirname + '/basic.js', 'utf8'),
-  trigger: require('fs').readFileSync(__dirname + '/trigger.js', 'utf8')
+export default () => {
+  return (
+    <ComponentExample
+      context={context}
+      examples={examples}
+    />
+  );
 };
-
-export default React.createClass({
-  render() {
-    return (
-      <Col md={9} sm={12}>
-        <h1 className="page-header">
-          Tooltips
-                    <span className="page-header-en">
-            <code>{'<Whisper>'}</code>、
-                        <code>{'<Tooltip>'}</code>
-          </span>
-        </h1>
-
-        <h3>默认</h3>
-        <Example code={examples.basic} />
-
-
-        <h3>触发方式</h3>
-        <p>
-          有三种方式可以触发提示<code>tooltip</code>的信息:
-          <code>click</code>、
-          <code>focus</code>、
-          <code>hover</code>
-        </p>
-        <Example code={examples.trigger} />
-
-        <h3>组件属性</h3>
-        <Markdown>
-          {require('./props.md')}
-        </Markdown>
-
-      </Col>
-    );
-  }
-});

@@ -1,7 +1,12 @@
+### 触发方式
+
+有三种方式可以触发提示 `tooltip` 的信息: `click`、`focus`、`hover`
+
+```js
 const tooltip = (
   <Tooltip>
     This is a help <i>tooltip</i> .
-    </Tooltip>
+  </Tooltip>
 );
 const instance = (
   <ButtonToolbar>
@@ -14,7 +19,7 @@ const instance = (
     <Whisper placement="top" trigger="hover" speaker={tooltip}>
       <Button shape='default' >Hover</Button>
     </Whisper>
-
   </ButtonToolbar>
 );
 ReactDOM.render(instance, mountNode);
+```

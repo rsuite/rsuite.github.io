@@ -30,11 +30,11 @@ export default [
       {
         id: 'tooltips',
         name: 'Tooltips',
-        title: '提示框'
+        title: '文字提示'
       }, {
         id: 'popovers',
         name: 'Popovers',
-        title: '弹出框'
+        title: '气泡提示框'
       }, {
         id: 'helpBlock',
         name: 'HelpBlock',
