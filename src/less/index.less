@@ -7,11 +7,13 @@
 @import '~codemirror/theme/base16-dark.css';
 @import './highlight';
 @import './table';
+
 //rewrite base color
 @base-color: #6292f0;
 @bg-color: #fbfbfb;
 @banner-bg-color: #151515;
 @header-height: 64px;
+
 @media-xs: 768px;
 @media-md: 992px;
 body {
@@ -242,6 +244,9 @@ body {
   }
   ol, ul {
     padding: 10px 20px;
+    li {
+      line-height: 26px;
+    }
   }
   table {
     width: 100%;
