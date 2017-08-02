@@ -1,3 +1,8 @@
+### 模拟 Select
+
+设置一个 `select` 属性。
+
+```js
 function handleSelect(eventKey) {
   console.log(eventKey);
 }
@@ -11,3 +16,4 @@ const instance = (
   </Dropdown>
 );
 ReactDOM.render(instance, mountNode);
+```

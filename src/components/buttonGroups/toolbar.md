@@ -1,3 +1,6 @@
+### 按钮工具栏
+
+```js
 const instance = (
   <ButtonToolbar>
     <Button shape="default">Prev</Button>
@@ -12,3 +15,4 @@ const instance = (
   </ButtonToolbar>
 );
 ReactDOM.render(instance, mountNode);
+```
