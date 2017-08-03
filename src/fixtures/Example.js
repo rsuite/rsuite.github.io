@@ -165,8 +165,12 @@ const Example = React.createClass({
         <div className="doc-example-wrapper">
           {this.renderExample()}
           <div className="doc-example-toolbar">
-            <Button size="xs" onClick={this.handleShowCode}>
-              <IconFont icon="code" /> {showCode ? '代码' : '代码'}
+            <Button
+              size="xs"
+              shape={showCode ? 'primary' : 'default'}
+              onClick={this.handleShowCode}
+            >
+              <IconFont icon="code" /> 代码
             </Button>
           </div>
           <CodeEditor
