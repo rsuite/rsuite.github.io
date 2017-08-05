@@ -1,7 +1,7 @@
 //The tilde character (~) tells webpack that it's not a relative import as by default. If tilde is included
 //https://survivejs.com/webpack/styling/loading/#loading-from-node_modules-directory
-@import '~rsuite-theme/dist/less/rsuite';
 @import '~rsuite-table/lib/less/index';
+@import '~rsuite-theme/dist/less/index';
 @import '~codemirror/lib/codemirror.css';
 @import '~codemirror/theme/base16-light.css';
 @import '~codemirror/theme/base16-dark.css';
@@ -20,7 +20,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased;
 }
-
 
 /* Demo */
 
@@ -206,7 +205,7 @@ body {
     padding: 10px 5px;
     border: 1px solid #DDD;
     background: #F1F1F1;
-    &:not(: last-child), &.col-md-pull-6 {
+    &:not(:last-child), &.col-md-pull-6 {
       border-right: none;
     }
     &.col-md-push-6 {
@@ -492,7 +491,7 @@ code {
       }
       > a {
         color: #9BA3AF;
-        &:not(: last-child) {
+        &:not(:last-child) {
           margin-right: 18px;
         }
         &:hover {
