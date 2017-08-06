@@ -6,10 +6,6 @@ var formLayoutInstance = (
       <ControlLabel>Username</ControlLabel>
       <FormControl type='text' />
     </FormGroup>
-    <FormGroup controlId='Password'>
-      <ControlLabel>Password</ControlLabel>
-      <FormControl type='password' />
-    </FormGroup>
 
     <FormGroup controlId='checkboxList'>
       <ControlLabel>CheckboxGroup</ControlLabel>

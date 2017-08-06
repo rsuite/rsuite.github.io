@@ -9,7 +9,7 @@
 
 - 配置后一键生成主题样式，多种配置方式
 - 为主流浏览器提供动效，以大幅提升使用体验
-- 支持 ie9+、chrome 、firefox 等各种主流浏览器
+- 支持 ie9+、chrome 、firefox 等主流浏览器
 - 提供开放的定制需求，包括但不仅限于色系、圆角、边框、阴影和组件的视觉定制。
 
 <image src="http://rsuite.github.io/resources/images/rsuite-preview.png" class="rsuite-theme-preview"/>
@@ -39,7 +39,7 @@
 //...
 ```
 > 引入`rsuite`样式文件后，即可使用所有[系统预定义变量][defalut-variables]。</br>
-> 如需引入其他组件样式文件时请 **务必保证**  `rsuite` 样式文件在最后引入，否则可能会造成配色无效。
+> 如需引入其他组件样式文件时请 **务必保证**  `rsuite-theme` 样式文件在最后引入，否则可能会造成配色无效。
 
 新建`index.js`文件，并使用`webpack`进行打包。
 
