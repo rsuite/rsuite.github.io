@@ -1,4 +1,4 @@
-/*! Last update: Sat Aug 05 2017 20:24:23 GMT+0800 (CST) */
+/*! Last update: Sun Aug 06 2017 14:55:43 GMT+0800 (CST) */
 /* BASICS */
 
 .CodeMirror {
@@ -120,7 +120,7 @@
 .cm-s-default .cm-property,
 .cm-s-default .cm-operator {}
 .cm-s-default .cm-variable-2 {color: #05a;}
-.cm-s-default .cm-variable-3 {color: #085;}
+.cm-s-default .cm-variable-3, .cm-s-default .cm-type {color: #085;}
 .cm-s-default .cm-comment {color: #a50;}
 .cm-s-default .cm-string {color: #a11;}
 .cm-s-default .cm-string-2 {color: #f50;}
@@ -600,7 +600,7 @@ span.CodeMirror-selectedtext { background: none; }
   content: "\F0D7";
 }
 .rsuite-table .rsuite-table-scrollbar-wrapper {
-  background: rgba(45, 45, 45, 0);
+  background: rgba(45, 45, 45, 0.05);
   position: absolute;
   transition: background 1s;
 }
@@ -620,6 +620,16 @@ span.CodeMirror-selectedtext { background: none; }
   height: 10px;
   bottom: 2px;
 }
+.rsuite-table .rsuite-table-scrollbar-wrapper.horizontal:hover,
+.rsuite-table .rsuite-table-scrollbar-wrapper.horizontal.active {
+  height: 14px;
+  box-shadow: 1px 1px 2px #ddd inset;
+}
+.rsuite-table .rsuite-table-scrollbar-wrapper.horizontal:hover .scrollbar-handle,
+.rsuite-table .rsuite-table-scrollbar-wrapper.horizontal.active .scrollbar-handle {
+  top: 2px;
+  height: 10px;
+}
 .rsuite-table .rsuite-table-scrollbar-wrapper.horizontal .scrollbar-handle {
   height: 8px;
   left: 0px;
@@ -630,6 +640,16 @@ span.CodeMirror-selectedtext { background: none; }
   right: 0px;
   width: 10px;
   bottom: 2px;
+}
+.rsuite-table .rsuite-table-scrollbar-wrapper.vertical:hover,
+.rsuite-table .rsuite-table-scrollbar-wrapper.vertical.active {
+  width: 14px;
+  box-shadow: 1px 1px 2px #ddd inset;
+}
+.rsuite-table .rsuite-table-scrollbar-wrapper.vertical:hover .scrollbar-handle,
+.rsuite-table .rsuite-table-scrollbar-wrapper.vertical.active .scrollbar-handle {
+  left: 2px;
+  width: 10px;
 }
 .rsuite-table .rsuite-table-scrollbar-wrapper.vertical .scrollbar-handle {
   min-height: 20px;
@@ -5592,21 +5612,14 @@ select[multiple] .input-lg {
   display: block;
   margin: 5px 0px;
   color: #979797;
-  min-height: 16.8px;
+  height: 16.8px;
   line-height: 16.8px;
-}
-.form-inline > *,
-.form-inline > .btn {
-  margin-right: 18px;
-  margin-bottom: 18px;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
     display: inline-block;
+    margin-bottom: 0;
     vertical-align: middle;
-  }
-  .form-inline .form-group .control-label {
-    margin-right: 8px;
   }
   .form-inline .form-group .checkbox-list {
     display: inline-block;
@@ -6045,11 +6058,6 @@ fieldset[disabled] .btn {
   cursor: not-allowed;
   opacity: 0.65;
   filter: alpha(opacity=65);
-}
-.btn.disabled:after,
-.btn[disabled]:after,
-fieldset[disabled] .btn:after {
-  display: none;
 }
 a.btn.disabled,
 fieldset[disabled] a.btn {
@@ -6657,14 +6665,6 @@ tbody.collapse.in {
   position: relative;
   display: inline-block;
 }
-.dropup .btn .caret,
-.dropdown .btn .caret {
-  margin-left: 4px;
-}
-.dropup.both-ends .btn,
-.dropdown.both-ends .btn {
-  text-align: right;
-}
 .dropup.both-ends .btn:before,
 .dropdown.both-ends .btn:before,
 .dropup.both-ends .btn:after,
@@ -6690,6 +6690,10 @@ tbody.collapse.in {
 .dropup.both-ends .btn > span:first-child,
 .dropdown.both-ends .btn > span:first-child {
   float: left;
+}
+.dropup.both-ends .btn > span:last-child,
+.dropdown.both-ends .btn > span:last-child {
+  float: right;
 }
 .dropdown-toggle {
   position: relative;
@@ -6724,8 +6728,6 @@ tbody.collapse.in {
   animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
   animation-fill-mode: both;
   animation-play-state: paused;
-  max-height: 180px;
-  overflow-y: auto;
 }
 .dropdown-menu.pull-right {
   right: 0;
@@ -7618,15 +7620,6 @@ select[multiple] .input-group-sm > .input-group-btn > .btn {
 .nav > li > a > img {
   max-width: none;
 }
-.nav .disabled:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  cursor: not-allowed;
-}
 .nav-tabs {
   border-bottom: 1px solid #ddd;
 }
@@ -8005,18 +7998,11 @@ select[multiple] .input-group-sm > .input-group-btn > .btn {
   margin-top: 7px;
   margin-bottom: 7px;
 }
-.navbar-form > *,
-.navbar-form > .btn {
-  margin-right: 18px;
-  margin-bottom: 18px;
-}
 @media (min-width: 768px) {
   .navbar-form .form-group {
     display: inline-block;
+    margin-bottom: 0;
     vertical-align: middle;
-  }
-  .navbar-form .form-group .control-label {
-    margin-right: 8px;
   }
   .navbar-form .form-group .checkbox-list {
     display: inline-block;
@@ -8265,7 +8251,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-nav > .disabled > a,
 .navbar-inverse .navbar-nav > .disabled > a:hover,
 .navbar-inverse .navbar-nav > .disabled > a:focus {
-  color: #fff;
+  color: #6292f0;
   background-color: transparent;
 }
 .navbar-inverse .navbar-toggle {
@@ -8308,7 +8294,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover,
   .navbar-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-    color: #fff;
+    color: #6292f0;
     background-color: transparent;
   }
 }
@@ -8329,7 +8315,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 fieldset[disabled] .navbar-inverse .btn-link:hover,
 .navbar-inverse .btn-link[disabled]:focus,
 fieldset[disabled] .navbar-inverse .btn-link:focus {
-  color: #fff;
+  color: #6292f0;
 }
 .breadcrumb {
   padding: 8px 15px;
@@ -9813,9 +9799,6 @@ body {
   cursor: not-allowed;
   background: #f4f4f4;
 }
-.toggle.disabled.toggle-checked {
-  background: #96b6f5;
-}
 .toggle:active:after {
   width: 24px;
 }
@@ -9997,7 +9980,7 @@ body {
   outline: 0;
   position: absolute;
   right: 10px;
-  top: 14px;
+  top: 8px;
   font-size: 30px;
 }
 .modal-header .title {
