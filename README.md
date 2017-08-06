@@ -12,9 +12,9 @@ RSUITE 目标就是让 WEB 开发更快捷，同时具有一定的灵活性和�
 ------
 版本与状态
 
-[![npm](https://badge.fury.io/js/rsuite.svg)](https://www.npmjs.com/package/rsuite)
-[![Travis](https://travis-ci.org/rsuite/rsuite.svg?branch=master)](https://travis-ci.org/rsuite/rsuite)
-[![Coverage Status](https://coveralls.io/repos/github/rsuite/rsuite/badge.svg?branch=next)](https://coveralls.io/github/rsuite/rsuite?branch=next)
+[![npm](https://img.shields.io/npm/v/rsuite.svg)](https://www.npmjs.com/package/rsuite)
+[![Travis](https://img.shields.io/travis/rsuite/rsuite.svg)](https://travis-ci.org/rsuite/rsuite)
+[![Coverage Status](https://img.shields.io/coveralls/rsuite/rsuite/next.svg)](https://coveralls.io/github/rsuite/rsuite?branch=next)
 
 社区
 
