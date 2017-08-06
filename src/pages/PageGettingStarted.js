@@ -11,7 +11,7 @@ const PageGettingStarted = React.createClass({
         <Row>
           <Col md={12}>
             <Markdown>
-              {require('./getting-started.md')}
+              {require('../../README.md')}
             </Markdown>
           </Col>
         </Row>
