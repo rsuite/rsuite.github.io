@@ -1,61 +1,116 @@
-# RSuite
-
-[![Join the chat at https://gitter.im/rsuite/rsuite](https://badges.gitter.im/rsuite/rsuite.svg)](https://gitter.im/rsuite/rsuite?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
-`RSuite` 是一个基于 React.js 开发的 Web 组件库，参考 Bootstrap 设计，提供其中常用组件，支持响应式布局。
+# 关于 RSUITE [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/pages/getting-started.md)
 
-我们的目标就是让 WEB 开发更快捷，同时具有一定的灵活性和扩展性。
+------
+
+RSUITE  `[ɑː(r)swiːt]` 是一套基于 React 开发的 UI 组件库，产生于 HYPERS 前端团队，是面向企业级后台产品的一套前端解决方案。
+
+RSUITE 目标就是让 WEB 开发更快捷，同时具有一定的灵活性和扩展性，致力于改善前端工程师的开发体验。
+
+
+------
+版本与状态
+
+`稳定版` [![npm](https://img.shields.io/npm/v/rsuite.svg)](https://www.npmjs.com/package/rsuite)
+
+`测试版` [![npm](https://cnpmjs.org/badge/v/rsuite.svg?&tag=beta&subject=npm)](https://www.npmjs.com/package/rsuite)
+
+[![Travis](https://img.shields.io/travis/rsuite/rsuite.svg)](https://travis-ci.org/rsuite/rsuite)
+[![Coverage Status](https://img.shields.io/coveralls/rsuite/rsuite/next.svg)](https://coveralls.io/github/rsuite/rsuite?branch=next)
+
+社区
+
+[![Discord](https://img.shields.io/badge/Discord-Join%20chat%20%E2%86%92-738bd7.svg)](https://discord.gg/GmPXTH3)
 
 
 
-### 一个简单的例子:
+## 快速开始
 
-
-通过 `npm` 安装
+<br/>
+安装:
 
 ```
-npm install rsuite
+npm i rsuite --save
 ```
 
-**CSS：** 我们提供一些主题, 载入对应的 CSS 资源到你的页面中，同时你也可以直接引用 Bootstrap 的 CSS 。
 
+示例：
 
-**Javascript：** 比如在项目中用到一个 `Button`， 可以通过 `ES2015`、`CommonJS`、`AMD` 任意一种方式引入组件。
 ```js
-// ES2015
 import { Button } from 'rsuite';
 
-// CommonJS
-var Button = require('rsuite').Button;
-
-// AMD
-define(['rsuite'], function(Suite) {
-  var Button = Suite.Button;
-  ...
-});
-
-
-ReactDOM.render(
-    <Button shape="primary" >Button</Button>,
-    document.getElementById('example')
-);
+ReactDOM.render(<Button>Button</Button>, mountNode);
 ```
 
-**HTML：** 对应生成的 HTML 代码
+
+## 创建一个 RSUITE 应用
+
+通过 `create-rsuite-app` 快速创建一个 RSUITE 应用。  另外，应用中还集成了以下内容:
+
+- `Redux`: 数据流管理
+- `React Router`: 路由管理
+- `React Intl`: 国际化
+- `ESLint`: 代码检查
+- `Webpack`: 应用构建及开发环境搭建
+- `Babel`: 代码编译
+
+详细参考 [dependencies](https://github.com/rsuite/create-rsuite-app/blob/master/generators/app/templates/package.json#L12-L33)
+
+安装:
+
+```
+npm i -g yo
+npm i -g generator-create-rsuite-app
+```
+
+创建项目:
+
+```
+# 创建并进入项目文件夹
+mkdir your-project && cd your-project
+
+// 使用脚手架安装项目
+yo create-rsuite-app
+```
+
+运行项目:
+
+等待 `npm install`  安装完成后，执行下面命令，打开 `localhost:3002` 即可运行项目。
+
+```
+npm run dev
+```
+
+> 使用中如果存在问题，提交 [issues](https://github.com/rsuite/create-rsuite-app/issues/new)
+
+## 主题相关
+
+
+
+- 方式 1 ：引用 less 文件
+
+```less
+// 如果需要使用一些拓展组件，应该引入组件样式
+@import "~rsuite-table/lib/less/index";
+
+// 引入 RSUITE 样式
+@import "~rsuite-theme/dist/less/rsuite";
+
+// 修改主题颜色,不设置则使用 RSUITE 默认颜色
+@base-color: #6292f0;
+
+// 可以修改主题中的变量参数，来自定义自己的主题
+// 参考 https://github.com/rsuite/rsuite-theme/blob/master/src/less/variables.less
+```
+
+- 方式 2 : CDN
+
 ```html
-<button class="btn btn-primary" type="button" >Primary</button>
+<link rel="stylesheet" href="https://unpkg.com/rsuite-theme/dist/css/rsuite.min.css" />
 ```
 
+- 其他详细配置参考 [rsuite-theme](https://rsuitejs.com/components/theme)
 
-### 贡献
 
-用 GitHub issues 提交你贡献的代码，我们积极欢迎你的参与。
-
-###  更新日志
-
-更新日志查看  GitHub releases。
-
-### License
-
-MIT
+> 使用中如果存在问题，提交 [issues](https://github.com/rsuite/rsuite-theme/issues/new)
