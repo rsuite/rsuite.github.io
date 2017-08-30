@@ -12,12 +12,12 @@ RSUITE 目标就是让 WEB 开发更快捷，同时具有一定的灵活性和�
 ------
 版本与状态
 
-`稳定版` [![npm](https://img.shields.io/npm/v/rsuite.svg)](https://www.npmjs.com/package/rsuite)
+[![npm][npm-badge]][npm]
 
-`测试版` [![npm](https://cnpmjs.org/badge/v/rsuite.svg?&tag=beta&subject=npm)](https://www.npmjs.com/package/rsuite)
+[![npm][npm-beta-badge]][npm-beta]
 
-[![Travis](https://img.shields.io/travis/rsuite/rsuite.svg)](https://travis-ci.org/rsuite/rsuite)
-[![Coverage Status](https://img.shields.io/coveralls/rsuite/rsuite/next.svg)](https://coveralls.io/github/rsuite/rsuite?branch=next)
+[![Travis][build-badge]][build] [![Coverage Status][coverage-badge]][coverage]
+
 
 社区
 
@@ -92,7 +92,7 @@ npm run dev
 
 ```less
 // 如果需要使用一些拓展组件，应该引入组件样式
-@import "~rsuite-table/lib/less/index";
+@import "~rsuite/lib/less/index";
 
 // 引入 RSUITE 样式
 @import "~rsuite-theme/dist/less/rsuite";
@@ -114,3 +114,21 @@ npm run dev
 
 
 > 使用中如果存在问题，提交 [issues](https://github.com/rsuite/rsuite-theme/issues/new)
+
+
+
+[npm-badge]: https://img.shields.io/npm/v/rsuite.svg
+[npm]: https://www.npmjs.com/package/rsuite
+
+
+[npm-beta-badge]: https://img.shields.io/npm/v/rsuite/beta.svg
+[npm-beta]: https://www.npmjs.com/package/rsuite
+
+
+[build-badge]: https://travis-ci.org/rsuite/rsuite.svg
+[build]: https://travis-ci.org/rsuite/rsuite
+
+[coverage-badge]: https://coveralls.io/repos/github/rsuite/rsuite/badge.svg?branch=next
+[coverage]: https://coveralls.io/github/rsuite/rsuite
+
+
