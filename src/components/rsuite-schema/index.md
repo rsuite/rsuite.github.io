@@ -1,6 +1,15 @@
 # rsuite-schema
 
-`rsuite-schema` 是一个数据建模及数据验证工具
+`rsuite-schema` 是一个数据模型及数据验证工具
+
+- SchemaModel 用于定义数据模型
+- Type 用于定义数据类型，包括：
+  - StringType
+  - NumbserType
+  - ArrayType
+  - DateType
+  - ObjectType
+  - BooleanType
 
 版本与状态
 
@@ -13,7 +22,6 @@
 npm i rsuite-schema --save
 // 或者
 yarn add rsuite-schema
-
 ```
 
 ## 示例
@@ -101,7 +109,9 @@ const myModel = SchemaModel({
 
 ## API
 
-### StringType
+
+
+### `StringType()`
 - isRequired()
 
 ```js
@@ -175,7 +185,7 @@ StringType().addRule((value) => {
 }, '请输入合法字符')
 ```
 
-### NumbserType
+### `NumbserType()`
 - isRequired()
 
 ```js
@@ -219,7 +229,7 @@ NumbserType().addRule((value) => {
 }, '请输入有效的数字')
 ```
 
-### ArrayType
+### `ArrayType()`
 - isRequired()
 
 ```js
@@ -258,7 +268,7 @@ ArrayType().addRule((value) => {
 }, '好事成双')
 ```
 
-### DateType
+### `DateType()`
 - isRequired()
 
 ```js
@@ -301,7 +311,7 @@ DateType().addRule((value) => {
 }, '只能选择周二')
 ```
 
-### ObjectType
+### `ObjectType()`
 
 - isRequired()
 
@@ -329,7 +339,7 @@ ObjectType().addRule((value) => {
 }, 'id 与 email 必须有一个不能为空')
 ```
 
-### BooleanType
+### `BooleanType()`
 - isRequired()
 
 ```js
