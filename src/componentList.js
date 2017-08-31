@@ -62,16 +62,6 @@ export default [
     src: 'https://github.com/rsuite/rsuite-daterangepicker'
   },
   {
-    icon: 'icon icon-check',
-    bg: '#ff9800',
-    repoName: 'rsuite-picker',
-    url: 'https://rsuitejs.com/rsuite-picker',
-    name: 'Picker',
-    intro: '选择组件，可以替代 Select 和 Dropdown 组件',
-    tags: ['picker', 'select', 'dropdown'],
-    src: 'https://github.com/rsuite/rsuite-picker'
-  },
-  {
     icon: 'icon icon-reorder',
     bg: '#3385ff',
     repoName: 'rsuite-selectpicker',
