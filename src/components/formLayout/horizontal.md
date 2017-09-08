@@ -25,11 +25,11 @@ var formLayoutInstance = (
         RadioGroup
             </Col>
       <Col md={10}>
-        <RadioGroup name="radioList">
-          <Radio checked>Item A</Radio>
-          <Radio>Item B</Radio>
-          <Radio>Item C</Radio>
-          <Radio disabled>Item D</Radio>
+        <RadioGroup name="radioList" value={1}>
+          <Radio value={1} >Item A</Radio>
+          <Radio value={2}>Item B</Radio>
+          <Radio value={3}>Item C</Radio>
+          <Radio value={4} disabled>Item D</Radio>
         </RadioGroup>
       </Col>
     </FormGroup>
@@ -39,11 +39,11 @@ var formLayoutInstance = (
         RadioGroup
             </Col>
       <Col md={10}>
-        <RadioGroup name="radioList" inline>
-          <Radio checked>Item A</Radio>
-          <Radio>Item B</Radio>
-          <Radio>Item C</Radio>
-          <Radio disabled>Item D</Radio>
+        <RadioGroup name="radioList" inline value={1}>
+          <Radio value={1} >Item A</Radio>
+          <Radio value={2}>Item B</Radio>
+          <Radio value={3}>Item C</Radio>
+          <Radio value={4} disabled>Item D</Radio>
         </RadioGroup>
       </Col>
     </FormGroup>
