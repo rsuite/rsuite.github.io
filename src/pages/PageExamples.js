@@ -16,16 +16,16 @@ const data = [
     src: 'https://github.com/rsuite/rsuite/tree/master/examples/webpack-rudux-router'
   }, {
     thumb: dmpPreview,
-    url: 'http://www.hypers.com/products/hyper-dmp/',
+    url: null,
     intro: '帮助广告主或营销人员深度理解媒体投放效果。',
     name: 'HYPER DMP',
-    src: 'http://www.hypers.com/products/hyper-dmp/'
+    src: null
   }, {
     thumb: dashboardPreview,
-    url: 'http://www.hypers.com/solution/',
-    intro: '聚合Hyper Data，予以最直观展现',
+    url: null,
+    intro: '聚合 Hyper Data，予以最直观展现',
     name: 'HYPER Dashboard',
-    src: 'http://www.hypers.com/solution/'
+    src: null
   }
 ];
 
