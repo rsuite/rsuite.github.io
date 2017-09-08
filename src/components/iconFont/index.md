@@ -1,4 +1,4 @@
-# IconFont [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/iconfont/index.md)
+# IconFont [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/iconFont/index.md)
 
 `<IconFont>` 通过字体实现的矢量图形
 
