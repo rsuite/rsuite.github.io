@@ -6,6 +6,7 @@
 <!--{demo}-->
 
 
+> 对 Table 有更多需求，请使用 [rsuite-table](https://rsuitejs.com/rsuite-table)
 
 ## Props
 属性名称       | 类型      | 默认值 | 描述
