@@ -4,8 +4,11 @@
 
 ** 版本与状态 **
 
-![npm](https://img.shields.io/npm/v/rsuite-theme.svg)
-[![Travis](https://travis-ci.org/rsuite/rsuite-theme.svg?branch=next)](https://travis-ci.org/rsuite/rsuite-theme)
+[![npm][npm-badge]][npm]
+
+[![npm][npm-beta-badge]][npm-beta]
+
+[![Travis][build-badge]][build]
 
 
 ### 概述
@@ -201,3 +204,13 @@ node css-build.js
 
 
 [defalut-variables]:https://github.com/rsuite/rsuite-theme/blob/master/src/less/variables.less
+
+[npm-badge]: https://img.shields.io/npm/v/rsuite-theme.svg
+[npm]: https://www.npmjs.com/package/rsuite-theme
+
+[npm-beta-badge]: https://img.shields.io/npm/v/rsuite-theme/beta.svg
+[npm-beta]: https://www.npmjs.com/package/rsuite
+
+[build-badge]: https://travis-ci.org/rsuite/rsuite-theme.svg?branch=next
+[build]: https://travis-ci.org/rsuite/rsuite-theme
+
