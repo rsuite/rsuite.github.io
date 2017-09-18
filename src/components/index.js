@@ -12,7 +12,6 @@ export modals from './modals';
 export grid from './grid';
 export panels from './panels';
 export tables from './tables';
-export controls from './controls';
 export formControl from './formControl';
 export checkbox from './checkbox';
 export radio from './radio';

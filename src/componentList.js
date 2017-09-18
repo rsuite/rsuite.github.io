@@ -20,7 +20,6 @@ export default [
       'grid system',
       'panels',
       'tables',
-      'controls',
       'form',
       'controlLabel',
       'checkbox',
@@ -107,9 +106,19 @@ export default [
     repoName: 'rsuite-tree',
     url: 'https://rsuitejs.com/rsuite-tree',
     name: 'Tree',
-    intro: '树型组件，支持选择，支持树节点拖拽',
+    intro: '树型组件',
     tags: ['tree'],
     src: 'https://github.com/rsuite/rsuite-tree'
+  },
+  {
+    icon: 'icon icon-sitemap',
+    bg: '#29a7e1',
+    repoName: 'rsuite-check-tree',
+    url: 'https://rsuitejs.com/rsuite-check-tree',
+    name: 'CheckTree',
+    intro: '树型多选组件',
+    tags: ['tree'],
+    src: 'https://github.com/rsuite/rsuite-check-tree'
   },
   {
     icon: 'icon icon-sliders',
