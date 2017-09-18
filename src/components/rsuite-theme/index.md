@@ -2,6 +2,15 @@
 
 > 定制主题
 
+** 版本与状态 **
+
+[![npm][npm-badge]][npm]
+
+[![npm][npm-beta-badge]][npm-beta]
+
+[![Travis][build-badge]][build]
+
+
 ### 概述
 本主题基于 [Bootstrap3](https://github.com/twbs/bootstrap) 进行修改。
 在统一不同使用场景的视觉和操作体验的同时，我们建立了完整的规范体系，便于创建项目，也方便统一管理。
@@ -164,20 +173,26 @@ const themes = {
     purple: '#9c27b0'
 };
 
-build.importResources({
-    paths: [
-        'fonts/**/*.*'
-    ],
-    dist: outputDir
-});
+const palette = ()=>{
+  Object.keys(themes).forEach((key) => {
+      build.palette({
+          baseColor: themes[key],
+          src: 'css/rsuite.min.css',
+          dist: `${outputDir}/rsuite-${key}.css`
+      });
+  });
+}
 
-Object.keys(themes).forEach((key) => {
-    build.palette({
-        baseColor: themes[key],
-        src: 'css/rsuite.min.css',
-        dist: `${outputDir}/rsuite-${key}.css`
-    });
-});
+const importResources = (doneCallback)=>{
+ build.importResources({
+     paths: [
+         'fonts/**/*.*'
+     ],
+     dist: outputDir
+ },doneCallback); 
+}
+
+importResources(palette);
 ```
 
 运行 `node` 脚本
@@ -189,3 +204,13 @@ node css-build.js
 
 
 [defalut-variables]:https://github.com/rsuite/rsuite-theme/blob/master/src/less/variables.less
+
+[npm-badge]: https://img.shields.io/npm/v/rsuite-theme.svg
+[npm]: https://www.npmjs.com/package/rsuite-theme
+
+[npm-beta-badge]: https://img.shields.io/npm/v/rsuite-theme/beta.svg
+[npm-beta]: https://www.npmjs.com/package/rsuite
+
+[build-badge]: https://travis-ci.org/rsuite/rsuite-theme.svg?branch=next
+[build]: https://travis-ci.org/rsuite/rsuite-theme
+
