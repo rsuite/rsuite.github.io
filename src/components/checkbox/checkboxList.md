@@ -6,7 +6,7 @@ const instance = (
   <Form>
     <FormGroup controlId='checkboxList'>
       <CheckboxGroup name="checkboxList">
-        <Checkbox checked>Item A</Checkbox>
+        <Checkbox defaultChecked >Item A</Checkbox>
         <Checkbox>Item B</Checkbox>
         <Checkbox>Item C</Checkbox>
         <Checkbox disabled>Item D</Checkbox>

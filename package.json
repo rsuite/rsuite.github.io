@@ -26,7 +26,7 @@
     "lodash": "^4.11.1",
     "react": "^0.14.9",
     "react-dom": "^0.14.9",
-    "rsuite": "^2.0.0-alpha-8",
+    "rsuite": "^2.0.4",
     "rsuite-table": "^1.1.10"
   },
   "author": "Simon Guo <simonguo.2009@gmail.com>",

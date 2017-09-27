@@ -5,7 +5,14 @@
 const instance = (
   <Form>
     <FormGroup controlId='checkboxList'>
-      <CheckboxGroup name="checkboxList" value={['A', 'C']} inline>
+      <CheckboxGroup
+          inline
+          name="checkboxList"
+          defaultValue={['A', 'C']}
+          onChange={(value)=>{
+            console.log(value,'onChange');
+          }}
+        >
         <Checkbox value="A">Item A</Checkbox>
         <Checkbox value="B">Item B</Checkbox>
         <Checkbox value="C">Item C</Checkbox>
