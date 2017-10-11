@@ -1,3 +1,7 @@
+function randomColor() {
+  return '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).slice(-6);
+}
+
 export default [
   {
     icon: 'icon icon-briefcase',
@@ -32,7 +36,7 @@ export default [
     src: 'https://github.com/rsuite/rsuite'
   }, {
     icon: 'icon icon-table',
-    bg: '#004889',
+    bg: randomColor(),
     repoName: 'rsuite-table',
     url: 'https://rsuitejs.com/rsuite-table',
     name: 'Table',
@@ -42,7 +46,7 @@ export default [
   },
   {
     icon: 'icon icon-calendar-check-o',
-    bg: '#d3555a',
+    bg: randomColor(),
     repoName: 'rsuite-datepicker',
     url: 'https://rsuitejs.com/rsuite-datepicker',
     name: 'DatePicker',
@@ -52,7 +56,7 @@ export default [
   },
   {
     icon: 'icon icon-calendar-minus-o',
-    bg: '#a50006',
+    bg: randomColor(),
     repoName: 'rsuite-daterangepicker',
     url: 'https://rsuitejs.com/rsuite-daterangepicker',
     name: 'DateRangePicker',
@@ -62,7 +66,7 @@ export default [
   },
   {
     icon: 'icon icon-reorder',
-    bg: '#3385ff',
+    bg: randomColor(),
     repoName: 'rsuite-selectpicker',
     url: 'https://rsuitejs.com/rsuite-selectpicker',
     name: 'SelectPicker',
@@ -72,7 +76,7 @@ export default [
   },
   {
     icon: 'icon icon-list',
-    bg: '#3385ff',
+    bg: randomColor(),
     repoName: 'rsuite-checkpicker',
     url: 'https://rsuitejs.com/rsuite-checkpicker',
     name: 'CheckPicker',
@@ -82,7 +86,7 @@ export default [
   },
   {
     icon: 'icon icon-pie-chart',
-    bg: '#990066',
+    bg: randomColor(),
     repoName: 'rsuite-echarts',
     url: 'https://rsuitejs.com/rsuite-echarts',
     name: 'ECharts',
@@ -92,7 +96,7 @@ export default [
   },
   {
     icon: 'icon icon-cloud-upload',
-    bg: '#5677AC',
+    bg: randomColor(),
     repoName: 'rsuite-uploader',
     url: 'https://rsuitejs.com/rsuite-uploader',
     name: 'Uploader',
@@ -102,7 +106,7 @@ export default [
   },
   {
     icon: 'icon icon-sitemap',
-    bg: '#29a7e1',
+    bg: randomColor(),
     repoName: 'rsuite-tree',
     url: 'https://rsuitejs.com/rsuite-tree',
     name: 'Tree',
@@ -112,7 +116,7 @@ export default [
   },
   {
     icon: 'icon icon-sitemap',
-    bg: '#29a7e1',
+    bg: randomColor(),
     repoName: 'rsuite-check-tree',
     url: 'https://rsuitejs.com/rsuite-check-tree',
     name: 'CheckTree',
@@ -122,7 +126,7 @@ export default [
   },
   {
     icon: 'icon icon-sliders',
-    bg: '#00d09d',
+    bg: randomColor(),
     repoName: 'rsuite-slider',
     url: 'https://rsuitejs.com/rsuite-slider',
     name: 'Slider',
@@ -132,7 +136,7 @@ export default [
   },
   {
     icon: 'icon icon-thumb-tack',
-    bg: '#464c5b',
+    bg: randomColor(),
     repoName: 'rsuite-affix',
     url: 'https://rsuitejs.com/rsuite-affix',
     name: 'Affix',
@@ -142,7 +146,7 @@ export default [
   },
   {
     icon: 'icon icon-search',
-    bg: '#1d9d74',
+    bg: randomColor(),
     repoName: 'rsuite-autocomplete',
     url: 'https://rsuite.github.io/rsuite-autocomplete',
     name: 'Autocomplete',
@@ -152,7 +156,7 @@ export default [
   },
   {
     icon: 'icon icon-clipboard',
-    bg: '#b94e95',
+    bg: randomColor(),
     repoName: 'rsuite-clipboard',
     url: 'https://rsuite.github.io/rsuite-clipboard',
     name: 'Clipboard',
@@ -162,7 +166,7 @@ export default [
   },
   {
     icon: 'icon icon-check-circle-o',
-    bg: '#00bcd4',
+    bg: randomColor(),
     repoName: 'rsuite-steps',
     url: 'https://rsuite.github.io/rsuite-steps',
     name: 'Steps',
@@ -171,7 +175,7 @@ export default [
     src: 'https://github.com/rsuite/rsuite-steps'
   }, {
     icon: 'icon icon-calculator',
-    bg: '#00ddff',
+    bg: randomColor(),
     repoName: 'rsuite-inputnumber',
     url: 'https://rsuite.github.io/rsuite-inputnumber',
     name: 'InputNumber',
@@ -180,7 +184,7 @@ export default [
     src: 'https://github.com/rsuite/rsuite-inputnumber'
   }, {
     icon: 'icon icon-bookmark',
-    bg: '#ca565e',
+    bg: randomColor(),
     repoName: 'rsuite-tag',
     url: 'https://rsuitejs.com/rsuite-tag',
     name: 'Tag',
@@ -189,7 +193,7 @@ export default [
     src: 'https://github.com/rsuite/rsuite-tag'
   }, {
     icon: 'icon icon-bell-o',
-    bg: '#004889',
+    bg: randomColor(),
     repoName: 'rsuite-notification',
     url: 'https://rsuitejs.com/rsuite-notification',
     name: 'Notification',
@@ -198,15 +202,26 @@ export default [
     src: 'https://rsuitejs.com/rsuite-notification/'
   }, {
     icon: 'icon icon-order-form',
-    bg: '#004889',
+    bg: randomColor(),
     repoName: 'form-lib',
     url: 'https://rsuitejs.com/form-lib',
     name: 'form-lib',
     intro: 'React 实现的 Form 组件',
     tags: ['form', 'form-lib', 'rsuite-form'],
     src: 'https://github.com/rsuite/form-lib'
+  }, {
+    icon: 'icon icon-history',
+    bg: randomColor(),
+    repoName: 'rsuite-timeline',
+    url: 'https://rsuitejs.com/rsuite-timeline',
+    name: 'Timeline',
+    intro: '垂直展示的时间轴信息',
+    tags: ['timeline'],
+    src: 'https://github.com/rsuite/rsuite-timeline'
   }
 
 ];
+
+
 
 
