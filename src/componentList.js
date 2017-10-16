@@ -218,6 +218,15 @@ export default [
     intro: '垂直展示的时间轴信息',
     tags: ['timeline'],
     src: 'https://github.com/rsuite/rsuite-timeline'
+  }, {
+    icon: 'icon icon-toggle-down',
+    bg: randomColor(),
+    repoName: 'rsuite-cascader',
+    url: 'https://rsuitejs.com/rsuite-cascader',
+    name: 'Cascader',
+    intro: '级联选择器',
+    tags: ['cascader'],
+    src: 'https://github.com/rsuite/rsuite-cascader'
   }
 
 ];
