@@ -1,4 +1,4 @@
-/*! Last update: Mon Oct 16 2017 12:29:13 GMT+0800 (CST) */
+/*! Last update: Thu Oct 19 2017 18:35:39 GMT+0800 (CST) */
 /* BASICS */
 
 .CodeMirror {
@@ -6,6 +6,7 @@
   font-family: monospace;
   height: 300px;
   color: black;
+  direction: ltr;
 }
 
 /* PADDING */
@@ -320,8 +321,8 @@ div.CodeMirror-dragcursors {
 .CodeMirror-line::-moz-selection, .CodeMirror-line > span::-moz-selection, .CodeMirror-line > span > span::-moz-selection { background: #d7d4f0; }
 
 .cm-searching {
-  background: #ffa;
-  background: rgba(255, 255, 0, .4);
+  background-color: #ffa;
+  background-color: rgba(255, 255, 0, .4);
 }
 
 /* Used to force a border model for a node */
@@ -1290,8 +1291,8 @@ th {
 }
 @font-face {
   font-family: 'RSuiteIconFont';
-  src: url(./resources/d979022a318666f254c915b4dbb7668d.eot);
-  src: url(./resources/d979022a318666f254c915b4dbb7668d.eot?#iefix) format('eot'), url(./resources/5521c539808c49ec89ce12b623da369f.ttf) format('truetype'), url(./resources/2c3312c1cdc6b8f61bab55797ad4f960.woff) format('woff'), url(data:image/svg+xml;base64,bW9kdWxlLmV4cG9ydHMgPSAiLi9yZXNvdXJjZXMvMmIwOWVlNmNlNTA2ZjY5NDc5ZjVmNDE5NDYxYzZmMmUuc3ZnIjs=#RSuiteIconFont) format('svg');
+  src: url(./resources/a961c61951bd598567414eec4dcb3e8d.eot);
+  src: url(./resources/a961c61951bd598567414eec4dcb3e8d.eot?#iefix) format('eot'), url(./resources/62c0e49aeaef05240763fa516e4e43c9.ttf) format('truetype'), url(./resources/76200de31033c325b5be8cd28a2f2fa5.woff) format('woff'), url(data:image/svg+xml;base64,bW9kdWxlLmV4cG9ydHMgPSAiLi9yZXNvdXJjZXMvMGU5ZWE1MzZhYmQ0ZDM4OGUzOTNkODNmNGNmZmNiOTAuc3ZnIjs=#RSuiteIconFont) format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -3776,6 +3777,12 @@ th {
 }
 .icon-volume-up:before {
   content: "\F028";
+}
+.icon-weapp:before {
+  content: "\EA01";
+}
+.icon-web:before {
+  content: "\EA02";
 }
 .icon-wechat:before {
   content: "\F1D7";
