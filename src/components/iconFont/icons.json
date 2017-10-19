@@ -8613,6 +8613,28 @@
     ]
   },
   {
+    "name": "Web",
+    "id": "web",
+    "filter": [
+      "项目类型",
+      "project type"
+    ],
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "Weapp",
+    "id": "weapp",
+    "filter": [
+      "微信小程序",
+      "wechatapp"
+    ],
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "WordPress Logo",
     "id": "wordpress",
     "categories": [
