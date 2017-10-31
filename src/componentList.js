@@ -204,7 +204,7 @@ export default [
     icon: 'icon icon-order-form',
     bg: randomColor(),
     repoName: 'form-lib',
-    url: 'https://rsuitejs.com/form-lib',
+    url: 'https://rsuitejs.com/rsuite-form-lib',
     name: 'form-lib',
     intro: 'React 实现的 Form 组件',
     tags: ['form', 'form-lib', 'rsuite-form'],
