@@ -33,6 +33,9 @@ const IntroDetail = React.createClass({
           <a target="_blank" href={`https://travis-ci.org/rsuite/${repoName}`}>
             <img src={`https://img.shields.io/travis/rsuite/${repoName}.svg?style=flat-square`} />
           </a>
+          <a target="_blank" href={`https://coveralls.io/github/rsuite/${repoName}`}>
+            <img src={`https://img.shields.io/coveralls/rsuite/${repoName}.svg?style=flat-square`} />
+          </a>
         </div>
         <div className="intro-context">
           {intro}
