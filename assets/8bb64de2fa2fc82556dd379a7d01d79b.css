@@ -1,4 +1,4 @@
-/*! Last update: Mon Oct 30 2017 17:38:58 GMT+0800 (CST) */
+/*! Last update: Sun Nov 05 2017 14:10:48 GMT+0800 (CST) */
 /* BASICS */
 
 .CodeMirror {
@@ -11429,7 +11429,7 @@ code {
 .intro-panel .intro-detail .intro-context {
   margin-top: 10%;
   display: block;
-  padding-bottom: 42%;
+  padding-bottom: 26%;
   overflow: hidden;
   max-height: 1px;
   color: #595F69;
@@ -11438,7 +11438,8 @@ code {
   margin: 10px 0;
 }
 .intro-panel .intro-detail .intro-status a {
-  margin-right: 10px;
+  margin-right: 8px;
+  line-height: 26px;
 }
 .intro-panel .intro-detail .intro-status a:last-child {
   margin-right: 0;
