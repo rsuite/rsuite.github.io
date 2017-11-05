@@ -1,4 +1,4 @@
-/*! Last update: Sun Nov 05 2017 14:10:48 GMT+0800 (CST) */
+/*! Last update: Sun Nov 05 2017 14:13:08 GMT+0800 (CST) */
 /* BASICS */
 
 .CodeMirror {
@@ -11174,15 +11174,15 @@ body {
 }
 .show-grid [class*=col-] {
   padding: 10px 5px;
-  border: 1px solid #DDD;
-  background: #F1F1F1;
+  border: 1px solid #ddd;
+  background: #f1f1f1;
 }
 .show-grid [class*=col-]:not(:last-child),
 .show-grid [class*=col-].col-md-pull-6 {
   border-right: none;
 }
 .show-grid [class*=col-].col-md-push-6 {
-  border-right: 1px solid #DDD;
+  border-right: 1px solid #ddd;
 }
 .CodeMirror {
   padding: 10px;
@@ -11264,7 +11264,7 @@ code {
   margin-top: 20px;
 }
 .banner .menu-nav > a.primary {
-  border: 1px solid #FF8533;
+  border: 1px solid #ff8533;
 }
 .banner .menu-nav > a:hover {
   color: #6292f0;
@@ -11302,14 +11302,14 @@ code {
   opacity: 0.6;
   margin-top: 18px;
   text-align: center;
-  box-shadow: 0px 1px 3px #CCC;
+  box-shadow: 0px 1px 3px #ccc;
   transition: all .3s linear;
 }
 .box-wrapper .intro-block:hover {
   opacity: 1;
 }
 .box-wrapper .intro-block:hover .icon-wrapper i {
-  color: #141C23;
+  color: #141c23;
 }
 .box-wrapper .intro-content {
   padding: 0 18px 18px;
@@ -11319,7 +11319,7 @@ code {
   display: block;
   position: relative;
   padding-top: 60%;
-  background: #F5F5F5;
+  background: #f5f5f5;
 }
 .box-wrapper .thumb a:before {
   content: "RSuite";
@@ -11361,7 +11361,7 @@ code {
 }
 .box-wrapper .icon-wrapper i {
   font-size: 100px;
-  color: #AAA;
+  color: #aaa;
 }
 .intro-panel {
   background: white;
@@ -11371,13 +11371,13 @@ code {
   border-radius: 2px;
   margin-top: 16%;
   position: relative;
-  box-shadow: 0 1px 1px 0 #CCCBCB;
+  box-shadow: 0 1px 1px 0 #cccbcb;
 }
 .intro-panel .avatar {
   width: 37%;
   padding-bottom: 37%;
   position: absolute;
-  background: #F7F7FA;
+  background: #f7f7fa;
   top: -5.5%;
   left: 8%;
   border-radius: 2px;
@@ -11432,7 +11432,7 @@ code {
   padding-bottom: 26%;
   overflow: hidden;
   max-height: 1px;
-  color: #595F69;
+  color: #595f69;
 }
 .intro-panel .intro-detail .intro-status {
   margin: 10px 0;
@@ -11452,7 +11452,7 @@ code {
   vertical-align: inherit;
 }
 .intro-panel .intro-detail .intro-sub-intro > a {
-  color: #9BA3AF;
+  color: #9ba3af;
 }
 .intro-panel .intro-detail .intro-sub-intro > a:not(:last-child) {
   margin-right: 18px;
@@ -11546,10 +11546,10 @@ code {
 .rsuite-logo .cls-2 {
   fill-rule: evenodd;
 }
-.doc-example .toggle {
+.doc-example .btn-toggle {
   margin-right: 8px;
 }
-.doc-example .toggle .icon {
+.doc-example .btn-toggle .icon {
   width: 14px;
   text-align: center;
 }
