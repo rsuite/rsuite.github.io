@@ -105,7 +105,7 @@ export default [
     src: 'https://github.com/rsuite/rsuite-uploader'
   },
   {
-    icon: 'icon icon-sitemap',
+    icon: 'icon icon-tree',
     bg: randomColor(),
     repoName: 'rsuite-tree',
     url: 'https://rsuitejs.com/rsuite-tree',
@@ -115,13 +115,13 @@ export default [
     src: 'https://github.com/rsuite/rsuite-tree'
   },
   {
-    icon: 'icon icon-sitemap',
+    icon: 'icon icon-tree',
     bg: randomColor(),
     repoName: 'rsuite-check-tree',
     url: 'https://rsuitejs.com/rsuite-check-tree',
     name: 'CheckTree',
     intro: '树型多选组件',
-    tags: ['tree'],
+    tags: ['tree','checktree'],
     src: 'https://github.com/rsuite/rsuite-check-tree'
   },
   {
@@ -227,8 +227,25 @@ export default [
     intro: '级联选择器',
     tags: ['cascader'],
     src: 'https://github.com/rsuite/rsuite-cascader'
+  }, {
+    icon: 'icon icon-toggle-down',
+    bg: randomColor(),
+    repoName: 'rsuite-treepicker',
+    url: 'https://rsuitejs.com/rsuite-treepicker',
+    name: 'TreePicker',
+    intro: '树形单项选择器',
+    tags: ['tree', 'picker'],
+    src: 'https://github.com/rsuite/rsuite-treepicker'
+  }, {
+    icon: 'icon icon-toggle-down',
+    bg: randomColor(),
+    repoName: 'rsuite-checktreepicker',
+    url: 'https://rsuitejs.com/rsuite-checktreepicker',
+    name: 'CheckTreePicker',
+    intro: '树形多项选择器',
+    tags: ['checktree', 'tree', 'picker'],
+    src: 'https://github.com/rsuite/rsuite-checktreepicker'
   }
-
 ];
 
 
