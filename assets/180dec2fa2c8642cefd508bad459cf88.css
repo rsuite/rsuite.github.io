@@ -1,4 +1,4 @@
-/*! Last update: Tue Oct 31 2017 10:36:44 GMT+0800 (CST) */
+/*! Last update: Tue Nov 07 2017 13:56:37 GMT+0800 (CST) */
 /* BASICS */
 
 .CodeMirror {
@@ -1294,8 +1294,8 @@ th {
 }
 @font-face {
   font-family: 'RSuiteIconFont';
-  src: url(./resources/a961c61951bd598567414eec4dcb3e8d.eot);
-  src: url(./resources/a961c61951bd598567414eec4dcb3e8d.eot?#iefix) format('eot'), url(./resources/62c0e49aeaef05240763fa516e4e43c9.ttf) format('truetype'), url(./resources/76200de31033c325b5be8cd28a2f2fa5.woff) format('woff'), url(data:image/svg+xml;base64,bW9kdWxlLmV4cG9ydHMgPSAiLi9yZXNvdXJjZXMvMGU5ZWE1MzZhYmQ0ZDM4OGUzOTNkODNmNGNmZmNiOTAuc3ZnIjs=#RSuiteIconFont) format('svg');
+  src: url(./resources/0ea95166c66b348f315019693fd3dff3.eot);
+  src: url(./resources/0ea95166c66b348f315019693fd3dff3.eot?#iefix) format('eot'), url(./resources/a3f758223fd4a99dcc9e998b167449d9.ttf) format('truetype'), url(./resources/5c86f182f7f95d55ab389ec517721822.woff) format('woff'), url(data:image/svg+xml;base64,bW9kdWxlLmV4cG9ydHMgPSAiLi9yZXNvdXJjZXMvOGU1NzEyYjk0OGYzOTlkNTJiZDRlZjFmNDVlOWY2N2Iuc3ZnIjs=#RSuiteIconFont) format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -3495,6 +3495,9 @@ th {
 }
 .icon-tags:before {
   content: "\F02C";
+}
+.icon-target:before {
+  content: "\EA03";
 }
 .icon-tasks:before {
   content: "\F0AE";
