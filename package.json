@@ -91,7 +91,7 @@
     "rsuite-clipboard": "^1.1.0",
     "rsuite-form": "0.1.18",
     "rsuite-schema": "0.0.3",
-    "rsuite-theme": "^2.0.9",
+    "rsuite-theme": "^2.0.10",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0",
     "style-loader": "^0.13.1",
