@@ -7384,6 +7384,17 @@
     ]
   },
   {
+    "name": "Target",
+    "id": "target",
+    "filter": [
+      "target",
+      "广告跟踪"
+    ],
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "Telegram",
     "id": "telegram",
     "categories": [
