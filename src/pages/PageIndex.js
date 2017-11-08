@@ -27,11 +27,10 @@ const PageIndex = React.createClass({
   },
   fetchGithubData() {
     let { data } = this.state;
-    fetchJsonp('https://api.github.com/users/rsuite/repos').then((resp) => {
+    fetchJsonp('https://api.github.com/orgs/rsuite/repos?per_page=100').then((resp) => {
       if (!resp.ok) {
         return;
       }
-
       resp.json().then((result) => {
         const repos = _.get(result, ['data']) || [];
         data = data.map((info) => {
