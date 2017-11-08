@@ -8,7 +8,6 @@
   },
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server -d --watch --inline --history-api-fallback --progress --colors --port 3200 --host 0.0.0.0",
-    "deploy": "babel-node deploy.js",
     "build": "rm -rf assets &&  NODE_ENV=production webpack --progress --colors",
     "dll": "webpack --config webpack.dll.config.js",
     "test": "karma start"
