@@ -113,7 +113,7 @@ export default [
         id: 'formValidation',
         name: 'Form Validation',
         title: '表单验证',
-        url: 'https://rsuitejs.com/form-lib/'
+        url: 'https://rsuitejs.com/rsuite-form-lib/'
       }
     ]
   }, {
