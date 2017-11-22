@@ -70,11 +70,12 @@ const PageIndex = React.createClass({
     return (
       <Row>
         {
-          items.map((info, key) => {
+          items.map((info, index) => {
+            const onlyKey = _.isString(info.repoName) ? info.repoName : index;
             return (
               <IntroPanel
                 {...info}
-                key={key}
+                key={onlyKey}
               />
             );
           })
@@ -83,7 +84,6 @@ const PageIndex = React.createClass({
     );
   },
   render() {
-
 
 
     return (
@@ -110,7 +110,8 @@ const PageIndex = React.createClass({
                 placeholder="搜索组件"
                 onChange={_.debounce((keyword) => {
                   this.setState({ keyword });
-                }, 400)} />
+                }, 400)}
+              />
             </Col>
           </Row>
           {this.renderComponents()}
