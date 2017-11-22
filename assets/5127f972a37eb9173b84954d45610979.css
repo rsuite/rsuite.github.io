@@ -1,4 +1,4 @@
-/*! Last update: Tue Nov 07 2017 13:59:11 GMT+0800 (CST) */
+/*! Last update: Wed Nov 22 2017 17:06:07 GMT+0800 (CST) */
 /* BASICS */
 
 .CodeMirror {
@@ -6626,14 +6626,11 @@ tbody.collapse.in {
 }
 .caret {
   display: inline-block;
-  width: 0;
-  height: 0;
   margin-left: 2px;
-  vertical-align: middle;
-  border-top: 4px dashed;
-  border-top: 4px solid \9;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
+}
+.caret:before {
+  font-family: 'RSuiteIconFont' !important;
+  content: "\F107";
 }
 .dropup,
 .dropdown {
@@ -6781,6 +6778,11 @@ tbody.collapse.in {
   animation-name: slideDownIn;
   animation-play-state: running;
 }
+.open.dropup > .btn-lg ~ .dropdown-menu,
+.open.dropup > .btn-sm ~ .dropdown-menu,
+.open.dropup > .btn-xs ~ .dropdown-menu {
+  top: auto;
+}
 .open.dropup > .btn-lg ~ .dropdown-menu {
   bottom: 40px;
 }
@@ -6849,12 +6851,9 @@ tbody.collapse.in {
 .dropdown > .btn-link:active {
   color: #6292f0;
 }
-.dropup .caret,
-.navbar-fixed-bottom .dropdown .caret {
-  border-top: 0;
-  border-bottom: 4px dashed;
-  border-bottom: 4px solid \9;
-  content: "";
+.dropup .caret:before,
+.navbar-fixed-bottom .dropdown .caret:before {
+  content: "\F106";
 }
 @media (min-width: 768px) {
   .navbar-right .dropdown-menu {
