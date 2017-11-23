@@ -2,15 +2,15 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { Container, Content, Row, Col } from 'rsuite';
-import { Markdown } from '../fixtures/Markdown';
 
+import Markdown from '../fixtures/Markdown';
 import DocHeader from '../fixtures/DocHeader';
 import DocSidebar from '../fixtures/DocSidebar';
 
 import * as menu from '../components/menu';
 
-const PageComponents = React.createClass({
-  render: function () {
+class PageComponents extends React.Component {
+  render() {
     return (
       <div>
 
@@ -28,6 +28,6 @@ const PageComponents = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default PageComponents;

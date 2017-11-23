@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, Col } from 'rsuite';
 import { Markdown } from '../../fixtures/Markdown';
 
-export default React.createClass({
+class DomLib extends React.Component {
   render() {
     return (
       <Col md={9} sm={12}>
@@ -12,4 +12,8 @@ export default React.createClass({
       </Col>
     );
   }
-});
+};
+
+
+
+export default DomLib;

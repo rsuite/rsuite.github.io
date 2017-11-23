@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { scrollTop, on } from 'dom-lib';
 import { Router, Route, Link } from 'react-router';
@@ -6,44 +7,48 @@ import { Header, Navbar, Nav } from 'rsuite';
 import TextLogo from './TextLogo';
 
 
-const NAV_LINKS = [
-  {
-    link: '/',
-    title: '首页'
-  }, {
-    link: '/getting-started',
-    title: '介绍'
-  }, {
-    link: '/components',
-    title: '组件'
-  }, {
-    link: '/examples',
-    title: '实践'
-  }];
+const NAV_LINKS = [{
+  link: '/',
+  title: '首页'
+}, {
+  link: '/getting-started',
+  title: '介绍'
+}, {
+  link: '/components',
+  title: '组件'
+}, {
+  link: '/examples',
+  title: '实践'
+}];
 
+const propTypes = {
+  activePage: PropTypes.string
+};
 
+const contextTypes = {
+  router: PropTypes.object.isRequired
+};
 
-const DocHeader = React.createClass({
-  propTypes: {
-    activePage: React.PropTypes.string
-  },
-  contextTypes: {
-    router: React.PropTypes.object.isRequired
-  },
-  getInitialState: function () {
-    return {
+class DocHeader extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
       overflow: false
     };
-  },
+  }
+
   componentDidMount() {
     this._onWindowScrollListener = on(window, 'scroll', this.handleWindowScroll);
-  },
+  }
+
   componentWillUnmount() {
     if (this._onWindowScrollListener) {
       this._onWindowScrollListener.off();
     }
-  },
-  handleWindowScroll() {
+  }
+
+  handleWindowScroll = () => {
 
     if (scrollTop(window) > 30) {
       this.setState({
@@ -55,13 +60,12 @@ const DocHeader = React.createClass({
     this.setState({
       overflow: false
     });
-  },
+  }
+
   render() {
 
     let links = NAV_LINKS.map((nav, index) => {
-
-      let isActive = this.context.router.isActive(nav.link) && (nav.link !== '/');
-
+      let isActive = null; //this.context.router.isActive(nav.link) && (nav.link !== '/');
       return (
         <li className={isActive ? 'active' : null} key={index} >
           <Link to={nav.link}>{nav.title}</Link>
@@ -96,6 +100,7 @@ const DocHeader = React.createClass({
       </Header>
     );
   }
-});
+}
+
 
 export default DocHeader;

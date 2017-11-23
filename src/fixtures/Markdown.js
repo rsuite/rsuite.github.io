@@ -1,17 +1,22 @@
-let React = require('react');
-let classnames = require('classnames');
-let Doc = require('./Doc');
+import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
+import Doc from './Doc';
 
-exports.Markdown = React.createClass({
-  propTypes: {
-    doc: React.PropTypes.bool
-  },
-  createMarkup: function () {
+
+const propTypes = {
+  doc: PropTypes.bool
+};
+
+class Markdown extends React.Component {
+  createMarkup = () => {
     return { __html: this.props.children };
-  },
-  render: function () {
+  }
+  render() {
+
     const { doc, className } = this.props;
     const Tag = doc ? Doc : 'div';
+
     return (
       <Tag
         dangerouslySetInnerHTML={this.createMarkup()}
@@ -19,4 +24,9 @@ exports.Markdown = React.createClass({
       />
     );
   }
-});
+}
+
+Markdown.propTypes = propTypes;
+
+export default Markdown;
+

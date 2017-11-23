@@ -1,13 +1,17 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Col, Whisper, Tooltip } from 'rsuite';
 
-const IntroDetail = React.createClass({
-  propTypes: {
-    intro: PropTypes.string,
-    name: PropTypes.string,
-    url: PropTypes.string,
-    stars: PropTypes.number
-  },
+
+const propTypes = {
+  intro: PropTypes.string,
+  name: PropTypes.string,
+  url: PropTypes.string,
+  stars: PropTypes.number
+};
+
+
+class IntroDetail extends React.Component {
   render() {
     const {
       intro = '--',
@@ -48,16 +52,12 @@ const IntroDetail = React.createClass({
       </div>
     );
   }
-});
+}
+
+IntroDetail.propTypes = propTypes;
 
 
-const IntroPanel = React.createClass({
-  propTypes: {
-    url: PropTypes.string,
-    intro: PropTypes.string,
-    name: PropTypes.string,
-    src: PropTypes.string,
-  },
+class IntroPanel extends React.Component{
   render() {
     const {
       bg,
@@ -69,7 +69,6 @@ const IntroPanel = React.createClass({
     const style = {
       background: bg
     };
-
 
     return (
       <Col lg={3} md={4} sm={6} xs={12}>
@@ -86,6 +85,13 @@ const IntroPanel = React.createClass({
       </Col>
     );
   }
-});
+}
+
+IntroPanel.propTypes = {
+  url: PropTypes.string,
+  intro: PropTypes.string,
+  name: PropTypes.string,
+  src: PropTypes.string,
+};
 
 export default IntroPanel;

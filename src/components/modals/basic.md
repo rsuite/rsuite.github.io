@@ -1,24 +1,27 @@
 ### 基本用法
 ```js
-const ModalsBasic = React.createClass({
-  getInitialState() {
-    return {
+
+class ModalsBasic extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {
       showModal: false,
       autoResizeHeight: false
     };
-  },
+    this.close = this.close.bind(this);
+    this.open = this.open.bind(this);
+  }
   close() {
     this.setState({
       showModal: false
     });
-  },
+  }
   open(event) {
-
     this.setState({
       showModal: true,
       autoResizeHeight: event.currentTarget.innerText === 'Auto Resize Height'
     });
-  },
+  }
   render() {
     return (
       <div className="modal-container">
@@ -61,8 +64,8 @@ const ModalsBasic = React.createClass({
       </div>
     );
   }
-});
 
+}
 
 ReactDOM.render(<ModalsBasic />, mountNode);
 ```

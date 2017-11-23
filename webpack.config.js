@@ -50,6 +50,7 @@ if (NODE_ENV === 'production') {
     threshold: 10240,
     minRatio: 0.8
   }));
+
 }
 
 const common = {

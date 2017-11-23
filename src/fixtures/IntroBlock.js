@@ -1,19 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Col, Whisper, Tooltip } from 'rsuite';
-
 
 const tooltip = (
   <Tooltip>源码</Tooltip>
 );
 
-const IntroBlock = React.createClass({
-  propTypes: {
-    thumb: React.PropTypes.string,
-    url: React.PropTypes.string,
-    intro: React.PropTypes.string,
-    name: React.PropTypes.string,
-    src: React.PropTypes.string
-  },
+const propTypes = {
+  thumb: PropTypes.string,
+  url: PropTypes.string,
+  intro: PropTypes.string,
+  name: PropTypes.string,
+  src: PropTypes.string
+};
+
+class IntroBlock extends React.Component {
   render() {
     const {
       thumb,
@@ -52,6 +53,8 @@ const IntroBlock = React.createClass({
       </Col>
     );
   }
-});
+}
+
+IntroBlock.propTypes = propTypes;
 
 export default IntroBlock;

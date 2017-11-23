@@ -3,8 +3,8 @@ import { Sidebar, Navbar, Nav } from 'rsuite';
 import { Link } from 'react-router';
 import components from '../componentList';
 
+class DocSidebar extends React.Component {
 
-const DocSidebar = React.createClass({
   render() {
     const { children, menu } = this.props;
     const nodeItems = [];
@@ -18,11 +18,11 @@ const DocSidebar = React.createClass({
 
       item.components.map((child, index) => {
         const item = child.url
-          ? <Nav.Item key={index} activeClassName="active" componentClass="a" target="_blank" href={child.url}>
+          ? <Nav.Item key={index} componentClass="a" target="_blank" href={child.url}>
             {child.name}
             <span className="nav-chinese">{child.title}</span>
           </Nav.Item>
-          : <Nav.Item key={index} activeClassName="active" componentClass={Link} to={`/components/${child.id}`} >
+          : <Nav.Item key={index} componentClass={Link} to={`/components/${child.id}`} >
             {child.name}
             <span className="nav-chinese">{child.title}</span>
           </Nav.Item>;
@@ -55,6 +55,6 @@ const DocSidebar = React.createClass({
       </Sidebar>
     );
   }
-});
+}
 
 export default DocSidebar;

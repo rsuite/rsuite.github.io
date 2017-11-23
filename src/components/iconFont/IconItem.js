@@ -5,12 +5,13 @@ import React from 'react';
 import { IconFont } from 'rsuite';
 import Clipboard from 'rsuite-clipboard';
 
-export default React.createClass({
-  prototypes: {},
-  handleCopy(text, result) {
+class IconItem extends React.Component {
+
+  handleCopy = (text, result) => {
     const { handleCopy } = this.props;
     handleCopy && handleCopy(text, result);
-  },
+  }
+
   render() {
     const { handleCopy, ...props } = this.props;
     return (
@@ -22,4 +23,6 @@ export default React.createClass({
       </div>
     );
   }
-});
+}
+
+export default IconItem;

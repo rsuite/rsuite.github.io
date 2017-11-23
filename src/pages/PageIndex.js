@@ -11,20 +11,34 @@ import data from '../componentList';
 import Logo from '../fixtures/Logo';
 
 
-const PageIndex = React.createClass({
-  handleWindowResize() {
+class PageIndex extends React.Component {
+  constructor(props) {
+    super();
+    this.state = {
+      keyword: '',
+      data
+    };
+  }
+  componentWillMount() {
+    this.isMounted = true;
+    this.fetchGithubData();
+  }
+  componentDidMount() {
+    this._onWindowResizeListener = on(window, 'resize', this.handleWindowResize);
+    this.handleWindowResize();
+  }
+  componentWillUnmount() {
+    this.isMounted = false;
+    if (this._onWindowResizeListener) {
+      this._onWindowResizeListener.off();
+    }
+  }
+  handleWindowResize = () => {
     let banner = document.getElementById('banner');
     let height = parseInt(getHeight(banner)) - 20;
     let indexContent = document.getElementById('index-content');
     addStyle(indexContent, 'margin-top', (height < 0 ? 0 : height) + 'px');
-  },
-
-  getInitialState() {
-    return {
-      keyword: '',
-      data
-    };
-  },
+  }
   fetchGithubData() {
     let { data } = this.state;
     fetchJsonp('https://api.github.com/orgs/rsuite/repos?per_page=100').then((resp) => {
@@ -41,21 +55,15 @@ const PageIndex = React.createClass({
       });
 
     });
-  },
-  componentWillMount() {
-    this.isMounted = true;
-    this.fetchGithubData();
-  },
-  componentDidMount() {
-    this._onWindowResizeListener = on(window, 'resize', this.handleWindowResize);
-    this.handleWindowResize();
-  },
-  componentWillUnmount() {
-    this.isMounted = false;
-    if (this._onWindowResizeListener) {
-      this._onWindowResizeListener.off();
-    }
-  },
+  }
+
+  get isMounted() {
+    return this.mounted;
+  }
+  set isMounted(isMounted) {
+    this.mounted = isMounted;
+  }
+
   renderComponents() {
     const { data, keyword } = this.state;
     const items = data.filter((item) => {
@@ -81,7 +89,7 @@ const PageIndex = React.createClass({
         }
       </Row>
     );
-  },
+  }
   render() {
 
 
@@ -118,6 +126,7 @@ const PageIndex = React.createClass({
       </div>
     );
   }
-});
+}
+
 
 export default PageIndex;

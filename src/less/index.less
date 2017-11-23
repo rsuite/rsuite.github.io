@@ -1,12 +1,15 @@
 //The tilde character (~) tells webpack that it's not a relative import as by default. If tilde is included
 //https://survivejs.com/webpack/styling/loading/#loading-from-node_modules-directory
-@import '~rsuite-table/lib/less/index';
 @import '~rsuite-theme/dist/less/index';
+@import '~rsuite-table/lib/less/index';
 @import '~codemirror/lib/codemirror.css';
 @import '~codemirror/theme/base16-light.css';
 @import '~codemirror/theme/base16-dark.css';
 @import './highlight';
 @import './table';
+
+@import '~rsuite-theme/dist/less/commonly-variables.less';
+
 
 //rewrite base color
 @base-color: #6292f0;

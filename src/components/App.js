@@ -1,20 +1,22 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import DocHeader from '../fixtures/DocHeader';
 import DocFooter from '../fixtures/DocFooter';
 import Container from 'rsuite/lib/Container';
 
+const contextTypes = {
+  router: PropTypes.object.isRequired
+};
 
-const App = React.createClass({
-  contextTypes: {
-    router: React.PropTypes.object.isRequired
-  },
-  componentWillReceiveProps: function (nextProps) {
+class App extends React.Component {
+
+  componentWillReceiveProps() {
     _ha && _ha('send', 'pageview', {
       'url': document.location.href
     });
-  },
-  render: function () {
+  }
+
+  render() {
     const { location } = this.props;
     const className = location.pathname === '/' ? 'home-page' : '';
     return (
@@ -27,6 +29,8 @@ const App = React.createClass({
       </div>
     );
   }
-});
+}
+
+App.contextTypes = contextTypes;
 
 export default App;

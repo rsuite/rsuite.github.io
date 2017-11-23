@@ -1,25 +1,16 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import classNames from 'classnames';
-import CodeEditor from './CodeEditor';
+
+const classNames = require('classnames');
+const React = require('react');
+const PropTypes = require('prop-types');
+const ReactDOM = require('react-dom');
+const CodeEditor = require('./CodeEditor');
 
 import 'codemirror/mode/javascript/javascript';
 import 'codemirror/addon/runmode/runmode';
 import 'codemirror/mode/jsx/jsx';
 
-import * as RSTable from 'rsuite-table';
-import * as RForm from 'rsuite-form';
-import * as Schema from 'rsuite-schema';
-
-import { Markdown } from './Markdown';
-
-
-
-const RSuiteForm = RForm.Form;
-const Field = RForm.Field;
-const SchemaModel = Schema.SchemaModel;
-const StringType = Schema.StringType;
-const ArrayType = Schema.ArrayType;
+const RSTable = require('rsuite-table');
+const Markdown = require('./Markdown');
 const Link = require('react-router').Link;
 const tableData = require('../componentList');
 const Button = require('rsuite/lib/Button').default;
@@ -72,27 +63,28 @@ const Panel = require('rsuite/lib/Panel').default;
 const PanelGroup = require('rsuite/lib/PanelGroup').default;
 const SafeAnchor = require('rsuite/lib/SafeAnchor').default;
 
-const Example = React.createClass({
-  propTypes: {
-    code: React.PropTypes.string.isRequired,
-    renderCode: React.PropTypes.bool,
-    text: React.PropTypes.node,
-    id: React.PropTypes.string,
-    isBanner: React.PropTypes.bool
-  },
-  getInitialState: function () {
-    return {
+
+const propTypes = {
+  code: PropTypes.string.isRequired,
+  renderCode: PropTypes.bool,
+  text: PropTypes.node,
+  id: PropTypes.string,
+  isBanner: PropTypes.bool
+};
+
+class Example extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       code: this.props.code,
       showCode: false
     };
-  },
+  }
 
-
-  executeCode: function () {
+  executeCode() {
 
     const mountNode = this.refs.example;
     const originalRender = ReactDOM.render;
-
     ReactDOM.render = (element) => this._initialExample = element;
 
     try {
@@ -114,17 +106,19 @@ const Example = React.createClass({
     } finally {
       ReactDOM.render = originalRender;
     }
-  },
 
-  handleCodeChange: function (val) {
+  }
+
+  handleCodeChange = (val) => {
     this.setState({ code: val });
     this.executeCode();
-  },
-  handleShowCode() {
+  }
+
+  handleShowCode = () => {
     const showCode = !this.state.showCode;
     this.setState({ showCode });
+  }
 
-  },
   renderExample() {
 
     let example = (
@@ -136,12 +130,13 @@ const Example = React.createClass({
         {example}
       </div>
     );
-  },
-  render: function () {
+  }
+
+  render() {
 
     const { text, isBanner } = this.props;
-
     this.executeCode();
+
     if (isBanner) {
       return (
         <div className="container">
@@ -165,6 +160,7 @@ const Example = React.createClass({
         <div className="doc-example-wrapper">
           {this.renderExample()}
           <div className="doc-example-toolbar">
+
             <Button
               size="xs"
               shape={showCode ? 'primary' : 'default'}
@@ -172,7 +168,9 @@ const Example = React.createClass({
             >
               <IconFont icon="code" /> 代码
             </Button>
+
           </div>
+
           <CodeEditor
             lineNumbers
             key="jsx"
@@ -185,6 +183,8 @@ const Example = React.createClass({
       </div>
     );
   }
-});
+}
+
+Example.propTypes = propTypes;
 
 export default Example;

@@ -1,8 +1,8 @@
-let React = require('react');
-let classnames = require('classnames');
+import React from 'react';
+import classnames from 'classnames';
 
-exports.Doc = React.createClass({
-  render: function () {
+class Doc extends React.Component {
+  render() {
     return (
       <div
         {...this.props}
@@ -12,4 +12,7 @@ exports.Doc = React.createClass({
       </div>
     );
   }
-});
+};
+
+export default Doc;
+

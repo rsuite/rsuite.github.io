@@ -1,18 +1,21 @@
 ### 默认
 
 ```js
-const PaginationBasic = React.createClass({
-  getInitialState() {
-    return {
+
+class PaginationBasic  extends React.Component{
+  constructor(props){
+    super(props);
+    this.state={
       activePage: 5
-    };
-  },
+    }
+    this.handleSelect = this.handleSelect.bind(this);
+  }
 
   handleSelect(eventKey) {
     this.setState({
       activePage: eventKey
     });
-  },
+  }
 
   render() {
     return (
@@ -40,7 +43,7 @@ const PaginationBasic = React.createClass({
       </div>
     );
   }
-});
+}
 
 ReactDOM.render(<PaginationBasic />, mountNode);
 ```

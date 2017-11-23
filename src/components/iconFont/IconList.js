@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormControl } from 'rsuite';
+import { FormControl, IconFont } from 'rsuite';
 import NotificationSystem from 'react-notification-system';
 import IconItem from './IconItem';
 
@@ -18,15 +18,25 @@ const parseIconByCategory = (obj, conf) => {
 
 const NoneDom = () => <div className="col-md-12">无</div>;
 
-export default React.createClass({
-  getInitialState() {
-    return {
+class IconList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
       icons: ALL_ICONS
     };
-  },
-  handleSearch(key) {
-    key = key.toUpperCase();
+  }
+  handleCopy = (text, result) => {
+    const message = result ? '复制成功' : '复制失败，浏览器不支持此功能';
+    this._notificationSystem.addNotification({
+      message,
+      autoDismiss: 1.5,
+      position: 'tc',
+      level: 'success'
+    });
+  }
 
+  handleSearch = (key) => {
+    key = key.toUpperCase();
     const filterByIconName = (searchKey) => {
       return searchKey.indexOf(key) > -1;
     };
@@ -42,16 +52,7 @@ export default React.createClass({
     this.setState({
       icons
     });
-  },
-  handleCopy(text, result) {
-    const message = result ? '复制成功' : '复制失败，浏览器不支持此功能';
-    this._notificationSystem.addNotification({
-      message,
-      autoDismiss: 1.5,
-      position: 'tc',
-      level: 'success'
-    });
-  },
+  }
   renderIcon(icons) {
     icons = icons.reduce(parseIconByCategory, {});
 
@@ -68,7 +69,7 @@ export default React.createClass({
         </div>
       );
     });
-  },
+  }
   render() {
     const { icons } = this.state;
     return (
@@ -87,4 +88,6 @@ export default React.createClass({
       </div>
     );
   }
-});
+}
+
+export default IconList;

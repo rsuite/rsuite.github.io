@@ -1,15 +1,20 @@
 ### 受控面板组
 
 ```js
-const ControlledPanelGroup = React.createClass({
-  getInitialState() {
-    return {
+
+class ControlledPanelGroup extends React.Component{
+  constructor(props){
+    super(props);
+    this.state={
       activeKey: '1'
-    };
-  },
+    }
+    this.handleSelect = this.handleSelect.bind(this);
+  }
+
   handleSelect(activeKey) {
     this.setState({ activeKey });
-  },
+  }
+
   render() {
     return (
       <PanelGroup activeKey={this.state.activeKey} onSelect={this.handleSelect} accordion>
@@ -19,7 +24,7 @@ const ControlledPanelGroup = React.createClass({
       </PanelGroup>
     );
   }
-});
+}
 
 ReactDOM.render(<ControlledPanelGroup />, mountNode);
 ```

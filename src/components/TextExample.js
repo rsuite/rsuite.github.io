@@ -1,9 +1,7 @@
 import React from 'react';
 import { Text } from 'rsuite';
 
-
-
-const TextExample = React.createClass({
+class TextExample extends React.Component {
   render() {
     return (
 
@@ -26,6 +24,6 @@ const TextExample = React.createClass({
       </div>
     );
   }
-});
+}
 
 export default TextExample;

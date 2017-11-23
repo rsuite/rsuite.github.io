@@ -6,6 +6,7 @@
     "es2016"
   ],
   "plugins": [
+    "transform-class-properties",
     "transform-runtime",
     "add-module-exports"
   ]

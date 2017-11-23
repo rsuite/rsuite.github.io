@@ -2,10 +2,10 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { Container, Content, Row, Col } from 'rsuite';
-import { Markdown } from '../fixtures/Markdown';
+import Markdown from '../fixtures/Markdown';
 
-const PageGettingStarted = React.createClass({
-  render: function () {
+class PageGettingStarted extends React.Component {
+  render() {
     return (
       <Content>
         <Row>
@@ -18,6 +18,6 @@ const PageGettingStarted = React.createClass({
       </Content>
     );
   }
-});
+}
 
 export default PageGettingStarted;
