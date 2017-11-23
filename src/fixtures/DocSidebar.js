@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sidebar, Navbar, Nav } from 'rsuite';
+import { Sidebar, Navbar, Nav, IconFont } from 'rsuite';
 import { Link } from 'react-router';
 import components from '../componentList';
 
@@ -46,6 +46,7 @@ class DocSidebar extends React.Component {
                   <a target="_blank" href={item.url}>
                     <i className={item.icon}></i>{' '}
                     {item.name}
+                    <IconFont icon="external-link" className="external-link" />
                   </a>
                 </li>
               );

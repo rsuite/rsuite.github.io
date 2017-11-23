@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { scrollTop, on } from 'dom-lib';
 import { Router, Route, Link } from 'react-router';
-import { Header, Navbar, Nav } from 'rsuite';
+import { Header, Navbar, Nav, IconFont } from 'rsuite';
 import TextLogo from './TextLogo';
 
 
@@ -93,7 +93,10 @@ class DocHeader extends React.Component {
 
             <Nav pullRight>
               {links}
-              <Nav.Item href="https://github.com/rsuite/rsuite">GitHub</Nav.Item>
+              <Nav.Item href="https://github.com/rsuite/rsuite">
+                GitHub
+              <IconFont icon="external-link" className="external-link" />
+              </Nav.Item>
             </Nav>
           </Navbar.Collapse>
         </div>

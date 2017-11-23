@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { addStyle, getHeight, on } from 'dom-lib';
-import { Container, Content, Row, Col, FormControl } from 'rsuite';
+import { Container, Content, Row, Col, FormControl, IconFont } from 'rsuite';
 import _ from 'lodash';
 
 import Banner from '../fixtures/Banner';
@@ -106,7 +106,10 @@ class PageIndex extends React.Component {
               <Link to="/getting-started">介绍</Link>
               <Link to="/components/buttons">组件</Link>
               <Link to="/examples">实践</Link>
-              <a href="https://github.com/suitejs/suite" target="_blank">GitHub</a>
+              <a href="https://github.com/suitejs/suite" target="_blank">
+              GitHub
+              <IconFont icon="external-link" className="external-link" />
+              </a>
             </div>
           </div>
         </Banner>
