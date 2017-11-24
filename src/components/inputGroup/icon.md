@@ -15,7 +15,7 @@ const instance = (
     <FormGroup>
       <InputGroup inside>
         <InputGroup.Addon>
-          <IconFont icon="avatar" classPrefix="icon" />
+          <IconFont icon="avatar"  />
         </InputGroup.Addon>
         <FormControl type="text" />
       </InputGroup>

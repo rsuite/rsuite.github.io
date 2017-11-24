@@ -19,7 +19,12 @@ export function splitDocs(html) {
 
 class ComponentExample extends React.Component {
   render() {
-    const { context, examples, children } = this.props;
+    const {
+      context,
+      examples,
+      children,
+      dependencies
+    } = this.props;
     const docs = context.split('<!--{demo}-->');
 
     return (
@@ -27,7 +32,12 @@ class ComponentExample extends React.Component {
         <Markdown>{docs[0]}</Markdown>
         {
           examples.map((item, index) => (
-            <Example key={index} code={item.code} text={item.text} />
+            <Example
+              key={index}
+              code={item.code}
+              text={item.text}
+              dependencies={dependencies}
+            />
           ))
         }
         <Markdown>{docs[1]}</Markdown>

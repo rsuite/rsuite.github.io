@@ -28,7 +28,7 @@
     "prop-types": "^15.6.0",
     "react": "^15.6.0",
     "react-dom": "^15.6.0",
-    "rsuite": "2.0.9",
+    "rsuite": "^2.0.10",
     "rsuite-table": "^2.0.1"
   },
   "author": "Simon Guo <simonguo.2009@gmail.com>",

@@ -40,8 +40,7 @@ class CodeEditor extends React.Component {
       matchBrackets,
       tabSize,
       readOnly,
-      theme,
-      readOnly
+      theme
     });
 
     this.editor.on('change', this.handleChange);
@@ -50,7 +49,7 @@ class CodeEditor extends React.Component {
   componentDidUpdate() {
     const { readOnly, onChange } = this.props;
     if (readOnly) {
-      this.editor.setValue(code);
+      this.editor.setValue();
     }
   }
 

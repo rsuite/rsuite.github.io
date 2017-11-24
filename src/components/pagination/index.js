@@ -1,5 +1,6 @@
 import React from 'react';
 import ComponentExample, { splitDocs } from '../ComponentExample';
+import { Pagination, Button, IconFont } from 'rsuite';
 
 const context = require('./index.md');
 const examples = [
@@ -10,6 +11,11 @@ const examples = [
 export default () => {
   return (
     <ComponentExample
+      dependencies={{
+        IconFont,
+        Pagination,
+        Button
+      }}
       context={context}
       examples={examples}
     />

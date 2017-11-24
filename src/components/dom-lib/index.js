@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, Col } from 'rsuite';
-import { Markdown } from '../../fixtures/Markdown';
+import Markdown from '../../fixtures/Markdown';
 
 class DomLib extends React.Component {
   render() {

@@ -1,5 +1,6 @@
 import React from 'react';
 import ComponentExample, { splitDocs } from '../ComponentExample';
+import { Table, Button, IconFont } from 'rsuite';
 
 const context = require('./index.md');
 const examples = [
@@ -11,6 +12,11 @@ const examples = [
 export default () => {
   return (
     <ComponentExample
+      dependencies={{
+        IconFont,
+        Table,
+        Button
+      }}
       context={context}
       examples={examples}
     />

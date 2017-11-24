@@ -1,5 +1,6 @@
 import React from 'react';
 import ComponentExample, { splitDocs } from '../ComponentExample';
+import { Form, FormGroup, RadioGroup, IconFont, Button, Radio } from 'rsuite';
 
 const context = require('./index.md');
 const examples = [
@@ -12,6 +13,14 @@ const examples = [
 export default () => {
   return (
     <ComponentExample
+      dependencies={{
+        Form,
+        FormGroup,
+        RadioGroup,
+        IconFont,
+        Button,
+        Radio
+      }}
       context={context}
       examples={examples}
     />
