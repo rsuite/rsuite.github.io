@@ -2,6 +2,7 @@
 
 设置一个 `noCaret` 属性。
 
+<!--start-code-->
 ```js
 const instance = (
   <Dropdown shape='default' title="Default" noCaret>
@@ -13,3 +14,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->

@@ -1,3 +1,4 @@
+<!--start-code-->
 ```js
 const instance = (
   <div className='icon-example-list'>
@@ -31,3 +32,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->

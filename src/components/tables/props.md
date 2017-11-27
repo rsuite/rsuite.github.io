@@ -1,5 +1,6 @@
 ### 属性叠加
 
+<!--start-code-->
 ```js
 const tableInstance = (
   <Table striped bordered condensed hover>
@@ -35,3 +36,4 @@ const tableInstance = (
 
 ReactDOM.render(tableInstance, mountNode);
 ```
+<!--end-code-->

@@ -1,5 +1,6 @@
 ### 默认
 
+<!--start-code-->
 ```js
 const tableInstance = (
   <Table>
@@ -35,3 +36,4 @@ const tableInstance = (
 
 ReactDOM.render(tableInstance, mountNode);
 ```
+<!--end-code-->

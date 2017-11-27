@@ -1,5 +1,6 @@
 ### 默认
 
+<!--start-code-->
 ```js
 const tooltip = (
   <Tooltip>
@@ -28,3 +29,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->

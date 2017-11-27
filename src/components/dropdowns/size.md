@@ -3,6 +3,7 @@
 `size` 属性设置下拉菜单大小, 选项包括: `lg`、`md`、`sm`、`xs`
 
 
+<!--start-code-->
 ```js
 const SIZES = ['lg', 'md', 'sm', 'xs'];
 
@@ -26,3 +27,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->

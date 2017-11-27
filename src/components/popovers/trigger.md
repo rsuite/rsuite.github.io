@@ -2,6 +2,7 @@
 
 有三种方式可以触发提示 `Popover` 的信息: `click`、`focus`、`hover`
 
+<!--start-code-->
 ```js
 const speaker = (
   <Popover title="Title">
@@ -25,3 +26,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->

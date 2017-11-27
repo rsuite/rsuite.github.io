@@ -1,6 +1,7 @@
 ### 宽度自适应
 
-```javascript
+<!--start-code-->
+```js
 const instance = (
   <Nav pills justified>
     <Nav.Item active>Item A</Nav.Item>
@@ -10,5 +11,5 @@ const instance = (
   </Nav>
 );
 ReactDOM.render(instance);
-
 ```
+<!--end-code-->

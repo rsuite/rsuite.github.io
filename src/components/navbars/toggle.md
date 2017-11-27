@@ -2,6 +2,7 @@
 
 在小屏幕上 `Navbar.Collapse` 中的元素会隐藏， 可以设置一个 `Navbar.Toggle` 按钮，点击后展开被隐藏的元素。
 
+<!--start-code-->
 ```js
 const instance = (
   <Navbar inverse>
@@ -33,3 +34,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->

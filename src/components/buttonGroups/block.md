@@ -2,6 +2,7 @@
 
 添加属性 `block`，把按钮组设置为块级元素
 
+<!--start-code-->
 ```js
 const instance = (
   <ButtonGroup vertical block>
@@ -12,3 +13,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->

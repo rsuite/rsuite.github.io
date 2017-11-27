@@ -1,5 +1,6 @@
 ### 标签式导航
 
+<!--start-code-->
 ```js
 const instance = (
   <Nav tabs>
@@ -11,3 +12,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->

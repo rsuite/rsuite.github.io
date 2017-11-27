@@ -1,5 +1,6 @@
 ### 默认
 
+<!--start-code-->
 ```js
 const instance = (
   <ButtonGroup>
@@ -10,3 +11,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->

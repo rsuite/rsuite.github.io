@@ -1,6 +1,7 @@
 ### Radio Group
 
 
+<!--start-code-->
 ```js
 const instance = (
   <Form>
@@ -18,3 +19,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->

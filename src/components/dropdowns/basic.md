@@ -1,5 +1,6 @@
 ### 默认
 
+<!--start-code-->
 ```js
 const SHAPES = ['default', 'primary', 'success', 'warning', 'danger', 'info', 'link'];
 
@@ -21,3 +22,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->

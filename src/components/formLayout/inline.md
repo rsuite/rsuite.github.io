@@ -1,4 +1,5 @@
 ### 单行布局
+<!--start-code-->
 ```js
 var formLayoutInstance = (
   <Form inline>
@@ -22,3 +23,4 @@ var formLayoutInstance = (
 );
 ReactDOM.render(formLayoutInstance, mountNode);
 ```
+<!--end-code-->

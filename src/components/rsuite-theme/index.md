@@ -52,7 +52,7 @@
 
 新建`index.js`文件，并使用`webpack`进行打包。
 
-```javascript
+```js
 import React from 'react';
 import { Header, Navbar } from 'rsuite';
 import 'main.less';
@@ -121,7 +121,7 @@ npm install rsuite-theme -g
 
 在项目根目录下新建 `rsuite.config.js`
 
-```javascript
+```js
 const colors = {
     default: '#00bcd4',
     pagurian: '#1b9451'
@@ -163,7 +163,7 @@ rsuite-theme -h
 
 #### 3. node 模块方式使用（适用于多套主题的情况）
 创建文件 `css-build.js`
-```javascript
+```js
 
 const build = require('rsuite-theme');
 const outputDir = 'resources/css';
@@ -189,7 +189,7 @@ const importResources = (doneCallback)=>{
          'fonts/**/*.*'
      ],
      dist: outputDir
- },doneCallback); 
+ },doneCallback);
 }
 
 importResources(palette);

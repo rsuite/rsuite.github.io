@@ -1,5 +1,6 @@
 ### 按钮工具栏
 
+<!--start-code-->
 ```js
 const instance = (
   <ButtonToolbar>
@@ -16,3 +17,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->

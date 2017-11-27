@@ -1,4 +1,5 @@
 ### 垂直布局
+<!--start-code-->
 ```js
 const instance = (
   <ButtonGroup vertical>
@@ -9,3 +10,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->

@@ -2,6 +2,7 @@
 
 `size` 属性设置按钮大小, 选项包括:`lg`、`md`、`sm`、`xs`
 
+<!--start-code-->
 ```js
 const instance = (
   <ButtonToolbar>
@@ -13,3 +14,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->

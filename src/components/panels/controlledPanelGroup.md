@@ -1,5 +1,6 @@
 ### 受控面板组
 
+<!--start-code-->
 ```js
 
 class ControlledPanelGroup extends React.Component{
@@ -28,3 +29,4 @@ class ControlledPanelGroup extends React.Component{
 
 ReactDOM.render(<ControlledPanelGroup />, mountNode);
 ```
+<!--end-code-->

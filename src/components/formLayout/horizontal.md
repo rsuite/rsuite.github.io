@@ -1,5 +1,6 @@
 ### 水平布局
 
+<!--start-code-->
 ```js
 var formLayoutInstance = (
   <Form horizontal>
@@ -75,3 +76,4 @@ var formLayoutInstance = (
 ReactDOM.render(formLayoutInstance, mountNode);
 
 ```
+<!--end-code-->

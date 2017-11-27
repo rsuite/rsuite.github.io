@@ -2,6 +2,7 @@
 
 可以通过 `checkedChildren`,`unCheckedChildren` 两个属性分别设置开关两种状态下显示的内容
 
+<!--start-code-->
 ```js
 const instance = (
   <div>
@@ -19,3 +20,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->

@@ -1,7 +1,8 @@
 
 ### 混入下拉按钮
 
-```javascript
+<!--start-code-->
+```js
 const instance = (
   <Nav pills >
     <Nav.Item active eventKey="A">Item A</Nav.Item>
@@ -21,3 +22,4 @@ const instance = (
 ReactDOM.render(instance);
 
 ```
+<!--end-code-->

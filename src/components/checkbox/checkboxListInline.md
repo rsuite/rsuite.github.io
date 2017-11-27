@@ -1,6 +1,7 @@
 ### Checkbox Group 内联
 
 
+<!--start-code-->
 ```js
 class Demo extends React.Component{
   constructor(props){
@@ -36,3 +37,4 @@ class Demo extends React.Component{
 
 ReactDOM.render(<Demo/>, mountNode);
 ```
+<!--end-code-->

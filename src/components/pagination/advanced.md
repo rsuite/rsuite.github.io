@@ -1,5 +1,6 @@
 ### 高级选项
 
+<!--start-code-->
 ```js
 
 class PaginationAdvanced extends React.Component{
@@ -38,3 +39,4 @@ class PaginationAdvanced extends React.Component{
 
 ReactDOM.render(<PaginationAdvanced />, mountNode);
 ```
+<!--end-code-->

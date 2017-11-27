@@ -1,5 +1,6 @@
 ### 调整使全行排满，两端对齐
 
+<!--start-code-->
 ```js
 const instance = (
   <ButtonGroup justified>
@@ -11,3 +12,4 @@ const instance = (
 
 ReactDOM.render(instance);
 ```
+<!--end-code-->

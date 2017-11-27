@@ -1,4 +1,5 @@
 ### 基本用法
+<!--start-code-->
 ```js
 
 class ModalsBasic extends React.Component{
@@ -69,3 +70,4 @@ class ModalsBasic extends React.Component{
 
 ReactDOM.render(<ModalsBasic />, mountNode);
 ```
+<!--end-code-->

@@ -1,5 +1,6 @@
 ### 默认
 
+<!--start-code-->
 ```js
 
 class PaginationBasic  extends React.Component{
@@ -47,3 +48,4 @@ class PaginationBasic  extends React.Component{
 
 ReactDOM.render(<PaginationBasic />, mountNode);
 ```
+<!--end-code-->

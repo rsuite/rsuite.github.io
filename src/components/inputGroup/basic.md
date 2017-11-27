@@ -2,6 +2,7 @@
 
 用于搭配一些固定组合
 
+<!--start-code-->
 ```js
 const instance = (
   <Form >
@@ -36,3 +37,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->

@@ -3,6 +3,7 @@
 
 `shape` 属性设置按钮样式，选项包括: `default`、`primary`、`success`、`warning`、`danger`、`info`、`link`
 
+<!--start-code-->
 ```js
 const instance = (
   <ButtonToolbar>
@@ -17,3 +18,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->

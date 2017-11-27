@@ -2,6 +2,7 @@
 
 有三种方式可以触发提示 `tooltip` 的信息: `click`、`focus`、`hover`
 
+<!--start-code-->
 ```js
 const tooltip = (
   <Tooltip>
@@ -23,3 +24,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->

@@ -1,5 +1,6 @@
 ### 垂直导航
 
+<!--start-code-->
 ```js
 const instance = (
   <Nav pills stacked>
@@ -11,3 +12,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->

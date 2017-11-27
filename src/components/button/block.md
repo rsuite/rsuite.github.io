@@ -3,6 +3,7 @@
 
 创建块级的按钮，给组件设置一个 `block` 属性
 
+<!--start-code-->
 ```js
 const instance = (
   <ButtonToolbar>
@@ -12,3 +13,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->

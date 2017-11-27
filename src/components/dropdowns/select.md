@@ -2,6 +2,7 @@
 
 设置一个 `select` 属性。
 
+<!--start-code-->
 ```js
 function handleSelect(eventKey) {
   console.log(eventKey);
@@ -17,3 +18,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->

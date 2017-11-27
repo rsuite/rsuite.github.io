@@ -1,5 +1,6 @@
 ### 基本用法
 
+<!--start-code-->
 ```js
 const title = (
   <h3>Panel title</h3>
@@ -36,3 +37,4 @@ const panelsInstance = (
 ReactDOM.render(panelsInstance, mountNode);
 
 ```
+<!--end-code-->

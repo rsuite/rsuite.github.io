@@ -1,6 +1,7 @@
 ### 胶囊式标签
 
-```javascript
+<!--start-code-->
+```js
 const instance = (
   <Nav pills>
     <Nav.Item active>Item A</Nav.Item>
@@ -10,5 +11,5 @@ const instance = (
   </Nav>
 );
 ReactDOM.render(instance);
-
 ```
+<!--end-code-->

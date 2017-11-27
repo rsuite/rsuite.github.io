@@ -1,6 +1,7 @@
 
 ### 默认
 
+<!--start-code-->
 ```js
 const gridInstance = (
   <Grid>
@@ -27,3 +28,4 @@ const gridInstance = (
 );
 ReactDOM.render(gridInstance, mountNode);
 ```
+<!--end-code-->

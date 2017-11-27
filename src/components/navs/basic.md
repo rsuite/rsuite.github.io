@@ -1,5 +1,6 @@
 ### 默认
 
+<!--start-code-->
 ```js
 const instance = (
   <Nav>
@@ -11,3 +12,4 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+<!--end-code-->
