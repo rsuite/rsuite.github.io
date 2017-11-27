@@ -1,11 +1,11 @@
 import React from 'react';
-import ComponentExample, { splitDocs } from '../ComponentExample';
+import ComponentExample from '../ComponentExample';
 import { Navbar, Nav, Button, IconFont } from 'rsuite';
 
 const context = require('./index.md');
 const examples = [
-  splitDocs(require('./basic.md')),
-  splitDocs(require('./toggle.md'))
+  require('./basic.md'),
+  require('./toggle.md')
 ];
 
 export default () => {

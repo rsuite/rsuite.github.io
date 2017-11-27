@@ -1,12 +1,12 @@
 import React from 'react';
-import ComponentExample, { splitDocs } from '../ComponentExample';
+import ComponentExample from '../ComponentExample';
 import { Form, FormGroup, RadioGroup, IconFont, Button, Radio } from 'rsuite';
 
 const context = require('./index.md');
 const examples = [
-  splitDocs(require('./basic.md')),
-  splitDocs(require('./radioList.md')),
-  splitDocs(require('./radioListInline.md')),
+  require('./basic.md'),
+  require('./radioList.md'),
+  require('./radioListInline.md'),
 ];
 
 

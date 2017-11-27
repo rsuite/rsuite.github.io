@@ -12,5 +12,5 @@ const instance = (
     <Toggle size='sm' />
   </div>
 );
-ReactDOM.render(instance, mountNode);
+ReactDOM.render(instance);
 ```

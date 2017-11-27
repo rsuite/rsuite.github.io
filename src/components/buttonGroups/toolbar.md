@@ -14,5 +14,5 @@ const instance = (
     <Button shape="default">Next</Button>
   </ButtonToolbar>
 );
-ReactDOM.render(instance, mountNode);
+ReactDOM.render(instance);
 ```

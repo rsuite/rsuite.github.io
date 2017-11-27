@@ -9,5 +9,5 @@ const instance = (
     <Nav.Item disabled>Item D</Nav.Item>
   </Nav>
 );
-ReactDOM.render(instance, mountNode);
+ReactDOM.render(instance);
 ```

@@ -19,5 +19,5 @@ const instance = (
     {SHAPES.map(renderButtonGroup)}
   </ButtonToolbar>
 );
-ReactDOM.render(instance, mountNode);
+ReactDOM.render(instance);
 ```

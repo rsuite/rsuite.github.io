@@ -9,5 +9,5 @@ const instance = (
     </HelpBlock>
   </div>
 );
-ReactDOM.render(instance, mountNode);
+ReactDOM.render(instance);
 ```

@@ -1,13 +1,13 @@
 import React from 'react';
-import ComponentExample, { splitDocs } from '../ComponentExample';
+import ComponentExample from '../ComponentExample';
 import { Form, FormGroup, Dropdown, InputGroup, IconFont, Button, FormControl } from 'rsuite';
 
 
 const context = require('./index.md');
 const examples = [
-  splitDocs(require('./basic.md')),
-  splitDocs(require('./icon.md')),
-  splitDocs(require('./custom.md')),
+  require('./basic.md'),
+  require('./icon.md'),
+  require('./custom.md'),
 ];
 
 

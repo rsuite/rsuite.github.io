@@ -15,5 +15,5 @@ const instance = (
         </Breadcrumb.Item>
   </Breadcrumb>
 );
-ReactDOM.render(instance, mountNode);
+ReactDOM.render(instance);
 ```

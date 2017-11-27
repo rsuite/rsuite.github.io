@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import Example from './Example';
-
-const indexExample = require('fs').readFileSync(__dirname + '/indexExample.js', 'utf8');
+import CodeView from 'react-code-view';
 
 class Banner extends React.Component {
   render() {
@@ -11,7 +8,6 @@ class Banner extends React.Component {
     return (
       <div id="banner" className="banner">
         {children}
-        <Example isBanner code={indexExample} />
       </div>
     );
   }

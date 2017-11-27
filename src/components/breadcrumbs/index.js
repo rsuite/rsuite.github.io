@@ -1,11 +1,11 @@
 import React from 'react';
-import ComponentExample, { splitDocs } from '../ComponentExample';
+import ComponentExample from '../ComponentExample';
 import { Breadcrumb } from  'rsuite';
 
 
 const context = require('./index.md');
 const examples = [
-  splitDocs(require('./basic.md'))
+  require('./basic.md')
 ];
 
 export default () => {

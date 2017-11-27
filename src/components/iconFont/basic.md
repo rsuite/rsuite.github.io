@@ -29,5 +29,5 @@ const instance = (
     </span>
   </div>
 );
-ReactDOM.render(instance, mountNode);
+ReactDOM.render(instance);
 ```

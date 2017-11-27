@@ -14,5 +14,5 @@ const instance = (
     </FormGroup>
   </Form>
 );
-ReactDOM.render(instance, mountNode);
+ReactDOM.render(instance);
 ```

@@ -11,5 +11,5 @@ const instance = (
     <Button shape='default' size='xs'>Xsmall</Button>
   </ButtonToolbar>
 );
-ReactDOM.render(instance, mountNode);
+ReactDOM.render(instance);
 ```

@@ -1,21 +1,9 @@
 import React from 'react';
 import { Col } from 'rsuite';
 import $ from 'jquery';
-import Markdown from '../fixtures/Markdown';
-import Example from '../fixtures/Example';
+import { Markdown } from 'react-markdown-reader';
+import CodeView from 'react-code-view';
 
-export function splitDocs(html) {
-
-  const $dom = $(`<div>${html}</div>`);
-  const $code = $dom.find('code.javascript');
-  $dom.find('.doc-highlight').remove();
-
-  return {
-    code: $code.text(),
-    text: $dom.prop('outerHTML')
-  };
-
-}
 
 class ComponentExample extends React.Component {
   render() {
@@ -32,10 +20,9 @@ class ComponentExample extends React.Component {
         <Markdown>{docs[0]}</Markdown>
         {
           examples.map((item, index) => (
-            <Example
+            <CodeView
               key={index}
-              code={item.code}
-              text={item.text}
+              source={item}
               dependencies={dependencies}
             />
           ))

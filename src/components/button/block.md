@@ -10,5 +10,5 @@ const instance = (
     <Button shape='primary' block>Block</Button>
   </ButtonToolbar>
 );
-ReactDOM.render(instance, mountNode);
+ReactDOM.render(instance);
 ```

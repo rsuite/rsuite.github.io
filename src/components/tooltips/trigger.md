@@ -21,5 +21,5 @@ const instance = (
     </Whisper>
   </ButtonToolbar>
 );
-ReactDOM.render(instance, mountNode);
+ReactDOM.render(instance);
 ```

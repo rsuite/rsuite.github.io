@@ -18,6 +18,6 @@ const instance = (
     </Nav.Dropdown>
   </Nav>
 );
-ReactDOM.render(instance, mountNode);
+ReactDOM.render(instance);
 
 ```

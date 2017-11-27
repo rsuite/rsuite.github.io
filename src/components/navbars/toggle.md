@@ -31,5 +31,5 @@ const instance = (
     </Navbar.Collapse>
   </Navbar>
 );
-ReactDOM.render(instance, mountNode);
+ReactDOM.render(instance);
 ```

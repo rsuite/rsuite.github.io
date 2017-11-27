@@ -11,5 +11,5 @@ const instance = (
   </div>
 );
 
-ReactDOM.render(instance, mountNode);
+ReactDOM.render(instance);
 ```

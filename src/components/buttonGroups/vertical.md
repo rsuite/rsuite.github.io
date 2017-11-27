@@ -7,5 +7,5 @@ const instance = (
     <Button shape="default">Bottom</Button>
   </ButtonGroup>
 );
-ReactDOM.render(instance, mountNode);
+ReactDOM.render(instance);
 ```

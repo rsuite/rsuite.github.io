@@ -1,7 +1,7 @@
 import React from 'react';
 import { Content, Row, Col, Whisper, Tooltip } from 'rsuite';
 import IntroBlock from '../fixtures/IntroBlock';
-import Markdown from '../fixtures/Markdown';
+import { Markdown } from 'react-markdown-reader';
 
 import dmpPreview from '../../resources/images/dmp-preview.png';
 import dashboardPreview from '../../resources/images/dashboard-preview.png';

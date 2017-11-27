@@ -9,5 +9,5 @@ const instance = (
   </ButtonGroup>
 );
 
-ReactDOM.render(instance, mountNode);
+ReactDOM.render(instance);
 ```

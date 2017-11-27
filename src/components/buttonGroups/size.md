@@ -21,5 +21,5 @@ const instance = (
     {SIZES.map(renderButtonGroup)}
   </div>
 );
-ReactDOM.render(instance, mountNode);
+ReactDOM.render(instance);
 ```

@@ -21,5 +21,5 @@ const instance = (
 
   </ButtonToolbar>
 );
-ReactDOM.render(instance, mountNode);
+ReactDOM.render(instance);
 ```

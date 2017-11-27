@@ -37,5 +37,5 @@ const instance = (
     </Button>
   </Form>
 );
-ReactDOM.render(instance, mountNode);
+ReactDOM.render(instance);
 ```

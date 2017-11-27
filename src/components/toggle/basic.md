@@ -7,5 +7,5 @@ const instance = (
     <Toggle defaultChecked />
   </div>
 );
-ReactDOM.render(instance, mountNode);
+ReactDOM.render(instance);
 ```

@@ -1,12 +1,12 @@
 import React from 'react';
-import ComponentExample, { splitDocs } from '../ComponentExample';
+import ComponentExample from '../ComponentExample';
 import { HelpBlock, Button, IconFont, FormControl } from 'rsuite';
 
 
 const context = require('./index.md');
 const examples = [
-  splitDocs(require('./basic.md')),
-  splitDocs(require('./shape.md'))
+  require('./basic.md'),
+  require('./shape.md')
 ];
 
 export default () => {

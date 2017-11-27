@@ -1,10 +1,10 @@
 import React from 'react';
-import ComponentExample, { splitDocs } from '../ComponentExample';
+import ComponentExample from '../ComponentExample';
 import { ButtonToolbar, Button, Modal, IconFont } from 'rsuite';
 
 const context = require('./index.md');
 const examples = [
-  splitDocs(require('./basic.md')),
+  require('./basic.md'),
 ];
 
 

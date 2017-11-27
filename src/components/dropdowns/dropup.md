@@ -11,5 +11,5 @@ const instance = (
     <Dropdown.Item eventKey="D" >Item D</Dropdown.Item>
   </Dropdown>
 );
-ReactDOM.render(instance, mountNode);
+ReactDOM.render(instance);
 ```

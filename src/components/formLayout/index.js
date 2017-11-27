@@ -1,5 +1,5 @@
 import React from 'react';
-import ComponentExample, { splitDocs } from '../ComponentExample';
+import ComponentExample from '../ComponentExample';
 import {
   Form,
   FormGroup,
@@ -19,9 +19,9 @@ import {
 
 const context = require('./index.md');
 const examples = [
-  splitDocs(require('./basic.md')),
-  splitDocs(require('./horizontal.md')),
-  splitDocs(require('./inline.md')),
+  require('./basic.md'),
+  require('./horizontal.md'),
+  require('./inline.md'),
 ];
 
 

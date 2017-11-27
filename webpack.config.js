@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
 const CompressionPlugin = require("compression-webpack-plugin");
-const markdownLoader = require('markdownloader').renderer;
+const markdownLoader = require('react-markdown-reader').renderer;
 const hotJarTraking = fs.readFileSync('./src/hotjar-tracking.html', 'utf-8');
 
 const { NODE_ENV } = process.env;
