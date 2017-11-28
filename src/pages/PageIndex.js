@@ -9,6 +9,7 @@ import IntroPanel from '../fixtures/IntroPanel';
 import fetchJsonp from '../uitils/fetchJsonp';
 import data from '../componentList';
 import Logo from '../fixtures/Logo';
+import ReactLogo from '../fixtures/ReactLogo';
 
 
 class PageIndex extends React.Component {
@@ -107,10 +108,21 @@ class PageIndex extends React.Component {
               <Link to="/components/buttons">组件</Link>
               <Link to="/examples">实践</Link>
               <a href="https://github.com/suitejs/suite" target="_blank">
-              GitHub
+                GitHub
               <IconFont icon="external-link" className="external-link" />
               </a>
             </div>
+            <ReactLogo
+              style={{
+                width: '1000px',
+                height: '1000px',
+                left: '-252px',
+                top: '-410px',
+                opacity: 0.1,
+                position: 'absolute',
+                zIndex: -1
+              }}
+            />
           </div>
         </Banner>
         <Content id="index-content" className="box-wrapper">
