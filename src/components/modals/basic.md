@@ -68,6 +68,6 @@ class ModalsBasic extends React.Component{
 
 }
 
-ReactDOM.render(<ModalsBasic />, mountNode);
+ReactDOM.render(<ModalsBasic />);
 ```
 <!--end-code-->

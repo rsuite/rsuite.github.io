@@ -37,6 +37,6 @@ class PaginationAdvanced extends React.Component{
 
 }
 
-ReactDOM.render(<PaginationAdvanced />, mountNode);
+ReactDOM.render(<PaginationAdvanced />);
 ```
 <!--end-code-->

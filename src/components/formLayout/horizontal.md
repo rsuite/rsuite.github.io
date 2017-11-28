@@ -73,7 +73,7 @@ var formLayoutInstance = (
 
   </Form>
 );
-ReactDOM.render(formLayoutInstance, mountNode);
+ReactDOM.render(formLayoutInstance);
 
 ```
 <!--end-code-->

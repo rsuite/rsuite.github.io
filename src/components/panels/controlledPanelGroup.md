@@ -27,6 +27,6 @@ class ControlledPanelGroup extends React.Component{
   }
 }
 
-ReactDOM.render(<ControlledPanelGroup />, mountNode);
+ReactDOM.render(<ControlledPanelGroup />);
 ```
 <!--end-code-->
