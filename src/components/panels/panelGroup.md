@@ -10,6 +10,6 @@ const panelGroupInstance = (
   </PanelGroup>
 );
 
-ReactDOM.render(panelGroupInstance, mountNode);
+ReactDOM.render(panelGroupInstance);
 ```
 <!--end-code-->

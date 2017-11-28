@@ -34,7 +34,7 @@ const panelsInstance = (
   </div>
 );
 
-ReactDOM.render(panelsInstance, mountNode);
+ReactDOM.render(panelsInstance);
 
 ```
 <!--end-code-->

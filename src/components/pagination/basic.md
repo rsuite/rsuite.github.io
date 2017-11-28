@@ -46,6 +46,6 @@ class PaginationBasic  extends React.Component{
   }
 }
 
-ReactDOM.render(<PaginationBasic />, mountNode);
+ReactDOM.render(<PaginationBasic />);
 ```
 <!--end-code-->

@@ -35,6 +35,6 @@ class Demo extends React.Component{
   }
 }
 
-ReactDOM.render(<Demo/>, mountNode);
+ReactDOM.render(<Demo/>);
 ```
 <!--end-code-->

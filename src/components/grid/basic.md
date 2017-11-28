@@ -26,6 +26,6 @@ const gridInstance = (
     </Row>
   </Grid>
 );
-ReactDOM.render(gridInstance, mountNode);
+ReactDOM.render(gridInstance);
 ```
 <!--end-code-->
