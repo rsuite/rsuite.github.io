@@ -34,6 +34,6 @@ const tableInstance = (
   </Table>
 );
 
-ReactDOM.render(tableInstance, mountNode);
+ReactDOM.render(tableInstance);
 ```
 <!--end-code-->

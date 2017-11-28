@@ -1,12 +1,14 @@
 # Table [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/table/index.md)
 表格组件
 
+如果对 Table 有更多需求，推荐使用 [rsuite-table](https://rsuitejs.com/rsuite-table)
+
 ## 演示
 
 <!--{demo}-->
 
 
-> 对 Table 有更多需求，请使用 [rsuite-table](https://rsuitejs.com/rsuite-table)
+
 
 ## Props
 属性名称       | 类型      | 默认值 | 描述

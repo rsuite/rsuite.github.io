@@ -1,6 +1,6 @@
 
 
-# 关于 RSUITE [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/pages/getting-started.md)
+# 关于 RSUITE [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite/blob/master/README.md)
 
 ------
 
