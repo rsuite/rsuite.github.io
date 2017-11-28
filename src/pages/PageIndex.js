@@ -100,7 +100,7 @@ class PageIndex extends React.Component {
           <div className="banner-content">
             <h1 className="logo">
               <Logo width={120} />
-              <p>RSUITE</p>
+              <p style={{ marginTop: 16 }}>RSUITE</p>
             </h1>
             <p className="sub-title">一套 React 的 UI 组件库</p>
             <div className="menu-nav">
@@ -116,8 +116,8 @@ class PageIndex extends React.Component {
               style={{
                 width: '1000px',
                 height: '1000px',
-                left: '-252px',
-                top: '-410px',
+                left: '-251px',
+                top: '-412px',
                 opacity: 0.1,
                 position: 'absolute',
                 zIndex: -1
