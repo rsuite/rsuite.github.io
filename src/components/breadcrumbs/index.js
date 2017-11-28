@@ -1,6 +1,7 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Breadcrumb } from  'rsuite';
+import { Breadcrumb } from 'rsuite';
+import { Link } from 'react-router';
 
 
 const context = require('./index.md');
@@ -13,6 +14,7 @@ export default () => {
     <ComponentExample
       context={context}
       dependencies={{
+        Link,
         Breadcrumb
       }}
       examples={examples}
