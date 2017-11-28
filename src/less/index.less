@@ -7,10 +7,8 @@
 @import '~codemirror/theme/base16-dark.css';
 @import './highlight';
 @import './table';
-
 @import '~rsuite-theme/dist/less/commonly-variables.less';
 @import '~react-code-view/lib/less/index.less';
-
 
 //rewrite base color
 @base-color: #6292f0;
@@ -139,8 +137,10 @@ body {
     font-weight: 200;
   }
   .active {
-    font-weight: 500;
-    color: @primary-color;
+    &, & a {
+      font-weight: 600;
+      color: @primary-color;
+    }
   }
   .nav-chinese {
     font-size: 12px;
@@ -160,8 +160,6 @@ body {
     margin-top: 10px;
   }
 }
-
-
 
 .show-grid {
   margin-top: 10px;
@@ -564,7 +562,7 @@ code {
   }
 }
 
-.external-link{
+.external-link {
   font-size: 12px;
   margin-left: 8px;
   display: inline-block;

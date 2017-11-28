@@ -1,28 +1,35 @@
 import React from 'react';
-import { Sidebar, Navbar, Nav, IconFont } from 'rsuite';
+import PropTypes from 'prop-types';
+import { Sidebar, Nav, IconFont } from 'rsuite';
 import { Link } from 'react-router';
 import components from '../componentList';
 
-class DocSidebar extends React.Component {
+const contextTypes = {
+  router: PropTypes.object.isRequired
+};
 
+class DocSidebar extends React.Component {
   render() {
     const { children, menu } = this.props;
     const nodeItems = [];
     menu.default.map((item, key) => {
 
       nodeItems.push(
-        <li key={key} className="nav-header" >
+        <li key={key} className="nav-header">
           {item.category}
         </li>
       );
 
       item.components.map((child, index) => {
+        const pathname = child.url ? child.url : `/components/${child.id}`;
+        const active = this.context.router.isActive({ pathname });
+        const className = active ? 'active' : '';
         const item = child.url
-          ? <Nav.Item key={index} componentClass="a" target="_blank" href={child.url}>
+          ? <Nav.Item key={index} componentClass="a" target="_blank" href={pathname} active={active}>
             {child.name}
             <span className="nav-chinese">{child.title}</span>
           </Nav.Item>
-          : <Nav.Item key={index} componentClass={Link} to={`/components/${child.id}`} >
+          : <Nav.Item key={index} componentClass={Link} to={pathname} active={active}>
             {child.name}
             <span className="nav-chinese">{child.title}</span>
           </Nav.Item>;
@@ -31,7 +38,7 @@ class DocSidebar extends React.Component {
     });
 
     return (
-      <Sidebar >
+      <Sidebar>
         {children}
         <Nav className="nav-docs">
           {nodeItems}
@@ -58,4 +65,5 @@ class DocSidebar extends React.Component {
   }
 }
 
+DocSidebar.contextTypes = contextTypes;
 export default DocSidebar;
