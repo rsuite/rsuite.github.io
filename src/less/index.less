@@ -135,6 +135,7 @@ body {
   a {
     color: #575757;
     font-weight: 200;
+    transition: background .3s cubic-bezier(0.4, 0, 1, 1);
   }
   .active {
     &, & a {
@@ -367,6 +368,13 @@ code {
   margin-top: 16%;
   position: relative;
   box-shadow: 0 1px 1px 0 #cccbcb;
+  transition: box-shadow 0.2s linear, transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px #c3c3c3;
+  }
+
   .avatar {
     width: 37%;
     padding-bottom: 37%;

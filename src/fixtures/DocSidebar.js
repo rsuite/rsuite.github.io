@@ -23,7 +23,6 @@ class DocSidebar extends React.Component {
       item.components.map((child, index) => {
         const pathname = child.url ? child.url : `/components/${child.id}`;
         const active = this.context.router.isActive({ pathname });
-        const className = active ? 'active' : '';
         const item = child.url
           ? <Nav.Item key={index} componentClass="a" target="_blank" href={pathname} active={active}>
             {child.name}
