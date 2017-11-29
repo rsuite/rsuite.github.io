@@ -65,10 +65,10 @@ class DocHeader extends React.Component {
   render() {
 
     let links = NAV_LINKS.map((nav, index) => {
-      let isActive = null; //this.context.router.isActive(nav.link) && (nav.link !== '/');
+      let isActive = this.context.router.isActive({ pathname: nav.link }) && (nav.link !== '/');
       return (
-        <li className={isActive ? 'active' : null} key={index} >
-          <Link to={nav.link}>{nav.title}</Link>
+        <li className={isActive ? 'active' : null} key={index}>
+          <Link className="hvr-underline-from-center" to={nav.link}>{nav.title}</Link>
         </li>
       );
     });
@@ -93,9 +93,9 @@ class DocHeader extends React.Component {
 
             <Nav pullRight>
               {links}
-              <Nav.Item href="https://github.com/rsuite/rsuite">
+              <Nav.Item className="hvr-underline-from-center" target="_blank" href="https://github.com/rsuite/rsuite">
                 GitHub
-              <IconFont icon="external-link" className="external-link" />
+                <IconFont icon="external-link" className="external-link" />
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>
@@ -105,5 +105,6 @@ class DocHeader extends React.Component {
   }
 }
 
-
+DocHeader.propTypes = propTypes;
+DocHeader.contextTypes = contextTypes;
 export default DocHeader;

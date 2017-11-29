@@ -17,7 +17,7 @@ class ReactLogo extends React.Component {
     return (
       <div
         {...props}
-        className="react-logo"
+        className="react-logo animated zoomIn"
       >
         <svg viewBox="0 0 400 400">
           <path

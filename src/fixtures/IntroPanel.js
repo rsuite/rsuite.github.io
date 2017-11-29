@@ -57,7 +57,7 @@ class IntroDetail extends React.Component {
 IntroDetail.propTypes = propTypes;
 
 
-class IntroPanel extends React.Component{
+class IntroPanel extends React.Component {
   render() {
     const {
       bg,
@@ -72,7 +72,7 @@ class IntroPanel extends React.Component{
 
     return (
       <Col lg={3} md={4} sm={6} xs={12}>
-        <div className='intro-panel'>
+        <div className="intro-panel hvr-icon-pop">
           <div className="avatar">
             <a href={url} target="_blank">
               <i className={`avatar-icon ${icon}`} style={style}></i>

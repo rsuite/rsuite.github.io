@@ -20,26 +20,31 @@ class PageIndex extends React.Component {
       data
     };
   }
+
   componentWillMount() {
     this.isMounted = true;
     this.fetchGithubData();
   }
+
   componentDidMount() {
     this._onWindowResizeListener = on(window, 'resize', this.handleWindowResize);
     this.handleWindowResize();
   }
+
   componentWillUnmount() {
     this.isMounted = false;
     if (this._onWindowResizeListener) {
       this._onWindowResizeListener.off();
     }
   }
+
   handleWindowResize = () => {
     let banner = document.getElementById('banner');
     let height = parseInt(getHeight(banner)) - 20;
     let indexContent = document.getElementById('index-content');
     addStyle(indexContent, 'margin-top', (height < 0 ? 0 : height) + 'px');
   }
+
   fetchGithubData() {
     let { data } = this.state;
     fetchJsonp('https://api.github.com/orgs/rsuite/repos?per_page=100').then((resp) => {
@@ -61,6 +66,7 @@ class PageIndex extends React.Component {
   get isMounted() {
     return this.mounted;
   }
+
   set isMounted(isMounted) {
     this.mounted = isMounted;
   }
@@ -91,6 +97,7 @@ class PageIndex extends React.Component {
       </Row>
     );
   }
+
   render() {
 
 
@@ -104,12 +111,12 @@ class PageIndex extends React.Component {
             </h1>
             <p className="sub-title">一套 React 的 UI 组件库</p>
             <div className="menu-nav">
-              <Link to="/getting-started">介绍</Link>
-              <Link to="/components/buttons">组件</Link>
-              <Link to="/examples">实践</Link>
-              <a href="https://github.com/suitejs/suite" target="_blank">
+              <Link className="hvr-underline-from-center" to="/getting-started">介绍</Link>
+              <Link className="hvr-underline-from-center" to="/components/buttons">组件</Link>
+              <Link className="hvr-underline-from-center" to="/examples">实践</Link>
+              <a className="hvr-underline-from-center" href="https://github.com/suitejs/suite" target="_blank">
                 GitHub
-              <IconFont icon="external-link" className="external-link" />
+                <IconFont icon="external-link" className="external-link" />
               </a>
             </div>
             <ReactLogo

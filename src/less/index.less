@@ -10,7 +10,6 @@
 @media-xs: 768px;
 @media-md: 992px;
 
-
 .logo {
   font-family: 'Raleway', 'Hiragino Sans GB', sans-serif;
   text-transform: uppercase;
@@ -59,15 +58,16 @@
   .navbar-nav > li {
     a {
       background: none !important;
-      &:hover {
-        border-bottom: 2px solid #eee;
-        padding-bottom: 8px;
-      }
+      transition: color .3s linear;
     }
+
+    &.active > a.hvr-underline-from-center::before {
+      left: 0;
+      right: 0;
+    }
+
     &.active a, a:focus, a:active {
       color: @primary-color;
-      border-bottom: 2px solid @primary-color;
-      padding-bottom: 8px;
     }
   }
 }
@@ -229,13 +229,16 @@ code {
     margin: 0 10px;
     text-decoration: none;
     color: #aaa;
-    margin-top: 20px;
+    transition: color .3s linear;
+
     &.primary {
       border: 1px solid #ff8533;
     }
+
     &:hover {
-      color: @base-color;
-      border-bottom: 2px solid @base-color;
+      &, & .external-link {
+        color: @base-color;
+      }
     }
   }
   .doc-code {
@@ -553,4 +556,100 @@ code {
   margin-left: 8px;
   display: inline-block;
   color: #bbb;
+  transition: color .3s linear;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animated-delay-half-seconds {
+  animation-delay: .5s;
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(.9, .9, .9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(.97, .97, .97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  animation-name: bounceIn;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  animation-name: zoomIn;
+}
+
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    background: @base-color;
+    height: 2px;
+    transition-property: left, right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  & > a::after,
+  &::after {
+    display: none !important;
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:active::before {
+    left: 0;
+    right: 0;
+  }
 }
