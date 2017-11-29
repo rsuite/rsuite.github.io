@@ -3,7 +3,7 @@ const fs = require('fs');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
-const CompressionPlugin = require("compression-webpack-plugin");
+const CompressionPlugin = require('compression-webpack-plugin');
 const markdownLoader = require('react-markdown-reader').renderer;
 const hotJarTraking = fs.readFileSync('./src/hotjar-tracking.html', 'utf-8');
 
@@ -16,7 +16,7 @@ const plugins = [
   new webpack.HotModuleReplacementPlugin(),
   new webpack.NamedModulesPlugin(),
   new webpack.DefinePlugin({
-    "process.env": {
+    'process.env': {
       'NODE_ENV': JSON.stringify(NODE_ENV)
     }
   }),
@@ -44,8 +44,8 @@ if (NODE_ENV === 'production') {
   plugins.push(new webpack.optimize.UglifyJsPlugin());
   plugins.push(new webpack.BannerPlugin(`Last update: ${new Date().toString()}`));
   plugins.push(new CompressionPlugin({
-    asset: "[path].gz[query]",
-    algorithm: "gzip",
+    asset: '[path].gz[query]',
+    algorithm: 'gzip',
     test: /\.(js|html)$/,
     threshold: 10240,
     minRatio: 0.8
@@ -78,6 +78,8 @@ const common = {
         use: [
           {
             loader: 'css-loader',
+          }, {
+            loader: 'postcss-loader',
           }, {
             loader: 'less-loader'
           }
