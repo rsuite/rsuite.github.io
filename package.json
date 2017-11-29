@@ -29,7 +29,7 @@
     "lodash": "^4.11.1",
     "prop-types": "^15.6.0",
     "react": "^15.6.0",
-    "react-code-view": "^1.0.6",
+    "react-code-view": "^1.0.10",
     "react-dom": "^15.6.0",
     "react-markdown-reader": "^1.0.0",
     "rsuite": "^2.0.10",
