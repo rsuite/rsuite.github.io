@@ -1,35 +1,15 @@
-//The tilde character (~) tells webpack that it's not a relative import as by default. If tilde is included
-//https://survivejs.com/webpack/styling/loading/#loading-from-node_modules-directory
 @import '~rsuite-theme/dist/less/index';
-@import '~rsuite-table/lib/less/index';
-@import '~codemirror/lib/codemirror.css';
-@import '~codemirror/theme/base16-light.css';
-@import '~codemirror/theme/base16-dark.css';
-@import './highlight';
-@import './table';
-@import '~rsuite-theme/dist/less/commonly-variables.less';
 @import '~react-code-view/lib/less/index.less';
+@import './highlight';
 
 //rewrite base color
 @base-color: #6292f0;
 @bg-color: #fbfbfb;
 @banner-bg-color: #1E2023;
 @header-height: 64px;
-
 @media-xs: 768px;
 @media-md: 992px;
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: antialiased;
-}
 
-/* Demo */
-
-.demo {
-  font-size: 1.2em;
-  text-align: center;
-  font-family: 'Old Standard TT', serif;
-}
 
 .logo {
   font-family: 'Raleway', 'Hiragino Sans GB', sans-serif;
@@ -370,12 +350,10 @@ code {
   position: relative;
   box-shadow: 0 1px 1px 0 #cccbcb;
   transition: box-shadow 0.2s linear, transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
-
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0px 5px 15px #c3c3c3;
   }
-
   .avatar {
     width: 37%;
     padding-bottom: 37%;
@@ -454,7 +432,6 @@ code {
       }
       > a {
         color: #9ba3af;
-
         &:not(:last-child) {
           margin-right: 18px;
         }
