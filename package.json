@@ -20,7 +20,6 @@
     "bootstrap"
   ],
   "dependencies": {
-    "autoprefixer": "^7.1.6",
     "classnames": ">=2.0.0",
     "compression-webpack-plugin": "^1.0.1",
     "cssnano": "^3.10.0",
@@ -42,6 +41,7 @@
     "url": "git@github.com:rsuite/rsuite.git"
   },
   "devDependencies": {
+    "autoprefixer": "^7.1.6",
     "babel-core": "^6.7.6",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^6.2.4",
