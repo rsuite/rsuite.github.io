@@ -2,6 +2,7 @@
 ```js
 const instance = (
   <div className='icon-example-list'>
+    <h5>图标</h5>
     <IconFont icon='star' />
     <h5>动态图标</h5>
     <IconFont icon='spinner' spin />

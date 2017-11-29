@@ -2,8 +2,18 @@
   "presets": [
     "stage-0",
     "react",
-    "es2015",
-    "es2016"
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": [
+            "> 1%",
+            "last 2 versions",
+            "ie >= 9"
+          ]
+        }
+      }
+    ]
   ],
   "plugins": [
     "transform-class-properties",
