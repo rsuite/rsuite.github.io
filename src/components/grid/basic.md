@@ -4,7 +4,7 @@
 <!--start-code-->
 ```js
 const gridInstance = (
-  <Grid>
+  <Grid fluid>
     <Row className="show-grid">
       <Col xs={12} md={8}>xs={12} md={8}</Col>
       <Col xs={6} md={4}>xs={6} md={4}</Col>
