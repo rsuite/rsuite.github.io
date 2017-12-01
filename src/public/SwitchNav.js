@@ -9,7 +9,7 @@ export default ({ activeKey }) => {
     <Nav.Dropdown className="switch-nav-menu" activeKey={activeKey} select >
       {
         componentList.map(item => (
-          <Nav.Item eventKey={item.name} href={item.url} >
+          <Nav.Item key={item.repoName} eventKey={item.name} href={item.url} >
             <i className={item.icon} /> {' '}
             {item.name}
           </Nav.Item>
