@@ -125,7 +125,6 @@ class PageIndex extends React.Component {
                 height: '1000px',
                 left: '-251px',
                 top: '-412px',
-                opacity: 0.1,
                 position: 'absolute',
                 zIndex: -1
               }}
