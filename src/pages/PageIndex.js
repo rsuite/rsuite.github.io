@@ -7,7 +7,7 @@ import _ from 'lodash';
 import Banner from '../fixtures/Banner';
 import IntroPanel from '../fixtures/IntroPanel';
 import fetchJsonp from '../uitils/fetchJsonp';
-import data from '../componentList';
+import data from '../public/componentList';
 import Logo from '../fixtures/Logo';
 import ReactLogo from '../fixtures/ReactLogo';
 

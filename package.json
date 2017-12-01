@@ -1,6 +1,6 @@
 {
-  "name": "rsuite",
-  "version": "0.1.0",
+  "name": "rsuite-docs",
+  "version": "0.1.1",
   "description": "RSuite components built with React",
   "main": "lib/index.js",
   "directories": {
@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server -d --watch --inline --history-api-fallback --progress --colors --port 3200 --host 0.0.0.0",
     "build": "rm -rf assets &&  NODE_ENV=production webpack --progress --colors",
+    "build-public": "rm -rf lib && babel src/public --out-dir lib && cp -R src/public/less lib",
     "dll": "webpack --config webpack.dll.config.js",
     "test": "karma start"
   },
@@ -19,7 +20,22 @@
     "react-component",
     "bootstrap"
   ],
-  "dependencies": {
+  "files": [
+    "CHANGELOG.md",
+    "lib"
+  ],
+
+  "author": "Simon Guo <simonguo.2009@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:rsuite/rsuite.git"
+  },
+  "peerDependencies": {
+    "react": "^0.14.9 || >=15.3.0",
+    "react-dom": "^0.14.9 || >=15.3.0"
+  },
+  "devDependencies": {
     "classnames": ">=2.0.0",
     "compression-webpack-plugin": "^1.0.1",
     "cssnano": "^3.10.0",
@@ -32,15 +48,7 @@
     "react-dom": "^15.6.0",
     "react-markdown-reader": "^1.0.0",
     "rsuite": "^2.0.10",
-    "rsuite-table": "^2.0.1"
-  },
-  "author": "Simon Guo <simonguo.2009@gmail.com>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:rsuite/rsuite.git"
-  },
-  "devDependencies": {
+    "rsuite-table": "^2.0.1",
     "autoprefixer": "^7.1.6",
     "babel-core": "^6.7.6",
     "babel-eslint": "^7.2.3",

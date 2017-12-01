@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Sidebar, Nav, IconFont } from 'rsuite';
 import { Link } from 'react-router';
-import components from '../componentList';
+import components from '../public/componentList';
 
 const contextTypes = {
   router: PropTypes.object.isRequired

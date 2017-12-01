@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { scrollTop, on } from 'dom-lib';
 import { Router, Route, Link } from 'react-router';
 import { Header, Navbar, Nav, IconFont } from 'rsuite';
-import TextLogo from './TextLogo';
+import RSuiteLogo from '../public/RSuiteLogo';
 
 
 const NAV_LINKS = [{
@@ -84,7 +84,7 @@ class DocHeader extends React.Component {
           <Navbar.Header>
             <Navbar.Brand>
               <a href="/">
-                <TextLogo width={142} height={32} />
+                <RSuiteLogo width={142} height={32} />
               </a>
             </Navbar.Brand>
             <Navbar.Toggle />
