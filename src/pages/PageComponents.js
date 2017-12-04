@@ -7,7 +7,7 @@ import { Markdown } from 'react-markdown-reader';
 import DocHeader from '../fixtures/DocHeader';
 import DocSidebar from '../fixtures/DocSidebar';
 
-import * as menu from '../components/menu';
+import menu from '../components/menu';
 
 class PageComponents extends React.Component {
   render() {
@@ -16,6 +16,7 @@ class PageComponents extends React.Component {
 
         <Row>
           <Col md={3} sm={12}>
+
             <DocSidebar menu={menu}>
               <Markdown>
                 {require('./components.md')}

@@ -1,18 +1,63 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Sidebar, Nav, IconFont } from 'rsuite';
+import { Sidebar, Nav, IconFont, FormControl } from 'rsuite';
 import { Link } from 'react-router';
+import _ from 'lodash';
+
 import components from '../public/componentList';
+
+
+function filterNodesOfTree(data, check) {
+
+  const findNodes = (nodes = []) => {
+    return nodes.filter((item) => {
+      if (_.isArray(item.components)) {
+        const nextChildren = findNodes(item.components);
+        if (nextChildren && nextChildren.length) {
+          item.components = nextChildren;
+          return true;
+        }
+      }
+      return check(item);
+    });
+  };
+  return findNodes(data);
+}
+
+
 
 const contextTypes = {
   router: PropTypes.object.isRequired
 };
 
 class DocSidebar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      keyword: ''
+    };
+  }
+  handleSearch = (keyword) => {
+    this.setState({ keyword });
+  }
+  getBaseComponents() {
+    const { menu } = this.props;
+    const { keyword } = this.state;
+    const key = _.trim(keyword.toLocaleLowerCase());
+    return filterNodesOfTree(_.cloneDeep(menu), (item) => {
+      if (!item.id) {
+        return false;
+      }
+      return item.id.indexOf(key) >= 0 || item.title.indexOf(key) >= 0;
+    }) || [];
+  }
   render() {
-    const { children, menu } = this.props;
+    const { children } = this.props;
+    const { keyword } = this.state;
     const nodeItems = [];
-    menu.default.map((item, key) => {
+    const baseComponents = this.getBaseComponents();
+
+    baseComponents.map((item, key) => {
 
       nodeItems.push(
         <li key={key} className="nav-header">
@@ -36,16 +81,32 @@ class DocSidebar extends React.Component {
       });
     });
 
+
+    const items = components.filter((item, index) => {
+      let tags = item.tags || [];
+      return tags.some((tag) => {
+        return tag.indexOf(_.trim(keyword.toLocaleLowerCase())) >= 0;
+      }) && index !== 0;
+    });
+
     return (
       <Sidebar>
+
         {children}
+        <FormControl
+          placeholder="搜索组件..."
+          className="search-input"
+          onChange={_.debounce(this.handleSearch, 400)}
+        />
         <Nav className="nav-docs">
           {nodeItems}
-          <li className="nav-header">扩展组件</li>
           {
-            components.filter((item, index) => {
-              return index !== 0;
-            }).map((item, index) => {
+            items.length ? (
+              <li className="nav-header">扩展组件</li>
+            ) : null
+          }
+          {
+            items.map((item, index) => {
 
               return (
                 <li key={index}>
@@ -65,4 +126,5 @@ class DocSidebar extends React.Component {
 }
 
 DocSidebar.contextTypes = contextTypes;
+
 export default DocSidebar;

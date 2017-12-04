@@ -38,7 +38,6 @@ class PageExamples extends React.Component {
       );
     });
 
-
     return (
       <Content className='box-wrapper'>
         <Row>
