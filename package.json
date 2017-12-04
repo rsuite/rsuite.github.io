@@ -11,7 +11,8 @@
     "build": "rm -rf assets &&  NODE_ENV=production webpack --progress --colors",
     "build-public": "rm -rf lib && babel src/public --out-dir lib && cp -R src/public/less lib && cp -R src/public/css lib",
     "dll": "webpack --config webpack.dll.config.js",
-    "test": "karma start"
+    "test": "karma start",
+    "cp_by_simon":"sh ./v2.0/copy_by_simon.sh"
   },
   "keywords": [
     "react",
