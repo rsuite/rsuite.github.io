@@ -16,7 +16,7 @@ class PageContainer extends React.Component {
       <PageProvider>
         <div className="doc-page">
           <Header inverse>
-            <div className="container">
+            <div className="container-fluid">
               <Navbar.Header>
                 <Navbar.Brand>
                   <a href="/">
@@ -36,13 +36,12 @@ class PageContainer extends React.Component {
             </div>
           </Header>
 
-          <div className="container">
+          <div className="container-fluid">
             <Row>
               <Col md={3} xsHidden smHidden>
                 <PageNav width={200} />
               </Col>
-              <Col md={8}>
-
+              <Col md={8} xs={12} sm={12}>
                 <PageContent>
                   {children}
                 </PageContent>
