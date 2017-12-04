@@ -29,6 +29,10 @@ class PageIndex extends React.Component {
   componentDidMount() {
     this._onWindowResizeListener = on(window, 'resize', this.handleWindowResize);
     this.handleWindowResize();
+    const setRunning = setTimeout(() => {
+      this.running = true;
+      clearTimeout(setRunning);
+    }, 1.7e3);
   }
 
   componentWillUnmount() {
@@ -69,6 +73,14 @@ class PageIndex extends React.Component {
 
   set isMounted(isMounted) {
     this.mounted = isMounted;
+  }
+
+  get shouldRunning() {
+    return this.running;
+  }
+
+  set shouldRunning(shouldRunning) {
+    this.running = shouldRunning;
   }
 
   renderComponents() {
@@ -128,6 +140,7 @@ class PageIndex extends React.Component {
                 position: 'absolute',
                 zIndex: -1
               }}
+              running={this.shouldRunning}
             />
           </div>
         </Banner>

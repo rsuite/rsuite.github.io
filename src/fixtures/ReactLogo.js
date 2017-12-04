@@ -11,9 +11,11 @@ class ReactLogo extends React.Component {
       pathFillColor,
       pathStrokeColor,
       pathStrokeWidth,
+      running,
       ...props
     } = this.props;
 
+    const runningClassName = running ? 'running' : '';
     return (
       <div
         {...props}
@@ -41,8 +43,8 @@ class ReactLogo extends React.Component {
             strokeWidth={pathStrokeWidth}
             d={'M183.9,227.7c15,8.9,76.6,43.4,91.9,17.6s-44.6-63.2-59.6-72.1s-76.6-43.4-91.9-17.6S168.9,218.8,183.9,227.7z'}
           />
-          <circle className="react-logo-run" fill="#638cc8" cx="0" cy="0" r="4"></circle>
-          <circle className="react-logo-run-2" fill="#638cc8" cx="0" cy="0" r="4"></circle>
+          <circle className={`react-logo-run ${runningClassName}`} fill="#638cc8" cx="0" cy="0" r="4"></circle>
+          <circle className={`react-logo-run-2 ${runningClassName}`} fill="#638cc8" cx="0" cy="0" r="4"></circle>
         </svg>
       </div>
     );
