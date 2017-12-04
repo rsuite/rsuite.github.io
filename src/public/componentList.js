@@ -121,7 +121,7 @@ export default [
     url: 'https://rsuitejs.com/rsuite-check-tree',
     name: 'CheckTree',
     intro: '树型多选组件',
-    tags: ['tree','checktree'],
+    tags: ['tree', 'checktree'],
     src: 'https://github.com/rsuite/rsuite-check-tree'
   },
   {
@@ -245,6 +245,15 @@ export default [
     intro: '树形多项选择器',
     tags: ['checktree', 'tree', 'picker'],
     src: 'https://github.com/rsuite/rsuite-checktreepicker'
+  }, {
+    icon: 'icon icon-navicon',
+    bg: randomColor(),
+    repoName: 'rsuite-page-nav',
+    url: 'https://rsuitejs.com/rsuite-page-nav',
+    name: 'PageNav',
+    intro: '页面导航组件',
+    tags: ['nav', 'page'],
+    src: 'https://github.com/rsuite/rsuite-page-nav'
   }
 ];
 
