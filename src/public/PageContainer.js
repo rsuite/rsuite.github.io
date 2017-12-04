@@ -39,7 +39,7 @@ class PageContainer extends React.Component {
           <div className="container-fluid">
             <Row>
               <Col md={3} xsHidden smHidden>
-                <PageNav width={200} />
+                <PageNav width={200} offset={{ top: 70, left: 30 }} />
               </Col>
               <Col md={8} xs={12} sm={12}>
                 <PageContent>
