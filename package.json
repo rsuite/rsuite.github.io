@@ -1,6 +1,6 @@
 {
   "name": "rsuite-docs",
-  "version": "0.1.1",
+  "version": "0.1.10",
   "description": "RSuite components built with React",
   "main": "lib/index.js",
   "directories": {
@@ -24,7 +24,6 @@
     "CHANGELOG.md",
     "lib"
   ],
-
   "author": "Simon Guo <simonguo.2009@gmail.com>",
   "license": "MIT",
   "repository": {
@@ -36,19 +35,6 @@
     "react-dom": "^0.14.9 || >=15.3.0"
   },
   "devDependencies": {
-    "classnames": ">=2.0.0",
-    "compression-webpack-plugin": "^1.0.1",
-    "cssnano": "^3.10.0",
-    "dom-lib": "^0.2.6",
-    "jquery": "^3.2.1",
-    "lodash": "^4.11.1",
-    "prop-types": "^15.6.0",
-    "react": "^15.6.0",
-    "react-code-view": "^1.0.10",
-    "react-dom": "^15.6.0",
-    "react-markdown-reader": "^1.0.0",
-    "rsuite": "^2.0.10",
-    "rsuite-table": "^2.0.1",
     "autoprefixer": "^7.1.6",
     "babel-core": "^6.7.6",
     "babel-eslint": "^7.2.3",
@@ -62,8 +48,12 @@
     "brfs": "^1.4.3",
     "chai": "^3.5.0",
     "child-process-promise": "^2.0.2",
+    "classnames": ">=2.0.0",
     "colors": "^1.1.2",
+    "compression-webpack-plugin": "^1.0.1",
     "css-loader": "^0.23.1",
+    "cssnano": "^3.10.0",
+    "dom-lib": "^0.2.6",
     "es3ify-loader": "^0.2.0",
     "eslint": "^2.8.0",
     "eslint-plugin-babel": "^3.2.0",
@@ -75,6 +65,7 @@
     "highlight.js": "^9.4.0",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.22.0",
+    "jquery": "^3.2.1",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^0.2.3",
     "karma-cli": "^0.1.2",
@@ -88,18 +79,26 @@
     "karma-webpack": "^1.7.0",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
+    "lodash": "^4.11.1",
     "markdown-loader": "2.0.0",
     "marked": "^0.3.5",
     "mocha": "^2.5.3",
     "output-file-sync": "^1.1.1",
     "postcss-loader": "^2.0.9",
+    "prop-types": "^15.6.0",
+    "react": "^15.6.0",
+    "react-code-view": "^1.0.10",
+    "react-dom": "^15.6.0",
     "react-hot-loader": "^3.0.0-beta.6",
+    "react-markdown-reader": "^1.0.0",
     "react-notification-system": "^0.2.13",
     "react-router": "3.2.0",
     "rimraf": "^2.5.2",
+    "rsuite": "^2.0.10",
     "rsuite-clipboard": "^2.0.1",
     "rsuite-form": "0.1.18",
     "rsuite-schema": "0.0.3",
+    "rsuite-table": "^2.0.1",
     "rsuite-theme": "2.0.15",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0",
@@ -108,5 +107,8 @@
     "url-loader": "^0.5.7",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.3.0"
+  },
+  "dependencies": {
+    "rsuite-page-nav": "^1.1.1"
   }
 }
