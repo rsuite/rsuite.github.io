@@ -1,6 +1,6 @@
 {
   "name": "rsuite-docs",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "RSuite components built with React",
   "main": "lib/index.js",
   "directories": {
@@ -29,6 +29,9 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:rsuite/rsuite.git"
+  },
+  "dependencies": {
+    "rsuite-page-nav": "^1.1.2"
   },
   "peerDependencies": {
     "react": "^0.14.9 || >=15.3.0",
@@ -107,8 +110,5 @@
     "url-loader": "^0.5.7",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.3.0"
-  },
-  "dependencies": {
-    "rsuite-page-nav": "^1.1.1"
   }
 }
