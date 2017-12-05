@@ -70,7 +70,9 @@ class PageIndex extends React.Component {
   set isMounted(isMounted) {
     this.mounted = isMounted;
   }
-
+  handleSearch = (keyword) => {
+    this.setState({ keyword });
+  }
   renderComponents() {
     const { data, keyword } = this.state;
     const items = data.filter((item) => {
@@ -135,10 +137,9 @@ class PageIndex extends React.Component {
           <Row>
             <Col className="search-bar" md={6} mdOffset={3}>
               <FormControl
+                className="search-input"
                 placeholder="搜索组件"
-                onChange={_.debounce((keyword) => {
-                  this.setState({ keyword });
-                }, 400)}
+                onChange={_.debounce(this.handleSearch, 400)}
               />
             </Col>
           </Row>
