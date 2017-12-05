@@ -13,7 +13,6 @@
     "dll": "webpack --config webpack.dll.config.js",
     "test": "karma start",
     "cp_by_simon": "sh ./v2.0/copy_by_simon.sh",
-    "cp_by_superman": "sh ./v2.0/copy_by_superman.sh",
     "cp_by_superman": "sh ./v2.0/copy_by_godfery.sh"
   },
   "keywords": [
@@ -103,6 +102,7 @@
     "rsuite": "^2.0.10",
     "rsuite-clipboard": "^2.0.1",
     "rsuite-form": "0.1.18",
+    "rsuite-icon-font": "^1.0.0",
     "rsuite-schema": "0.0.3",
     "rsuite-table": "^2.0.1",
     "rsuite-theme": "2.0.17",
