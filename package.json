@@ -13,7 +13,8 @@
     "dll": "webpack --config webpack.dll.config.js",
     "test": "karma start",
     "cp_by_simon": "sh ./v2.0/copy_by_simon.sh",
-    "cp_by_superman": "sh ./v2.0/copy_by_godfery.sh"
+    "cp_by_superman": "sh ./v2.0/copy_by_superman.sh",
+    "cp_by_godfery": "sh ./v2.0/copy_by_godfery.sh"
   },
   "keywords": [
     "react",
