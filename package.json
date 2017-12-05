@@ -12,7 +12,8 @@
     "build-public": "rm -rf lib && babel src/public --out-dir lib && cp -R src/public/less lib && cp -R src/public/css lib",
     "dll": "webpack --config webpack.dll.config.js",
     "test": "karma start",
-    "cp_by_simon":"sh ./v2.0/copy_by_simon.sh"
+    "cp_by_simon":"sh ./v2.0/copy_by_simon.sh",
+    "cp_by_superman": "sh ./v2.0/copy_by_superman.sh"
   },
   "keywords": [
     "react",
