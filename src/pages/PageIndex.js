@@ -29,6 +29,10 @@ class PageIndex extends React.Component {
   componentDidMount() {
     this._onWindowResizeListener = on(window, 'resize', this.handleWindowResize);
     this.handleWindowResize();
+    const setRunning = setTimeout(() => {
+      this.setState({ running: true });
+      clearTimeout(setRunning);
+    }, 1.7e3);
   }
 
   componentWillUnmount() {
@@ -130,6 +134,7 @@ class PageIndex extends React.Component {
                 position: 'absolute',
                 zIndex: -1
               }}
+              running={this.state.running}
             />
           </div>
         </Banner>
