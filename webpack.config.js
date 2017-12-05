@@ -7,6 +7,8 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const markdownLoader = require('react-markdown-reader').renderer;
 const hotJarTraking = fs.readFileSync('./src/hotjar-tracking.html', 'utf-8');
 
+const resolve = src => path.resolve(__dirname, src);
+
 const { NODE_ENV } = process.env;
 const extractLess = new ExtractTextPlugin({
   filename: '[contenthash].css',
@@ -65,64 +67,79 @@ const common = {
     publicPath
   },
   module: {
-    rules: [{
-      test: /\.js$/,
-      use: [
-        'transform-loader/cacheable?brfs',
-        'babel-loader?babelrc'
-      ],
-      exclude: /node_modules/
-    }, {
-      test: /\.(less|css)$/,
-      loader: extractLess.extract({
+    rules: [
+      {
+        test: /\.js$/,
         use: [
-          {
-            loader: 'css-loader',
-          }, {
-            loader: 'postcss-loader',
-          }, {
-            loader: 'less-loader'
-          }
+          'transform-loader/cacheable?brfs',
+          'babel-loader?babelrc'
         ],
-        // use style-loader in development
-        fallback: 'style-loader?{attrs:{prop: "value"}}'
-      })
-    }, {
-      test: /\.md$/,
-      use: [{
-        loader: 'html-loader'
-      }, {
-        loader: 'markdown-loader',
-        options: {
-          pedantic: true,
-          renderer: markdownLoader.renderer
-        }
+        exclude: /node_modules/
+      },
+      {
+        test: /\.(less|css)$/,
+        loader: extractLess.extract({
+          use: [
+            {
+              loader: 'css-loader',
+            }, {
+              loader: 'postcss-loader',
+            }, {
+              loader: 'less-loader'
+            }
+          ],
+          // use style-loader in development
+          fallback: 'style-loader?{attrs:{prop: "value"}}'
+        })
+      },
+      {
+        test: /\.md$/,
+        use: [{
+          loader: 'html-loader'
+        }, {
+          loader: 'markdown-loader',
+          options: {
+            pedantic: true,
+            renderer: markdownLoader.renderer
+          }
+        }]
+      },
+      {
+        test: /\.(jpg|png)$/,
+        //`publicPath`  only use to assign assets path in build
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+            publicPath
+          }
+        }]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|svg)($|\?)/,
+        exclude: [resolve('src/icons')],
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 1,
+            size: 16,
+            hash: 'sha512',
+            digest: 'hex',
+            name: 'resources/[hash].[ext]',
+            publicPath: NODE_ENV === 'development' ? '/' : './'
+          }
+        }]
+      },
+      {
+        test: /\.svg$/,
+        include: [resolve('src/icons')],
+        use: [{
+          loader: 'svg-sprite-loader',
+          options: {
+            symbolId: 'icon-[name]'
+          }
+        }]
       }]
-    }, {
-      test: /\.(jpg|png|svg)$/,
-      //`publicPath`  only use to assign assets path in build
-      use: [{
-        loader: 'url-loader',
-        options: {
-          limit: 8192,
-          publicPath
-        }
-      }]
-    }, {
-      test: /\.(woff|woff2|eot|ttf|svg)($|\?)/,
-      use: [{
-        loader: 'url-loader',
-        options: {
-          limit: 1,
-          size: 16,
-          hash: 'sha512',
-          digest: 'hex',
-          name: 'resources/[hash].[ext]',
-          publicPath: NODE_ENV === 'development' ? '/' : './'
-        }
-      }
-      ]
-    }]
   },
   plugins: plugins
 };
