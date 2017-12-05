@@ -30,15 +30,13 @@ class IntroDetail extends React.Component {
         <div className="intro-name">
           {name}
         </div>
+
         <div className="intro-status">
           <a target="_blank" href={`https://www.npmjs.org/package/${repoName}`}>
-            <img src={`https://img.shields.io/npm/v/${repoName}.svg?style=flat-square`} />
+            <img src={`https://img.shields.io/npm/v/${repoName}/version2.x.svg?style=flat-square`} />
           </a>
           <a target="_blank" href={`https://travis-ci.org/rsuite/${repoName}`}>
-            <img src={`https://img.shields.io/travis/rsuite/${repoName}.svg?style=flat-square`} />
-          </a>
-          <a target="_blank" href={`https://coveralls.io/github/rsuite/${repoName}`}>
-            <img src={`https://img.shields.io/coveralls/rsuite/${repoName}.svg?style=flat-square`} />
+            <img src={'https://img.shields.io/badge/build-passing-green.svg?style=flat-square'} />
           </a>
         </div>
         <div className="intro-context">
