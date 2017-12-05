@@ -1,4 +1,4 @@
-/*! Last update: Mon Dec 04 2017 12:09:11 GMT+0800 (CST) */
+/*! Last update: Tue Dec 05 2017 17:36:40 GMT+0800 (CST) */
 /* BASICS */
 
 .CodeMirror {
@@ -11416,6 +11416,9 @@ code {
 https://github.com/rsuite/rsuite-theme/blob/next/src/less/commonly-variables.less
 注意：不要在自己的组件中声明颜色变量
 **/
+.page-nav {
+  overflow: hidden;
+}
 .nav-item {
   position: relative;
 }
