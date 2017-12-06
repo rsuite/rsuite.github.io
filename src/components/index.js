@@ -17,7 +17,6 @@ export checkbox from './checkbox';
 export radio from './radio';
 export inputGroup from './inputGroup';
 export formLayout from './formLayout';
-export schema from './rsuite-schema';
 export domlib from './dom-lib';
 export theme from './rsuite-theme';
 export toggle from './toggle';

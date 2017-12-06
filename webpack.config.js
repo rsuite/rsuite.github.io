@@ -58,8 +58,10 @@ if (NODE_ENV === 'production') {
 
 const common = {
   entry: path.resolve(__dirname, 'src/'),
+  devtool: 'cheap-module-eval-source-map',
   devServer: {
     hot: true,
+    disableHostCheck: true,
     publicPath: '/',
   },
   output: {

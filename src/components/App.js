@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DocHeader from '../fixtures/DocHeader';
 import DocFooter from '../fixtures/DocFooter';
-import Container from 'rsuite/lib/Container';
+import { Grid } from 'rsuite';
 
 const contextTypes = {
   router: PropTypes.object.isRequired
@@ -19,12 +19,15 @@ class App extends React.Component {
   render() {
     const { location } = this.props;
     const className = location.pathname === '/' ? 'home-page' : '';
+
     return (
       <div className={`doc-page ${className}`}>
+
         <DocHeader />
-        <Container className='doc-container'>
+
+        <Grid className='doc-container' fluid>
           {this.props.children}
-        </Container>
+        </Grid>
         <DocFooter />
       </div>
     );

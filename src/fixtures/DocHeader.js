@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { scrollTop, on } from 'dom-lib';
 import { Router, Route, Link } from 'react-router';
-import { Header, Navbar, Nav, IconFont } from 'rsuite';
+import { Header, Navbar, Nav, IconFont, Grid } from 'rsuite';
 import RSuiteLogo from '../public/RSuiteLogo';
 
 
@@ -80,7 +80,7 @@ class DocHeader extends React.Component {
 
     return (
       <Header className={classes}>
-        <div className="container">
+        <Grid fluid>
           <Navbar.Header>
             <Navbar.Brand>
               <a href="/">
@@ -99,7 +99,7 @@ class DocHeader extends React.Component {
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>
-        </div>
+        </Grid>
       </Header>
     );
   }
