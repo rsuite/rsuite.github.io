@@ -139,16 +139,7 @@ class PageIndex extends React.Component {
           </div>
         </Banner>
         <Content id="index-content" className="box-wrapper">
-          <Row>
-            <Col className="search-bar" md={6} mdOffset={3}>
-              <FormControl
-                className="search-input"
-                placeholder="搜索组件"
-                onChange={_.debounce(this.handleSearch, 400)}
-              />
-            </Col>
-          </Row>
-          {this.renderComponents()}
+
         </Content>
       </div>
     );

@@ -16,7 +16,7 @@ class ComponentExample extends React.Component {
     const docs = context.split('<!--{demo}-->');
 
     return (
-      <Col md={9} sm={12}>
+      <div>
         <Markdown>{docs[0]}</Markdown>
         {
           examples.map((item, index) => (
@@ -29,7 +29,7 @@ class ComponentExample extends React.Component {
         }
         <Markdown>{docs[1]}</Markdown>
         {children}
-      </Col>
+      </div>
     );
   }
 }

@@ -5,7 +5,7 @@ class DocFooter extends React.Component {
   render() {
     return (
       <div className="footer">
-        <div className="container">
+        <div className="container-fluid">
           Powered by
           <a href="http://www.hypers.com" target="_blank">
             HYPERS <IconFont icon="external-link" className="external-link" />

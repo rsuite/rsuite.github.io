@@ -11,8 +11,8 @@ const examples = [
   require('./disabled.md')
 ];
 
-
 export default () => {
+
   return (
     <ComponentExample
       context={context}

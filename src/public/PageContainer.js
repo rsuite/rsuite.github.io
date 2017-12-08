@@ -7,11 +7,13 @@ import SwitchNav from './SwitchNav';
 class PageContainer extends React.Component {
 
   render() {
+
     const {
       children,
       githubURL,
       activeKey
     } = this.props;
+
     return (
       <PageProvider>
         <div className="doc-page">

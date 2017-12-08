@@ -15,16 +15,41 @@ import './less/index.less';
 
 require('./hypers-hire');
 
-import App from './components/App';
+import App from './App';
 
 // Pages
 import PageIndex from './pages/PageIndex';
 import PageGettingStarted from './pages/PageGettingStarted';
 import PageComponents from './pages/PageComponents';
-import PageComponentsDoc from './pages/PageComponentsDoc';
 import PageExamples from './pages/PageExamples';
 
 import ready from './ready';
+import componentOptions from './components/options';
+
+const componentContainer = (location, cb) => {
+
+  require.ensure([], require => {
+    cb(null, require(`./components/${name}`));
+  }, 'components');
+
+};
+
+const routes = [];
+componentOptions.forEach(element => {
+  element.components.forEach(com => {
+    routes.push(
+      <Route key={com.id} path={com.id} getComponent={(location, cb) => {
+        let name = location.params.name;
+        require.ensure([], require => {
+          cb(null, require(`./components/${com.id}`));
+        });
+      }}
+      />
+    );
+  });
+});
+
+
 
 const history = process.env.NODE_ENV === 'production' ? browserHistory : hashHistory;
 const mountApp = (
@@ -34,9 +59,9 @@ const mountApp = (
       <IndexRoute component={PageIndex} />
       <Route path="getting-started" component={PageGettingStarted} />
       <Route path="examples" component={PageExamples} />
-
       <Route path="components" component={PageComponents}>
-        <Route path=":name" component={PageComponentsDoc} />
+
+        {routes}
         <IndexRedirect to="buttons" />
       </Route>
     </Route>

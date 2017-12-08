@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DocHeader from '../fixtures/DocHeader';
-import DocFooter from '../fixtures/DocFooter';
+import DocHeader from './fixtures/DocHeader';
+import DocFooter from './fixtures/DocFooter';
 import { Grid } from 'rsuite';
 
 const contextTypes = {
@@ -11,7 +11,7 @@ const contextTypes = {
 class App extends React.Component {
 
   componentWillReceiveProps() {
-    _ha && _ha('send', 'pageview', {
+    window._ha && _ha('send', 'pageview', {
       'url': document.location.href
     });
   }

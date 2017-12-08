@@ -43,7 +43,7 @@
 //@import "~rsuite-picker/lib/less/index";
 // 引入ruiste 样式
 @import "~rsuite-theme/dist/less/rsuite";
-@base-color: #6292f0; //修改主题颜色
+@primary-color: #6292f0; //修改主题颜色
 //你自己的样式
 //...
 ```

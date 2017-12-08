@@ -80,10 +80,71 @@ export default [
         id: 'panels',
         name: 'Panels',
         title: '面板'
-      }, {
+      }
+    ]
+  },
+  {
+    category: '数据展示',
+    components: [
+      {
         id: 'tables',
         name: 'Tables',
         title: '表格'
+      },
+      {
+        id: 'tree',
+        name: 'Tree',
+        title: '树形控件'
+      },
+      {
+        id: 'check-tree',
+        name: 'CheckTree',
+        title: '可选择树形控件'
+      }
+    ]
+  },
+  {
+    category: '数据选择',
+    components: [
+      {
+        id: 'select-picker',
+        name: 'SelectPicker',
+        title: '单选'
+      },
+      {
+        id: 'check-picker',
+        name: 'CheckPicker',
+        title: '多选'
+      },
+      {
+        id: 'cascader',
+        name: 'CascaderPicker',
+        title: '级联选择'
+      },
+      {
+        id: 'tree-picker',
+        name: 'TreePicker',
+        title: '树形单项选择器'
+      },
+      {
+        id: 'check-tree-picker',
+        name: 'CheckTreePicker',
+        title: '树形多项选择器'
+      }
+    ]
+  },
+  {
+    category: '日期时间',
+    components: [
+      {
+        id: 'date-picker',
+        name: 'DatePicker',
+        title: '日期选择控件'
+      },
+      {
+        id: 'date-range-picker',
+        name: 'DateRangePicker',
+        title: '日期范围选择控件'
       }
     ]
   }, {
@@ -101,7 +162,7 @@ export default [
         id: 'radio',
         name: 'Radio',
         title: '单选框'
-      },{
+      }, {
         id: 'inputGroup',
         name: 'InputGroup',
         title: '输入组'
@@ -112,9 +173,12 @@ export default [
       }, {
         id: 'formValidation',
         name: 'Form Validation',
-        title: '表单验证',
-        url: 'https://rsuitejs.com/rsuite-form-lib/'
-      }
+        title: '表单验证'
+      }, {
+        id: 'uploader',
+        name: 'Uploader',
+        title: '上传文件'
+      },
     ]
   }, {
     category: '工具',
@@ -123,11 +187,6 @@ export default [
         id: 'schema',
         name: 'rsuite-schema',
         title: '数据模型及验证'
-      },
-      {
-        id: 'theme',
-        name: 'rsuite-theme',
-        title: '定制主题'
       }, {
         id: 'domlib',
         name: 'dom-lib',

@@ -71,22 +71,14 @@ class DocSidebar extends React.Component {
         const item = child.url
           ? <Nav.Item key={index} componentClass="a" target="_blank" href={pathname} active={active}>
             {child.name}
-            <span className="nav-chinese">{child.title}</span>
+
           </Nav.Item>
           : <Nav.Item key={index} componentClass={Link} to={pathname} active={active}>
             {child.name}
-            <span className="nav-chinese">{child.title}</span>
+
           </Nav.Item>;
         nodeItems.push(item);
       });
-    });
-
-
-    const items = components.filter((item, index) => {
-      let tags = item.tags || [];
-      return tags.some((tag) => {
-        return tag.indexOf(_.trim(keyword.toLocaleLowerCase())) >= 0;
-      }) && index !== 0;
     });
 
     return (
@@ -100,25 +92,6 @@ class DocSidebar extends React.Component {
         />
         <Nav className="nav-docs">
           {nodeItems}
-          {
-            items.length ? (
-              <li className="nav-header">扩展组件</li>
-            ) : null
-          }
-          {
-            items.map((item, index) => {
-
-              return (
-                <li key={index}>
-                  <a target="_blank" href={item.url}>
-                    <i className={item.icon}></i>{' '}
-                    {item.name}
-                    <IconFont icon="external-link" className="external-link" />
-                  </a>
-                </li>
-              );
-            })
-          }
         </Nav>
       </Sidebar>
     );

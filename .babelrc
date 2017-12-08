@@ -16,6 +16,13 @@
     ]
   ],
   "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "rsuite",
+        "camel2DashComponentName": false
+      }
+    ],
     "transform-class-properties",
     "transform-runtime",
     "add-module-exports"

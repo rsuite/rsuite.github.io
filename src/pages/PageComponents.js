@@ -7,15 +7,16 @@ import { Markdown } from 'react-markdown-reader';
 import DocHeader from '../fixtures/DocHeader';
 import DocSidebar from '../fixtures/DocSidebar';
 
-import menu from '../components/menu';
+import menu from '../components/options';
 
 class PageComponents extends React.Component {
   render() {
+    console.log(this.props.children);
     return (
       <div>
 
         <Row>
-          <Col md={3} sm={12}>
+          <Col md={2} sm={12}>
 
             <DocSidebar menu={menu}>
               <Markdown>
@@ -23,7 +24,10 @@ class PageComponents extends React.Component {
               </Markdown>
             </DocSidebar>
           </Col>
-          {this.props.children}
+          <Col md={10} sm={12}>
+            {this.props.children}
+          </Col>
+
         </Row>
 
       </div>

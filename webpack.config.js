@@ -46,6 +46,12 @@ if (NODE_ENV === 'development') {
 if (NODE_ENV === 'production') {
   plugins.push(new webpack.optimize.UglifyJsPlugin());
   plugins.push(new webpack.BannerPlugin(`Last update: ${new Date().toString()}`));
+  plugins.push(
+    new webpack.optimize.CommonsChunkPlugin({
+      names: ['rsuite'],
+      filename: 'rsuite.js'
+    })
+  );
   plugins.push(new CompressionPlugin({
     asset: '[path].gz[query]',
     algorithm: 'gzip',
@@ -57,7 +63,10 @@ if (NODE_ENV === 'production') {
 }
 
 const common = {
-  entry: path.resolve(__dirname, 'src/'),
+  entry: {
+    app: path.resolve(__dirname, 'src/'),
+    rsuite: ['rsuite', 'rsuite-table', 'rsuite-datepicker', 'rsuite-tree']
+  },
   devtool: 'cheap-module-eval-source-map',
   devServer: {
     hot: true,
@@ -66,7 +75,8 @@ const common = {
   },
   output: {
     path: path.resolve(__dirname, 'assets'),
-    filename: 'bundle.js',
+    filename: '[name].[hash].js',
+    chunkFilename: '[name].[hash].js',
     publicPath
   },
   module: {

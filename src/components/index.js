@@ -1,4 +1,4 @@
-export buttons from './button';
+export buttons from './buttons';
 export iconFont from './iconFont';
 export buttonGroups from './buttonGroups';
 export dropdowns from './dropdowns';

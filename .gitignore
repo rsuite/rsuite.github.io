@@ -44,3 +44,4 @@ docs/assets
 .idea
 dist
 yarn.lock
+package-lock.json
