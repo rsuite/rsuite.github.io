@@ -103,7 +103,7 @@
     "rsuite-icon-font": "^1.0.0",
     "rsuite-schema": "0.0.3",
     "rsuite-table": "^2.0.1",
-    "rsuite-theme": "2.0.17",
+    "rsuite-theme": "^2.0.18",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0",
     "style-loader": "^0.13.1",

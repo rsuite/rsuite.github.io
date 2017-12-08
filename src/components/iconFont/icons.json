@@ -633,6 +633,13 @@
     ]
   },
   {
+    "name": "Bar Chart Ranking",
+    "id": "bar-chart-ranking",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "barcode",
     "id": "barcode",
     "filter": [
@@ -5340,6 +5347,13 @@
     ],
     "categories": [
       "Web Application Icons"
+    ]
+  },
+  {
+    "name": "Multiple Lines Chart",
+    "id": "multiple-lines-chart",
+    "categories": [
+      "Hypers Icons"
     ]
   },
   {
