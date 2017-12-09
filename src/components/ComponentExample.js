@@ -1,8 +1,9 @@
 import React from 'react';
 import { Col } from 'rsuite';
-import $ from 'jquery';
 import { Markdown } from 'react-markdown-reader';
 import CodeView from 'react-code-view';
+import PageContainer from './PageContainer';
+
 
 
 class ComponentExample extends React.Component {
@@ -16,7 +17,7 @@ class ComponentExample extends React.Component {
     const docs = context.split('<!--{demo}-->');
 
     return (
-      <div>
+      <PageContainer>
         <Markdown>{docs[0]}</Markdown>
         {
           examples.map((item, index) => (
@@ -29,7 +30,7 @@ class ComponentExample extends React.Component {
         }
         <Markdown>{docs[1]}</Markdown>
         {children}
-      </div>
+      </PageContainer>
     );
   }
 }

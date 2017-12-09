@@ -4,15 +4,12 @@ import { addStyle, getHeight, on } from 'dom-lib';
 import { Container, Content, Row, Col, FormControl, IconFont } from 'rsuite';
 import _ from 'lodash';
 
-import Banner from '../fixtures/Banner';
-import IntroPanel from '../fixtures/IntroPanel';
-import fetchJsonp from '../uitils/fetchJsonp';
-import data from '../public/componentList';
-import Logo from '../fixtures/Logo';
-import ReactLogo from '../fixtures/ReactLogo';
+import Banner from './fixtures/Banner';
+import Logo from './fixtures/Logo';
+import ReactLogo from './fixtures/ReactLogo';
 
 
-class PageIndex extends React.Component {
+class Home extends React.Component {
   constructor(props) {
     super();
     this.state = {
@@ -49,23 +46,6 @@ class PageIndex extends React.Component {
     addStyle(indexContent, 'margin-top', (height < 0 ? 0 : height) + 'px');
   }
 
-  fetchGithubData() {
-    let { data } = this.state;
-    fetchJsonp('https://api.github.com/orgs/rsuite/repos?per_page=100').then((resp) => {
-      if (!resp.ok) {
-        return;
-      }
-      resp.json().then((result) => {
-        const repos = _.get(result, ['data']) || [];
-        data = data.map((info) => {
-          let repo = repos.find(item => item.name === info.repoName);
-          return { ...repo, ...info, };
-        });
-        this.isMounted && this.setState({ data });
-      });
-
-    });
-  }
 
   get isMounted() {
     return this.mounted;
@@ -73,35 +53,6 @@ class PageIndex extends React.Component {
 
   set isMounted(isMounted) {
     this.mounted = isMounted;
-  }
-  handleSearch = (keyword) => {
-    this.setState({ keyword });
-  }
-  renderComponents() {
-    const { data, keyword } = this.state;
-    const items = data.filter((item) => {
-      let tags = item.tags || [];
-      return tags.some((tag) => {
-        return tag.indexOf(_.trim(keyword.toLocaleLowerCase())) >= 0;
-      });
-    });
-
-
-    return (
-      <Row>
-        {
-          items.map((info, index) => {
-            const onlyKey = _.isString(info.repoName) ? info.repoName : index;
-            return (
-              <IntroPanel
-                {...info}
-                key={onlyKey}
-              />
-            );
-          })
-        }
-      </Row>
-    );
   }
 
   render() {
@@ -147,4 +98,4 @@ class PageIndex extends React.Component {
 }
 
 
-export default PageIndex;
+export default Home;

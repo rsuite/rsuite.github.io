@@ -16,54 +16,46 @@ import './less/index.less';
 require('./hypers-hire');
 
 import App from './App';
+import Frame from './fixtures/Frame';
+import Home from './Home';
 
-// Pages
-import PageIndex from './pages/PageIndex';
-import PageGettingStarted from './pages/PageGettingStarted';
-import PageComponents from './pages/PageComponents';
-import PageExamples from './pages/PageExamples';
 
 import ready from './ready';
-import componentOptions from './components/options';
+import menu from './fixtures/menu';
 
-const componentContainer = (location, cb) => {
-
-  require.ensure([], require => {
-    cb(null, require(`./components/${name}`));
-  }, 'components');
-
-};
 
 const routes = [];
-componentOptions.forEach(element => {
-  element.components.forEach(com => {
-    routes.push(
-      <Route key={com.id} path={com.id} getComponent={(location, cb) => {
+menu.forEach(item => {
+
+  const children = [];
+  item.children.forEach(child => {
+    children.push(
+      <Route key={child.id} path={child.id} getComponent={(location, cb) => {
         let name = location.params.name;
         require.ensure([], require => {
-          cb(null, require(`./components/${com.id}`));
-        });
+          cb(null, require(`./${item.id}/${child.id}`));
+        }, 'context');
       }}
       />
     );
   });
+
+  const route = (
+    <Route key={item.id} path={item.id} component={Frame} >
+      {children}
+    </Route>
+  );
+
+  routes.push(route);
+
 });
-
-
 
 const history = process.env.NODE_ENV === 'production' ? browserHistory : hashHistory;
 const mountApp = (
   <Router history={history}>
-
     <Route path="/" component={App}>
-      <IndexRoute component={PageIndex} />
-      <Route path="getting-started" component={PageGettingStarted} />
-      <Route path="examples" component={PageExamples} />
-      <Route path="components" component={PageComponents}>
-
-        {routes}
-        <IndexRedirect to="buttons" />
-      </Route>
+      <IndexRoute component={Home} />
+      {routes}
     </Route>
 
   </Router>

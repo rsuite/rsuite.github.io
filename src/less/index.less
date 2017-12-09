@@ -1,7 +1,6 @@
 @import '~react-markdown-reader/less/highlight';
 @import '~react-code-view/lib/less/index';
 @import '~rsuite-theme/lib/less/index';
-
 //rewrite base color
 @base-color: #6292f0;
 @bg-color: #fbfbfb;
@@ -9,10 +8,13 @@
 @header-height: 64px;
 @media-xs: 768px;
 @media-md: 992px;
-
 .container-fluid {
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.brand-wrapper {
+  padding: 20px 0;
 }
 
 .logo {
@@ -65,12 +67,10 @@
       background: none !important;
       transition: color .3s linear;
     }
-
     &.active > a.hvr-underline-from-center::before {
       left: 0;
       right: 0;
     }
-
     &.active a, a:focus, a:active {
       color: @primary-color;
     }
@@ -78,11 +78,14 @@
 }
 
 .doc-container {
-  margin-top: 70px;
   .page-header {
     margin: 40px 0 32px;
     border: none;
     font-size: 24px;
+  }
+  .page-context{
+    padding: 20px;
+    margin-left: 260px;
   }
   h3 {
     font-size: 16px;
@@ -95,29 +98,28 @@
   }
 }
 
-.page-sidebar-wrapper {
-  width: 256px;
-  overflow: auto;
-  background: #fff;
-  .page-sidebar {
-    padding: 0;
-  }
-  .nav > li > a {
-    padding-left: 0;
-    &:hover {
-      color: @primary-color;
-    }
-    &:focus, &:hover {
-      background: none;
-    }
-  }
-}
-
 .ml200 {
   margin-left: 200px;
 }
 
+.sidebar-wrapper.fixed {
+  position: fixed;
+  padding: 10px 20px;
+  width: 260px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,.1);
+}
+
 .nav.nav-docs {
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 130px;
+  padding: 0 26px;
   a {
     color: #575757;
     font-weight: 200;
@@ -142,7 +144,6 @@
       margin: 0;
     }
     padding: 15px 0;
-    font-size: 16px;
     color: #999;
     font-weight: 100;
     margin-top: 10px;
@@ -236,11 +237,9 @@ code {
     text-decoration: none;
     color: #aaa;
     transition: color .3s linear;
-
     &.primary {
       border: 1px solid #ff8533;
     }
-
     &:hover {
       &, & .external-link {
         color: @base-color;
@@ -578,29 +577,23 @@ code {
   from, 20%, 40%, 60%, 80%, to {
     animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
   }
-
   0% {
     opacity: 0;
     transform: scale3d(.3, .3, .3);
   }
-
   20% {
     transform: scale3d(1.1, 1.1, 1.1);
   }
-
   40% {
     transform: scale3d(.9, .9, .9);
   }
-
   60% {
     opacity: 1;
     transform: scale3d(1.03, 1.03, 1.03);
   }
-
   80% {
     transform: scale3d(.97, .97, .97);
   }
-
   to {
     opacity: 1;
     transform: scale3d(1, 1, 1);
@@ -616,7 +609,6 @@ code {
     opacity: 0;
     transform: scale3d(.3, .3, .3);
   }
-
   50% {
     opacity: 1;
   }
@@ -633,7 +625,6 @@ code {
   box-shadow: 0 0 1px transparent;
   position: relative;
   overflow: hidden;
-
   &::before {
     content: "";
     position: absolute;
@@ -647,26 +638,20 @@ code {
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
   }
-  & > a::after,
-  &::after {
+  & > a::after, &::after {
     display: none !important;
   }
-
-  &:hover::before,
-  &:focus::before,
-  &:active::before {
+  &:hover::before, &:focus::before, &:active::before {
     left: 0;
     right: 0;
   }
 }
 
-.react-logo-run,
-.react-logo-run-2 {
+.react-logo-run, .react-logo-run-2 {
   animation: move 5s ease-in-out infinite;
   animation-play-state: paused;
   animation-delay: 1.3s;
   opacity: .2;
-
   &.running {
     animation-play-state: running;
   }
@@ -708,11 +693,4 @@ path.bg {
   background: #eee !important;
   border: none;
   border-radius: 4px;
-}
-
-.nav-link {
-  padding: 6px 0;
-  height: auto;
-  font-size: 12px;
-  line-height: 14px;
 }

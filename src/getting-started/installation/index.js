@@ -4,14 +4,14 @@ import { Link } from 'react-router';
 import { Container, Content, Row, Col } from 'rsuite';
 import { Markdown } from 'react-markdown-reader';
 
-class PageGettingStarted extends React.Component {
+class InstallationPage extends React.Component {
   render() {
     return (
       <Content>
         <Row>
           <Col md={12}>
             <Markdown>
-              {require('../../README.md')}
+              {require('./installation.md')}
             </Markdown>
           </Col>
         </Row>
@@ -20,4 +20,4 @@ class PageGettingStarted extends React.Component {
   }
 }
 
-export default PageGettingStarted;
+export default InstallationPage;

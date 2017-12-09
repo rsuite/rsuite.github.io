@@ -48,8 +48,8 @@ if (NODE_ENV === 'production') {
   plugins.push(new webpack.BannerPlugin(`Last update: ${new Date().toString()}`));
   plugins.push(
     new webpack.optimize.CommonsChunkPlugin({
-      names: ['rsuite'],
-      filename: 'rsuite.js'
+      names: "vendor",
+      filename: 'vendor.js'
     })
   );
   plugins.push(new CompressionPlugin({
@@ -65,7 +65,7 @@ if (NODE_ENV === 'production') {
 const common = {
   entry: {
     app: path.resolve(__dirname, 'src/'),
-    rsuite: ['rsuite', 'rsuite-table', 'rsuite-datepicker', 'rsuite-tree']
+    vendor: ["react", "react-dom"],
   },
   devtool: 'cheap-module-eval-source-map',
   devServer: {
@@ -170,7 +170,5 @@ module.exports = () => {
     });
   }
 
-  return Object.assign({}, common, {
-    entry: path.resolve(__dirname, 'src/index')
-  });
+  return common;
 };

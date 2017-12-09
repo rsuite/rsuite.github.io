@@ -101,8 +101,8 @@ class PaginationTable extends React.Component {
         <TablePagination
           formatLengthMenu={formatLengthMenu}
           formatInfo={formatInfo}
-          displayLength={100}
-          total={500}
+          displayLength={30}
+          total={90}
           onChangePage={this.handleChangePage}
           onChangeLength={this.handleChangeLength}
         />

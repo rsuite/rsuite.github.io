@@ -1,7 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
 import { Table, Toggle, Popover, Whisper, Button, IconFont } from 'rsuite';
-import PageContainer from '../PageContainer';
 
 import fakeData from './data/users';
 import fakeTreeData from './data/treeData';
@@ -28,26 +27,24 @@ const examples = [
 
 export default () => {
   return (
-    <PageContainer>
-      <ComponentExample
-        dependencies={{
-          Toggle,
-          fakeData,
-          fakeTreeData,
-          fakeDataForColSpan,
-          TablePagination,
-          Popover,
-          Whisper,
-          IconFont,
-          Table,
-          Button,
-          HeaderCell,
-          Cell,
-          Column
-        }}
-        context={context}
-        examples={examples}
-      />
-    </PageContainer>
+    <ComponentExample
+      dependencies={{
+        Toggle,
+        fakeData,
+        fakeTreeData,
+        fakeDataForColSpan,
+        TablePagination,
+        Popover,
+        Whisper,
+        IconFont,
+        Table,
+        Button,
+        HeaderCell,
+        Cell,
+        Column
+      }}
+      context={context}
+      examples={examples}
+    />
   );
 };

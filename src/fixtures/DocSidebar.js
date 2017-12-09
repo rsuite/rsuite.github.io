@@ -4,7 +4,9 @@ import { Sidebar, Nav, IconFont, FormControl } from 'rsuite';
 import { Link } from 'react-router';
 import _ from 'lodash';
 
-import components from '../public/componentList';
+import RSuiteLogo from '../public/RSuiteLogo';
+import menu from './menu';
+
 
 
 function filterNodesOfTree(data, check) {
@@ -24,8 +26,6 @@ function filterNodesOfTree(data, check) {
   return findNodes(data);
 }
 
-
-
 const contextTypes = {
   router: PropTypes.object.isRequired
 };
@@ -41,7 +41,6 @@ class DocSidebar extends React.Component {
     this.setState({ keyword });
   }
   getBaseComponents() {
-    const { menu } = this.props;
     const { keyword } = this.state;
     const key = _.trim(keyword.toLocaleLowerCase());
     return filterNodesOfTree(_.cloneDeep(menu), (item) => {
@@ -59,38 +58,42 @@ class DocSidebar extends React.Component {
 
     baseComponents.map((item, key) => {
 
+
       nodeItems.push(
-        <li key={key} className="nav-header">
-          {item.category}
+        <li key={item.id} className="nav-header">
+          {item.name}
         </li>
       );
 
-      item.components.map((child, index) => {
-        const pathname = child.url ? child.url : `/components/${child.id}`;
+      item.children.map((child, index) => {
+        const pathname = child.url ? child.url : `/${item.id}/${child.id}`;
         const active = this.context.router.isActive({ pathname });
-        const item = child.url
-          ? <Nav.Item key={index} componentClass="a" target="_blank" href={pathname} active={active}>
+        const nav = (
+          <Nav.Item key={index} componentClass={Link} to={pathname} active={active}>
             {child.name}
-
           </Nav.Item>
-          : <Nav.Item key={index} componentClass={Link} to={pathname} active={active}>
-            {child.name}
-
-          </Nav.Item>;
-        nodeItems.push(item);
+        );
+        nodeItems.push(nav);
       });
     });
 
     return (
-      <Sidebar>
+      <Sidebar className="fixed">
+        <div className="brand-wrapper">
+          <Link to="/">
+            <RSuiteLogo width={142} height={32} />
+          </Link>
+        </div>
 
-        {children}
+
         <FormControl
-          placeholder="搜索组件..."
+          placeholder="搜索..."
           className="search-input"
           onChange={_.debounce(this.handleSearch, 400)}
         />
         <Nav className="nav-docs">
+
+
           {nodeItems}
         </Nav>
       </Sidebar>
