@@ -1,4 +1,4 @@
-### Checkbox Group
+### 多选框组
 
 
 <!--start-code-->

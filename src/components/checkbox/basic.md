@@ -1,4 +1,4 @@
-### Checkbox
+### 默认
 
 <!--start-code-->
 ```js

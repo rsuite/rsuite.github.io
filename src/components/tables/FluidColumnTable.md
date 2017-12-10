@@ -33,11 +33,6 @@ class FluidColumnTable extends React.Component {
             <Cell dataKey="firstName" />
           </Column>
 
-          <Column width={100} resizable sortable>
-            <HeaderCell>Last Name</HeaderCell>
-            <Cell dataKey="lastName" />
-          </Column>
-
           <Column flexGrow={1} sortable >
             <HeaderCell>City <code>flexGrow={1}</code></HeaderCell>
             <Cell dataKey="city" />

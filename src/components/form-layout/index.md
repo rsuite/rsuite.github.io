@@ -8,7 +8,7 @@
 
 
 
-## Props
+## API
 
 ### `<Form>`
 

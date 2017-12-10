@@ -8,7 +8,7 @@
 
 <!--{demo}-->
 
-## Props
+## API
 
 ### `<Pagination>`
 

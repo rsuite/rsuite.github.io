@@ -1,4 +1,4 @@
-### Checkbox Group 内联
+### 横向排列多选框组
 
 
 <!--start-code-->

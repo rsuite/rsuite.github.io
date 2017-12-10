@@ -9,7 +9,7 @@
 
 <!--{demo}-->
 
-## Props
+## API
 
 ### `<Modal>`
 

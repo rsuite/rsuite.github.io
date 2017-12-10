@@ -9,7 +9,7 @@
 
 
 
-## Props
+## API
 
 ### `<Toggle>`
 

@@ -1,7 +1,18 @@
 # Button Groups [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/buttonGroups/index.md)
 
 - `<ButtonGroup>` 按钮组控件，可以把一组按钮放在一起，并统一控制布局;
-- `<ButtonToolbar>` 按钮工具栏控件，如果要保留多个内置按钮之间的间距，请将按钮在一起 `<ButtonToolbar>` 中。
+- `<ButtonToolbar>` 按钮工具栏控件。
+
+## 获取组件
+
+
+```js
+import { ButtonGroup, ButtonToolbar } from 'rsuite';
+// or
+// import ButtonGroup from 'rsuite/lib/ButtonGroup'
+// import ButtonToolbar from 'rsuite/lib/ButtonToolbar'
+
+```
 
 
 ## 演示
@@ -10,7 +21,7 @@
 
 
 
-## Props
+## API
 
 ### `<ButtonGroup>`
 

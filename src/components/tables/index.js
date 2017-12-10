@@ -21,8 +21,7 @@ const examples = [
   require('./TreeTable.md'),
   require('./EditTable.md'),
   require('./LoadingTable.md'),
-  require('./ColspanTable.md'),
-  require('./props.md')
+  require('./ColspanTable.md')
 ];
 
 export default () => {

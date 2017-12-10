@@ -21,6 +21,10 @@ export default [{
     {
       id: 'supported-platforms',
       name: '支持平台'
+    },
+    {
+      id: 'logs',
+      name: '更新日志'
     }
   ]
 }, {

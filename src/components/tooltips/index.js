@@ -5,6 +5,7 @@ import { Whisper, Tooltip, ButtonToolbar, Button } from 'rsuite';
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
+  require('./placement.md'),
   require('./trigger.md'),
 ];
 

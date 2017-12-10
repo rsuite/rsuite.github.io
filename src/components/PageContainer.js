@@ -18,7 +18,7 @@ class PageContainer extends React.Component {
             <PageNav
               width={200}
               scrollBar="left"
-              offset={{ top: 100, right: 30 }}
+              offset={{ top: 60, right: 30 }}
             />
           </Col>
         </Row>

@@ -13,10 +13,10 @@ function filterNodesOfTree(data, check) {
 
   const findNodes = (nodes = []) => {
     return nodes.filter((item) => {
-      if (_.isArray(item.components)) {
-        const nextChildren = findNodes(item.components);
+      if (_.isArray(item.children)) {
+        const nextChildren = findNodes(item.children);
         if (nextChildren && nextChildren.length) {
-          item.components = nextChildren;
+          item.children = nextChildren;
           return true;
         }
       }
@@ -40,24 +40,24 @@ class DocSidebar extends React.Component {
   handleSearch = (keyword) => {
     this.setState({ keyword });
   }
-  getBaseComponents() {
+  getMenuItems() {
     const { keyword } = this.state;
     const key = _.trim(keyword.toLocaleLowerCase());
     return filterNodesOfTree(_.cloneDeep(menu), (item) => {
       if (!item.id) {
         return false;
       }
-      return item.id.indexOf(key) >= 0 || item.title.indexOf(key) >= 0;
+      return item.id.indexOf(key) >= 0 || item.name.indexOf(key) >= 0;
     }) || [];
   }
   render() {
+
     const { children } = this.props;
     const { keyword } = this.state;
     const nodeItems = [];
-    const baseComponents = this.getBaseComponents();
+    const menuItems = this.getMenuItems();
 
-    baseComponents.map((item, key) => {
-
+    menuItems.map((item, key) => {
 
       nodeItems.push(
         <li key={item.id} className="nav-header">

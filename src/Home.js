@@ -12,16 +12,9 @@ import ReactLogo from './fixtures/ReactLogo';
 class Home extends React.Component {
   constructor(props) {
     super();
-    this.state = {
-      keyword: '',
-      data
-    };
+    this.state = {};
   }
 
-  componentWillMount() {
-    this.isMounted = true;
-    this.fetchGithubData();
-  }
 
   componentDidMount() {
     this._onWindowResizeListener = on(window, 'resize', this.handleWindowResize);
@@ -33,7 +26,7 @@ class Home extends React.Component {
   }
 
   componentWillUnmount() {
-    this.isMounted = false;
+
     if (this._onWindowResizeListener) {
       this._onWindowResizeListener.off();
     }
@@ -46,14 +39,6 @@ class Home extends React.Component {
     addStyle(indexContent, 'margin-top', (height < 0 ? 0 : height) + 'px');
   }
 
-
-  get isMounted() {
-    return this.mounted;
-  }
-
-  set isMounted(isMounted) {
-    this.mounted = isMounted;
-  }
 
   render() {
 

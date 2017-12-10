@@ -1,6 +1,6 @@
-### 触发方式
+### 触发事件
 
-有三种方式可以触发提示 `Popover` 的信息: `click`、`focus`、`hover`
+有三种事件可以触发提示 `Popover` 的信息: `click`、`focus`、`hover`
 
 <!--start-code-->
 ```js

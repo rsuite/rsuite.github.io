@@ -1,6 +1,19 @@
 # Buttons [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/button/index.md)
 
+
+
 `<Button>` 是组件中最基础的元素，可以快速创建一个带样式的按钮，也可以是一个链接。
+
+
+## 获取组件
+
+
+```js
+import { Button } from 'rsuite';
+// or
+// import Button from 'rsuite/lib/Button'
+
+```
 
 
 ## 演示
@@ -8,7 +21,7 @@
 <!--{demo}-->
 
 
-## Props
+## API
 
 ### `<Button>`
 
