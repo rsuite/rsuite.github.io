@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav } from 'rsuite';
+import { Nav } from '../rsuiteSource';
 
 import componentList from './componentList';
 

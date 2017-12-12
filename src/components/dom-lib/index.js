@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Col } from 'rsuite';
+import { Text, Col } from '../../rsuiteSource';
 import { Markdown } from 'react-markdown-reader';
 
 class DomLib extends React.Component {

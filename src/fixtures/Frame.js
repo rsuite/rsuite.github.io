@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'rsuite';
+import { Row, Col } from '../rsuiteSource';
 import DocSidebar from './DocSidebar';
 
 class Frame extends Component {

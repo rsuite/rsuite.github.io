@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router';
-import { Container, Content, Row, Col } from 'rsuite';
+import { Container, Content, Row, Col } from '../../rsuiteSource';
 import { Markdown } from 'react-markdown-reader';
 
 class InstallationPage extends React.Component {

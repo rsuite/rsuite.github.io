@@ -8,7 +8,7 @@ const instance = (
     <Breadcrumb.Item componentClass={Link} to="/">
       Home
         </Breadcrumb.Item>
-    <Breadcrumb.Item componentClass={Link} to="/components">
+    <Breadcrumb.Item componentClass={Link} >
       Components
         </Breadcrumb.Item>
     <Breadcrumb.Item active>

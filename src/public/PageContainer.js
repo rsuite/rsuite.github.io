@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Navbar, Nav, Row, Col } from 'rsuite';
+import { Header, Navbar, Nav, Row, Col } from '../rsuiteSource';
 import { PageProvider, PageNav, PageContent } from 'rsuite-page-nav';
 import RSuiteLogo from './RSuiteLogo';
 import SwitchNav from './SwitchNav';

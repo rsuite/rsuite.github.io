@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Form, Button, FormControl, FormGroup, ControlLabel, IconFont, HelpBlock } from 'rsuite';
+import { Form, Button, FormControl, FormGroup, ControlLabel, IconFont, HelpBlock } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [

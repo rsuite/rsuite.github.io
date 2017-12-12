@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Pagination, Button, IconFont } from 'rsuite';
+import { Pagination, Button, IconFont } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [

@@ -3,7 +3,7 @@
 <!--start-code-->
 ```js
 const instance = (
-  <Button>Default</Button>
+  <Button size='lg'>Default</Button>
 );
 ReactDOM.render(instance);
 ```

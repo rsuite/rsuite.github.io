@@ -12,7 +12,7 @@
 ## 获取组件
 
 ```js
-import { Table } from 'rsuite';
+import { Table } from '../../rsuiteSource';
 // or import Table from 'rsuite/lib/Table'
 
 const { Column, HeaderCell, Cell, Pagination } = Table;

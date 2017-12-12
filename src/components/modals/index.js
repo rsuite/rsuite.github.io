@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { ButtonToolbar, Button, Modal, IconFont } from 'rsuite';
+import { ButtonToolbar, Button, Modal, IconFont } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [

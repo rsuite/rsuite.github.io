@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, Row, Col } from 'rsuite';
+import { Nav, Row, Col } from '../rsuiteSource';
 import { PageProvider, PageNav, PageContent } from 'rsuite-page-nav';
 
 

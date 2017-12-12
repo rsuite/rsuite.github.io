@@ -15,7 +15,7 @@ import {
   Row,
   Checkbox,
   Radio
-} from 'rsuite';
+} from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [

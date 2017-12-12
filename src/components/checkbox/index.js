@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Form, FormGroup, CheckboxGroup, Button, Checkbox, IconFont } from 'rsuite';
+import { Form, FormGroup, CheckboxGroup, Button, Checkbox, IconFont } from '../../rsuiteSource';
 
 
 const context = require('./index.md');

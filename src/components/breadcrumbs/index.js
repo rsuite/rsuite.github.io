@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Breadcrumb } from 'rsuite';
+import { Breadcrumb } from '../../rsuiteSource';
 import { Link } from 'react-router';
 
 

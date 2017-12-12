@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Nav, Button, IconFont } from 'rsuite';
+import { Nav, Button, IconFont } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [

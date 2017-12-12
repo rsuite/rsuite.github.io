@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Grid, Button, IconFont, Row, Col } from 'rsuite';
+import { Grid, Button, IconFont, Row, Col } from '../../rsuiteSource';
 
 
 const context = require('./index.md');

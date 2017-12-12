@@ -1,10 +1,11 @@
 import React from 'react';
-import { FormControl, IconFont } from 'rsuite';
+import { FormControl, IconFont } from '../../rsuiteSource';
 import NotificationSystem from 'react-notification-system';
 import IconItem from './IconItem';
 
 const ALL_ICONS = JSON.parse(require('fs').readFileSync(__dirname + '/icons.json', 'utf8'));
 
+console.log(ALL_ICONS);
 const parseIconByCategory = (obj, conf) => {
   conf.categories.forEach(category => {
     if (obj[category]) {

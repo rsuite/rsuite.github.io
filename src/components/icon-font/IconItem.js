@@ -2,7 +2,7 @@
  * Created by Godfery on 2017/3/24.
  */
 import React from 'react';
-import { IconFont } from 'rsuite';
+import { IconFont } from '../../rsuiteSource';
 import Clipboard from 'rsuite-clipboard';
 
 class IconItem extends React.Component {

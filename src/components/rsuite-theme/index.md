@@ -54,7 +54,7 @@
 
 ```js
 import React from 'react';
-import { Header, Navbar } from 'rsuite';
+import { Header, Navbar } from '../../rsuiteSource';
 import 'main.less';
 import { render } from 'react-dom';
 

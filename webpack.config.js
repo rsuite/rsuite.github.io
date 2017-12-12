@@ -5,8 +5,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const markdownRenderer = require('react-markdown-reader').renderer;
-const hotJarTraking = fs.readFileSync('./src/hotjar-tracking.html', 'utf-8');
-
 
 const iconPath = path.resolve(__dirname, './node_modules/rsuite-icon-font/icons');
 
@@ -29,7 +27,6 @@ const plugins = [
     title: 'RSUITE | 一套 React 的 UI 组件库',
     filename: (NODE_ENV === 'development' ? '' : '../') + 'index.html',
     template: 'src/index.html',
-    hotjarTraking: NODE_ENV === 'production' ? hotJarTraking : '',
     inject: true,
     hash: true
   })
@@ -64,7 +61,7 @@ if (NODE_ENV === 'production') {
 
 const common = {
   entry: {
-    app: path.resolve(__dirname, 'src/'),
+    app: path.resolve(__dirname, 'src/index'),
     vendor: ["react", "react-dom"],
   },
   devtool: 'cheap-module-eval-source-map',
@@ -84,7 +81,7 @@ const common = {
       {
         test: /\.js$/,
         use: [
-          'transform-loader/cacheable?brfs',
+          'transform-loader?brfs',
           'babel-loader?babelrc'
         ],
         exclude: /node_modules/

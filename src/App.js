@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DocSidebar from './fixtures/DocSidebar';
-import { Grid, Row, Col } from 'rsuite';
+import { Grid, Row, Col } from './rsuiteSource';
 
 const contextTypes = {
   router: PropTypes.object.isRequired

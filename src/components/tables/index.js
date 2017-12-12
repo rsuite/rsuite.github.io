@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Table, Toggle, Popover, Whisper, Button, IconFont } from 'rsuite';
+import { Table, Toggle, Popover, Whisper, Button, IconFont } from '../../rsuiteSource';
 
 import fakeData from './data/users';
 import fakeTreeData from './data/treeData';

@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Whisper, Tooltip, ButtonToolbar, Button } from 'rsuite';
+import { Whisper, Tooltip, ButtonToolbar, Button } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [

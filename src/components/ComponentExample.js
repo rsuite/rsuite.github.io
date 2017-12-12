@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col } from 'rsuite';
+import { Col } from '../rsuiteSource';
 import { Markdown } from 'react-markdown-reader';
 import CodeView from 'react-code-view';
 import PageContainer from './PageContainer';

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Sidebar, Nav, IconFont, FormControl } from 'rsuite';
+import { Sidebar, Nav, IconFont, FormControl } from '../rsuiteSource';
 import { Link } from 'react-router';
 import _ from 'lodash';
 
