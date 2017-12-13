@@ -1,6 +1,11 @@
+import React from 'react';
+import { IconFont } from 'rsuite';
+import Plug from './Plug';
+
 export default [{
   id: 'getting-started',
   name: '新手入门',
+  icon: (<IconFont icon="book2" />),
   children: [
     {
       id: 'installation',
@@ -30,6 +35,7 @@ export default [{
 }, {
   id: 'components',
   name: 'Components',
+  icon: (<Plug width={22} height={17} />),
   children: [
     {
       id: 'buttons',

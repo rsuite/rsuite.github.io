@@ -4,7 +4,6 @@ import { Sidebar, Nav, IconFont, FormControl } from '../rsuiteSource';
 import { Link } from 'react-router';
 import _ from 'lodash';
 
-import RSuiteLogo from '../public/RSuiteLogo';
 import menu from './menu';
 import Plug from './Plug';
 
@@ -54,16 +53,10 @@ class DocSidebar extends React.Component {
   }
 
   render() {
-    let activeTitle = '';
     const nodeItems = [];
     const menuItems = this.getMenuItems();
-
-    menuItems.map((item, key) => {
-      if (!this.context.router.isActive(item.id)) {
-        return;
-      }
-
-      activeTitle = item.name;
+    const { name: activeTitle, icon } = menu.filter(({ id }) => this.context.router.isActive(id))[0];
+    menuItems.filter(({ id }) => this.context.router.isActive(id)).map((item, key) => {
       item.children.map((child, index) => {
         const pathname = child.url ? child.url : `/${item.id}/${child.id}`;
         const active = this.context.router.isActive({ pathname });
@@ -79,7 +72,7 @@ class DocSidebar extends React.Component {
     return (
       <Sidebar className="fixed">
         <div className="title-wrapper">
-          <Plug width={22} /> {activeTitle}
+          {icon} {activeTitle}
         </div>
 
         <FormControl
