@@ -9,7 +9,6 @@ import menu from './menu';
 import Plug from './Plug';
 
 
-
 function filterNodesOfTree(data, check) {
 
   const findNodes = (nodes = []) => {
@@ -38,9 +37,11 @@ class DocSidebar extends React.Component {
       keyword: ''
     };
   }
+
   handleSearch = (keyword) => {
     this.setState({ keyword });
   }
+
   getMenuItems() {
     const { keyword } = this.state;
     const key = _.trim(keyword.toLocaleLowerCase());
@@ -51,21 +52,18 @@ class DocSidebar extends React.Component {
       return item.id.indexOf(key) >= 0 || item.name.indexOf(key) >= 0;
     }) || [];
   }
-  render() {
 
-    const { children } = this.props;
-    const { keyword } = this.state;
+  render() {
+    let activeTitle = '';
     const nodeItems = [];
     const menuItems = this.getMenuItems();
 
     menuItems.map((item, key) => {
+      if (!this.context.router.isActive(item.id)) {
+        return;
+      }
 
-      nodeItems.push(
-        <li key={item.id} className="nav-header">
-          {item.name}
-        </li>
-      );
-
+      activeTitle = item.name;
       item.children.map((child, index) => {
         const pathname = child.url ? child.url : `/${item.id}/${child.id}`;
         const active = this.context.router.isActive({ pathname });
@@ -81,7 +79,7 @@ class DocSidebar extends React.Component {
     return (
       <Sidebar className="fixed">
         <div className="title-wrapper">
-          <Plug width={22} /> 组件
+          <Plug width={22} /> {activeTitle}
         </div>
 
         <FormControl
@@ -90,8 +88,6 @@ class DocSidebar extends React.Component {
           onChange={_.debounce(this.handleSearch, 400)}
         />
         <Nav className="nav-docs">
-
-
           {nodeItems}
         </Nav>
       </Sidebar>

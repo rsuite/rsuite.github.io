@@ -14,12 +14,12 @@ class TopLevelNav extends React.Component {
         </Link>
 
         <div className="top-level-nav-menu">
-          <Button className="icon-btn-circle" componentClass={Link}>
+          <Button className="icon-btn-circle" componentClass={Link} to="/getting-started/installation">
             <IconFont icon="book2" />
           </Button>
 
-          <Button className="icon-btn-circle" componentClass={Link}>
-            <Plug width={22} height={17} color={'#fff'}/>
+          <Button className="icon-btn-circle" componentClass={Link} to="/components/buttons">
+            <Plug width={22} height={17} color={'#fff'} />
           </Button>
         </div>
 
