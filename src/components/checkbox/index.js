@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Form, FormGroup, CheckboxGroup, Button, Checkbox, IconFont } from '../../rsuiteSource';
+import { Form, FormGroup, Button, Checkbox, CheckboxGroup, IconFont } from '../../rsuiteSource';
 
 
 const context = require('./index.md');
@@ -17,10 +17,10 @@ export default () => {
       dependencies={{
         Form,
         FormGroup,
-        CheckboxGroup,
         IconFont,
         Button,
-        Checkbox
+        Checkbox,
+        CheckboxGroup
       }}
       context={context}
       examples={examples}

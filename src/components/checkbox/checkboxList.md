@@ -1,18 +1,22 @@
 ### 多选框组
 
-
 <!--start-code-->
 ```js
 const instance = (
   <Form>
     <FormGroup controlId='checkboxList'>
-      <CheckboxGroup name="checkboxList">
+      <CheckboxGroup
+        name="checkboxList"
+        onChange={(value)=>{
+          console.log(value,'onChange');
+        }}
+        >
         <p>Group1</p>
-        <Checkbox defaultChecked >Item A</Checkbox>
-        <Checkbox>Item B</Checkbox>
+        <Checkbox defaultChecked value={1} >Item A</Checkbox>
+        <Checkbox value={2}>Item B</Checkbox>
         <p>Group2</p>
-        <Checkbox>Item C</Checkbox>
-        <Checkbox disabled>Item D</Checkbox>
+        <Checkbox value={3}>Item C</Checkbox>
+        <Checkbox value={4} disabled>Item D</Checkbox>
       </CheckboxGroup>
     </FormGroup>
   </Form>

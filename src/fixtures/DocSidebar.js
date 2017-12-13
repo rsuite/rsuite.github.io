@@ -6,6 +6,7 @@ import _ from 'lodash';
 
 import RSuiteLogo from '../public/RSuiteLogo';
 import menu from './menu';
+import Plug from './Plug';
 
 
 
@@ -79,12 +80,9 @@ class DocSidebar extends React.Component {
 
     return (
       <Sidebar className="fixed">
-        <div className="brand-wrapper">
-          <Link to="/">
-            <RSuiteLogo width={142} height={32} />
-          </Link>
+        <div className="title-wrapper">
+          <Plug width={22} /> 组件
         </div>
-
 
         <FormControl
           placeholder="搜索..."

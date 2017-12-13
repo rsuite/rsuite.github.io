@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Button, ButtonToolbar, IconFont } from '../../rsuiteSource';
+import { Button, ButtonGroup, ButtonToolbar, IconFont } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [
@@ -8,9 +8,12 @@ const examples = [
   require('./size.md'),
   require('./shape.md'),
   require('./block.md'),
-  require('./disabled.md')
+  require('./disabled.md'),
+  require('./group-basic.md'),
+  require('./toolbar.md'),
+  require('./vertical.md'),
+  require('./justified.md')
 ];
-
 
 
 export default () => {
@@ -21,8 +24,9 @@ export default () => {
         context={context}
         examples={examples}
         dependencies={{
-          ButtonToolbar,
           Button,
+          ButtonGroup,
+          ButtonToolbar,
           IconFont
         }}
       />

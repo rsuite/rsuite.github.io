@@ -1,6 +1,9 @@
 # Checkbox [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/checkbox/index.md)
 多选框
 
+- `<Checkbox>`
+- `<CheckboxGroup>`
+
 
 ## 演示
 

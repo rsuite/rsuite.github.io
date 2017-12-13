@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({ width, height }) => {
+export default ({ width, height, className = '' }) => {
   const style = {
     width,
     height,
@@ -8,9 +8,9 @@ export default ({ width, height }) => {
   };
 
   return (
-    <div style={style} className="rsuite-logo animated animated-delay-half-seconds bounceIn">
+    <div style={style} className={`rsuite-logo animated animated-delay-half-seconds bounceIn ${className} `}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146 168">
-        <title>RSuite-Blue</title>
+        <title>RSUITE</title>
         <g>
           <g>
             <polygon

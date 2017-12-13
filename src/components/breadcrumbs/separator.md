@@ -1,10 +1,10 @@
 
-### 默认
+### 自定义分隔符
 
 <!--start-code-->
 ```js
 const instance = (
-  <Breadcrumb>
+  <Breadcrumb separator={<IconFont icon="chevron-right" />}>
     <Breadcrumb.Item componentClass={Link} to="/">
       Home
     </Breadcrumb.Item>

@@ -36,10 +36,6 @@ export default [{
       name: 'Buttons',
       title: '按钮'
     }, {
-      id: 'button-groups',
-      name: 'Button Groups',
-      title: '按钮组'
-    }, {
       id: 'breadcrumbs',
       name: 'Breadcrumbs',
       title: '面包屑'

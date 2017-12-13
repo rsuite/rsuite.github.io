@@ -5,7 +5,8 @@
 const instance = (
   <Form>
     <FormGroup controlId='checkbox'>
-      <Checkbox defaultChecked > Checkbox</Checkbox>
+      <Checkbox defaultChecked > Default</Checkbox>
+      <Checkbox disabled> Disabled</Checkbox>
     </FormGroup>
   </Form>
 );

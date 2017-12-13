@@ -1,5 +1,6 @@
 
 
-const rsuite = require('rsuite');
+const rsuite = require('../../rsuite/src/index');
+
 
 export default rsuite;

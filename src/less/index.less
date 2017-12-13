@@ -1,9 +1,8 @@
 @import '~react-markdown-reader/less/highlight';
 @import '~react-code-view/lib/less/index';
 @import '~rsuite-theme/lib/less/index';
-
 //rewrite base color
-@base-color: #6292f0;
+@base-color: #3385ff;
 @bg-color: #fbfbfb;
 @banner-bg-color: #1e2023;
 @header-height: 64px;
@@ -22,6 +21,20 @@
   font-family: 'Raleway', 'Hiragino Sans GB', sans-serif;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.white-logo {
+  .cls-2, .cls-1 {
+    fill: #fff !important;
+  }
+}
+
+.icon-btn-circle {
+  padding: 12px;
+  border-radius: 24px;
+  i {
+    font-size: 20px;
+  }
 }
 
 .home-page {
@@ -84,9 +97,9 @@
     border: none;
     font-size: 24px;
   }
-  .page-context{
+  .page-context {
     padding: 20px;
-    margin-left: 260px;
+    margin-left: 324px;
   }
   h3 {
     font-size: 16px;
@@ -103,14 +116,48 @@
   margin-left: 200px;
 }
 
-.sidebar-wrapper.fixed {
+.top-level-nav {
+  background: @base-color;
   position: fixed;
-  padding: 10px 20px;
-  width: 260px;
+  padding: 10px;
+  width: 64px;
   left: 0;
   top: 0;
   bottom: 0;
-  box-shadow: 0 1px 4px rgba(0,0,0,.1);
+  .white-logo{
+    margin-left: 3px;
+    margin-top: 5px;
+  }
+  .icon-btn-circle{
+    margin-bottom: 6px;
+    background: none;
+    border: none;
+    color: #fff;
+    &:focus{
+      background: @H600;
+    }
+  }
+  &-menu{
+    margin-top: 20px;
+  }
+}
+
+.sidebar-wrapper.fixed {
+  position: fixed;
+  background: #F4F5F7;
+  padding: 10px 20px;
+  width: 260px;
+  left: 64px;
+  top: 0;
+  bottom: 0;
+  .title-wrapper{
+    padding: 20px 0;
+    font-size: 20px;
+    i{
+      font-size: 20px;
+    }
+  }
+
 }
 
 .nav.nav-docs {
@@ -539,7 +586,7 @@ code {
 
 .rsuite-logo {
   .cls-1 {
-    fill: #648cc9;
+    fill: #3385ff;
   }
   .cls-2 {
     fill: #ec727d;
