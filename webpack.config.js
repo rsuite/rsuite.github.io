@@ -68,6 +68,7 @@ const common = {
   devServer: {
     hot: true,
     disableHostCheck: true,
+    historyApiFallback: true,
     publicPath: '/',
   },
   output: {

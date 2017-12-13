@@ -50,9 +50,8 @@ menu.forEach(item => {
 
 });
 
-const history = process.env.NODE_ENV === 'production' ? browserHistory : hashHistory;
 const mountApp = (
-  <Router history={history}>
+  <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Home} />
       {routes}
