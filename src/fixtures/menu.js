@@ -39,11 +39,11 @@ export default [{
   children: [
     {
       id: 'buttons',
-      name: 'Buttons',
+      name: 'Buttons *',
       title: '按钮'
     }, {
       id: 'breadcrumbs',
-      name: 'Breadcrumbs',
+      name: 'Breadcrumbs *',
       title: '面包屑'
     }, {
       id: 'check-tree',
@@ -51,7 +51,7 @@ export default [{
       title: '可选择树形控件'
     }, {
       id: 'checkbox',
-      name: 'Checkbox',
+      name: 'Checkbox *',
       title: '复选框'
     },
     {
