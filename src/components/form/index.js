@@ -15,14 +15,27 @@ import {
   Col,
   Row,
   Checkbox,
-  Radio
- } from '../../rsuiteSource';
+  Radio,
+  SchemaModel
+} from '../../rsuiteSource';
+
+const { createFormControl, Field } = Form;
+const {
+  StringType,
+  NumberType,
+  ArrayType,
+  DateType,
+  ObjectType,
+  BooleanType
+ } = SchemaModel;
 
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
   require('./horizontal.md'),
   require('./inline.md'),
+  require('./DefaultForm.md'),
+  require('./CustomCheckForm.md')
 ];
 
 
@@ -30,6 +43,15 @@ export default () => {
   return (
     <ComponentExample
       dependencies={{
+        SchemaModel,
+        StringType,
+        NumberType,
+        ArrayType,
+        DateType,
+        ObjectType,
+        BooleanType,
+        createFormControl,
+        Field,
         HelpBlock,
         Form,
         FormGroup,
