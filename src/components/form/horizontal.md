@@ -38,7 +38,7 @@ var formLayoutInstance = (
     <FormGroup controlId='radioList'>
       <Col md={2} componentClass={ControlLabel} >
         RadioGroup
-            </Col>
+      </Col>
       <Col md={10}>
         <RadioGroup name="radioList" inline value={1}>
           <Radio value={1} >Item A</Radio>
@@ -52,7 +52,7 @@ var formLayoutInstance = (
     <FormGroup controlId='checkboxList'>
       <Col md={2} componentClass={ControlLabel} >
         CheckboxGroup
-            </Col>
+      </Col>
       <Col md={10}>
         <CheckboxGroup name="checkboxList" inline>
           <Checkbox checked>Item A</Checkbox>
@@ -62,15 +62,6 @@ var formLayoutInstance = (
         </CheckboxGroup>
       </Col>
     </FormGroup>
-
-    <FormGroup>
-      <Col smOffset={2} sm={10}>
-        <Button type="submit" shape="default">
-          Submit
-                </Button>
-      </Col>
-    </FormGroup>
-
   </Form>
 );
 ReactDOM.render(formLayoutInstance);

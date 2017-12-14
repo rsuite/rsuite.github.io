@@ -1,6 +1,7 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
 import {
+  HelpBlock,
   Form,
   FormGroup,
   FormControl,
@@ -15,7 +16,7 @@ import {
   Row,
   Checkbox,
   Radio
-} from '../../rsuiteSource';
+ } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [
@@ -29,6 +30,7 @@ export default () => {
   return (
     <ComponentExample
       dependencies={{
+        HelpBlock,
         Form,
         FormGroup,
         FormControl,
@@ -49,4 +51,3 @@ export default () => {
     />
   );
 };
-

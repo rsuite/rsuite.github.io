@@ -10,7 +10,7 @@ class TopLevelNav extends React.Component {
     return (
       <div className="top-level-nav">
         <Link to="/">
-          <Logo width={40} className="white-logo" />
+          <Logo width={26} className="white-logo" />
         </Link>
 
         <div className="top-level-nav-menu">

@@ -1,6 +1,6 @@
-### 没有小图标
+### 分割选项
 
-设置一个 `noCaret` 属性。
+设置一个 `divider` 属性分割选项。
 
 <!--start-code-->
 ```js
@@ -8,7 +8,7 @@ const instance = (
   <Dropdown shape='default' title="Default" noCaret>
     <Dropdown.Item eventKey="A" >Item A</Dropdown.Item>
     <Dropdown.Item eventKey="B" >Item B</Dropdown.Item>
-    <Dropdown.Item eventKey="C" >Item C</Dropdown.Item>
+    <Dropdown.Item divider />
     <Dropdown.Item eventKey="D" >Item D</Dropdown.Item>
   </Dropdown>
 );

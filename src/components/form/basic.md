@@ -1,12 +1,5 @@
 ### 基础表单控件
-可以通过为 `<FormControl>` 设置 `type` 属性来改变表单控件的类型。类型同正常的表单一样：
-* text
-* email
-* number
-* file
-* select
-* textarea
-
+可以通过为 `<FormControl>` 设置 `type` 属性来改变表单控件的类型。
 <!--start-code-->
 ```js
 const instance = (

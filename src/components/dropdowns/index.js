@@ -1,16 +1,16 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Dropdown, Button, IconFont,ButtonToolbar } from '../../rsuiteSource';
+import { Dropdown, Button, IconFont, ButtonToolbar } from '../../rsuiteSource';
 
 
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
-  require('./size.md'),
-  require('./block.md'),
+  require('./disabled.md'),
+  require('./divider.md'),
   require('./select.md'),
-  require('./noCaret.md'),
-  require('./block.md')
+  require('./dropup.md'),
+  require('./custom.md')
 ];
 
 

@@ -15,10 +15,6 @@ var formLayoutInstance = (
         <Checkbox>Item B</Checkbox>
       </CheckboxGroup>
     </FormGroup>
-
-    <Button type="submit" shape="default">
-      Submit
-        </Button>
   </Form>
 );
 ReactDOM.render(formLayoutInstance);

@@ -5,7 +5,7 @@
 <!--start-code-->
 ```js
 const instance = (
-  <Dropdown shape='default' title="Default" dropup>
+  <Dropdown  title="Default" dropup>
     <Dropdown.Item eventKey="A" >Item A</Dropdown.Item>
     <Dropdown.Item eventKey="B" >Item B</Dropdown.Item>
     <Dropdown.Item eventKey="C" >Item C</Dropdown.Item>

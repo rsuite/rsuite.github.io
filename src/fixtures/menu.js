@@ -70,7 +70,7 @@ export default [{
       title: '级联选择'
     }, {
       id: 'dropdowns',
-      name: 'Dropdowns',
+      name: 'Dropdowns *',
       title: '下拉按钮'
     }, {
       id: 'date-picker',
@@ -82,13 +82,9 @@ export default [{
       name: 'DateRangePicker',
       title: '日期范围选择控件'
     }, {
-      id: 'form-control',
-      name: 'Form Control',
+      id: 'form',
+      name: 'Form',
       title: '表单控件'
-    }, {
-      id: 'form-layout',
-      name: 'Form layout',
-      title: '表单布局'
     }, {
       id: 'form-validation',
       name: 'Form Validation',
