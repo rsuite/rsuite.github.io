@@ -20,5 +20,5 @@
 | fixedBottom    | boolean     |     | 固定在底部                      |
 | onToggle       | function    |     | `<Navbar.Toggle>` 点击后的回调函数 |
 | classPrefix    | string      |     |                            |
-| componentClass | elementType |     |                            |
+| componentClass | React.ElementType |     |                            |
 

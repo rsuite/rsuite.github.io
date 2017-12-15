@@ -70,9 +70,9 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 |-----------|--------|---------|------------------------------------------------------------|
 | align     | string |         | 对齐方式 ['left', 'center', 'right']                           |
 | width     | number |         | 列宽                                                         |
-| fixed     | bool   |         | 固定列                                                        |
-| resizable | bool   |         | 可自定义调整列宽                                                   |
-| sortable  | bool   |         | 可排序                                                        |
+| fixed     | boolean   |         | 固定列                                                        |
+| resizable | boolean   |         | 可自定义调整列宽                                                   |
+| sortable  | boolean   |         | 可排序                                                        |
 | flexGrow  | number |         | 设置列宽自动调节的比例，当设置了 `flexGrow` 就不能设置 `resizable` 与 `width` 属性 |
 | minWidth  | number | 200     | 当使用了 `flexGrow` 以后，可以通过 `minWidth` 设置一个最小宽度                |
 | colSpan   | number |         | 合并列单元格，当被合并列的 `dataKey` 对应的值为 `null` 或者 `undefined`时，才会合并。 |

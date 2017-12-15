@@ -20,7 +20,7 @@ autoResizeHeight     | boolean                       | true        | body 内容
 autoFocus            | boolean                       |             |
 backdrop             | one of: `static`, true, false |             |
 classPrefix          | string                        | `modal`     |
-dialogComponentClass | elementType                   | ModalDialog |
+dialogComponentClass | React.ElementType                   | ModalDialog |
 dialogClassName      | string                        |             |
 enforceFocus         | boolean                       |             |
 keyboard             | boolean                       |             |

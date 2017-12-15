@@ -16,12 +16,12 @@
 | 属性名称           | 类型          | 默认值    | 描述                                  |
 |----------------|-------------|--------|-------------------------------------|
 | classPrefix    | string      | `icon` | class前缀                             |
-| componentClass | elementType | `i`    | 组件类型                                |
+| componentClass | React.ElementType | `i`    | 组件类型                                |
 | icon           | string      |        | 使用的icon名                            |
 | size           | string      |        | 放大图标 ['lg', '2x', '3x', '4x', '5x'] |
 | flip           | string      |        | 翻转图标 ['horizontal', 'vertical']     |
 | stack          | string      |        | 组合多个图标 ['1x', '2x']                 |
 | rotate         | number      |        | 旋转图标                                |
-| fixedWidth     | bool        |        | 因为有很多图标大小参差不齐,固定图标宽度                |
-| spin           | bool        |        | 动态旋转图标                              |
-| pulse          | bool        |        | 动态旋转图标，旋转8步                         |
+| fixedWidth     | boolean        |        | 因为有很多图标大小参差不齐,固定图标宽度                |
+| spin           | boolean        |        | 动态旋转图标                              |
+| pulse          | boolean        |        | 动态旋转图标，旋转8步                         |

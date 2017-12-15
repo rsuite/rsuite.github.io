@@ -5,7 +5,6 @@ import {
   Form,
   FormGroup,
   FormControl,
-  InputGroup,
   Dropdown,
   IconFont,
   Button,
@@ -16,7 +15,8 @@ import {
   Row,
   Checkbox,
   Radio,
-  SchemaModel
+  SchemaModel,
+  InputGroup
 } from '../../rsuiteSource';
 
 const { createFormControl, Field } = Form;
@@ -34,10 +34,12 @@ const examples = [
   require('./basic.md'),
   require('./horizontal.md'),
   require('./inline.md'),
-  require('./DefaultForm.md'),
-  require('./CustomCheckForm.md')
-];
+  require('./help-block.md'),
+  require('./input-group.md'),
 
+  require('./schema-model.md'),
+  require('./custom-check-form.md')
+];
 
 export default () => {
   return (

@@ -38,12 +38,12 @@ export default [{
   icon: (<Plug width={22} height={17} />),
   children: [
     {
-      id: 'buttons',
-      name: 'Buttons *',
+      id: 'button',
+      name: 'Button *',
       title: '按钮'
     }, {
-      id: 'breadcrumbs',
-      name: 'Breadcrumbs *',
+      id: 'breadcrumb',
+      name: 'Breadcrumb *',
       title: '面包屑'
     }, {
       id: 'check-tree',
@@ -69,8 +69,8 @@ export default [{
       name: 'CascaderPicker',
       title: '级联选择'
     }, {
-      id: 'dropdowns',
-      name: 'Dropdowns *',
+      id: 'dropdown',
+      name: 'Dropdown *',
       title: '下拉按钮'
     }, {
       id: 'date-picker',
@@ -83,51 +83,39 @@ export default [{
       title: '日期范围选择控件'
     }, {
       id: 'form',
-      name: 'Form',
+      name: 'Form *',
       title: '表单控件'
     }, {
-      id: 'form-validation',
-      name: 'Form Validation',
-      title: '表单验证'
-    }, {
       id: 'grid',
-      name: 'Grid System',
+      name: 'Grid',
       title: '网格'
     }, {
-      id: 'help-block',
-      name: 'HelpBlock',
-      title: '帮助提醒'
-    }, {
-      id: 'input-group',
-      name: 'InputGroup',
-      title: '输入组'
-    }, {
       id: 'icon-font',
-      name: 'Icon Font',
+      name: 'Icon',
       title: '图标'
     }, {
-      id: 'modals',
-      name: 'Modals',
+      id: 'modal',
+      name: 'Modal',
       title: '模态窗口'
     }, {
-      id: 'navs',
-      name: 'Navs',
+      id: 'nav',
+      name: 'Nav',
       title: '导航'
     }, {
-      id: 'navbars',
-      name: 'Navbars',
+      id: 'navbar',
+      name: 'Navbar',
       title: '导航栏'
     }, {
-      id: 'popovers',
-      name: 'Popovers',
+      id: 'popover',
+      name: 'Popover',
       title: '气泡提示框'
     }, {
       id: 'pagination',
       name: 'Pagination',
       title: '分页'
     }, {
-      id: 'panels',
-      name: 'Panels',
+      id: 'panel',
+      name: 'Panel',
       title: '面板'
     }, {
       id: 'radio',
@@ -143,12 +131,12 @@ export default [{
       name: 'Toggle',
       title: '开关'
     }, {
-      id: 'tooltips',
-      name: 'Tooltips',
+      id: 'tooltip',
+      name: 'Tooltip',
       title: '文字提示'
     }, {
-      id: 'tables',
-      name: 'Tables',
+      id: 'table',
+      name: 'Table *',
       title: '表格',
       alone: true
     },

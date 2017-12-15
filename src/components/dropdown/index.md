@@ -39,4 +39,4 @@
 | eventKey       | any     |     | 当前选项的值      |
 | onSelect       | func    |     | 选中当前选项的回调函数 |
 | onKeyDown      | func    |     | 键盘事件的回调函数   |
-| componentClass | object  |     | elementType |
+| componentClass | object  |     | React.ElementType |

@@ -37,7 +37,7 @@ import { Button } from 'rsuite';
 | size           | string      |          | 可选项：`lg` `md` `sm` `xs`                                            |
 | shape          | string      |          | 可选项：`default` `primary` `success` `warning` `danger` `info` `link` |
 | classPrefix    | string      | `btn`    |                                                                    |
-| componentClass | elementType |          |                                                                    |
+| componentClass | React.ElementType |          |                                                                    |
 | href           | string      |          |                                                                    |
 
 

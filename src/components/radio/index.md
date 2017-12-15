@@ -12,7 +12,7 @@
 ### `<Radio>`
 | 属性名称     | 类型          | 默认值   | 描述  |
 |----------|-------------|-------|-----|
-| id       | elementType |       |     |
+| id       | React.ElementType |       |     |
 | name     | string      |       |     |
 | inline   | boolean     | false |     |
 | title    | string      |       |     |

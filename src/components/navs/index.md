@@ -33,4 +33,4 @@
 | href           | string      |     | 链接          |
 | onSelect       | function    |     | 选择事件触发的回调函数 |
 | eventKey       | any         |     |             |
-| componentClass | elementType |     |             |
+| componentClass | React.ElementType |     |             |

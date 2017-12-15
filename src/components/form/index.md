@@ -5,10 +5,12 @@
 - `<Form>`
 - `<Form.Field>`
 - `<FormGroup>`
-- `<FormControl>`
-- `<ControlLabel>`
+- `<FormControl>`  表单组件，支持文本框，多行文本框，下拉框等，通过 `type` 配置
+- `<ControlLabel>` 表单组件显示文本
+- `<HelpBlock>` 帮助提醒，一般会放在表单控件下面，提醒或者警告输入的内容
+- `<InputGroup>` 自定义 Input
 
-静态类或者方法
+静态类及方法
 
 - `Form.createFormControl`
 - `SchemaModel`
@@ -18,7 +20,6 @@
 - `SchemaModel.DateType`
 - `SchemaModel.ObjectType`
 - `SchemaModel.BooleanType`
-
 
 
 ## 获取组件
@@ -45,35 +46,35 @@ const { StringType, NumberType, ArrayType, DateType, ObjectType, BooleanType } =
 
 ### `<Form>`
 
-| 名称            | 类型                                    | 描述                                                 |
-|---------------|---------------------------------------|----------------------------------------------------|
-| horizontal    | bool                                  | 设置表单内的元素左右两栏布局                                     |
-| inline        | bool                                  | 设置表单内元素在一行布局                                       |
-| values        | object                                | 表单的值 `受控组件`                                        |
-| defaultValues | object                                | 表单的初始默认值 `非受控组件`                                   |
-| model         | Schema                                | rsuite-schema 对象                                   |
-| checkDelay    | number                                | 数据校验的时候，延迟处理，默认为 500 毫秒                            |
-| checkTrigger  | string                                | 数据校验的触发类型,可选项： `change`、`blur`、`null`，默认为：`change` |
-| onChange      | function(values:Object, event:Object) | 数据改变后的回调函数                                         |
-| onError       | function(errors:Object)               | 校验出错的回调函数                                          |
-| onCheck       | function(errors:Object)               | 数据校验的回调函数                                          |
-| errors        | object                                | 表单错误信息                                             |
+| 名称            | 类型                                    | 描述                      |
+|---------------|---------------------------------------|-------------------------|
+| horizontal    | boolean                               | 设置表单内的元素左右两栏布局          |
+| inline        | boolean                               | 设置表单内元素在一行布局            |
+| values        | object                                | 表单的值 `受控组件`             |
+| defaultValues | object                                | 表单的初始默认值 `非受控组件`        |
+| model         | Schema                                | SchemaModel 对象          |
+| checkDelay    | number                                | 数据校验的时候，延迟处理，默认为 500 毫秒 |
+| checkTrigger  | union: 'change','blur',null           | 默认为：'change'            |
+| onChange      | function(values:Object, event:Object) | 数据改变后的回调函数              |
+| onError       | function(errors:Object)               | 校验出错的回调函数               |
+| onCheck       | function(errors:Object)               | 数据校验的回调函数               |
+| errors        | object                                | 表单错误信息                  |
 
 ### `<Form.Field>`
 
-| 名称           | 类型          | 描述                                                      |
-|--------------|-------------|---------------------------------------------------------|
-| name         | string      | 表单元素名称                                                  |
-| accepter     | elementType | 受代理的组件                                                  |
-| checkTrigger | string      | 数据校验的触发类型,可选项： `change`、`blur`、`null`, 会覆盖 `<Form>`上的设置 |
+| 名称           | 类型                          | 描述                         |
+|--------------|-----------------------------|----------------------------|
+| name         | string                      | 表单元素名称                     |
+| accepter     | React.ElementType           | 受代理的组件                     |
+| checkTrigger | union: 'change','blur',null | 数据校验的触发类型,会覆盖 `<Form>`上的设置 |
 
 
 ### `<FormGroup>`
 
-| 属性名称            | 类型                                         | 默认值 | 描述  |
-|-----------------|--------------------------------------------|-----|-----|
-| controlId       | string                                     |     |     |
-| validationState | one of:`'success'`, `'warning'`, `'error'` |     |     |
+| 属性名称            | 类型                                 | 默认值 | 描述  |
+|-----------------|------------------------------------|-----|-----|
+| controlId       | string                             |     |     |
+| validationState | union: 'success','warning','error' |     |     |
 
 ### `<ControlLabel>`
 
@@ -84,11 +85,11 @@ const { StringType, NumberType, ArrayType, DateType, ObjectType, BooleanType } =
 
 ### `<FormControl>`
 
-| 属性名称           | 类型          | 默认值   | 描述  |
-|----------------|-------------|-------|-----|
-| componentClass | elementType |       |     |
-| type           | string      | false |     |
-| id             | string      |       |     |
+| 属性名称           | 类型                                                                  | 默认值    | 描述  |
+|----------------|---------------------------------------------------------------------|--------|-----|
+| componentClass | React.ElementType                                                   |        |     |
+| type           | union:'text','email','number','file','select','textarea','password' | 'text' |     |
+| id             | string                                                              |        |     |
 
 
 

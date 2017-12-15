@@ -4,7 +4,7 @@
 ```js
 const instance = (
   <Form>
-    <FormGroup controlId='username'>
+    <FormGroup controlId='user'>
       <ControlLabel>Text</ControlLabel>
       <FormControl type='text' />
       <HelpBlock>Required</HelpBlock>

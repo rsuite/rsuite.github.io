@@ -4,10 +4,10 @@
 ```js
 var formLayoutInstance = (
   <Form horizontal>
-    <FormGroup controlId='username'>
+    <FormGroup controlId='UserName'>
       <Col md={2} componentClass={ControlLabel} >
         Username
-            </Col>
+      </Col>
       <Col md={10}>
         <FormControl type='text' />
       </Col>

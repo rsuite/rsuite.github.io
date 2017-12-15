@@ -23,5 +23,5 @@
 | next                 | boolean     |                | 显示下一页              |
 | ellipsis             | boolean     |                | 显示省略符              |
 | boundaryLinks        | boolean     |                | 显示边界分页按钮 1 和 pages |
-| buttonComponentClass | elementType | SafeAnchor     |                    |
+| buttonComponentClass | React.ElementType | SafeAnchor     |                    |
 | classPrefix          | string      | `'pagination'` |                    |

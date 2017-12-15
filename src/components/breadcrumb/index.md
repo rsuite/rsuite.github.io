@@ -21,6 +21,6 @@
 
 | 属性名称           | 类型          | 默认值   | 描述  |
 |----------------|-------------|-------|-----|
-| active         | bool        | false |     |
+| active         | boolean        | false |     |
 | className      | string      |       |     |
-| componentClass | elementType |       |     |
+| componentClass | React.ElementType |       |     |

@@ -14,20 +14,20 @@
 
 属性名称           | 类型          | 默认值   | 描述
 -------------- | ----------- | ----- | --
-componentClass | elementType | `div` |
+componentClass | React.ElementType | `div` |
 fluid          | boolean     | false |
 
 ### `<Row>`
 
 属性名称           | 类型          | 默认值   | 描述
 -------------- | ----------- | ----- | --
-componentClass | elementType | `div` |
+componentClass | React.ElementType | `div` |
 
 ### `<Col>`
 
 属性名称           | 类型                                  | 默认值   | 描述
 -------------- | -------------- | ----- | --------------
-componentClass | elementType    | `div` |
+componentClass | React.ElementType    | `div` |
 xs             | number |       | col-xs-
 sm             | number |       | col-sm-
 md             | number |       | col-md-

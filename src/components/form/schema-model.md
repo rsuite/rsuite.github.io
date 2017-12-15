@@ -2,9 +2,7 @@
 ### SchemaModel 校验表单
 
 
-
-
-#### SchemaModel 怎么使用？
+#### 如何使用？
 
 ```js
 import { SchemaModel } from 'rsuite';
