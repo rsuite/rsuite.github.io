@@ -5,7 +5,11 @@ import { IconFont, Button } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [
-  require('./basic.md')
+  require('./basic.md'),
+  require('./spin.md'),
+  require('./rotate.md'),
+  require('./size.md'),
+  require('./stack.md')
 ];
 
 export default () => {

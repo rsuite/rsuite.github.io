@@ -75,7 +75,7 @@ class IconList extends React.Component {
     const { icons } = this.state;
     return (
       <div className="icon-list-wrap">
-        <h3>搜索</h3>
+        <h2>图标列表</h2>
         <FormControl
           type='text'
           placeholder="输入关键字进行搜索，如: hypers。然后点击图标，复制图标名称。"

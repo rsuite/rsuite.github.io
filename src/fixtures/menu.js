@@ -87,11 +87,11 @@ export default [{
       title: '表单控件'
     }, {
       id: 'grid',
-      name: 'Grid',
+      name: 'Grid *',
       title: '网格'
     }, {
       id: 'icon-font',
-      name: 'Icon',
+      name: 'Icon *',
       title: '图标'
     }, {
       id: 'modal',
