@@ -1,5 +1,5 @@
 
-# Buttons [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/pagination/index.md)
+# Pagination [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/pagination/index.md)
 
 `<Pagination>` 分页器组件
 

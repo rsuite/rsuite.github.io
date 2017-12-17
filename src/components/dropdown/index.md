@@ -1,4 +1,4 @@
-# Dropdowns [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/dropdowns/index.md)
+# Dropdown [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/dropdown/index.md)
 
 - `<Dropdown>` 下拉菜单，用于多项选择，可以收纳多个操作元素，也可以代替原生 `<select>`；
 - `<Dropdown.Item>` 下拉菜单选项，类似 `<select>` 中的 `<option>`。

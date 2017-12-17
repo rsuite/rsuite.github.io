@@ -9,7 +9,7 @@ const instance = (
     <Nav.Item eventKey="B">Item B</Nav.Item>
     <Nav.Item eventKey="C">Item C</Nav.Item>
     <Nav.Item eventKey="D" >Item D</Nav.Item>
-    <Nav.Dropdown activeKey="E-2" select onSelect={(value)=>{
+    <Nav.Dropdown activeKey="E-2" onSelect={(value)=>{
       console.log(value)
     }}>
       <Nav.Item eventKey="E-1" >Item E-1</Nav.Item>

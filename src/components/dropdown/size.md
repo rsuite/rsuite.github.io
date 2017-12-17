@@ -10,7 +10,7 @@ const SIZES = ['lg', 'md', 'sm', 'xs'];
 function renderButtonGroup(size, index) {
   return (
     <ButtonToolbar key={index} >
-      <Dropdown size={size} title={'Default ' + size} shape='default'>
+      <Dropdown size={size} title={'Default ' + size} >
         <Dropdown.Item eventKey="A" >Default Item</Dropdown.Item>
         <Dropdown.Item eventKey="B" active>Active Item</Dropdown.Item>
         <Dropdown.Item eventKey="C" disabled>Disabled Item</Dropdown.Item>

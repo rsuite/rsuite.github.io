@@ -1,4 +1,4 @@
-# Tooltips [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/tooltips/index.md)
+# Tooltip [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/tooltip/index.md)
 
 - `<Tooltip>` 文字提示，可代替原生的 `title` 属性;
 - `<Whisper>` 监听触发器，包裹被监听对象的外面，触发事件后通知到 `<Tooltip>` 展示出来。

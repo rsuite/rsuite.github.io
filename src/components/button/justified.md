@@ -4,9 +4,9 @@
 ```js
 const instance = (
   <ButtonGroup justified>
-    <Button shape="default" href="#">Left</Button>
-    <Button shape="default" href="#">Middle</Button>
-    <Button shape="default" href="#">Right</Button>
+    <Button href="#">Left</Button>
+    <Button href="#">Middle</Button>
+    <Button href="#">Right</Button>
   </ButtonGroup>
 );
 

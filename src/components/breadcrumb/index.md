@@ -1,4 +1,4 @@
-# Breadcrumbs [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/breadcrumbs/index.md)
+# Breadcrumb [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/breadcrumb/index.md)
 
 
 - `<Breadcrumb>` 面包屑组件；

@@ -1,4 +1,4 @@
-# Toggles [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/toggle/index.md)
+# Toggle [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/toggle/index.md)
 
 `<Toggle>` 开关组件
 

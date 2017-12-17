@@ -3,9 +3,9 @@
 ```js
 const instance = (
   <ButtonGroup vertical>
-    <Button shape="default">Top</Button>
-    <Button shape="default">Middle</Button>
-    <Button shape="default">Bottom</Button>
+    <Button>Top</Button>
+    <Button>Middle</Button>
+    <Button>Bottom</Button>
   </ButtonGroup>
 );
 ReactDOM.render(instance);

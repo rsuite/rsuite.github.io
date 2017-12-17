@@ -95,15 +95,15 @@ export default [{
       title: '图标'
     }, {
       id: 'modal',
-      name: 'Modal',
+      name: 'Modal *',
       title: '模态窗口'
     }, {
       id: 'nav',
-      name: 'Nav',
+      name: 'Nav *',
       title: '导航'
     }, {
       id: 'navbar',
-      name: 'Navbar',
+      name: 'Navbar *',
       title: '导航栏'
     }, {
       id: 'popover',

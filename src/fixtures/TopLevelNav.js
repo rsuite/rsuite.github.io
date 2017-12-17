@@ -18,7 +18,7 @@ class TopLevelNav extends React.Component {
             <IconFont icon="book2" />
           </Button>
 
-          <Button className="icon-btn-circle" componentClass={Link} to="/components/buttons">
+          <Button className="icon-btn-circle" componentClass={Link} to="/components/button">
             <Plug width={22} height={17} color={'#fff'} />
           </Button>
         </div>
