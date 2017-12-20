@@ -1,4 +1,4 @@
-### 基本用法
+### 默认
 
 <!--start-code-->
 ```js
@@ -8,29 +8,10 @@ const title = (
 
 const panelsInstance = (
   <div>
-    <Panel header={title} shape="default">
+    <Panel header={title} >
       Panel content
     </Panel>
 
-    <Panel header={title} shape="primary">
-      Panel content
-    </Panel>
-
-    <Panel header={title} shape="success">
-      Panel content
-    </Panel>
-
-    <Panel header={title} shape="info">
-      Panel content
-    </Panel>
-
-    <Panel header={title} shape="warning">
-      Panel content
-    </Panel>
-
-    <Panel header={title} shape="danger">
-      Panel content
-    </Panel>
   </div>
 );
 

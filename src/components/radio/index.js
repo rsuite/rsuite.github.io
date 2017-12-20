@@ -5,10 +5,11 @@ import { Form, FormGroup, RadioGroup, IconFont, Button, Radio } from '../../rsui
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
-  require('./radioList.md'),
-  require('./radioListInline.md'),
+  require('./disabled.md'),
+  require('./radio-group.md'),
+  require('./radio-group-inline.md'),
+  require('./radio-group-controller.md'),
 ];
-
 
 export default () => {
   return (

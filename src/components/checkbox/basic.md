@@ -3,12 +3,10 @@
 <!--start-code-->
 ```js
 const instance = (
-  <Form>
-    <FormGroup controlId='checkbox'>
-      <Checkbox defaultChecked > Default</Checkbox>
-      <Checkbox disabled> Disabled</Checkbox>
-    </FormGroup>
-  </Form>
+  <div>
+    <Checkbox> Default</Checkbox>
+    <Checkbox defaultChecked > Checked</Checkbox>
+  </div>
 );
 ReactDOM.render(instance);
 ```

@@ -6,8 +6,11 @@ import { Form, FormGroup, Button, Checkbox, CheckboxGroup, IconFont } from '../.
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
-  require('./checkboxList.md'),
-  require('./checkboxListInline.md')
+  require('./disabled.md'),
+  require('./indeterminate.md'),
+  require('./checkbox-group.md'),
+  require('./checkbox-group-inline.md'),
+  require('./checkbox-group-controller.md'),
 ];
 
 

@@ -107,15 +107,15 @@ export default [{
       title: '导航栏'
     }, {
       id: 'popover',
-      name: 'Popover',
+      name: 'Popover *',
       title: '气泡提示框'
     }, {
       id: 'pagination',
-      name: 'Pagination',
+      name: 'Pagination *',
       title: '分页'
     }, {
       id: 'panel',
-      name: 'Panel',
+      name: 'Panel *',
       title: '面板'
     }, {
       id: 'radio',
