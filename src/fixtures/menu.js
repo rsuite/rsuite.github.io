@@ -119,7 +119,7 @@ export default [{
       title: '面板'
     }, {
       id: 'radio',
-      name: 'Radio',
+      name: 'Radio *',
       title: '单选框'
     }, {
       id: 'select-picker',
@@ -128,11 +128,11 @@ export default [{
     },
     {
       id: 'toggle',
-      name: 'Toggle',
+      name: 'Toggle *',
       title: '开关'
     }, {
       id: 'tooltip',
-      name: 'Tooltip',
+      name: 'Tooltip *',
       title: '文字提示'
     }, {
       id: 'table',
