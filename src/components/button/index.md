@@ -28,16 +28,16 @@ import { Button } from 'rsuite';
 
 ### `<Button>`
 
-| 属性名称           | 类型                                                                    | 默认值   | 描述      |
-|----------------|-----------------------------------------------------------------------|-------|---------|
-| active         | boolean                                                               |       | 激活状态    |
-| block          | boolean                                                               |       | 显示为块级元素 |
-| disabled       | boolean                                                               |       | 禁用      |
-| size           | union: 'lg', 'md', 'sm', 'xs'                                         |       | 设置按钮大小  |
-| shape          | union: 'default','primary','success','warning','danger','info','link' |       | 设置形状    |
-| classPrefix    | string                                                                | 'btn' |         |
-| componentClass | React.ElementType                                                     |       |         |
-| href           | string                                                                |       |         |
+| 属性名称           | 类型                                                             | 默认值   | 描述      |
+|----------------|----------------------------------------------------------------|-------|---------|
+| active         | boolean                                                        |       | 激活状态    |
+| block          | boolean                                                        |       | 显示为块级元素 |
+| disabled       | boolean                                                        |       | 禁用      |
+| size           | union: 'lg', 'md', 'sm', 'xs'                                  |       | 设置按钮大小  |
+| shape          | union: 'default','primary','success','warning','danger','info' |       | 设置形状    |
+| classPrefix    | string                                                         | 'btn' |         |
+| componentClass | React.ElementType                                              |       |         |
+| href           | string                                                         |       |         |
 
 
 

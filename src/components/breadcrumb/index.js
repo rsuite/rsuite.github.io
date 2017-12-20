@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Breadcrumb, IconFont } from '../../rsuiteSource';
+import { Breadcrumb, Icon } from '../../rsuiteSource';
 import { Link } from 'react-router';
 
 
@@ -16,7 +16,7 @@ export default () => {
       context={context}
       dependencies={{
         Link,
-        IconFont,
+        Icon,
         Breadcrumb
       }}
       examples={examples}

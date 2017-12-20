@@ -6,7 +6,7 @@ const instance = (
   <div>
     <FormControl />
     <HelpBlock>
-      <IconFont icon="info2" /> 该字段为必填项
+      <Icon icon="info2" /> 该字段为必填项
     </HelpBlock>
   </div>
 );

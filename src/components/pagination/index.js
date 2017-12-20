@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Pagination, Button, IconFont } from '../../rsuiteSource';
+import { Pagination, Button, Icon } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [
@@ -12,7 +12,7 @@ export default () => {
   return (
     <ComponentExample
       dependencies={{
-        IconFont,
+        Icon,
         Pagination,
         Button
       }}

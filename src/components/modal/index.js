@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { ButtonToolbar, Button, Modal, IconFont } from '../../rsuiteSource';
+import { ButtonToolbar, Button, Modal, Icon } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [
@@ -15,7 +15,7 @@ export default () => {
         ButtonToolbar,
         Button,
         Modal,
-        IconFont
+        Icon
       }}
       context={context}
       examples={examples}

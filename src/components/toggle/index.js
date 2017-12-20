@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Button, Toggle, IconFont } from '../../rsuiteSource';
+import { Button, Toggle, Icon } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [
@@ -15,7 +15,7 @@ export default () => {
   return (
     <ComponentExample
       dependencies={{
-        IconFont,
+        Icon,
         Toggle,
         Button
       }}

@@ -1,12 +1,13 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Button, ButtonGroup, ButtonToolbar, IconFont } from '../../rsuiteSource';
+import { Button, IconButton, ButtonGroup, ButtonToolbar, Icon } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
   require('./size.md'),
   require('./shape.md'),
+  require('./icon-button.md'),
   require('./block.md'),
   require('./disabled.md'),
   require('./group-basic.md'),
@@ -25,9 +26,10 @@ export default () => {
         examples={examples}
         dependencies={{
           Button,
+          IconButton,
           ButtonGroup,
           ButtonToolbar,
-          IconFont
+          Icon
         }}
       />
     </div>

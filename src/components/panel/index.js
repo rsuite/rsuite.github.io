@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Button, IconFont, Panel, PanelGroup } from '../../rsuiteSource';
+import { Button, Icon, Panel, PanelGroup } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [
@@ -16,7 +16,7 @@ export default () => {
       dependencies={{
         PanelGroup,
         Panel,
-        IconFont,
+        Icon,
         Button
       }}
       context={context}

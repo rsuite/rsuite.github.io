@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Grid, Button, IconFont, Row, Col } from '../../rsuiteSource';
+import { Grid, Button, Icon, Row, Col } from '../../rsuiteSource';
 
 
 const context = require('./index.md');
@@ -13,7 +13,7 @@ export default () => {
   return (
     <ComponentExample
       dependencies={{
-        IconFont,
+        Icon,
         Button,
         Grid,
         Row,

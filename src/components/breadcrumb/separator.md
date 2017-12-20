@@ -4,7 +4,7 @@
 <!--start-code-->
 ```js
 const instance = (
-  <Breadcrumb separator={<IconFont icon="chevron-right" />}>
+  <Breadcrumb separator={<Icon icon="chevron-right" />}>
     <Breadcrumb.Item componentClass={Link} to="/">
       Home
     </Breadcrumb.Item>

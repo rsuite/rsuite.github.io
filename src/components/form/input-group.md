@@ -73,7 +73,7 @@ const instance = (
       <InputGroup inside>
         <FormControl type="text" />
         <InputGroup.Addon>
-          <IconFont icon="search" />
+          <Icon icon="search" />
         </InputGroup.Addon>
       </InputGroup>
     </FormGroup>
@@ -81,7 +81,7 @@ const instance = (
     <FormGroup>
       <InputGroup inside>
         <InputGroup.Addon>
-          <IconFont icon="avatar"  />
+          <Icon icon="avatar"  />
         </InputGroup.Addon>
         <FormControl type="text" />
       </InputGroup>

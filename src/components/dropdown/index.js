@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Dropdown, Button, IconFont, ButtonToolbar } from '../../rsuiteSource';
+import { Dropdown, Button, Icon, ButtonToolbar } from '../../rsuiteSource';
 
 
 const context = require('./index.md');
@@ -19,7 +19,7 @@ export default () => {
     <ComponentExample
       dependencies={{
         ButtonToolbar,
-        IconFont,
+        Icon,
         Dropdown,
         Button
       }}

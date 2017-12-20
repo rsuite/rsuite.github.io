@@ -1,7 +1,7 @@
 
 ### 样式
 
-`shape` 属性设置按钮样式，选项包括: `default`、`primary`、`success`、`warning`、`danger`、`info`、`link`
+`shape` 属性设置按钮样式，选项包括: `default`、`primary`、`success`、`warning`、`danger`、`info`
 
 <!--start-code-->
 ```js
@@ -13,7 +13,6 @@ const instance = (
     <Button shape="warning">Warning</Button>
     <Button shape="danger">Danger</Button>
     <Button shape="info">Info</Button>
-    <Button shape="link">Link</Button>
   </ButtonToolbar>
 );
 ReactDOM.render(instance);

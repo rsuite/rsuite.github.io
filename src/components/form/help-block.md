@@ -22,7 +22,7 @@ class HelpBlockDemo extends React.Component {
         <FormGroup validationState={this.state.validationState} >
           <FormControl />
           <HelpBlock>
-            <IconFont icon="info2" /> 该字段为必填项
+            <Icon icon="info2" /> 该字段为必填项
           </HelpBlock>
         </FormGroup>
         <Button onClick={()=>{this.handleState('')}}>Default</Button>
