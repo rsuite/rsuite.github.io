@@ -3,7 +3,7 @@
 <!--start-code-->
 ```js
 const instance = (
-  <IconFont icon='star' />
+  <Icon icon='star' />
 );
 ReactDOM.render(instance);
 ```

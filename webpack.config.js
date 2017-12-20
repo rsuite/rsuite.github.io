@@ -6,7 +6,7 @@ const HtmlwebpackPlugin = require('html-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const markdownRenderer = require('react-markdown-reader').renderer;
 
-const iconPath = path.resolve(__dirname, './node_modules/rsuite-icon-font/icons');
+const iconPath = path.resolve(__dirname, './node_modules/rsuite-theme');
 
 const { NODE_ENV } = process.env;
 const extractLess = new ExtractTextPlugin({
@@ -128,7 +128,7 @@ const common = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|svg)($|\?)/,
-        exclude: [iconPath],
+        include: [iconPath],
         use: [{
           loader: 'url-loader',
           options: {
@@ -143,7 +143,7 @@ const common = {
       },
       {
         test: /\.svg$/,
-        include: [iconPath],
+        exclude: [iconPath],
         use: [{
           loader: 'svg-sprite-loader',
           options: {

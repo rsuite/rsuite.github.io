@@ -28,25 +28,25 @@ import { Button } from 'rsuite';
 
 ### `<Button>`
 
-| 属性名称           | 类型          | 默认值      | 描述                                                                 |
-|----------------|-------------|----------|--------------------------------------------------------------------|
-| active         | boolean     |          | 激活状态                                                               |
-| block          | boolean     |          | 显示为块级元素                                                            |
-| disabled       | boolean     |          | 禁用                                                                 |
-| type           | string      | `button` | 可选项：`button` `reset` `submit`                                      |
-| size           | string      |          | 可选项：`lg` `md` `sm` `xs`                                            |
-| shape          | string      |          | 可选项：`default` `primary` `success` `warning` `danger` `info` `link` |
-| classPrefix    | string      | `btn`    |                                                                    |
-| componentClass | React.ElementType |          |                                                                    |
-| href           | string      |          |                                                                    |
+| 属性名称           | 类型                                                                    | 默认值   | 描述      |
+|----------------|-----------------------------------------------------------------------|-------|---------|
+| active         | boolean                                                               |       | 激活状态    |
+| block          | boolean                                                               |       | 显示为块级元素 |
+| disabled       | boolean                                                               |       | 禁用      |
+| size           | union: 'lg', 'md', 'sm', 'xs'                                         |       | 设置按钮大小  |
+| shape          | union: 'default','primary','success','warning','danger','info','link' |       | 设置形状    |
+| classPrefix    | string                                                                | 'btn' |         |
+| componentClass | React.ElementType                                                     |       |         |
+| href           | string                                                                |       |         |
+
 
 
 ### `<ButtonGroup>`
 
-| 属性名称        | 类型      | 默认值         | 描述                      |     |
-|-------------|---------|-------------|-------------------------|-----|
-| block       | boolean |             | 显示为块级元素                 |     |
-| justified   | boolean |             | 撑满，两端对齐                 |     |
-| vertical    | boolean |             |                         |     |
-| size        | string  |             | 可选项：`lg` `md` `sm` `xs` |     |
-| classPrefix | string  | `btn-group` |                         |     |
+| 属性名称        | 类型                            | 默认值         | 描述      |
+|-------------|-------------------------------|-------------|---------|
+| block       | boolean                       |             | 显示为块级元素 |
+| justified   | boolean                       |             | 撑满，两端对齐 |
+| vertical    | boolean                       |             |         |
+| size        | union: 'lg', 'md', 'sm', 'xs' |             | 设置按钮大小  |
+| classPrefix | string                        | 'btn-group' |         |

@@ -2,7 +2,7 @@
  * Created by Godfery on 2017/3/24.
  */
 import React from 'react';
-import { IconFont } from '../../rsuiteSource';
+import { Icon } from '../../rsuiteSource';
 import Clipboard from 'rsuite-clipboard';
 
 class IconItem extends React.Component {
@@ -17,7 +17,7 @@ class IconItem extends React.Component {
     return (
       <div className="icon-item col-md-3 col-sm-4">
         <Clipboard text={this.props.icon} onCopy={this.handleCopy}>
-          <IconFont {...props} className="icon-content" />
+          <Icon {...props} className="icon-content" />
         </Clipboard>
         <p className="icon-name-text">{this.props.icon}</p>
       </div>

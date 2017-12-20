@@ -23,6 +23,7 @@ class Demo extends React.Component{
     const nextValue = checked ? options : [];
     this.setState({
       value: nextValue,
+      indeterminate:false,
       checkAll: checked
     });
   }

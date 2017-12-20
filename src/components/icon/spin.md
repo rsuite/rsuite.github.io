@@ -4,9 +4,9 @@
 ```js
 const instance = (
   <div className='icon-example-list'>
-    <IconFont icon='spinner' spin />
-    <IconFont icon='spinner' pulse />
-    <IconFont icon='cog' spin />
+    <Icon icon='spinner' spin />
+    <Icon icon='spinner' pulse />
+    <Icon icon='cog' spin />
   </div>
 );
 ReactDOM.render(instance);

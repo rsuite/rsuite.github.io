@@ -1,6 +1,6 @@
-# IconFont [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/iconFont/index.md)
+# Icon [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/iconFont/index.md)
 
-`<IconFont>` 通过字体实现的矢量图形
+`<Icon>` 通过字体实现的矢量图形
 
 > 部分图标使用开源项目 Font Awesome
 
@@ -11,7 +11,7 @@
 
 ## API
 
-### `<IconFont>`
+### `<Icon>`
 
 | 属性名称        | 类型                              | 默认值  | 描述                   |
 |----------------|-------------------------------------|--------|----------------------|

@@ -12,14 +12,14 @@
 
 ### `<Tooltip>`
 
-| 属性名称            | 类型               | 默认值       | 描述                                      |
-|-----------------|------------------|-----------|-----------------------------------------|
-| placement       | string           | `right`   | 位置，可选项：`top`, `right`, `bottom`, `left` |
-| positionLeft    | number           |           | 相对 `left` 位置偏移量                         |
-| positionTop     | number           |           | 相对 `top` 位置偏移量                          |
-| classPrefix     | string           | `tooltip` |                                         |
-| arrowOffsetLeft | number or string |           | 箭头相对 `left` 位置偏移量                       |
-| arrowOffsetTop  | number or string |           | 箭头相对 `top` 位置偏移量                        |
+| 属性名称            | 类型                                      | 默认值       | 描述                |
+|-----------------|-----------------------------------------|-----------|-------------------|
+| placement       | union: 'top', 'right', 'bottom', 'left' | `right`   | 位置                |
+| positionLeft    | number                                  |           | 相对 `left` 位置偏移量   |
+| positionTop     | number                                  |           | 相对 `top` 位置偏移量    |
+| classPrefix     | string                                  | `tooltip` |                   |
+| arrowOffsetLeft | number or string                        |           | 箭头相对 `left` 位置偏移量 |
+| arrowOffsetTop  | number or string                        |           | 箭头相对 `top` 位置偏移量  |
 
 ### `<Whisper>`
 

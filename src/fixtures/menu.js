@@ -90,7 +90,7 @@ export default [{
       name: 'Grid *',
       title: '网格'
     }, {
-      id: 'icon-font',
+      id: 'icon',
       name: 'Icon *',
       title: '图标'
     }, {
