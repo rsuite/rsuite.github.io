@@ -10,6 +10,7 @@ const examples = [
   require('./icon-button.md'),
   require('./block.md'),
   require('./disabled.md'),
+  require('./active.md'),
   require('./group-basic.md'),
   require('./toolbar.md'),
   require('./vertical.md'),
