@@ -6,7 +6,7 @@ const HtmlwebpackPlugin = require('html-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const markdownRenderer = require('react-markdown-reader').renderer;
 
-const iconPath = path.resolve(__dirname, './node_modules/rsuite-theme');
+const iconPath = ['./node_modules/rsuite-theme', '../rsuite-theme'].map(relativePath => path.resolve(__dirname, relativePath));
 
 const { NODE_ENV } = process.env;
 const extractLess = new ExtractTextPlugin({
@@ -45,7 +45,7 @@ if (NODE_ENV === 'production') {
   plugins.push(new webpack.BannerPlugin(`Last update: ${new Date().toString()}`));
   plugins.push(
     new webpack.optimize.CommonsChunkPlugin({
-      names: "vendor",
+      names: 'vendor',
       filename: 'vendor.js'
     })
   );
@@ -62,7 +62,7 @@ if (NODE_ENV === 'production') {
 const common = {
   entry: {
     app: path.resolve(__dirname, 'src/index'),
-    vendor: ["react", "react-dom"],
+    vendor: ['react', 'react-dom'],
   },
   devtool: 'cheap-module-eval-source-map',
   devServer: {
@@ -128,7 +128,7 @@ const common = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|svg)($|\?)/,
-        include: [iconPath],
+        include: iconPath,
         use: [{
           loader: 'url-loader',
           options: {
@@ -143,7 +143,7 @@ const common = {
       },
       {
         test: /\.svg$/,
-        exclude: [iconPath],
+        exclude: iconPath,
         use: [{
           loader: 'svg-sprite-loader',
           options: {
