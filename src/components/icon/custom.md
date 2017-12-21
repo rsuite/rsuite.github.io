@@ -7,7 +7,7 @@
 
 /**
  * import IconLogo from '../../../resources/images/logo.svg';
- * IconLogo 是 import 的外部资源，这里是示例中胜利了
+ * IconLogo 是 import 的外部资源。
  */
 
 const instance = (

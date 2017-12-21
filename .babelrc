@@ -16,7 +16,6 @@
     ]
   ],
   "plugins": [
-
     "transform-class-properties",
     "transform-runtime",
     "add-module-exports"

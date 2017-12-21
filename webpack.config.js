@@ -116,6 +116,12 @@ const common = {
         }]
       },
       {
+        test: /\.html$/,
+        use: [{
+          loader: 'html-loader'
+        }]
+      },
+      {
         test: /\.(jpg|png)$/,
         //`publicPath`  only use to assign assets path in build
         use: [{

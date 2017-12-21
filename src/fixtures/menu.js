@@ -46,20 +46,18 @@ export default [{
       name: 'Breadcrumb *',
       title: '面包屑'
     }, {
+      id: 'checkbox',
+      name: 'Checkbox *',
+      title: '复选框'
+    }, {
       id: 'check-tree',
       name: 'CheckTree',
       title: '可选择树形控件'
     }, {
-      id: 'checkbox',
-      name: 'Checkbox *',
-      title: '复选框'
-    },
-    {
       id: 'check-tree-picker',
       name: 'CheckTreePicker',
       title: '树形多项选择器'
-    },
-    {
+    }, {
       id: 'check-picker',
       name: 'CheckPicker',
       title: '多选'
