@@ -1,11 +1,11 @@
 import React from 'react';
-import { IconFont } from 'rsuite';
+import { Icon } from '../rsuiteSource';
 import Plug from './Plug';
 
 export default [{
   id: 'getting-started',
   name: '新手入门',
-  icon: (<IconFont icon="book2" />),
+  icon: (<Icon icon="book2" />),
   children: [
     {
       id: 'installation',
@@ -64,7 +64,7 @@ export default [{
     },
     {
       id: 'cascader',
-      name: 'CascaderPicker',
+      name: 'Cascader',
       title: '级联选择'
     }, {
       id: 'dropdown',

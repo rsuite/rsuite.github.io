@@ -31,6 +31,7 @@
     "url": "git@github.com:rsuite/rsuite.git"
   },
   "dependencies": {
+    "rsuite-check-tree": "^3.0.0-next",
     "rsuite-page-nav": "^1.1.2",
     "rsuite-utils": "^0.1.0"
   },
