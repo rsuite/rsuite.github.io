@@ -5,8 +5,6 @@ import { Link } from 'react-router';
 import _ from 'lodash';
 
 import menu from './menu';
-import Plug from './Plug';
-
 
 function filterNodesOfTree(data, check) {
 

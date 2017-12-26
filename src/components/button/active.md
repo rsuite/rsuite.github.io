@@ -4,8 +4,11 @@
 ```js
 const instance = (
   <ButtonToolbar>
-    <Button shape="default" active>Default</Button>
-    <Button shape="primary" active>Primary</Button>
+    <Button appearance="default" active>Default</Button>
+    <Button appearance="primary" active>Primary</Button>
+    <Button appearance="link" active>Link</Button>
+    <Button appearance="subtle" active>Subtle</Button>
+    <Button appearance="ghost" active>Ghost</Button>
   </ButtonToolbar>
 );
 ReactDOM.render(instance);

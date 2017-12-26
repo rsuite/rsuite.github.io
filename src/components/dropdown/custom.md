@@ -1,4 +1,4 @@
-### 自定选项
+### 自定义
 
 <!--start-code-->
 ```js
@@ -7,26 +7,31 @@ const instance = (
    <div>
 
     <Dropdown
-      title="Default"
-      renderTitle={(children)=>{
-        return <Button>{children} </Button>
-      }}
+      title="More..."
       >
-        <Dropdown.Item eventKey="A" ><Icon icon="star" /> Item A</Dropdown.Item>
-        <Dropdown.Item eventKey="B" ><Icon icon="star" /> Item B</Dropdown.Item>
-        <Dropdown.Item eventKey="C" ><Icon icon="star" /> Item C</Dropdown.Item>
+        <Dropdown.Item ><Icon icon="edit2" /> Edit</Dropdown.Item>
+        <Dropdown.Item ><Icon icon="eye" /> View</Dropdown.Item>
+        <Dropdown.Item ><Icon icon="trash" /> Delete</Dropdown.Item>
     </Dropdown>
 
     <Dropdown
-      activeKey="B"
+      title="New"
       renderTitle={(children)=>{
-        return <div>Active: {children} </div>
+        return <Button appearance="primary">{children} </Button>
+      }}
+      >
+        <Dropdown.Item ><Icon icon="user" /> New User</Dropdown.Item>
+        <Dropdown.Item ><Icon icon="group" /> New Group</Dropdown.Item>
+    </Dropdown>
+    <Dropdown
+      renderTitle={(children)=>{
+        return <IconButton appearance="primary" icon="plus" circle />
       }}
     >
-        <Dropdown.Item eventKey="A" ><Icon icon="star" /> Item A</Dropdown.Item>
-        <Dropdown.Item eventKey="B" ><Icon icon="star" /> Item B</Dropdown.Item>
-        <Dropdown.Item eventKey="C" ><Icon icon="star" /> Item C</Dropdown.Item>
+        <Dropdown.Item ><Icon icon="user" /> New User</Dropdown.Item>
+        <Dropdown.Item ><Icon icon="group" /> New Group</Dropdown.Item>
     </Dropdown>
+
    </div>
 );
 ReactDOM.render(instance);

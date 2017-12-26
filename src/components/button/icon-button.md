@@ -1,14 +1,30 @@
 ### 图标按钮
 
+`<IconButton>` 是专为图标按钮设计的组件，设置`icon`属性定义所需要的图标。 只有图标按钮可以设置为一个圆形按钮。
+
 <!--start-code-->
 ```js
 const instance = (
-  <ButtonToolbar>
-    <IconButton icon="star" />
-    <IconButton icon="star" shape="primary" />
-    <IconButton icon="star" shape="primary" circle />
-    <Button><Icon icon="star" /> Default</Button>
-  </ButtonToolbar>
+  <div>
+    <ButtonToolbar>
+      <IconButton icon="star" />
+      <IconButton icon="star" appearance="primary" />
+      <ButtonGroup>
+        <IconButton icon="align-left"  />
+        <IconButton icon="align-center" />
+        <IconButton icon="align-right" />
+        <IconButton icon="align-justify" />
+      </ButtonGroup>
+    </ButtonToolbar>
+
+    <ButtonToolbar>
+      <IconButton icon="facebook-official" color="blue" circle  />
+      <IconButton icon="google-plus-circle" color="red" circle  />
+      <IconButton icon="twitter" color="cyan" circle  />
+      <IconButton icon="linkedin" color="blue" circle  />
+    </ButtonToolbar>
+
+  </div>
 );
 ReactDOM.render(instance);
 ```

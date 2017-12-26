@@ -1,13 +1,16 @@
-### 自定义图标
+### 自定义选项
+
 <!-- start-code -->
 ```js
-class Custom extends React.Component {
+class CustomDemo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       data,
-      selectedValues: ['Dave']
+      selectedValues: []
     };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleExpand = this.handleExpand.bind(this);
   }
 
   setExpand(activeNode) {
@@ -30,7 +33,7 @@ class Custom extends React.Component {
     });
   }
 
-  handleOnChange = (values) => {
+  handleChange(values){
     this.setState((preveState) => {
       return {
         selectedValues: values
@@ -38,13 +41,13 @@ class Custom extends React.Component {
     });
   }
 
-  handleOnExpand = (activeNode, layer) => {
+  handleExpand(activeNode, layer)  {
     if (activeNode.children.length) {
       this.setExpand(activeNode);
     }
   }
 
-  renderTreeIcon = (nodeData) => {
+  renderTreeIcon(nodeData){
     if (nodeData.expand) {
       return (
         <i className="icon-minus-square-o icon " />
@@ -64,15 +67,14 @@ class Custom extends React.Component {
           cascade={false}
           data={data}
           value={selectedValues}
-          disabledItems={['disabled']}
           height={400}
-          onExpand={this.handleOnExpand}
-          onChange={this.handleOnChange}
+          onExpand={this.handleExpand}
+          onChange={this.handleChange}
           renderTreeIcon={this.renderTreeIcon}
         />
     );
   }
 }
-ReactDOM.render(<Custom />);
+ReactDOM.render(<CustomDemo />);
 ```
 <!-- end-code -->

@@ -1,9 +1,7 @@
 # Dropdown [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/dropdown/index.md)
 
-- `<Dropdown>` 下拉菜单，用于多项选择，可以收纳多个操作元素，也可以代替原生 `<select>`；
-- `<Dropdown.Item>` 下拉菜单选项，类似 `<select>` 中的 `<option>`。
-
-> 如果需要搜索，分组，多选等功能，可以使用 `<SelectPicker>` 与 `<CheckPicker>`  组件。
+- `<Dropdown>` 下拉菜单。
+- `<Dropdown.Item>` 下拉菜单选项。
 
 
 ## 演示
@@ -16,7 +14,6 @@
 
 | 属性名称        | 类型                                                | 默认值  | 描述          |
 |-------------|---------------------------------------------------|------|-------------|
-| activeKey   | any                                               |      | 当前选中的 key   |
 | disabled    | boolean                                           |      | 禁用组件        |
 | dropup      | boolean                                           |      | 菜单向上弹出      |
 | autoClose   | boolean                                           | true | 菜单选择后自动关闭   |

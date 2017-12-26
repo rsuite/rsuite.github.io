@@ -1,11 +1,11 @@
 import React from 'react';
 import { Icon } from '../rsuiteSource';
-import Plug from './Plug';
+import { guide, component, tools } from './SvgIcons';
 
 export default [{
   id: 'getting-started',
-  name: '新手入门',
-  icon: (<Icon icon="book2" />),
+  name: '新手指南',
+  icon: (<Icon icon={guide} width={22} />),
   children: [
     {
       id: 'installation',
@@ -34,8 +34,8 @@ export default [{
   ]
 }, {
   id: 'components',
-  name: 'Components',
-  icon: (<Plug width={22} height={17} />),
+  name: '组件',
+  icon: (<Icon icon={component} width={22} />),
   children: [
     {
       id: 'button',
@@ -153,5 +153,9 @@ export default [{
       title: '上传文件'
     }
   ]
-}
-];
+}, {
+  id: 'tools',
+  name: '工具',
+  icon: (<Icon icon={tools} width={22} />),
+  children: []
+}];

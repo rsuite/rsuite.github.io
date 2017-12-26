@@ -21,6 +21,7 @@ class Demo extends React.Component{
   }
   handleCheckAll(value,checked){
     const nextValue = checked ? options : [];
+    console.log(nextValue,'handleCheckAll');
     this.setState({
       value: nextValue,
       indeterminate:false,
@@ -28,6 +29,7 @@ class Demo extends React.Component{
     });
   }
   handleChange(value){
+    console.log(value,'handleChange');
     this.setState({
       value,
       indeterminate:(value.length > 0 && value.length < options.length),

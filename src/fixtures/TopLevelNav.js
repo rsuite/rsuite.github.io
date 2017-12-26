@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { Button, IconFont } from '../rsuiteSource';
-import Plug from './Plug';
+import { Button, Icon } from '../rsuiteSource';
 import Logo from './Logo';
+import { guide, component, tools } from './SvgIcons';
+
 
 class TopLevelNav extends React.Component {
   render() {
@@ -15,11 +16,15 @@ class TopLevelNav extends React.Component {
 
         <div className="top-level-nav-menu">
           <Button className="icon-btn-circle" componentClass={Link} to="/getting-started/installation">
-            <IconFont icon="book2" />
+            <Icon icon={guide} width={22} fill="#fff" />
           </Button>
 
           <Button className="icon-btn-circle" componentClass={Link} to="/components/button">
-            <Plug width={22} height={17} color={'#fff'} />
+            <Icon icon={component}  width={22} fill="#fff" />
+          </Button>
+
+          <Button className="icon-btn-circle" componentClass={Link} to="/components/button">
+            <Icon icon={tools}  width={22} fill="#fff" />
           </Button>
         </div>
 
