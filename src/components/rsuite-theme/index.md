@@ -5,9 +5,6 @@
 ** 版本与状态 **
 
 [![npm][npm-badge]][npm]
-
-[![npm][npm-beta-badge]][npm-beta]
-
 [![Travis][build-badge]][build]
 
 
@@ -39,8 +36,8 @@
 #### 1.引用 less 文件 (**推荐**)
 新建一个文件`main.less`。
 ```less
-// 引入组件样式
-//@import "~rsuite-picker/lib/less/index";
+// 按需引入组件样式
+// 如: @import "~rsuite-picker/lib/less/index";
 // 引入ruiste 样式
 @import "~rsuite-theme/dist/less/rsuite";
 @base-color: #6292f0; //修改主题颜色
@@ -207,9 +204,6 @@ node css-build.js
 
 [npm-badge]: https://img.shields.io/npm/v/rsuite-theme.svg
 [npm]: https://www.npmjs.com/package/rsuite-theme
-
-[npm-beta-badge]: https://img.shields.io/npm/v/rsuite-theme/beta.svg
-[npm-beta]: https://www.npmjs.com/package/rsuite
 
 [build-badge]: https://travis-ci.org/rsuite/rsuite-theme.svg?branch=next
 [build]: https://travis-ci.org/rsuite/rsuite-theme

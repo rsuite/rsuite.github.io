@@ -3,7 +3,6 @@
 @import './highlight';
 
 //rewrite base color
-@base-color: #6292f0;
 @bg-color: #fbfbfb;
 @banner-bg-color: #1e2023;
 @header-height: 64px;
@@ -117,6 +116,7 @@
     color: #575757;
     font-weight: 200;
     transition: background .3s cubic-bezier(0.4, 0, 1, 1);
+    border-radius: 2px;
   }
   .active {
     &, & a {
@@ -208,7 +208,7 @@ code {
 .banner {
   position: absolute;
   width: 100%;
-  background: @banner-bg-color;
+  background: url("../../resources/images/banner-bg.png") @banner-bg-color;
   top: 0;
   left: 0;
   height: 100%;
@@ -657,8 +657,17 @@ code {
 .react-logo-run,
 .react-logo-run-2 {
   animation: move 5s ease-in-out infinite;
+  animation-play-state: paused;
   animation-delay: 1.3s;
   opacity: .2;
+
+  &.running {
+    animation-play-state: running;
+  }
+}
+
+path.bg {
+  opacity: .4;
 }
 
 .run-offset(@path) {
@@ -670,34 +679,17 @@ code {
 
 .react-logo-run {
   animation: move 5s ease-in-out infinite;
-  animation-play-state: paused;
   .run-offset('M231.7,200c0,17.4-1.7,88-31.7,88s-31.7-70.6-31.7-88s1.7-88,31.7-88S231.7,182.6,231.7,200z');
 }
 
 .react-logo-run-2 {
   animation: move 7s ease-out infinite;
-  animation-play-state: paused;
   .run-offset('M216.1,227.7c-15,8.9-76.6,43.4-91.9,17.6s44.6-63.2,59.6-72.1s76.6-43.4,91.9-17.6S231.1,218.8,216.1,227.7z');
 }
 
-.react-logo-run,
-.react-logo-run-2 {
-  &.running {
-    animation-play-state: running;
-  }
-}
-
-.bg {
-  opacity: .1;
-}
-
 @keyframes move {
-  /* 之前语法 */
   100% {
     motion-offset: 100%;
-  }
-  /* 当前规范语法 */
-  100% {
     offset-distance: 100%;
   }
 }

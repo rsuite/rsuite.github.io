@@ -86,7 +86,12 @@ const common = {
             }, {
               loader: 'postcss-loader',
             }, {
-              loader: 'less-loader'
+              loader: 'less-loader',
+              options: {
+                modifyVars: {
+                  'base-color': '#6292f0',
+                }
+              }
             }
           ],
           // use style-loader in development
