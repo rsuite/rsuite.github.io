@@ -633,13 +633,6 @@
     ]
   },
   {
-    "name": "Bar Chart Ranking",
-    "id": "bar-chart-ranking",
-    "categories": [
-      "Hypers Icons"
-    ]
-  },
-  {
     "name": "barcode",
     "id": "barcode",
     "filter": [
@@ -5350,13 +5343,6 @@
     ]
   },
   {
-    "name": "Multiple Lines Chart",
-    "id": "multiple-lines-chart",
-    "categories": [
-      "Hypers Icons"
-    ]
-  },
-  {
     "name": "Bars",
     "id": "navicon",
     "aliases": [
@@ -7409,6 +7395,13 @@
     ]
   },
   {
+    "name": "alipay",
+    "id": "alipay",
+    "categories": [
+      "Brand Icons"
+    ]
+  },
+  {
     "name": "Telegram",
     "id": "telegram",
     "categories": [
@@ -7468,6 +7461,13 @@
     "id": "text-width",
     "categories": [
       "Text Editor Icons"
+    ]
+  },
+  {
+    "name": "tmall",
+    "id": "tmall",
+    "categories": [
+      "Brand Icons"
     ]
   },
   {
