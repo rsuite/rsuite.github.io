@@ -7395,6 +7395,13 @@
     ]
   },
   {
+    "name": "alipay",
+    "id": "alipay",
+    "categories": [
+      "Brand Icons"
+    ]
+  },
+  {
     "name": "Telegram",
     "id": "telegram",
     "categories": [
@@ -7454,6 +7461,13 @@
     "id": "text-width",
     "categories": [
       "Text Editor Icons"
+    ]
+  },
+  {
+    "name": "tmall",
+    "id": "tmall",
+    "categories": [
+      "Brand Icons"
     ]
   },
   {
