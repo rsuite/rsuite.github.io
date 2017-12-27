@@ -33,19 +33,20 @@ class PalettePage extends React.Component {
         </Row>
 
         <Row>
-          <Col md={3}>
+          <Col md={4}>
             <CirclePicker
               color={color}
               onChangeComplete={this.handleChangeComplete}
             />
-            <hr />
+            <br />
+            <br />
             <SketchPicker
               color={color}
               onChangeComplete={this.handleChangeComplete}
             />
 
           </Col>
-          <Col md={6} className="panel-color-wrap">
+          <Col md={8} className="panel-color-wrap">
             <ColorPanel colors={computeColors(color)} />
           </Col>
 
