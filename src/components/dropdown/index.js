@@ -14,7 +14,6 @@ const examples = [
   require('./buttons.md')
 ];
 
-
 export default () => {
   return (
     <ComponentExample

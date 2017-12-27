@@ -1,11 +1,8 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import IconList from './IconList';
 import { Icon, Button } from '../../rsuiteSource';
 
 import IconLogo from '../../../resources/images/logo.svg';
-
-console.log(IconLogo);
 
 const context = require('./index.md');
 const examples = [
@@ -28,7 +25,6 @@ export default () => {
       context={context}
       examples={examples}
     >
-      <IconList />
     </ComponentExample>
   );
 };

@@ -2,6 +2,8 @@ import React from 'react';
 import { FormControl, Icon } from '../../rsuiteSource';
 import NotificationSystem from 'react-notification-system';
 import IconItem from './IconItem';
+import PageContainer from '../../components/PageContainer';
+
 
 const ALL_ICONS = JSON.parse(require('fs').readFileSync(__dirname + '/icons.json', 'utf8'));
 
@@ -73,8 +75,8 @@ class IconList extends React.Component {
   render() {
     const { icons } = this.state;
     return (
-      <div className="icon-list-wrap">
-        <h2>图标列表</h2>
+
+      <PageContainer className="icon-list-wrap">
         <FormControl
           type='text'
           placeholder="输入关键字进行搜索，如: hypers。然后点击图标，复制图标名称。"
@@ -85,7 +87,7 @@ class IconList extends React.Component {
           {icons.length > 0 ? this.renderIcon(icons) : <NoneDom />}
         </div>
         <NotificationSystem ref={ref => this._notificationSystem = ref} />
-      </div>
+      </PageContainer>
     );
   }
 }

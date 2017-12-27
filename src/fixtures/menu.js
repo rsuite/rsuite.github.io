@@ -157,5 +157,11 @@ export default [{
   id: 'tools',
   name: '工具',
   icon: (<Icon icon={tools} width={22} />),
-  children: []
+  children: [{
+    id: 'palette',
+    name: '调色盘'
+  },{
+    id: 'icons',
+    name: '图标库'
+  }]
 }];
