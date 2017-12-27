@@ -4,11 +4,9 @@
 ```js
 
 const instance = (
-   <div>
+   <ButtonToolbar>
 
-    <Dropdown
-      title="More..."
-      >
+    <Dropdown title="More..." >
         <Dropdown.Item ><Icon icon="edit2" /> Edit</Dropdown.Item>
         <Dropdown.Item ><Icon icon="eye" /> View</Dropdown.Item>
         <Dropdown.Item ><Icon icon="trash" /> Delete</Dropdown.Item>
@@ -24,7 +22,7 @@ const instance = (
         <Dropdown.Item ><Icon icon="group" /> New Group</Dropdown.Item>
     </Dropdown>
     <Dropdown
-      renderTitle={(children)=>{
+      renderTitle={()=>{
         return <IconButton appearance="primary" icon="plus" circle />
       }}
     >
@@ -32,7 +30,7 @@ const instance = (
         <Dropdown.Item ><Icon icon="group" /> New Group</Dropdown.Item>
     </Dropdown>
 
-   </div>
+  </ButtonToolbar>
 );
 ReactDOM.render(instance);
 ```

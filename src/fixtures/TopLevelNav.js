@@ -26,6 +26,10 @@ class TopLevelNav extends React.Component {
           <Button className="icon-btn-circle" componentClass={Link} to="/components/button">
             <Icon icon={tools}  width={22} fill="#fff" />
           </Button>
+
+          <Button className="icon-btn-circle" href="https://github.com/rsuite/rsuite">
+            <Icon icon="github" />
+          </Button>
         </div>
 
         {children}

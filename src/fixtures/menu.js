@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon } from '../rsuiteSource';
+import { Icon, IconButton, Button } from '../rsuiteSource';
 import { guide, component, tools } from './SvgIcons';
 
 export default [{

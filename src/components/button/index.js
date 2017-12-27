@@ -8,6 +8,7 @@ const examples = [
   require('./appearance.md'),
   require('./size.md'),
   require('./color.md'),
+  require('./custom.md'),
   require('./icon-button.md'),
   require('./block.md'),
   require('./disabled.md'),

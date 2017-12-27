@@ -13,7 +13,12 @@
 
 
 ```js
-import { Button, IconButton, ButtonGroup, ButtonToolbar } from 'rsuite';
+import {
+  Button,
+  IconButton,
+  ButtonGroup,
+  ButtonToolbar
+} from 'rsuite';
 ```
 
 

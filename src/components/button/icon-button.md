@@ -24,6 +24,11 @@ const instance = (
       <IconButton icon="linkedin" color="blue" circle  />
     </ButtonToolbar>
 
+    <ButtonToolbar>
+      <IconButton icon="pause" placement="left">Pause</IconButton>
+      <IconButton icon="arrow-right" placement="right">Next</IconButton>
+    </ButtonToolbar>
+
   </div>
 );
 ReactDOM.render(instance);

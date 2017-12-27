@@ -56,7 +56,7 @@ class Home extends React.Component {
               <Link className="hvr-underline-from-center" to="/components/button">组件</Link>
               <a className="hvr-underline-from-center" href="https://github.com/rsuite/rsuite" target="_blank">
                 GitHub
-                <IconFont icon="external-link" className="external-link" />
+                <Icon icon="external-link" className="external-link" />
               </a>
             </div>
             <ReactLogo
