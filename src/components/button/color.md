@@ -18,13 +18,13 @@ const instance = (
     </ButtonToolbar>
 
     <ButtonToolbar style={{background:'#000',padding:10}}>
-      <Button color="red" ghost>Red</Button>
-      <Button color="orange" ghost>Orange</Button>
-      <Button color="yellow" ghost>Yellow</Button>
-      <Button color="green" ghost>Green</Button>
-      <Button color="cyan" ghost>Cyan</Button>
-      <Button color="blue" ghost>Blue</Button>
-      <Button color="violet" ghost>Violet</Button>
+      <Button color="red" appearance="ghost">Red</Button>
+      <Button color="orange" appearance="ghost">Orange</Button>
+      <Button color="yellow" appearance="ghost">Yellow</Button>
+      <Button color="green" appearance="ghost">Green</Button>
+      <Button color="cyan" appearance="ghost">Cyan</Button>
+      <Button color="blue" appearance="ghost">Blue</Button>
+      <Button color="violet" appearance="ghost">Violet</Button>
     </ButtonToolbar>
   </div>
 );

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { addStyle, getHeight, on } from 'dom-lib';
-import { Container, Content, Row, Col, FormControl, IconFont } from './rsuiteSource';
+import { Container, Content, Row, Col } from './rsuiteSource';
 import _ from 'lodash';
 
 import Banner from './fixtures/Banner';
@@ -14,7 +14,6 @@ class Home extends React.Component {
     super();
     this.state = {};
   }
-
 
   componentDidMount() {
     this._onWindowResizeListener = on(window, 'resize', this.handleWindowResize);
