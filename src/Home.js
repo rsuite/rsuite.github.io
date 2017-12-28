@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { addStyle, getHeight, on } from 'dom-lib';
-import { Container, Content, Row, Col } from './rsuiteSource';
+import { Container, Content, Row, Col, Icon } from './rsuiteSource';
 import _ from 'lodash';
 
 import Banner from './fixtures/Banner';
