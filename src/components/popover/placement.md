@@ -12,16 +12,16 @@ const speaker = (
 const instance = (
   <ButtonToolbar>
     <Whisper placement="top" speaker={speaker} >
-      <Button shape='default' >Top</Button>
+      <Button>Top</Button>
     </Whisper>
     <Whisper placement="bottom" speaker={speaker}>
-      <Button shape='default' >Bottom</Button>
+      <Button>Bottom</Button>
     </Whisper>
     <Whisper placement="left" speaker={speaker}>
-      <Button shape='default' >Left</Button>
+      <Button>Left</Button>
     </Whisper>
     <Whisper placement="right" speaker={speaker}>
-      <Button shape='default' >Right</Button>
+      <Button>Right</Button>
     </Whisper>
 
     <Whisper placement="right" speaker={speaker}>

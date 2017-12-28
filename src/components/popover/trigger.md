@@ -14,13 +14,13 @@ const speaker = (
 const instance = (
   <ButtonToolbar>
     <Whisper placement="top" trigger="click" speaker={speaker}>
-      <Button shape='default' >Click</Button>
+      <Button>Click</Button>
     </Whisper>
     <Whisper placement="top" trigger="focus" speaker={speaker}>
-      <Button shape='default' >Focus</Button>
+      <Button>Focus</Button>
     </Whisper>
     <Whisper placement="top" trigger="hover" speaker={speaker}>
-      <Button shape='default' >Hover</Button>
+      <Button>Hover</Button>
     </Whisper>
   </ButtonToolbar>
 );

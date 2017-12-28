@@ -10,20 +10,16 @@ const tooltip = (
 const instance = (
   <ButtonToolbar>
     <Whisper placement="top" speaker={tooltip} >
-      <Button shape='default' >Top</Button>
+      <Button>Top</Button>
     </Whisper>
     <Whisper placement="bottom" speaker={tooltip}>
-      <Button shape='default' >Bottom</Button>
+      <Button>Bottom</Button>
     </Whisper>
     <Whisper placement="left" speaker={tooltip}>
-      <Button shape='default' >Left</Button>
+      <Button>Left</Button>
     </Whisper>
     <Whisper placement="right" speaker={tooltip}>
-      <Button shape='default' >Right</Button>
-    </Whisper>
-
-    <Whisper placement="right" speaker={tooltip}>
-      <Button shape='link' >Link</Button>
+      <Button>Right</Button>
     </Whisper>
   </ButtonToolbar>
 );

@@ -5,11 +5,14 @@
 <!--start-code-->
 ```js
 const instance = (
-  <Dropdown title="Divider" >
-    <Dropdown.Item >Item A</Dropdown.Item>
-    <Dropdown.Item >Item B</Dropdown.Item>
+  <Dropdown title="Profile" >
+    <Dropdown.Item >Your profile</Dropdown.Item>
+    <Dropdown.Item >Your stars</Dropdown.Item>
+    <Dropdown.Item >Your Gists</Dropdown.Item>
     <Dropdown.Item divider />
-    <Dropdown.Item >Item D</Dropdown.Item>
+    <Dropdown.Item >Help</Dropdown.Item>
+    <Dropdown.Item >Settings</Dropdown.Item>
+    <Dropdown.Item >Sign out</Dropdown.Item>
   </Dropdown>
 );
 ReactDOM.render(instance);

@@ -12,13 +12,13 @@ const tooltip = (
 const instance = (
   <ButtonToolbar>
     <Whisper placement="top" trigger="click" speaker={tooltip}>
-      <Button shape='default' >Click</Button>
+      <Button>Click</Button>
     </Whisper>
     <Whisper placement="top" trigger="focus" speaker={tooltip}>
-      <Button shape='default' >Focus</Button>
+      <Button>Focus</Button>
     </Whisper>
     <Whisper placement="top" trigger="hover" speaker={tooltip}>
-      <Button shape='default' >Hover</Button>
+      <Button>Hover</Button>
     </Whisper>
   </ButtonToolbar>
 );
