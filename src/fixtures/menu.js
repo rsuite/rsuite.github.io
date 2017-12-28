@@ -127,6 +127,10 @@ export default [{
     name: 'Panel *',
     title: '面板'
   }, {
+    id: 'progress',
+    name: 'Progress *',
+    title: '进度条'
+  }, {
     id: 'radio',
     name: 'Radio *',
     title: '单选框'
