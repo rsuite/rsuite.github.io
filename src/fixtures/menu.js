@@ -74,6 +74,10 @@ export default [{
     name: 'Dropdown *',
     title: '下拉按钮'
   }, {
+    id: 'drawer',
+    name: 'Drawer *',
+    title: '抽屉'
+  }, {
     id: 'date-picker',
     name: 'DatePicker',
     title: '日期选择控件'
