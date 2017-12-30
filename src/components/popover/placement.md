@@ -25,7 +25,7 @@ const instance = (
     </Whisper>
 
     <Whisper placement="right" speaker={speaker}>
-      <Button shape='link' >Link</Button>
+      <Button appearance='link' >Link</Button>
     </Whisper>
   </ButtonToolbar>
 );

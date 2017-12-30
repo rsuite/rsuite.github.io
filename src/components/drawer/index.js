@@ -1,11 +1,13 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { ButtonToolbar, Button, IconButton, Drawer, Icon } from '../../rsuiteSource';
+import { ButtonToolbar, Button, IconButton, Drawer, Icon, RadioGroup, Radio } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
   require('./placement.md'),
+  require('./size.md'),
+  require('./full.md'),
 ];
 
 
@@ -17,7 +19,9 @@ export default () => {
         IconButton,
         Button,
         Drawer,
-        Icon
+        Icon,
+        RadioGroup,
+        Radio
       }}
       context={context}
       examples={examples}

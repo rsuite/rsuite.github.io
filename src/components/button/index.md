@@ -36,7 +36,7 @@ import {
 | active         | boolean                                                             |       | 激活状态         |
 | block          | boolean                                                             |       | 显示为块级元素      |
 | disabled       | boolean                                                             |       | 禁用           |
-| size           | union: 'lg', 'md', 'sm', 'xs'                                       |       | 设置按钮大小       |
+| size           | union: 'lg', 'md', 'sm', 'xs'                                       |       | 设置按钮尺寸       |
 | appearance     | union: 'default' , 'primary' , 'link' , 'subtle' , 'ghost'          |       | 设置外观         |
 | color          | union: 'red', 'orange', 'yellow', 'green', 'cyan', 'blue', 'violet' |       | 设置外观         |
 | classPrefix    | string                                                              | 'btn' | className 前缀 |
@@ -65,5 +65,5 @@ IconButton 继承所有 Button 的属性
 | block       | boolean                       |             | 适应容器宽度       |
 | justified   | boolean                       |             | 横向等宽布局       |
 | vertical    | boolean                       |             | 按钮垂直布局       |
-| size        | union: 'lg', 'md', 'sm', 'xs' |             | 设置按钮大小       |
+| size        | union: 'lg', 'md', 'sm', 'xs' |             | 设置按钮尺寸       |
 | classPrefix | string                        | 'btn-group' | className 前缀 |

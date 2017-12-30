@@ -1,9 +1,9 @@
-### 默认
+### 全屏
 
 <!--start-code-->
 ```js
 
-class ModalsBasic extends React.Component{
+class Demo extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
@@ -13,21 +13,21 @@ class ModalsBasic extends React.Component{
     this.open = this.open.bind(this);
   }
   close() {
-    this.setState({ show: false});
+    this.setState({ show: false });
   }
-  open() {
+  open(size) {
     this.setState({ show: true });
   }
   render() {
     return (
       <div className="modal-container">
         <ButtonToolbar>
-          <Button onClick={this.open}> Open</Button>
+          <Button size="lg" onClick={this.open}>Open</Button>
         </ButtonToolbar>
-
         <Modal
-            show={this.state.show}
-            onHide={this.close}
+          full
+          show={this.state.show}
+          onHide={this.close}
           >
           <Modal.Header>
             <Modal.Title>Modal Title</Modal.Title>
@@ -45,8 +45,9 @@ class ModalsBasic extends React.Component{
       </div>
     );
   }
+
 }
 
-ReactDOM.render(<ModalsBasic />);
+ReactDOM.render(<Demo />);
 ```
 <!--end-code-->

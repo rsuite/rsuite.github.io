@@ -61,7 +61,7 @@ class CustomFieldForm extends React.Component {
               { label: 'HTML5', value: 4 }
             ]}
           />
-          <Button shape="primary" onClick={this.handleSubmit}> 提交 </Button>
+          <Button appearance="primary" onClick={this.handleSubmit}> 提交 </Button>
         </Form>
       </div>
     );

@@ -45,7 +45,7 @@ class ModalForm extends React.Component {
     const { errors, values, inputValue, showModal } = this.state;
     return (
       <div>
-        <Button shape="default" onClick={this.handleOpen}>打开</Button>
+        <Button appearance="default" onClick={this.handleOpen}>打开</Button>
 
         <Modal
           show={showModal}
@@ -104,7 +104,7 @@ class ModalForm extends React.Component {
             </fieldset>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.handleClose} shape="default">Close</Button>
+            <Button onClick={this.handleClose} appearance="default">Close</Button>
           </Modal.Footer>
         </Modal>
 

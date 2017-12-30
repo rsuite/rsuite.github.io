@@ -1,10 +1,13 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { ButtonToolbar, Button, Modal, Icon } from '../../rsuiteSource';
+import { ButtonToolbar, Button, Modal, Icon, Toggle } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
+  require('./size.md'),
+  require('./full.md'),
+  require('./overflow.md')
 ];
 
 
@@ -15,7 +18,8 @@ export default () => {
         ButtonToolbar,
         Button,
         Modal,
-        Icon
+        Icon,
+        Toggle
       }}
       context={context}
       examples={examples}

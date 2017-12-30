@@ -20,6 +20,6 @@
 | flip           | union: 'horizontal', 'vertical'     |        | 翻转图标                 |
 | stack          | union: '1x', '2x'                   |        | 组合多个图标               |
 | rotate         | number                              |        | 旋转图标                 |
-| fixedWidth     | boolean                             |        | 因为有很多图标大小参差不齐,固定图标宽度 |
+| fixedWidth     | boolean                             |        | 因为有很多图标尺寸参差不齐,固定图标宽度 |
 | spin           | boolean                             |        | 动态旋转图标               |
 | pulse          | boolean                             |        | 动态旋转图标，旋转8步          |

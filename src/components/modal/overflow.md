@@ -1,33 +1,41 @@
-### 默认
-
+### 滚动条
 <!--start-code-->
 ```js
 
-class ModalsBasic extends React.Component{
+class Demo extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      show: false
+      show: false,
+      overflow:false
     };
     this.close = this.close.bind(this);
     this.open = this.open.bind(this);
   }
   close() {
-    this.setState({ show: false});
+    this.setState({show: false});
   }
-  open() {
-    this.setState({ show: true });
+  open(event) {
+    this.setState({show: true });
   }
   render() {
+    const { overflow, show } = this.state;
     return (
       <div className="modal-container">
-        <ButtonToolbar>
-          <Button onClick={this.open}> Open</Button>
-        </ButtonToolbar>
+        <Toggle
+          checked={overflow}
+          onChange={(checked)=>{
+            this.setState({ overflow:checked });
+          }}
+        />  overflow
 
+        <ButtonToolbar>
+          <Button onClick={this.open}>Open</Button>
+        </ButtonToolbar>
         <Modal
-            show={this.state.show}
-            onHide={this.close}
+          overflow={overflow}
+          show={show}
+          onHide={this.close}
           >
           <Modal.Header>
             <Modal.Title>Modal Title</Modal.Title>
@@ -45,8 +53,9 @@ class ModalsBasic extends React.Component{
       </div>
     );
   }
+
 }
 
-ReactDOM.render(<ModalsBasic />);
+ReactDOM.render(<Demo />);
 ```
 <!--end-code-->

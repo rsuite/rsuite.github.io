@@ -101,7 +101,7 @@ class RSuiteForm extends React.Component {
             error={errors.bio}
           />
 
-          <Button shape="primary" onClick={this.handleSubmit}> 提交 </Button>
+          <Button appearance="primary" onClick={this.handleSubmit}> 提交 </Button>
         </Form>
       </div>
     );

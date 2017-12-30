@@ -21,6 +21,6 @@
 | checkedChildren   | node                   |          |     | 选中显示的内容    |
 | unCheckedChildren | node                   |          |     | 非选中显示的内容   |
 | classPrefix       | string                 | 'toggle' |     | class 前缀   |
-| size              | union: 'lg', 'md', 'sm' |          |     | 开关大小       |
+| size              | union: 'lg', 'md', 'sm' |          |     | 开关尺寸       |
 | onChange          | function               |          |     | 状态改变时的回调函数 |
 
