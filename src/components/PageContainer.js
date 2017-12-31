@@ -7,8 +7,8 @@ class PageContainer extends React.Component {
   render() {
     const { children, ...props } = this.props;
     return (
-      <PageProvider {...props}>
-        <Row>
+      <PageProvider>
+        <Row  {...props}>
           <Col md={9} xs={12} sm={12}>
             <PageContent>
               {children}

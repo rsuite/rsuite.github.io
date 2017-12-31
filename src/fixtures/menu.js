@@ -37,6 +37,10 @@ export default [{
   name: '组件',
   icon: (<Icon icon={component} width={22} />),
   children: [{
+    id:'overview',
+    name:'目录',
+    title: '目录'
+  },{
     id: 'alert',
     name: 'Alert *',
     title: '操作提示框'

@@ -1,6 +1,6 @@
 # Popover [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/popover/index.md)
 
-- `<Popover>` 气泡提示框;
+- `<Popover>` 提示框;
 - `<Whisper>` 监听触发器，包裹被监听对象的外面，触发事件后通知到 `<Popover>` 展示出来。
 
 > 如果只需要代替系统默认的 title 提示，可以使用 `<Tooltip>` 组件。
