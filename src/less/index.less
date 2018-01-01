@@ -265,8 +265,7 @@ pre {
 }
 
 code {
-  color: inherit;
-  background: @H050;
+  background: none;
 }
 
 .code-view .btn-toolbar + .btn-toolbar {
@@ -795,18 +794,15 @@ path.bg {
     list-style: none;
   }
   .markdown > ul{
+    margin-left: -10px;
     > li{
       display: inline-table;
       width: 180px;
-      border: 1px solid #eee;
-      margin: 10px;
-      background: #f5f5f5;
-      padding: 10px;
-      border-radius: 4px;
-
+      border-left: 1px solid #eee;
+      margin: 10px 0 10px 10px;
+      padding: 0 10px;
       code{
-        background: none;
-        color: #d80909;
+        padding: 0;
       }
     }
   }

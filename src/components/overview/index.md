@@ -18,20 +18,17 @@
   - `<Alert>`
 - [Notification 通知](/components/notification)
   - `<Notification>`
-- [Progress 进度条](/components/progress)
-  - `<Progress.Line>`
-  - `<Progress.Circle>`
 - [Loader 加载器](/components/loader)
   - `<Loader>`
 - [Icon 图标](/components/icon)
   - `<Icon>`
+- [Drawer 抽屉](/components/drawer)
+  - `<Drawer>`
 - [Modal 模态框](/components/modal)
   - `<Modal>`
   - `<Modal.Header>`
   - `<Modal.Body>`
   - `<Modal.Footer>`
-- [Drawer 抽屉](/components/drawer)
-  - `<Drawer>`
 
 
 ## 数据输入
@@ -63,6 +60,9 @@
 - TimeLine
 - Panel
 - Tag
+- [Progress 进度条](/components/progress)
+  - `<Progress.Line>`
+  - `<Progress.Circle>`
 
 ## 导航
 
