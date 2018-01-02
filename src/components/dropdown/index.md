@@ -12,25 +12,26 @@
 
 ### `<Dropdown>`
 
-| 属性名称        | 类型                                                | 默认值  | 描述          |
-|-------------|---------------------------------------------------|------|-------------|
-| disabled    | boolean                                           |      | 禁用组件        |
-| dropup      | boolean                                           |      | 菜单向上弹出      |
-| autoClose   | boolean                                           | true | 菜单选择后自动关闭   |
-| menuStyle   | Object                                            |      | 菜单样式        |
-| title       | React.Node                                        |      | 菜单默认显示内容    |
-| onClose     | () => void                                        |      | 菜单关闭的回调函数   |
-| onOpen      | () => void                                        |      | 菜单弹出的回调函数   |
-| onToggle    | (open?: boolean) => void                          |      | 菜单状态切换的回调函数 |
-| onSelect    | (eventKey: any, event: SyntheticEvent<*>) => void |      | 选择后的回调函数    |
-| renderTitle | (children?: React.Node) => React.Node             |      | 自定义 title   |
+| 属性名称        | 类型                                                                                    | 默认值          | 描述                                   |
+|-------------|---------------------------------------------------------------------------------------|--------------|--------------------------------------|
+| activeKey   | any                                                                                   |              | 激活状态的选项，对应 Dropdown.Item 中的 eventKey |
+| classPrefix | string                                                                                | 'dropdown'   | className 前缀                         |
+| disabled    | boolean                                                                               |              | 禁用组件                                 |
+| dropup      | boolean                                                                               |              | 菜单向上弹出                               |
+| menuStyle   | Object                                                                                |              | 菜单样式                                 |
+| title       | React.Node                                                                            |              | 菜单默认显示内容                             |
+| onClose     | () => void                                                                            |              | 菜单关闭的回调函数                            |
+| onOpen      | () => void                                                                            |              | 菜单弹出的回调函数                            |
+| onToggle    | (open?: boolean) => void                                                              |              | 菜单状态切换的回调函数                          |
+| onSelect    | (eventKey: any, event: SyntheticEvent<*>) => void                                     |              | 选择后的回调函数                             |
+| renderTitle | (children?: React.Node) => React.Node                                                 |              | 自定义 title                            |
+| placement   | union: 'bottomLeft', 'bottomCenter', 'bottomRight', 'topLeft', 'topCenter','topRight' | 'bottomLeft' | 菜单显示位置                               |
 
 
 ### `<Dropdown.Item>`
 
 | 属性名称           | 类型                                                | 默认值 | 描述          |
 |----------------|---------------------------------------------------|-----|-------------|
-| href           | string                                            |     | 点击后跳转的链接    |
 | divider        | boolean                                           |     | 显示为分割线      |
 | active         | boolean                                           |     | 选中当前选项      |
 | disabled       | boolean                                           |     | 禁用当前选项      |

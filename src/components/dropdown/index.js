@@ -6,6 +6,7 @@ import { Dropdown, Button, Icon, ButtonToolbar, IconButton, ButtonGroup } from '
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
+  require('./active.md'),
   require('./disabled.md'),
   require('./divider.md'),
   require('./placement.md'),

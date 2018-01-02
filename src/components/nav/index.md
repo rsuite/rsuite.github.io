@@ -5,6 +5,13 @@
 - `<Nav>` 导航组件；
 - `<Nav.Item>` 导航选项组件。
 
+## 获取组件
+
+
+```js
+import { Nav } from 'rsuite';
+```
+
 
 ## 演示
 
