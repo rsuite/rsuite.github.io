@@ -3,6 +3,8 @@ import { Col } from '../rsuiteSource';
 import { Markdown } from 'react-markdown-reader';
 import CodeView from 'react-code-view';
 import PageContainer from './PageContainer';
+import * as rsuite from '../rsuiteSource';
+
 
 const babelOptions = {
   presets: ['stage-0', 'react', 'es2015'],
@@ -31,7 +33,7 @@ class ComponentExample extends React.Component {
               babelOptions={babelOptions}
               key={index}
               source={item}
-              dependencies={dependencies}
+              dependencies={{...dependencies, rsuite}}
             />
           ))
         }
