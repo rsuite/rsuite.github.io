@@ -66,22 +66,40 @@
 
 ## 导航
 
-- Dropdown
-- Nav
-- Menu
+- Dropdown 下拉菜单
+  - `<Dropdown>`
+  - `<Dropdown.Item>`
+  - `<Dropdown.Menu>`
+- Nav 导航
+  - `<Nav>`
+  - `<Nav.Item>`
+  - `<Nav.Dropdown>`
+- Navbar 导航栏
+  - `<Navbar>`
+  - `<Navbar.Header>`
+  - `<Navbar.Brand>`
+  - `<Navbar.Collapse>`
+  - `<Navbar.Toggle>`
 - Steps
+  - `<Steps>`
+  - `<Steps.Item>`
 - Breadcrumb
+  - `<Breadcrumb>`
+  - `<Breadcrumb.Item>`
 - Pagination
+  - `<Pagination>`
 
 ## 布局
-- Grid
-- Row
-- Col
+- Grid 栅格布局
+  - `<Grid>`
+  - `<Row>`
+  - `<Col>`
 - Container
-- Header
-- Sider
-- Content
-- Footer
+  - `<Container>`
+  - `<Header>`
+  - `<Sider>`
+  - `<Content>`
+  - `<Footer>`
 
 
 <!--{demo}-->

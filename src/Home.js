@@ -52,8 +52,9 @@ class Home extends React.Component {
             </h1>
             <p className="sub-title">一套 React 的 UI 组件库</p>
             <div className="menu-nav">
-              <Link className="hvr-underline-from-center" to="/getting-started/installation">新手入门</Link>
-              <Link className="hvr-underline-from-center" to="/components/button">组件</Link>
+              <Link className="hvr-underline-from-center" to="/getting-started/installation">新手指南</Link>
+              <Link className="hvr-underline-from-center" to="/components/overview">组件</Link>
+              <Link className="hvr-underline-from-center" to="/tools/palette">工具</Link>
               <a className="hvr-underline-from-center" href="https://github.com/rsuite/rsuite" target="_blank">
                 GitHub
                 <Icon icon="external-link" className="external-link" />
