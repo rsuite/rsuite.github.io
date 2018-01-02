@@ -37,10 +37,10 @@ export default [{
   name: '组件',
   icon: (<Icon icon={component} width={22} />),
   children: [{
-    id:'overview',
-    name:'目录',
+    id: 'overview',
+    name: '目录',
     title: '目录'
-  },{
+  }, {
     id: 'alert',
     name: 'Alert *',
     title: '操作提示框'
@@ -102,6 +102,10 @@ export default [{
     id: 'icon',
     name: 'Icon *',
     title: '图标'
+  }, {
+    id: 'loader',
+    name: 'Loader *',
+    title: '加载器'
   }, {
     id: 'modal',
     name: 'Modal *',
@@ -174,8 +178,7 @@ export default [{
     id: 'uploader',
     name: 'Uploader',
     title: '上传文件'
-  }
-  ]
+  }]
 }, {
   id: 'tools',
   name: '工具',

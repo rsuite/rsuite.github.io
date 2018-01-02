@@ -1,7 +1,7 @@
 # Message [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/message/index.md)
 
 
-- `Message` 消息框
+- `<Message>` 消息框
 
 ## 演示
 

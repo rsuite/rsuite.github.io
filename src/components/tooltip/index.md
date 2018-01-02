@@ -19,7 +19,7 @@
 | placement       | union: 'top', 'right', 'bottom', 'left' | 'right'   | 位置                |
 | positionLeft    | number                                  |           | 相对 `left` 位置偏移量   |
 | positionTop     | number                                  |           | 相对 `top` 位置偏移量    |
-| classPrefix     | string                                  | 'tooltip' |                   |
+| classPrefix     | string                                  | 'tooltip' | className 前缀      |
 | arrowOffsetLeft | number or string                        |           | 箭头相对 `left` 位置偏移量 |
 | arrowOffsetTop  | number or string                        |           | 箭头相对 `top` 位置偏移量  |
 
