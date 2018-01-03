@@ -5,12 +5,14 @@
 ```js
 const instance = (
  <div style={{height:200, background:'#ddd', position:'relative'}}>
-   <Message
-    full
-    showIcon
-    type="warning"
-    description="Warning"
-  />
+   <div style={{position:'absolute', top:-28, left:-18, width:'calc(100% + 36px)'}}>
+      <Message
+        full
+        showIcon
+        type="warning"
+        description="Warning"
+      />
+    </div>
  </div>
 );
 ReactDOM.render(instance);
