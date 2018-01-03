@@ -63,3 +63,9 @@ Alert.config(options:Options);
 - top - 距离页面顶部的距离 (单位px, 默认:5)
 - duration - Alert 框持续时间 (单位毫秒, 默认:2000)
 - getContainer - Alert 框的父级容器
+
+
+## 相关组件
+
+- [`<Message>`](/components/message) 消息框。
+- [`<Notification>`](/components/notification) 通知。

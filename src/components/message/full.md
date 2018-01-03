@@ -3,16 +3,24 @@
 
 <!--start-code-->
 ```js
+
+const styles={
+  background:'#000',
+  padding:20,
+  position:'relative'
+};
+
 const instance = (
- <div style={{height:200, background:'#ddd', position:'relative'}}>
-   <div style={{position:'absolute', top:-28, left:-18, width:'calc(100% + 36px)'}}>
-      <Message
-        full
-        showIcon
-        type="warning"
-        description="Warning"
-      />
-    </div>
+ <div style={styles}>
+    <Message
+      full
+      showIcon
+      type="warning"
+      description="Warning"
+    />
+    <Paragraph />
+    <Paragraph />
+    <Paragraph />
  </div>
 );
 ReactDOM.render(instance);

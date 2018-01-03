@@ -1,7 +1,7 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
 import { Message, Button, ButtonToolbar } from '../../rsuiteSource';
-
+import Paragraph from '../../fixtures/Paragraph';
 
 
 const context = require('./index.md');
@@ -19,6 +19,7 @@ export default () => {
     <ComponentExample
       context={context}
       dependencies={{
+        Paragraph,
         ButtonToolbar,
         Button,
         Message
