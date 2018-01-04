@@ -21,14 +21,20 @@ const filter = [];
  * polyfill & es6-shim
  */
 filter.push(new Promise((resolve, reject) => {
+
+  console.log('--1----')
   if (!isIE) {
     return resolve();
   }
 
+  console.log('---2---');
+
   let count = 0;
   const files = [
-    'https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js'
+    'http://cdn.bootcss.com/es5-shim/4.5.9/es5-shim.min.js',
+    'http://cdn.bootcss.com/es5-shim/4.5.9/es5-sham.min.js',
+    'http://cdn.bootcss.com/es6-shim/0.35.1/es6-shim.min.js',
+    'http://cdn.bootcss.com/es6-shim/0.35.1/es6-sham.min.js'
   ];
   //异步加载CSS文件
   files.map((file) => {

@@ -18,9 +18,7 @@ const instance = (
       type="warning"
       description="Warning"
     />
-    <Paragraph />
-    <Paragraph />
-    <Paragraph />
+    <Paragraph count={3}/>
  </div>
 );
 ReactDOM.render(instance);

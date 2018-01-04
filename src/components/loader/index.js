@@ -1,7 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
 import { Loader } from '../../rsuiteSource';
-import Paragraph from '../../fixtures/Paragraph';
 
 const context = require('./index.md');
 const examples = [
@@ -19,7 +18,6 @@ export default () => {
     <ComponentExample
       context={context}
       dependencies={{
-        Paragraph,
         Loader
       }}
       examples={examples}

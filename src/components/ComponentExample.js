@@ -4,6 +4,7 @@ import { Markdown } from 'react-markdown-reader';
 import CodeView from 'react-code-view';
 import PageContainer from './PageContainer';
 import * as rsuite from '../rsuiteSource';
+import Paragraph from '../fixtures/Paragraph';
 
 
 const babelOptions = {
@@ -33,7 +34,7 @@ class ComponentExample extends React.Component {
               babelOptions={babelOptions}
               key={index}
               source={item}
-              dependencies={{...dependencies, rsuite}}
+              dependencies={{ ...dependencies, Paragraph, rsuite }}
             />
           ))
         }

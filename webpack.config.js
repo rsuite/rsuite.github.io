@@ -61,7 +61,7 @@ if (NODE_ENV === 'production') {
 
 const common = {
   entry: {
-    app: path.resolve(__dirname, 'src/index'),
+    app: ['babel-polyfill', path.resolve(__dirname, 'src/index')],
     vendor: ['react', 'react-dom'],
   },
   devtool: 'cheap-module-eval-source-map',
@@ -165,6 +165,8 @@ module.exports = () => {
   if (NODE_ENV === 'development') {
     return Object.assign({}, common, {
       entry: [
+        // https://github.com/facebook/react/issues/8379#issuecomment-264934168
+        'babel-polyfill',
         'react-hot-loader/patch',
         'webpack-dev-server/client?http://127.0.0.1:3200',
         'webpack/hot/only-dev-server',

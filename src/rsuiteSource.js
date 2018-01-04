@@ -1,6 +1,6 @@
 
 
-const rsuite = require('../../rsuite/src/index');
+const rsuite = require('../../rsuite/lib/index');
 //const rsuite = require('rsuite');
 
 

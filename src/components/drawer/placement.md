@@ -38,8 +38,8 @@ class DrawersBasic extends React.Component{
           show={this.state.show}
           onHide={this.close}
         >
-          <h4>Drawer.Body</h4>
-          <p>Drawer.Body</p>
+          <h4>Drawer</h4>
+          <Paragraph count={3} />
         </Drawer>
       </div>
     );

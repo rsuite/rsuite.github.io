@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Row, Col } from '../rsuiteSource';
 import DocSidebar from './DocSidebar';
 import TopLevelNav from './TopLevelNav';
 
