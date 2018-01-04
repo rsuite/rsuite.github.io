@@ -20,5 +20,12 @@
     "transform-class-properties",
     "transform-runtime",
     "add-module-exports"
-  ]
+  ],
+  "env": {
+    "production": {
+      "presets": [
+        "react-optimize"
+      ]
+    }
+  }
 }
