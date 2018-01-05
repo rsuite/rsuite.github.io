@@ -4,7 +4,10 @@
 <!--start-code-->
 ```js
 const instance = (
-  <Loader content="Loading..." />
+  <div>
+    <Loader content="Loading..." />
+    <Loader content="Loading..." vertical />
+  </div>
 );
 ReactDOM.render(instance);
 ```

@@ -10,7 +10,8 @@ export default function ({ count = 1, width = '100%', children, ...props }) {
     >
       {
         [...Array(count)].map((item, index) => {
-          return <img key={index} width='100%' src={short} style={{ marginTop: 18 }} />;
+
+          return <img key={index} width='100%' src={short} style={{ marginTop: index > 0 ? 18 : 0 }} />;
         })
       }
       {children}

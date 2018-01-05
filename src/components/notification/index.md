@@ -7,6 +7,11 @@
 - `Notification.warning` 警告信息通知。
 - `Notification.error` 错误信息通知。
 
+## 获取组件
+
+```js
+import { Notification } from 'rsuite';
+```
 
 ## 演示
 

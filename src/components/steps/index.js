@@ -11,6 +11,7 @@ const examples = [
   require('./description.md'),
   require('./vertical.md'),
   require('./status.md'),
+  require('./size.md'),
   require('./icon.md')
 ];
 

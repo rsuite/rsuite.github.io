@@ -7,10 +7,7 @@
 function open(funcName){
   Notification[funcName]({
       title: funcName,
-      description: `
-        long long long long long  message
-        long long long long long  message
-      `
+      description: <Paragraph />
   });
 }
 

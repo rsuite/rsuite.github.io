@@ -7,10 +7,7 @@
 function open(){
   Notification.open({
       title: 'Notify',
-      description: `
-        long long long long long error message
-        long long long long long error message
-      `
+      description: <Paragraph />
   });
 }
 

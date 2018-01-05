@@ -11,8 +11,10 @@ function open(){
       description: (
         <div>
           <p>Simon wants to add you as a friend .</p>
-          <Button>Accept</Button>
-          <Button>Cancel</Button>
+          <ButtonToolbar>
+            <Button>Accept</Button>
+            <Button>Cancel</Button>
+          </ButtonToolbar>
         </div>
       )
   });

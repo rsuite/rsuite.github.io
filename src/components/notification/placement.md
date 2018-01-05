@@ -8,10 +8,7 @@ function open(placement){
   Notification.open({
       title: placement,
       placement,
-      description: `
-        long long long long long  message
-        long long long long long  message
-      `
+      description: <Paragraph />
   });
 }
 
