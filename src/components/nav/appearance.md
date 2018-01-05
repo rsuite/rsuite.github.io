@@ -1,11 +1,18 @@
-### 激活状态
+### 外观
+
+
+`appearance` 属性设置按钮外观:
+- 'default'(默认值) 默认导航。
+- 'tabs'    标签式的导航。
+- 'subtle'  弱化的导航。
+
 
 <!--start-code-->
 ```js
 const instance = (
   <div>
     <Nav>
-      <Nav.Item active>Item A</Nav.Item>
+      <Nav.Item>Item A</Nav.Item>
       <Nav.Item>Item B</Nav.Item>
       <Nav.Item>Item C</Nav.Item>
       <Nav.Item>Item D</Nav.Item>
@@ -18,7 +25,7 @@ const instance = (
     </Nav>
 
     <Nav appearance="tabs">
-      <Nav.Item active>Item A</Nav.Item>
+      <Nav.Item>Item A</Nav.Item>
       <Nav.Item>Item B</Nav.Item>
       <Nav.Item>Item C</Nav.Item>
       <Nav.Item>Item D</Nav.Item>
@@ -31,7 +38,7 @@ const instance = (
     </Nav>
 
     <Nav appearance="subtle">
-      <Nav.Item active>Item A</Nav.Item>
+      <Nav.Item>Item A</Nav.Item>
       <Nav.Item>Item B</Nav.Item>
       <Nav.Item>Item C</Nav.Item>
       <Nav.Item>Item D</Nav.Item>

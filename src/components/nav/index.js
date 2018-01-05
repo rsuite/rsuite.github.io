@@ -5,11 +5,10 @@ import { Nav, Button, Icon } from '../../rsuiteSource';
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
+  require('./appearance.md'),
   require('./active.md'),
   require('./disabled.md'),
-  require('./pills.md'),
-  require('./tabs.md'),
-  require('./stacked.md'),
+  require('./vertical.md'),
   require('./justified.md'),
   require('./dropdown.md')
 ];

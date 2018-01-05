@@ -1,11 +1,11 @@
-### 激活状态
+### 垂直布局
 
 <!--start-code-->
 ```js
 const instance = (
   <div>
-    <Nav>
-      <Nav.Item active>Item A</Nav.Item>
+    <Nav vertical>
+      <Nav.Item>Item A</Nav.Item>
       <Nav.Item>Item B</Nav.Item>
       <Nav.Item>Item C</Nav.Item>
       <Nav.Item>Item D</Nav.Item>
@@ -17,8 +17,8 @@ const instance = (
       </Nav.Dropdown>
     </Nav>
 
-    <Nav appearance="tabs">
-      <Nav.Item active>Item A</Nav.Item>
+    <Nav appearance="tabs" vertical>
+      <Nav.Item >Item A</Nav.Item>
       <Nav.Item>Item B</Nav.Item>
       <Nav.Item>Item C</Nav.Item>
       <Nav.Item>Item D</Nav.Item>
@@ -30,8 +30,8 @@ const instance = (
       </Nav.Dropdown>
     </Nav>
 
-    <Nav appearance="subtle">
-      <Nav.Item active>Item A</Nav.Item>
+    <Nav appearance="subtle" vertical>
+      <Nav.Item>Item A</Nav.Item>
       <Nav.Item>Item B</Nav.Item>
       <Nav.Item>Item C</Nav.Item>
       <Nav.Item>Item D</Nav.Item>
