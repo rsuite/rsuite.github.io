@@ -147,6 +147,10 @@ export default [{
     name: 'Radio *',
     title: '单选框'
   }, {
+    id: 'steps',
+    name: 'Steps',
+    title: '步骤条'
+  },{
     id: 'select-picker',
     name: 'SelectPicker',
     title: '单选'
