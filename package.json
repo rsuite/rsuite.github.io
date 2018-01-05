@@ -8,6 +8,8 @@
   },
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server -d --watch --inline --history-api-fallback --progress --colors --port 3200 --host 0.0.0.0",
+    "dev-styles": "STYLE_DEBUG=STYLE npm run dev",
+    "dev-styles-source": "STYLE_DEBUG=SOURCE npm run dev",
     "build": "rm -rf assets &&  NODE_ENV=production webpack --progress --colors",
     "build-public": "rm -rf lib && babel src/public --out-dir lib && cp -R src/public/less lib && cp -R src/public/css lib",
     "dll": "webpack --config webpack.dll.config.js",

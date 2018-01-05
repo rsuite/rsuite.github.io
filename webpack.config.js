@@ -8,7 +8,7 @@ const markdownRenderer = require('react-markdown-reader').renderer;
 
 const iconPath = ['./node_modules/rsuite-theme', '../rsuite-theme'].map(relativePath => path.resolve(__dirname, relativePath));
 
-const { NODE_ENV } = process.env;
+const { NODE_ENV, STYLE_DEBUG } = process.env;
 const extractLess = new ExtractTextPlugin({
   filename: '[contenthash].css',
   disable: NODE_ENV === 'development'
@@ -59,6 +59,15 @@ if (NODE_ENV === 'production') {
 
 }
 
+const getStyleLoader = () => {
+  const sourceMap = STYLE_DEBUG === 'SOURCE' ? '?sourceMap' : '';
+  const loaders = ['css-loader', 'postcss-loader', 'less-loader'];
+  const filterLoader = loader => (STYLE_DEBUG === 'STYLE' || NODE_ENV === 'production') ? true : loader !== 'postcss-loader';
+  return loaders.filter(filterLoader).map(loader => ({
+    loader: `${loader}${sourceMap}`
+  }));
+};
+
 const common = {
   entry: {
     app: ['babel-polyfill', path.resolve(__dirname, 'src/index')],
@@ -90,15 +99,7 @@ const common = {
       {
         test: /\.(less|css)$/,
         loader: extractLess.extract({
-          use: [
-            {
-              loader: 'css-loader',
-            }, {
-              loader: 'postcss-loader',
-            }, {
-              loader: 'less-loader'
-            }
-          ],
+          use: getStyleLoader(),
           // use style-loader in development
           fallback: 'style-loader?{attrs:{prop: "value"}}'
         })
