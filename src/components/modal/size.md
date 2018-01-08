@@ -26,10 +26,10 @@ class Demo extends React.Component{
     return (
       <div className="modal-container">
         <ButtonToolbar>
-          <Button size="lg" onClick={()=>this.open('lg')}>Large</Button>
-          <Button size="md" onClick={()=>this.open('md')}>Medium</Button>
-          <Button size="sm" onClick={()=>this.open('sm')}>Small</Button>
           <Button size="xs" onClick={()=>this.open('xs')}>Xsmall</Button>
+          <Button size="sm" onClick={()=>this.open('sm')}>Small</Button>
+          <Button size="md" onClick={()=>this.open('md')}>Medium</Button>
+          <Button size="lg" onClick={()=>this.open('lg')}>Large</Button>
         </ButtonToolbar>
         <Modal
           size={this.state.size}
@@ -40,12 +40,11 @@ class Demo extends React.Component{
             <Modal.Title>Modal Title</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h4>Modal Body</h4>
-            <Paragraph count={3} />
+            <Paragraph />
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.close} appearance="primary">Confirm</Button>
-            <Button onClick={this.close} >Cancel</Button>
+            <Button onClick={this.close} appearance="subtle">Cancel</Button>
           </Modal.Footer>
         </Modal>
 

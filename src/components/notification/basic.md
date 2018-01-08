@@ -7,7 +7,7 @@
 function open(){
   Notification.open({
       title: 'Notify',
-      description: <Paragraph />
+      description: <Paragraph size="short" />
   });
 }
 

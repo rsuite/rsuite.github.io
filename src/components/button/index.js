@@ -15,8 +15,8 @@ const examples = [
   require('./active.md'),
   require('./loading.md'),
   require('./group-basic.md'),
-  require('./toolbar.md'),
   require('./vertical.md'),
+  require('./toolbar.md'),
   require('./justified.md')
 ];
 

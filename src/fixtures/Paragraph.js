@@ -1,7 +1,11 @@
 import React from 'react';
-import short from '../../resources/images/short-paragraph.png';
 
-export default function ({ count = 1, width = '100%', children, ...props }) {
+const images = {
+  default: require('../../resources/images/paragraph.png'),
+  short: require('../../resources/images/short-paragraph.png')
+};
+
+export default function ({ count = 1, width = '100%', size = 'default', children, ...props }) {
   return (
     <div
       {...props}
@@ -11,7 +15,7 @@ export default function ({ count = 1, width = '100%', children, ...props }) {
       {
         [...Array(count)].map((item, index) => {
 
-          return <img key={index} width='100%' src={short} style={{ marginTop: index > 0 ? 18 : 0 }} />;
+          return <img key={index} width='100%' src={images[size]} style={{ marginTop: index > 0 ? 18 : 0 }} />;
         })
       }
       {children}

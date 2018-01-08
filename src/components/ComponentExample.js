@@ -32,6 +32,7 @@ class ComponentExample extends React.Component {
           examples.map((item, index) => (
             <CodeView
               babelOptions={babelOptions}
+              buttonClassName="btn-subtle btn-icon-circle"
               key={index}
               source={item}
               dependencies={{ ...dependencies, Paragraph, rsuite }}

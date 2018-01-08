@@ -33,12 +33,11 @@ class ModalsBasic extends React.Component{
             <Modal.Title>Modal Title</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h4>Modal Body</h4>
-            <Paragraph count={3} />
+            <Paragraph />
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.close} appearance="primary">Confirm</Button>
-            <Button onClick={this.close} >Cancel</Button>
+            <Button onClick={this.close} appearance="subtle">Cancel</Button>
           </Modal.Footer>
         </Modal>
 

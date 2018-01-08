@@ -2,7 +2,7 @@
 <!--start-code-->
 ```js
 const instance = (
-  <div>
+  <ButtonToolbar>
     <ButtonGroup vertical>
       <Button>Top</Button>
       <Button>Middle</Button>
@@ -33,7 +33,7 @@ const instance = (
       <Button appearance="ghost">Bottom</Button>
     </ButtonGroup>
 
-  </div>
+  </ButtonToolbar>
 );
 ReactDOM.render(instance);
 ```

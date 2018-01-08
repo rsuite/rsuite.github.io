@@ -7,7 +7,7 @@
 function open(funcName){
   Notification[funcName]({
       title: funcName,
-      description: <Paragraph />
+      description: <Paragraph size="short" />
   });
 }
 
