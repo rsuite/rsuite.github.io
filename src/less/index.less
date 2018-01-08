@@ -3,6 +3,8 @@
 //@import '~rsuite-theme/lib/less/index';
 
 @import '../../../rsuite-theme/src/less/index';
+@import './functions.less';
+@import './docsearch.less';
 
 //rewrite base color
 @base-color: #34c3ff;
@@ -44,11 +46,7 @@
   background: @bg-color;
 }
 
-.box-shadow(@x: 0px, @y: 2px, @blur: 3px, @color: rgba(0, 0, 0, 0.28)) {
-  -moz-box-shadow: @arguments;
-  -webkit-box-shadow: @arguments;
-  box-shadow: @arguments;
-}
+
 
 .doc-header {
   background: #fff;
@@ -175,7 +173,7 @@
   bottom: 20px;
   left: 0;
   right: 0;
-  top: 130px;
+  top: 80px;
   padding: 0 26px;
   a {
     color: #575757;
@@ -804,4 +802,25 @@ path.bg {
       }
     }
   }
+}
+
+.search-list{
+ list-style: none;
+ padding: 0;
+ margin: 20px 0 0 0;
+ a{
+   color: #575757;
+   padding: 10px 6px;
+   display: block;
+   font-size: 14px;
+   text-decoration: none;
+   &:hover{
+     background: @H050;
+   }
+   em{
+     color: @base-color;
+     font-style: normal;
+     font-weight: bold;
+   }
+ }
 }

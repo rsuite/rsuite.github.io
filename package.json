@@ -64,6 +64,7 @@
     "compression-webpack-plugin": "^1.0.1",
     "css-loader": "^0.23.1",
     "cssnano": "^3.10.0",
+    "docsearch.js": "^2.5.2",
     "dom-lib": "^0.2.6",
     "eslint": "^2.8.0",
     "eslint-plugin-babel": "^3.2.0",

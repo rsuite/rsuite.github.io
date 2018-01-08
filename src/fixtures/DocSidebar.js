@@ -34,11 +34,6 @@ class DocSidebar extends React.Component {
       keyword: ''
     };
   }
-
-  handleSearch = (keyword) => {
-    this.setState({ keyword });
-  }
-
   getMenuItems() {
     const { keyword } = this.state;
     const key = _.trim(keyword.toLocaleLowerCase());
@@ -72,12 +67,6 @@ class DocSidebar extends React.Component {
         <div className="title-wrapper">
           {icon} {activeTitle}
         </div>
-
-        <FormControl
-          placeholder="搜索..."
-          className="search-input"
-          onChange={_.debounce(this.handleSearch, 400)}
-        />
         <Nav className="nav-docs">
           {nodeItems}
         </Nav>
