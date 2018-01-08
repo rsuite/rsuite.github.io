@@ -9,6 +9,7 @@ const examples = [
   require('./active.md'),
   require('./disabled.md'),
   require('./vertical.md'),
+  require('./reversed.md'),
   require('./justified.md'),
   require('./dropdown.md')
 ];

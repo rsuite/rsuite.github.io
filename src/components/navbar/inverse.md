@@ -1,13 +1,14 @@
-### 默认
+### Inverse
 
 <!--start-code-->
 ```js
 const instance = (
-  <Navbar >
+  <Navbar inverse>
     <Navbar.Header>
       <Navbar.Brand>
         <a href="#">RSUITE</a>
       </Navbar.Brand>
+      <Navbar.Toggle />
     </Navbar.Header>
     <Navbar.Collapse>
       <Nav>
@@ -23,7 +24,7 @@ const instance = (
         </Nav.Dropdown>
       </Nav>
       <Nav pullRight>
-        <Nav.Item >Link Right</Nav.Item>
+        <Nav.Item>Link Right</Nav.Item>
       </Nav>
     </Navbar.Collapse>
   </Navbar>
