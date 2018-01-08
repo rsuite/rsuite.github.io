@@ -54,8 +54,16 @@ class DrawersBasic extends React.Component{
           show={show}
           onHide={this.handleClose}
         >
-          <h4>Drawer</h4>
-          <Paragraph count={3} />
+          <Drawer.Header>
+            <Drawer.Title>Drawer Title</Drawer.Title>
+          </Drawer.Header>
+          <Drawer.Body>
+            <Paragraph />
+          </Drawer.Body>
+          <Drawer.Footer>
+            <Button onClick={this.close} appearance="primary">Confirm</Button>
+            <Button onClick={this.close} appearance="subtle">Cancel</Button>
+          </Drawer.Footer>
         </Drawer>
       </div>
     );

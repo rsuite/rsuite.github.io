@@ -29,8 +29,16 @@ class Demo extends React.Component{
           show={this.state.show}
           onHide={this.close}
         >
-          <h4>Drawer</h4>
-          <Paragraph count={10} />
+          <Drawer.Header>
+            <Drawer.Title>Drawer Title</Drawer.Title>
+          </Drawer.Header>
+          <Drawer.Body>
+            <Paragraph />
+          </Drawer.Body>
+          <Drawer.Footer>
+            <Button onClick={this.close} appearance="primary">Confirm</Button>
+            <Button onClick={this.close} appearance="subtle">Cancel</Button>
+          </Drawer.Footer>
         </Drawer>
       </div>
     );
