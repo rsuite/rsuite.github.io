@@ -6,7 +6,8 @@
 const instance = (
   <div>
     <Loader content="Loading..." />
-    <Loader content="Loading..." vertical />
+    <hr />
+    <Loader content="vertical Loading..." vertical />
   </div>
 );
 ReactDOM.render(instance);

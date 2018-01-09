@@ -5,11 +5,11 @@ const images = {
   short: require('../../resources/images/short-paragraph.png')
 };
 
-export default function ({ count = 1, width = '100%', size = 'default', children, ...props }) {
+export default function ({ count = 1, width = '100%', size = 'default', style, children, ...props }) {
   return (
     <div
       {...props}
-      style={{ width, maxWidth: 600 }}
+      style={{ width, maxWidth: 600, ...style }}
       className="paragraph"
     >
       {

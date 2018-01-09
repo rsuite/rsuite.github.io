@@ -4,9 +4,9 @@
 <!--start-code-->
 ```js
 const instance = (
-  <Paragraph style={{background:'#000'}}>
-    <Loader inverse />
-  </Paragraph>
+  <div style={{background:'#000',height:100}}>
+   <Loader inverse center content="loading..." />
+  </div>
 );
 ReactDOM.render(instance);
 ```

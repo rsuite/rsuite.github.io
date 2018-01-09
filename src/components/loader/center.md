@@ -5,7 +5,7 @@
 ```js
 const instance = (
   <Paragraph>
-    <Loader center />
+    <Loader center content="loading" />
   </Paragraph>
 );
 ReactDOM.render(instance);
