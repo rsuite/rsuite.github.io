@@ -38,12 +38,12 @@ export default [{
   icon: (<Icon icon={component} width={22} />),
   children: [{
     id: 'overview',
-    name: '目录',
+    name: 'Overview',
     title: '目录'
   }, {
     id: 'alert',
     name: 'Alert *',
-    title: '操作提示框'
+    title: '提示框'
   }, {
     id: 'button',
     name: 'Button *',
@@ -59,7 +59,7 @@ export default [{
   }, {
     id: 'check-tree',
     name: 'CheckTree',
-    title: '可选择树形控件'
+    title: '多选树形控件'
   }, {
     id: 'check-tree-picker',
     name: 'CheckTreePicker',
@@ -67,16 +67,16 @@ export default [{
   }, {
     id: 'check-picker',
     name: 'CheckPicker',
-    title: '多选'
+    title: '多项选择器'
   },
   {
     id: 'cascader',
     name: 'Cascader',
-    title: '级联选择'
+    title: '级联选择器'
   }, {
     id: 'dropdown',
     name: 'Dropdown *',
-    title: '下拉按钮'
+    title: '下拉菜单'
   }, {
     id: 'drawer',
     name: 'Drawer *',
@@ -84,12 +84,12 @@ export default [{
   }, {
     id: 'date-picker',
     name: 'DatePicker',
-    title: '日期选择控件'
+    title: '时间选择器'
   },
   {
     id: 'date-range-picker',
     name: 'DateRangePicker',
-    title: '日期范围选择控件'
+    title: '日期范围选择器'
   }, {
     id: 'form',
     name: 'Form *',
@@ -153,7 +153,7 @@ export default [{
   },{
     id: 'select-picker',
     name: 'SelectPicker',
-    title: '单选'
+    title: '单项选择器'
   },
   {
     id: 'toggle',
@@ -166,8 +166,7 @@ export default [{
   }, {
     id: 'table',
     name: 'Table *',
-    title: '表格',
-    alone: true
+    title: '表格'
   },
   {
     id: 'tree',
@@ -181,7 +180,7 @@ export default [{
   }, {
     id: 'uploader',
     name: 'Uploader',
-    title: '上传文件'
+    title: '上传控件'
   }]
 }, {
   id: 'tools',

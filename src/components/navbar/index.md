@@ -1,5 +1,6 @@
-# Navbar [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/navbar/index.md)
+# Navbar 导航栏 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/navbar/index.md)
 
+对 Nav 的一个封装，一般用于页面顶部导航。
 
 - `<Navbar>` 导航栏组件；
 - `<Navbar.Header>`  设置导航栏头部信息；

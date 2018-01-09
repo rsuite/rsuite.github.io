@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import debounce from 'lodash/debounce';
 import get from 'lodash/get';
 import algoliasearch from 'algoliasearch';
+import { Link } from 'react-router';
 import { Drawer, FormControl } from '../rsuiteSource';
 
 
@@ -9,6 +10,7 @@ class SearchDrawer extends Component {
   constructor() {
     super();
     this.state = {
+      keyword: '',
       list: []
     };
   }
@@ -31,7 +33,16 @@ class SearchDrawer extends Component {
     });
   }
   handleSearch = (keyword) => {
-    this.querySearch(keyword);
+    if (keyword === '') {
+      this.setState({ list: [] });
+    }
+    this.setState({ keyword }, () => {
+      this.querySearch(keyword);
+    });
+  }
+  handleClick = () => {
+    const { onHide } = this.props;
+    onHide && onHide();
   }
   render() {
 
@@ -52,20 +63,30 @@ class SearchDrawer extends Component {
           <FormControl
             placeholder="搜索..."
             className="search-input"
-            onChange={debounce(this.handleSearch, 400)}
+            value={this.state.keyword}
+            onChange={this.handleSearch}
           />
           <ul className="search-list">
             {list.map((item, index) => {
               let component = _.get(item, 'component');
+              let content = _.get(item, 'content');
               let title = _.get(item, ['_highlightResult', 'title', 'value']);
               title = `${component} > ${title.replace(/`/ig, '')}`;
+              let url = `/components/${component}`;
 
               return (
                 <li key={index}>
 
-                  {title.indexOf('<em>') !== -1 ? (
-                    <a dangerouslySetInnerHTML={{ __html: title }} />
-                  ) : <a>{title}</a>}
+                  {
+                    title.indexOf('<em>') !== -1 ? (
+                      <Link
+                        to={url}
+                        onClick={this.handleClick}
+                        dangerouslySetInnerHTML={{ __html: `${title}<p>${content}</p>` }} />
+                    ) : (
+                        <Link onClick={this.handleClick} to={url}>{title}<p>{content}</p></Link>
+                      )
+                  }
                 </li>
               );
             })}

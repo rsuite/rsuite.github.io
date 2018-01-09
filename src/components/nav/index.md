@@ -1,6 +1,8 @@
-# Nav [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/nav/index.md)
+# Nav 导航 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/nav/index.md)
 
-提供多种形式的导航菜单列表，可以是横向的，也可以是纵向，也可以是一个 `tab` 形式的。包含以下组件：
+提供多种形式的导航菜单列表，可以是横向、纵向布局。
+
+包含以下组件：
 
 - `<Nav>` 导航组件；
 - `<Nav.Item>` 导航选项组件。

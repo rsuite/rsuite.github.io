@@ -1,5 +1,6 @@
-# Alert [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/alert/index.md)
+# Alert 提示框 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/alert/index.md)
 
+用于页面中操作交互后的全局提示信息，悬浮在页面顶部的中间。
 
 - `Alert.info` 信息提醒。
 - `Alert.success` 成功信息提醒。

@@ -1,5 +1,6 @@
-# CheckPicker [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/check-picker/index.md)
+# CheckPicker 多项选择器 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/check-picker/index.md)
 
+用于多项数据选择，支持分组。
 
 - `<CheckPicker>`
 

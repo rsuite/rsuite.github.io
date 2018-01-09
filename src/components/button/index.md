@@ -1,12 +1,12 @@
-# Button [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/button/index.md)
+# Button 按钮 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/button/index.md)
 
+常用的操作按钮，按钮组合，按钮布局。
 
 
 - `<Button>` 是组件中最基础的元素，可以快速创建一个带样式的按钮。
 - `<IconButton>` 图标按钮组件。
 - `<ButtonGroup>` 按钮组控件，可以把一组按钮放在一起，并统一控制布局。
 - `<ButtonToolbar>` 按钮工具栏控件。
-
 
 
 ## 获取组件

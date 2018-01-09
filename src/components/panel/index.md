@@ -1,6 +1,6 @@
-# Panel [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/panel/index.md)
-面板
+# Panel 面板 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/panel/index.md)
 
+一个可以折叠/展开的内容面板。
 
 ## 演示
 

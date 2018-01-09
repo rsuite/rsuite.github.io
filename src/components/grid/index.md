@@ -1,8 +1,12 @@
-# Grid [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/grid/index.md)
-网格系统，包含下面组件：
-* `<Grid>`
-* `<Row>`
-* `<Col>`
+# Grid 网格 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/grid/index.md)
+
+一组用于网格布局的组件。
+
+包含下面组件：
+
+-  `<Grid>`
+-  `<Row>`
+- `<Col>`
 
 ## 演示
 

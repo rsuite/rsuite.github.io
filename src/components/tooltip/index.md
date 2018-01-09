@@ -1,4 +1,6 @@
-# Tooltip [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/tooltip/index.md)
+# Tooltip 文字提示 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/tooltip/index.md)
+
+用于辅助的文字提示，可代替 HTML 元素默认的 title 属性。
 
 - `<Tooltip>` 文字提示。
 - `<Whisper>` 监听触发器，包裹被监听对象的外面，触发事件后通知到 `<Tooltip>` 展示出来。

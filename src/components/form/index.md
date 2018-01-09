@@ -1,4 +1,7 @@
-# Form [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/form/index.md)
+# Form 表单 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/form/index.md)
+
+一组处理表单的组件和方法。
+
 
 表单基础控件
 

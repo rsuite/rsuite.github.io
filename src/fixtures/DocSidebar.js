@@ -55,7 +55,7 @@ class DocSidebar extends React.Component {
         const active = this.context.router.isActive({ pathname });
         const nav = (
           <Nav.Item key={index} componentClass={Link} to={pathname} active={active}>
-            {child.name}
+            {child.name} <span className="title-zh">{child.title}</span>
           </Nav.Item>
         );
         nodeItems.push(nav);

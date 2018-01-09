@@ -1,4 +1,6 @@
-# Toggle [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/toggle/index.md)
+# Toggle 开关 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/toggle/index.md)
+
+开关选择器，用于两个值之间的选择。
 
 `<Toggle>` 开关组件
 

@@ -1,9 +1,13 @@
-# Modal [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/modal/index.md)
-模态框对话框。包含下面组件：
-* `<Modal.Header>`
-* `<Modal.Title>`
-*  `<Modal.Body>`
-* `<Modal.Footer>`
+# Modal 模态框 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/modal/index.md)
+
+一套模态对话框组件，用于消息提示、确认消息和提交内容。 如果需要放置更多内容可以使用 Drawer。
+
+模态框，包含下面组件:
+
+- `<Modal.Header>`
+- `<Modal.Title>`
+- `<Modal.Body>`
+- `<Modal.Footer>`
 
 ## 演示
 

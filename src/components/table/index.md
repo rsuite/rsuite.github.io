@@ -1,5 +1,6 @@
-# Table [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/table/index.md)
-表格组件
+# Table 表格 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/table/index.md)
+
+用于数据以表格的方式展示。
 
 
 - `<Table>` 表格组件
@@ -12,7 +13,7 @@
 ## 获取组件
 
 ```js
-import { Table } from '../../rsuiteSource';
+import { Table } from 'rsuite';
 // or import Table from 'rsuite/lib/Table'
 
 const { Column, HeaderCell, Cell, Pagination } = Table;

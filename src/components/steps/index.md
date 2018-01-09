@@ -1,5 +1,6 @@
-# Steps [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/steps/index.md)
+# Steps 步骤条 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/steps/index.md)
 
+引导用户按照流程完成任务的导航条。
 
 ## 演示
 

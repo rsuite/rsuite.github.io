@@ -1,5 +1,6 @@
-# Message [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/message/index.md)
+# Message 消息框 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/message/index.md)
 
+用于页面中展示重要的提示信息。
 
 - `<Message>` 消息框
 
