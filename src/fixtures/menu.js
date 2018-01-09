@@ -2,10 +2,14 @@ import React from 'react';
 import { Icon, IconButton, Button } from '../rsuiteSource';
 import { guide, component, tools } from './SvgIcons';
 
+const svgStyle = {
+  width: 22
+};
+
 export default [{
   id: 'getting-started',
   name: '新手指南',
-  icon: (<Icon icon={guide} width={22} />),
+  icon: (<Icon icon={guide} svgStyle={svgStyle} />),
   children: [
     {
       id: 'installation',
@@ -35,7 +39,7 @@ export default [{
 }, {
   id: 'components',
   name: '组件',
-  icon: (<Icon icon={component} width={22} />),
+  icon: (<Icon icon={component} svgStyle={svgStyle} />),
   children: [{
     id: 'overview',
     name: 'Overview',
@@ -123,6 +127,10 @@ export default [{
     name: 'Navbar *',
     title: '导航栏'
   }, {
+    id: 'nav-menu',
+    name: 'NavMenu *',
+    title: '菜单'
+  }, {
     id: 'notification',
     name: 'Notification *',
     title: '信息通知框'
@@ -150,7 +158,7 @@ export default [{
     id: 'steps',
     name: 'Steps',
     title: '步骤条'
-  },{
+  }, {
     id: 'select-picker',
     name: 'SelectPicker',
     title: '单项选择器'
@@ -185,7 +193,7 @@ export default [{
 }, {
   id: 'tools',
   name: '工具',
-  icon: (<Icon icon={tools} width={22} />),
+  icon: (<Icon icon={tools} svgStyle={svgStyle} />),
   children: [{
     id: 'palette',
     name: '调色盘'

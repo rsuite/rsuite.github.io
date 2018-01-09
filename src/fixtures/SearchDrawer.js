@@ -26,7 +26,6 @@ class SearchDrawer extends Component {
       return;
     }
     this.index.search({ query, hitsPerPage: 6 }, (err, res) => {
-      console.log(res, 'res');
       this.setState({
         list: get(res, 'hits') || []
       });

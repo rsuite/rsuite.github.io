@@ -1,16 +1,10 @@
-### Inverse
+### 默认
 
 <!--start-code-->
 ```js
 const instance = (
-  <Navbar inverse>
-    <Navbar.Header>
-      <Navbar.Brand>
-        <a href="#">RSUITE</a>
-      </Navbar.Brand>
-      <Navbar.Toggle />
-    </Navbar.Header>
-    <Navbar.Collapse>
+  <NavMenu>
+    <NavMenu.Collapse>
       <Nav>
         <Nav.Item active>Item A</Nav.Item>
         <Nav.Item>Item B</Nav.Item>
@@ -23,11 +17,9 @@ const instance = (
           <Nav.Item>Item E-4</Nav.Item>
         </Nav.Dropdown>
       </Nav>
-      <Nav pullRight>
-        <Nav.Item>Link Right</Nav.Item>
-      </Nav>
-    </Navbar.Collapse>
-  </Navbar>
+    </NavMenu.Collapse>
+    <NavMenu.Toggle />
+  </NavMenu>
 );
 ReactDOM.render(instance);
 ```

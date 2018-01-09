@@ -25,4 +25,4 @@
 | fixedWidth     | boolean                                        |        | 因为有很多图标尺寸参差不齐,固定图标宽度 |
 | spin           | boolean                                        |        | 动态旋转图标                           |
 | pulse          | boolean                                        |        | 动态旋转图标，旋转8步                  |
-| svgStyle       | Object                                         |        | 当                                     |
+| svgStyle       | Object                                         |        | 当使用自定义 svg Icon, 设置 svg 的样式                                     |

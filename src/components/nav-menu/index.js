@@ -1,20 +1,13 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Nav, Button, Icon } from '../../rsuiteSource';
+import { NavMenu, Nav, Button, Icon } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
   require('./appearance.md'),
-  require('./active.md'),
-  require('./disabled.md'),
-  require('./vertical.md'),
-  require('./reversed.md'),
-  require('./justified.md'),
-  require('./dropdown.md'),
-  require('./icon.md')
+  require('./toggle.md')
 ];
-
 
 export default () => {
   return (
@@ -22,6 +15,7 @@ export default () => {
       dependencies={{
         Icon,
         Button,
+        NavMenu,
         Nav
       }}
       context={context}

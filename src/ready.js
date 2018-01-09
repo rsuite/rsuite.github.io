@@ -22,12 +22,9 @@ const filter = [];
  */
 filter.push(new Promise((resolve, reject) => {
 
-  console.log('--1----')
   if (!isIE) {
     return resolve();
   }
-
-  console.log('---2---');
 
   let count = 0;
   const files = [

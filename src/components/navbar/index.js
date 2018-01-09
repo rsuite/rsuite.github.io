@@ -5,7 +5,7 @@ import { Navbar, Nav, Button, Icon } from '../../rsuiteSource';
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
-  require('./inverse.md')
+  require('./appearance.md')
 ];
 
 export default () => {
