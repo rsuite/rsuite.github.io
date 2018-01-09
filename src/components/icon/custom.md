@@ -11,7 +11,13 @@
  */
 
 const instance = (
-  <Icon icon={IconLogo} style={{width:100}} />
+  <div>
+    <Icon icon={IconLogo} style={{width:100}} />
+    <Icon icon={SvgIcons.guide} style={{width:100}} />
+    <Icon icon={SvgIcons.component} style={{width:100}} />
+    <Icon icon={SvgIcons.tools} style={{width:100}} />
+    <Icon icon={SvgIcons.search} style={{width:100}} />
+  </div>
 );
 ReactDOM.render(instance);
 ```

@@ -3,6 +3,7 @@ import ComponentExample from '../ComponentExample';
 import { Icon, Button } from '../../rsuiteSource';
 
 import IconLogo from '../../../resources/images/logo.svg';
+import * as SvgIcons from '../../fixtures/SvgIcons';
 
 const context = require('./index.md');
 const examples = [
@@ -18,6 +19,7 @@ export default () => {
   return (
     <ComponentExample
       dependencies={{
+        SvgIcons,
         IconLogo,
         Icon,
         Button

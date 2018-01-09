@@ -21,6 +21,11 @@ class TopLevelNav extends React.Component {
   }
   render() {
     const { children } = this.props;
+    const svgStyle = {
+      width: 22,
+      fill: '#fff'
+    };
+
     return (
       <div className="top-level-nav">
         <Link to="/">
@@ -30,19 +35,19 @@ class TopLevelNav extends React.Component {
         <div className="top-level-nav-menu">
 
           <Button className="icon-btn-circle" onClick={this.showSearchDrawer} >
-            <Icon icon={search} width={22} fill="#fff" />
+            <Icon icon={search} svgStyle={svgStyle} />
           </Button>
 
           <Button className="icon-btn-circle" componentClass={Link} to="/getting-started/installation">
-            <Icon icon={guide} width={22} fill="#fff" />
+            <Icon icon={guide} svgStyle={svgStyle} />
           </Button>
 
           <Button className="icon-btn-circle" componentClass={Link} to="/components/overview">
-            <Icon icon={component} width={22} fill="#fff" />
+            <Icon icon={component} svgStyle={svgStyle} />
           </Button>
 
           <Button className="icon-btn-circle" componentClass={Link} to="/tools/palette">
-            <Icon icon={tools} width={22} fill="#fff" />
+            <Icon icon={tools} svgStyle={svgStyle} />
           </Button>
 
           <Button className="icon-btn-circle" href="https://github.com/rsuite/rsuite">

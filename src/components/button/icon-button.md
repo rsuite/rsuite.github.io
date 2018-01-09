@@ -29,6 +29,11 @@ const instance = (
       <IconButton icon="arrow-right" placement="right">Next</IconButton>
     </ButtonToolbar>
 
+
+    <ButtonToolbar>
+      <IconButton icon={SvgIcons.component} >Component</IconButton>
+    </ButtonToolbar>
+
   </div>
 );
 ReactDOM.render(instance);

@@ -1,6 +1,7 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
 import { Button, IconButton, ButtonGroup, ButtonToolbar, Panel, Icon } from '../../rsuiteSource';
+import * as SvgIcons from '../../fixtures/SvgIcons';
 
 const context = require('./index.md');
 const examples = [
@@ -29,6 +30,7 @@ export default () => {
         context={context}
         examples={examples}
         dependencies={{
+          SvgIcons,
           Button,
           IconButton,
           ButtonGroup,
