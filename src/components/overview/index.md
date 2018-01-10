@@ -24,6 +24,9 @@
   - `<Icon>`
 - [Drawer 抽屉](/components/drawer)
   - `<Drawer>`
+  - `<Drawer.Header>`
+  - `<Drawer.Body>`
+  - `<Drawer.Footer>`
 - [Modal 模态框](/components/modal)
   - `<Modal>`
   - `<Modal.Header>`

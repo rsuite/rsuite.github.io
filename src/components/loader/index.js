@@ -9,8 +9,8 @@ const examples = [
   require('./size.md'),
   require('./speed.md'),
   require('./center.md'),
-  require('./inverse.md'),
-  require('./backdrop.md')
+  require('./backdrop.md'),
+  require('./inverse.md')
 ];
 
 export default () => {

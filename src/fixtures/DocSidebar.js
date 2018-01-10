@@ -67,7 +67,7 @@ class DocSidebar extends React.Component {
         <div className="title-wrapper">
           {icon} {activeTitle}
         </div>
-        <Nav className="nav-docs">
+        <Nav className="nav-docs" vertical>
           {nodeItems}
         </Nav>
       </Sidebar>

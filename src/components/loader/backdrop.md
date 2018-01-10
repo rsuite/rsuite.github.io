@@ -5,7 +5,7 @@
 ```js
 const instance = (
   <Paragraph>
-    <Loader backdrop />
+    <Loader backdrop content="loading..." vertical />
   </Paragraph>
 );
 ReactDOM.render(instance);

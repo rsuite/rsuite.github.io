@@ -9,14 +9,15 @@ class PageContainer extends React.Component {
     return (
       <PageProvider>
         <Row  {...props}>
-          <Col md={9} xs={12} sm={12}>
+          <Col md={12} xs={12} sm={12} className="main-container">
             <PageContent>
               {children}
             </PageContent>
           </Col>
-          <Col md={3} xsHidden smHidden>
+          <Col md={2} xsHidden smHidden>
             <PageNav
-              width={200}
+              showOrderNumber={false}
+              width={150}
               scrollBar="left"
               offset={{ top: 60, right: 30 }}
             />

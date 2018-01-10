@@ -38,11 +38,13 @@ Alert.warning(content:string, duration:number, onClose:()=>void)
 Alert.error(content:string, duration:number, onClose:()=>void)
 ```
 
-| Name        | Type     | Default | Description |
-|-------------|----------|---------|-------------|
-| content（必选） | string   |         | 通知内容        |
-| duration    | number   | 1.5     | 消息框持续时间     |
-| onClose     | ()=>void |         | 关闭回调函数      |
+_参数说明_
+
+| 属性名称 | 类型`(默认值)`  | 描述                                              |
+| -------- | --------------- | ------------------------------------------------- |
+| content  | string          | 信息内容                                          |
+| duration | number `(1500)` | 显示的时长，超过时长后自定关闭提示框（单位:毫秒） |
+| onClose  | ()=>void        | 隐藏提示框后的回调函数                            |
 
 
 ### `Alert.config`

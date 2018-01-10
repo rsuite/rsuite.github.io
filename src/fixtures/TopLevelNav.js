@@ -32,7 +32,6 @@ class TopLevelNav extends React.Component {
   render() {
     const { children } = this.props;
     const svgStyle = {
-      width: 22,
       fill: '#fff'
     };
 
@@ -45,23 +44,23 @@ class TopLevelNav extends React.Component {
         <div className="top-level-nav-menu">
 
           <WithTooltipButton tip="搜索" className="icon-btn-circle" onClick={this.showSearchDrawer} >
-            <Icon icon={search} svgStyle={svgStyle} />
+            <Icon icon={search} svgStyle={svgStyle} size="lg" />
           </WithTooltipButton>
 
           <WithTooltipButton tip="新手指南" className="icon-btn-circle" componentClass={Link} to="/getting-started/installation">
-            <Icon icon={guide} svgStyle={svgStyle} />
+            <Icon icon={guide} svgStyle={svgStyle} size="lg" />
           </WithTooltipButton>
 
           <WithTooltipButton tip="组件" className="icon-btn-circle" componentClass={Link} to="/components/overview">
-            <Icon icon={component} svgStyle={svgStyle} />
+            <Icon icon={component} svgStyle={svgStyle} size="lg" />
           </WithTooltipButton>
 
           <WithTooltipButton tip="工具" className="icon-btn-circle" componentClass={Link} to="/tools/palette">
-            <Icon icon={tools} svgStyle={svgStyle} />
+            <Icon icon={tools} svgStyle={svgStyle} size="lg" />
           </WithTooltipButton>
 
           <WithTooltipButton tip="GitHub" className="icon-btn-circle" href="https://github.com/rsuite/rsuite">
-            <Icon icon="github" />
+            <Icon icon="github" size="lg" />
           </WithTooltipButton>
         </div>
         {children}

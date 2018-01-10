@@ -34,8 +34,8 @@ const instance = (
         <Dropdown.Item><Icon icon="folder"/> Move to folder</Dropdown.Item>
         <Dropdown.Item><Icon icon="trash"/> Move to trash</Dropdown.Item>
         <Dropdown.Item divider />
-        <Dropdown.Menu title="Publish to Web">
-          <Dropdown.Menu title="Google">
+        <Dropdown.Menu title="Publish to Web" pullLeft>
+          <Dropdown.Menu title="Google" pullLeft>
             <Dropdown.Item>Google Docs</Dropdown.Item>
             <Dropdown.Item>Google Drive</Dropdown.Item>
           </Dropdown.Menu>

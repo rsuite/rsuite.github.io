@@ -17,6 +17,9 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+.main-container{
+  padding-right: 180px;
+}
 
 .brand-wrapper {
   padding: 20px 0;
@@ -235,6 +238,9 @@
       border-radius: 4px;
     }
   }
+  h3 code{
+    font-size: 18px !important;
+  }
   h2 {
     font-size: 18px;
     margin-top: 40px;
@@ -247,6 +253,7 @@
   }
   ol, ul {
     padding: 10px 20px;
+    list-style-type: circle;
     li {
       line-height: 26px;
     }
@@ -254,7 +261,9 @@
   table {
     width: 100%;
     td, th {
-      border: 1px dashed #f1f1f1;
+      background: none;
+      border-style: none;
+      border-bottom: 1px dashed #f1f1f1;
       padding: 10px;
     }
   }
@@ -265,8 +274,14 @@ pre {
   border-radius: 0;
 }
 
-code {
-  background: none;
+code:not(.doc-highlight) {
+  font-size: 87.5%;
+  color: #777;
+  background-color: #f5f5f5;
+  border-radius: 3px;
+  white-space: pre;
+  margin: 2px;
+  padding: 2px 6px;
 }
 
 .code-view .btn-toolbar + .btn-toolbar {

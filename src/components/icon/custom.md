@@ -6,17 +6,18 @@
 ```js
 
 /**
+ * import * as SvgIcons from '../../fixtures/SvgIcons'
  * import IconLogo from '../../../resources/images/logo.svg';
- * IconLogo 是 import 的外部资源。
+ * IconLogo, SvgIcons 是 import 的外部资源。
  */
 
 const instance = (
-  <div>
-    <Icon icon={IconLogo} style={{width:100}} />
-    <Icon icon={SvgIcons.guide} style={{width:100}} />
-    <Icon icon={SvgIcons.component} style={{width:100}} />
-    <Icon icon={SvgIcons.tools} style={{width:100}} />
-    <Icon icon={SvgIcons.search} style={{width:100}} />
+  <div className='icon-example-list'>
+    <Icon icon={IconLogo} size="lg"/>
+    <Icon icon={SvgIcons.guide} size="lg" />
+    <Icon icon={SvgIcons.component} size="lg" />
+    <Icon icon={SvgIcons.tools}  size="lg" />
+    <Icon icon={SvgIcons.search}  size="lg" />
   </div>
 );
 ReactDOM.render(instance);
