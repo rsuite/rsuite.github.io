@@ -5,7 +5,7 @@
 <!--start-code-->
 ```js
 const instance = (
-  <div>
+  <ButtonToolbar>
     <Dropdown title="Disabled" disabled>
         <Dropdown.Item >Item A</Dropdown.Item>
         <Dropdown.Item >Item B</Dropdown.Item>
@@ -16,7 +16,7 @@ const instance = (
         <Dropdown.Item disabled>Item B</Dropdown.Item>
         <Dropdown.Item >Item C</Dropdown.Item>
     </Dropdown>
-  </div>
+  </ButtonToolbar>
 );
 ReactDOM.render(instance);
 ```

@@ -3,7 +3,7 @@
 <!--start-code-->
 ```js
 const instance = (
-   <div>
+   <ButtonToolbar>
     <Dropdown title="Default" activeKey="a">
       <Dropdown.Item eventKey="a">Item A</Dropdown.Item>
       <Dropdown.Item eventKey="b">Item B</Dropdown.Item>
@@ -21,7 +21,7 @@ const instance = (
         <Dropdown.Item eventKey="e-2">Item E-2</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
-   </div>
+   </ButtonToolbar>
 );
 ReactDOM.render(instance);
 ```

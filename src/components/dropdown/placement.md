@@ -12,7 +12,7 @@ const items=[
 
 const instance = (
   <div>
-    <div>
+    <ButtonToolbar>
       <Dropdown title="TopLeft" placement="topLeft">
         {items}
       </Dropdown>
@@ -24,9 +24,9 @@ const instance = (
       <Dropdown title="TopRight" placement="topRight">
         {items}
       </Dropdown>
-    </div>
+    </ButtonToolbar>
 
-    <div>
+    <ButtonToolbar>
       <Dropdown title="BottomLeft" placement="bottomLeft">
         {items}
       </Dropdown>
@@ -38,7 +38,7 @@ const instance = (
       <Dropdown title="BottomRight" placement="bottomRight">
         {items}
       </Dropdown>
-    </div>
+    </ButtonToolbar>
   </div>
 );
 ReactDOM.render(instance);
