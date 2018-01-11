@@ -5,7 +5,7 @@
 const instance = (
   <div style={{height:100}}>
     <Popover title="Title" style={{opacity:1}}>
-      <p>This is a <code>Popover</code> </p>
+      <p>This is a defalut Popover </p>
       <p>Content</p>
     </Popover>
   </div>

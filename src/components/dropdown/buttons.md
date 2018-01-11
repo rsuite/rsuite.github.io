@@ -14,8 +14,8 @@ const instance = (
           return <IconButton icon="angle-double-down" />
         }}
       >
-        <Dropdown.Item ><Icon icon="save" /> Save as...</Dropdown.Item>
-        <Dropdown.Item ><Icon icon="save" /> Save & New</Dropdown.Item>
+        <Dropdown.Item icon="save" >Save as...</Dropdown.Item>
+        <Dropdown.Item icon="save">Save & New</Dropdown.Item>
       </Dropdown>
     </ButtonGroup>
 
@@ -24,8 +24,12 @@ const instance = (
         return <IconButton icon="plus" placement="left"> New</IconButton>
       }}
     >
-        <Dropdown.Item ><Icon icon="user" /> New User</Dropdown.Item>
-        <Dropdown.Item ><Icon icon="group" /> New Group</Dropdown.Item>
+        <Dropdown.Item icon="user" >New User</Dropdown.Item>
+        <Dropdown.Item icon="group" >New Group</Dropdown.Item>
+        <Dropdown.Menu icon="group" title="More">
+          <Dropdown.Item icon="user" >New User</Dropdown.Item>
+          <Dropdown.Item icon="group" >New Group</Dropdown.Item>
+        </Dropdown.Menu>
     </Dropdown>
   </ButtonToolbar>
 );
