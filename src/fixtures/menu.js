@@ -9,7 +9,7 @@ const svgStyle = {
 export default [{
   id: 'getting-started',
   name: '新手指南',
-  icon: (<Icon icon={guide} svgStyle={svgStyle} />),
+  icon: (<Icon icon={guide} svgStyle={svgStyle} size="3x" />),
   children: [
     {
       id: 'installation',
@@ -39,7 +39,7 @@ export default [{
 }, {
   id: 'components',
   name: '组件',
-  icon: (<Icon icon={component} svgStyle={svgStyle} />),
+  icon: (<Icon icon={component} svgStyle={svgStyle} size="3x" />),
   children: [{
     id: 'overview',
     name: 'Overview',

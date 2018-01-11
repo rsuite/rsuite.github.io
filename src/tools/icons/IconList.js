@@ -1,6 +1,5 @@
 import React from 'react';
-import { FormControl, Icon } from '../../rsuiteSource';
-import NotificationSystem from 'react-notification-system';
+import { FormControl, Icon, Alert } from '../../rsuiteSource';
 import IconItem from './IconItem';
 import PageContainer from '../../components/PageContainer';
 
@@ -29,12 +28,7 @@ class IconList extends React.Component {
   }
   handleCopy = (text, result) => {
     const message = result ? '复制成功' : '复制失败，浏览器不支持此功能';
-    this._notificationSystem.addNotification({
-      message,
-      autoDismiss: 1.5,
-      position: 'tc',
-      level: 'success'
-    });
+    Alert.success(message);
   }
 
   handleSearch = (key) => {
@@ -86,7 +80,6 @@ class IconList extends React.Component {
         <div className="row icon-item-list">
           {icons.length > 0 ? this.renderIcon(icons) : <NoneDom />}
         </div>
-        <NotificationSystem ref={ref => this._notificationSystem = ref} />
       </PageContainer>
     );
   }

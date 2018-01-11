@@ -1,10 +1,20 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { ButtonToolbar, Button, IconButton, Drawer, Icon, RadioGroup, Radio } from '../../rsuiteSource';
+import {
+  ButtonToolbar,
+  Button,
+  IconButton,
+  Toggle,
+  Drawer,
+  Icon,
+  RadioGroup,
+  Radio
+} from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
+  require('./backdrop.md'),
   require('./placement.md'),
   require('./size.md'),
   require('./full.md'),
@@ -15,6 +25,7 @@ export default () => {
   return (
     <ComponentExample
       dependencies={{
+        Toggle,
         ButtonToolbar,
         IconButton,
         Button,

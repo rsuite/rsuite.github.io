@@ -5,6 +5,7 @@ import { ButtonToolbar, Button, Modal, Icon, Toggle } from '../../rsuiteSource';
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
+  require('./backdrop.md'),
   require('./size.md'),
   require('./full.md'),
   require('./overflow.md')

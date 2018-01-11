@@ -34,7 +34,7 @@
   - `<Modal.Footer>`
 
 
-## 数据输入
+## 数据录入
 
 - Form
 - FormGroup

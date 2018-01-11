@@ -12,41 +12,38 @@
 const instance = (
   <div>
     <Nav>
-      <Nav.Item>Item A</Nav.Item>
-      <Nav.Item>Item B</Nav.Item>
-      <Nav.Item>Item C</Nav.Item>
-      <Nav.Item>Item D</Nav.Item>
-      <Nav.Dropdown title="Item E">
-        <Nav.Item>Item E-1</Nav.Item>
-        <Nav.Item>Item E-2</Nav.Item>
-        <Nav.Item>Item E-3</Nav.Item>
-        <Nav.Item>Item E-4</Nav.Item>
+      <Nav.Item icon="home" >Home</Nav.Item>
+      <Nav.Item>News</Nav.Item>
+      <Nav.Item>Solutions</Nav.Item>
+      <Nav.Item>Products</Nav.Item>
+      <Nav.Dropdown title="About">
+        <Nav.Item>Contact us</Nav.Item>
+        <Nav.Item>Team</Nav.Item>
+        <Nav.Item>Blog</Nav.Item>
       </Nav.Dropdown>
     </Nav>
 
     <Nav appearance="tabs">
-      <Nav.Item>Item A</Nav.Item>
-      <Nav.Item>Item B</Nav.Item>
-      <Nav.Item>Item C</Nav.Item>
-      <Nav.Item>Item D</Nav.Item>
-      <Nav.Dropdown title="Item E">
-        <Nav.Item>Item E-1</Nav.Item>
-        <Nav.Item>Item E-2</Nav.Item>
-        <Nav.Item>Item E-3</Nav.Item>
-        <Nav.Item>Item E-4</Nav.Item>
+      <Nav.Item icon="home" >Home</Nav.Item>
+      <Nav.Item>News</Nav.Item>
+      <Nav.Item>Solutions</Nav.Item>
+      <Nav.Item>Products</Nav.Item>
+      <Nav.Dropdown title="About">
+        <Nav.Item>Contact us</Nav.Item>
+        <Nav.Item>Team</Nav.Item>
+        <Nav.Item>Blog</Nav.Item>
       </Nav.Dropdown>
     </Nav>
 
     <Nav appearance="subtle">
-      <Nav.Item>Item A</Nav.Item>
-      <Nav.Item>Item B</Nav.Item>
-      <Nav.Item>Item C</Nav.Item>
-      <Nav.Item>Item D</Nav.Item>
-      <Nav.Dropdown title="Item E">
-        <Nav.Item>Item E-1</Nav.Item>
-        <Nav.Item>Item E-2</Nav.Item>
-        <Nav.Item>Item E-3</Nav.Item>
-        <Nav.Item>Item E-4</Nav.Item>
+      <Nav.Item icon="home" >Home</Nav.Item>
+      <Nav.Item>News</Nav.Item>
+      <Nav.Item>Solutions</Nav.Item>
+      <Nav.Item>Products</Nav.Item>
+      <Nav.Dropdown title="About">
+        <Nav.Item>Contact us</Nav.Item>
+        <Nav.Item>Team</Nav.Item>
+        <Nav.Item>Blog</Nav.Item>
       </Nav.Dropdown>
     </Nav>
   </div>
