@@ -5,42 +5,27 @@
 const instance = (
   <div>
     <Nav justified>
-      <Nav.Item>Item A</Nav.Item>
-      <Nav.Item>Item B</Nav.Item>
-      <Nav.Item>Item C</Nav.Item>
-      <Nav.Item>Item D</Nav.Item>
-      <Nav.Dropdown title="Item E">
-        <Nav.Item>Item E-1</Nav.Item>
-        <Nav.Item>Item E-2</Nav.Item>
-        <Nav.Item>Item E-3</Nav.Item>
-        <Nav.Item>Item E-4</Nav.Item>
-      </Nav.Dropdown>
+      <Nav.Item icon="home" >Home</Nav.Item>
+      <Nav.Item>News</Nav.Item>
+      <Nav.Item>Solutions</Nav.Item>
+      <Nav.Item>Products</Nav.Item>
+      <Nav.Item>About</Nav.Item>
     </Nav>
 
     <Nav appearance="tabs" justified>
-      <Nav.Item >Item A</Nav.Item>
-      <Nav.Item>Item B</Nav.Item>
-      <Nav.Item>Item C</Nav.Item>
-      <Nav.Item>Item D</Nav.Item>
-      <Nav.Dropdown title="Item E">
-        <Nav.Item>Item E-1</Nav.Item>
-        <Nav.Item>Item E-2</Nav.Item>
-        <Nav.Item>Item E-3</Nav.Item>
-        <Nav.Item>Item E-4</Nav.Item>
-      </Nav.Dropdown>
+      <Nav.Item icon="home" >Home</Nav.Item>
+      <Nav.Item>News</Nav.Item>
+      <Nav.Item>Solutions</Nav.Item>
+      <Nav.Item>Products</Nav.Item>
+      <Nav.Item>About</Nav.Item>
     </Nav>
 
     <Nav appearance="subtle" justified>
-      <Nav.Item >Item A</Nav.Item>
-      <Nav.Item>Item B</Nav.Item>
-      <Nav.Item>Item C</Nav.Item>
-      <Nav.Item>Item D</Nav.Item>
-      <Nav.Dropdown title="Item E">
-        <Nav.Item>Item E-1</Nav.Item>
-        <Nav.Item>Item E-2</Nav.Item>
-        <Nav.Item>Item E-3</Nav.Item>
-        <Nav.Item>Item E-4</Nav.Item>
-      </Nav.Dropdown>
+      <Nav.Item icon="home" >Home</Nav.Item>
+      <Nav.Item>News</Nav.Item>
+      <Nav.Item>Solutions</Nav.Item>
+      <Nav.Item>Products</Nav.Item>
+      <Nav.Item>About</Nav.Item>
     </Nav>
   </div>
 );

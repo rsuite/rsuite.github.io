@@ -8,11 +8,7 @@ const instance = (
     <Nav.Item>News</Nav.Item>
     <Nav.Item>Solutions</Nav.Item>
     <Nav.Item>Products</Nav.Item>
-    <Nav.Dropdown title="About">
-      <Nav.Item>Contact us</Nav.Item>
-      <Nav.Item>Team</Nav.Item>
-      <Nav.Item>Blog</Nav.Item>
-    </Nav.Dropdown>
+    <Nav.Item>About</Nav.Item>
   </Nav>
 );
 ReactDOM.render(instance);

@@ -11,7 +11,7 @@
 
 
 ```js
-import { Nav } from 'rsuite';
+import { Nav, Dropdown } from 'rsuite';
 ```
 
 

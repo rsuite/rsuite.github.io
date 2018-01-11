@@ -16,11 +16,7 @@ const instance = (
       <Nav.Item>News</Nav.Item>
       <Nav.Item>Solutions</Nav.Item>
       <Nav.Item>Products</Nav.Item>
-      <Nav.Dropdown title="About">
-        <Nav.Item>Contact us</Nav.Item>
-        <Nav.Item>Team</Nav.Item>
-        <Nav.Item>Blog</Nav.Item>
-      </Nav.Dropdown>
+      <Nav.Item>About</Nav.Item>
     </Nav>
 
     <Nav appearance="tabs">
@@ -28,11 +24,7 @@ const instance = (
       <Nav.Item>News</Nav.Item>
       <Nav.Item>Solutions</Nav.Item>
       <Nav.Item>Products</Nav.Item>
-      <Nav.Dropdown title="About">
-        <Nav.Item>Contact us</Nav.Item>
-        <Nav.Item>Team</Nav.Item>
-        <Nav.Item>Blog</Nav.Item>
-      </Nav.Dropdown>
+      <Nav.Item>About</Nav.Item>
     </Nav>
 
     <Nav appearance="subtle">
@@ -40,11 +32,7 @@ const instance = (
       <Nav.Item>News</Nav.Item>
       <Nav.Item>Solutions</Nav.Item>
       <Nav.Item>Products</Nav.Item>
-      <Nav.Dropdown title="About">
-        <Nav.Item>Contact us</Nav.Item>
-        <Nav.Item>Team</Nav.Item>
-        <Nav.Item>Blog</Nav.Item>
-      </Nav.Dropdown>
+      <Nav.Item>About</Nav.Item>
     </Nav>
   </div>
 );

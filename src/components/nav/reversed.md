@@ -7,55 +7,35 @@
 const instance = (
   <div>
     <Nav appearance="tabs" reversed>
-      <Nav.Item >Item A</Nav.Item>
-      <Nav.Item>Item B</Nav.Item>
-      <Nav.Item>Item C</Nav.Item>
-      <Nav.Item>Item D</Nav.Item>
-      <Nav.Dropdown title="Item E">
-        <Nav.Item>Item E-1</Nav.Item>
-        <Nav.Item>Item E-2</Nav.Item>
-        <Nav.Item>Item E-3</Nav.Item>
-        <Nav.Item>Item E-4</Nav.Item>
-      </Nav.Dropdown>
+      <Nav.Item icon="home" >Home</Nav.Item>
+      <Nav.Item>News</Nav.Item>
+      <Nav.Item>Solutions</Nav.Item>
+      <Nav.Item>Products</Nav.Item>
+      <Nav.Item>About</Nav.Item>
     </Nav>
 
     <Nav appearance="subtle" reversed>
-      <Nav.Item>Item A</Nav.Item>
-      <Nav.Item>Item B</Nav.Item>
-      <Nav.Item>Item C</Nav.Item>
-      <Nav.Item>Item D</Nav.Item>
-      <Nav.Dropdown title="Item E">
-        <Nav.Item>Item E-1</Nav.Item>
-        <Nav.Item>Item E-2</Nav.Item>
-        <Nav.Item>Item E-3</Nav.Item>
-        <Nav.Item>Item E-4</Nav.Item>
-      </Nav.Dropdown>
+      <Nav.Item icon="home" >Home</Nav.Item>
+      <Nav.Item>News</Nav.Item>
+      <Nav.Item>Solutions</Nav.Item>
+      <Nav.Item>Products</Nav.Item>
+      <Nav.Item>About</Nav.Item>
     </Nav>
 
     <Nav appearance="tabs" vertical reversed>
-      <Nav.Item >Item A</Nav.Item>
-      <Nav.Item>Item B</Nav.Item>
-      <Nav.Item>Item C</Nav.Item>
-      <Nav.Item>Item D</Nav.Item>
-      <Nav.Dropdown title="Item E">
-        <Nav.Item>Item E-1</Nav.Item>
-        <Nav.Item>Item E-2</Nav.Item>
-        <Nav.Item>Item E-3</Nav.Item>
-        <Nav.Item>Item E-4</Nav.Item>
-      </Nav.Dropdown>
+      <Nav.Item icon="home" >Home</Nav.Item>
+      <Nav.Item>News</Nav.Item>
+      <Nav.Item>Solutions</Nav.Item>
+      <Nav.Item>Products</Nav.Item>
+      <Nav.Item>About</Nav.Item>
     </Nav>
 
     <Nav appearance="subtle" vertical reversed>
-      <Nav.Item>Item A</Nav.Item>
-      <Nav.Item>Item B</Nav.Item>
-      <Nav.Item>Item C</Nav.Item>
-      <Nav.Item>Item D</Nav.Item>
-      <Nav.Dropdown title="Item E">
-        <Nav.Item>Item E-1</Nav.Item>
-        <Nav.Item>Item E-2</Nav.Item>
-        <Nav.Item>Item E-3</Nav.Item>
-        <Nav.Item>Item E-4</Nav.Item>
-      </Nav.Dropdown>
+      <Nav.Item icon="home" >Home</Nav.Item>
+      <Nav.Item>News</Nav.Item>
+      <Nav.Item>Solutions</Nav.Item>
+      <Nav.Item>Products</Nav.Item>
+      <Nav.Item>About</Nav.Item>
     </Nav>
   </div>
 );

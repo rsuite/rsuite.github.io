@@ -4,42 +4,30 @@
 ```js
 
 const items=[
-  <Dropdown.Item key={1}>Item A</Dropdown.Item>,
-  <Dropdown.Item key={2}>Item B</Dropdown.Item>,
-  <Dropdown.Item key={3}>Item C</Dropdown.Item>,
-  <Dropdown.Item key={4}>Item D</Dropdown.Item>,
+  <Dropdown.Item key={1}>New File</Dropdown.Item>,
+  <Dropdown.Item key={2}>New File with Current Profile</Dropdown.Item>,
+  <Dropdown.Item key={3}>Download As...</Dropdown.Item>,
+  <Dropdown.Item key={4}>Export PDF</Dropdown.Item>,
+  <Dropdown.Item key={5}>Export HTML</Dropdown.Item>,
+  <Dropdown.Item key={6}>Settings</Dropdown.Item>,
+  <Dropdown.Item key={7}>About</Dropdown.Item>,
 ];
 
 const instance = (
-  <div>
-    <ButtonToolbar>
-      <Dropdown title="TopLeft" placement="topLeft">
-        {items}
-      </Dropdown>
-
-      <Dropdown title="TopCenter" placement="topCenter">
-        {items}
-      </Dropdown>
-
-      <Dropdown title="TopRight" placement="topRight">
-        {items}
-      </Dropdown>
-    </ButtonToolbar>
-
-    <ButtonToolbar>
-      <Dropdown title="BottomLeft" placement="bottomLeft">
-        {items}
-      </Dropdown>
-
-      <Dropdown title="BottomCenter" placement="bottomCenter">
-        {items}
-      </Dropdown>
-
-      <Dropdown title="BottomRight" placement="bottomRight">
-        {items}
-      </Dropdown>
-    </ButtonToolbar>
-  </div>
+  <ButtonToolbar>
+    <Dropdown title="TopLeft" placement="topLeft">
+      {items}
+    </Dropdown>
+    <Dropdown title="TopRight" placement="topRight">
+      {items}
+    </Dropdown>
+    <Dropdown title="BottomLeft" placement="bottomLeft">
+      {items}
+    </Dropdown>
+    <Dropdown title="BottomRight" placement="bottomRight">
+      {items}
+    </Dropdown>
+  </ButtonToolbar>
 );
 ReactDOM.render(instance);
 ```
