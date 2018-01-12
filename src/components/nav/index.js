@@ -7,8 +7,7 @@ const examples = [
   require('./basic.md'),
   require('./appearance.md'),
   require('./vertical.md'),
-  require('./active.md'),
-  require('./disabled.md'),
+  require('./status.md'),
   require('./justified.md'),
   require('./dropdown.md'),
   require('./icon.md')

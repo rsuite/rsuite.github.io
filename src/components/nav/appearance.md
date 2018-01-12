@@ -46,12 +46,14 @@ class Demo extends React.Component{
         />
 
         <br />
+        <br />
         <CustomNav
           appearance="tabs"
           active={active}
           onSelect={this.handleSelect}
         />
 
+        <br />
         <br />
         <CustomNav
           appearance="tabs"
@@ -61,12 +63,14 @@ class Demo extends React.Component{
         />
 
         <br />
+        <br />
         <CustomNav
           appearance="subtle"
           active={active}
           onSelect={this.handleSelect}
         />
 
+        <br />
         <br />
         <CustomNav
           appearance="subtle"
