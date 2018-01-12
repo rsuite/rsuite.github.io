@@ -1,4 +1,4 @@
-/*! Last update: Tue Dec 26 2017 18:16:44 GMT+0800 (CST) */
+/*! Last update: Sat Jan 13 2018 07:15:18 GMT+0800 (CST) */
 /* BASICS */
 
 .CodeMirror {
@@ -271,7 +271,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #a22;}
 .CodeMirror-linewidget {
   position: relative;
   z-index: 2;
-  padding: 0.1px; /* Force widget margins to stay inside of the container */
+  overflow: auto;
 }
 
 .CodeMirror-widget {}
