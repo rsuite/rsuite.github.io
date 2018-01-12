@@ -12,10 +12,14 @@
 <!--start-code-->
 ```js
 
+const styles = {
+  marginBottom:50
+};
+
 const CustomNav = ({active, onSelect, ...props})=>{
 
   return (
-    <Nav {...props} activeKey={active} onSelect={onSelect}>
+    <Nav {...props} activeKey={active} onSelect={onSelect} style={styles}>
       <Nav.Item eventKey="home" icon={<Icon icon="home" />}  >Home</Nav.Item>
       <Nav.Item eventKey="news" >News</Nav.Item>
       <Nav.Item eventKey="solutions" >Solutions</Nav.Item>
@@ -45,16 +49,12 @@ class Demo extends React.Component{
           onSelect={this.handleSelect}
         />
 
-        <br />
-        <br />
         <CustomNav
           appearance="tabs"
           active={active}
           onSelect={this.handleSelect}
         />
 
-        <br />
-        <br />
         <CustomNav
           appearance="tabs"
           reversed
@@ -62,16 +62,12 @@ class Demo extends React.Component{
           onSelect={this.handleSelect}
         />
 
-        <br />
-        <br />
         <CustomNav
           appearance="subtle"
           active={active}
           onSelect={this.handleSelect}
         />
 
-        <br />
-        <br />
         <CustomNav
           appearance="subtle"
           reversed
