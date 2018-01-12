@@ -2,33 +2,79 @@
 
 <!--start-code-->
 ```js
-const instance = (
-  <div>
-    <Nav vertical>
-      <Nav.Item icon={<Icon icon="home" />}  >Home</Nav.Item>
-      <Nav.Item>News</Nav.Item>
-      <Nav.Item>Solutions</Nav.Item>
-      <Nav.Item>Products</Nav.Item>
-      <Nav.Item>About</Nav.Item>
-    </Nav>
+const styles = { width:100 };
 
-    <Nav appearance="tabs" vertical>
-      <Nav.Item icon={<Icon icon="home" />}  >Home</Nav.Item>
-      <Nav.Item>News</Nav.Item>
-      <Nav.Item>Solutions</Nav.Item>
-      <Nav.Item>Products</Nav.Item>
-      <Nav.Item>About</Nav.Item>
+const CustomNav = ({active, onSelect, ...props})=>{
+  return (
+    <Nav {...props} vertical activeKey={active} onSelect={onSelect}>
+      <Nav.Item eventKey="home" icon={<Icon icon="home" />}  >Home</Nav.Item>
+      <Nav.Item eventKey="news" >News</Nav.Item>
+      <Nav.Item eventKey="solutions" >Solutions</Nav.Item>
+      <Nav.Item eventKey="products" >Products</Nav.Item>
+      <Nav.Item eventKey="about" >About</Nav.Item>
     </Nav>
+  )
+}
 
-    <Nav appearance="subtle" vertical>
-      <Nav.Item icon={<Icon icon="home" />}  >Home</Nav.Item>
-      <Nav.Item>News</Nav.Item>
-      <Nav.Item>Solutions</Nav.Item>
-      <Nav.Item>Products</Nav.Item>
-      <Nav.Item>About</Nav.Item>
-    </Nav>
-  </div>
-);
-ReactDOM.render(instance);
+
+class Demo extends React.Component{
+  constructor(){
+    super();
+    this.state = {
+      active:'home'
+    };
+    this.handleSelect = this.handleSelect.bind(this);
+  }
+  handleSelect(activeKey){
+    this.setState({ active: activeKey });
+  }
+  render(){
+    const { active } = this.state;
+    return (
+      <Row>
+        <Col md={4}>
+          <CustomNav
+            active={active}
+            onSelect={this.handleSelect}
+          />
+        </Col>
+
+        <Col md={2}>
+          <CustomNav
+            appearance="tabs"
+            active={active}
+            onSelect={this.handleSelect}
+          />
+
+        </Col>
+        <Col md={2}>
+          <CustomNav
+            appearance="tabs"
+            reversed
+            active={active}
+            onSelect={this.handleSelect}
+          />
+        </Col>
+        <Col md={2}>
+          <CustomNav
+            appearance="subtle"
+            active={active}
+            onSelect={this.handleSelect}
+          />
+        </Col>
+        <Col md={2}>
+          <CustomNav
+            appearance="subtle"
+            reversed
+            active={active}
+            onSelect={this.handleSelect}
+          />
+        </Col>
+      </Row>
+    )
+  }
+}
+
+ReactDOM.render(<Demo />);
 ```
 <!--end-code-->

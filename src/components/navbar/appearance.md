@@ -22,12 +22,12 @@ const NavBarInstance = ({...props})=>{
           <Nav.Item>Item B</Nav.Item>
           <Nav.Item>Item C</Nav.Item>
           <Nav.Item disabled>Item D</Nav.Item>
-          <Nav.Dropdown title="Item E">
-            <Nav.Item>Item E-1</Nav.Item>
-            <Nav.Item>Item E-2</Nav.Item>
-            <Nav.Item>Item E-3</Nav.Item>
-            <Nav.Item>Item E-4</Nav.Item>
-          </Nav.Dropdown>
+          <Dropdown title="Item E">
+            <Dropdown.Item>Item E-1</Dropdown.Item>
+            <Dropdown.Item>Item E-2</Dropdown.Item>
+            <Dropdown.Item>Item E-3</Dropdown.Item>
+            <Dropdown.Item>Item E-4</Dropdown.Item>
+          </Dropdown>
         </Nav>
         <Nav pullRight>
           <Nav.Item >Link Right</Nav.Item>
