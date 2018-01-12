@@ -14,22 +14,24 @@
 
 ### `<Dropdown>`
 
-| 属性名称        | 类型 `(默认值)`                                                           | 描述                                             |
-| --------------- | ------------------------------------------------------------------------- |
-| activeKey       | any                                                                       | 激活状态的选项，对应 Dropdown.Item 中的 eventKey |
-| classPrefix     | string `('dropdown')`                                                     | className 前缀                                   |
-| disabled        | boolean                                                                   | 禁用组件                                         |
-| dropup          | boolean                                                                   | 菜单向上弹出                                     |
-| menuStyle       | Object                                                                    | 菜单样式                                         |
-| title           | React.Node                                                                | 菜单默认显示内容                                 |
-| toggleClassName | string                                                                    | 设置 Toggle 的 className                         |
-| onClose         | () => void                                                                | 菜单关闭的回调函数                               |
-| onOpen          | () => void                                                                | 菜单弹出的回调函数                               |
-| onToggle        | (open?: boolean) => void                                                  | 菜单状态切换的回调函数                           |
-| onSelect        | (eventKey: any, event: SyntheticEvent<*>) => void                         | 选择后的回调函数                                 |
-| renderTitle     | (children?: React.Node) => React.Node                                     | 自定义 title                                     |
-| placement       | union: 'bottomLeft', 'bottomRight', 'topLeft','topRight' `('bottomLeft')` | 菜单显示位置                                     |
-| icon            | React.Element&lt;typeof Icon&gt;                                          | 设置图标                                         |
+| 属性名称        | 类型 `(默认值)`                                                                             | 描述                                             |
+| --------------- | ------------------------------------------------------------------------------------------- |
+| activeKey       | any                                                                                         | 激活状态的选项，对应 Dropdown.Item 中的 eventKey |
+| classPrefix     | string `('dropdown')`                                                                       | className 前缀                                   |
+| disabled        | boolean                                                                                     | 禁用组件                                         |
+| dropup          | boolean                                                                                     | 菜单向上弹出                                     |
+| menuStyle       | Object                                                                                      | 菜单样式                                         |
+| title           | React.Node                                                                                  | 菜单默认显示内容                                 |
+| toggleClassName | string                                                                                      | 设置 Toggle 的 className                         |
+| onClose         | () => void                                                                                  | 菜单关闭的回调函数                               |
+| onOpen          | () => void                                                                                  | 菜单弹出的回调函数                               |
+| onToggle        | (open?: boolean) => void                                                                    | 菜单状态切换的回调函数                           |
+| onSelect        | (eventKey: any, event: SyntheticEvent<*>) => void                                           | 选择后的回调函数                                 |
+| renderTitle     | (children?: React.Node) => React.Node                                                       | 自定义 title                                     |
+| placement       | union: 'bottomLeft', 'bottomRight', 'topLeft','topRight' `('bottomLeft')`                   | 菜单显示位置                                     |
+| icon            | React.Element&lt;typeof Icon&gt;                                                            | 设置图标                                         |
+| trigger         | union: 'click', 'hover', 'contextMenu', Array<'click', 'hover', 'contextMenu'>  `('click')` | 触发事件                                         |
+
 
 
 ### `<Dropdown.Item>`
