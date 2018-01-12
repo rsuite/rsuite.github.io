@@ -14,20 +14,67 @@ const items=[
 ];
 
 const instance = (
-  <ButtonToolbar>
-    <Dropdown title="TopLeft" placement="topLeft">
-      {items}
-    </Dropdown>
-    <Dropdown title="TopRight" placement="topRight">
-      {items}
-    </Dropdown>
-    <Dropdown title="BottomLeft" placement="bottomLeft">
-      {items}
-    </Dropdown>
-    <Dropdown title="BottomRight" placement="bottomRight">
-      {items}
-    </Dropdown>
-  </ButtonToolbar>
+  <table>
+    <tbody>
+      <tr>
+        <td></td>
+        <td>
+          <Dropdown title="TopLeft" placement="topLeft">
+            {items}
+          </Dropdown>
+        </td>
+        <td>
+          <Dropdown title="TopRight" placement="topRight">
+            {items}
+          </Dropdown>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          <Dropdown title="LeftTop" placement="leftTop">
+            {items}
+          </Dropdown>
+        </td>
+        <td></td>
+        <td></td>
+        <td>
+          <Dropdown title="RightTop" placement="rightTop">
+            {items}
+          </Dropdown>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <Dropdown title="BottomLeft" placement="bottomLeft">
+            {items}
+          </Dropdown>
+        </td>
+        <td></td>
+        <td></td>
+        <td>
+          <Dropdown title="BottomLeft" placement="bottomLeft">
+            {items}
+          </Dropdown>
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+          <Dropdown title="LeftBottom" placement="leftBottom">
+            {items}
+          </Dropdown>
+        </td>
+        <td>
+          <Dropdown title="RightBottom" placement="rightBottom">
+            {items}
+          </Dropdown>
+        </td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
 );
 ReactDOM.render(instance);
 ```

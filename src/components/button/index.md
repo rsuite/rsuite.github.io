@@ -52,9 +52,7 @@ IconButton 继承所有 Button 的属性
 | 属性名称      | 类型                              | 描述           |
 | ------------- | --------------------------------- | -------------- |
 | circle        | boolean                           | 设置为圆形按钮 |
-| icon          | string                            | icon 名称      |
-| iconClassName | string                            | icon className |
-| iconStyle     | Object                            | icon 样式      |
+| icon          | React.Element&lt;typeof Icon&gt;  | 设置图标       |
 | placement     | union: 'left', 'right' `('left')` | icon 的位置    |
 | classPrefix   | string `('btn-icon')`             | className 前缀 |
 

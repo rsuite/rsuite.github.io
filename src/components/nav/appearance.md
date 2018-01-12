@@ -12,23 +12,23 @@
 const instance = (
   <div>
     <Nav>
-      <Nav.Item icon={<Icon icon="home" />}  >Home</Nav.Item>
+      <Nav.Item active icon={<Icon icon="home" />}  >Home</Nav.Item>
       <Nav.Item>News</Nav.Item>
       <Nav.Item>Solutions</Nav.Item>
       <Nav.Item>Products</Nav.Item>
       <Nav.Item>About</Nav.Item>
     </Nav>
-
+    <br />
     <Nav appearance="tabs">
-      <Nav.Item icon={<Icon icon="home" />}  >Home</Nav.Item>
+      <Nav.Item active icon={<Icon icon="home" />}  >Home</Nav.Item>
       <Nav.Item>News</Nav.Item>
       <Nav.Item>Solutions</Nav.Item>
       <Nav.Item>Products</Nav.Item>
       <Nav.Item>About</Nav.Item>
     </Nav>
-
+    <br />
     <Nav appearance="subtle">
-      <Nav.Item icon={<Icon icon="home" />}  >Home</Nav.Item>
+      <Nav.Item active icon={<Icon icon="home" />}  >Home</Nav.Item>
       <Nav.Item>News</Nav.Item>
       <Nav.Item>Solutions</Nav.Item>
       <Nav.Item>Products</Nav.Item>
