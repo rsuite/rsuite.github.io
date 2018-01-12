@@ -28,9 +28,10 @@
 | onToggle        | (open?: boolean) => void                                                                    | 菜单状态切换的回调函数                           |
 | onSelect        | (eventKey: any, event: SyntheticEvent<*>) => void                                           | 选择后的回调函数                                 |
 | renderTitle     | (children?: React.Node) => React.Node                                                       | 自定义 title                                     |
-| placement       | union: 'bottomLeft', 'bottomRight', 'topLeft','topRight' `('bottomLeft')`                   | 菜单显示位置                                     |
+| placement       | union: 'bottomLeft', 'bottomRight', 'topLeft', 'topRight', 'leftTop', 'rightTop', 'leftBottom', 'rightBottom' `('bottomLeft')`                   | 菜单显示位置                                     |
 | icon            | React.Element&lt;typeof Icon&gt;                                                            | 设置图标                                         |
 | trigger         | union: 'click', 'hover', 'contextMenu', Array<'click', 'hover', 'contextMenu'>  `('click')` | 触发事件                                         |
+
 
 
 
