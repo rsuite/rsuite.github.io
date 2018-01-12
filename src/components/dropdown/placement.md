@@ -46,14 +46,15 @@ const instance = (
       </tr>
       <tr>
         <td>
-          <Dropdown title="BottomLeft" placement="bottomLeft">
+
+          <Dropdown title="LeftBottom" placement="leftBottom">
             {items}
           </Dropdown>
         </td>
         <td></td>
         <td></td>
         <td>
-          <Dropdown title="BottomLeft" placement="bottomLeft">
+          <Dropdown title="RightBottom" placement="rightBottom">
             {items}
           </Dropdown>
         </td>
@@ -61,12 +62,13 @@ const instance = (
       <tr>
         <td></td>
         <td>
-          <Dropdown title="LeftBottom" placement="leftBottom">
+          <Dropdown title="BottomLeft" placement="bottomLeft">
             {items}
           </Dropdown>
         </td>
         <td>
-          <Dropdown title="RightBottom" placement="rightBottom">
+
+          <Dropdown title="BottomRight" placement="bottomRight">
             {items}
           </Dropdown>
         </td>
