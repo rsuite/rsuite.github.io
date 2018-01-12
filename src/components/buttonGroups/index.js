@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ButtonGroup, ButtonToolbar } from 'rsuite';
+import { ButtonGroup, ButtonToolbar, Button } from 'rsuite';
 import ComponentExample from '../ComponentExample';
 
 const context = require('./index.md');
@@ -17,6 +17,7 @@ export default () => {
   return (
     <ComponentExample
       dependencies={{
+        Button,
         ButtonGroup,
         ButtonToolbar
       }}
