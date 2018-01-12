@@ -37,6 +37,7 @@
 | -------------- | ------------------------------------------------- |
 | classPrefix    | string `('dropdown-item')`                        |
 | divider        | boolean                                           | 显示为分割线                             |
+| panel          | boolean                                           | 显示一个自定义的面板                     |
 | active         | boolean                                           | 选中当前选项                             |
 | disabled       | boolean                                           | 禁用当前选项                             |
 | eventKey       | any                                               | 当前选项的值                             |

@@ -7,7 +7,7 @@
 const instance = (
   <div>
     <Nav appearance="tabs" reversed>
-      <Nav.Item icon="home" >Home</Nav.Item>
+      <Nav.Item icon={<Icon icon="home" />}  >Home</Nav.Item>
       <Nav.Item>News</Nav.Item>
       <Nav.Item>Solutions</Nav.Item>
       <Nav.Item>Products</Nav.Item>
@@ -15,7 +15,7 @@ const instance = (
     </Nav>
 
     <Nav appearance="subtle" reversed>
-      <Nav.Item icon="home" >Home</Nav.Item>
+      <Nav.Item icon={<Icon icon="home" />}  >Home</Nav.Item>
       <Nav.Item>News</Nav.Item>
       <Nav.Item>Solutions</Nav.Item>
       <Nav.Item>Products</Nav.Item>
@@ -23,7 +23,7 @@ const instance = (
     </Nav>
 
     <Nav appearance="tabs" vertical reversed>
-      <Nav.Item icon="home" >Home</Nav.Item>
+      <Nav.Item icon={<Icon icon="home" />}  >Home</Nav.Item>
       <Nav.Item>News</Nav.Item>
       <Nav.Item>Solutions</Nav.Item>
       <Nav.Item>Products</Nav.Item>
@@ -31,7 +31,7 @@ const instance = (
     </Nav>
 
     <Nav appearance="subtle" vertical reversed>
-      <Nav.Item icon="home" >Home</Nav.Item>
+      <Nav.Item icon={<Icon icon="home" />}  >Home</Nav.Item>
       <Nav.Item>News</Nav.Item>
       <Nav.Item>Solutions</Nav.Item>
       <Nav.Item>Products</Nav.Item>

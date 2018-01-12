@@ -23,7 +23,7 @@ const instance = (
     </Dropdown>
     <Dropdown
       renderTitle={()=>{
-        return <IconButton appearance="primary" icon="plus" circle />
+        return <IconButton appearance="primary" icon={<Icon icon="plus" />} circle />
       }}
     >
         <Dropdown.Item ><Icon icon="user" /> New User</Dropdown.Item>

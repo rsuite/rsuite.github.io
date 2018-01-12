@@ -1,11 +1,18 @@
-### 分割菜单选项
+### 分割线与面板
 
-设置一个 `divider` 属性分割选项。
+- `divider` 设置分割选项。
+- `panel` 设置一个面板。
 
 <!--start-code-->
 ```js
 const instance = (
-  <Dropdown title="Profile" >
+  <Dropdown title="GitHub" >
+
+    <Dropdown.Item panel style={{padding:10,width:160}}>
+      <p>Signed in as</p>
+      <strong>foobar</strong>
+    </Dropdown.Item>
+    <Dropdown.Item divider />
     <Dropdown.Item >Your profile</Dropdown.Item>
     <Dropdown.Item >Your stars</Dropdown.Item>
     <Dropdown.Item >Your Gists</Dropdown.Item>

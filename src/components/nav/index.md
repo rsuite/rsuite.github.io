@@ -23,23 +23,24 @@ import { Nav, Dropdown } from 'rsuite';
 
 ### `<Nav>`
 
-| 属性名称        | 类型                                                 | 默认值   | 描述                                      |
-|-------------|----------------------------------------------------|-------|-----------------------------------------|
-| classPrefix | string                                             | 'nav' | class 前缀                                        |
-| tabs        | boolean                                            |       | 标签式导航                                   |
-| pills       | boolean                                            |       | 胶囊式导航                                   |
-| justified   | boolean                                            |       | 宽度自适应                                   |
-| stacked     | boolean                                            |       | 垂直导航                                    |
-| pullRight   | boolean                                            |       | 显示在右侧                                   |
-| activeKey   | any                                                |       | 激活的 `key`, 对应 `<Nav.Item>` 中 `eventKey` |
-| onSelect    | (eventKey: any, event: SyntheticEvent<*>) => void, |       | 选择事件触发的回调函数                             |
+| 属性名称    | 类型                                               | 默认值 | 描述                                          |
+| ----------- | -------------------------------------------------- | ------ | --------------------------------------------- |
+| classPrefix | string                                             | 'nav'  | class 前缀                                    |
+| tabs        | boolean                                            |        | 标签式导航                                    |
+| pills       | boolean                                            |        | 胶囊式导航                                    |
+| justified   | boolean                                            |        | 宽度自适应                                    |
+| stacked     | boolean                                            |        | 垂直导航                                      |
+| pullRight   | boolean                                            |        | 显示在右侧                                    |
+| activeKey   | any                                                |        | 激活的 `key`, 对应 `<Nav.Item>` 中 `eventKey` |
+| onSelect    | (eventKey: any, event: SyntheticEvent<*>) => void, |        | 选择事件触发的回调函数                        |
 
 ### `<Nav.Item>`
 
-| 属性名称           | 类型                                                 | 默认值 | 描述          |
-|----------------|----------------------------------------------------|-----|-------------|
-| active         | boolean                                            |     | 激活状态        |
-| disabled       | boolean                                            |     | 禁用状态        |
-| href           | string                                             |     | 链接          |
-| onSelect       | (eventKey: any, event: SyntheticEvent<*>) => void, |     | 选择事件触发的回调函数 |
-| componentClass | React.ElementType                                  |     |             |
+| 属性名称       | 类型                                               | 默认值 | 描述                   |
+| -------------- | -------------------------------------------------- | ------ | ---------------------- |
+| active         | boolean                                            |        | 激活状态               |
+| disabled       | boolean                                            |        | 禁用状态               |
+| icon           | React.Element`<typeof Icon>`                         |        | 设置图标               |
+| href           | string                                             |        | 链接                   |
+| onSelect       | (eventKey: any, event: SyntheticEvent<*>) => void, |        | 选择事件触发的回调函数 |
+| componentClass | React.ElementType                                  |        |                        |
