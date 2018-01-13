@@ -9,7 +9,7 @@ const examples = [
   require('./disabled.md'),
   require('./indeterminate.md'),
   require('./checkbox-group.md'),
-  require('./checkbox-group-inline.md'),
+  require('./checkbox-groupinline.md'),
   require('./checkbox-group-controller.md'),
 ];
 

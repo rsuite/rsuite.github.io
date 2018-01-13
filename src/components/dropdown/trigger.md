@@ -28,8 +28,8 @@ const instance = (
   <ButtonToolbar>
     <CustomDropdown title="Hover" trigger="hover" />
     <CustomDropdown title="Click" trigger="click" />
-    <CustomDropdown title="Click and Hover" trigger={['click','hover']} />
     <CustomDropdown title="Right Click" trigger="contextMenu" />
+    <CustomDropdown title="Click and Hover" trigger={['click','hover']} />
   </ButtonToolbar>
 );
 ReactDOM.render(instance);

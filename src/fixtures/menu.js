@@ -127,9 +127,9 @@ export default [{
     name: 'Navbar *',
     title: '导航栏'
   }, {
-    id: 'nav-menu',
-    name: 'NavMenu *',
-    title: '菜单'
+    id: 'sidenav',
+    name: 'Sidenav *',
+    title: '侧导航'
   }, {
     id: 'notification',
     name: 'Notification *',

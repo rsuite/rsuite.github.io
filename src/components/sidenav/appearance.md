@@ -8,15 +8,10 @@
 <!--start-code-->
 ```js
 
-const NavBarInstance = ({...props})=>{
+const SidenavInstance = ({...props})=>{
   return (
-    <Navbar {...props}>
-      <Navbar.Header>
-        <Navbar.Brand>
-          <a href="#">RSUITE</a>
-        </Navbar.Brand>
-      </Navbar.Header>
-      <Navbar.Body>
+    <Sidenav {...props}>
+      <Sidenav.Body>
         <Nav>
           <Nav.Item active>Item A</Nav.Item>
           <Nav.Item>Item B</Nav.Item>
@@ -29,19 +24,18 @@ const NavBarInstance = ({...props})=>{
             <Dropdown.Item>Item E-4</Dropdown.Item>
           </Dropdown>
         </Nav>
-        <Nav pullRight>
-          <Nav.Item >Link Right</Nav.Item>
-        </Nav>
-      </Navbar.Body>
-    </Navbar>
+      </Sidenav.Body>
+      <Sidenav.Toggle />
+    </Sidenav>
   );
 }
 
+
 const instance = (
   <div>
-    <NavBarInstance />
-    <NavBarInstance appearance="inverse" />
-    <NavBarInstance appearance="subtle" />
+    <SidenavInstance />
+    <SidenavInstance appearance="inverse" />
+    <SidenavInstance appearance="subtle" />
   </div>
 );
 ReactDOM.render(instance);

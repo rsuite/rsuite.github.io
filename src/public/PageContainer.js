@@ -27,14 +27,14 @@ class PageContainer extends React.Component {
                 </Navbar.Brand>
                 <Navbar.Toggle />
               </Navbar.Header>
-              <Navbar.Collapse>
+              <Navbar.Body>
                 <Nav>
                   <SwitchNav activeKey={activeKey} />
                 </Nav>
                 <Nav pullRight>
                   <Nav.Item href={githubURL}>GitHub</Nav.Item>
                 </Nav>
-              </Navbar.Collapse>
+              </Navbar.Body>
             </div>
           </Header>
 

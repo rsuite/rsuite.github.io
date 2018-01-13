@@ -5,8 +5,8 @@
 - `<Navbar>` 导航栏组件。
 - `<Navbar.Header>`  设置导航栏头部信息。
 - `<Navbar.Brand>`  设置导航栏品牌商标。
-- `<Navbar.Collapse>` 设置导航栏选项。
-- `<Navbar.Toggle>` 在移动端等设备上，在导航栏显示的按钮，用来展开 `Navbar.Collapse` 中的内容。
+- `<Navbar.Body>` 设置导航栏选项。
+- `<Navbar.Toggle>` 在移动端等设备上，在导航栏显示的按钮，用来展开 `Navbar.Body` 中的内容。
 
 ## 演示
 

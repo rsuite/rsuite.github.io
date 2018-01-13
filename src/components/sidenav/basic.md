@@ -3,14 +3,8 @@
 <!--start-code-->
 ```js
 const instance = (
-  <Navbar>
-    <Navbar.Header>
-      <Navbar.Brand>
-        <a href="#">RSUITE</a>
-      </Navbar.Brand>
-      <Navbar.Toggle />
-    </Navbar.Header>
-    <Navbar.Body>
+  <Sidenav>
+    <Sidenav.Body>
       <Nav>
         <Nav.Item active>Item A</Nav.Item>
         <Nav.Item>Item B</Nav.Item>
@@ -23,11 +17,9 @@ const instance = (
           <Dropdown.Item>Item E-4</Dropdown.Item>
         </Dropdown>
       </Nav>
-      <Nav pullRight>
-        <Nav.Item>Link Right</Nav.Item>
-      </Nav>
-    </Navbar.Body>
-  </Navbar>
+    </Sidenav.Body>
+    <Sidenav.Toggle />
+  </Sidenav>
 );
 ReactDOM.render(instance);
 ```

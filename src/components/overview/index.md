@@ -81,7 +81,7 @@
   - `<Navbar>`
   - `<Navbar.Header>`
   - `<Navbar.Brand>`
-  - `<Navbar.Collapse>`
+  - `<Navbar.Body>`
   - `<Navbar.Toggle>`
 - Steps
   - `<Steps>`
