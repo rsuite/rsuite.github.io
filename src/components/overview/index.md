@@ -82,7 +82,6 @@
   - `<Navbar.Header>`
   - `<Navbar.Brand>`
   - `<Navbar.Body>`
-  - `<Navbar.Toggle>`
 - [Steps](/components/steps)
   - `<Steps>`
   - `<Steps.Item>`

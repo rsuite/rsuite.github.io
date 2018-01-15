@@ -25,7 +25,6 @@ class PageContainer extends React.Component {
                     <RSuiteLogo color="#fff" width={90} />
                   </a>
                 </Navbar.Brand>
-                <Navbar.Toggle />
               </Navbar.Header>
               <Navbar.Body>
                 <Nav>

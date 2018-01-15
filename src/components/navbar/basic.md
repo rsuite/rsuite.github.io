@@ -8,7 +8,6 @@ const instance = (
       <Navbar.Brand>
         <a href="#">RSUITE</a>
       </Navbar.Brand>
-      <Navbar.Toggle />
     </Navbar.Header>
     <Navbar.Body>
       <Nav>

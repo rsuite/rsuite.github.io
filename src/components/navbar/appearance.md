@@ -40,7 +40,9 @@ const NavBarInstance = ({...props})=>{
 const instance = (
   <div>
     <NavBarInstance />
+    <hr />
     <NavBarInstance appearance="inverse" />
+    <hr />
     <NavBarInstance appearance="subtle" />
   </div>
 );
