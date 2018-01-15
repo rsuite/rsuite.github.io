@@ -16,19 +16,17 @@ const NavBarInstance = ({...props})=>{
       </Navbar.Header>
       <Navbar.Body>
         <Nav>
-          <Nav.Item active>Item A</Nav.Item>
-          <Nav.Item>Item B</Nav.Item>
-          <Nav.Item>Item C</Nav.Item>
-          <Nav.Item disabled>Item D</Nav.Item>
-          <Dropdown title="Item E">
-            <Dropdown.Item>Item E-1</Dropdown.Item>
-            <Dropdown.Item>Item E-2</Dropdown.Item>
-            <Dropdown.Item>Item E-3</Dropdown.Item>
-            <Dropdown.Item>Item E-4</Dropdown.Item>
+          <Nav.Item icon={<Icon icon="home" />} >Home</Nav.Item>
+          <Nav.Item>News</Nav.Item>
+          <Nav.Item>Products</Nav.Item>
+          <Dropdown title="About">
+            <Dropdown.Item>Company</Dropdown.Item>
+            <Dropdown.Item>Team</Dropdown.Item>
+            <Dropdown.Item>Contact</Dropdown.Item>
           </Dropdown>
         </Nav>
         <Nav pullRight>
-          <Nav.Item >Link Right</Nav.Item>
+          <Nav.Item icon={<Icon icon="cog" />} >Settings</Nav.Item>
         </Nav>
       </Navbar.Body>
     </Navbar>
