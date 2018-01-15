@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Sidenav, Nav, Button, Icon,Dropdown } from '../../rsuiteSource';
+import { Sidenav, Nav, Button, Icon, Toggle, Dropdown } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [
@@ -17,6 +17,7 @@ export default () => {
         Button,
         Sidenav,
         Dropdown,
+        Toggle,
         Nav
       }}
       context={context}

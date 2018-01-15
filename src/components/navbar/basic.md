@@ -5,9 +5,7 @@
 const instance = (
   <Navbar>
     <Navbar.Header>
-      <Navbar.Brand>
-        <a href="#">RSUITE</a>
-      </Navbar.Brand>
+      <a href="#" className="navbar-brand logo">RSUITE</a>
     </Navbar.Header>
     <Navbar.Body>
       <Nav>
