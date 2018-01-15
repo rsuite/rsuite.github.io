@@ -28,5 +28,5 @@
 | onExiting         | () => void                                      | 退中前动画过渡的回调函数                                                                                |
 | onExited          | () => void                                      | 退后前动画过渡的回调函数                                                                                |
 | show              | boolean                                         | 显示 Drawer                                                                                             |
-| size              | union: 'lg', 'md', 'sm', 'xs'                   | 设置 Drawer 尺寸                                                                                        |
-| placement         | union: 'top','right','bottom', 'left' `(right)` | 设置 Drawer 显示的位置                                                                                  |
+| size              | enum: 'lg', 'md', 'sm', 'xs'                   | 设置 Drawer 尺寸                                                                                        |
+| placement         | enum: 'top','right','bottom', 'left' `(right)` | 设置 Drawer 显示的位置                                                                                  |

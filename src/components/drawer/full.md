@@ -30,10 +30,30 @@ class DrawersBasic extends React.Component{
       <div>
 
         <ButtonToolbar>
-          <IconButton icon="angle-left" onClick={()=>this.toggleDrawer('left')}>Open Left</IconButton>
-          <IconButton icon="angle-right" onClick={()=>this.toggleDrawer('right')}>Open Right</IconButton>
-          <IconButton icon="angle-up" onClick={()=>this.toggleDrawer('top')}>Open Top</IconButton>
-          <IconButton icon="angle-down" onClick={()=>this.toggleDrawer('bottom')}>Open Bottom</IconButton>
+          <IconButton
+            icon={<Icon icon="angle-left"  />}
+            onClick={()=>this.toggleDrawer('left')}
+          >
+            Left
+          </IconButton>
+          <IconButton
+            icon={<Icon icon="angle-right"  />}
+            onClick={()=>this.toggleDrawer('right')}
+          >
+            Right
+          </IconButton>
+          <IconButton
+            icon={<Icon icon="angle-up"  />}
+            onClick={()=>this.toggleDrawer('top')}
+          >
+            Top
+          </IconButton>
+          <IconButton
+            icon={<Icon icon="angle-down"  />}
+            onClick={()=>this.toggleDrawer('bottom')}
+          >
+            Bottom
+          </IconButton>
         </ButtonToolbar>
 
         <Drawer

@@ -27,8 +27,8 @@ import { Loader } from 'rsuite';
 |-------------|-------------------------------|----------|--------------|
 | backdrop    | boolean                       |          | 显示背景         |
 | classPrefix | string                        |          | className 前缀 |
-| size        | union: 'lg', 'md', 'sm', 'xs' | 'md'     | 设置加载器尺寸      |
+| size        | enum: 'lg', 'md', 'sm', 'xs' | 'md'     | 设置加载器尺寸      |
 | center      | boolean                       |          | 在容器中居中显示     |
 | content     | React.Node                    |          | 自定义描述文本      |
-| speed       | union:'fast','normal','slow'  | 'normal' | 加载器旋转速度      |
+| speed       | enum:'fast','normal','slow'  | 'normal' | 加载器旋转速度      |
 | inverse     | boolean                       |          | 翻转加载器颜色      |

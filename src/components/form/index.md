@@ -57,7 +57,7 @@ const { StringType, NumberType, ArrayType, DateType, ObjectType, BooleanType } =
 | defaultValues | object                                | 表单的初始默认值 `非受控组件`        |
 | model         | Schema                                | SchemaModel 对象          |
 | checkDelay    | number                                | 数据校验的时候，延迟处理，默认为 500 毫秒 |
-| checkTrigger  | union: 'change','blur',null           | 默认为：'change'            |
+| checkTrigger  | enum: 'change','blur',null           | 默认为：'change'            |
 | onChange      | function(values:Object, event:Object) | 数据改变后的回调函数              |
 | onError       | function(errors:Object)               | 校验出错的回调函数               |
 | onCheck       | function(errors:Object)               | 数据校验的回调函数               |
@@ -69,7 +69,7 @@ const { StringType, NumberType, ArrayType, DateType, ObjectType, BooleanType } =
 |--------------|-----------------------------|----------------------------|
 | name         | string                      | 表单元素名称                     |
 | accepter     | React.ElementType           | 受代理的组件                     |
-| checkTrigger | union: 'change','blur',null | 数据校验的触发类型,会覆盖 `<Form>`上的设置 |
+| checkTrigger | enum: 'change','blur',null | 数据校验的触发类型,会覆盖 `<Form>`上的设置 |
 
 
 ### `<FormGroup>`
@@ -77,7 +77,7 @@ const { StringType, NumberType, ArrayType, DateType, ObjectType, BooleanType } =
 | 属性名称            | 类型                                 | 默认值 | 描述  |
 |-----------------|------------------------------------|-----|-----|
 | controlId       | string                             |     |     |
-| validationState | union: 'success','warning','error' |     |     |
+| validationState | enum: 'success','warning','error' |     |     |
 
 ### `<ControlLabel>`
 
@@ -91,7 +91,7 @@ const { StringType, NumberType, ArrayType, DateType, ObjectType, BooleanType } =
 | 属性名称           | 类型                                                                  | 默认值    | 描述  |
 |----------------|---------------------------------------------------------------------|--------|-----|
 | componentClass | React.ElementType                                                   |        |     |
-| type           | union:'text','email','number','file','select','textarea','password' | 'text' |     |
+| type           | enum:'text','email','number','file','select','textarea','password' | 'text' |     |
 | id             | string                                                              |        |     |
 
 

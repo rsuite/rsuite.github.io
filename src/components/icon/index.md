@@ -18,9 +18,9 @@
 | classPrefix     | string `('icon')`                              | class前缀                                |
 | componentClass  | React.ElementType `('i')`                      | 可以渲染 string 或者 function 的元素类型 |
 | icon `required` | union: string, { viewBox: string, id: string } | 使用的icon名                             |
-| size            | union: 'lg', '2x', '3x', '4x', '5x'            | 放大图标                                 |
-| flip            | union: 'horizontal', 'vertical'                | 翻转图标                                 |
-| stack           | union: '1x', '2x'                              | 组合多个图标                             |
+| size            | enum: 'lg', '2x', '3x', '4x', '5x'            | 放大图标                                 |
+| flip            | enum: 'horizontal', 'vertical'                | 翻转图标                                 |
+| stack           | enum: '1x', '2x'                              | 组合多个图标                             |
 | rotate          | number                                         | 旋转图标                                 |
 | fixedWidth      | boolean                                        | 因为有很多图标尺寸参差不齐,固定图标宽度   |
 | spin            | boolean                                        | 动态旋转图标                             |

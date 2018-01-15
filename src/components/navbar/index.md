@@ -18,7 +18,7 @@
 
 | 属性名称       | 类型                                  | 默认值    | 描述                               |
 | -------------- | ------------------------------------- | --------- | ---------------------------------- |
-| appearance     | union: 'default', 'inverse', 'subtle' | 'default' | 导航栏外观                         |
+| appearance     | enum: 'default', 'inverse', 'subtle' | 'default' | 导航栏外观                         |
 | classPrefix    | string                                |           | className 前缀                     |
 | componentClass | React.ElementType                     | 'navbar'  | 自定义导航栏 Class                 |
 | onToggle       | (expanded: boolean) => void           |           | `<Navbar.Toggle>` 点击后的回调函数 |

@@ -21,9 +21,9 @@
 | strokeColor   | string                                  |           | 线条颜色         |
 | trailWidth    | number                                  | 1         | 背景宽度         |
 | trailColor    | string                                  | '#d9d9d9' | 背景颜色         |
-| status        | union: 'success', 'fail', 'error', null | null      | 进度状态         |
+| status        | enum: 'success', 'fail', 'error', null | null      | 进度状态         |
 | infoShow      | bool                                    | true      | 是否显示文字       |
-| strokeLinecap | union:  'round', 'square', 'butt'       | 'round'   | 不同类型的开放路径的终结 |
+| strokeLinecap | enum:  'round', 'square', 'butt'       | 'round'   | 不同类型的开放路径的终结 |
 
 
 ### `<Progress.Circle>`
@@ -35,7 +35,7 @@
 | strokeColor   | string                                  |           | 线条颜色         |
 | trailWidth    | number                                  | 1         | 背景宽度         |
 | trailColor    | string                                  | '#d9d9d9' | 背景颜色         |
-| status        | union: 'success', 'fail', 'error', null | null      | 进度状态         |
+| status        | enum: 'success', 'fail', 'error', null | null      | 进度状态         |
 | infoShow      | bool                                    | true      | 是否显示文字       |
-| strokeLinecap | union:  'round', 'square', 'butt'       | 'round'   | 不同类型的开放路径的终结 |
-| gapPosition | union: 'right', 'top', 'bottom', 'left', | 'top' | 圆形进度条缺口位置 |
+| strokeLinecap | enum:  'round', 'square', 'butt'       | 'round'   | 不同类型的开放路径的终结 |
+| gapPosition | enum: 'right', 'top', 'bottom', 'left', | 'top' | 圆形进度条缺口位置 |

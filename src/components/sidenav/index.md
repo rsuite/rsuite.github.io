@@ -16,7 +16,7 @@
 
 | 属性名称       | 类型                                  | 默认值    | 描述                               |
 | -------------- | ------------------------------------- | --------- | ---------------------------------- |
-| appearance     | union: 'default', 'inverse', 'subtle' | 'default' | 菜单外观                         |
+| appearance     | enum: 'default', 'inverse', 'subtle' | 'default' | 菜单外观                         |
 | classPrefix    | string                                |           | className 前缀                     |
 | componentClass | React.ElementType                     | 'navbar'  | 自定义菜单 Class                 |
 

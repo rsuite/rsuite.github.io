@@ -38,7 +38,7 @@
 | onExiting            | () => void                           | 退中前动画过渡的回调函数                                                                             |
 | onExited             | () => void                           | 退后前动画过渡的回调函数                                                                             |
 | show                 | boolean                              | 显示 Modal                                                                                           |
-| size                 | union: 'lg', 'md', 'sm', 'xs' `(md)` | Modal 尺寸                                                                                           |
+| size                 | enum: 'lg', 'md', 'sm', 'xs' `(md)` | Modal 尺寸                                                                                           |
 
 
 

@@ -16,5 +16,5 @@
 | current     | number                         | 0            | 可以更改该属性来改变所在步骤（从0开始） |
 | size        | string                         |              | 设置为 small            |
 | status      | unico: 'process'                |              | 设置为 error            |
-| direction   | union: 'horizontal','vertical' | 'horizontal' | 设置布局                 |
+| direction   | enum: 'horizontal','vertical' | 'horizontal' | 设置布局                 |
 | icon        | React.Node                     |              | 设置 <Icon> 自定义图标      |

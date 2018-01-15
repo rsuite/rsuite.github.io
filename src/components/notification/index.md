@@ -74,7 +74,7 @@ Notification.error(config:Config)
 | title（必选）       | string                                                |            | 标题                         |
 | description（必选） | React.ElementType                                     | 1.5        | 描述                         |
 | duration        | number                                                | 4.5        | 消息框持续时间                    |
-| placement       | union:'topLeft','topRight','bottomLeft','bottomRight' | 'topRight' | 消息框的位置，共有四种位置              |
+| placement       | enum:'topLeft','topRight','bottomLeft','bottomRight' | 'topRight' | 消息框的位置，共有四种位置              |
 | top             | number                                                | 24         | 消息框距离顶部的距离                 |
 | bottom          | number                                                | 24         | 消息框距离底部的距离                 |
 | onClose         | ()=>void                                              |            | 关闭回调函数                     |

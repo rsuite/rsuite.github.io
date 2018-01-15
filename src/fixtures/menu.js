@@ -43,7 +43,7 @@ export default [{
   children: [{
     id: 'overview',
     name: 'Overview',
-    title: '目录'
+    title: '概览'
   }, {
     id: 'alert',
     name: 'Alert *',
@@ -54,7 +54,7 @@ export default [{
     title: '按钮'
   }, {
     id: 'breadcrumb',
-    name: 'Breadcrumb *',
+    name: 'Breadcrumb',
     title: '面包屑'
   }, {
     id: 'checkbox',
@@ -96,11 +96,11 @@ export default [{
     title: '日期范围选择器'
   }, {
     id: 'form',
-    name: 'Form *',
+    name: 'Form',
     title: '表单控件'
   }, {
     id: 'grid',
-    name: 'Grid *',
+    name: 'Grid',
     title: '网格'
   }, {
     id: 'icon',
@@ -124,12 +124,8 @@ export default [{
     title: '导航'
   }, {
     id: 'navbar',
-    name: 'Navbar *',
+    name: 'Navbar',
     title: '导航栏'
-  }, {
-    id: 'sidenav',
-    name: 'Sidenav *',
-    title: '侧导航'
   }, {
     id: 'notification',
     name: 'Notification *',
@@ -140,21 +136,25 @@ export default [{
     title: '提示框'
   }, {
     id: 'pagination',
-    name: 'Pagination *',
+    name: 'Pagination',
     title: '分页'
   }, {
     id: 'panel',
-    name: 'Panel *',
+    name: 'Panel',
     title: '面板'
   }, {
     id: 'progress',
-    name: 'Progress *',
+    name: 'Progress',
     title: '进度条'
   }, {
     id: 'radio',
     name: 'Radio *',
     title: '单选框'
   }, {
+    id: 'sidenav',
+    name: 'Sidenav',
+    title: '侧导航'
+  },  {
     id: 'steps',
     name: 'Steps',
     title: '步骤条'
@@ -165,7 +165,7 @@ export default [{
   },
   {
     id: 'toggle',
-    name: 'Toggle *',
+    name: 'Toggle',
     title: '开关'
   }, {
     id: 'tooltip',
@@ -173,7 +173,7 @@ export default [{
     title: '文字提示'
   }, {
     id: 'table',
-    name: 'Table *',
+    name: 'Table',
     title: '表格'
   },
   {
