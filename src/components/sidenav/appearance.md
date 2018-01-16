@@ -10,7 +10,7 @@
 
 const SidenavInstance = ({...props})=>{
   return (
-    <Sidenav {...props}>
+    <Sidenav {...props} style={{width:260}}>
       <Sidenav.Body>
         <Nav>
           <Nav.Item active icon={<Icon icon="dashboard" />}>Dashboard</Nav.Item>

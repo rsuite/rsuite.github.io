@@ -24,7 +24,7 @@ class Demo extends React.Component{
       <div>
         <Toggle onChange={this.handleToggle} checked={expanded} />
         <hr />
-        <Sidenav expanded={expanded}>
+        <Sidenav expanded={expanded} style={{width:260}}>
           <Sidenav.Body>
             <Nav>
               <Nav.Item active icon={<Icon icon="dashboard" />}>Dashboard</Nav.Item>
