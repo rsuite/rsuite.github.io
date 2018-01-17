@@ -21,7 +21,7 @@ class Demo extends React.Component{
     const { expanded } = this.state;
 
     return (
-      <div>
+      <div style={{width:250}}>
         <Toggle onChange={this.handleToggle} checked={expanded} />
         <hr />
         <Sidenav expanded={expanded} style={{width:260}}>
