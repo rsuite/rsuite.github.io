@@ -6,7 +6,8 @@ const context = require('./index.md');
 const examples = [
   require('./basic.md'),
   require('./appearance.md'),
-  require('./toggle.md')
+  require('./toggle.md'),
+  require('./divider-panel.md')
 ];
 
 export default () => {
