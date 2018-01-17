@@ -6,7 +6,7 @@
 <!--start-code-->
 ```js
 const panelStyles= {
-  paddingLeft:20,
+  padding:'15px 20px',
   color:'#aaa',
 }
 
@@ -25,6 +25,7 @@ const instance = (
           <Nav.Item panel style={headerStyles}>
             Custom Sidenav
           </Nav.Item>
+          <Nav.Item divider />
           <Nav.Item active icon={<Icon icon="dashboard" />}>Dashboard</Nav.Item>
           <Nav.Item icon={<Icon icon="group" />}>User Group</Nav.Item>
           <Dropdown title="Advanced" icon={<Icon icon="magic" />}>
