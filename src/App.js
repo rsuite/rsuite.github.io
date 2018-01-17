@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import get from 'lodash/get';
+import { scrollTop } from 'dom-lib';
 import DocSidebar from './fixtures/DocSidebar';
 import { Grid, Row, Col } from './rsuiteSource';
 
@@ -9,7 +11,13 @@ const contextTypes = {
 
 class App extends React.Component {
 
-  componentWillReceiveProps() {
+  componentWillReceiveProps(nextProps) {
+
+    const { location } = this.props;
+    if (get(location, 'pathname') !== get(nextProps, 'location.pathname')) {
+      scrollTop(window, 0);
+    }
+
     window._ha && _ha('send', 'pageview', {
       'url': document.location.href
     });

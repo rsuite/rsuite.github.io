@@ -29,7 +29,7 @@ menu.forEach(item => {
 
   const children = [];
   item.children.forEach(child => {
-    children.push(
+    !child.group && children.push(
       <Route key={child.id} path={child.id} getComponent={(location, cb) => {
         let name = location.params.name;
         require.ensure([], require => {

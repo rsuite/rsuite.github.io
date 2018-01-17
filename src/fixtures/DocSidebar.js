@@ -49,12 +49,23 @@ class DocSidebar extends React.Component {
     const nodeItems = [];
     const menuItems = this.getMenuItems();
     const { name: activeTitle, icon } = menu.filter(({ id }) => this.context.router.isActive(id))[0];
+
     menuItems.filter(({ id }) => this.context.router.isActive(id)).map((item, key) => {
       item.children.map((child, index) => {
         const pathname = child.url ? child.url : `/${item.id}/${child.id}`;
         const active = this.context.router.isActive({ pathname });
+
+        if (child.group) {
+          nodeItems.push(
+            <Nav.Item panel key={child.id}>
+              {child.name}
+            </Nav.Item>
+          );
+          return;
+        }
+
         const nav = (
-          <Nav.Item key={index} componentClass={Link} to={pathname} active={active}>
+          <Nav.Item key={child.id} componentClass={Link} to={pathname} active={active}>
             {child.name} <span className="title-zh">{child.title}</span>
           </Nav.Item>
         );

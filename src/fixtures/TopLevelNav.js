@@ -59,9 +59,11 @@ class TopLevelNav extends React.Component {
             <Icon icon={tools} svgStyle={svgStyle} size="lg" />
           </WithTooltipButton>
 
-          <WithTooltipButton tip="GitHub" className="icon-btn-circle" href="https://github.com/rsuite/rsuite">
-            <Icon icon="github" size="lg" />
-          </WithTooltipButton>
+          <div className="nav-menu-bottom">
+            <WithTooltipButton tip="GitHub" className="icon-btn-circle" href="https://github.com/rsuite/rsuite">
+              <Icon icon="github" size="lg" />
+            </WithTooltipButton>
+          </div>
         </div>
         {children}
         <SearchDrawer

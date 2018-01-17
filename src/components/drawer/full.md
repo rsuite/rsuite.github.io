@@ -66,7 +66,7 @@ class DrawersBasic extends React.Component{
             <Drawer.Title>Drawer Title</Drawer.Title>
           </Drawer.Header>
           <Drawer.Body>
-            <Paragraph count={3} />
+            <Paragraph count={1} />
           </Drawer.Body>
           <Drawer.Footer>
             <Button onClick={this.close} appearance="primary">Confirm</Button>

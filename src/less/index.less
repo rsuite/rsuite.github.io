@@ -137,7 +137,21 @@
   }
   &-menu {
     margin-top: 20px;
+    .btn {
+      &:active, &:focus {
+        color: white;
+        background: inherit;
+      }
+    }
   }
+
+  .nav-menu-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 9px;
+  }
+
 }
 
 .sidebar-wrapper.fixed {
@@ -188,6 +202,11 @@
     font-size: 12px;
     margin-left: 4px;
     opacity: 0.5;
+  }
+  .nav-item-panel{
+    padding: 20px 12px 12px 12px;
+    color: #aaa;
+    border-bottom: 1px solid #eee;
   }
 
 }
@@ -541,12 +560,7 @@ path.bg {
   border-radius: 4px;
 }
 
-.top-level-nav-menu .btn {
-  &:active, &:focus {
-    color: white;
-    background: inherit;
-  }
-}
+
 
 .code-view>div>.tree-view{
   border: 1px solid #eee;
