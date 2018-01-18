@@ -4,7 +4,7 @@
 ```js
 const instance = (
   <div style={{width:250}}>
-    <Sidenav defaultOpenKeys={["3","4"]}>
+    <Sidenav defaultOpenKeys={["3","4"]} defaultActiveKey="2">
       <Sidenav.Body>
         <Nav>
           <Nav.Item eventKey="1" active icon={<Icon icon="dashboard" />}>Dashboard</Nav.Item>

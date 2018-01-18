@@ -9,7 +9,7 @@
 ```js
 const styles = {
   width:250,
-  display:'inline-block',
+  display:'inline-table',
   marginRight:10
 };
 
