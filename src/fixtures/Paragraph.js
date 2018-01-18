@@ -5,20 +5,18 @@ const images = {
   short: require('../../resources/images/short-paragraph.png')
 };
 
-export default function ({ count = 1, width = '100%', size = 'default', style, children, ...props }) {
-  return (
-    <div
-      {...props}
-      style={{ width, maxWidth: 600, ...style }}
-      className="paragraph"
-    >
-      {
-        [...Array(count)].map((item, index) => {
+export default ({ count = 1, width = '100%', size = 'default', style, children, ...props }) => (
+  <div
+    {...props}
+    style={{ width, maxWidth: 600, ...style }}
+    className="paragraph"
+  >
+    {
+      [...Array(count)].map((item, index) => {
 
-          return <img key={index} width='100%' src={images[size]} style={{ marginTop: index > 0 ? 18 : 0 }} />;
-        })
-      }
-      {children}
-    </div>
-  );
-}
+        return <img key={index} width='100%' src={images[size]} style={{ marginTop: index > 0 ? 18 : 0 }} />;
+      })
+    }
+    {children}
+  </div>
+);
