@@ -2,19 +2,34 @@
 
 引导用户按照流程完成任务的导航条。
 
+- `<Steps>` 步骤条组件
+- `<Steps.Item>`  步骤条内的每一个步骤。
+
+
 ## 演示
 
 <!--{demo}-->
 
 ## API
 
+### `<Steps>`
 
-| Prop name   | Type                           | Default      | Description          |
-|-------------|--------------------------------|--------------|----------------------|
-| title       | string                         |              | 设置每个步骤的主标题           |
-| description | string                         |              | 对每个步骤进行描述            |
-| current     | number                         | 0            | 可以更改该属性来改变所在步骤（从0开始） |
-| size        | string                         |              | 设置为 small            |
-| status      | unico: 'process'                |              | 设置为 error            |
-| direction   | enum: 'horizontal','vertical' | 'horizontal' | 设置布局                 |
-| icon        | React.Node                     |              | 设置 <Icon> 自定义图标      |
+| 属性名称      | 类型 `(默认值)`                                    | 描述               |
+| ------------- | -------------------------------------------------- | ------------------ |
+| classPrefix   | string `('steps')`                                 | className 前缀     |
+| vertical      | boolean                                            | 设置垂直显示       |
+| small         | boolean                                            | 设置小尺寸的步骤条 |
+| current       | number`(0)`                                             | 当前执行步骤       |
+| currentStatus | 'finish', 'wait', 'process', 'error' `('process')` | 当前执行步骤状态   |
+
+
+
+### `<Steps.Item>`
+
+| 属性名称    | 类型 `(默认值)`                      | 描述               |
+| ----------- | ------------------------------------ | ------------------ |
+| classPrefix | string `('steps-item')`              | className 前缀     |
+| title       | React.Node                           | 设置标题           |
+| description | React.Node                           | 设置描述           |
+| icon        | React.Element&lt;typeof Icon&gt; ,   | 设置小尺寸的步骤条 |
+| status      | 'finish', 'wait', 'process', 'error' | 步骤状态           |

@@ -7,30 +7,58 @@ class PaginationAdvanced extends React.Component{
   constructor(props){
     super(props);
     this.state={
-       activePage: 1
+      prev: true,
+      next: true,
+      first: true,
+      last: true,
+      ellipsis: true,
+      boundaryLinks: true,
+      activePage: 1
     }
     this.handleSelect = this.handleSelect.bind(this);
   }
 
   handleSelect(eventKey) {
-    this.setState({
-      activePage: eventKey
-    });
+    this.setState({ activePage: eventKey });
   }
-  render() {
+  handleSetProp(key,value){
+    this.setState({[key]: value});
+  }
+  renderToggle(type){
     return (
-      <Pagination
-        prev
-        next
-        first
-        last
-        ellipsis
-        boundaryLinks
-        pages={30}
-        maxButtons={5}
-        activePage={this.state.activePage}
-        onSelect={this.handleSelect}
-      />
+      <span>
+        {type}：
+        <Toggle
+          checked={this.state[type]}
+          onChange={()=>{this.handleSetProp(type, !this.state[type])}}
+        />
+      </span>
+    )
+  }
+
+  render() {
+
+    return (
+      <div>
+
+        <div>
+          {this.renderToggle('first')}
+          {this.renderToggle('last')}
+          {this.renderToggle('prev')}
+          {this.renderToggle('next')}
+          {this.renderToggle('ellipsis')}
+          {this.renderToggle('boundaryLinks')}
+        </div>
+
+        <hr />
+        <Pagination
+          {...this.state}
+          pages={30}
+          maxButtons={5}
+          activePage={this.state.activePage}
+          onSelect={this.handleSelect}
+        />
+      </div>
     );
   }
 
