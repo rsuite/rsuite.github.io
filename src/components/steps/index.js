@@ -7,8 +7,8 @@ import { Steps,Icon } from '../../rsuiteSource';
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
-  //require('./title.md'),
-  //require('./description.md'),
+  require('./title.md'),
+  require('./description.md'),
   //require('./vertical.md'),
   //require('./status.md'),
   //require('./size.md'),
