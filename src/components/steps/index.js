@@ -9,10 +9,10 @@ const examples = [
   require('./basic.md'),
   require('./title.md'),
   require('./description.md'),
-  //require('./vertical.md'),
-  //require('./status.md'),
-  //require('./size.md'),
-  //require('./icon.md')
+  require('./vertical.md'),
+  require('./status.md'),
+  require('./size.md'),
+  require('./icon.md')
 ];
 
 export default () => {
