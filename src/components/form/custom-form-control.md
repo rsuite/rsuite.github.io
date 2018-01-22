@@ -1,15 +1,15 @@
-### 自定义 `Field`
+### 自定义 `FormControl`
 
 <!--start-code-->
 ```js
-const model = SchemaModel({
-  skill: NumberType().isRequired('该字段不能为空')
+const model = Schema.Model({
+  skill: Schema.Types.ArrayType().minLength(2, '至少选择2个').isRequired('该字段不能为空')
 });
 
 const CustomField = ({ name, label, accepter, error, ...props }) => (
   <FormGroup className={error ? 'has-error' : ''}>
     <ControlLabel>{label} </ControlLabel>
-    <Field name={name} accepter={accepter} {...props} />
+    <FormControl name={name} accepter={accepter} {...props} />
     <HelpBlock className={error ? 'error' : ''}>{error}</HelpBlock>
   </FormGroup>
 );
@@ -18,9 +18,7 @@ class CustomFieldForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      values: {
-        skill: 3,
-      },
+      values: {},
       errors: {}
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -48,20 +46,19 @@ class CustomFieldForm extends React.Component {
           model={model}
         >
 
-
           <CustomField
             name="skill"
             label="技能"
-            accepter={Selectpicker}
+            accepter={CheckboxGroup}
             error={errors.skill}
-            data={[
-              { label: 'Node.js', value: 1 },
-              { label: 'CSS3', value: 2 },
-              { label: 'Javascript', value: 3 },
-              { label: 'HTML5', value: 4 }
-            ]}
-          />
-          <Button appearance="primary" onClick={this.handleSubmit}> 提交 </Button>
+            inline
+          >
+            <Checkbox value={0}>Node.js</Checkbox>
+            <Checkbox value={1}>CSS3</Checkbox>
+            <Checkbox value={2}>Javascript</Checkbox>
+            <Checkbox value={3}>HTML5</Checkbox>
+          </CustomField>
+          <Button appearance="primary" onClick={this.handleSubmit}> Submit </Button>
         </Form>
       </div>
     );
@@ -72,15 +69,3 @@ ReactDOM.render(<CustomFieldForm />);
 
 ```
 <!--end-code-->
-
-如果一个组件不是原生表单控件，也不是 `RSuite` 库中提供的基础组件，要在 `form-lib` 中使用，应该怎么处理呢？
-
-只需要在写这个组件的时候实现对应的 API 就可以了，
-
-- `value` : 受控时候设置的值
-- `defalutValue`: 默认值，非受控情况先设置的值
-- `onChange`: 组件数据发生改变的回调函数
-- `onBlur`: 在失去焦点的回调函数
-
-接下来我们使用 `rsuite-selectpicker` 单选 作为示例, 在 `rsuite-selectpicker` 内部已经实现了这些 API。
-

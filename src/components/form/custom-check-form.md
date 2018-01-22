@@ -2,8 +2,8 @@
 
 <!--start-code-->
 ```js
-const model = SchemaModel({
-  name: StringType().addRule((value) => {
+const model = Schema.Model({
+  name: Schema.Types.StringType().addRule((value) => {
     return /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(value);
   }, '请输入正确的邮箱')
 });
@@ -11,7 +11,7 @@ const model = SchemaModel({
 const CustomField = ({ name, label, accepter, error, ...props }) => (
   <FormGroup className={error ? 'has-error' : ''}>
     <ControlLabel>{label} </ControlLabel>
-    <Field name={name} accepter={accepter} {...props} />
+    <FormControl name={name} accepter={accepter} {...props} />
     <HelpBlock className={error ? 'error' : ''}>{error}</HelpBlock>
   </FormGroup>
 );
@@ -58,7 +58,6 @@ class CustomCheckForm extends React.Component {
           <CustomField
             name="name"
             label="邮箱"
-            accepter={FormControl}
             error={errors.name}
           />
           <Button appearance="primary" onClick={this.handleSubmit}> 提交 </Button>

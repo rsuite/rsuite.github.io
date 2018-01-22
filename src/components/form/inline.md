@@ -1,22 +1,27 @@
 ### 单行布局
 <!--start-code-->
 ```js
-var formLayoutInstance = (
+var instance = (
   <Form inline>
-    <FormGroup controlId='username'>
-      <ControlLabel>Username</ControlLabel>
-      <FormControl type='text' />
+    <FormGroup>
+      <ControlLabel>Input</ControlLabel>
+      <FormControl name="user"/>
     </FormGroup>
 
-    <FormGroup controlId='checkboxList'>
+    <FormGroup>
       <ControlLabel>CheckboxGroup</ControlLabel>
-      <CheckboxGroup name="checkboxList" inline>
-        <Checkbox checked>Item A</Checkbox>
+      <FormControl
+        name="checkbox"
+        accepter={CheckboxGroup}
+        inline
+      >
+        <Checkbox>Item A</Checkbox>
         <Checkbox>Item B</Checkbox>
-      </CheckboxGroup>
+      </FormControl>
+
     </FormGroup>
   </Form>
 );
-ReactDOM.render(formLayoutInstance);
+ReactDOM.render(instance);
 ```
 <!--end-code-->

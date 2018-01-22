@@ -20,7 +20,7 @@ const instance = (
     </FormGroup>
     <FormGroup>
       <ControlLabel>Textarea</ControlLabel>
-      <FormControl rows={5} name='textarea' componentClass="textarea" />
+      <FormControl name='textarea' rows={5} componentClass="textarea" />
     </FormGroup>
   </Form>
 );

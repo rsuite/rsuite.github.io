@@ -6,7 +6,8 @@
 
 const styles = {
   width: '200px',
-  display: 'inline-table'
+  display: 'inline-table',
+  verticalAlign:'top'
 };
 
 const instance = (

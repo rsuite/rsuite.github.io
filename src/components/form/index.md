@@ -3,36 +3,30 @@
 一组处理表单的组件和方法。
 
 - `<Form>`    表单全局组件
-- `<FormGroup>`  用于表单布局
 - `<FormControl>`  表单控件
+- `<FormGroup>`  用于表单布局
 - `<ControlLabel>` 表单组件显示文本
 - `<HelpBlock>` 帮助提醒，一般会放在表单控件下面，提醒或者警告输入的内容
 
 
-表单数据模型，数据数据校验 API :
+表单数据模型，数据数据校验：
 
-- `SchemaModel`
-- `SchemaTypes.StringType`
-- `SchemaTypes.NumberType`
-- `SchemaTypes.ArrayType`
-- `SchemaTypes.DateType`
-- `SchemaTypes.ObjectType`
-- `SchemaTypes.BooleanType`
+- `Schema.Model`  定义数据模型对象
+- `Schema.Types`  提供了一组数据类型 API：
+  - `StringType`
+  - `NumberType`
+  - `ArrayType`
+  - `DateType`
+  - `ObjectType`
+  - `BooleanType`
 
 
 ## 获取组件
 
 
 ```js
+import { Form, FormGroup, FormControl, ControlLabel, HelpBlock, Schema } from 'rsuite';
 
-import {
-  Form,
-  FormGroup,
-  FormControl,
-  ControlLabel,
-  SchemaModel,
-  SchemaTypes
-} from 'rsuite';
 ```
 
 ## 演示
@@ -84,9 +78,104 @@ import {
 | htmlFor  | string  |        |      |
 | srOnly   | boolean | false  |      |
 
+<br/>
+<br/>
+
+### `Schema.Model`
+------
+
+#### 如何使用？
+
+```js
+import { Schema } from 'rsuite';
+
+const userModel = Schema.Model({
+    username: Schema.Types.StringType().isRequired('用户名不能为空'),
+    email: Schema.Types.StringType().isEmail('请输入正确的邮箱'),
+    age: Schema.Types.NumberType('年龄应该是一个数字').range(18, 30, '年应该在 18 到 30 岁')
+});
+
+const checkResult = userModel.check({
+    username: 'foobar',
+    email: 'foo@bar.com',
+    age: 40
+})
+
+console.log(checkResult);
+```
+
+`checkResult` 返回结构是:
+
+```js
+{
+    username: { hasError: false },
+    email: { hasError: false },
+    age: { hasError: true, errorMessage: '年应该在 18 到 30 岁' }
+}
+```
+
+#### 多重验证
+
+```js
+StringType()
+  .minLength(6,'不能少于 6 个字符')
+  .maxLength(30,'不能大于 30 个字符')
+  .isRequired('该字段不能为空');
+```
 
 
-### `SchemaModel`
+#### 自定义验证
+通过 `addRule` 函数自定义一个规则。
+
+如果是对一个字符串类型的数据进行验证，可以通过 `pattern` 方法设置一个正则表达式进行自定义验证。
+
+```js
+
+const myModel = Schema.Model({
+    field1: Schema.Types.StringType().addRule((value) => {
+        return /^[1-9][0-9]{3}\s?[a-zA-Z]{2}$/.test(value);
+    }, '请输入合法字符'),
+    field2: Schema.Types.StringType().pattern(/^[1-9][0-9]{3}\s?[a-zA-Z]{2}$/, '请输入合法字符')
+});
+```
+
+#### 自定义动态错误信息
+
+例如，要通过 `value` 的不同情况，返回不同的错误信息，参考以下
+
+```js
+const myModel = Schema.Model({
+    field1: Schema.Types.StringType().addRule((value) => {
+        if(value==='root'){
+          return {
+            hasError: true,
+            errorMessage:'不能是关键字 root'
+          }
+        }else if(!/^[a-zA-Z]+$/.test(value)){
+          return {
+            hasError: true,
+            errorMessage:'只能是英文字符'
+          }
+        }
+
+        return {
+            hasError: false
+        }
+    })
+});
+```
+
+<br/>
+<br/>
+### `Schema.Types`
+------
+- `StringType`
+- `NumberType`
+- `ArrayType`
+- `DateType`
+- `ObjectType`
+- `BooleanType`
+
 
 #### `StringType`
 - isRequired()
