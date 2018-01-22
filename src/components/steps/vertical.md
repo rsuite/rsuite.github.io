@@ -11,14 +11,14 @@ const styles = {
 
 const instance = (
   <div>
-    <Steps current={1} direction="vertical" style={styles}>
+    <Steps current={1} vertical style={styles}>
       <Steps.Item title='已完成'/>
       <Steps.Item title='进行中'/>
       <Steps.Item title='待运行'/>
       <Steps.Item title='待运行'/>
     </Steps>
 
-    <Steps current={1} direction="vertical" style={styles}>
+    <Steps current={1} vertical style={styles}>
       <Steps.Item title='已完成' description='描述1' />
       <Steps.Item title='进行中' description='描述2' />
       <Steps.Item title='待运行' description='描述3' />
