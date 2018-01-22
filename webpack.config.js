@@ -5,13 +5,18 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const markdownRenderer = require('react-markdown-reader').renderer;
+const CSSSplitWebpackPlugin = require('css-split-webpack-plugin').default;
 
-const iconPath = ['./node_modules/rsuite-theme', '../rsuite-theme'].map(relativePath => path.resolve(__dirname, relativePath));
+const iconPath = [
+  './node_modules/rsuite-theme',
+  '../rsuite-theme'
+].map(relativePath => path.resolve(__dirname, relativePath));
 
-const { NODE_ENV, STYLE_DEBUG } = process.env;
+const { NODE_ENV, STYLE_DEBUG, IE_DEBUG } = process.env;
 const extractLess = new ExtractTextPlugin({
   filename: '[contenthash].css',
-  disable: NODE_ENV === 'development'
+  // 当 DEBUG ie 时 需要启用 ExtractTextPlugin 用于分割 css
+  disable: NODE_ENV === 'development' && !IE_DEBUG
 });
 const plugins = [
   new webpack.HotModuleReplacementPlugin(),
@@ -22,6 +27,8 @@ const plugins = [
     }
   }),
   extractLess,
+  // [IE9 最大 css 选择器数为 4095]{@link https://support.microsoft.com/zh-cn/help/262161/a-webpage-that-uses-css-styles-does-not-render-correctly-in-internet-e}
+  new CSSSplitWebpackPlugin({ size: 4000 }),
   new webpack.optimize.ModuleConcatenationPlugin(),
   new HtmlwebpackPlugin({
     title: 'RSUITE | 一套 React 的 UI 组件库',
@@ -106,58 +113,69 @@ const common = {
       },
       {
         test: /\.md$/,
-        use: [{
-          loader: 'html-loader'
-        }, {
-          loader: 'markdown-loader',
-          options: {
-            pedantic: true,
-            renderer: markdownRenderer
+        use: [
+          {
+            loader: 'html-loader'
+          }, {
+            loader: 'markdown-loader',
+            options: {
+              pedantic: true,
+              renderer: markdownRenderer
+            }
           }
-        }]
+        ]
       },
       {
         test: /\.html$/,
-        use: [{
-          loader: 'html-loader'
-        }]
+        use: [
+          {
+            loader: 'html-loader'
+          }
+        ]
       },
       {
         test: /\.(jpg|png)$/,
         //`publicPath`  only use to assign assets path in build
-        use: [{
-          loader: 'url-loader',
-          options: {
-            limit: 8192,
-            publicPath
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+              publicPath
+            }
           }
-        }]
+        ]
       },
       {
         test: /\.(woff|woff2|eot|ttf|svg)($|\?)/,
         include: iconPath,
-        use: [{
-          loader: 'url-loader',
-          options: {
-            limit: 1,
-            size: 16,
-            hash: 'sha512',
-            digest: 'hex',
-            name: 'resources/[hash].[ext]',
-            publicPath: NODE_ENV === 'development' ? '/' : './'
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 1,
+              size: 16,
+              hash: 'sha512',
+              digest: 'hex',
+              name: 'resources/[hash].[ext]',
+              publicPath: NODE_ENV === 'development' ? '/' : './'
+            }
           }
-        }]
+        ]
       },
       {
         test: /\.svg$/,
         exclude: iconPath,
-        use: [{
-          loader: 'svg-sprite-loader',
-          options: {
-            symbolId: 'icon-[name]'
+        use: [
+          {
+            loader: 'svg-sprite-loader',
+            options: {
+              symbolId: 'icon-[name]'
+            }
           }
-        }]
-      }]
+        ]
+      }
+    ]
   },
   plugins: plugins
 };
