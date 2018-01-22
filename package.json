@@ -8,6 +8,7 @@
   },
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server -d --watch --inline --history-api-fallback --progress --colors --port 3200 --host 0.0.0.0",
+    "dev-ie":"IE_DEBUG=true npm run dev",
     "dev-styles": "STYLE_DEBUG=STYLE npm run dev",
     "dev-styles-source": "STYLE_DEBUG=SOURCE npm run dev",
     "build": "rm -rf assets &&  NODE_ENV=production webpack --progress --colors",
@@ -63,6 +64,7 @@
     "colors": "^1.1.2",
     "compression-webpack-plugin": "^1.0.1",
     "css-loader": "^0.23.1",
+    "css-split-webpack-plugin": "^0.2.5",
     "cssnano": "^3.10.0",
     "docsearch.js": "^2.5.2",
     "dom-lib": "^0.2.6",
