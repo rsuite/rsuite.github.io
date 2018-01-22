@@ -1,4 +1,10 @@
-### 自定义 `FormControl`
+### `FormControl`
+
+- FormControl 用于绑定 Form 中的数据字段，通过 `name` 属性和 Schema.Model 对象的 `key` 对应。
+- FormControl 默认是个 `Input` 组件，可以通过 `accepter` 设置需要的数据录入组件。
+
+> 例如: `<FormControl accepter={CheckboxGroup} />` ,  FormControl 会渲染一个 `<CheckboxGroup>` 组件, 同时与 Form 中的 Schema.Model 实例绑定。
+
 
 <!--start-code-->
 ```js

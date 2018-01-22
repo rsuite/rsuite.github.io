@@ -19,8 +19,6 @@ import {
   InputGroup
 } from '../../rsuiteSource';
 
-console.log(Schema);
-
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
@@ -28,16 +26,7 @@ const examples = [
   require('./inline.md'),
   require('./form-check.md'),
   require('./custom-form-control.md'),
-  /*
-
-
-  require('./inline.md'),
-  require('./help-block.md'),
-  require('./input-group.md'),
-
-  require('./schema-model.md'),
   require('./custom-check-form.md')
-  */
 ];
 
 export default () => {

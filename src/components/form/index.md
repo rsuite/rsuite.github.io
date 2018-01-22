@@ -1,24 +1,23 @@
 # Form 表单 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/form/index.md)
 
-一组处理表单的组件和方法。
+一组处理表单数据的组件和模型。
 
-- `<Form>`    表单全局组件
-- `<FormControl>`  表单控件
-- `<FormGroup>`  用于表单布局
-- `<ControlLabel>` 表单组件显示文本
-- `<HelpBlock>` 帮助提醒，一般会放在表单控件下面，提醒或者警告输入的内容
-
+- `<Form>`         定义一个表单。
+- `<FormControl>`  表单控件，定义一个表单字段。
+- `<FormGroup>`    表单控件组，用于表单控件布局
+- `<ControlLabel>` 表单控件对应的标题。
+- `<HelpBlock>`    表单控件对应帮助块，一般会放在表单控件下面，提醒、警告输入的内容。
 
 表单数据模型，数据数据校验：
 
 - `Schema.Model`  定义数据模型对象
-- `Schema.Types`  提供了一组数据类型 API：
-  - `StringType`
-  - `NumberType`
-  - `ArrayType`
-  - `DateType`
-  - `ObjectType`
-  - `BooleanType`
+- `Schema.Types`  提供了一组数据类型：
+    - `StringType`
+    - `NumberType`
+    - `ArrayType`
+    - `DateType`
+    - `ObjectType`
+    - `BooleanType`
 
 
 ## 获取组件

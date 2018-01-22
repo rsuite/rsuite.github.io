@@ -1,7 +1,7 @@
 
 ### 表单校验
 
-表单校验需要用到 `FormControl` 组件，和 `Schema` API。
+> 表单校验需要用到 `FormControl` 组件，和 `Schema` API。
 
 <!--start-code-->
 ```js
