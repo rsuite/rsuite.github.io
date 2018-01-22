@@ -136,9 +136,13 @@ export default [{
     name: 'Radio *',
     title: '单选框'
   }, {
+    id: 'input',
+    name: 'Input',
+    title: '输入框'
+  }, {
     id: 'form',
     name: 'Form',
-    title: '表单控件'
+    title: '表单'
   }, {
     id: 'select-picker',
     name: 'SelectPicker',

@@ -65,7 +65,7 @@ class RSuiteForm extends React.Component {
             label="状态"
             accepter={FormControl}
             error={errors.status}
-            componentClass="select"
+            type="select"
           >
             <option value={1}>启用</option>
             <option value={0}>禁用</option>
@@ -97,7 +97,7 @@ class RSuiteForm extends React.Component {
             name="bio"
             label="简介"
             accepter={FormControl}
-            componentClass="textarea"
+            type="textarea"
             error={errors.bio}
           />
 

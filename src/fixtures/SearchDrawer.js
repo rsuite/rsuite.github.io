@@ -3,7 +3,7 @@ import debounce from 'lodash/debounce';
 import get from 'lodash/get';
 import algoliasearch from 'algoliasearch';
 import { Link } from 'react-router';
-import { Drawer, FormControl } from '../rsuiteSource';
+import { Drawer, Input } from '../rsuiteSource';
 
 
 class SearchDrawer extends Component {
@@ -32,6 +32,7 @@ class SearchDrawer extends Component {
     });
   }
   handleSearch = (keyword) => {
+    console.log(keyword);
     if (keyword === '') {
       this.setState({ list: [] });
     }
@@ -59,7 +60,7 @@ class SearchDrawer extends Component {
           <Drawer.Title>搜索</Drawer.Title>
         </Drawer.Header>
         <Drawer.Body>
-          <FormControl
+          <Input
             placeholder="搜索..."
             className="search-input"
             value={this.state.keyword}

@@ -33,12 +33,16 @@ const context = require('./index.md');
 const examples = [
   require('./basic.md'),
   require('./horizontal.md'),
+  /*
+
+
   require('./inline.md'),
   require('./help-block.md'),
   require('./input-group.md'),
 
   require('./schema-model.md'),
   require('./custom-check-form.md')
+  */
 ];
 
 export default () => {

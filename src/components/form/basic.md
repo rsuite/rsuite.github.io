@@ -1,42 +1,27 @@
-### 基础表单控件
-可以通过为 `<FormControl>` 设置 `type` 属性来改变表单控件的类型。
+### 默认
+
 <!--start-code-->
 ```js
 const instance = (
-  <Form>
-    <FormGroup controlId='user'>
-      <ControlLabel>Text</ControlLabel>
-      <FormControl type='text' />
+  <Form style={{width:300}}>
+    <FormGroup>
+      <ControlLabel>Username</ControlLabel>
+      <FormControl name='name' />
       <HelpBlock>Required</HelpBlock>
     </FormGroup>
-    <FormGroup controlId='email'>
+    <FormGroup>
       <ControlLabel>Email</ControlLabel>
-      <FormControl type='email' />
+      <FormControl name='email' type="email" />
     </FormGroup>
-    <FormGroup controlId='number'>
-      <ControlLabel>Number</ControlLabel>
-      <FormControl type='number' />
+    <FormGroup>
+      <ControlLabel>Password</ControlLabel>
+      <FormControl name='password' type="password" />
     </FormGroup>
-    <FormGroup controlId='file'>
-      <ControlLabel>File</ControlLabel>
-      <FormControl type='file' />
-    </FormGroup>
-
-    <FormGroup controlId='select'>
-      <ControlLabel>Select</ControlLabel>
-      <FormControl componentClass='select'>
-        <option value='A'>Option A</option>
-        <option value='B'>Option B</option>
-        <option value='C'>Option C</option>
-        <option value='D'>Option D</option>
-      </FormControl>
-    </FormGroup>
-
-    <FormGroup controlId='textarea'>
+    <FormGroup>
       <ControlLabel>Textarea</ControlLabel>
-      <FormControl componentClass="textarea" />
+      <FormControl rows={5} name='textarea' componentClass="textarea" />
     </FormGroup>
-</Form>
+  </Form>
 );
 ReactDOM.render(instance);
 ```

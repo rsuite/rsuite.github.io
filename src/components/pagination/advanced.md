@@ -1,4 +1,4 @@
-### 高级选项
+### 更多设置
 
 <!--start-code-->
 ```js
@@ -46,6 +46,7 @@ class PaginationAdvanced extends React.Component{
           {this.renderToggle('last')}
           {this.renderToggle('prev')}
           {this.renderToggle('next')}
+          <br /><br />
           {this.renderToggle('ellipsis')}
           {this.renderToggle('boundaryLinks')}
         </div>

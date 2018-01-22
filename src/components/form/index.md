@@ -2,41 +2,38 @@
 
 一组处理表单的组件和方法。
 
-
-表单基础控件
-
-- `<Form>`
-- `<Form.Field>`
-- `<FormGroup>`
-- `<FormControl>`  表单组件，支持文本框，多行文本框，下拉框等，通过 `type` 配置
+- `<Form>`    表单全局组件
+- `<FormGroup>`  用于表单布局
+- `<FormControl>`  表单控件
 - `<ControlLabel>` 表单组件显示文本
 - `<HelpBlock>` 帮助提醒，一般会放在表单控件下面，提醒或者警告输入的内容
-- `<InputGroup>` 自定义 Input
 
-静态类及方法
 
-- `Form.createFormControl`
+表单数据模型，数据数据校验 API :
+
 - `SchemaModel`
-- `SchemaModel.StringType`
-- `SchemaModel.NumberType`
-- `SchemaModel.ArrayType`
-- `SchemaModel.DateType`
-- `SchemaModel.ObjectType`
-- `SchemaModel.BooleanType`
+- `SchemaTypes.StringType`
+- `SchemaTypes.NumberType`
+- `SchemaTypes.ArrayType`
+- `SchemaTypes.DateType`
+- `SchemaTypes.ObjectType`
+- `SchemaTypes.BooleanType`
 
 
 ## 获取组件
 
 
 ```js
-import { Form, FormGroup, FormControl, ControlLabel, SchemaModel  } from 'rsuite';
 
-const { Field, createFormControl } = Form;
-const { StringType, NumberType, ArrayType, DateType, ObjectType, BooleanType } = SchemaModel;
-
+import {
+  Form,
+  FormGroup,
+  FormControl,
+  ControlLabel,
+  SchemaModel,
+  SchemaTypes
+} from 'rsuite';
 ```
-
-
 
 ## 演示
 
@@ -49,50 +46,43 @@ const { StringType, NumberType, ArrayType, DateType, ObjectType, BooleanType } =
 
 ### `<Form>`
 
-| 名称            | 类型                                    | 描述                      |
-|---------------|---------------------------------------|-------------------------|
-| horizontal    | boolean                               | 设置表单内的元素左右两栏布局          |
-| inline        | boolean                               | 设置表单内元素在一行布局            |
-| values        | object                                | 表单的值 `受控组件`             |
-| defaultValues | object                                | 表单的初始默认值 `非受控组件`        |
-| model         | Schema                                | SchemaModel 对象          |
+| 名称          | 类型                                  | 描述                                      |
+| ------------- | ------------------------------------- | ----------------------------------------- |
+| horizontal    | boolean                               | 设置表单内的元素左右两栏布局              |
+| inline        | boolean                               | 设置表单内元素在一行布局                  |
+| values        | object                                | 表单的值 `受控组件`                       |
+| defaultValues | object                                | 表单的初始默认值 `非受控组件`             |
+| model         | Schema                                | SchemaModel 对象                          |
 | checkDelay    | number                                | 数据校验的时候，延迟处理，默认为 500 毫秒 |
-| checkTrigger  | enum: 'change','blur',null           | 默认为：'change'            |
-| onChange      | function(values:Object, event:Object) | 数据改变后的回调函数              |
-| onError       | function(errors:Object)               | 校验出错的回调函数               |
-| onCheck       | function(errors:Object)               | 数据校验的回调函数               |
-| errors        | object                                | 表单错误信息                  |
+| checkTrigger  | enum: 'change','blur',null            | 默认为：'change'                          |
+| onChange      | function(values:Object, event:Object) | 数据改变后的回调函数                      |
+| onError       | function(errors:Object)               | 校验出错的回调函数                        |
+| onCheck       | function(errors:Object)               | 数据校验的回调函数                        |
+| errors        | object                                | 表单错误信息                              |
 
-### `<Form.Field>`
 
-| 名称           | 类型                          | 描述                         |
-|--------------|-----------------------------|----------------------------|
-| name         | string                      | 表单元素名称                     |
-| accepter     | React.ElementType           | 受代理的组件                     |
+### `<FormControl>`
+
+| 名称         | 类型                       | 描述                                       |
+| ------------ | -------------------------- | ------------------------------------------ |
+| name         | string                     | 表单元素名称                               |
+| accepter     | React.ElementType          | 受代理的组件                               |
 | checkTrigger | enum: 'change','blur',null | 数据校验的触发类型,会覆盖 `<Form>`上的设置 |
 
 
 ### `<FormGroup>`
 
-| 属性名称            | 类型                                 | 默认值 | 描述  |
-|-----------------|------------------------------------|-----|-----|
-| controlId       | string                             |     |     |
-| validationState | enum: 'success','warning','error' |     |     |
+| 属性名称        | 类型                              | 默认值 | 描述 |
+| --------------- | --------------------------------- | ------ | ---- |
+| controlId       | string                            |        |      |
+| validationState | enum: 'success','warning','error' |        |      |
 
 ### `<ControlLabel>`
 
-| 属性名称    | 类型      | 默认值   | 描述  |
-|---------|---------|-------|-----|
-| htmlFor | string  |       |     |
-| srOnly  | boolean | false |     |
-
-### `<FormControl>`
-
-| 属性名称           | 类型                                                                  | 默认值    | 描述  |
-|----------------|---------------------------------------------------------------------|--------|-----|
-| componentClass | React.ElementType                                                   |        |     |
-| type           | enum:'text','email','number','file','select','textarea','password' | 'text' |     |
-| id             | string                                                              |        |     |
+| 属性名称 | 类型    | 默认值 | 描述 |
+| -------- | ------- | ------ | ---- |
+| htmlFor  | string  |        |      |
+| srOnly   | boolean | false  |      |
 
 
 
