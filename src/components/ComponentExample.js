@@ -21,12 +21,12 @@ class ComponentExample extends React.Component {
       examples,
       children,
       dependencies,
-      ...props
+      ...rest
     } = this.props;
     const docs = context.split('<!--{demo}-->');
 
     return (
-      <PageContainer {...props}>
+      <PageContainer {...rest}>
         <Markdown>{docs[0]}</Markdown>
         {
           examples.map((item, index) => (

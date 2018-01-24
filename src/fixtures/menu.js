@@ -140,6 +140,10 @@ export default [{
     name: 'Input',
     title: '输入框'
   }, {
+    id: 'toggle',
+    name: 'Toggle',
+    title: '开关'
+  }, {
     id: 'form',
     name: 'Form',
     title: '表单'
@@ -149,21 +153,17 @@ export default [{
     title: '单项选择器'
   },
   {
-    id: 'toggle',
-    name: 'Toggle',
-    title: '开关'
+    id: 'check-picker',
+    name: 'CheckPicker',
+    title: '多项选择器'
   }, {
-    id: 'check-tree',
-    name: 'CheckTree',
-    title: '多选树形控件'
+    id: 'tree-picker',
+    name: 'TreePicker',
+    title: '树形单项选择器'
   }, {
     id: 'check-tree-picker',
     name: 'CheckTreePicker',
     title: '树形多项选择器'
-  }, {
-    id: 'check-picker',
-    name: 'CheckPicker',
-    title: '多项选择器'
   }, {
     id: 'cascader',
     name: 'Cascader',
@@ -177,10 +177,6 @@ export default [{
     id: 'date-range-picker',
     name: 'DateRangePicker',
     title: '日期范围选择器'
-  }, {
-    id: 'tree-picker',
-    name: 'TreePicker',
-    title: '树形单项选择器'
   }, {
     id: 'uploader',
     name: 'Uploader',
@@ -198,6 +194,10 @@ export default [{
     id: 'tree',
     name: 'Tree',
     title: '树形控件'
+  }, {
+    id: 'check-tree',
+    name: 'CheckTree',
+    title: '多选树形控件'
   }, {
     id: 'panel',
     name: 'Panel',

@@ -5,10 +5,10 @@ import { PageProvider, PageNav, PageContent } from 'rsuite-page-nav';
 
 class PageContainer extends React.Component {
   render() {
-    const { children, ...props } = this.props;
+    const { children, ...rest } = this.props;
     return (
       <PageProvider>
-        <Row  {...props}>
+        <Row  {...rest}>
           <Col md={12} xs={12} sm={12} className="main-container">
             <PageContent>
               {children}

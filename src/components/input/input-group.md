@@ -26,6 +26,16 @@ const instance = (
       <InputGroup.Addon>to</InputGroup.Addon>
       <Input />
     </InputGroup>
+
+    <InputGroup>
+      <Input />
+      <InputGroup.Addon><Icon icon="search" /></InputGroup.Addon>
+    </InputGroup>
+
+    <InputGroup>
+      <InputGroup.Addon><Icon icon="avatar" /></InputGroup.Addon>
+      <Input />
+    </InputGroup>
   </div>
 );
 

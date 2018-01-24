@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormControl, Icon, Alert } from '../../rsuiteSource';
+import { Input, Icon, Alert } from '../../rsuiteSource';
 import IconItem from './IconItem';
 import PageContainer from '../../components/PageContainer';
 
@@ -71,7 +71,7 @@ class IconList extends React.Component {
     return (
 
       <PageContainer className="icon-list-wrap">
-        <FormControl
+        <Input
           type='text'
           placeholder="输入关键字进行搜索，如: hypers。然后点击图标，复制图标名称。"
           onChange={this.handleSearch}

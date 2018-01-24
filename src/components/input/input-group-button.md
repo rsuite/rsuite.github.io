@@ -1,4 +1,4 @@
-### inside
+### 按钮
 
 
 <!--start-code-->
@@ -6,25 +6,21 @@
 const instance = (
   <div style={{width:300}}>
 
-    <InputGroup inside>
+
+    <InputGroup>
       <Input />
       <InputGroup.Button>
         <Icon icon="search" />
       </InputGroup.Button>
     </InputGroup>
 
-    <InputGroup inside>
-      <Input />
-      <InputGroup.Addon>
-        <Icon icon="search" />
-      </InputGroup.Addon>
-    </InputGroup>
+
 
     <InputGroup inside>
-       <InputGroup.Addon>
-        <Icon icon="avatar" />
-      </InputGroup.Addon>
       <Input />
+      <InputGroup.Button>
+        <Icon icon="search" />
+      </InputGroup.Button>
     </InputGroup>
 
   </div>

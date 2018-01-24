@@ -16,6 +16,7 @@ const examples = [
   require('./textarea.md'),
   require('./input-group.md'),
   require('./input-group-inside.md'),
+  require('./input-group-button.md'),
   require('./tooltip.md'),
 ];
 
