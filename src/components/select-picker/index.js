@@ -7,6 +7,7 @@ const context = require('./index.md');
 const examples = [
   require('./basic.md'),
   require('./group.md'),
+  require('./placement.md'),
   require('./custom.md'),
   require('./disabled.md')
 ];
