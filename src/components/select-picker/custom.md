@@ -5,7 +5,7 @@
 const instance=(
   <SelectPicker
     data={data}
-    groupBy="role",
+    groupBy="role"
     renderMenuItem={(label, item) => {
       return <div><i className="icon icon-user" /> {label}</div>;
     }}
