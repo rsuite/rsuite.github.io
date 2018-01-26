@@ -8,7 +8,7 @@ const instance = (
 
     <InputGroup inside>
       <Input />
-      <InputGroup.Button appearance="subtle">
+      <InputGroup.Button>
         <Icon icon="search" />
       </InputGroup.Button>
     </InputGroup>

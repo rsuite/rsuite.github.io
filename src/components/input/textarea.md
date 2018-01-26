@@ -3,12 +3,21 @@
 <!--start-code-->
 ```js
 const instance = (
- <Input
+ <div>
+  <Input
     componentClass="textarea"
     rows={3}
     style={{ width:300 }}
     placeholder="Textarea"
   />
+  <hr />
+  <Input
+    componentClass="textarea"
+    rows={3}
+    style={{ width:300, resize: 'auto' }}
+    placeholder="Textarea"
+  />
+ </div>
 );
 ReactDOM.render(instance);
 ```
