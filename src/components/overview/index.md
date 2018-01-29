@@ -38,7 +38,7 @@
 
 - Form
 - FormGroup
-- FormControl
+- Input
 - InputGroup
 - InputNumber
 - Checkbox
@@ -53,6 +53,7 @@
 - AutoComplete
 - DatePicker
 - DateRangePicker
+- Uploader
 
 
 ## 数据展示
