@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "rsuite-page-nav": "^1.1.3",
-    "rsuite-selectpicker": "^3.0.0-next.4",
+    "rsuite-selectpicker": "^3.0.0-next.6",
     "rsuite-utils": "^0.1.0"
   },
   "peerDependencies": {
