@@ -9,20 +9,17 @@ const instance=(
     renderMenuItem={(label, item) => {
       return <div><i className="icon icon-user" /> {label}</div>;
     }}
-    renderMenuItemGroup={(label, item) => {
+    renderMenuGroup={(label, item) => {
       return (
         <div>
           <i className="icon icon-group" /> {label} - ({item.children.length})
         </div>
       );
     }}
-    renderPlaceholder={(placeholder, item) => {
-      if (!placeholder) {
-        return placeholder;
-      }
+    renderValue={(label, item) => {
       return (
         <div>
-          <i className="icon icon-user" /> {placeholder}
+          <i className="icon icon-user" /> {label}
         </div>
       );
     }}
