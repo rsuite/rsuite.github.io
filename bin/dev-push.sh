@@ -12,10 +12,13 @@ npm publish
 echo 're-publish finish'
 
 
-echo '-----in rsuite-----'
-npm unpublish rsuite@3.0.0-next.12
-cd ../rsuite
+
+echo '-----in rsuite-checkpicker-----'
+
+npm unpublish rsuite-checkpicker@3.0.0-next
+cd ../rsuite-checkpicker
 npm run build
 npm publish
 
 echo 're-publish finish'
+

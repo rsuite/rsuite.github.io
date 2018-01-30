@@ -16,6 +16,7 @@ const instance=(
       defaultValue={'Julius'}
       disabledItemValues={['Eugenia', 'Travon', 'Vincenza']}
     />
+
   </div>
 )
 ReactDOM.render(instance);

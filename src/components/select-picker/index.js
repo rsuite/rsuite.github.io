@@ -9,7 +9,8 @@ const examples = [
   require('./group.md'),
   require('./placement.md'),
   require('./custom.md'),
-  require('./disabled.md')
+  require('./disabled.md'),
+  require('./searchable.md')
 ];
 
 export default () => {

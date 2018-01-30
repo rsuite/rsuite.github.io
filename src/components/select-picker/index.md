@@ -1,6 +1,6 @@
 # SelectPicker 单项选择器 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/select-picker/index.md)
 
-用于单元项数据选择，支持分组。
+用于单项数据选择，支持分组。
 
 - `<SelectPicker>`
 
@@ -26,7 +26,7 @@ import { SelectPicker } from 'rsuite';
 
 | 属性名称           | 类型`(默认值)`                                   | 描述                                 |
 | ------------------ | ------------------------------------------------ | ------------------------------------ |
-| classPrefix        | string `('picker-select')`                    | className 前缀                       |
+| classPrefix        | string `('picker-select')`                       | className 前缀                       |
 | data               | array                                            | 组件数据                             |
 | disabled           | boolean                                          | 禁用组件                             |
 | disabledItemValues | array                                            | 禁用选项                             |
@@ -49,10 +49,10 @@ import { SelectPicker } from 'rsuite';
 | locale             | Object                                           | 本地语言                             |
 | searchable         | boolean `(true)`                                 | 可以搜索                             |
 | cleanable          | boolean `(true)`                                 | 可以清除                             |
-| placement          | enum: Placement                                  | 位置                                 |
+| placement          | enum: Placement`('bottomLeft')`                  | 位置                                 |
 
 
-### Enums and Unions
+### Enums & Unions
 
 ```js
 Type Placement = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight' | 'leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom';
