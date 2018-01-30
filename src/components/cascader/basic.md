@@ -3,7 +3,11 @@
 <!--start-code-->
 ```js
 const instance=(
-  <Cascader data={data} />
+  <Cascader
+    data={data}
+    valueKey="name"
+    labelKey="name"
+  />
 )
 ReactDOM.render(instance);
 ```
