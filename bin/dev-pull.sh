@@ -8,13 +8,9 @@ nrm use hypers
 echo '-------in rsuite-------'
 cd ../rsuite
 rm -R node_modules/rsuite-selectpicker/
+rm -R node_modules/rsuite-checkpicker/
 npm install rsuite-selectpicker
-echo 're-install finish'
-
-
-echo '-----in rsuite.github.io-----'
-rm -R node_modules/rsuite-selectpicker/
-npm install rsuite-selectpicker
+npm install rsuite-checkpicker
 echo 're-install finish'
 
 exit;
