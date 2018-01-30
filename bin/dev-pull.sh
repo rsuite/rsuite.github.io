@@ -13,9 +13,7 @@ echo 're-install finish'
 
 
 echo '-----in rsuite.github.io-----'
-rm -R node_modules/rsuite/
 rm -R node_modules/rsuite-selectpicker/
-npm install rsuite
 npm install rsuite-selectpicker
 echo 're-install finish'
 
