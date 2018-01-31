@@ -9,7 +9,6 @@ const instance=(
       data={data}
       valueKey="name"
       labelKey="name"
-      defaultValue={'Julius'}
       disabled
     />
     <hr />

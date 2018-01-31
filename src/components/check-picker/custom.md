@@ -6,6 +6,7 @@ const instance=(
   <CheckPicker
     data={data}
     groupBy="role"
+    placeholder="Select User"
     renderMenuItem={(label, item) => {
       return <div><i className="icon icon-user" /> {label}</div>;
     }}
@@ -16,11 +17,13 @@ const instance=(
         </div>
       );
     }}
-    renderValue={(label, item) => {
+    renderValue={(value, items) => {
       return (
-        <div>
-          <i className="icon icon-user" /> {label}
-        </div>
+        <span>
+          <span style={{color:'#575757'}}>
+            <i className="icon icon-user" /> Users :
+          </span> {value.join(' , ')}
+        </span>
       );
     }}
   />

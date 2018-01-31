@@ -6,6 +6,7 @@ const instance=(
   <SelectPicker
     data={data}
     groupBy="role"
+    placeholder="Select User"
     renderMenuItem={(label, item) => {
       return <div><i className="icon icon-user" /> {label}</div>;
     }}
@@ -19,7 +20,9 @@ const instance=(
     renderValue={(label, item) => {
       return (
         <div>
-          <i className="icon icon-user" /> {label}
+          <span style={{color:'#575757'}}>
+            <i className="icon icon-user" /> User :
+          </span>  {label}
         </div>
       );
     }}
