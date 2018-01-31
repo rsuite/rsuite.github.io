@@ -2,6 +2,20 @@
 
 nrm use hypers
 
+
+
+echo '-----in rsuite-cascader-----'
+
+npm unpublish rsuite-cascader@3.0.0-next
+cd ../rsuite-cascader
+npm run build
+npm publish
+
+echo 're-publish finish'
+
+
+
+
 echo '-----in rsuite-selectpicker-----'
 
 npm unpublish rsuite-selectpicker@3.0.0-next.9

@@ -104,23 +104,23 @@ export default [{
     title: '导航'
   }, {
     id: 'navbar',
-    name: 'Navbar',
+    name: 'Navbar *',
     title: '导航栏'
   }, {
     id: 'sidenav',
-    name: 'Sidenav',
+    name: 'Sidenav *',
     title: '侧导航'
   }, {
     id: 'steps',
-    name: 'Steps',
+    name: 'Steps *',
     title: '步骤条'
   }, {
     id: 'pagination',
-    name: 'Pagination',
+    name: 'Pagination *',
     title: '分页'
   }, {
     id: 'breadcrumb',
-    name: 'Breadcrumb',
+    name: 'Breadcrumb *',
     title: '面包屑'
   }, {
     group: true,
@@ -137,11 +137,11 @@ export default [{
     title: '单选框'
   }, {
     id: 'input',
-    name: 'Input',
+    name: 'Input *',
     title: '输入框'
   }, {
     id: 'toggle',
-    name: 'Toggle',
+    name: 'Toggle *',
     title: '开关'
   }, {
     id: 'form',
@@ -149,7 +149,7 @@ export default [{
     title: '表单'
   }, {
     id: 'select-picker',
-    name: 'SelectPicker',
+    name: 'SelectPicker *',
     title: '单项选择器'
   },
   {
