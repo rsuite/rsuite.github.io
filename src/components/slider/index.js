@@ -13,7 +13,6 @@ const examples = [
   require('./disabled.md'),
   require('./value.md'),
   require('./custom.md')
-  //require('./icon.md')
 ];
 
 export default () => {
