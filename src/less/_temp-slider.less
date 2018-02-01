@@ -1,0 +1,139 @@
+.slider {
+  @handle-color: #34c3ff;
+  @bar-color: #e5e5ea;
+  @disabled-color: #aaa;
+  position: relative;
+  margin: 10px 6px;
+  height: 12px;
+  border-radius: 5px;
+  background-color: @bar-color;
+  cursor: pointer;
+  border-top: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+  transition: background-color .3s ease;
+  &-graduated:after {
+    position: absolute;
+    height: 10px;
+    width: 2px;
+    top: -6px;
+    right: 0;
+    background: @bar-color;
+    content: ' '
+  }
+  &-graduator {
+    position: absolute;
+    display: table;
+    width: 100%;
+    ul {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: table-row;
+      li {
+        display: table-cell;
+        &:after {
+          position: absolute;
+          height: 10px;
+          width: 2px;
+          top: -6px;
+          background: @bar-color;
+          content: ' '
+        }
+      }
+    }
+  }
+  &-progress-bar {
+    height: 4px;
+    position: absolute;
+    background: @handle-color;
+    transition: width 0.1s;
+  }
+  &-showtip {
+    .tooltip {
+      opacity: 1;
+      left: -8px;
+      top: -36px;
+    }
+  }
+  &-handle {
+    position: absolute;
+    margin-left: -9px;
+    margin-top: -7px;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid @handle-color;
+    background-color: @handle-color;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+    z-index: 2;
+    transition: border-color .3s ease, transform .3s cubic-bezier(.18, .89, .32, 1.28), left 0.1s;
+    &.circle {
+      border-radius: 50%;
+    }
+    &:active {
+      box-shadow: 0 0 0 2px rgba(16, 142, 233, .2);
+    }
+    &:hover {
+      border-color: @handle-color;
+      transform: scale(1.1);
+      transform-origin: center center;
+    }
+  }
+  &-vertical {
+    width: 4px;
+    height: 100%;
+    padding: 0 2px;
+    border-left: 4px solid #fff;
+    border-right: 4px solid #fff;
+  }
+  &-vertical.slider-graduated:after {
+    height: 2px;
+    width: 10px;
+    top: initial;
+    left: 0px;
+    bottom: 0;
+  }
+  &-vertical &-bar {
+    position: absolute;
+    height: 100%;
+  }
+  &-vertical &-progress-bar {
+    width: 4px;
+    left: -2px;
+  }
+  &-vertical &-handle {
+    margin-left: -9px;
+    margin-top: -9px;
+  }
+  &-vertical &-graduator {
+    display: block;
+    ul {
+      display: block;
+      li {
+        display: block;
+        &:after {
+          height: 2px;
+          width: 10px;
+          top: initial;
+          left: -2px;
+        }
+      }
+    }
+  }
+  &-disabled &-handle {
+    background: @disabled-color;
+    border-color: @disabled-color;
+    cursor: not-allowed;
+  }
+  &-disabled &-progress-bar {
+    background: @disabled-color !important;
+  }
+  &-dragging &-handle {
+    transition: none;
+  }
+  &-dragging &-progress-bar {
+    transition: none;
+  }
+}

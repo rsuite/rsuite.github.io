@@ -178,6 +178,10 @@ export default [{
     name: 'DateRangePicker',
     title: '日期范围选择器'
   }, {
+    id: 'slider',
+    name: 'Slider',
+    title: '滑动输入控件'
+  },{
     id: 'uploader',
     name: 'Uploader',
     title: '上传控件'
