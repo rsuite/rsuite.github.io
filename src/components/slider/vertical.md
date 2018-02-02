@@ -10,17 +10,17 @@ export const VerticalSlider =  () => {
       <Row>
         <Col md={2}>
           <div style={style}>
-            <Slider vertical />
+            <Slider value={50} vertical />
           </div>
         </Col>
         <Col md={2}>
           <div style={style}>
-            <Slider vertical progress value={50}  />
+            <Slider value={50}  vertical progress />
           </div>
         </Col>
         <Col md={2}>
           <div style={style}>
-            <Slider value={10} min={0} step={5} max={100} graduated vertical />
+            <Slider value={50} min={0} step={5} max={100} graduated vertical progress/>
           </div>
         </Col>
       </Row>
