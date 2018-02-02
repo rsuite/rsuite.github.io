@@ -639,3 +639,33 @@ path.bg {
 .code-view-wrapper .code-view-toolbar .btn {
   border-style: none;
 }
+
+#customSlider {
+  margin-top: 18px;
+
+  .slider-handle {
+    top: -6px;
+    background-color: @H500;
+    text-align: center;
+    padding: 3px;
+    margin-left: -16px;
+    cursor: pointer;
+    transition-property: box-shadow, transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+
+    &:hover {
+      box-shadow: @slider-handle-hover-box-shadow;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &.@{ns}slider-dragging .slider-handle,
+  &.@{ns}slider-dragging .slider-handle:hover {
+    box-shadow: none;
+    transform: scale(1.2);
+  }
+}

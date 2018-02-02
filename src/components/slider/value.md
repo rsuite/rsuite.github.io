@@ -16,6 +16,7 @@ class ValueSlider extends React.Component {
         <Row>
           <Col md={6}>
             <Slider
+              style={{marginTop:16}}
               value={value}
               onChange={(value) => {
                 this.setState({ value });

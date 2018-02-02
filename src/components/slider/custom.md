@@ -23,6 +23,7 @@ class CustomSlider extends React.Component {
         人群扩展:
           <div style={{ width: 200, marginLeft: 20 }}>
           <Slider
+            id="customSlider"
             min={0}
             max={labels.length - 1}
             value={value}
