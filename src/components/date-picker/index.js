@@ -13,6 +13,7 @@ const examples = [
   require('./iso-week.md'),
   require('./disabled.md'),
   require('./intl.md'),
+  require('./placement.md'),
   require('./custom.md')
 ];
 

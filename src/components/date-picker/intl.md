@@ -7,7 +7,13 @@ const DatePickerIntl = props => (
     <DatePicker
       format="YYYY-MM-DD HH:mm:ss"
       locale={{
-        week: ['日', '一', '二', '三', '四', '五', '六'],
+        sunday: '日',
+        monday: '一',
+        tuesday: '二',
+        wednesday: '三',
+        thursday: '四',
+        friday: '五',
+        saturday: '六',
         ok: '确定',
         today: '今天',
         yesterday: '昨天',

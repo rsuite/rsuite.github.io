@@ -1,7 +1,10 @@
 ### 禁用与隐藏
 
+禁用是把一个可点击元素设置为不可点击状态，隐藏是直接在选项中不出现。
+
 <!--start-code-->
 ```js
+
 const DatePickerInstance = props => (
   <div className="field">
 

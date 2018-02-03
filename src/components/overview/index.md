@@ -1,7 +1,7 @@
-# 概览 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/overview/index.md)
+# 组件概览 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/overview/index.md)
 
 
-## 基础
+## General
 - [Button 按钮](/components/button)
   - `<Button>`
   - `<ButtonGroup>`
@@ -34,7 +34,36 @@
   - `<Modal.Footer>`
 
 
-## 数据录入
+## Navigation
+
+- [Dropdown 下拉菜单](/components/dropdown)
+  - `<Dropdown>`
+  - `<Dropdown.Item>`
+  - `<Dropdown.Menu>`
+- [Nav 导航](/components/nav)
+  - `<Nav>`
+  - `<Nav.Item>`
+  - `<Nav.Dropdown>`
+- [Navbar 导航栏](/components/navbar)
+  - `<Navbar>`
+  - `<Navbar.Header>`
+  - `<Navbar.Brand>`
+  - `<Navbar.Body>`
+- [Sidenav 侧导航](/components/sidenav)
+  - `<Sidenav>`
+  - `<Sidenav.Header>`
+  - `<Sidenav.Body>`
+- [Steps](/components/steps)
+  - `<Steps>`
+  - `<Steps.Item>`
+- [Breadcrumb](/components/breadcrumb)
+  - `<Breadcrumb>`
+  - `<Breadcrumb.Item>`
+- [Pagination](/components/pagination)
+  - `<Pagination>`
+
+
+## Data Entry & Display
 
 - Form
 - FormGroup
@@ -54,10 +83,6 @@
 - DatePicker
 - DateRangePicker
 - Uploader
-
-
-## 数据展示
-
 - Table
 - Tree
 - CheckTree
@@ -68,31 +93,8 @@
   - `<Progress.Line>`
   - `<Progress.Circle>`
 
-## 导航
 
-- [Dropdown 下拉菜单](/components/dropdown)
-  - `<Dropdown>`
-  - `<Dropdown.Item>`
-  - `<Dropdown.Menu>`
-- [Nav 导航](/components/nav)
-  - `<Nav>`
-  - `<Nav.Item>`
-  - `<Nav.Dropdown>`
-- [Navbar 导航栏](/components/navbar)
-  - `<Navbar>`
-  - `<Navbar.Header>`
-  - `<Navbar.Brand>`
-  - `<Navbar.Body>`
-- [Steps](/components/steps)
-  - `<Steps>`
-  - `<Steps.Item>`
-- [Breadcrumb](/components/breadcrumb)
-  - `<Breadcrumb>`
-  - `<Breadcrumb.Item>`
-- [Pagination](/components/pagination)
-  - `<Pagination>`
-
-## 布局
+## Layout
 - Grid 栅格布局
   - `<Grid>`
   - `<Row>`

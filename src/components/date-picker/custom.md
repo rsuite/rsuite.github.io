@@ -7,11 +7,9 @@ const DatePickerCustomToolbar = props => (
     <DatePicker
       ranges={[{
         label: '昨天',
-        closeOverlay: false,
         value: moment().add(-1, 'd')
       }, {
         label: '今天',
-        closeOverlay: false,
         value: moment()
       }, {
         label: '前一天',
