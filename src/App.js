@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import get from 'lodash/get';
 import { scrollTop } from 'dom-lib';
 import DocSidebar from './fixtures/DocSidebar';
-import { Grid, Row, Col } from './rsuiteSource';
+import { Grid, Row, Col, IntlProvider, enGB } from './rsuiteSource';
 
 const contextTypes = {
   router: PropTypes.object.isRequired
@@ -27,11 +27,13 @@ class App extends React.Component {
     const { location } = this.props;
     const className = location.pathname === '/' ? 'home-page' : '';
     return (
-      <div className={`doc-page ${className}`}>
-        <Grid className='doc-container' fluid>
-          {this.props.children}
-        </Grid>
-      </div>
+      <IntlProvider locale={enGB}>
+        <div className={`doc-page ${className}`}>
+          <Grid className='doc-container' fluid>
+            {this.props.children}
+          </Grid>
+        </div>
+      </IntlProvider>
     );
   }
 }
