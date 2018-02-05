@@ -7,7 +7,7 @@ const svgStyle = {
 };
 
 export default [{
-  id: 'getting-started',
+  id: 'guide',
   name: '新手指南',
   icon: (<Icon icon={guide} svgStyle={svgStyle} size="3x" />),
   children: [
@@ -26,6 +26,9 @@ export default [{
     {
       id: 'example-projects',
       name: '示例项目'
+    }, {
+      id: 'intl',
+      name: '国际化'
     },
     {
       id: 'supported-platforms',
@@ -171,7 +174,7 @@ export default [{
   }, {
     id: 'date-picker',
     name: 'DatePicker',
-    title: '时间选择器'
+    title: '日期选择器'
   },
   {
     id: 'date-range-picker',
@@ -181,7 +184,7 @@ export default [{
     id: 'slider',
     name: 'Slider',
     title: '滑动输入控件'
-  },{
+  }, {
     id: 'uploader',
     name: 'Uploader',
     title: '上传控件'

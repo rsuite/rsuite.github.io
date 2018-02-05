@@ -1,5 +1,7 @@
 ### 设置本地语言
 
+`DatePicker` 支持本地语言自定义配置，但是我们更推荐使用统一[国际化](guide/intl)配置。
+
 <!--start-code-->
 ```js
 const DatePickerIntl = props => (

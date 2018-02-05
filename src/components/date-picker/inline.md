@@ -3,7 +3,7 @@
 <!--start-code-->
 ```js
 const instance=(
-  <DatePicker inline/>
+  <DatePicker inline format="HH:mm:ss"/>
 )
 ReactDOM.render(instance);
 ```

@@ -47,7 +47,7 @@ class TopLevelNav extends React.Component {
             <Icon icon={search} svgStyle={svgStyle} size="lg" />
           </WithTooltipButton>
 
-          <WithTooltipButton tip="新手指南" className="icon-btn-circle" componentClass={Link} to="/getting-started/installation">
+          <WithTooltipButton tip="新手指南" className="icon-btn-circle" componentClass={Link} to="/guide/installation">
             <Icon icon={guide} svgStyle={svgStyle} size="lg" />
           </WithTooltipButton>
 

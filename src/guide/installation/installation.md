@@ -23,4 +23,4 @@ npm install rsuite-theme --save
 
 ## 下一步
 
-[如何使用](/getting-started/usage)
+[如何使用](/guide/usage)

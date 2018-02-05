@@ -32,7 +32,7 @@ import { DatePicker } from 'rsuite';
 | onClose             | ()=>void                              | 关闭回调函数                                            |
 | placeholder         | string                                | 没有值时候默认显示内容                                  |
 | format              | string `('YYYY-MM-DD')`               | 日期显示格式化                                          |
-| locale              | Object `(en_US_messages)`             | 本地化对应的语言描述                                    |
+| locale              | Object `(Locale)`                     | 本地化对应的语言描述                                    |
 | ranges              | Array<Range>                          | 快捷项配置                                              |
 | inline              | boolean                               | 默认显示日历面板                                        |
 | disabled            | boolean                               | 禁用组件                                                |
@@ -79,7 +79,7 @@ type Placement = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight' | 'leftTo
 
 ```js
 
-const en_US_messages = {
+const Locale = {
   sunday: 'Su',
   monday: 'Mo',
   tuesday: 'Tu',
