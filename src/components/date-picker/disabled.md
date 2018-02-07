@@ -13,7 +13,7 @@ const DatePickerInstance = props => (
 
     <p>- 禁用日期</p>
     <DatePicker
-      disabledDate={(date) => date.isAfter(moment())}
+      disabledDate={(date) => date.isBefore(moment())}
     />
 
     <p>- 禁用时间</p>

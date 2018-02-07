@@ -157,7 +157,7 @@ export default [{
   },
   {
     id: 'check-picker',
-    name: 'CheckPicker',
+    name: 'CheckPicker *',
     title: '多项选择器'
   }, {
     id: 'tree-picker',
@@ -169,11 +169,11 @@ export default [{
     title: '树形多项选择器'
   }, {
     id: 'cascader',
-    name: 'Cascader',
+    name: 'Cascader  *',
     title: '级联选择器'
   }, {
     id: 'date-picker',
-    name: 'DatePicker',
+    name: 'DatePicker  *',
     title: '日期选择器'
   },
   {
@@ -182,7 +182,7 @@ export default [{
     title: '日期范围选择器'
   }, {
     id: 'slider',
-    name: 'Slider',
+    name: 'Slider  *',
     title: '滑动输入控件'
   }, {
     id: 'uploader',
