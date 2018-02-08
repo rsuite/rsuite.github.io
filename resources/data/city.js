@@ -6,9 +6,7 @@ export default [{
   'children': [
     {
       'label': '北京市',
-      'value': {
-        'id': 2
-      }
+      'value': 2
     },
     {
       'label': '福建省',

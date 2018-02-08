@@ -7,7 +7,9 @@ nrm use hypers
 
 echo '-------in rsuite.github.io-------'
 ##rm -R -f node_modules/rsuite-datepicker
-npm install rsuite-datepicker
+npm install rsuite
+npm install rsuite-treepicker
+
 echo 're-install finish'
 
 echo '-------in rsuite-------'
@@ -19,9 +21,8 @@ cd ../rsuite
 ##npm install rsuite-selectpicker
 ##npm install rsuite-checkpicker
 ##npm install rsuite-cascader
-npm install rsuite-datepicker
+npm install rsuite-treepicker
 echo 're-install finish'
-
 
 
 
