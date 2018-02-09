@@ -8,7 +8,7 @@
 
 <!--{demo}-->
 
-## API
+## Props
 
 ### `<Message>`
 

@@ -18,7 +18,7 @@ import { SelectPicker } from 'rsuite';
 <!--{demo}-->
 
 
-## API
+## Props
 
 
 ### `<SelectPicker>`
@@ -51,8 +51,9 @@ import { SelectPicker } from 'rsuite';
 | cleanable          | boolean `(true)`                                 | 可以清除                             |
 | placement          | enum: Placement`('bottomLeft')`                  | 位置                                 |
 
+## Types
 
-### Enums & Unions
+### Placement
 
 ```js
 Type Placement = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight' | 'leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom';

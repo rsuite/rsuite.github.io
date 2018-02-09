@@ -27,7 +27,7 @@ import {
 <!--{demo}-->
 
 
-## API
+## Props
 
 ### `<Button>`
 

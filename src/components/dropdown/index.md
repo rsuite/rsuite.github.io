@@ -10,7 +10,7 @@
 
 <!--{demo}-->
 
-## API
+## Props
 
 ### `<Dropdown>`
 

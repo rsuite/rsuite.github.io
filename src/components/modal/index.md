@@ -13,7 +13,7 @@
 
 <!--{demo}-->
 
-## API
+## Props
 
 ### `<Modal>`
 

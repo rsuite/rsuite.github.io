@@ -22,7 +22,7 @@ import { Input } from 'rsuite';
 
 
 
-## API
+## Props
 
 
 ### `<Input>`

@@ -18,7 +18,7 @@ import { Notification } from 'rsuite';
 
 <!--{demo}-->
 
-## API
+## Props
 
 
 ```typescript

@@ -18,7 +18,7 @@ import { CheckTreePicker } from 'rsuite';
 <!--{demo}-->
 
 
-## API
+## Props
 
 ### <CheckTreePicker>
 

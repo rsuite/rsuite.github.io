@@ -18,7 +18,7 @@ import { CheckPicker } from 'rsuite';
 <!--{demo}-->
 
 
-## API
+## Props
 
 
 ### `<CheckPicker>`
@@ -53,7 +53,9 @@ import { CheckPicker } from 'rsuite';
 | placement          | enum: Placement`('bottomLeft')`                  | 位置                                 |
 
 
-### Enums & Unions
+## Types
+
+### Placement
 
 ```js
 Type Placement = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight' | 'leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom';

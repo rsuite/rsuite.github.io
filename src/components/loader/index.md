@@ -18,7 +18,7 @@ import { Loader } from 'rsuite';
 
 <!--{demo}-->
 
-## API
+## Props
 
 ### `<Loader>`
 

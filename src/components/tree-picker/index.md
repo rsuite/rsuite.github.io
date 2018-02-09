@@ -17,7 +17,7 @@ import { TreePicker } from 'rsuite';
 <!--{demo}-->
 
 
-## API
+## Props
 
 
 ### `<TreePicker>`
@@ -53,7 +53,9 @@ import { TreePicker } from 'rsuite';
 | renderExtraFooter | ()=>React.Node                    | 自定义页脚内容               |
 | placement         | enum: Placement `('bottomLeft')`  | 打开位置                     |
 
-### Enums & Unions
+## Types
+
+### Placement
 
 ```js
 Type Placement = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight' | 'leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom';

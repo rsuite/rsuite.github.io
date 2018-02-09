@@ -18,7 +18,7 @@ import { Cascader } from 'rsuite';
 <!--{demo}-->
 
 
-## API
+## Props
 
 
 ### `<Cascader>`

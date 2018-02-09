@@ -11,7 +11,7 @@
 
 <!--{demo}-->
 
-## API
+## Props
 
 ### `Alert.info`
 

@@ -12,7 +12,7 @@
 <!--{demo}-->
 
 
-## API
+## Props
 
 ### `<Popover>`
 

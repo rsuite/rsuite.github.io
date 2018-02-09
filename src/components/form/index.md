@@ -34,7 +34,7 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock, Schema } from 'r
 
 
 
-## API
+## Props
 
 
 ### `<Form>`

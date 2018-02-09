@@ -25,7 +25,7 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 <!--{demo}-->
 
 
-## API
+## Props
 
 ### `<Table>`
 

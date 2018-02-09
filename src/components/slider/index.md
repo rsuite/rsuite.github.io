@@ -6,7 +6,7 @@
 
 <!--{demo}-->
 
-## API
+## Props
 
 ### `<Slider>`
 

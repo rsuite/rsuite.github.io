@@ -19,7 +19,7 @@ import { Nav, Dropdown } from 'rsuite';
 
 <!--{demo}-->
 
-## API
+## Props
 
 ### `<Nav>`
 

@@ -18,7 +18,7 @@ import { CheckTree } from 'rsuite';
 <!--{demo}-->
 
 
-## API
+## Props
 
 ### `<CheckTree>`
 
