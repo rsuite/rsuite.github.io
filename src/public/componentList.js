@@ -110,7 +110,7 @@ export default [
     repoName: 'rsuite-tree',
     url: '/rsuite-tree',
     name: 'Tree',
-    intro: '树型组件',
+    intro: '树形组件',
     tags: ['tree'],
     src: 'https://github.com/rsuite/rsuite-tree'
   },
@@ -120,7 +120,7 @@ export default [
     repoName: 'rsuite-check-tree',
     url: '/rsuite-check-tree',
     name: 'CheckTree',
-    intro: '树型多选组件',
+    intro: '树形多选组件',
     tags: ['tree', 'checktree'],
     src: 'https://github.com/rsuite/rsuite-check-tree'
   },

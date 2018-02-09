@@ -1,14 +1,11 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { CheckTreePicker } from '../../rsuiteSource';
+import { Tree } from '../../rsuiteSource';
 import data from '../../../resources/data/city';
 
 const context = require('./index.md');
 const examples = [
-  require('./basic.md'),
-  require('./inline.md'),
-  require('./placement.md'),
-  require('./disabled.md')
+  require('./basic.md')
 ];
 
 export default () => {
@@ -17,7 +14,7 @@ export default () => {
       context={context}
       examples={examples}
       dependencies={{
-        CheckTreePicker,
+        Tree,
         data
       }}
     />

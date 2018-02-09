@@ -208,7 +208,7 @@ export default [{
   }, {
     id: 'check-tree',
     name: 'CheckTree',
-    title: '多选树形控件'
+    title: '树形多选控件'
   }, {
     id: 'panel',
     name: 'Panel',

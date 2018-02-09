@@ -15,7 +15,7 @@ const instance = (
     componentClass="textarea"
     rows={3}
     style={{ width:300, resize: 'auto' }}
-    placeholder="Textarea"
+    placeholder="resize: 'auto'"
   />
  </div>
 );

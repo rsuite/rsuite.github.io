@@ -1,9 +1,12 @@
-### 默认
+### Inline
 
 <!--start-code-->
 ```js
 const instance=(
-  <CheckTree data={data} />
+  <CheckTreePicker
+    data={data}
+    inline
+  />
 )
 ReactDOM.render(instance);
 ```

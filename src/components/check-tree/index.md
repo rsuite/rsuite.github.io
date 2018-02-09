@@ -1,8 +1,7 @@
-# CheckTree 多选树形控件[<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/check-tree/index.md)
+# CheckTree 树形多选控件 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/check-tree/index.md)
 
-在树形控件中支持 Checkbox 进行多选。
 
-- `<CheckTree>` 带 Checkbox 的树形组件
+- `<CheckTree>`
 
 
 ## 获取组件
@@ -20,40 +19,31 @@ import { CheckTree } from 'rsuite';
 
 ## Props
 
+
 ### `<CheckTree>`
 
-| 属性名称             | 类型                                                    | 默认值        | 描述                          |
-|------------------|-------------------------------------------------------|------------|-----------------------------|
-| value            | array                                                 |            | 当前选中的值                      |
-| defaultValue     | array                                                 |            | 默认选中的值                      |
-| data             | array                                                 |            | tree 数据                     |
-| valueKey         | string                                                | 'value'    | tree数据结构value属性名称           |
-| labelKey         | string                                                | 'label'    | tree数据结构label属性名称           |
-| childKey         | string                                                | 'children' | tree数据结构children属性名称        |
-| disabledItems    | Array                                                 |            | 禁用节点列表                      |
-| defaultExpandAll | boolean                                               | false      | 默认展开所有节点                    |
-| cascade          | boolean                                               | true       | 是否级联选择                      |
-| onChange         | (values:Array)=>void                                  |            | 数据改变的回调函数                   |
-| onExpand         | (activeNode:Object, layer:number)=>void               |            | 树节点展示时的回调                   |
-| onSelect         | (activeNode:Object, layer:number, values:Array)=>void |            | 选择树节点后的回调函数                 |
-| renderTreeNode   | (nodeData:Object)=>React.Node                         |            | 自定义渲染 tree 节点               |
-| renderTreeIcon   | (nodeData:Object)=>React.Node                         |            | 自定义渲染 图标                    |
-| didMount         | (values:Array)=>void                                  |            | componentDidMount 周期完成时回调函数 |
 
-<br>
+| 属性名称           | 类型 `(默认值)`                                                | 描述                         |
+| ------------------ | -------------------------------------------------------------- | ---------------------------- |
+| value              | Array<any>                                                     | 当前选中的值                 |
+| defaultValue       | Array<any>                                                     | 默认选中的值                 |
+| data               | Array<Object>                                                  | tree 数据                    |
+| valueKey           | string `('value')`                                             | tree数据结构value属性名称    |
+| labelKey           | string `('label')`                                             | tree数据结构label属性名称    |
+| childKey           | string `('children')`                                          | tree数据结构children属性名称 |
+| disabledItemValues | Array<any>                                                     | 禁用节点列表                 |
+| defaultExpandAll   | boolean                                                        | 默认展开所有节点             |
+| cascade            | boolean                                                        | checktree是否级联选择        |
+| onChange           | (values:Array<any>)=>boolean                                   | 数据改变的回调函数           |
+| onExpand           | (activeNode:Object, layer:number)=>boolean                     | 树节点展示时的回调           |
+| onSelect           | (activeNode::Object, layer:number, values:Array<any>)=>boolean | 选择树节点后的回调函数       |
+| renderTreeNode     | (nodeData:Array<Object>)=>React.Node                           | 自定义渲染 tree 节点         |
+| renderTreeIcon     | (nodeData:Array<Object>)=>React.Node                           | 自定义渲染 图标              |
 
-`data` 的结构是:
+## Types
 
-```javascript
- [{
-      "value":1
-      "label":"label-1",
-      "children":[{
-          "value":2
-          "label":"label-2"
-      },{
-          "value":3
-          "label":"label-3"
-      }]
- }]
+### Placement
+
+```js
+Type Placement = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight' | 'leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom';
 ```

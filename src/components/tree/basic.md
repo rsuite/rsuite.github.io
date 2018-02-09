@@ -3,7 +3,7 @@
 <!--start-code-->
 ```js
 const instance=(
-  <CheckTree data={data} />
+  <Tree data={data} />
 )
 ReactDOM.render(instance);
 ```

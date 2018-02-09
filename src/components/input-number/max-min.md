@@ -1,11 +1,12 @@
-### 浮点数
+### 限制范围
 
 <!--start-code-->
 ```js
 const instance = (
  <InputNumber
-  defaultValue={0.01}
-  step={0.01}
+  defaultValue={1}
+  max={100}
+  min={1}
  />
 );
 ReactDOM.render(instance);
