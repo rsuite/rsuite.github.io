@@ -143,6 +143,10 @@ export default [{
     name: 'Input *',
     title: '输入框'
   }, {
+    id: 'input-number',
+    name: 'InputNumber *',
+    title: '数值输入框'
+  }, {
     id: 'toggle',
     name: 'Toggle *',
     title: '开关'

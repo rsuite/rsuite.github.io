@@ -7,16 +7,14 @@ nrm use hypers
 
 echo '-------in rsuite.github.io-------'
 npm install rsuite
-npm install rsuite-treepicker
-npm install rsuite-daterangepicker
+npm install rsuite-checktreepicker
 
 echo 're-install finish'
 
 echo '-------in rsuite-------'
 cd ../rsuite
 
-npm install rsuite-treepicker
-npm install rsuite-daterangepicker
+npm install rsuite-checktreepicker
 echo 're-install finish'
 
 

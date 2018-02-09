@@ -5,7 +5,9 @@ import data from '../../../resources/data/city';
 
 const context = require('./index.md');
 const examples = [
-  require('./basic.md')
+  require('./basic.md'),
+  require('./placement.md'),
+  require('./disabled.md')
 ];
 
 export default () => {
