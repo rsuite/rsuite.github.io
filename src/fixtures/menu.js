@@ -145,7 +145,7 @@ export default [{
   }, {
     id: 'input-number',
     name: 'InputNumber *',
-    title: '数值输入框'
+    title: '数字输入框'
   }, {
     id: 'toggle',
     name: 'Toggle *',

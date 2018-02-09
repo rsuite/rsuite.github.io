@@ -1,9 +1,9 @@
-### 默认
+### 禁用
 
 <!--start-code-->
 ```js
 const instance = (
- <InputNumber />
+ <InputNumber disabled />
 );
 ReactDOM.render(instance);
 ```

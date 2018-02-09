@@ -3,36 +3,42 @@
 
 <!--start-code-->
 ```js
+
+const styles={
+  width:300,
+  marginBottom:10
+}
+
 const instance = (
-  <div style={{width:300}}>
-    <InputGroup>
+  <div>
+    <InputGroup style={styles}>
       <InputGroup.Addon> @</InputGroup.Addon>
       <Input />
     </InputGroup>
 
-    <InputGroup>
+    <InputGroup style={styles}>
       <Input />
       <InputGroup.Addon>.com</InputGroup.Addon>
     </InputGroup>
 
-    <InputGroup>
+    <InputGroup style={styles}>
       <InputGroup.Addon>$</InputGroup.Addon>
       <Input />
       <InputGroup.Addon>.00</InputGroup.Addon>
     </InputGroup>
 
-    <InputGroup>
+    <InputGroup style={styles}>
       <Input />
       <InputGroup.Addon>to</InputGroup.Addon>
       <Input />
     </InputGroup>
 
-    <InputGroup>
+    <InputGroup style={styles}>
       <Input />
       <InputGroup.Addon><Icon icon="search" /></InputGroup.Addon>
     </InputGroup>
 
-    <InputGroup>
+    <InputGroup style={styles}>
       <InputGroup.Addon><Icon icon="avatar" /></InputGroup.Addon>
       <Input />
     </InputGroup>

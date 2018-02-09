@@ -27,12 +27,15 @@ import { Input } from 'rsuite';
 
 ### `<Input>`
 
-| 属性名称       | 类型 `(默认值)`                                                    | 描述                                     |
-| -------------- | ------------------------------------------------------------------ | ---------------------------------------- |
-| classPrefix    | string `('input')`                                                 | class前缀                                |
-| componentClass | React.ElementType `('input')`                                      | 可以渲染 string 或者 function 的元素类型 |
-| type           | string `('text' )`                                                 | HTML input type.                         |
-| onChange       | (value: any, event: SyntheticInputEvent<HTMLInputElement>) => void | value 发生变化的回调函数                 |
+| 属性名称     | 类型 `(默认值)`                                                    | 描述                     |
+| ------------ | ------------------------------------------------------------------ | ------------------------ |
+| classPrefix  | string `('input')`                                                 | class前缀                |
+| type         | string `('text' )`                                                 | HTML input type.         |
+| value        | number                                                             | 设置值 `受控`            |
+| defaultValue | number                                                             | 设置默认值               |
+| onChange     | (value: any, event: SyntheticInputEvent<HTMLInputElement>) => void | value 发生变化的回调函数 |
+| disabled     |                                                                    | 禁用                     |
+
 
 ### `<InputGroup>`
 

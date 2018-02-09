@@ -1,11 +1,11 @@
-# InputNumber 数值输入框 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/input/index.md)
+# InputNumber 数字输入框 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/input/index.md)
 
 
 ## 获取组件
 
 
 ```js
-import { Input } from 'rsuite';
+import { InputNumber } from 'rsuite';
 ```
 
 
@@ -18,18 +18,19 @@ import { Input } from 'rsuite';
 ## Props
 
 
-### `<Input>`
+### `<InputNumber>`
 
-| 属性名称       | 类型 `(默认值)`                                                    | 描述                                     |
-| -------------- | ------------------------------------------------------------------ | ---------------------------------------- |
-| classPrefix    | string `('input')`                                                 | class前缀                                |
-| componentClass | React.ElementType `('input')`                                      | 可以渲染 string 或者 function 的元素类型 |
-| type           | string `('text' )`                                                 | HTML input type.                         |
-| onChange       | (value: any, event: SyntheticInputEvent<HTMLInputElement>) => void | value 发生变化的回调函数                 |
 
-### `<InputGroup>`
 
-| 属性名称    | 类型 `(默认值)`          | 描述           |
-| ----------- | ------------------------ | -------------- |
-| classPrefix | string `('input-group')` | class前缀      |
-| inside      | boolean                  | 组合内容在内部 |
+| 属性名称     | 类型 `(默认值)`                                                    | 描述                         |
+| ------------ | ------------------------------------------------------------------ | ---------------------------- |
+| classPrefix  | string `('input-number')`                                          | class 前缀                   |
+| min          | number `(-Infinity)`                                               | 最小值                       |
+| max          | number `(Infinity)`                                                | 最大值                       |
+| step         | number `(1)`                                                       | 每次改变步数，可以为小数     |
+| value        | number                                                             | 设置值 `受控`                |
+| defaultValue | number                                                             | 设置默认值                   |
+| prefix       | React.Node                                                         | 前缀                         |
+| postfix      | React.Node                                                         | 后缀                         |
+| disabled     | boolean                                                            | 禁用                         |
+| onChange     | (value: any, event: SyntheticInputEvent<HTMLInputElement>) => void | `value` 发生改变时的回调函数 |

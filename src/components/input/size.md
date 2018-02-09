@@ -3,15 +3,20 @@
 <!--start-code-->
 ```js
 
+const styles={
+  width:300,
+  marginBottom:10
+}
+
 const CustomInput=({...props})=>(
   <Input
     {...props}
-    style={{ width:300 }}
+    style={styles}
   />
 )
 
 const CustomInputGroup=({placeholder,...props})=>(
-  <InputGroup {...props} style={{ width:300 }} >
+  <InputGroup {...props} style={styles} >
     <Input placeholder={placeholder} />
     <InputGroup.Addon><Icon icon="search" /></InputGroup.Addon>
   </InputGroup>
