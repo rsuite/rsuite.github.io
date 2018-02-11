@@ -5,9 +5,11 @@
 
 const CustomSelectPicker=({placement})=>(
   <CheckTreePicker
+    defaultExpandAll
     data={data}
     placement={placement}
     placeholder={placement}
+    height={320}
   />
 );
 

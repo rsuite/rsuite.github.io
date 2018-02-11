@@ -147,6 +147,10 @@ export default [{
     name: 'InputNumber *',
     title: '数字输入框'
   }, {
+    id: 'auto-complete',
+    name: 'AutoComplete *',
+    title: '自动完成控件'
+  }, {
     id: 'toggle',
     name: 'Toggle *',
     title: '开关'
