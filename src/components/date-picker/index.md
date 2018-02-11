@@ -5,6 +5,8 @@
 - `<DatePicker>`
 
 
+> 当需要选择日期范围，推荐使用 [`<DateRangePicker>`](./date-range-picker)
+
 ## 获取组件
 
 

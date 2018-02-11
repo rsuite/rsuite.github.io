@@ -29,8 +29,8 @@ class CircleProgress extends React.Component {
 
         <Circle
           percent={this.state.percent}
-          strokeWidth="3"
-          trailWidth="2"
+          strokeWidth={3}
+          trailWidth={2}
           strokeColor={this.state.color}
         />
         <Button style={{marginTop:'10px'}} onClick={this.changeState}>刷新</Button>

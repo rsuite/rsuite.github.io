@@ -11,7 +11,7 @@ class CustomSlider extends React.Component {
   render() {
     const labels = ['无', '精准', '相似', '模糊'];
     const { value } = this.state;
-    const customStyle = {
+    const hanldeStyle = {
       color:'#fff',
       fontSize:12,
       width: 32,
@@ -28,7 +28,7 @@ class CustomSlider extends React.Component {
             max={labels.length - 1}
             value={value}
             className="custom-slider"
-            customStyle={customStyle}
+            hanldeStyle={hanldeStyle}
             graduated
             tooltip={false}
             handleTitle={labels[value]}

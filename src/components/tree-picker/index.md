@@ -3,6 +3,8 @@
 
 - `<TreePicker>`
 
+> 当需要选项中支持 Checkbox，用于多选， 推荐使用 [`<CheckTreePicker>`](./check-tree-picker)
+
 
 ## 获取组件
 

@@ -20,8 +20,8 @@ class CustomProgress extends React.Component {
       <div>
         <div style={circleStyle}>
           <Circle
-            percent="30"
-            strokeWidth="4"
+            percent={30}
+            strokeWidth={4}
             gapPosition="top"
             strokeColor="#3385ff"
           />
@@ -29,17 +29,17 @@ class CustomProgress extends React.Component {
         <div style={circleStyle}>
           <Circle
             status='success'
-            percent="40"
-            strokeWidth="2"
+            percent={40}
+            strokeWidth={2}
             gapPosition="bottom"
             strokeColor="#85d262"
           />
         </div>
         <div style={circleStyle}>
           <Circle
-            percent="50"
-            strokeWidth="6"
-            trailWidth="6"
+            percent={50}
+            strokeWidth={6}
+            trailWidth={6}
             gapPosition="left"
             strokeColor="#3fc7fa"
             trailColor="#ccc"
@@ -49,8 +49,8 @@ class CustomProgress extends React.Component {
         </div>
         <div style={circleStyle}>
           <Circle
-            percent="60"
-            strokeWidth="10"
+            percent={60}
+            strokeWidth={10}
             gapPosition="right"
             strokeColor="#fbde0b"
             trailColor="#fff"
@@ -59,13 +59,13 @@ class CustomProgress extends React.Component {
 
          <div style={lineStyle}>
           <Line
-            percent="30"
+            percent={30}
             strokeColor="#3385ff"
           />
         </div>
         <div style={lineStyle}>
           <Line
-            percent="70"
+            percent={70}
             strokeColor="#f04631"
             infoShow={false}
             status='fail'
@@ -73,14 +73,14 @@ class CustomProgress extends React.Component {
         </div>
         <div style={lineStyle}>
           <Line
-            percent="100"
+            percent={100}
             strokeColor="#66bc5c"
             status='success'
           />
         </div>
         <div style={lineStyle}>
           <Line
-            percent="50"
+            percent={50}
             strokeColor="#3fc7fa"
             trailColor="#ccc"
             infoShow={false}

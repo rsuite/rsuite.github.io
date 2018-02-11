@@ -3,6 +3,8 @@
 
 - `<Tree>`
 
+> 当需要选项中支持 Checkbox，用于多选， 推荐使用 [`<CheckTree>`](./check-tree)
+
 
 ## 获取组件
 
@@ -10,6 +12,7 @@
 ```js
 import { Tree } from 'rsuite';
 ```
+
 
 
 ## 演示

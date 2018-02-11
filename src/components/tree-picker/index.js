@@ -6,7 +6,6 @@ import data from '../../../resources/data/city';
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
-  require('./inline.md'),
   require('./placement.md'),
   require('./disabled.md'),
   //require('./custom.md'),

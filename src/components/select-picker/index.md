@@ -27,7 +27,7 @@ import { SelectPicker } from 'rsuite';
 | 属性名称           | 类型`(默认值)`                                   | 描述                                 |
 | ------------------ | ------------------------------------------------ | ------------------------------------ |
 | classPrefix        | string `('picker-select')`                       | className 前缀                       |
-| data               | array                                            | 组件数据                             |
+| data               | Array<any>                                       | 组件数据                             |
 | disabled           | boolean                                          | 禁用组件                             |
 | disabledItemValues | array                                            | 禁用选项                             |
 | groupBy            | string                                           | 设置分组条件在 `data` 中的 `key`     |
