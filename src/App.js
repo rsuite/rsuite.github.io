@@ -28,7 +28,7 @@ class App extends React.Component {
     const className = location.pathname === '/' ? 'home-page' : '';
     return (
       <IntlProvider locale={enGB}>
-        <div className={`doc-page ${className}`}>
+        <div className={`doc-page ${className} night`}>
           <Grid className='doc-container' fluid>
             {this.props.children}
           </Grid>

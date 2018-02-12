@@ -4,6 +4,7 @@
 @import '../../../rsuite-theme/src/less/index';
 @import './functions.less';
 @import './docsearch.less';
+@import './stars.less';
 @import './ie-polyfill';
 
 //@import '~rsuite-daterangepicker/lib/less/index';
@@ -294,7 +295,7 @@ code:not(.doc-highlight) {
 .banner {
   position: absolute;
   width: 100%;
-  background: url("../../resources/images/banner-bg.png") @banner-bg-color;
+  background: @banner-bg-color;
   top: 0;
   left: 0;
   height: 100%;
@@ -522,7 +523,7 @@ code:not(.doc-highlight) {
 }
 
 path.bg {
-  opacity: .4;
+  opacity: .2;
 }
 
 .run-offset(@path) {
@@ -667,5 +668,22 @@ path.bg {
   &.@{ns}slider-dragging .slider-handle:hover {
     box-shadow: none;
     transform: scale(1.2);
+  }
+}
+
+.doc-page.night {
+
+  .top-level-nav {
+    background: #262721;
+  }
+  .sidebar-wrapper {
+    background: #1e1f1c;
+  }
+  .nav.nav-docs a:hover{
+    color: #fff;
+    background: #000 !important;
+  }
+  .nav.nav-docs .nav-item-panel {
+    border-bottom: 1px solid #000;
   }
 }

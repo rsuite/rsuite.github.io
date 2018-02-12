@@ -3,7 +3,7 @@
 <!--start-code-->
 ```js
 
-class FixedColumnTable extends React.Component {
+class ColspanTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -64,7 +64,7 @@ class FixedColumnTable extends React.Component {
   }
 }
 
-ReactDOM.render(<FixedColumnTable />);
+ReactDOM.render(<ColspanTable />);
 
 ```
 <!--end-code-->

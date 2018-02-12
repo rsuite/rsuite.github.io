@@ -6,7 +6,7 @@ class Demo extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
-      backdrop:false,
+      backdrop: false,
       show: false
     };
     this.close = this.close.bind(this);
@@ -25,9 +25,11 @@ class Demo extends React.Component{
 
     return (
       <div>
-        背景板：
+        <span>Backdrop: </span>
         <Toggle
           checked={backdrop}
+          checkedChildren="Open"
+          unCheckedChildren="Close"
           onChange={(checked)=>{
             this.setState({ backdrop: checked })
           }}

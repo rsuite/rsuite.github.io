@@ -6,6 +6,11 @@ class Banner extends React.Component {
     return (
       <div id="banner" className="banner">
         {children}
+        <div className="starry-warpper">
+          <div className='stars'></div>
+          <div className='stars2'></div>
+          <div className='stars3'></div>
+        </div>
       </div>
     );
   }

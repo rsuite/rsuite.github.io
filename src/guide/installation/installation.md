@@ -6,7 +6,7 @@
 
 把组件保存到 package.json 的 dependencies，运行:
 
-```
+```bash
 npm install rsuite --save
 ```
 
@@ -14,7 +14,7 @@ npm install rsuite --save
 
 RSUITE 的主题可以通过 CDN 引入，这里推荐是 npm 安装。 运行:
 
-```
+```zsh
 npm install rsuite-theme --save
 ```
 
@@ -23,4 +23,4 @@ npm install rsuite-theme --save
 
 ## 下一步
 
-[如何使用](/guide/usage)
+[如何使用](./usage)

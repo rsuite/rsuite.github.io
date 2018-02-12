@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import { Button, Icon, IconButton, Whisper, Tooltip } from '../rsuiteSource';
 import Logo from './Logo';
-import { guide, component, tools, search } from './SvgIcons';
+import { guide, component, tools, search, lightbulb, lightbulbOn } from './SvgIcons';
 import SearchDrawer from './SearchDrawer';
 
 

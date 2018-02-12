@@ -5,8 +5,7 @@
 const footerStyles = {
   padding: 10,
   textAlign: 'right',
-  background: '#f5f5f5',
-  marginBottom:-10
+  background: '#f5f5f5'
 };
 
 class ExtraFooterExample extends React.Component {
@@ -43,8 +42,6 @@ class ExtraFooterExample extends React.Component {
               >
                 全选
               </Button>
-
-
               <Button
                 appearance="link"
                 onClick={() => {

@@ -9,6 +9,7 @@ import fakeDataForColSpan from './data/usersForColSpan';
 const { HeaderCell, Pagination, Cell, Column } = Table;
 const TablePagination = Pagination;
 
+
 const context = require('./index.md');
 const examples = [
   require('./FixedColumnTable.md'),

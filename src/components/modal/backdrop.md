@@ -23,9 +23,11 @@ class ModalsBasic extends React.Component{
     const { backdrop, show } = this.state;
     return (
       <div className="modal-container">
-       背景板：
-       <Toggle
+        <span>Backdrop: </span>
+        <Toggle
           checked={backdrop}
+          checkedChildren="Open"
+          unCheckedChildren="Close"
           onChange={(checked)=>{
             this.setState({ backdrop: checked })
           }}
