@@ -6,10 +6,10 @@
 
 const instance = (
   <div>
-    <Slider value={10} min={0} step={5} max={100} graduated />
+    <Slider value={20} min={10} step={5} max={100} graduated />
 
     <br />
-    <Slider value={40} min={0} step={10} max={100} graduated progress />
+    <Slider value={10} min={10} step={10} max={100} graduated progress />
   </div>
 );
 ReactDOM.render(instance);

@@ -5,7 +5,11 @@
 ```js
 
 const instance = (
-  <Slider disabled/>
+  <div>
+    <Slider disabled />
+    <br/>
+    <Slider value={50} min={10} step={10} max={100} graduated progress disabled />
+  </div>
 );
 ReactDOM.render(instance);
 ```
