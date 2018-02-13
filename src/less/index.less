@@ -124,10 +124,12 @@
   left: 0;
   top: 0;
   bottom: 0;
-  .white-logo {
+
+  .logo-sm {
     margin-left: 9px;
     margin-top: 5px;
   }
+
   .icon-btn-circle {
     margin-bottom: 6px;
     background: none;
@@ -159,13 +161,12 @@
 .sidebar-wrapper.fixed {
   position: fixed;
   background: #f4f5f7;
-  padding: 10px 20px;
   width: 260px;
   left: 64px;
   top: 0;
   bottom: 0;
   .title-wrapper {
-    padding: 20px 0;
+    padding: 20px 20px 10px 20px;
     font-size: 20px;
     color: #777;
     i {
@@ -674,16 +675,26 @@ path.bg {
 .doc-page.night {
 
   .top-level-nav {
-    background: #262721;
+    background: #202225;
   }
   .sidebar-wrapper {
-    background: #1e1f1c;
+    background: #2f3136;
   }
-  .nav.nav-docs a:hover{
-    color: #fff;
-    background: #000 !important;
+
+  .nav.nav-docs{
+    a{
+      color: #aaa;
+      &:hover{
+        color: #fff;
+        background: #42464e !important;
+      }
+    }
+    .nav-item-panel {
+      border-bottom: 1px solid #2b2c31;
+      color: #777;
+    }
   }
-  .nav.nav-docs .nav-item-panel {
-    border-bottom: 1px solid #000;
+  .sidebar-wrapper.fixed .title-wrapper{
+    opacity: 0.5;
   }
 }
