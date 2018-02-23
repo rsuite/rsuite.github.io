@@ -4,41 +4,22 @@
 <!--start-code-->
 ```js
 const { Circle } = Progress;
+const style={
+  width:120,
+  display:'inline-block',
+  marginRight:10
+};
 
-class CircleProgress extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      percent: 30,
-      color: '#3385ff',
-    };
-    this.changeState = this.changeState.bind(this);
-  }
+const instance = (
+  <div>
+    <div style={style}><Circle percent={30} /></div>
+    <div style={style}><Circle percent={30} showInfo={false} /></div>
+    <div style={style}><Circle percent={30} strokeColor="red" /></div>
+    <div style={style}><Circle percent={30} status='success' /></div>
+    <div style={style}><Circle percent={30} status='fail' /></div>
+  </div>
+)
 
-  changeState() {
-    const colorMap = ['#3385ff', '#85d262', '#FE8C6A'];
-    const value = parseInt(Math.random() * 100, 10);
-    this.setState({
-      percent: value,
-      color: colorMap[parseInt(Math.random() * 3, 10)],
-    });
-  }
-  render() {
-    return (
-      <div style={{width:'200px'}}>
-
-        <Circle
-          percent={this.state.percent}
-          strokeWidth={3}
-          trailWidth={2}
-          strokeColor={this.state.color}
-        />
-        <Button style={{marginTop:'10px'}} onClick={this.changeState}>刷新</Button>
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(<CircleProgress />);
+ReactDOM.render(instance);
 ```
 <!--end-code-->

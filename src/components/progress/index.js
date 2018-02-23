@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Progress, Button } from '../../rsuiteSource';
+import { Progress, Button, ButtonGroup } from '../../rsuiteSource';
 
 
 
@@ -8,7 +8,7 @@ const context = require('./index.md');
 const examples = [
   require('./line.md'),
   require('./circle.md'),
-  require('./custom.md')
+  require('./dynamic.md')
 ];
 
 export default () => {
@@ -17,6 +17,7 @@ export default () => {
       context={context}
       dependencies={{
         Progress,
+        ButtonGroup,
         Button
       }}
       examples={examples}
