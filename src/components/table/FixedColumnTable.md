@@ -26,12 +26,12 @@ class FixedColumnTable extends React.Component {
             <Cell dataKey="id" />
           </Column>
 
-          <Column width={130} fixed>
+          <Column width={200} fixed>
             <HeaderCell>First Name</HeaderCell>
             <Cell dataKey="firstName" />
           </Column>
 
-          <Column width={130} >
+          <Column width={200} >
             <HeaderCell>Last Name</HeaderCell>
             <Cell dataKey="lastName" />
           </Column>
@@ -47,30 +47,16 @@ class FixedColumnTable extends React.Component {
           </Column>
 
 
-          <Column width={200} >
+          <Column width={300} >
             <HeaderCell>Company Name</HeaderCell>
             <Cell dataKey="companyName" />
           </Column>
 
-          <Column width={200} >
+          <Column width={300} >
             <HeaderCell>Email</HeaderCell>
             <Cell dataKey="email" />
           </Column>
 
-          <Column width={200} >
-            <HeaderCell>Email</HeaderCell>
-            <Cell dataKey="email" />
-          </Column>
-
-          <Column width={200} >
-            <HeaderCell>Email</HeaderCell>
-            <Cell dataKey="email" />
-          </Column>
-
-          <Column width={200} >
-            <HeaderCell>Email</HeaderCell>
-            <Cell dataKey="email" />
-          </Column>
 
         </Table>
       </div>

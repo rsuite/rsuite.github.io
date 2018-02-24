@@ -1,11 +1,12 @@
-### 默认
+### 禁用搜索框
 
 <!--start-code-->
 ```js
 const instance=(
-  <CheckTreePicker
+  <TreePicker
     defaultExpandAll
     data={data}
+    searchable={false}
   />
 )
 ReactDOM.render(instance);

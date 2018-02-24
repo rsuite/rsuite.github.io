@@ -2,16 +2,16 @@
 <!--start-code-->
 ```js
 
-class DrawersBasic extends React.Component{
+class Demo extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
       show: false
     };
-    this.handleClose = this.handleClose.bind(this);
+    this.close = this.close.bind(this);
     this.toggleDrawer = this.toggleDrawer.bind(this);
   }
-  handleClose() {
+  close() {
     this.setState({
       show: false
     });
@@ -60,7 +60,7 @@ class DrawersBasic extends React.Component{
           full
           placement={placement}
           show={show}
-          onHide={this.handleClose}
+          onHide={this.close}
         >
           <Drawer.Header>
             <Drawer.Title>Drawer Title</Drawer.Title>
@@ -79,6 +79,6 @@ class DrawersBasic extends React.Component{
 
 }
 
-ReactDOM.render(<DrawersBasic />);
+ReactDOM.render(<Demo />);
 ```
 <!--end-code-->

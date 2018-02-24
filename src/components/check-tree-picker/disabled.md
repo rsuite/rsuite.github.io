@@ -11,6 +11,7 @@ const instance=(
     <hr />
     <p>禁用选项</p>
     <CheckTreePicker
+      defaultExpandAll
       data={data}
       disabledItemValues={[2]}
     />

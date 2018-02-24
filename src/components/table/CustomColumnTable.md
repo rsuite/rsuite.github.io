@@ -81,12 +81,12 @@ class CustomColumnTable extends React.Component {
           }}
         >
 
-          <Column width={160} sortable>
+          <Column width={160}>
             <HeaderCell>First Name</HeaderCell>
             <NameCell dataKey="firstName" />
           </Column>
 
-          <Column width={160} sortable>
+          <Column width={160}>
             <HeaderCell>Last Name</HeaderCell>
             <Cell dataKey="lastName" />
           </Column>

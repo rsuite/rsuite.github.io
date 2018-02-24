@@ -1,6 +1,6 @@
 # Table 表格 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/table/index.md)
 
-用于数据以表格的方式展示。
+以表格的方式展示数据。
 
 
 - `<Table>` 表格组件

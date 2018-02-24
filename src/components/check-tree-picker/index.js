@@ -7,7 +7,8 @@ const context = require('./index.md');
 const examples = [
   require('./basic.md'),
   require('./placement.md'),
-  require('./disabled.md')
+  require('./disabled.md'),
+  require('./custom.md')
 ];
 
 export default () => {

@@ -4,6 +4,7 @@
 ```js
 const instance=(
   <TreePicker
+    defaultExpandAll
     data={data}
   />
 )

@@ -4,7 +4,7 @@
 
 
 
-class DrawersBasic extends React.Component{
+class Demo extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
@@ -77,6 +77,6 @@ class DrawersBasic extends React.Component{
 
 }
 
-ReactDOM.render(<DrawersBasic />);
+ReactDOM.render(<Demo />);
 ```
 <!--end-code-->

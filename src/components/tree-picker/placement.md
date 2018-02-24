@@ -5,6 +5,7 @@
 
 const CustomSelectPicker=({placement})=>(
   <TreePicker
+    defaultExpandAll
     data={data}
     placement={placement}
     placeholder={placement}
