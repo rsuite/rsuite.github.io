@@ -6,15 +6,14 @@ nrm use hypers
 
 
 echo '-------in rsuite.github.io-------'
-npm install rsuite
-npm install rsuite-checktreepicker
+npm install rsuite-uploader
 
 echo 're-install finish'
 
 echo '-------in rsuite-------'
 cd ../rsuite
 
-npm install rsuite-checktreepicker
+npm install rsuite-uploader
 echo 're-install finish'
 
 

@@ -9,7 +9,6 @@ import {
   browserHistory
 } from 'react-router';
 
-
 // style
 import './less/index.less';
 
@@ -19,35 +18,39 @@ import App from './App';
 import Frame from './fixtures/Frame';
 import Home from './Home';
 
-
 import ready from './ready';
 import menu from './fixtures/menu';
 
-
 const routes = [];
 menu.forEach(item => {
-
   const children = [];
   item.children.forEach(child => {
-    !child.group && children.push(
-      <Route key={child.id} path={child.id} getComponent={(location, cb) => {
-        let name = location.params.name;
-        require.ensure([], require => {
-          cb(null, require(`./${item.id}/${child.id}`));
-        }, 'context');
-      }}
-      />
-    );
+    !child.group &&
+      children.push(
+        <Route
+          key={child.id}
+          path={child.id}
+          getComponent={(location, cb) => {
+            let name = location.params.name;
+            require.ensure(
+              [],
+              require => {
+                cb(null, require(`./${item.id}/${child.id}`));
+              },
+              'context'
+            );
+          }}
+        />
+      );
   });
 
   const route = (
-    <Route key={item.id} path={item.id} component={Frame} >
+    <Route key={item.id} path={item.id} component={Frame}>
       {children}
     </Route>
   );
 
   routes.push(route);
-
 });
 
 const mountApp = (
@@ -56,12 +59,9 @@ const mountApp = (
       <IndexRoute component={Home} />
       {routes}
     </Route>
-
   </Router>
 );
 
-ready((values) => {
+ready(values => {
   render(mountApp, document.getElementById('root'));
 });
-
-
