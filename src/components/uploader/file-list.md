@@ -6,14 +6,16 @@
 const fileList = [
   {
     name: 'file1.jpg',
-    key: 1
+    fileKey: 1
   },
   {
     name: 'file2.jpg',
-    key: 2
+    fileKey: 2
   }
 ];
-const instance = <Uploader fileList={fileList} action="//jsonplaceholder.typicode.com/posts/" />;
+const instance = (
+  <Uploader defaultFileList={fileList} action="//jsonplaceholder.typicode.com/posts/" />
+);
 ReactDOM.render(instance);
 ```
 

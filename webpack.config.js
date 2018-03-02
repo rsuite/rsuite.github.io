@@ -22,9 +22,7 @@ const plugins = [
   new webpack.HotModuleReplacementPlugin(),
   new webpack.NamedModulesPlugin(),
   new webpack.DefinePlugin({
-    'process.env': {
-      'NODE_ENV': JSON.stringify(NODE_ENV)
-    }
+    'process.env.NODE_ENV': JSON.stringify(NODE_ENV)
   }),
   extractLess,
   // [IE9 最大 css 选择器数为 4095]{@link https://support.microsoft.com/zh-cn/help/262161/a-webpage-that-uses-css-styles-does-not-render-correctly-in-internet-e}

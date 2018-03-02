@@ -1,15 +1,17 @@
 ### `FormControl`
 
-- FormControl 用于绑定 Form 中的数据字段，通过 `name` 属性和 Schema.Model 对象的 `key` 对应。
-- FormControl 默认是个 `Input` 组件，可以通过 `accepter` 设置需要的数据录入组件。
+* FormControl 用于绑定 Form 中的数据字段，通过 `name` 属性和 Schema.Model 对象的 `key` 对应。
+* FormControl 默认是个 `Input` 组件，可以通过 `accepter` 设置需要的数据录入组件。
 
-> 例如: `<FormControl accepter={CheckboxGroup} />` ,  FormControl 会渲染一个 `<CheckboxGroup>` 组件, 同时与 Form 中的 Schema.Model 实例绑定。
-
+> 例如: `<FormControl accepter={CheckboxGroup} />` , FormControl 会渲染一个 `<CheckboxGroup>` 组件, 同时与 Form 中的 Schema.Model 实例绑定。
 
 <!--start-code-->
+
 ```js
 const model = Schema.Model({
-  skill: Schema.Types.ArrayType().minLength(2, '至少选择2个').isRequired('该字段不能为空')
+  skill: Schema.Types.ArrayType()
+    .minLength(2, '至少选择2个')
+    .isRequired('该字段不能为空')
 });
 
 const CustomField = ({ name, label, accepter, error, ...props }) => (
@@ -24,7 +26,10 @@ class CustomFieldForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      values: {},
+      values: {
+        skill: [0],
+        browser: 0
+      },
       errors: {}
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -42,8 +47,8 @@ class CustomFieldForm extends React.Component {
     return (
       <div>
         <Form
-          ref={ref => this.form = ref}
-          onChange={(values) => {
+          ref={ref => (this.form = ref)}
+          onChange={values => {
             this.setState({ values });
             console.log(values);
           }}
@@ -51,10 +56,9 @@ class CustomFieldForm extends React.Component {
           defaultValues={values}
           model={model}
         >
-
           <CustomField
             name="skill"
-            label="技能"
+            label="Skill"
             accepter={CheckboxGroup}
             error={errors.skill}
             inline
@@ -64,7 +68,23 @@ class CustomFieldForm extends React.Component {
             <Checkbox value={2}>Javascript</Checkbox>
             <Checkbox value={3}>HTML5</Checkbox>
           </CustomField>
-          <Button appearance="primary" onClick={this.handleSubmit}> Submit </Button>
+
+          <CustomField
+            name="browser"
+            label="Browser"
+            accepter={RadioGroup}
+            error={errors.browser}
+            inline
+          >
+            <Radio value={0}>Chrome</Radio>
+            <Radio value={1}>FireFox</Radio>
+            <Radio value={2}>IE</Radio>
+          </CustomField>
+
+          <Button appearance="primary" onClick={this.handleSubmit}>
+            {' '}
+            Submit{' '}
+          </Button>
         </Form>
       </div>
     );
@@ -72,6 +92,6 @@ class CustomFieldForm extends React.Component {
 }
 
 ReactDOM.render(<CustomFieldForm />);
-
 ```
+
 <!--end-code-->
