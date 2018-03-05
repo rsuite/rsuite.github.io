@@ -11,7 +11,8 @@ const examples = [
   require('./custom.md'),
   require('./disabled.md'),
   require('./searchable.md'),
-  require('./extra-footer.md')
+  require('./extra-footer.md'),
+  require('./asyn.md')
 ];
 
 export default () => {

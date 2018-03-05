@@ -22,6 +22,10 @@ const instance = (
       <ControlLabel>Textarea</ControlLabel>
       <FormControl name='textarea' rows={5} componentClass="textarea" />
     </FormGroup>
+    <ButtonToolbar>
+      <Button appearance="primary">Submit</Button>
+      <Button appearance="default">Cancel</Button>
+    </ButtonToolbar>
   </Form>
 );
 ReactDOM.render(instance);

@@ -36,7 +36,8 @@
 }
 
 .white-logo {
-  .cls-2, .cls-1 {
+  .cls-2,
+  .cls-1 {
     fill: #fff !important;
   }
 }
@@ -60,7 +61,7 @@
     height: @header-height;
   }
   &.overflow {
-    .box-shadow(0, 2px, 3px, rgba(0, 0, 0, 0.10));
+    .box-shadow(0, 2px, 3px, rgba(0, 0, 0, 0.1));
     border: none;
   }
   .navbar-right {
@@ -85,13 +86,15 @@
   .navbar-nav > li {
     a {
       background: none !important;
-      transition: color .3s linear;
+      transition: color 0.3s linear;
     }
     &.active > a.hvr-underline-from-center::before {
       left: 0;
       right: 0;
     }
-    &.active a, a:focus, a:active {
+    &.active a,
+    a:focus,
+    a:active {
       color: @primary-color;
     }
   }
@@ -142,7 +145,8 @@
   &-menu {
     margin-top: 20px;
     .btn {
-      &:active, &:focus {
+      &:active,
+      &:focus {
         color: white;
         background: inherit;
       }
@@ -155,7 +159,6 @@
     left: 0;
     padding: 9px;
   }
-
 }
 
 .sidebar-wrapper.fixed {
@@ -192,11 +195,12 @@
   a {
     color: #575757;
     font-weight: 200;
-    transition: background .3s cubic-bezier(0.4, 0, 1, 1);
+    transition: background 0.3s cubic-bezier(0.4, 0, 1, 1);
     border-radius: 2px;
   }
   .active {
-    &, & a {
+    &,
+    & a {
       font-weight: 600;
       color: @primary-color;
     }
@@ -211,16 +215,16 @@
     color: #aaa;
     border-bottom: 1px solid #eee;
   }
-
 }
 
 .show-grid {
   margin-top: 10px;
-  [class*=col-] {
+  [class*='col-'] {
     padding: 10px 5px;
     border: 1px solid #ddd;
     background: #f1f1f1;
-    &:not(:last-child), &.col-md-pull-6 {
+    &:not(:last-child),
+    &.col-md-pull-6 {
       border-right: none;
     }
     &.col-md-push-6 {
@@ -251,7 +255,8 @@
   h3 {
     font-size: 16px;
   }
-  ol, ul {
+  ol,
+  ul {
     padding: 10px 20px;
     list-style-type: circle;
     li {
@@ -260,7 +265,8 @@
   }
   table {
     width: 100%;
-    td, th {
+    td,
+    th {
       background: none;
       border-style: none;
       border-bottom: 1px dashed #f1f1f1;
@@ -278,6 +284,11 @@
 pre {
   border: none;
   border-radius: 0;
+}
+
+.doc-highlight {
+  background-color: #f5f5f5;
+  padding: 10px;
 }
 
 code:not(.doc-highlight) {
@@ -317,12 +328,13 @@ code:not(.doc-highlight) {
     margin: 0 10px;
     text-decoration: none;
     color: #aaa;
-    transition: color .3s linear;
+    transition: color 0.3s linear;
     &.primary {
       border: 1px solid #ff8533;
     }
     &:hover {
-      &, & .external-link {
+      &,
+      & .external-link {
         color: @base-color;
       }
     }
@@ -373,7 +385,7 @@ code:not(.doc-highlight) {
       text-align: center;
       line-height: 50px;
       font-size: 36px;
-      transition: transform .3s ease-in-out;
+      transition: transform 0.3s ease-in-out;
       cursor: pointer;
       &:hover {
         transform: scale(1.5);
@@ -409,7 +421,8 @@ code:not(.doc-highlight) {
   .cls-2 {
     fill: #ec727d;
   }
-  .cls-1, .cls-2 {
+  .cls-1,
+  .cls-2 {
     fill-rule: evenodd;
   }
 }
@@ -427,7 +440,7 @@ code:not(.doc-highlight) {
   margin-left: 8px;
   display: inline-block;
   color: #bbb;
-  transition: color .3s linear;
+  transition: color 0.3s linear;
 }
 
 .animated {
@@ -436,29 +449,34 @@ code:not(.doc-highlight) {
 }
 
 .animated-delay-half-seconds {
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 
 @keyframes bounceIn {
-  from, 20%, 40%, 60%, 80%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   0% {
     opacity: 0;
-    transform: scale3d(.3, .3, .3);
+    transform: scale3d(0.3, 0.3, 0.3);
   }
   20% {
     transform: scale3d(1.1, 1.1, 1.1);
   }
   40% {
-    transform: scale3d(.9, .9, .9);
+    transform: scale3d(0.9, 0.9, 0.9);
   }
   60% {
     opacity: 1;
     transform: scale3d(1.03, 1.03, 1.03);
   }
   80% {
-    transform: scale3d(.97, .97, .97);
+    transform: scale3d(0.97, 0.97, 0.97);
   }
   to {
     opacity: 1;
@@ -473,7 +491,7 @@ code:not(.doc-highlight) {
 @keyframes zoomIn {
   from {
     opacity: 0;
-    transform: scale3d(.3, .3, .3);
+    transform: scale3d(0.3, 0.3, 0.3);
   }
   50% {
     opacity: 1;
@@ -492,7 +510,7 @@ code:not(.doc-highlight) {
   position: relative;
   overflow: hidden;
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     z-index: -1;
     left: 50%;
@@ -504,27 +522,31 @@ code:not(.doc-highlight) {
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
   }
-  & > a::after, &::after {
+  & > a::after,
+  &::after {
     display: none !important;
   }
-  &:hover::before, &:focus::before, &:active::before {
+  &:hover::before,
+  &:focus::before,
+  &:active::before {
     left: 0;
     right: 0;
   }
 }
 
-.react-logo-run, .react-logo-run-2 {
+.react-logo-run,
+.react-logo-run-2 {
   animation: move 5s ease-in-out infinite;
   animation-play-state: paused;
   animation-delay: 1.3s;
-  opacity: .2;
+  opacity: 0.2;
   &.running {
     animation-play-state: running;
   }
 }
 
 path.bg {
-  opacity: .2;
+  opacity: 0.2;
 }
 
 .run-offset(@path) {
@@ -631,19 +653,17 @@ path.bg {
       font-size: 12px;
     }
   }
-
 }
 
 .navbar-brand {
   padding: 18px 20px;
 }
 
-.code-view-wrapper{
+.code-view-wrapper {
   .code-view-toolbar .btn {
     border-style: none;
   }
 }
-
 
 #customSlider {
   margin-top: 18px;
@@ -657,7 +677,7 @@ path.bg {
     cursor: pointer;
     transition-property: box-shadow, transform;
     transition-timing-function: ease-in-out;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
 
     &:hover {
       box-shadow: @slider-handle-hover-box-shadow;
@@ -676,7 +696,6 @@ path.bg {
 }
 
 .doc-page.night {
-
   .top-level-nav {
     background: #202225;
   }
@@ -684,15 +703,15 @@ path.bg {
     background: #2f3136;
   }
 
-  .nav.nav-docs{
-    a{
+  .nav.nav-docs {
+    a {
       color: #aaa;
-      &:hover{
+      &:hover {
         color: #fff;
         background: #42464e !important;
       }
     }
-    .nav-item-active a{
+    .nav-item-active a {
       color: @H500;
     }
     .nav-item-panel {
@@ -700,7 +719,7 @@ path.bg {
       color: #777;
     }
   }
-  .sidebar-wrapper.fixed .title-wrapper{
+  .sidebar-wrapper.fixed .title-wrapper {
     opacity: 0.5;
   }
 }

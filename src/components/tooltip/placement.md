@@ -17,7 +17,7 @@ const CustomComponent = ({ placement }) => (
 );
 
 const instance = (
-  <table cellspacing={5}>
+  <table cellSpacing={5}>
     <tbody>
       <tr>
         <td />

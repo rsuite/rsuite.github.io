@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { SelectPicker } from '../../rsuiteSource';
+import { SelectPicker, Icon } from '../../rsuiteSource';
 import data from '../../../resources/data/users';
 
 const context = require('./index.md');
@@ -10,8 +10,11 @@ const examples = [
   require('./placement.md'),
   require('./custom.md'),
   require('./disabled.md'),
-  require('./searchable.md')
+  require('./searchable.md'),
+  require('./asyn.md')
 ];
+
+
 
 export default () => {
   return (
@@ -20,6 +23,7 @@ export default () => {
       examples={examples}
       dependencies={{
         SelectPicker,
+        Icon,
         data
       }}
     />
