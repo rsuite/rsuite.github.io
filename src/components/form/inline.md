@@ -9,6 +9,7 @@ var instance = (
       <FormGroup>
         <ControlLabel>Username</ControlLabel>
         <FormControl name="username" />
+        <HelpBlock tooltip>Required</HelpBlock>
       </FormGroup>
 
       <FormGroup>

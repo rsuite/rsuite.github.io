@@ -53,7 +53,7 @@ class CustomCheckForm extends React.Component {
         >
           <Radio value="blur">blur</Radio>
           <Radio value="change">change</Radio>
-          <Radio value="none">null</Radio>
+          <Radio value="none">none</Radio>
         </RadioGroup>
         <hr />
         <Form

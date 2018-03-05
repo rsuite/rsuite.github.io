@@ -12,19 +12,18 @@ class HelpBlockDemo extends React.Component {
   }
   render() {
     const { showError } = this.state;
+    const errorMessage = showError ? 'This field is required' : null;
     return (
       <div>
         <Form>
           <FormGroup>
-            <FormControl name="email1" placeholder="Email" />
-            <HelpBlock>设置你的安全邮箱地址</HelpBlock>
-            <ErrorMessage show={showError}>该字段为必填项</ErrorMessage>
+            <FormControl name="email" placeholder="Email" errorMessage={errorMessage} />
+            <HelpBlock>Secure email Address</HelpBlock>
           </FormGroup>
 
           <FormGroup>
-            <FormControl name="email2" placeholder="Email" />
-            <HelpBlock tooltip>设置你的安全邮箱地址</HelpBlock>
-            <ErrorMessage show={showError}>该字段为必填项</ErrorMessage>
+            <FormControl name="name" placeholder="Name" errorMessage={errorMessage} />
+            <HelpBlock tooltip>This field is required</HelpBlock>
           </FormGroup>
         </Form>
         <hr />

@@ -1,26 +1,27 @@
 ### 水平排列布局
 
 <!--start-code-->
-```js
 
+```js
 const instance = (
-  <Form style={{width:300}} layout="horizontal" >
+  <Form layout="horizontal">
     <FormGroup>
       <ControlLabel>Username</ControlLabel>
-      <FormControl name='name' />
+      <FormControl name="name" />
       <HelpBlock>Required</HelpBlock>
     </FormGroup>
     <FormGroup>
       <ControlLabel>Email</ControlLabel>
-      <FormControl name='email' type="email" />
+      <FormControl name="email" type="email" />
+      <HelpBlock tooltip>Required</HelpBlock>
     </FormGroup>
     <FormGroup>
       <ControlLabel>Password</ControlLabel>
-      <FormControl name='password' type="password" />
+      <FormControl name="password" type="password" />
     </FormGroup>
     <FormGroup>
       <ControlLabel>Textarea</ControlLabel>
-      <FormControl name='textarea' rows={5} componentClass="textarea" />
+      <FormControl name="textarea" rows={5} componentClass="textarea" />
     </FormGroup>
     <ButtonToolbar>
       <Button appearance="primary">Submit</Button>
@@ -29,6 +30,6 @@ const instance = (
   </Form>
 );
 ReactDOM.render(instance);
-
 ```
+
 <!--end-code-->

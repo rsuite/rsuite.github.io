@@ -14,13 +14,12 @@ const model = Schema.Model({
 const TextField = ({ name, message, label, accepter, error, ...props }) => (
   <FormGroup className={error ? 'has-error' : ''}>
     <ControlLabel>{label} </ControlLabel>
-    <FormControl name={name} accepter={accepter} {...props} />
+    <FormControl name={name} accepter={accepter} {...props} errorMessage={error} />
     <HelpBlock>{message}</HelpBlock>
-    <ErrorMessage show={!!error}>{error}</ErrorMessage>
   </FormGroup>
 );
 
-class DefaultForm extends React.Component {
+class CheckForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -63,8 +62,7 @@ class DefaultForm extends React.Component {
           <TextField name="age" label="Age" error={errors.age} />
 
           <Button appearance="primary" onClick={this.handleSubmit}>
-            {' '}
-            Submit{' '}
+            Submit
           </Button>
         </Form>
       </div>
@@ -72,7 +70,7 @@ class DefaultForm extends React.Component {
   }
 }
 
-ReactDOM.render(<DefaultForm />);
+ReactDOM.render(<CheckForm />);
 ```
 
 <!--end-code-->

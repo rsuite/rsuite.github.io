@@ -6,7 +6,7 @@
 
 ```js
 const instance = (
-  <Form style={{ width: 300 }}>
+  <Form>
     <FormGroup>
       <ControlLabel>Username</ControlLabel>
       <FormControl name="name" />
@@ -15,6 +15,7 @@ const instance = (
     <FormGroup>
       <ControlLabel>Email</ControlLabel>
       <FormControl name="email" type="email" />
+      <HelpBlock tooltip>Required</HelpBlock>
     </FormGroup>
     <FormGroup>
       <ControlLabel>Password</ControlLabel>
