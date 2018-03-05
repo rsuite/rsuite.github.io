@@ -22,10 +22,12 @@ var instance = (
 
     <Form layout="inline">
       <FormGroup>
+        <ControlLabel srOnly>Username</ControlLabel>
         <FormControl placeholder="Username" name="username" />
       </FormGroup>
 
       <FormGroup>
+        <ControlLabel srOnly>Username</ControlLabel>
         <FormControl placeholder="Password" name="password" type="password" />
       </FormGroup>
 

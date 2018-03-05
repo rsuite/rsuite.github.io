@@ -6,7 +6,8 @@
 * `<FormControl>` 表单控件，定义一个表单字段。
 * `<FormGroup>` 表单控件组，用于表单控件布局
 * `<ControlLabel>` 表单控件对应的标题。
-* `<HelpBlock>` 表单控件对应帮助块，一般会放在表单控件下面，提醒、警告输入的内容。
+* `<HelpBlock>` 表单控件对应帮助信息。
+* `<ErrorMessage>` 表单控件对应错误信息显示。
 
 表单数据模型，数据数据校验：
 
@@ -33,19 +34,19 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock, Schema } from 'r
 
 ### `<Form>`
 
-| 名称          | 类型                                  | 描述                                      |
-| ------------- | ------------------------------------- | ----------------------------------------- |
-| horizontal    | boolean                               | 设置表单内的元素左右两栏布局              |
-| inline        | boolean                               | 设置表单内元素在一行布局                  |
-| values        | object                                | 表单的值 `受控组件`                       |
-| defaultValues | object                                | 表单的初始默认值 `非受控组件`             |
-| model         | Schema                                | SchemaModel 对象                          |
-| checkDelay    | number                                | 数据校验的时候，延迟处理，默认为 500 毫秒 |
-| checkTrigger  | enum: 'change','blur',null            | 默认为：'change'                          |
-| onChange      | function(values:Object, event:Object) | 数据改变后的回调函数                      |
-| onError       | function(errors:Object)               | 校验出错的回调函数                        |
-| onCheck       | function(errors:Object)               | 数据校验的回调函数                        |
-| errors        | object                                | 表单错误信息                              |
+| 名称          | 类型                                      | 描述                                      |
+| ------------- | ----------------------------------------- | ----------------------------------------- |
+| horizontal    | boolean                                   | 设置表单内的元素左右两栏布局              |
+| inline        | boolean                                   | 设置表单内元素在一行布局                  |
+| values        | object                                    | 表单的值 `受控组件`                       |
+| defaultValues | object                                    | 表单的初始默认值 `非受控组件`             |
+| model         | Schema                                    | SchemaModel 对象                          |
+| checkDelay    | number                                    | 数据校验的时候，延迟处理，默认为 500 毫秒 |
+| checkTrigger  | enum: 'change','blur','none' `('change')` | 触发表单校验的类型                        |
+| onChange      | function(values:Object, event:Object)     | 数据改变后的回调函数                      |
+| onError       | function(errors:Object)                   | 校验出错的回调函数                        |
+| onCheck       | function(errors:Object)                   | 数据校验的回调函数                        |
+| errors        | object                                    | 表单错误信息                              |
 
 ---
 
@@ -56,25 +57,42 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock, Schema } from 'r
 
 ### `<FormControl>`
 
-| 名称         | 类型                       | 描述                                       |
-| ------------ | -------------------------- | ------------------------------------------ |
-| name         | string                     | 表单元素名称                               |
-| accepter     | React.ElementType          | 受代理的组件                               |
-| checkTrigger | enum: 'change','blur',null | 数据校验的触发类型,会覆盖 `<Form>`上的设置 |
+| 名称         | 类型`(默认值)`                            | 描述                                       |
+| ------------ | ----------------------------------------- | ------------------------------------------ |
+| name         | string                                    | 表单元素名称                               |
+| accepter     | React.ElementType `(Input)`               | 受代理的组件                               |
+| checkTrigger | enum: 'change','blur','none' `('change')` | 数据校验的触发类型,会覆盖 `<Form>`上的设置 |
 
 ### `<FormGroup>`
 
-| 属性名称        | 类型                              | 默认值 | 描述 |
-| --------------- | --------------------------------- | ------ | ---- |
-| controlId       | string                            |        |      |
-| validationState | enum: 'success','warning','error' |        |      |
+| 属性名称    | 类型`(默认值)`          | 描述           |
+| ----------- | ----------------------- | -------------- |
+| classPrefix | string `('form-group')` | className 前缀 |
+| controlId   | string                  | 设置控件的 ID  |
 
 ### `<ControlLabel>`
 
-| 属性名称 | 类型    | 默认值 | 描述 |
-| -------- | ------- | ------ | ---- |
-| htmlFor  | string  |        |      |
-| srOnly   | boolean | false  |      |
+| 属性名称    | 类型`(默认值)`             | 描述                                                           |
+| ----------- | -------------------------- | -------------------------------------------------------------- |
+| classPrefix | string `('control-label')` | className 前缀                                                 |
+| htmlFor     | string                     | 对应 html label 标签的 for 属性，默认为 FormGroup 的 controlId |
+| srOnly      | boolean                    | screen reader only                                             |
+
+### `<HelpBlock>`
+
+| 属性名称    | 类型`(默认值)`          | 描述                                                           |
+| ----------- | ----------------------- | -------------------------------------------------------------- |
+| classPrefix | string `('help-block')` | className 前缀                                                 |
+| htmlFor     | string                  | 对应 html label 标签的 for 属性，默认为 FormGroup 的 controlId |
+| tooltip     | boolean                 | 是否通过 Tooltip 组件显示                                      |
+
+### `<ErrorMessage>`
+
+| 属性名称    | 类型`(默认值)`             | 描述                                                           |
+| ----------- | -------------------------- | -------------------------------------------------------------- |
+| classPrefix | string `('error-message')` | className 前缀                                                 |
+| htmlFor     | string                     | 对应 html label 标签的 for 属性，默认为 FormGroup 的 controlId |
+| show        | boolean                    | 显示错误信息                                                   |
 
 <br/>
 <br/>
