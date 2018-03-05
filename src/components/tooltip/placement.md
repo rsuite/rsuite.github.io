@@ -1,28 +1,88 @@
 ### 位置
 
 <!--start-code-->
+
 ```js
-const tooltip = (
-  <Tooltip>
-    This is a help <i>tooltip</i> .
-  </Tooltip>
+const CustomComponent = ({ placement }) => (
+  <Whisper
+    placement={placement}
+    speaker={
+      <Tooltip>
+        This is a help <i>tooltip</i> .
+      </Tooltip>
+    }
+  >
+    <Button appearance="subtle">{placement}</Button>
+  </Whisper>
 );
+
 const instance = (
-  <ButtonToolbar>
-    <Whisper placement="top" speaker={tooltip} >
-      <Button>Top</Button>
-    </Whisper>
-    <Whisper placement="bottom" speaker={tooltip}>
-      <Button>Bottom</Button>
-    </Whisper>
-    <Whisper placement="left" speaker={tooltip}>
-      <Button>Left</Button>
-    </Whisper>
-    <Whisper placement="right" speaker={tooltip}>
-      <Button>Right</Button>
-    </Whisper>
-  </ButtonToolbar>
+  <table cellspacing={5}>
+    <tbody>
+      <tr>
+        <td />
+        <td>
+          <CustomComponent placement="topLeft" />
+        </td>
+        <td>
+          <CustomComponent placement="top" />
+        </td>
+        <td>
+          <CustomComponent placement="topRight" />
+        </td>
+        <td />
+      </tr>
+      <tr>
+        <td>
+          <CustomComponent placement="leftTop" />
+        </td>
+        <td />
+        <td />
+        <td />
+        <td>
+          <CustomComponent placement="rightTop" />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <CustomComponent placement="left" />
+        </td>
+        <td />
+        <td />
+        <td />
+        <td>
+          <CustomComponent placement="right" />
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <CustomComponent placement="leftBottom" />
+        </td>
+        <td />
+        <td />
+        <td />
+        <td>
+          <CustomComponent placement="rightBottom" />
+        </td>
+      </tr>
+      <tr>
+        <td />
+        <td>
+          <CustomComponent placement="bottomLeft" />
+        </td>
+        <td>
+          <CustomComponent placement="bottom" />
+        </td>
+        <td>
+          <CustomComponent placement="bottomRight" />
+        </td>
+        <td />
+      </tr>
+    </tbody>
+  </table>
 );
 ReactDOM.render(instance);
 ```
+
 <!--end-code-->

@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Uploader } from '../../rsuiteSource';
+import { Uploader, Icon } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [
@@ -17,6 +17,7 @@ export default () => {
       context={context}
       examples={examples}
       dependencies={{
+        Icon,
         Uploader
       }}
     />
