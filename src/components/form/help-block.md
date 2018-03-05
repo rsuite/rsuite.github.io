@@ -18,20 +18,18 @@ class HelpBlockDemo extends React.Component {
           <FormGroup>
             <FormControl name="email1" placeholder="Email" />
             <HelpBlock>设置你的安全邮箱地址</HelpBlock>
+            <ErrorMessage show={showError}>该字段为必填项</ErrorMessage>
           </FormGroup>
 
           <FormGroup>
             <FormControl name="email2" placeholder="Email" />
             <HelpBlock tooltip>设置你的安全邮箱地址</HelpBlock>
-          </FormGroup>
-
-          <FormGroup>
-            <FormControl name="email3" placeholder="Email" />
-            <HelpBlock tooltip>设置你的安全邮箱地址</HelpBlock>
             <ErrorMessage show={showError}>该字段为必填项</ErrorMessage>
           </FormGroup>
         </Form>
-        Show Error: <Toggle
+        <hr />
+        Show Error:{' '}
+        <Toggle
           onChange={() => {
             this.setState({ showError: !showError });
           }}
