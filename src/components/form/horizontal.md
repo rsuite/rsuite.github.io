@@ -1,10 +1,10 @@
-### 水平布局
+### 水平排列布局
 
 <!--start-code-->
 ```js
 
 const instance = (
-  <Form style={{width:300}} horizontal>
+  <Form style={{width:300}} layout="horizontal" >
     <FormGroup>
       <ControlLabel>Username</ControlLabel>
       <FormControl name='name' />

@@ -7,11 +7,12 @@ const model = Schema.Model({
   name: Schema.Types.StringType().isEmail('请输入正确的邮箱')
 });
 
-const CustomField = ({ name, label, accepter, error, ...props }) => (
+const CustomField = ({ name, label, message, accepter, error, ...props }) => (
   <FormGroup className={error ? 'has-error' : ''}>
     <ControlLabel>{label} </ControlLabel>
     <FormControl name={name} accepter={accepter} {...props} />
-    <HelpBlock className={error ? 'error' : ''}>{error}</HelpBlock>
+    <HelpBlock>{message}</HelpBlock>
+    <ErrorMessage show={!!error}>{error}</ErrorMessage>
   </FormGroup>
 );
 
@@ -68,7 +69,7 @@ class CustomCheckForm extends React.Component {
           model={model}
           checkTrigger={checkTrigger}
         >
-          <CustomField name="name" label="邮箱" error={errors.name} />
+          <CustomField name="name" label="邮箱" error={errors.name} message="请输入邮箱地址" />
           <Button appearance="primary" onClick={this.handleSubmit}>
             {' '}
             提交{' '}

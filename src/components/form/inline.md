@@ -1,27 +1,39 @@
-### 单行布局
+### 内联表单
+
 <!--start-code-->
+
 ```js
 var instance = (
-  <Form inline>
-    <FormGroup>
-      <ControlLabel>Input</ControlLabel>
-      <FormControl name="user"/>
-    </FormGroup>
+  <div>
+    <Form layout="inline">
+      <FormGroup>
+        <ControlLabel>Username</ControlLabel>
+        <FormControl name="username" />
+      </FormGroup>
 
-    <FormGroup>
-      <ControlLabel>CheckboxGroup</ControlLabel>
-      <FormControl
-        name="checkbox"
-        accepter={CheckboxGroup}
-        inline
-      >
-        <Checkbox>Item A</Checkbox>
-        <Checkbox>Item B</Checkbox>
-      </FormControl>
+      <FormGroup>
+        <ControlLabel>Password</ControlLabel>
+        <FormControl name="password" type="password" />
+      </FormGroup>
 
-    </FormGroup>
-  </Form>
+      <Button>Login</Button>
+    </Form>
+    <hr />
+
+    <Form layout="inline">
+      <FormGroup>
+        <FormControl placeholder="Username" name="username" />
+      </FormGroup>
+
+      <FormGroup>
+        <FormControl placeholder="Password" name="password" type="password" />
+      </FormGroup>
+
+      <Button>Login</Button>
+    </Form>
+  </div>
 );
 ReactDOM.render(instance);
 ```
+
 <!--end-code-->

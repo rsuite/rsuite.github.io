@@ -5,6 +5,7 @@ import {
   Form,
   FormGroup,
   FormControl,
+  ErrorMessage,
   Dropdown,
   Icon,
   Button,
@@ -16,7 +17,8 @@ import {
   Checkbox,
   Radio,
   Schema,
-  InputGroup
+  InputGroup,
+  Toggle
 } from '../../rsuiteSource';
 
 const context = require('./index.md');
@@ -24,8 +26,9 @@ const examples = [
   require('./basic.md'),
   require('./horizontal.md'),
   require('./inline.md'),
-  require('./form-check.md'),
+  require('./help-block.md'),
   require('./custom-form-control.md'),
+  require('./form-check.md'),
   require('./custom-check-form.md')
 ];
 
@@ -39,7 +42,9 @@ export default () => {
         FormGroup,
         FormControl,
         InputGroup,
+        ErrorMessage,
         Dropdown,
+        Toggle,
         Icon,
         Button,
         ControlLabel,

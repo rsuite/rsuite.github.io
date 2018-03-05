@@ -1,40 +1,48 @@
-### 帮助提醒
+### 帮助与错误消息
 
 <!--start-code-->
+
 ```js
-
-
 class HelpBlockDemo extends React.Component {
   constructor(props) {
     super(props);
-    this.state={
-      validationState:null
+    this.state = {
+      showError: false
     };
   }
-  handleState(validationState){
-
-    this.setState({validationState})
-  }
   render() {
-    console.log(this.state.validationState);
+    const { showError } = this.state;
     return (
       <div>
-        <FormGroup validationState={this.state.validationState} >
-          <FormControl />
-          <HelpBlock>
-            <Icon icon="info2" /> 该字段为必填项
-          </HelpBlock>
-        </FormGroup>
-        <Button onClick={()=>{this.handleState('')}}>Default</Button>
-        <Button onClick={()=>{this.handleState('success')}}>Success</Button>
-        <Button onClick={()=>{this.handleState('warning')}}>Warning</Button>
-        <Button onClick={()=>{this.handleState('error')}}>Error</Button>
+        <Form>
+          <FormGroup>
+            <FormControl name="email1" placeholder="Email" />
+            <HelpBlock>设置你的安全邮箱地址</HelpBlock>
+          </FormGroup>
+
+          <FormGroup>
+            <FormControl name="email2" placeholder="Email" />
+            <HelpBlock tooltip>设置你的安全邮箱地址</HelpBlock>
+          </FormGroup>
+
+          <FormGroup>
+            <FormControl name="email3" placeholder="Email" />
+            <HelpBlock tooltip>设置你的安全邮箱地址</HelpBlock>
+            <ErrorMessage show={showError}>该字段为必填项</ErrorMessage>
+          </FormGroup>
+        </Form>
+        Show Error: <Toggle
+          onChange={() => {
+            this.setState({ showError: !showError });
+          }}
+          checked={showError}
+        />
       </div>
     );
   }
 }
 
 ReactDOM.render(<HelpBlockDemo />);
-
 ```
+
 <!--end-code-->
