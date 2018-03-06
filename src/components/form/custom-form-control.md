@@ -84,10 +84,11 @@ class CustomFieldForm extends React.Component {
             <Radio value={2}>IE</Radio>
           </CustomField>
 
-          <Button appearance="primary" onClick={this.handleSubmit}>
-            {' '}
-            Submit{' '}
-          </Button>
+          <FormGroup>
+            <Button appearance="primary" onClick={this.handleSubmit}>
+              Submit
+            </Button>
+          </FormGroup>
         </Form>
       </div>
     );

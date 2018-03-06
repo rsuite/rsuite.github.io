@@ -1,4 +1,4 @@
-### 表单校验触发事件
+### 自定义触发校验
 
 <!--start-code-->
 
@@ -91,6 +91,6 @@ ReactDOM.render(<CustomCheckForm />);
 
 * `'change'` : 数据改变 `onChange` 的时候会触发数据校验。
 * `'blur'` : 组件失去焦点触发校验
-* `null` : 不触发校验，只会在调用 `<Form>` 的 `check()` 方便的时候才会校验
+* `'none'` : 不触发校验，只会在调用 `<Form>` 的 `check()` 方便的时候才会校验
 
 还可以设置校验延迟时间 `checkDelay`, 默认值为 `500` 毫秒。
