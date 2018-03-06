@@ -1,4 +1,4 @@
-### 表单控件
+### 自定义表单组件
 
 所有的 Data Entry 相关的组件都可以在表单中使用，例如 `Checkbox`,`SelectPicker`,`Slider` 等等。 但是需要通过 `FormControl` 组件进行数据管理，实现与 `Form` 组件的数据关联。
 
@@ -12,7 +12,7 @@
 ```js
 const { ArrayType, StringType } = Schema.Types;
 const model = Schema.Model({
-  skill: ArrayType()
+  skills: ArrayType()
     .minLength(2, 'Please select at least 2 types of Skills.')
     .isRequired('This field is required.'),
   status: ArrayType()
@@ -47,9 +47,9 @@ class CustomFieldForm extends React.Component {
   constructor(props) {
     super(props);
     const values = {
-      skill: [0],
-      browser: 0,
-      status: [0],
+      skills: ['Node.js'],
+      browser: 'Chrome',
+      status: ['open'],
       description: 'Hello world !'
     };
     this.state = {
@@ -68,100 +68,77 @@ class CustomFieldForm extends React.Component {
   }
   render() {
     const { errors, values } = this.state;
-    const valueFormatter = new JSONFormatter(values, 5);
-    const errorFormatter = new JSONFormatter(errors, 5);
 
     return (
-      <Row>
-        <Col md={8}>
-          <Form
-            ref={ref => (this.form = ref)}
-            onChange={values => {
-              this.setState({ values });
-              console.log('values', values);
-            }}
-            onCheck={errors => {
-              this.setState({ errors });
-              console.log('errors', errors);
-            }}
-            defaultValues={values}
-            model={model}
+      <div>
+        <JSONView values={values} errors={errors} />
+        <Form
+          ref={ref => (this.form = ref)}
+          onChange={values => {
+            this.setState({ values });
+            console.log('values', values);
+          }}
+          onCheck={errors => {
+            this.setState({ errors });
+            console.log('errors', errors);
+          }}
+          defaultValues={values}
+          model={model}
+        >
+          <CustomField
+            name="skills"
+            label="Skills"
+            accepter={CheckboxGroup}
+            error={errors.skills}
+            inline
           >
-            <CustomField
-              name="skill"
-              label="Skill"
-              accepter={CheckboxGroup}
-              error={errors.skill}
-              inline
-            >
-              <Checkbox value={0}>Node.js</Checkbox>
-              <Checkbox value={1}>CSS3</Checkbox>
-              <Checkbox value={2}>Javascript</Checkbox>
-              <Checkbox value={3}>HTML5</Checkbox>
-            </CustomField>
+            <Checkbox value={'Node.js'}>Node.js</Checkbox>
+            <Checkbox value={'CSS3'}>CSS3</Checkbox>
+            <Checkbox value={'Javascript'}>Javascript</Checkbox>
+            <Checkbox value={'HTML5'}>HTML5</Checkbox>
+          </CustomField>
 
-            <CustomField
-              name="browser"
-              label="Browser"
-              accepter={RadioGroup}
-              error={errors.browser}
-              inline
-            >
-              <Radio value={0}>Chrome</Radio>
-              <Radio value={1}>FireFox</Radio>
-              <Radio value={2}>IE</Radio>
-            </CustomField>
+          <CustomField
+            name="browser"
+            label="Browser"
+            accepter={RadioGroup}
+            error={errors.browser}
+            inline
+          >
+            <Radio value={'Chrome'}>Chrome</Radio>
+            <Radio value={'FireFox'}>FireFox</Radio>
+            <Radio value={'IE'}>IE</Radio>
+          </CustomField>
 
-            <CustomField
-              name="status"
-              label="Status"
-              accepter={CheckPicker}
-              error={errors.status}
-              data={[
-                { label: 'Todo', value: 0 },
-                { label: 'Open', value: 1 },
-                { label: 'Close', value: 2 },
-                { label: 'Error', value: 3 },
-                { label: 'Processing', value: 4 },
-                { label: 'Done', value: 5 }
-              ]}
-            />
+          <CustomField
+            name="status"
+            label="Status"
+            accepter={CheckPicker}
+            error={errors.status}
+            data={[
+              { label: 'Todo', value: 'todo' },
+              { label: 'Open', value: 'open' },
+              { label: 'Close', value: 'close' },
+              { label: 'Error', value: 'error' },
+              { label: 'Processing', value: 'processing' },
+              { label: 'Done', value: 'done' }
+            ]}
+          />
 
-            <CustomField
-              name="description"
-              label="Description"
-              accepter={Editor}
-              error={errors.description}
-            />
+          <CustomField
+            name="description"
+            label="Description"
+            accepter={Editor}
+            error={errors.description}
+          />
 
-            <FormGroup>
-              <Button appearance="primary" onClick={this.handleSubmit}>
-                Submit
-              </Button>
-            </FormGroup>
-          </Form>
-        </Col>
-        <Col md={4}>
-          <Panel header="Values">
-            <div
-              dangerouslySetInnerHTML={{
-                __html: `<div class='json-formatter-row json-formatter-open'>${
-                  valueFormatter.render().innerHTML
-                }</div>`
-              }}
-            />
-          </Panel>
-          <Panel header="Errors">
-            <div
-              dangerouslySetInnerHTML={{
-                __html: `<div class='json-formatter-row json-formatter-open'>${
-                  errorFormatter.render().innerHTML
-                }</div>`
-              }}
-            />
-          </Panel>
-        </Col>
-      </Row>
+          <FormGroup>
+            <Button appearance="primary" onClick={this.handleSubmit}>
+              Submit
+            </Button>
+          </FormGroup>
+        </Form>
+      </div>
     );
   }
 }

@@ -1,31 +1,25 @@
 {
   "name": "rsuite-docs",
-  "version": "0.2.2",
+  "version": "3.0.0",
   "description": "RSuite components built with React",
   "main": "lib/index.js",
   "directories": {
     "lib": "lib/"
   },
   "scripts": {
-    "dev": "NODE_ENV=development webpack-dev-server -d --watch --inline --history-api-fallback --progress --colors --port 3200 --host 0.0.0.0",
+    "dev":
+      "NODE_ENV=development webpack-dev-server -d --watch --inline --history-api-fallback --progress --colors --port 3200 --host 0.0.0.0",
     "dev-ie": "IE_DEBUG=true npm run dev",
     "dev-styles": "STYLE_DEBUG=STYLE npm run dev",
     "dev-styles-source": "STYLE_DEBUG=SOURCE npm run dev",
     "build": "rm -rf assets &&  NODE_ENV=production webpack --progress --colors",
-    "build-public": "rm -rf lib && babel src/public --out-dir lib && cp -R src/public/less lib && cp -R src/public/css lib",
+    "build-public":
+      "rm -rf lib && babel src/public --out-dir lib && cp -R src/public/less lib && cp -R src/public/css lib",
     "dll": "webpack --config webpack.dll.config.js",
     "test": "karma start"
   },
-  "keywords": [
-    "react",
-    "suite",
-    "rsuite",
-    "react-component"
-  ],
-  "files": [
-    "CHANGELOG.md",
-    "lib"
-  ],
+  "keywords": ["react", "suite", "rsuite", "react-component"],
+  "files": ["CHANGELOG.md", "lib"],
   "author": "Simon Guo <simonguo.2009@gmail.com>",
   "license": "MIT",
   "repository": {
@@ -33,9 +27,8 @@
     "url": "git@github.com:rsuite/rsuite.git"
   },
   "dependencies": {
-    "braft-editor": "^1.6.1",
-    "json-formatter-js": "^2.2.0",
     "moment": "^2.20.1",
+    "react-json-tree": "^0.11.0",
     "react-quill": "^1.2.6",
     "rsuite": "^3.0.0-next.12",
     "rsuite-page-nav": "^1.1.3",

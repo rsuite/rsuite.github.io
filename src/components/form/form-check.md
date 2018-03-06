@@ -48,12 +48,11 @@ class CheckForm extends React.Component {
     const { errors, values } = this.state;
     return (
       <div>
+        <JSONView values={values} errors={errors} />
         <Form
           ref={ref => (this.form = ref)}
           onChange={values => {
             this.setState({ values });
-            // 清除表单所有的错误信息
-            this.form.cleanErrors();
           }}
           onCheck={errors => {
             this.setState({ errors });

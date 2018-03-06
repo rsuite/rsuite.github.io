@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactQuill from 'react-quill';
-import JSONFormatter from 'json-formatter-js';
+import JSONTree from 'react-json-tree';
 
 import ComponentExample from '../ComponentExample';
 import 'react-quill/dist/quill.snow.css';
@@ -35,16 +35,32 @@ const examples = [
   require('./horizontal.md'),
   require('./inline.md'),
   require('./help-block.md'),
-  require('./custom-form-control.md'),
+  require('./error-message.md'),
   require('./form-check.md'),
+  require('./custom-form-control.md'),
   require('./custom-check-form.md')
 ];
+
+const JSONView = ({ values, errors }) => (
+  <Row>
+    <Col md={6}>
+      <Panel header="Values" style={{ background: 'rgb(0, 43, 54)' }}>
+        <JSONTree data={values} />
+      </Panel>
+    </Col>
+
+    <Col md={6}>
+      <Panel header="Errors" style={{ background: 'rgb(0, 43, 54)' }}>
+        <JSONTree data={errors} />
+      </Panel>
+    </Col>
+  </Row>
+);
 
 export default () => {
   return (
     <ComponentExample
       dependencies={{
-        JSONFormatter,
         Row,
         Col,
         Schema,
@@ -67,7 +83,9 @@ export default () => {
         Checkbox,
         Panel,
         Radio,
-        ReactQuill
+        ReactQuill,
+        JSONTree,
+        JSONView
       }}
       context={context}
       examples={examples}

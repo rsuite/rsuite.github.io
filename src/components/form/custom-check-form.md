@@ -21,7 +21,7 @@ class CustomCheckForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      checkTrigger: 'blur',
+      checkTrigger: 'change',
       values: {},
       errors: {}
     };
@@ -41,9 +41,9 @@ class CustomCheckForm extends React.Component {
     const { errors, values, checkTrigger } = this.state;
     return (
       <div>
+        <JSONView values={values} errors={errors} />
         checkTrigger:
         <RadioGroup
-          inline
           value={checkTrigger}
           onChange={checkTrigger => {
             this.setState({
