@@ -6,9 +6,13 @@
 
 ```js
 const model = Schema.Model({
-  name: Schema.Types.StringType().isRequired('用户名不能为空'),
-  email: Schema.Types.StringType().isEmail('请输入正确的邮箱'),
-  age: Schema.Types.NumberType('年龄应该是一个数字').range(18, 30, '年应该在 18 到 30 岁')
+  name: Schema.Types.StringType().isRequired('This field is required.'),
+  email: Schema.Types.StringType().isEmail('Please enter a valid email address.'),
+  age: Schema.Types.NumberType('Please enter a valid number.').range(
+    18,
+    30,
+    'Please enter a number from 18 to 30'
+  )
 });
 
 const TextField = ({ name, message, label, accepter, error, ...props }) => (

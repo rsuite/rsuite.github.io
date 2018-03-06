@@ -7,10 +7,9 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const markdownRenderer = require('react-markdown-reader').renderer;
 const CSSSplitWebpackPlugin = require('css-split-webpack-plugin').default;
 
-const iconPath = [
-  './node_modules/rsuite-theme',
-  '../rsuite-theme'
-].map(relativePath => path.resolve(__dirname, relativePath));
+const iconPath = ['./node_modules/rsuite-theme', '../rsuite-theme'].map(relativePath =>
+  path.resolve(__dirname, relativePath)
+);
 
 const { NODE_ENV, STYLE_DEBUG, IE_DEBUG } = process.env;
 const extractLess = new ExtractTextPlugin({
@@ -39,10 +38,12 @@ const plugins = [
 const publicPath = NODE_ENV === 'development' ? '/' : '/assets/';
 
 if (NODE_ENV === 'development') {
-  plugins.push(new webpack.DllReferencePlugin({
-    context: path.resolve(__dirname, 'src/'),
-    manifest: require('./dist/vendor-manifest.json')
-  }));
+  plugins.push(
+    new webpack.DllReferencePlugin({
+      context: path.resolve(__dirname, 'src/'),
+      manifest: require('./dist/vendor-manifest.json')
+    })
+  );
 }
 
 if (NODE_ENV === 'production') {
@@ -54,20 +55,22 @@ if (NODE_ENV === 'production') {
       filename: 'vendor.js'
     })
   );
-  plugins.push(new CompressionPlugin({
-    asset: '[path].gz[query]',
-    algorithm: 'gzip',
-    test: /\.(js|html)$/,
-    threshold: 10240,
-    minRatio: 0.8
-  }));
-
+  plugins.push(
+    new CompressionPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.(js|html)$/,
+      threshold: 10240,
+      minRatio: 0.8
+    })
+  );
 }
 
 const getStyleLoader = () => {
   const sourceMap = STYLE_DEBUG === 'SOURCE' ? '?sourceMap' : '';
   const loaders = ['css-loader', 'postcss-loader', 'less-loader'];
-  const filterLoader = loader => (STYLE_DEBUG === 'STYLE' || NODE_ENV === 'production') ? true : loader !== 'postcss-loader';
+  const filterLoader = loader =>
+    STYLE_DEBUG === 'STYLE' || NODE_ENV === 'production' ? true : loader !== 'postcss-loader';
   return loaders.filter(filterLoader).map(loader => ({
     loader: `${loader}${sourceMap}`
   }));
@@ -76,14 +79,14 @@ const getStyleLoader = () => {
 const common = {
   entry: {
     app: ['babel-polyfill', path.resolve(__dirname, 'src/index')],
-    vendor: ['react', 'react-dom'],
+    vendor: ['react', 'react-dom']
   },
   devtool: 'cheap-module-eval-source-map',
   devServer: {
     hot: true,
     disableHostCheck: true,
     historyApiFallback: true,
-    publicPath: '/',
+    publicPath: '/'
   },
   output: {
     path: path.resolve(__dirname, 'assets'),
@@ -95,10 +98,7 @@ const common = {
     rules: [
       {
         test: /\.js$/,
-        use: [
-          'transform-loader?brfs',
-          'babel-loader?babelrc'
-        ],
+        use: ['transform-loader?brfs', 'babel-loader?babelrc'],
         exclude: /node_modules/
       },
       {
@@ -114,7 +114,8 @@ const common = {
         use: [
           {
             loader: 'html-loader'
-          }, {
+          },
+          {
             loader: 'markdown-loader',
             options: {
               pedantic: true,

@@ -5,18 +5,20 @@
 * FormControl 用于绑定 Form 中的数据字段，通过 `name` 属性和 Schema.Model 对象的 `key` 对应。
 * FormControl 默认是个 `Input` 组件，可以通过 `accepter` 设置需要的数据录入组件。
 
-> 例如: `<FormControl accepter={CheckboxGroup} />` , FormControl 会渲染一个 `<CheckboxGroup>` 组件, 同时与 Form 中的 Schema.Model 实例绑定。
+> 例如: `<FormControl accepter={CheckboxGroup} />` , FormControl 会渲染一个 `<CheckboxGroup>` 组件, 同时与 Form 中的 Schema.Model 实例绑定。以下示例中的富文本编辑器，用的是 [react-quill](https://github.com/zenoamaro/react-quill)
 
 <!--start-code-->
 
 ```js
+const { ArrayType, StringType } = Schema.Types;
 const model = Schema.Model({
-  skill: Schema.Types.ArrayType()
-    .minLength(2, '至少选择2个')
-    .isRequired('该字段不能为空'),
-  status: Schema.Types.ArrayType()
-    .minLength(2, '至少选择2个')
-    .isRequired('该字段不能为空')
+  skill: ArrayType()
+    .minLength(2, 'Please select at least 2 types of Skills.')
+    .isRequired('This field is required.'),
+  status: ArrayType()
+    .minLength(2, 'Please select at least 2 types of Status.')
+    .isRequired('This field is required.'),
+  description: StringType().isRequired('This field is required.')
 });
 
 const CustomField = ({ name, message, label, accepter, error, ...props }) => (
@@ -27,15 +29,31 @@ const CustomField = ({ name, message, label, accepter, error, ...props }) => (
   </FormGroup>
 );
 
+const Editor = ({ onChange, defaultValue, ...props }) => {
+  function handleChange(content) {
+    onChange(content);
+  }
+  return (
+    <ReactQuill
+      style={{ width: 500, height: 200 }}
+      theme="snow"
+      onChange={handleChange}
+      defaultValue={defaultValue}
+    />
+  );
+};
+
 class CustomFieldForm extends React.Component {
   constructor(props) {
     super(props);
+    const values = {
+      skill: [0],
+      browser: 0,
+      status: [0],
+      description: 'Hello world !'
+    };
     this.state = {
-      values: {
-        skill: [0],
-        browser: 0,
-        status: [0]
-      },
+      values: values,
       errors: {}
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -50,68 +68,100 @@ class CustomFieldForm extends React.Component {
   }
   render() {
     const { errors, values } = this.state;
+    const valueFormatter = new JSONFormatter(values, 5);
+    const errorFormatter = new JSONFormatter(errors, 5);
+
     return (
-      <div>
-        <Form
-          ref={ref => (this.form = ref)}
-          onChange={values => {
-            this.setState({ values });
-            console.log(values);
-          }}
-          onCheck={errors => {
-            this.setState({ errors });
-            console.log(errors);
-          }}
-          defaultValues={values}
-          model={model}
-        >
-          <CustomField
-            name="skill"
-            label="Skill"
-            accepter={CheckboxGroup}
-            error={errors.skill}
-            inline
+      <Row>
+        <Col md={8}>
+          <Form
+            ref={ref => (this.form = ref)}
+            onChange={values => {
+              this.setState({ values });
+              console.log('values', values);
+            }}
+            onCheck={errors => {
+              this.setState({ errors });
+              console.log('errors', errors);
+            }}
+            defaultValues={values}
+            model={model}
           >
-            <Checkbox value={0}>Node.js</Checkbox>
-            <Checkbox value={1}>CSS3</Checkbox>
-            <Checkbox value={2}>Javascript</Checkbox>
-            <Checkbox value={3}>HTML5</Checkbox>
-          </CustomField>
+            <CustomField
+              name="skill"
+              label="Skill"
+              accepter={CheckboxGroup}
+              error={errors.skill}
+              inline
+            >
+              <Checkbox value={0}>Node.js</Checkbox>
+              <Checkbox value={1}>CSS3</Checkbox>
+              <Checkbox value={2}>Javascript</Checkbox>
+              <Checkbox value={3}>HTML5</Checkbox>
+            </CustomField>
 
-          <CustomField
-            name="browser"
-            label="Browser"
-            accepter={RadioGroup}
-            error={errors.browser}
-            inline
-          >
-            <Radio value={0}>Chrome</Radio>
-            <Radio value={1}>FireFox</Radio>
-            <Radio value={2}>IE</Radio>
-          </CustomField>
+            <CustomField
+              name="browser"
+              label="Browser"
+              accepter={RadioGroup}
+              error={errors.browser}
+              inline
+            >
+              <Radio value={0}>Chrome</Radio>
+              <Radio value={1}>FireFox</Radio>
+              <Radio value={2}>IE</Radio>
+            </CustomField>
 
-          <CustomField
-            name="status"
-            label="Status"
-            accepter={CheckPicker}
-            error={errors.status}
-            data={[
-              { label: 'Todo', value: 0 },
-              { label: 'Open', value: 1 },
-              { label: 'Close', value: 2 },
-              { label: 'Error', value: 3 },
-              { label: 'Processing', value: 4 },
-              { label: 'Done', value: 5 }
-            ]}
-          />
+            <CustomField
+              name="status"
+              label="Status"
+              accepter={CheckPicker}
+              error={errors.status}
+              data={[
+                { label: 'Todo', value: 0 },
+                { label: 'Open', value: 1 },
+                { label: 'Close', value: 2 },
+                { label: 'Error', value: 3 },
+                { label: 'Processing', value: 4 },
+                { label: 'Done', value: 5 }
+              ]}
+            />
 
-          <FormGroup>
-            <Button appearance="primary" onClick={this.handleSubmit}>
-              Submit
-            </Button>
-          </FormGroup>
-        </Form>
-      </div>
+            <CustomField
+              name="description"
+              label="Description"
+              accepter={Editor}
+              error={errors.description}
+            />
+
+            <FormGroup>
+              <Button appearance="primary" onClick={this.handleSubmit}>
+                Submit
+              </Button>
+            </FormGroup>
+          </Form>
+        </Col>
+        <Col md={4}>
+          <Panel header="Values">
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `<div class='json-formatter-row json-formatter-open'>${
+                  valueFormatter.render().innerHTML
+                }</div>`
+              }}
+            />
+          </Panel>
+          <Panel header="Errors">
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `<div class='json-formatter-row json-formatter-open'>${
+                  errorFormatter.render().innerHTML
+                }</div>`
+              }}
+            />
+          </Panel>
+        </Col>
+      </Row>
     );
   }
 }

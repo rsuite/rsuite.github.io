@@ -1,5 +1,9 @@
 import React from 'react';
+import ReactQuill from 'react-quill';
+import JSONFormatter from 'json-formatter-js';
+
 import ComponentExample from '../ComponentExample';
+import 'react-quill/dist/quill.snow.css';
 import {
   HelpBlock,
   Form,
@@ -21,7 +25,8 @@ import {
   Schema,
   CheckPicker,
   InputGroup,
-  Toggle
+  Toggle,
+  Panel
 } from '../../rsuiteSource';
 
 const context = require('./index.md');
@@ -39,6 +44,9 @@ export default () => {
   return (
     <ComponentExample
       dependencies={{
+        JSONFormatter,
+        Row,
+        Col,
         Schema,
         HelpBlock,
         Form,
@@ -56,10 +64,10 @@ export default () => {
         CheckboxGroup,
         CheckPicker,
         RadioGroup,
-        Col,
-        Row,
         Checkbox,
-        Radio
+        Panel,
+        Radio,
+        ReactQuill
       }}
       context={context}
       examples={examples}

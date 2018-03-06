@@ -4,7 +4,9 @@
 
 ```js
 const model = Schema.Model({
-  name: Schema.Types.StringType().isEmail('请输入正确的邮箱')
+  name: Schema.Types.StringType()
+    .isEmail('Please enter a valid email address.')
+    .isRequired('This field is required.')
 });
 
 const CustomField = ({ name, label, message, accepter, error, ...props }) => (
