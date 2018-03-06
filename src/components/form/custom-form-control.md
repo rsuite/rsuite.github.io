@@ -14,7 +14,9 @@ const model = Schema.Model({
   skill: Schema.Types.ArrayType()
     .minLength(2, '至少选择2个')
     .isRequired('该字段不能为空'),
-  status: Schema.Types.ArrayType().isRequired('该字段不能为空')
+  status: Schema.Types.ArrayType()
+    .minLength(2, '至少选择2个')
+    .isRequired('该字段不能为空')
 });
 
 const CustomField = ({ name, message, label, accepter, error, ...props }) => (
