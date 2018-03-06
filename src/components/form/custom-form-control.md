@@ -13,15 +13,15 @@
 const model = Schema.Model({
   skill: Schema.Types.ArrayType()
     .minLength(2, '至少选择2个')
-    .isRequired('该字段不能为空')
+    .isRequired('该字段不能为空'),
+  status: Schema.Types.ArrayType().isRequired('该字段不能为空')
 });
 
 const CustomField = ({ name, message, label, accepter, error, ...props }) => (
   <FormGroup className={error ? 'has-error' : ''}>
     <ControlLabel>{label} </ControlLabel>
-    <FormControl name={name} accepter={accepter} {...props} />
+    <FormControl name={name} accepter={accepter} errorMessage={error} {...props} />
     <HelpBlock>{message}</HelpBlock>
-    <ErrorMessage show={!!error}>{error}</ErrorMessage>
   </FormGroup>
 );
 
@@ -31,7 +31,8 @@ class CustomFieldForm extends React.Component {
     this.state = {
       values: {
         skill: [0],
-        browser: 0
+        browser: 0,
+        status: [0]
       },
       errors: {}
     };
@@ -55,7 +56,10 @@ class CustomFieldForm extends React.Component {
             this.setState({ values });
             console.log(values);
           }}
-          onCheck={errors => this.setState({ errors })}
+          onCheck={errors => {
+            this.setState({ errors });
+            console.log(errors);
+          }}
           defaultValues={values}
           model={model}
         >
@@ -83,6 +87,21 @@ class CustomFieldForm extends React.Component {
             <Radio value={1}>FireFox</Radio>
             <Radio value={2}>IE</Radio>
           </CustomField>
+
+          <CustomField
+            name="status"
+            label="Status"
+            accepter={CheckPicker}
+            error={errors.status}
+            data={[
+              { label: 'Todo', value: 0 },
+              { label: 'Open', value: 1 },
+              { label: 'Close', value: 2 },
+              { label: 'Error', value: 3 },
+              { label: 'Processing', value: 4 },
+              { label: 'Done', value: 5 }
+            ]}
+          />
 
           <FormGroup>
             <Button appearance="primary" onClick={this.handleSubmit}>

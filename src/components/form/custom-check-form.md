@@ -10,9 +10,8 @@ const model = Schema.Model({
 const CustomField = ({ name, label, message, accepter, error, ...props }) => (
   <FormGroup className={error ? 'has-error' : ''}>
     <ControlLabel>{label} </ControlLabel>
-    <FormControl name={name} accepter={accepter} {...props} />
+    <FormControl name={name} accepter={accepter} errorMessage={error} {...props} />
     <HelpBlock>{message}</HelpBlock>
-    <ErrorMessage show={!!error}>{error}</ErrorMessage>
   </FormGroup>
 );
 

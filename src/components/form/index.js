@@ -19,6 +19,7 @@ import {
   Checkbox,
   Radio,
   Schema,
+  CheckPicker,
   InputGroup,
   Toggle
 } from '../../rsuiteSource';
@@ -53,6 +54,7 @@ export default () => {
         ButtonToolbar,
         ControlLabel,
         CheckboxGroup,
+        CheckPicker,
         RadioGroup,
         Col,
         Row,
