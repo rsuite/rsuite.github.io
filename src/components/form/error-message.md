@@ -9,10 +9,6 @@
 
 ```js
 const errorPlacementData = [
-  { label: 'top', value: 'top' },
-  { label: 'right', value: 'right' },
-  { label: 'bottom', value: 'bottom' },
-  { label: 'left', value: 'left' },
   { label: 'bottomLeft', value: 'bottomLeft' },
   { label: 'bottomRight', value: 'bottomRight' },
   { label: 'topLeft', value: 'topLeft' },
@@ -23,7 +19,7 @@ const errorPlacementData = [
   { label: 'rightBottom', value: 'rightBottom' }
 ];
 
-class HelpBlockDemo extends React.Component {
+class ErrorMessageDemo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -71,6 +67,7 @@ class HelpBlockDemo extends React.Component {
           value={errorPlacement}
           placeholder="errorPlacement"
           data={errorPlacementData}
+          cleanable={false}
           onChange={value => {
             this.setState({ errorPlacement: value });
           }}
@@ -80,7 +77,7 @@ class HelpBlockDemo extends React.Component {
   }
 }
 
-ReactDOM.render(<HelpBlockDemo />);
+ReactDOM.render(<ErrorMessageDemo />);
 ```
 
 <!--end-code-->

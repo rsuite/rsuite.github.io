@@ -25,8 +25,10 @@ import {
   Schema,
   CheckPicker,
   InputGroup,
+  InputNumber,
   Toggle,
   Panel,
+  Modal,
   SelectPicker
 } from '../../rsuiteSource';
 
@@ -35,6 +37,7 @@ const examples = [
   require('./basic.md'),
   require('./horizontal.md'),
   require('./inline.md'),
+  require('./modal-layout.md'),
   require('./help-block.md'),
   require('./error-message.md'),
   require('./form-check.md'),
@@ -42,17 +45,17 @@ const examples = [
   require('./custom-check-form.md')
 ];
 
-const JSONView = ({ values, errors }) => (
+const JSONView = ({ formValue, formError }) => (
   <Row>
     <Col md={6}>
-      <Panel header="Values" style={{ background: 'rgb(0, 43, 54)' }}>
-        <JSONTree data={values} />
+      <Panel header="formValue" style={{ background: 'rgb(0, 43, 54)' }}>
+        <JSONTree data={formValue} />
       </Panel>
     </Col>
 
     <Col md={6}>
-      <Panel header="Errors" style={{ background: 'rgb(0, 43, 54)' }}>
-        <JSONTree data={errors} />
+      <Panel header="formError" style={{ background: 'rgb(0, 43, 54)' }}>
+        <JSONTree data={formError} />
       </Panel>
     </Col>
   </Row>
@@ -70,6 +73,7 @@ export default () => {
         FormGroup,
         FormControl,
         InputGroup,
+        InputNumber,
         ErrorMessage,
         Dropdown,
         Toggle,
@@ -85,6 +89,7 @@ export default () => {
         Checkbox,
         Panel,
         Radio,
+        Modal,
         ReactQuill,
         JSONTree,
         JSONView

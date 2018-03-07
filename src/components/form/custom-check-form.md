@@ -1,5 +1,15 @@
 ### 自定义触发校验
 
+在某些情况下不需要对表单数据进行实时校验，可以自定义控制校验的方式，配置 `checkTrigger` 参数。
+
+`checkTrigger` 默认值是 `'change'`， 选项包括：
+
+* `'change'` : 数据改变 `onChange` 的时候会触发数据校验。
+* `'blur'` : 组件失去焦点触发校验
+* `'none'` : 不触发校验，只会在调用 `<Form>` 的 `check()` 方便的时候才会校验
+
+在 `<Form>` 和 `<FormControl>` 组件上都有 `checkTrigger` 属性， 在 `<Form>` 中可以定义整个表单的校验方式，如果有个表单组件需要单独处理校验方式，可以在 `<FormControl>` 上进行设置。
+
 <!--start-code-->
 
 ```js
@@ -22,33 +32,33 @@ class CustomCheckForm extends React.Component {
     super(props);
     this.state = {
       checkTrigger: 'change',
-      values: {},
-      errors: {}
+      formValue: {},
+      formError: {}
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleSubmit() {
-    const { values } = this.state;
+    const { formValue } = this.state;
     if (!this.form.check()) {
       console.error('数据格式有错误');
       return;
     }
-    console.log(values, '提交数据');
+    console.log(formValue, '提交数据');
   }
 
   render() {
-    const { errors, values, checkTrigger } = this.state;
+    const { formError, formValue, checkTrigger } = this.state;
     return (
       <div>
-        <JSONView values={values} errors={errors} />
+        <JSONView formValue={formValue} formError={formError} />
         checkTrigger:
         <RadioGroup
           value={checkTrigger}
           onChange={checkTrigger => {
             this.setState({
               checkTrigger,
-              errors: {}
+              formError: {}
             });
           }}
         >
@@ -59,21 +69,20 @@ class CustomCheckForm extends React.Component {
         <hr />
         <Form
           ref={ref => (this.form = ref)}
-          onChange={values => {
-            this.setState({ values });
-            console.log(values);
+          onChange={formValue => {
+            this.setState({ formValue });
+            console.log(formValue);
           }}
-          onCheck={errors => {
-            this.setState({ errors });
+          onCheck={formError => {
+            this.setState({ formError });
           }}
-          defaultValues={values}
+          formDefaultValue={formValue}
           model={model}
           checkTrigger={checkTrigger}
         >
-          <CustomField name="name" label="邮箱" error={errors.name} message="请输入邮箱地址" />
+          <CustomField name="name" label="邮箱" error={formError.name} message="请输入邮箱地址" />
           <Button appearance="primary" onClick={this.handleSubmit}>
-            {' '}
-            提交{' '}
+            提交
           </Button>
         </Form>
       </div>
@@ -86,12 +95,4 @@ ReactDOM.render(<CustomCheckForm />);
 
 <!--end-code-->
 
-在某些情况下不需要对表单数据进行实时校验，可以自定义控制校验的方式，配置 `checkTrigger` 参数。
-
-`checkTrigger` 默认值是 `'change'`， 选项包括：
-
-* `'change'` : 数据改变 `onChange` 的时候会触发数据校验。
-* `'blur'` : 组件失去焦点触发校验
-* `'none'` : 不触发校验，只会在调用 `<Form>` 的 `check()` 方便的时候才会校验
-
-还可以设置校验延迟时间 `checkDelay`, 默认值为 `500` 毫秒。
+> 还可以设置校验延迟时间 `checkDelay`, 默认值为 `500` 毫秒。

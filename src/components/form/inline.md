@@ -1,4 +1,4 @@
-### 内联表单
+### 行内排列布局
 
 <!--start-code-->
 
@@ -8,13 +8,13 @@ var instance = (
     <Form layout="inline">
       <FormGroup>
         <ControlLabel>Username</ControlLabel>
-        <FormControl name="username" />
+        <FormControl name="username" style={{ width: 160 }} />
         <HelpBlock tooltip>Required</HelpBlock>
       </FormGroup>
 
       <FormGroup>
         <ControlLabel>Password</ControlLabel>
-        <FormControl name="password" type="password" />
+        <FormControl name="password" type="password" style={{ width: 160 }} />
       </FormGroup>
 
       <Button>Login</Button>

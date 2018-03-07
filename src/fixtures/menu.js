@@ -285,7 +285,7 @@ export default [
       },
       {
         id: 'schema',
-        name: 'Schema Model',
+        name: 'Schema',
         title: '数据模型'
       }
     ]

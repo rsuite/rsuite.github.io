@@ -5,8 +5,6 @@
 * FormControl 用于绑定 Form 中的数据字段，通过 `name` 属性和 Schema.Model 对象的 `key` 对应。
 * FormControl 默认是个 `Input` 组件，可以通过 `accepter` 设置需要的数据录入组件。
 
-> 例如: `<FormControl accepter={CheckboxGroup} />` , FormControl 会渲染一个 `<CheckboxGroup>` 组件, 同时与 Form 中的 Schema.Model 实例绑定。以下示例中的富文本编辑器，用的是 [react-quill](https://github.com/zenoamaro/react-quill)
-
 <!--start-code-->
 
 ```js
@@ -46,50 +44,58 @@ const Editor = ({ onChange, defaultValue, ...props }) => {
 class CustomFieldForm extends React.Component {
   constructor(props) {
     super(props);
-    const values = {
+    const formValue = {
+      number: 10,
       skills: ['Node.js'],
       browser: 'Chrome',
       status: ['open'],
       description: 'Hello world !'
     };
     this.state = {
-      values: values,
-      errors: {}
+      formValue: formValue,
+      formError: {}
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleSubmit() {
-    const { values } = this.state;
+    const { formValue } = this.state;
     if (!this.form.check()) {
       console.error('数据格式有错误');
       return;
     }
-    console.log(values, '提交数据');
+    console.log(formValue, '提交数据');
   }
   render() {
-    const { errors, values } = this.state;
+    const { formError, formValue } = this.state;
 
     return (
       <div>
-        <JSONView values={values} errors={errors} />
+        <JSONView formValue={formValue} formError={formError} />
         <Form
           ref={ref => (this.form = ref)}
-          onChange={values => {
-            this.setState({ values });
-            console.log('values', values);
+          onChange={formValue => {
+            this.setState({ formValue });
+            console.log('formValue', formValue);
           }}
-          onCheck={errors => {
-            this.setState({ errors });
-            console.log('errors', errors);
+          onCheck={formError => {
+            this.setState({ formError });
+            console.log('formError', formError);
           }}
-          defaultValues={values}
+          formDefaultValue={formValue}
           model={model}
         >
+          <CustomField
+            name="number"
+            label="Number"
+            accepter={InputNumber}
+            error={formError.number}
+          />
+
           <CustomField
             name="skills"
             label="Skills"
             accepter={CheckboxGroup}
-            error={errors.skills}
+            error={formError.skills}
             inline
           >
             <Checkbox value={'Node.js'}>Node.js</Checkbox>
@@ -102,7 +108,7 @@ class CustomFieldForm extends React.Component {
             name="browser"
             label="Browser"
             accepter={RadioGroup}
-            error={errors.browser}
+            error={formError.browser}
             inline
           >
             <Radio value={'Chrome'}>Chrome</Radio>
@@ -114,7 +120,8 @@ class CustomFieldForm extends React.Component {
             name="status"
             label="Status"
             accepter={CheckPicker}
-            error={errors.status}
+            error={formError.status}
+            errorPlacement="rightTop"
             data={[
               { label: 'Todo', value: 'todo' },
               { label: 'Open', value: 'open' },
@@ -129,7 +136,7 @@ class CustomFieldForm extends React.Component {
             name="description"
             label="Description"
             accepter={Editor}
-            error={errors.description}
+            error={formError.description}
           />
 
           <FormGroup>
@@ -147,3 +154,5 @@ ReactDOM.render(<CustomFieldForm />);
 ```
 
 <!--end-code-->
+
+> 例如: `<FormControl accepter={CheckboxGroup} />` , FormControl 会渲染一个 `<CheckboxGroup>` 组件, 同时与 Form 中的 Schema.Model 实例绑定。以下示例中的富文本编辑器，用的是 [react-quill](https://github.com/zenoamaro/react-quill)
