@@ -1,38 +1,53 @@
 ### 错误消息提醒
 
-错误消息提醒可以通过 3 种方式设定：
+错误消息提醒可以通过 2 种方式设定：
 
-* <FormControl> 组件上传递一个 errorMessage 属性。
-* 在 <ErrorMessage> 组件上显示错误信息。
+* `<FormControl>` 组件上传递一个 `errorMessage` 属性设置错误信息，通过 `errorPlacement`设置错误信息显示的位置 。
 * 自定义一个提示信息。
 
 <!--start-code-->
 
 ```js
+const errorPlacementData = [
+  { label: 'top', value: 'top' },
+  { label: 'right', value: 'right' },
+  { label: 'bottom', value: 'bottom' },
+  { label: 'left', value: 'left' },
+  { label: 'bottomLeft', value: 'bottomLeft' },
+  { label: 'bottomRight', value: 'bottomRight' },
+  { label: 'topLeft', value: 'topLeft' },
+  { label: 'topRight', value: 'topRight' },
+  { label: 'leftTop', value: 'leftTop' },
+  { label: 'rightTop', value: 'rightTop' },
+  { label: 'leftBottom', value: 'leftBottom' },
+  { label: 'rightBottom', value: 'rightBottom' }
+];
+
 class HelpBlockDemo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      errorPlacement: 'bottomLeft',
       showError: false
     };
   }
   render() {
-    const { showError } = this.state;
+    const { showError, errorPlacement } = this.state;
     const errorMessage = showError ? 'This field is required' : null;
     return (
       <div>
         <Form>
           <FormGroup>
-            <FormControl name="email" placeholder="Email" errorMessage={errorMessage} />
+            <FormControl
+              name="email"
+              placeholder="Email"
+              errorMessage={errorMessage}
+              errorPlacement={errorPlacement}
+            />
           </FormGroup>
 
           <FormGroup>
-            <FormControl name="name" placeholder="Name" />
-            <ErrorMessage show={showError}>{errorMessage}</ErrorMessage>
-          </FormGroup>
-
-          <FormGroup>
-            <FormControl name="age" placeholder="Age" />
+            <FormControl name="age" placeholder="Custom error messages" />
             <div
               style={{
                 display: showError ? 'block' : 'none',
@@ -47,10 +62,18 @@ class HelpBlockDemo extends React.Component {
         <hr />
         Show Error:{' '}
         <Toggle
-          onChange={() => {
-            this.setState({ showError: !showError });
+          onChange={checked => {
+            this.setState({ showError: checked });
           }}
           checked={showError}
+        />
+        <SelectPicker
+          value={errorPlacement}
+          placeholder="errorPlacement"
+          data={errorPlacementData}
+          onChange={value => {
+            this.setState({ errorPlacement: value });
+          }}
         />
       </div>
     );

@@ -26,7 +26,8 @@ import {
   CheckPicker,
   InputGroup,
   Toggle,
-  Panel
+  Panel,
+  SelectPicker
 } from '../../rsuiteSource';
 
 const context = require('./index.md');
@@ -79,6 +80,7 @@ export default () => {
         ControlLabel,
         CheckboxGroup,
         CheckPicker,
+        SelectPicker,
         RadioGroup,
         Checkbox,
         Panel,
