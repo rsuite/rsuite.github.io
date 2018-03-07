@@ -2,11 +2,9 @@
 
 用于快速选择一个日期范围
 
-- `<DateRangePicker>`
-
+* `<DateRangePicker>`
 
 ## 获取组件
-
 
 ```js
 import { DateRangePicker } from 'rsuite';
@@ -16,12 +14,13 @@ import { DateRangePicker } from 'rsuite';
 
 <!--{demo}-->
 
-
 ## Props
+
+### `<DateRangePicker`
 
 | 属性名称       | 类型`(默认值)`                                                                                      | 描述                                                            |
 | -------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| value          | Array<moment$Moment>                                                                                | 值  `受控`                                                      |
+| value          | Array<moment$Moment>                                                                                | 值 `受控`                                                       |
 | defaultValue   | Array<moment$Moment>                                                                                | 默认值                                                          |
 | onChange       | function(`value`:Array<moment$Moment>)                                                              | 值改变后的回调函数                                              |
 | onOpen         | ()=>void                                                                                            | 打开回调函数                                                    |
@@ -35,7 +34,7 @@ import { DateRangePicker } from 'rsuite';
 | hoverRange     | unions: "week", "month" or (date: moment$Moment)=> Array<moment$Moment>                             | 点击日期时将选中的日期范围                                      |
 | oneTap         | boolean                                                                                             | 是否点击一次就选定日期范围，可[配合 hoverRange 使用](#单击模式) |
 | cleanable      | boolean `(true)`                                                                                    | 可以清除选择值                                                  |
-| isoWeek        | boolean                                                                                             | ISO 8601 标准， 每个日历星期从星期一开始，星期日为第7天         |
+| isoWeek        | boolean                                                                                             | ISO 8601 标准， 每个日历星期从星期一开始，星期日为第 7 天       |
 | open           | boolean                                                                                             | 打开 (受控)                                                     |
 | defaultOpen    | boolean                                                                                             | 默认打开                                                        |
 | placement      | enum: [Placement](#Placement) `('bottomLeft')`                                                      | 显示位置                                                        |
@@ -44,12 +43,18 @@ import { DateRangePicker } from 'rsuite';
 
 ## Types
 
-
 ### Placement
 
 ```js
-type Placement = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight' | 'leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom';
-
+type Placement =
+  | 'bottomLeft'
+  | 'bottomRight'
+  | 'topLeft'
+  | 'topRight'
+  | 'leftTop'
+  | 'rightTop'
+  | 'leftBottom'
+  | 'rightBottom';
 ```
 
 ### Range
@@ -58,17 +63,15 @@ type Placement = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight' | 'leftTo
 type Range = {
   label: React.Node,
   closeOverlay?: boolean,
-  value: moment$Moment | (date: moment$Moment)=> moment$Moment,
+  value: moment$Moment | ((date: moment$Moment) => moment$Moment)
 };
 ```
 
 ## Default
 
-
 ### Locale
 
 ```js
-
 const Locale = {
   sunday: 'Su',
   monday: 'Mo',
@@ -85,21 +88,23 @@ const Locale = {
   minutes: 'Minutes',
   seconds: 'Seconds'
 };
-
 ```
 
 ### Ranges
 
 ```js
-const Ranges = [{
-  label: 'today',
-  value: [setTimingMargin(moment()), setTimingMargin(moment(), 'right')]
-}, {
-  label: 'yesterday',
-  value: [setTimingMargin(moment().add(-1, 'd')), setTimingMargin(moment().add(-1, 'd'), 'right')]
-}, {
-  label: 'last7Days',
-  value: [setTimingMargin(moment().subtract(6, 'days')), setTimingMargin(moment(), 'right')]
-}]
-
+const Ranges = [
+  {
+    label: 'today',
+    value: [setTimingMargin(moment()), setTimingMargin(moment(), 'right')]
+  },
+  {
+    label: 'yesterday',
+    value: [setTimingMargin(moment().add(-1, 'd')), setTimingMargin(moment().add(-1, 'd'), 'right')]
+  },
+  {
+    label: 'last7Days',
+    value: [setTimingMargin(moment().subtract(6, 'days')), setTimingMargin(moment(), 'right')]
+  }
+];
 ```

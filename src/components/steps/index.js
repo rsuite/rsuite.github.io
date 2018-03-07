@@ -1,8 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Steps,Icon } from '../../rsuiteSource';
-
-
+import { Steps, Icon, ButtonGroup, Button } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [
@@ -12,7 +10,8 @@ const examples = [
   require('./vertical.md'),
   require('./status.md'),
   require('./size.md'),
-  require('./icon.md')
+  require('./icon.md'),
+  require('./dynamic.md')
 ];
 
 export default () => {
@@ -21,7 +20,9 @@ export default () => {
       context={context}
       dependencies={{
         Icon,
-        Steps
+        Steps,
+        ButtonGroup,
+        Button
       }}
       examples={examples}
     />

@@ -41,10 +41,10 @@ class CustomCheckForm extends React.Component {
   handleSubmit() {
     const { formValue } = this.state;
     if (!this.form.check()) {
-      console.error('数据格式有错误');
+      console.error('Form Error');
       return;
     }
-    console.log(formValue, '提交数据');
+    console.log(formValue, 'Form Value');
   }
 
   render() {
@@ -71,7 +71,6 @@ class CustomCheckForm extends React.Component {
           ref={ref => (this.form = ref)}
           onChange={formValue => {
             this.setState({ formValue });
-            console.log(formValue);
           }}
           onCheck={formError => {
             this.setState({ formError });

@@ -31,13 +31,13 @@ const checkResult = userModel.check({
 console.log(checkResult);
 ```
 
-`checkResult` 返回结构是:
+Out: `checkResult`
 
 ```js
 {
-    username: { hasError: false },
-    email: { hasError: false },
-    age: { hasError: true, errorMessage: '年应该在 18 到 30 岁' }
+  username: { hasError: false },
+  email: { hasError: false },
+  age: { hasError: true, errorMessage: '年应该在 18 到 30 岁' }
 }
 ```
 
@@ -110,79 +110,85 @@ const myModel = Schema.Model({
 StringType().isRequired('该字段不能为空');
 ```
 
-* isEmail(String: errorMessage)
+* isEmail(errorMessage: string)
 
 ```js
 StringType().isEmail('请输入正确的邮箱地址');
 ```
 
-* isURL(String: errorMessage)
+* isURL(errorMessage: string)
 
 ```js
 StringType().isURL('请输入正确的URL地址');
 ```
 
-* isOneOf(Array: items, String: errorMessage)
+* isHex(errorMessage: string)
+
+```js
+StringType().isHex('请输入正确的十六进制值色号');
+```
+
+* isOneOf(items: Array&lt;string&gt;, errorMessage: string)
 
 ```js
 StringType().isOneOf(['Javascript', 'CSS'], '只能输入 `Javascript`和 `CSS`');
 ```
 
-* containsLetter(String: errorMessage)
+* containsLetter(errorMessage: string)
 
 ```js
 StringType().containsLetter('必须包含英文字符');
 ```
 
-* containsUppercaseLetter(String: errorMessage)
+* containsUppercaseLetter(errorMessage: string)
 
 ```js
 StringType().containsUppercaseLetter('必须包含大写的英文字符');
 ```
 
-* containsLowercaseLetter(String: errorMessage)
+* containsLowercaseLetter(errorMessage: string)
 
 ```js
 StringType().containsLowercaseLetter('必须包含小写的英文字符');
 ```
 
-* containsLetterOnly(String: errorMessage)
+* containsLetterOnly(errorMessage: string)
 
 ```js
 StringType().containsLetterOnly('只能包含的英文字符');
 ```
 
-* containsNumber(String: errorMessage)
+* containsNumber(errorMessage: string)
 
 ```js
 StringType().containsNumber('必须包含数字');
 ```
 
-* pattern(Object: regexp, String: errorMessage)
+* pattern(regexp: RegExp , errorMessage: string)
 
 ```js
 StringType().pattern(/^[1-9][0-9]{3}\s?[a-zA-Z]{2}$/, '请输入合法字符');
 ```
 
-* rangeLength(Number: minLength, Number: maxLength, String: errorMessage)
+* rangeLength(minLength: number, maxLength: number, errorMessage: string)
 
 ```js
 StringType().rangeLength(6, 30, '字符个数只能在 6 - 30 之间');
 ```
 
-* minLength(Number: minLength, String: errorMessage)
+* minLength(minLength: number, errorMessage: string)
 
 ```js
 StringType().minLength(6, '最小需要6个字符');
 ```
 
-* maxLength(Number: maxLength, String: errorMessage)
+* maxLength(maxLength: number, errorMessage: string)
 
 ```js
 StringType().minLength(30, '最大只能30个字符');
 ```
 
-* addRule(Function: onValid, String: errorMessage)
+* addRule(onValid: (value: string)=>boolean, errorMessage: string)
 
 ```js
 StringType().addRule(value => {
@@ -190,54 +196,54 @@ StringType().addRule(value => {
 }, '请输入合法字符');
 ```
 
-### `NumbserType`
+### `NumberType`
 
 * isRequired()
 
 ```js
-NumbserType().isRequired('该字段必填');
+NumberType().isRequired('该字段必填');
 ```
 
-* isInteger(String: errorMessage)
+* isInteger(errorMessage: string)
 
 ```js
-NumbserType().isInteger('只能是整型');
+NumberType().isInteger('只能是整型');
 ```
 
-* isOneOf(Array: items, String: errorMessage)
+* isOneOf(items: Array&lt;number&gt;, errorMessage: string)
 
 ```js
-NumbserType().isOneOf([5, 10, 15], '只能是`5`,`10`,`15`');
+NumberType().isOneOf([5, 10, 15], '只能是`5`,`10`,`15`');
 ```
 
-* pattern(Object: regexp, String: errorMessage)
+* pattern(regexp: RegExp: , errorMessage: string)
 
 ```js
-NumbserType().pattern(/^[1-9][0-9]{3}$/, '请输入合法字符');
+NumberType().pattern(/^[1-9][0-9]{3}$/, '请输入合法字符');
 ```
 
-* range(Number: minLength, Number: maxLength, String: errorMessage)
+* range(minLength: number, maxLength: number, errorMessage: string)
 
 ```js
-NumbserType().range(18, 40, '请输入 18 - 40 之间的数字');
+NumberType().range(18, 40, '请输入 18 - 40 之间的数字');
 ```
 
-* min(Number: min, String: errorMessage)
+* min(min: number, errorMessage: string)
 
 ```js
-NumbserType().min(18, '最小值 18');
+NumberType().min(18, '最小值 18');
 ```
 
-* max(Number: min, String: errorMessage)
+* max(min: number, errorMessage: string)
 
 ```js
-NumbserType().max(40, '最大值 40');
+NumberType().max(40, '最大值 40');
 ```
 
-* addRule(Function: onValid, String: errorMessage)
+* addRule(onValid: (value:number) => boolean, errorMessage: string)
 
 ```js
-NumbserType().addRule(value => {
+NumberType().addRule(value => {
   return value % 5 === 0;
 }, '请输入有效的数字');
 ```
@@ -250,37 +256,37 @@ NumbserType().addRule(value => {
 ArrayType().isRequired('该字段必填');
 ```
 
-* rangeLength(Number: minLength, Number: maxLength, String: errorMessage)
+* rangeLength(minLength: number, maxLength: number, errorMessage: string)
 
 ```js
 ArrayType().rangeLength(1, 3, '至少选择1个，但不能超过3个');
 ```
 
-* minLength(Number: minLength, String: errorMessage)
+* minLength(minLength: number, errorMessage: string)
 
 ```js
 ArrayType().minLength(1, '至少选择1个');
 ```
 
-* maxLength(Number: maxLength, String: errorMessage)
+* maxLength(maxLength: number, errorMessage: string)
 
 ```js
 ArrayType().maxLength(3, '不能超过3个');
 ```
 
-* unrepeatable(String: errorMessage)
+* unrepeatable(errorMessage: string)
 
 ```js
 ArrayType().unrepeatable('不能出现重复选项');
 ```
 
-* of(Object: type, String: errorMessage)
+* of(type: Type, errorMessage: string)
 
 ```js
 ArrayType().of(StringType().isEmail(), '格式错误');
 ```
 
-* addRule(Function: onValid, String: errorMessage)
+* addRule(onValid: (value:Array&lt;any&gt;)=>boolean , errorMessage: string)
 
 ```js
 ArrayType().addRule(value => {
@@ -296,7 +302,7 @@ ArrayType().addRule(value => {
 DateType().isRequired('日期不能为空');
 ```
 
-* range(Date: min, Date: max, String: errorMessage)
+* range(min: Date, max: Date, errorMessage: string)
 
 ```js
 DateType().range(
@@ -306,19 +312,19 @@ DateType().range(
 );
 ```
 
-* min(Date: min, String: errorMessage)
+* min(min: Date, errorMessage: string)
 
 ```js
 DateType().min(new Date('08/01/2017'), '时间的最小值 08/01/2017');
 ```
 
-* max(Date: max, String: errorMessage)
+* max(max: Date, errorMessage: string)
 
 ```js
 DateType().max(new Date('08/30/2017'), '时间的最大值 08/30/2017');
 ```
 
-* addRule(Function: onValid, String: errorMessage)
+* addRule(onValid: (value: Date)=>boolean, errorMessage: string)
 
 ```js
 DateType().addRule(value => {
@@ -334,7 +340,7 @@ DateType().addRule(value => {
 ObjectType().isRequired('该对象不能为空');
 ```
 
-* shape(Object: types)
+* shape(types: Object)
 
 ```js
 ObjectType().shape({
@@ -343,7 +349,7 @@ ObjectType().shape({
 });
 ```
 
-* addRule(Function: onValid, String: errorMessage)
+* addRule(onValid: (value: Object)=>boolean, errorMessage: string)
 
 ```js
 ObjectType().addRule(value => {
@@ -362,10 +368,10 @@ ObjectType().addRule(value => {
 BooleanType().isRequired('该字段不能为空');
 ```
 
-* addRule(Function: onValid, String: errorMessage)
+* addRule(onValid: (value)=>boolean, errorMessage: string)
 
 ```js
-ObjectType().addRule(value => {
+BooleanType().addRule(value => {
   if (typeof value === 'undefined' && A === 10) {
     return false;
   }

@@ -43,10 +43,10 @@ class CheckForm extends React.Component {
   handleSubmit() {
     const { formValue } = this.state;
     if (!this.form.check()) {
-      console.log('数据格式有错误');
+      console.error('Form Error');
       return;
     }
-    console.log(formValue, '提交数据');
+    console.log(formValue, 'Form Value');
   }
   render() {
     const { formError, formValue } = this.state;
