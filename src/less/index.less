@@ -138,6 +138,9 @@
     background: none;
     border: none;
     color: #fff;
+    &.active {
+      color: @H500;
+    }
     &:focus {
       background: @H600;
     }
@@ -292,6 +295,10 @@ pre {
 .doc-highlight {
   background-color: #f5f5f5;
   padding: 10px;
+  margin: 1em 0;
+  pre {
+    margin: 0;
+  }
 }
 
 code:not(.doc-highlight) {
@@ -612,12 +619,18 @@ path.bg {
 }
 
 .component-overview {
-  .markdown ul {
+  ul {
     padding: 0;
     margin: 0;
     list-style: none;
   }
-  .markdown > ul {
+  li.title {
+    display: block !important;
+    clear: both;
+    border: none !important;
+    margin: 0 !important;
+  }
+  > ul {
     margin-left: -10px;
     > li {
       display: inline-table;
@@ -628,6 +641,12 @@ path.bg {
       code {
         padding: 0;
       }
+    }
+  }
+  .components {
+    a {
+      font-size: 12px;
+      color: @B700;
     }
   }
 }

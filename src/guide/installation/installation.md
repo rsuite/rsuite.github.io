@@ -4,22 +4,22 @@
 
 ## 安装 RSUITE
 
-把组件保存到 package.json 的 dependencies，运行:
-
 ```bash
 npm install rsuite --save
 ```
 
-## 安装 RSUITE 主题
+如果你在使用 yarn 也可以通过 yarn 安装:
 
-RSUITE 的主题可以通过 CDN 引入，这里推荐是 npm 安装。 运行:
-
-```zsh
-npm install rsuite-theme --save
+```bash
+yarn add rsuite
 ```
 
+## webpack 注意事项
 
+* rsuite 中的样式，是通过 less 写的， 需要在 webpack 中配置 less-loader , css-loader 与 style-loader。
+* `<Icon>` 组件中用到了一些字体图标，需要加载字体资源，需要在 webpack 中配置 url-loader。
 
+可以参考 [rsuite-example-admin](https://github.com/rsuite/rsuite-example-admin/blob/next/webpack.config.js)
 
 ## 下一步
 

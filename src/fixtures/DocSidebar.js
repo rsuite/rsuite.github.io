@@ -7,9 +7,8 @@ import _ from 'lodash';
 import menu from './menu';
 
 function filterNodesOfTree(data, check) {
-
   const findNodes = (nodes = []) => {
-    return nodes.filter((item) => {
+    return nodes.filter(item => {
       if (_.isArray(item.children)) {
         const nextChildren = findNodes(item.children);
         if (nextChildren && nextChildren.length) {
@@ -23,11 +22,11 @@ function filterNodesOfTree(data, check) {
   return findNodes(data);
 }
 
-const contextTypes = {
-  router: PropTypes.object.isRequired
-};
-
 class DocSidebar extends React.Component {
+  static contextTypes = {
+    router: PropTypes.object.isRequired
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -37,18 +36,22 @@ class DocSidebar extends React.Component {
   getMenuItems() {
     const { keyword } = this.state;
     const key = _.trim(keyword.toLocaleLowerCase());
-    return filterNodesOfTree(_.cloneDeep(menu), (item) => {
-      if (!item.id) {
-        return false;
-      }
-      return item.id.indexOf(key) >= 0 || item.name.indexOf(key) >= 0;
-    }) || [];
+    return (
+      filterNodesOfTree(_.cloneDeep(menu), item => {
+        if (!item.id) {
+          return false;
+        }
+        return item.id.indexOf(key) >= 0 || item.name.indexOf(key) >= 0;
+      }) || []
+    );
   }
 
   render() {
     const nodeItems = [];
     const menuItems = this.getMenuItems();
-    const { name: activeTitle, icon } = menu.filter(({ id }) => this.context.router.isActive(id))[0];
+    const { name: activeTitle, icon } = menu.filter(({ id }) =>
+      this.context.router.isActive(id)
+    )[0];
 
     menuItems.filter(({ id }) => this.context.router.isActive(id)).map((item, key) => {
       item.children.map((child, index) => {
@@ -85,7 +88,5 @@ class DocSidebar extends React.Component {
     );
   }
 }
-
-DocSidebar.contextTypes = contextTypes;
 
 export default DocSidebar;
