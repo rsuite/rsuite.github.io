@@ -8,7 +8,7 @@ class Page extends React.Component {
     return (
       <Content>
         <Row>
-          <Col md={12}>
+          <Col md={24}>
             <Markdown>{require('./introduction.md')}</Markdown>
           </Col>
         </Row>

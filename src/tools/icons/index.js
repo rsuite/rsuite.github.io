@@ -23,7 +23,7 @@ class IconPage extends React.Component {
     return (
       <Content>
         <Row>
-          <Col md={12}>
+          <Col md={24}>
             <Markdown>
               {require('./readme.md')}
             </Markdown>

@@ -32,23 +32,23 @@ componentClass | React.ElementType | `div` |
 属性名称           | 类型                                  | 默认值   | 描述
 -------------- | -------------- | ----- | --------------
 componentClass | React.ElementType    | `div` |
-xs             | number |       | col-xs-
-sm             | number |       | col-sm-
-md             | number |       | col-md-
-lg             | number |       | col-lg-
-xsOffset       | number |       | col-xs-offset-
-smOffset       | number |       | col-sm-offset-
-mdOffset       | number |       | col-md-offset-
-lgOffset       | number |       | col-lg-offset-
-xsPush         | number |       | col-xs-push-
-smPush         | number |       | col-sm-push-
-mdPush         | number |       | col-md-push-
-lgPush         | number |       | col-lg-push-
-xsPull         | number |       | col-xs-pull-
-smPull         | number |       | col-sm-pull-
-mdPull         | number |       | col-md-pull-
-lgPull         | number |       | col-lg-pull-
-xsHidden       | boolean|       | hidden-xs
-smHidden       | boolean|       | hidden-sm
-mdHidden       | boolean|       | hidden-md
-lgHidden       | boolean|       | hidden-lg
+xs             | number |       | < `480px` 响应式栅格
+sm             | number |       | ≥ `480px` 响应式栅格
+md             | number |       | ≥ `992px` 响应式栅格
+lg             | number |       | ≥ `1200px` 响应式栅格
+xsOffset       | number |       | 栅格左侧的间隔格数，间隔内不可以有栅格
+smOffset       | number |       | 栅格左侧的间隔格数，间隔内不可以有栅格
+mdOffset       | number |       | 栅格左侧的间隔格数，间隔内不可以有栅格
+lgOffset       | number |       | 栅格左侧的间隔格数，间隔内不可以有栅格
+xsPush         | number |       | 栅格向右移动格数
+smPush         | number |       | 栅格向右移动格数
+mdPush         | number |       | 栅格向右移动格数
+lgPush         | number |       | 栅格向右移动格数
+xsPull         | number |       | 栅格向左移动格数
+smPull         | number |       | 栅格向左移动格数
+mdPull         | number |       | 栅格向左移动格数
+lgPull         | number |       | 栅格向左移动格数
+xsHidden       | boolean|       | 隐藏栅格
+smHidden       | boolean|       | 隐藏栅格
+mdHidden       | boolean|       | 隐藏栅格
+lgHidden       | boolean|       | 隐藏栅格

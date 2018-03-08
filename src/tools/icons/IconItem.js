@@ -15,7 +15,7 @@ class IconItem extends React.Component {
   render() {
     const { handleCopy, ...props } = this.props;
     return (
-      <div className="icon-item col-md-3 col-sm-4">
+      <div className="icon-item col-md-6 col-sm-8">
         <Clipboard text={this.props.icon} onCopy={this.handleCopy}>
           <Icon {...props} className="icon-content" />
         </Clipboard>

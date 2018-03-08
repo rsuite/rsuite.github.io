@@ -47,13 +47,13 @@ const examples = [
 
 const JSONView = ({ formValue, formError }) => (
   <Row>
-    <Col md={6}>
+    <Col md={12}>
       <Panel header="formValue" style={{ background: 'rgb(0, 43, 54)' }}>
         <JSONTree data={formValue} />
       </Panel>
     </Col>
 
-    <Col md={6}>
+    <Col md={12}>
       <Panel header="formError" style={{ background: 'rgb(0, 43, 54)' }}>
         <JSONTree data={formError} />
       </Panel>

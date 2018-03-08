@@ -222,17 +222,19 @@
 
 .show-grid {
   margin-top: 10px;
+  padding: 15px 0;
+
   [class*='col-'] {
     padding: 10px 5px;
-    border: 1px solid #ddd;
-    background: #f1f1f1;
-    &:not(:last-child),
-    &.col-md-pull-6 {
-      border-right: none;
-    }
-    &.col-md-push-6 {
-      border-right: 1px solid #ddd;
-    }
+    color: @B000;
+  }
+
+  [class*='col-']:nth-child(2n) {
+    background-color: @H700;
+  }
+
+  [class*='col-']:nth-child(2n+1) {
+    background-color: @H500;
   }
 }
 

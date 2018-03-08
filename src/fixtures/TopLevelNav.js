@@ -43,33 +43,36 @@ class TopLevelNav extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired
   };
+
   constructor() {
     super();
     this.state = {
       search: false
     };
   }
+
   showSearchDrawer = () => {
     this.setState({ search: true });
   };
   hideSearchDrawer = () => {
     this.setState({ search: false });
   };
+
   render() {
     const { children } = this.props;
     const { router } = this.context;
 
-    console.log(this.context.router.isActive({ pathname: 'components' }));
+    // console.log(this.context.router.isActive({ pathname: 'components' }));
 
     return (
       <div className="top-level-nav">
         <Link to="/">
-          <Logo width={26} className="logo-sm" />
+          <Logo width={26} className="logo-sm"/>
         </Link>
 
         <div className="top-level-nav-menu">
           <WithTooltipButton tip="搜索" className="icon-btn-circle" onClick={this.showSearchDrawer}>
-            <Icon icon={search} svgStyle={svgStyle} size="lg" />
+            <Icon icon={search} svgStyle={svgStyle} size="lg"/>
           </WithTooltipButton>
 
           {menu.map(item => (
@@ -97,12 +100,12 @@ class TopLevelNav extends React.Component {
               className="icon-btn-circle"
               href="https://github.com/rsuite/rsuite"
             >
-              <Icon icon="github" size="lg" />
+              <Icon icon="github" size="lg"/>
             </WithTooltipButton>
           </div>
         </div>
         {children}
-        <SearchDrawer show={this.state.search} onHide={this.hideSearchDrawer} />
+        <SearchDrawer show={this.state.search} onHide={this.hideSearchDrawer}/>
       </div>
     );
   }

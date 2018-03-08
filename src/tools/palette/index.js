@@ -25,7 +25,7 @@ class PalettePage extends React.Component {
     return (
       <Content>
         <Row>
-          <Col md={12}>
+          <Col md={24}>
             <Markdown>
               {require('./readme.md')}
             </Markdown>
@@ -33,7 +33,7 @@ class PalettePage extends React.Component {
         </Row>
 
         <Row>
-          <Col md={4}>
+          <Col md={8}>
             <CirclePicker
               color={color}
               onChangeComplete={this.handleChangeComplete}
@@ -46,7 +46,7 @@ class PalettePage extends React.Component {
             />
 
           </Col>
-          <Col md={8} className="panel-color-wrap">
+          <Col md={16} className="panel-color-wrap">
             <ColorPanel colors={computeColors(color)} />
           </Col>
 
