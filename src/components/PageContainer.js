@@ -9,12 +9,12 @@ class PageContainer extends React.Component {
     return (
       <PageProvider>
         <Row  {...rest}>
-          <Col md={12} xs={12} sm={12} className="main-container">
+          <Col md={24} xs={24} sm={24} className="main-container">
             <PageContent>
               {children}
             </PageContent>
           </Col>
-          <Col md={2} xsHidden smHidden>
+          <Col md={8} xsHidden smHidden>
             <PageNav
               showOrderNumber={false}
               width={150}
