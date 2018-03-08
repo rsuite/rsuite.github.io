@@ -686,6 +686,7 @@ path.bg {
 }
 
 .code-view-wrapper {
+  transition: .3s linear border-color;
   &:hover {
     border: 1px dashed @H500;
   }
@@ -751,4 +752,8 @@ path.bg {
   .sidebar-wrapper.fixed .title-wrapper {
     opacity: 0.5;
   }
+}
+
+.placement-table tr td:first-child {
+  text-align: right;
 }

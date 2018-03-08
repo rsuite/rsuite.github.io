@@ -14,7 +14,7 @@ const CustomCascader=({placement})=>(
 );
 
 const instance = (
-  <table>
+  <table className="placement-table">
     <tbody>
       <tr>
         <td></td>
