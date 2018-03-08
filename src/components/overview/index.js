@@ -9,8 +9,6 @@ const examples = [];
 
 const components = _.get(menu, '1.children').filter(item => item.id !== 'overview');
 
-console.log(components);
-
 export default () => {
   return (
     <div>
@@ -20,25 +18,25 @@ export default () => {
           {components.map(item => {
             if (item.group) {
               return (
-                <li className="title">
-                  <h2 id={item.name} key={item.id}>
-                    {item.name}
-                  </h2>
+                <li className="title" key={item.id}>
+                  <h2 id={item.name}>{item.name}</h2>
                 </li>
               );
             } else {
               return (
                 <li key={item.id}>
-                  <Link to={`/components/${item.id}`}>{item.name}</Link>
-                  <ul className="components">
+                  <Link to={`/components/${item.id}`} className="header">
+                    {item.name}
+                  </Link>
+                  <ul className="content">
                     {item.components
-                      ? item.components.map(com => (
-                          <li key={com}>
-                            <Link to={`/components/${item.id}#<${com}>`}>
+                      ? item.components.map(componentName => (
+                          <li key={componentName}>
+                            <span className="name">
                               {'<'}
-                              {com}
+                              {componentName}
                               {'>'}
-                            </Link>
+                            </span>
                           </li>
                         ))
                       : null}
