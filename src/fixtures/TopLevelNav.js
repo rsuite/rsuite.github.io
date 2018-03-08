@@ -59,8 +59,6 @@ class TopLevelNav extends React.Component {
     const { children } = this.props;
     const { router } = this.context;
 
-    console.log(this.context.router.isActive({ pathname: 'components' }));
-
     return (
       <div className="top-level-nav">
         <Link to="/">

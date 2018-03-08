@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { CheckPicker, Button } from '../../rsuiteSource';
+import { CheckPicker, Button, Icon } from '../../rsuiteSource';
 import data from '../../../resources/data/users';
 
 const context = require('./index.md');
@@ -23,6 +23,7 @@ export default () => {
       dependencies={{
         Button,
         CheckPicker,
+        Icon,
         data
       }}
     />

@@ -12,10 +12,11 @@ class AsynExample extends React.Component {
     this.handleUpdate = this.handleUpdate.bind(this);
   }
   handleUpdate() {
-    this.setState({ items: [] });
-    setTimeout(() => {
-      this.setState({ items: data });
-    }, 1000);
+    if (this.state.items.length === 0) {
+      setTimeout(() => {
+        this.setState({ items: data });
+      }, 1000);
+    }
   }
   render() {
     const { items } = this.state;
