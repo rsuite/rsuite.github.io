@@ -41,7 +41,7 @@ class ColspanTable extends React.Component {
             <Cell dataKey="city" />
           </Column>
 
-          <Column width={200} resizable flexGrow={1}>
+          <Column width={200} flexGrow={1}>
             <HeaderCell>Company Name</HeaderCell>
             <Cell dataKey="companyName" />
           </Column>

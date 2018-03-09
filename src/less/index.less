@@ -231,7 +231,7 @@
     background-color: @H700;
   }
 
-  [class*='col-']:nth-child(2n+1) {
+  [class*='col-']:nth-child(2n + 1) {
     background-color: @H500;
   }
 }
@@ -686,7 +686,7 @@ path.bg {
 }
 
 .code-view-wrapper {
-  transition: .3s linear border-color;
+  transition: 0.3s linear border-color;
   &:hover {
     border: 1px dashed @H500;
   }
@@ -768,4 +768,20 @@ path.bg {
 .table-content-edit-span {
   margin-left: 2px;
   .ellipsis;
+}
+
+.menu-button {
+  position: fixed !important;
+  right: 10px;
+  top: 10px;
+  z-index: 0;
+}
+
+.hide-page-nav {
+  .main-container {
+    padding-right: 0px !important;
+  }
+  .page-nav {
+    display: none;
+  }
 }

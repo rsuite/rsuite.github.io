@@ -69,7 +69,7 @@ class EditTable extends React.Component {
     return (
       <div>
         <Table
-          height={400}
+          height={420}
           data={data}
           isTree
           expand

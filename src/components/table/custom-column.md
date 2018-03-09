@@ -62,7 +62,7 @@ class CustomColumnTable extends React.Component {
     super(props);
     const data = fakeData.filter((v, i) => i < 8);
     this.state = {
-      data:
+      data
     };
   }
   render() {

@@ -86,7 +86,7 @@ class SortTable extends React.Component {
             <Cell dataKey="city" />
           </Column>
 
-          <Column width={200} sortable flexGrow={1}>
+          <Column width={200} flexGrow={1}>
             <HeaderCell>Company Name</HeaderCell>
             <Cell dataKey="companyName" />
           </Column>

@@ -62,10 +62,12 @@ const mountApp = (
   </Router>
 );
 
+/*
 if (process.env.NODE_ENV !== 'production') {
   const { whyDidYouUpdate } = require('why-did-you-update');
   whyDidYouUpdate(React);
 }
+*/
 
 ready(values => {
   render(mountApp, document.getElementById('root'));
