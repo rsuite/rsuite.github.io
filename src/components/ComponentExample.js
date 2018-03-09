@@ -1,45 +1,34 @@
 import React from 'react';
 import { Col } from '../rsuiteSource';
-import { Markdown } from 'react-markdown-reader';
-import CodeView from 'react-code-view';
 import PageContainer from './PageContainer';
 import * as rsuite from '../rsuiteSource';
 import Paragraph from '../fixtures/Paragraph';
-
+import MarkdownView from '../fixtures/MarkdownView';
+import CodeView from '../fixtures/CodeView';
 
 const babelOptions = {
   presets: ['stage-0', 'react', 'es2015'],
-  plugins: [
-    'transform-class-properties'
-  ]
+  plugins: ['transform-class-properties']
 };
 
 class ComponentExample extends React.Component {
   render() {
-    const {
-      context,
-      examples,
-      children,
-      dependencies,
-      ...rest
-    } = this.props;
+    const { context, examples, children, dependencies, ...rest } = this.props;
     const docs = context.split('<!--{demo}-->');
 
     return (
       <PageContainer {...rest}>
-        <Markdown>{docs[0]}</Markdown>
-        {
-          examples.map((item, index) => (
-            <CodeView
-              babelOptions={babelOptions}
-              buttonClassName="btn-subtle btn-icon-circle"
-              key={index}
-              source={item}
-              dependencies={{ ...dependencies, Paragraph, rsuite }}
-            />
-          ))
-        }
-        <Markdown>{docs[1]}</Markdown>
+        <MarkdownView>{docs[0]}</MarkdownView>
+        {examples.map((item, index) => (
+          <CodeView
+            babelOptions={babelOptions}
+            buttonClassName="btn-subtle btn-icon-circle"
+            key={index}
+            source={item}
+            dependencies={{ ...dependencies, Paragraph, rsuite }}
+          />
+        ))}
+        <MarkdownView>{docs[1]}</MarkdownView>
         {children}
       </PageContainer>
     );

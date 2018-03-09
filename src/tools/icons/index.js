@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { Link } from 'react-router';
 import { Container, Content, Row, Col } from '../../rsuiteSource';
-import { Markdown } from 'react-markdown-reader';
+import MarkdownView from '../../fixtures/MarkdownView';
 import IconList from './IconList';
-
-
 
 class IconPage extends React.Component {
   constructor() {
@@ -14,7 +11,7 @@ class IconPage extends React.Component {
       color: '#2196f3'
     };
   }
-  handleChangeComplete = (color) => {
+  handleChangeComplete = color => {
     this.setState({ color: color.hex });
   };
 
@@ -24,9 +21,7 @@ class IconPage extends React.Component {
       <Content>
         <Row>
           <Col md={24}>
-            <Markdown>
-              {require('./readme.md')}
-            </Markdown>
+            <MarkdownView>{require('./readme.md')}</MarkdownView>
           </Col>
         </Row>
 

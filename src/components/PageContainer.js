@@ -1,18 +1,15 @@
 import React from 'react';
 import { Nav, Row, Col } from '../rsuiteSource';
-import { PageProvider, PageNav, PageContent } from 'rsuite-page-nav';
-
+import { PageProvider, PageNav, PageContent } from '../fixtures/PageNav';
 
 class PageContainer extends React.Component {
   render() {
     const { children, ...rest } = this.props;
     return (
       <PageProvider>
-        <Row  {...rest}>
+        <Row {...rest}>
           <Col md={24} xs={24} sm={24} className="main-container">
-            <PageContent>
-              {children}
-            </PageContent>
+            <PageContent>{children}</PageContent>
           </Col>
           <Col md={8} xsHidden smHidden>
             <PageNav

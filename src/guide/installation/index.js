@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { Link } from 'react-router';
 import { Container, Content, Row, Col } from '../../rsuiteSource';
-import { Markdown } from 'react-markdown-reader';
+import MarkdownView from '../../fixtures/MarkdownView';
 
 class InstallationPage extends React.Component {
   render() {
@@ -10,9 +9,7 @@ class InstallationPage extends React.Component {
       <Content>
         <Row>
           <Col md={24}>
-            <Markdown>
-              {require('./installation.md')}
-            </Markdown>
+            <MarkdownView>{require('./installation.md')}</MarkdownView>
           </Col>
         </Row>
       </Content>
