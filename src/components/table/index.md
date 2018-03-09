@@ -48,22 +48,7 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | bordered            | boolean                                   |         | 显示边框线                                                   |
 | getMethods          | (publicMethods: Object) => void           |
 
-<br>
-> locale 的默认值是:
-```js
-{
-  emptyMessage: 'No data found',
-  loading: (
-    <div>
-      <i className="icon icon-cog icon-lg icon-spin" />
-      <span>Loading...</span>
-    </div>
-  )
-}
-```
-
-<br>
-###  `<Column>`
+### `<Column>`
 
 | Name      | Type    | Default | Description                                                                           |
 | --------- | ------- | ------- | ------------------------------------------------------------------------------------- |

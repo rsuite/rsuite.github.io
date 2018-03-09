@@ -9,20 +9,19 @@ import fakeDataForColSpan from './data/usersForColSpan';
 const { HeaderCell, Pagination, Cell, Column } = Table;
 const TablePagination = Pagination;
 
-
 const context = require('./index.md');
 const examples = [
-  require('./FixedColumnTable.md'),
-  require('./ResizableColumnTable.md'),
-  require('./FluidColumnTable.md'),
-  require('./WordWrapTable.md'),
-  require('./CustomColumnTable.md'),
-  require('./SortTable.md'),
-  require('./PaginationTable.md'),
-  require('./TreeTable.md'),
-  require('./EditTable.md'),
-  require('./LoadingTable.md'),
-  require('./ColspanTable.md')
+  require('./default.md'),
+  require('./resizable.md'),
+  require('./fluid-column.md'),
+  require('./word-wrap.md'),
+  require('./custom-column.md'),
+  require('./sort.md'),
+  require('./pagination.md'),
+  require('./tree.md'),
+  require('./edit.md'),
+  require('./loading.md'),
+  require('./colspan.md')
 ];
 
 export default () => {

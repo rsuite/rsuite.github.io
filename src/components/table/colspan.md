@@ -1,8 +1,8 @@
 ### 合并列单元格
 
 <!--start-code-->
-```js
 
+```js
 class ColspanTable extends React.Component {
   constructor(props) {
     super(props);
@@ -11,14 +11,13 @@ class ColspanTable extends React.Component {
     };
   }
   render() {
-
     return (
       <div>
         <Table
           bordered
-          height={400}
+          height={420}
           data={this.state.data}
-          onRowClick={(data) => {
+          onRowClick={data => {
             console.log(data);
           }}
         >
@@ -37,27 +36,15 @@ class ColspanTable extends React.Component {
             <Cell dataKey="lastName" />
           </Column>
 
-          <Column width={200} resizable colSpan={2} >
+          <Column width={200} resizable colSpan={2}>
             <HeaderCell>Address</HeaderCell>
             <Cell dataKey="city" />
           </Column>
 
-          <Column width={200} resizable>
-            <HeaderCell />
-            <Cell dataKey="street" />
-          </Column>
-
-
-          <Column width={200} >
+          <Column width={200} resizable flexGrow={1}>
             <HeaderCell>Company Name</HeaderCell>
             <Cell dataKey="companyName" />
           </Column>
-
-          <Column width={200} >
-            <HeaderCell>Email</HeaderCell>
-            <Cell dataKey="email" />
-          </Column>
-
         </Table>
       </div>
     );
@@ -65,10 +52,9 @@ class ColspanTable extends React.Component {
 }
 
 ReactDOM.render(<ColspanTable />);
-
 ```
-<!--end-code-->
 
+<!--end-code-->
 
 > 在某些情况下，需要合并列来组织数据之间的关系，可以在 `<Column>` 组件上设置一个 `colSpan` 属性，例如：
 
@@ -84,5 +70,4 @@ ReactDOM.render(<ColspanTable />);
 </Column>
 ```
 
-> 当 `lastName` 对应列的值为 `null` 或者 `undefined` 的时候，则会被 `firstName` 列合并。
-> 注意，如果想要合并列头（`HeaderCell`）, 在被合并的列头不要设置 `children`。
+> 当 `lastName` 对应列的值为 `null` 或者 `undefined` 的时候，则会被 `firstName` 列合并。注意，如果想要合并列头（`HeaderCell`）, 在被合并的列头不要设置 `children`。

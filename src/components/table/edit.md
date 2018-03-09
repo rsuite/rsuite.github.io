@@ -1,18 +1,17 @@
 ### 可编辑的表格
 
 <!--start-code-->
+
 ```js
-
-
 export const EditCell = ({ rowData, dataKey, onChange, ...props }) => {
-const editing = rowData.status === 'EDIT';
+  const editing = rowData.status === 'EDIT';
   return (
-    <Cell className={editing?'table-content-editing':''} {...props}>
+    <Cell className={editing ? 'table-content-editing' : ''} {...props}>
       {editing ? (
         <input
           className="input"
           defaultValue={rowData[dataKey]}
-          onChange={(event) => {
+          onChange={event => {
             onChange && onChange(rowData.id, dataKey, event.target.value);
           }}
         />
@@ -40,8 +39,9 @@ const ActionCell = ({ rowData, dataKey, onClick, ...props }) => {
 class EditTable extends React.Component {
   constructor(props) {
     super(props);
+    const data = fakeData.filter((v, i) => i < 8);
     this.state = {
-      data: fakeData.filter((item, index) => index < 20)
+      data
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleEditState = this.handleEditState.bind(this);
@@ -78,23 +78,22 @@ class EditTable extends React.Component {
           }}
           renderTreeToggle={(icon, rowData) => {
             if (rowData.labelName === '手机') {
-              return (<i className="icon icon-spin icon-spinner" />);
+              return <i className="icon icon-spin icon-spinner" />;
             }
             return icon;
           }}
         >
-
-          <Column width={200} >
+          <Column width={200}>
             <HeaderCell>First Name</HeaderCell>
             <EditCell dataKey="firstName" onChange={this.handleChange} />
           </Column>
 
-          <Column width={200} >
+          <Column width={200}>
             <HeaderCell>Last Name</HeaderCell>
             <EditCell dataKey="lastName" onChange={this.handleChange} />
           </Column>
 
-          <Column width={300} >
+          <Column width={300}>
             <HeaderCell>Email</HeaderCell>
             <EditCell dataKey="email" onChange={this.handleChange} />
           </Column>
@@ -103,7 +102,6 @@ class EditTable extends React.Component {
             <HeaderCell>Action</HeaderCell>
             <ActionCell dataKey="id" onClick={this.handleEditState} />
           </Column>
-
         </Table>
       </div>
     );
@@ -111,11 +109,9 @@ class EditTable extends React.Component {
 }
 
 ReactDOM.render(<EditTable />);
-
 ```
+
 <!--end-code-->
-
-
 
 > 可编辑的表格，只需要自定义一个 `Cell` 就行了
 
@@ -127,11 +123,13 @@ export const EditCell = ({ rowData, dataKey, onChange, ...props }) => {
         <input
           className="input"
           defaultValue={rowData[dataKey]}
-          onChange={(event) => {
+          onChange={event => {
             onChange && onChange(rowData.id, dataKey, event.target.value);
           }}
         />
-      ) : rowData[dataKey]}
+      ) : (
+        rowData[dataKey]
+      )}
     </Cell>
   );
 };

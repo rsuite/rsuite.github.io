@@ -1,10 +1,9 @@
-### 加载中状态
-
+### 默认
 
 <!--start-code-->
-```js
 
-class LoadingTable extends React.Component {
+```js
+class FixedColumnTable extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,76 +11,70 @@ class LoadingTable extends React.Component {
     };
   }
   render() {
-
     return (
       <div>
         <Table
-          loading
           height={400}
           data={this.state.data}
+          onRowClick={data => {
+            console.log(data);
+          }}
         >
           <Column width={70} align="center" fixed>
             <HeaderCell>Id</HeaderCell>
             <Cell dataKey="id" />
           </Column>
 
-          <Column width={130} fixed>
+          <Column width={200} fixed>
             <HeaderCell>First Name</HeaderCell>
             <Cell dataKey="firstName" />
           </Column>
 
-          <Column width={130} >
+          <Column width={200}>
             <HeaderCell>Last Name</HeaderCell>
             <Cell dataKey="lastName" />
           </Column>
 
-          <Column width={200} >
+          <Column width={200}>
             <HeaderCell>City</HeaderCell>
             <Cell dataKey="city" />
           </Column>
 
-          <Column width={200} >
+          <Column width={200}>
             <HeaderCell>Street</HeaderCell>
             <Cell dataKey="street" />
           </Column>
 
-
-          <Column width={200} >
+          <Column width={300}>
             <HeaderCell>Company Name</HeaderCell>
             <Cell dataKey="companyName" />
           </Column>
 
-          <Column width={200} >
+          <Column width={300}>
             <HeaderCell>Email</HeaderCell>
             <Cell dataKey="email" />
           </Column>
-
-          <Column width={200} >
-            <HeaderCell>Email</HeaderCell>
-            <Cell dataKey="email" />
-          </Column>
-
-          <Column width={200} >
-            <HeaderCell>Email</HeaderCell>
-            <Cell dataKey="email" />
-          </Column>
-
-          <Column width={200} >
-            <HeaderCell>Email</HeaderCell>
-            <Cell dataKey="email" />
-          </Column>
-
         </Table>
       </div>
     );
   }
-
 }
-
-ReactDOM.render(<LoadingTable />);
-
+ReactDOM.render(<FixedColumnTable />);
 ```
+
 <!--end-code-->
 
+> 表头是默认固定的，只需要配置需要固定的列, 在需要估计的列添加 `fixed` 属性
 
-> 当数据在异步获取中，需要在显示一个 `loading` 状态, 只需要在 `<Table>` 上设置 `loading` 属性就行
+```html
+<Column width={50}  align="center"  fixed>
+    <HeaderCell>Id</HeaderCell>
+    <Cell dataKey="id" />
+</Column>
+
+<Column width={130} fixed  sortable>
+    <HeaderCell>First Name</HeaderCell>
+    <Cell dataKey="firstName" />
+</Column>
+...
+```

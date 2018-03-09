@@ -1,14 +1,15 @@
 ### 排序
 
 <!--start-code-->
-```js
 
+```js
 class SortTable extends React.Component {
   constructor(props) {
     super(props);
+    const data = fakeData.filter((v, i) => i < 8);
     this.state = {
       addColumn: false,
-      data: fakeData
+      data
     };
     this.handleSortColumn = this.handleSortColumn.bind(this);
   }
@@ -50,34 +51,21 @@ class SortTable extends React.Component {
       });
     }, 500);
   }
-  renderColumns() {
-    return [
-      <Column width={130} sortable key="words">
-        <HeaderCell>Words</HeaderCell>
-        <Cell dataKey="words" />
-      </Column>,
-      <Column width={130} sortable key="zipCode">
-        <HeaderCell>ZipCode</HeaderCell>
-        <Cell dataKey="zipCode" />
-      </Column>
-    ];
-  }
-  render() {
 
+  render() {
     return (
       <div>
         <Table
-          height={400}
+          height={420}
           data={this.getData()}
           sortColumn={this.state.sortColumn}
           sortType={this.state.sortType}
           onSortColumn={this.handleSortColumn}
           loading={this.state.loading}
-          onRowClick={(data) => {
+          onRowClick={data => {
             console.log(data);
           }}
         >
-
           <Column width={70} align="center" fixed sortable>
             <HeaderCell>Id</HeaderCell>
             <Cell dataKey="id" />
@@ -93,56 +81,29 @@ class SortTable extends React.Component {
             <Cell dataKey="lastName" />
           </Column>
 
-          {this.state.addColumn ? this.renderColumns() : null}
-
           <Column width={200} sortable>
             <HeaderCell>City</HeaderCell>
             <Cell dataKey="city" />
           </Column>
 
-          <Column width={200} sortable>
-            <HeaderCell>Street</HeaderCell>
-            <Cell dataKey="street" />
-          </Column>
-
-
-          <Column width={200} sortable>
+          <Column width={200} sortable flexGrow={1}>
             <HeaderCell>Company Name</HeaderCell>
             <Cell dataKey="companyName" />
           </Column>
-
-          <Column width={200} >
-            <HeaderCell>Email</HeaderCell>
-            <Cell dataKey="email" />
-          </Column>
-
-
         </Table>
-        <button
-          onClick={() => {
-            this.setState({
-              addColumn: true
-            });
-          }}
-        >
-          Add Column
-        </button>
       </div>
     );
   }
-
 }
 
 ReactDOM.render(<SortTable />);
 ```
+
 <!--end-code-->
 
-> 在需要排序的列 `<Column>` 设置一个 `sortable` 属性。
-> 同时在 `<Table>` 定义一个 `onSortColumn` 回调函数，点击列头排序图标的时候，会触发该方法，并返回 `sortColumn` 和 `sortType`。
-
+> 在需要排序的列 `<Column>` 设置一个 `sortable` 属性。同时在 `<Table>` 定义一个 `onSortColumn` 回调函数，点击列头排序图标的时候，会触发该方法，并返回 `sortColumn` 和 `sortType`。
 
 ```html
-
 <Table
   onSortColumn={(sortColumn, sortType)=>{
     console.log(sortColumn, sortType);
