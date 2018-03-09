@@ -6,12 +6,12 @@
 
 ```js
 const CustomButtonGroup = ({ appearance })=>(
-  <ButtonGroup justified>
+  <ButtonGroup style={{marginTop:12}} justified>
     <Button appearance={appearance}>Top</Button>
     <Button appearance={appearance}>Middle</Button>
     <Button appearance={appearance}>Bottom</Button>
   </ButtonGroup>
-)
+);
 
 const instance = (
   <ButtonToolbar>

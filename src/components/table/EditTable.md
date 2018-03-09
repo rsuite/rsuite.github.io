@@ -5,9 +5,10 @@
 
 
 export const EditCell = ({ rowData, dataKey, onChange, ...props }) => {
+const editing = rowData.status === 'EDIT';
   return (
-    <Cell {...props}>
-      {rowData.status === 'EDIT' ? (
+    <Cell className={editing?'table-content-editing':''} {...props}>
+      {editing ? (
         <input
           className="input"
           defaultValue={rowData[dataKey]}
@@ -15,7 +16,9 @@ export const EditCell = ({ rowData, dataKey, onChange, ...props }) => {
             onChange && onChange(rowData.id, dataKey, event.target.value);
           }}
         />
-      ) : rowData[dataKey]}
+      ) : (
+        <span className="table-content-edit-span">{rowData[dataKey]}</span>
+      )}
     </Cell>
   );
 };
