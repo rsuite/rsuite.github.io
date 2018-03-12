@@ -45,7 +45,7 @@ const tabExamples = [
     sorce: require('./edit.md')
   },
   {
-    title: 'loading',
+    title: '异步加载中',
     sorce: require('./loading.md')
   },
 

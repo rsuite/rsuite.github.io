@@ -84,7 +84,7 @@ class SortTable extends React.Component {
             <Cell dataKey="city" />
           </Column>
 
-          <Column width={200} flexGrow={1}>
+          <Column width={200}>
             <HeaderCell>Company Name</HeaderCell>
             <Cell dataKey="companyName" />
           </Column>
@@ -99,7 +99,7 @@ ReactDOM.render(<SortTable />);
 
 <!--end-code-->
 
-> 在需要排序的列 `<Column>` 设置一个 `sortable` 属性。同时在 `<Table>` 定义一个 `onSortColumn` 回调函数，点击列头排序图标的时候，会触发该方法，并返回 `sortColumn` 和 `sortType`。
+在需要排序的列 `<Column>` 设置一个 `sortable` 属性。同时在 `<Table>` 定义一个 `onSortColumn` 回调函数，点击列头排序图标的时候，会触发该方法，并返回 `sortColumn` 和 `sortType`。
 
 ```html
 <Table

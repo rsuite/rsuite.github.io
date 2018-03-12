@@ -31,8 +31,6 @@ class ComponentExample extends React.Component {
     }
 
     const { sorce } = tabExamples[tabIndex];
-
-    console.log(tabIndex, sorce);
     return (
       <CodeView
         key={tabIndex}
@@ -66,6 +64,7 @@ class ComponentExample extends React.Component {
             </Nav.Item>
           ))}
         </Nav>
+        <hr />
       </div>
     );
   }

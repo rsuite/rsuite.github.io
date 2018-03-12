@@ -1,17 +1,6 @@
 <!--start-code-->
 
 ```js
-export const StatesCell = ({ rowData, dataKey, ...props }) => {
-  let clesses =
-    'icon icon-big ' +
-    (rowData[dataKey] === 'ENABLED' ? 'icon-ok-circle green' : 'icon-info2 gray');
-  return (
-    <Cell {...props}>
-      <i className={clesses} />
-    </Cell>
-  );
-};
-
 class TreeTable extends React.Component {
   constructor(props) {
     super(props);
@@ -24,7 +13,7 @@ class TreeTable extends React.Component {
     return (
       <div>
         <div className="btn-toolbar">
-          <h5>全部节点</h5>
+          <span>全部节点</span>
           <Toggle
             defaultChecked
             checkedChildren="展开"
@@ -33,16 +22,17 @@ class TreeTable extends React.Component {
               this.methods.treeToggle(open);
             }}
           />
-          <h5>只操作部分节点 (2系)</h5>
+          <span>只操作部分节点 (BMW)</span>
           <Toggle
             defaultChecked
             checkedChildren="展开"
             unCheckedChildren="收起"
             onChange={open => {
-              this.methods.treeToggleBy(open, rowData => rowData.labelName === '2系');
+              this.methods.treeToggleBy(open, rowData => rowData.labelName === 'BMW');
             }}
           />
         </div>
+        <hr />
         <Table
           height={400}
           data={data}
@@ -68,7 +58,7 @@ class TreeTable extends React.Component {
 
           <Column width={100}>
             <HeaderCell>States</HeaderCell>
-            <StatesCell dataKey="status" />
+            <Cell dataKey="status" />
           </Column>
 
           <Column width={100}>
@@ -86,7 +76,7 @@ ReactDOM.render(<TreeTable />);
 
 <!--end-code-->
 
-> 树形表格，主要为了展示有结构关系的数据，需要在 `Table` 组件上设置一个 `isTree` 属性，同时 `data` 中的数据需要通过 `children` 来定义关系结构。
+树形表格，主要为了展示有结构关系的数据，需要在 `Table` 组件上设置一个 `isTree` 属性，同时 `data` 中的数据需要通过 `children` 来定义关系结构。
 
 ```html
  <Table  height={400} data={data} isTree expand>
