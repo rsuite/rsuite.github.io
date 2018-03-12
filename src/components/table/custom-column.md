@@ -1,22 +1,25 @@
-### 自定义单元格
-
 <!--start-code-->
 
 ```js
 const DateCell = ({ rowData, dataKey, ...props }) => (
-  <Cell {...props}>
-    {rowData[dataKey].toLocaleString()}
-  </Cell>
+  <Cell {...props}>{rowData[dataKey].toLocaleString()}</Cell>
 );
 
 const NameCell = ({ rowData, dataKey, ...props }) => {
   const speaker = (
     <Popover title="Description">
-      <p><b>Name:</b> {`${rowData.firstName} ${rowData.lastName}`} </p>
-      <p><b>Email:</b> {rowData.email} </p>
-      <p><b>Company:</b> {rowData.companyName} </p>
-      <p><b>Sentence:</b> {rowData.sentence} </p>
-
+      <p>
+        <b>Name:</b> {`${rowData.firstName} ${rowData.lastName}`}{' '}
+      </p>
+      <p>
+        <b>Email:</b> {rowData.email}{' '}
+      </p>
+      <p>
+        <b>Company:</b> {rowData.companyName}{' '}
+      </p>
+      <p>
+        <b>Sentence:</b> {rowData.sentence}{' '}
+      </p>
     </Popover>
   );
 
@@ -47,10 +50,9 @@ const ActionCell = ({ rowData, dataKey, ...props }) => {
     console.log(rowData, dataKey);
   }
 
-
   return (
     <Cell {...props}>
-      <a onClick={handleAction} > Edit </a>
+      <a onClick={handleAction}> Edit </a>
       |
       <a onClick={handleAction}> Remove </a>
     </Cell>
@@ -69,31 +71,26 @@ class CustomColumnTable extends React.Component {
     const { data } = this.state;
     return (
       <div>
-        <Table
-          height={400}
-          data={data}
-        >
-
+        <Table height={420} data={data}>
           <Column width={160}>
             <HeaderCell>First Name</HeaderCell>
             <NameCell dataKey="firstName" />
           </Column>
 
-          <Column width={300} >
+          <Column width={300}>
             <HeaderCell>Email</HeaderCell>
             <EmailCell dataKey="email" />
           </Column>
 
-          <Column width={200} >
+          <Column width={200}>
             <HeaderCell>Action</HeaderCell>
             <DateCell dataKey="date" />
           </Column>
 
-          <Column width={200} >
+          <Column width={200}>
             <HeaderCell>Action</HeaderCell>
             <ActionCell dataKey="id" />
           </Column>
-
         </Table>
       </div>
     );

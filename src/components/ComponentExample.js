@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col } from '../rsuiteSource';
+import { Col, Nav } from '../rsuiteSource';
 import PageContainer from './PageContainer';
 import * as rsuite from '../rsuiteSource';
 import Paragraph from '../fixtures/Paragraph';
@@ -12,10 +12,74 @@ const babelOptions = {
 };
 
 class ComponentExample extends React.Component {
-  render() {
-    const { context, examples, children, dependencies, ...rest } = this.props;
-    const docs = context.split('<!--{demo}-->');
+  static defaultProps = {
+    tabExamples: []
+  };
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      tabIndex: 0
+    };
+  }
+  renderExampleByTabIndex() {
+    const { tabExamples, dependencies } = this.props;
+    const { tabIndex } = this.state;
+
+    if (!tabExamples.length) {
+      return null;
+    }
+
+    const { sorce } = tabExamples[tabIndex];
+
+    console.log(tabIndex, sorce);
+    return (
+      <CodeView
+        key={tabIndex}
+        babelOptions={babelOptions}
+        buttonClassName="btn-subtle btn-icon-circle"
+        source={sorce}
+        dependencies={{ ...dependencies, Paragraph, rsuite }}
+      />
+    );
+  }
+
+  renderTabs() {
+    const { tabExamples } = this.props;
+    const { tabIndex } = this.state;
+
+    if (!tabExamples.length) {
+      return null;
+    }
+    return (
+      <div>
+        <h3>高级功能</h3>
+        <Nav
+          activeKey={tabIndex}
+          onSelect={tabIndex => {
+            this.setState({ tabIndex });
+          }}
+        >
+          {tabExamples.map((item, index) => (
+            <Nav.Item key={index} eventKey={index}>
+              {item.title}
+            </Nav.Item>
+          ))}
+        </Nav>
+      </div>
+    );
+  }
+  render() {
+    const {
+      context,
+      examples = [],
+      tabExamples = [],
+      children,
+      dependencies,
+      ...rest
+    } = this.props;
+
+    const docs = context.split('<!--{demo}-->');
     return (
       <PageContainer {...rest}>
         <MarkdownView>{docs[0]}</MarkdownView>
@@ -28,6 +92,8 @@ class ComponentExample extends React.Component {
             dependencies={{ ...dependencies, Paragraph, rsuite }}
           />
         ))}
+        {this.renderTabs()}
+        {this.renderExampleByTabIndex()}
         <MarkdownView>{docs[1]}</MarkdownView>
         {children}
       </PageContainer>

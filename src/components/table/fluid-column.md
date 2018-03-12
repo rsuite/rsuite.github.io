@@ -1,13 +1,12 @@
-### 自动列宽
-
 <!--start-code-->
-```js
 
+```js
 class FluidColumnTable extends React.Component {
   constructor(props) {
     super(props);
+    const data = fakeData.filter((v, i) => i < 8);
     this.state = {
-      data: fakeData
+      data
     };
   }
 
@@ -16,44 +15,45 @@ class FluidColumnTable extends React.Component {
     return (
       <div>
         <Table
-          height={400}
+          height={420}
           data={data}
           onSortColumn={(sortColumn, sortType) => {
             console.log(sortColumn, sortType);
           }}
         >
-
-          <Column width={50} align="center" fixed >
+          <Column width={50} align="center" fixed>
             <HeaderCell>Id</HeaderCell>
             <Cell dataKey="id" />
           </Column>
 
-          <Column width={100} fixed >
+          <Column width={100} fixed>
             <HeaderCell>First Name</HeaderCell>
             <Cell dataKey="firstName" />
           </Column>
 
-          <Column flexGrow={1} sortable >
-            <HeaderCell>City <code>flexGrow={1}</code></HeaderCell>
+          <Column flexGrow={1} sortable>
+            <HeaderCell>
+              City <code>flexGrow={1}</code>
+            </HeaderCell>
             <Cell dataKey="city" />
           </Column>
 
           <Column flexGrow={2} sortable>
-            <HeaderCell>Company Name <code>flexGrow={2}</code></HeaderCell>
+            <HeaderCell>
+              Company Name <code>flexGrow={2}</code>
+            </HeaderCell>
             <Cell dataKey="companyName" />
           </Column>
-
         </Table>
       </div>
     );
   }
-
 }
 
 ReactDOM.render(<FluidColumnTable />);
 ```
-<!--end-code-->
 
+<!--end-code-->
 
 > 如果需要把某列设置为自动宽度，需要配置 `flexGrow` 属性。 `flexGrow` 是 `number` 类型。会按照所有 `flexGrow` 总和比例撑满 `<Table>` 剩下的宽度。
 

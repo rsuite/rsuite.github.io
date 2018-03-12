@@ -10,18 +10,49 @@ const { HeaderCell, Pagination, Cell, Column } = Table;
 const TablePagination = Pagination;
 
 const context = require('./index.md');
-const examples = [
-  require('./default.md'),
-  require('./resizable.md'),
-  require('./fluid-column.md'),
-  require('./word-wrap.md'),
-  require('./custom-column.md'),
-  require('./sort.md'),
-  require('./pagination.md'),
-  require('./tree.md'),
-  require('./edit.md'),
-  require('./loading.md'),
-  require('./colspan.md')
+const examples = [require('./default.md')];
+const tabExamples = [
+  {
+    title: '可调整列宽',
+    sorce: require('./resizable.md')
+  },
+  {
+    title: '流体列宽',
+    sorce: require('./fluid-column.md')
+  },
+  {
+    title: '自动换行',
+    sorce: require('./word-wrap.md')
+  },
+  {
+    title: '自定义列',
+    sorce: require('./custom-column.md')
+  },
+  {
+    title: '排序',
+    sorce: require('./sort.md')
+  },
+  {
+    title: '分页',
+    sorce: require('./pagination.md')
+  },
+  {
+    title: '树',
+    sorce: require('./tree.md')
+  },
+  {
+    title: '编辑',
+    sorce: require('./edit.md')
+  },
+  {
+    title: 'loading',
+    sorce: require('./loading.md')
+  },
+
+  {
+    title: '合并单元格',
+    sorce: require('./colspan.md')
+  }
 ];
 
 export default () => {
@@ -44,6 +75,7 @@ export default () => {
       }}
       context={context}
       examples={examples}
+      tabExamples={tabExamples}
     />
   );
 };

@@ -1,74 +1,60 @@
-### 分页
-
 <!--start-code-->
 
 ```js
-const DateCell = ({ rowData, dataKey, ...props }) => (
-  <Cell {...props}>{rowData[dataKey].toLocaleString()}</Cell>
-);
-
-function formatLengthMenu(lengthMenu) {
-  return (
-    <div className="table-length">
-      <span> 每页 </span>
-      {lengthMenu}
-      <span> 条 </span>
-    </div>
-  );
-}
-
-function formatInfo(total, activePage) {
-  return (
-    <span>
-      共 <i>{total}</i> 条数据
-    </span>
-  );
-}
-
 class PaginationTable extends React.Component {
   constructor(props) {
     super(props);
-    const data = fakeData.filter((v, i) => i < 8);
     this.state = {
-      displayLength: 100,
-      data
+      displayLength: 10,
+      loading: false,
+      page: 1
     };
     this.handleChangePage = this.handleChangePage.bind(this);
     this.handleChangeLength = this.handleChangeLength.bind(this);
   }
   handleChangePage(dataKey) {
-    const { displayLength } = this.state;
     this.setState({
-      data: fakeData
+      page: dataKey
     });
   }
   handleChangeLength(dataKey) {
     this.setState({
-      displayLength: dataKey,
-      data: fakeData
+      displayLength: dataKey
+    });
+  }
+  getData() {
+    const { displayLength, page } = this.state;
+    console.log(displayLength, page);
+    return fakeData.filter((v, i) => {
+      const start = displayLength * (page - 1);
+      const end = start + displayLength;
+      return i > start && i <= end;
     });
   }
   render() {
-    const { data } = this.state;
+    const data = this.getData();
+    const { loading, displayLength, page } = this.state;
+    console.log(data);
+
     return (
       <div>
-        <Table height={420} data={data}>
+        <Table height={420} data={data} loading={loading}>
           <Column width={50} align="center" fixed>
             <HeaderCell>Id</HeaderCell>
             <Cell dataKey="id" />
           </Column>
 
-          <Column width={100} fixed resizable>
+          <Column width={100} fixed>
             <HeaderCell>First Name</HeaderCell>
             <Cell dataKey="firstName" />
           </Column>
 
-          <Column width={100} resizable>
+          <Column width={100}>
             <HeaderCell>Last Name</HeaderCell>
             <Cell dataKey="lastName" />
           </Column>
 
-          <Column width={200} resizable>
+          <Column width={200}>
             <HeaderCell>City</HeaderCell>
             <Cell dataKey="city" />
           </Column>
@@ -79,10 +65,19 @@ class PaginationTable extends React.Component {
         </Table>
 
         <TablePagination
-          formatLengthMenu={formatLengthMenu}
-          formatInfo={formatInfo}
-          displayLength={30}
-          total={90}
+          lengthMenu={[
+            {
+              value: 10,
+              label: 10
+            },
+            {
+              value: 20,
+              label: 20
+            }
+          ]}
+          activePage={page}
+          displayLength={displayLength}
+          total={fakeData.length}
           onChangePage={this.handleChangePage}
           onChangeLength={this.handleChangeLength}
         />
@@ -95,45 +90,3 @@ ReactDOM.render(<PaginationTable />);
 ```
 
 <!--end-code-->
-
-> 表格分页是一个很常用的功能，主要是为了可以控制每一次服务端返回的数据量，所以这里的分页需要和你的服务端返回的数据配合。 当前示例中因为没有走后端，数据是写死的。
-
-自定义显示回调函数，格式化显示多少行，以及显示总条目数的信息，定义好以后，配置给 `TablePagination` 组件
-
-```js
-function formatLengthMenu(lengthMenu) {
-  return (
-    <div className="table-length">
-      <span> 每页 </span>
-      {lengthMenu}
-      <span> 条 </span>
-    </div>
-  );
-}
-
-function formatInfo(total, activePage) {
-  return (
-    <span>
-      共 <i>{total}</i> 条数据
-    </span>
-  );
-}
-```
-
-```html
-<TablePagination
-    formatLengthMenu={formatLengthMenu}
-    formatInfo={formatInfo}
-    displayLength={100}
-    total={500}
-    onChangePage={this.handleChangePage}
-    onChangeLength={this.handleChangeLength}
-/>
-```
-
-* `formatLengthMenu` 格式化显示行数；
-* `formatInfo` 格式化显示总条目信息；
-* `displayLength` 默认显示多少行数据，可以通过 `state` 管理；
-* `total` 它不是当前返回数据的行数，他是所有数据的总条目数，这个需要后端 `API` 的返回，通过这个值与 `displayLength`，才能计算出表格分多少页。可以通过 `state` 管理；
-* `onChangePage` 切换分页的回调函数；
-* `onChangeLength` 切换显示条目数的回调函数。
