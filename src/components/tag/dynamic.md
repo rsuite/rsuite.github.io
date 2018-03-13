@@ -9,7 +9,7 @@ class DynamicTag extends React.Component {
     this.state = {
       typing: false,
       inputValue: '',
-      tags: ['Item A', 'Item B', 'Item C']
+      tags: ['javascript', 'css', 'react']
     };
     this.handleButtonClick = this.handleButtonClick.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
