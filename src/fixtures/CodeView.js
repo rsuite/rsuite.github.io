@@ -7,7 +7,7 @@ class CodeView extends React.Component {
     return !_.isEqual(this.props, nextProps);
   }
   render() {
-    return <ReactCodeView {...this.props} />;
+    return <ReactCodeView classPrefix="rs-" {...this.props} />;
   }
 }
 
