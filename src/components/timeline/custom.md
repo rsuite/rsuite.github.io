@@ -21,7 +21,7 @@ const instance = (
       <p>2018-03-12</p>
       <p>订单出库</p>
     </Timeline.Item>
-    <Timeline.Item dot={<Icon icon="spinner" pulse />}>
+    <Timeline.Item dot={<Icon icon="spinner" spin style={{ borderRadius:'50%' }} />}>
       <p>2018-03-15</p>
       <p>正在为您派件</p>
     </Timeline.Item>
