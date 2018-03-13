@@ -812,7 +812,7 @@ path.bg {
     white-space: nowrap;
 
     &::before {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       width: 1px;
@@ -857,4 +857,26 @@ path.bg {
 .tag-add-btn {
   display: inline-block;
   margin-left: 10px;
+}
+
+.rs-divider {
+  display: block;
+  height: 1px;
+  width: 100%;
+  margin: 24px 0;
+  &-inner-text {
+    display: inline-block;
+    padding: 0 24px;
+  }
+}
+
+.rs-divider.rs-divider-vertical {
+  background: #ddd;
+  margin: 0 8px;
+  display: inline-block;
+  height: 0.9em;
+  width: 1px;
+  vertical-align: middle;
+  position: relative;
+  top: -0.06em;
 }

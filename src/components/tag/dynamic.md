@@ -96,6 +96,16 @@ class DynamicTag extends React.Component {
 }
 
 ReactDOM.render(<DynamicTag />);
+
+/**
+ * css
+ *
+  .tag-input,
+  .tag-add-btn {
+    display: inline-block;
+    margin-left: 10px;
+  }
+*/
 ```
 
 <!--end-code-->

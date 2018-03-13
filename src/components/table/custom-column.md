@@ -55,7 +55,7 @@ const ActionCell = ({ rowData, dataKey, ...props }) => {
   return (
     <Cell {...props}>
       <a onClick={handleAction}> Edit </a>
-      |
+      <Divider vertical />
       <a onClick={handleAction}> Remove </a>
     </Cell>
   );
@@ -86,11 +86,6 @@ class CustomColumnTable extends React.Component {
           <Column width={300}>
             <HeaderCell>Email</HeaderCell>
             <EmailCell dataKey="email" />
-          </Column>
-
-          <Column width={200}>
-            <HeaderCell>Action</HeaderCell>
-            <DateCell dataKey="date" />
           </Column>
 
           <Column width={200}>

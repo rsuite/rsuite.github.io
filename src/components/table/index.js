@@ -1,6 +1,15 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Table, Toggle, Popover, Whisper, Button, IconButton, Icon } from '../../rsuiteSource';
+import {
+  Table,
+  Toggle,
+  Popover,
+  Whisper,
+  Button,
+  IconButton,
+  Divider,
+  Icon
+} from '../../rsuiteSource';
 
 import fakeData from './data/users';
 import fakeTreeData from './data/treeData';
@@ -72,6 +81,7 @@ export default () => {
         Popover,
         Whisper,
         Icon,
+        Divider,
         IconButton,
         Table,
         Button,
