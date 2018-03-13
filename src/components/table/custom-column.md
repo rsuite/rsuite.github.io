@@ -33,8 +33,10 @@ const NameCell = ({ rowData, dataKey, ...props }) => {
 };
 
 const ImageCell = ({ rowData, dataKey, ...props }) => (
-  <Cell {...props}>
-    <img src={rowData[dataKey]} width="50" />
+  <Cell {...props} style={{ padding: 0 }}>
+    <div style={{ width: 46, background: '#eee' }}>
+      <img src={rowData[dataKey]} width="46" />
+    </div>
   </Cell>
 );
 
@@ -72,6 +74,10 @@ class CustomColumnTable extends React.Component {
     return (
       <div>
         <Table height={420} data={data}>
+          <Column width={80}>
+            <HeaderCell>Avartar</HeaderCell>
+            <ImageCell dataKey="avartar" />
+          </Column>
           <Column width={160}>
             <HeaderCell>First Name</HeaderCell>
             <NameCell dataKey="firstName" />
