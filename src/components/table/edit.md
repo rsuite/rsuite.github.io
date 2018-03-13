@@ -7,7 +7,7 @@ export const EditCell = ({ rowData, dataKey, onChange, ...props }) => {
     <Cell className={editing ? 'table-content-editing' : ''} {...props}>
       {editing ? (
         <input
-          className="input"
+          className="rs-input"
           defaultValue={rowData[dataKey]}
           onChange={event => {
             onChange && onChange(rowData.id, dataKey, event.target.value);
