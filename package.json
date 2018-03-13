@@ -103,7 +103,7 @@
     "postcss-loader": "^2.0.9",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-code-view": "^1.1.6",
+    "react-code-view": "^1.1.7",
     "react-color": "^2.13.8",
     "react-dom": "^16.2.0",
     "react-hot-loader": "^3.0.0-beta.6",

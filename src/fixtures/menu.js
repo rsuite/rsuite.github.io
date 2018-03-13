@@ -167,6 +167,12 @@ export default [
         components: ['Pagination']
       },
       {
+        id: 'progress',
+        name: 'Progress',
+        title: '进度条',
+        components: ['Progress.Line', 'Progress.Circle']
+      },
+      {
         group: true,
         id: 'entry',
         name: 'Data Entry',
@@ -299,16 +305,16 @@ export default [
         components: ['Panel', 'PanelGroup']
       },
       {
-        id: 'progress',
-        name: 'Progress',
-        title: '进度条',
-        components: ['Progress.Line', 'Progress.Circle']
-      },
-      {
         id: 'timeline',
         name: 'Timeline',
         title: '时间轴',
         components: ['Timeline', 'Timeline.Item']
+      },
+      {
+        id: 'tag',
+        name: 'Tag',
+        title: '标签',
+        components: ['Tag']
       },
       {
         group: true,
