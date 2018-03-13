@@ -50,6 +50,7 @@ class DynamicTag extends React.Component {
     if (typing) {
       return (
         <Input
+          className="tag-input"
           inputRef={ref => {
             this.input = ref;
           }}
@@ -65,6 +66,7 @@ class DynamicTag extends React.Component {
 
     return (
       <IconButton
+        className="tag-add-btn"
         onClick={this.handleButtonClick}
         icon={<Icon icon="plus" />}
         appearance="ghost"
