@@ -1,13 +1,12 @@
 @import '~react-markdown-reader/less/highlight';
 @import '~react-code-view/lib/less/index';
-//@import '~rsuite-theme/lib/less/index';
 @import '../../../rsuite-theme/src/less/index';
-@import './functions.less';
-@import './docsearch.less';
-@import './stars.less';
+@import './functions';
+@import './docsearch';
+@import './stars';
 @import './ie-polyfill';
 
-@ns: rs-;
+//@ns: rs-;
 //rewrite base color
 @base-color: #34c3ff;
 @bg-color: #fbfbfb;
@@ -788,5 +787,60 @@ path.bg {
   }
   .page-nav {
     display: none;
+  }
+}
+
+
+.page-nav {
+  overflow: hidden;
+
+  .nav-item {
+    position: relative;
+  }
+
+  .nav-link {
+    display: block;
+    text-decoration: none;
+    color: @B900;
+    font-size: 12px;
+    position: relative;
+    padding: 6px 0;
+    box-sizing: border-box;
+    height: auto;
+    line-height: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      top: 0;
+      background: @B200;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &.scroll-bar-left::before {
+      left: 0;
+    }
+
+    &.scroll-bar-right::before {
+      right: 0;
+    }
+
+    &.active {
+      color: @H500;
+
+      &::before {
+        width: 2px;
+        background: @H500;
+      }
+    }
   }
 }
