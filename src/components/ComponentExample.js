@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Nav } from '../rsuiteSource';
+import { Col, Nav, Navbar } from '../rsuiteSource';
 import PageContainer from './PageContainer';
 import * as rsuite from '../rsuiteSource';
 import Paragraph from '../fixtures/Paragraph';
@@ -52,19 +52,20 @@ class ComponentExample extends React.Component {
     return (
       <div>
         <h3>高级功能</h3>
-        <Nav
-          activeKey={tabIndex}
-          onSelect={tabIndex => {
-            this.setState({ tabIndex });
-          }}
-        >
-          {tabExamples.map((item, index) => (
-            <Nav.Item key={index} eventKey={index}>
-              {item.title}
-            </Nav.Item>
-          ))}
-        </Nav>
-        <hr />
+        <Navbar>
+          <Nav
+            activeKey={tabIndex}
+            onSelect={tabIndex => {
+              this.setState({ tabIndex });
+            }}
+          >
+            {tabExamples.map((item, index) => (
+              <Nav.Item key={index} eventKey={index}>
+                {item.title}
+              </Nav.Item>
+            ))}
+          </Nav>
+        </Navbar>
       </div>
     );
   }

@@ -24,28 +24,29 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 
 ### `<Table>`
 
-| 属性名称            | 类型 `(默认值)`                         | 描述                                                         |
-| ------------------- | --------------------------------------- | ------------------------------------------------------------ |
-| data                | Array&lt;Object&gt;                     | 表格数据                                                     |
-| width               | number                                  | 宽度                                                         |
-| height              | number`(200)`                           | 高度                                                         |
-| rowHeight           | number`(46)`                            | 行高                                                         |
-| headerHeight        | number`(40)`                            | 表头高度                                                     |
-| isTree              | boolean                                 | 是否展示为树表格                                             |
-| expand              | boolean                                 | 展开所有节点，`isTree`为 `tree` 时，该属性有效               |
-| renderTreeToggle    | (icon:node,rowData:object)=> node       | 树形表格，在展开节点的回调函数                               |
-| locale              | object                                  | 本地化语言配置                                               |
-| sortColumn          | string                                  | 排序列名称                                                   |
-| sortType            | string                                  | 排序类型 ['desc', 'asc']                                     |
-| onTreeToggle        | (isOpen:boolean,rowData:object)=>void   | 树形表格，在展开节点的回调函数                               |
-| onRowClick          | (rowData:object)=>void                  | 行点击后的回调函数， 返回 `rowDate`                          |
-| onSortColumn        | (dataKey:string, sortType:string)=>void | 点击排序列的回调函数，返回 `sortColumn`, `sortType` 这两个值 |
-| onRerenderRowHeight | (rowData:object)=> number               | 重新渲染行高                                                 |
-| onScroll            | (scrollX:object, scrollY:object)=>void  | 滚动条滚动时候的回调函数                                     |
-| disabledScroll      | boolean                                 | 禁用滚动                                                     |
-| loading             | boolean                                 | 显示 loading 状态                                            |
-| bordered            | boolean                                 | 显示边框线                                                   |
-| getMethods          | (publicMethods: Object) => void         | 获取公共方法                                                 |
+| 属性名称               | 类型 `(默认值)`                         | 描述                                                         |
+| ---------------------- | --------------------------------------- | ------------------------------------------------------------ |
+| bordered               | boolean                                 | 显示边框线                                                   |
+| data                   | Array&lt;Object&gt;                     | 表格数据                                                     |
+| width                  | number                                  | 宽度                                                         |
+| height                 | number`(200)`                           | 高度                                                         |
+| rowHeight              | number`(46)`                            | 行高                                                         |
+| rowKey                 | string `('key')`                        | 每一个行对应的 `data` 中的唯一 `key`                         |
+| headerHeight           | number`(40)`                            | 表头高度                                                     |
+| isTree                 | boolean                                 | 是否展示为树表格                                             |
+| defaultExpandAllRows   | boolean                                 | 默认展开所有节点                                             |
+| defaultExpandedRowKeys | Array&lt;string&gt;                     | 通过 rowKey 指定默认展开的行                                 |
+| expandedRowKeys        | Array&lt;string&gt;                     | 通过 rowKey 指定展开的行 (受控)                              |
+| renderTreeToggle       | (icon:node,rowData:object)=> node       | 树形表格，在展开节点的回调函数                               |
+| locale                 | object                                  | 本地化语言配置                                               |
+| loading                | boolean                                 | 显示 loading 状态                                            |
+| sortColumn             | string                                  | 排序列名称                                                   |
+| sortType               | enum: 'desc', 'asc'                     | 排序类型                                                     |
+| onExpandChange         | (expanded:boolean,rowData:object)=>void | 树形表格，在展开节点的回调函数                               |
+| onRowClick             | (rowData:object)=>void                  | 行点击后的回调函数， 返回 `rowDate`                          |
+| onSortColumn           | (dataKey:string, sortType:string)=>void | 点击排序列的回调函数，返回 `sortColumn`, `sortType` 这两个值 |
+| setRowHeight           | (rowData:object)=> number               | 自定义设置行高                                               |
+| onScroll               | (scrollX:object, scrollY:object)=>void  | 滚动条滚动时候的回调函数                                     |
 
 ### `<Table.Column>`
 
@@ -88,31 +89,3 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | last           | boolean `(true)`        | 显示最后一页按钮                            |
 | maxButtons     | number `(5)`            | 配置最多显示按钮数量                        |
 | activePage     | number `(1)`            | 配置当前页号                                |
-
-## Methods
-
-对组件设置 getMethods 属性，获取到所有的公用方法
-
-```js
-<Table
-  getMethods={publicMethods => {
-    this.methods = publicMethods;
-  }}
-/>
-```
-
-### treeToggle
-
-控制树节点展开或者收缩
-
-```js
-treeToggle: (open: boolean) => void;
-```
-
-### treeToggleBy
-
-根据`rowData`自定义控制树节点展开或者收缩
-
-```js
-treeToggleBy: (open: boolean, iteratee: (rowData: any) => boolean) => void;
-```

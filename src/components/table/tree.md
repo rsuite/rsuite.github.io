@@ -12,41 +12,16 @@ class TreeTable extends React.Component {
     const { data } = this.state;
     return (
       <div>
-        <div className="btn-toolbar">
-          <span>全部节点</span>
-          <Toggle
-            defaultChecked
-            checkedChildren="展开"
-            unCheckedChildren="收起"
-            onChange={open => {
-              this.methods.treeToggle(open);
-            }}
-          />
-          <span>只操作部分节点 (BMW)</span>
-          <Toggle
-            defaultChecked
-            checkedChildren="展开"
-            unCheckedChildren="收起"
-            onChange={open => {
-              this.methods.treeToggleBy(open, rowData => rowData.labelName === 'BMW');
-            }}
-          />
-        </div>
-        <hr />
         <Table
           height={400}
           data={data}
           isTree
-          expand
-          getMethods={publicMethods => {
-            this.methods = publicMethods;
-          }}
-          onTreeToggle={(isOpen, rowData) => {
+          onExpandChange={(isOpen, rowData) => {
             console.log(isOpen, rowData);
           }}
           renderTreeToggle={(icon, rowData) => {
             if (rowData.labelName === '手机') {
-              return <i className="icon icon-spin icon-spinner" />;
+              return <Icon icon="spinner" spin />;
             }
             return icon;
           }}
@@ -57,7 +32,7 @@ class TreeTable extends React.Component {
           </Column>
 
           <Column width={100}>
-            <HeaderCell>States</HeaderCell>
+            <HeaderCell>Status</HeaderCell>
             <Cell dataKey="status" />
           </Column>
 

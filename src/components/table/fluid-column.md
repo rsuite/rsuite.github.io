@@ -31,14 +31,14 @@ class FluidColumnTable extends React.Component {
             <Cell dataKey="firstName" />
           </Column>
 
-          <Column flexGrow={1} sortable>
+          <Column flexGrow={1}>
             <HeaderCell>
               City <code>flexGrow={1}</code>
             </HeaderCell>
             <Cell dataKey="city" />
           </Column>
 
-          <Column flexGrow={2} sortable>
+          <Column flexGrow={2}>
             <HeaderCell>
               Company Name <code>flexGrow={2}</code>
             </HeaderCell>

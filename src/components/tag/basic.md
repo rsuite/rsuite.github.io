@@ -8,7 +8,9 @@ const instance = (
     <Tag>Text</Tag>
     <Tag closable>Text</Tag>
     <Tag>
-      <a href="http://www.hypers.com">Link</a>
+      <a target="_blank" href="http://www.hypers.com">
+        Link
+      </a>
     </Tag>
   </div>
 );

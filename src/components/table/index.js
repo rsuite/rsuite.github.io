@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Table, Toggle, Popover, Whisper, Button, Icon } from '../../rsuiteSource';
+import { Table, Toggle, Popover, Whisper, Button, IconButton, Icon } from '../../rsuiteSource';
 
 import fakeData from './data/users';
 import fakeTreeData from './data/treeData';
@@ -37,15 +37,20 @@ const tabExamples = [
     sorce: require('./pagination.md')
   },
   {
-    title: '树',
+    title: '树形展示',
     sorce: require('./tree.md')
   },
   {
-    title: '编辑',
+    title: '可展开',
+    sorce: require('./expanded.md')
+  },
+
+  {
+    title: '可编辑',
     sorce: require('./edit.md')
   },
   {
-    title: '异步加载中',
+    title: '加载中',
     sorce: require('./loading.md')
   },
 
@@ -67,6 +72,7 @@ export default () => {
         Popover,
         Whisper,
         Icon,
+        IconButton,
         Table,
         Button,
         HeaderCell,
