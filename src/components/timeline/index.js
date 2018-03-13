@@ -1,23 +1,18 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Button, Icon, Panel, PanelGroup } from '../../rsuiteSource';
+import { Timeline, Icon } from '../../rsuiteSource';
 
 const context = require('./index.md');
-const examples = [
-  require('./basic.md'),
-  require('./panel-group.md'),
-  require('./accordion.md')
-];
+const examples = [require('./basic.md'), require('./custom.md')];
 
+console.log(Timeline, Timeline.Item);
 
 export default () => {
   return (
     <ComponentExample
       dependencies={{
-        PanelGroup,
-        Panel,
-        Icon,
-        Button
+        Timeline,
+        Icon
       }}
       context={context}
       examples={examples}

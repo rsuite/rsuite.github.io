@@ -305,6 +305,12 @@ export default [
         components: ['Progress.Line', 'Progress.Circle']
       },
       {
+        id: 'timeline',
+        name: 'Timeline',
+        title: '时间轴',
+        components: ['Timeline', 'Timeline.Item']
+      },
+      {
         group: true,
         id: 'layout',
         name: 'Layout',
