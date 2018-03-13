@@ -32,14 +32,14 @@ class Demo extends React.Component{
     const { active } = this.state;
     return (
       <Row>
-        <Col md={2}>
+        <Col md={4}>
           <CustomNav
             active={active}
             onSelect={this.handleSelect}
           />
         </Col>
 
-        <Col md={3}>
+        <Col md={6}>
           <CustomNav
             appearance="tabs"
             active={active}
@@ -47,7 +47,7 @@ class Demo extends React.Component{
           />
 
         </Col>
-        <Col md={2}>
+        <Col md={4}>
           <CustomNav
             appearance="tabs"
             reversed
@@ -55,14 +55,14 @@ class Demo extends React.Component{
             onSelect={this.handleSelect}
           />
         </Col>
-        <Col md={3}>
+        <Col md={6}>
           <CustomNav
             appearance="subtle"
             active={active}
             onSelect={this.handleSelect}
           />
         </Col>
-        <Col md={2}>
+        <Col md={4}>
           <CustomNav
             appearance="subtle"
             reversed

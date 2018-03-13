@@ -7,6 +7,7 @@
 @import './stars.less';
 @import './ie-polyfill';
 
+@ns: rs-;
 //rewrite base color
 @base-color: #34c3ff;
 @bg-color: #fbfbfb;
@@ -162,7 +163,7 @@
   }
 }
 
-.sidebar-wrapper.fixed {
+.@{ns}sidebar-wrapper.fixed {
   position: fixed;
   background: #f4f5f7;
   width: 260px;
@@ -185,7 +186,7 @@
   }
 }
 
-.nav.nav-docs {
+.@{ns}nav.nav-docs {
   overflow: auto;
   position: absolute;
   bottom: 20px;
@@ -211,7 +212,7 @@
     margin-left: 4px;
     opacity: 0.5;
   }
-  .nav-item-panel {
+  .@{ns}nav-item-panel {
     padding: 20px 12px 12px 12px;
     color: #aaa;
     border-bottom: 1px solid #eee;
@@ -222,16 +223,16 @@
   margin-top: 10px;
   padding: 15px 0;
 
-  [class*='col-'] {
+  [class*='@{ns}col-'] {
     padding: 10px 5px;
     color: @B000;
   }
 
-  [class*='col-']:nth-child(2n) {
+  [class*='@{ns}col-']:nth-child(2n) {
     background-color: @H700;
   }
 
-  [class*='col-']:nth-child(2n + 1) {
+  [class*='@{ns}col-']:nth-child(2n + 1) {
     background-color: @H500;
   }
 }
@@ -278,7 +279,7 @@
       padding: 10px;
     }
   }
-  table th{
+  table th {
     text-align: left;
   }
   blockquote {
@@ -313,7 +314,7 @@ code:not(.doc-highlight) {
   margin: 2px;
 }
 
-.code-view .btn-toolbar + .btn-toolbar {
+.code-view .@{ns}btn-toolbar + .@{ns}btn-toolbar {
   margin-top: 10px;
 }
 
@@ -415,7 +416,7 @@ code:not(.doc-highlight) {
   }
 }
 
-.icon-example-list .icon {
+.icon-example-list .@{ns}icon {
   margin: 10px;
 }
 
@@ -440,9 +441,9 @@ code:not(.doc-highlight) {
   }
 }
 
-.code-view .btn-toggle {
+.code-view .@{ns}btn-toggle {
   margin-right: 8px;
-  .icon {
+  .@{ns}icon {
     width: 14px;
     text-align: center;
   }
@@ -686,6 +687,7 @@ path.bg {
 
 .navbar-brand {
   padding: 18px 20px;
+  display: inline-block;
 }
 
 .code-view-wrapper {
@@ -732,11 +734,11 @@ path.bg {
   .top-level-nav {
     background: #202225;
   }
-  .sidebar-wrapper {
+  .@{ns}sidebar-wrapper {
     background: #2f3136;
   }
 
-  .nav.nav-docs {
+  .@{ns}nav.nav-docs {
     a {
       color: #eee;
       &:hover {
@@ -744,15 +746,15 @@ path.bg {
         background: #42464e !important;
       }
     }
-    .nav-item-active a {
+    .@{ns}nav-item-active a {
       color: @H500;
     }
-    .nav-item-panel {
+    .@{ns}nav-item-panel {
       border-bottom: 1px solid #2b2c31;
       color: #777;
     }
   }
-  .sidebar-wrapper.fixed .title-wrapper {
+  .@{ns}sidebar-wrapper.fixed .title-wrapper {
     opacity: 0.5;
   }
 }
