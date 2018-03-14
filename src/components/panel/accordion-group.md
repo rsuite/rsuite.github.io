@@ -1,11 +1,11 @@
-### 面板组
+### 折叠面板组
 
 <!--start-code-->
 
 ```js
 const instance = (
-  <PanelGroup>
-    <Panel header="Panel 1">
+  <PanelGroup accordion>
+    <Panel header="Panel 1" defaultExpanded>
       <Paragraph size="short" />
     </Panel>
     <Panel header="Panel 2">
@@ -16,7 +16,6 @@ const instance = (
     </Panel>
   </PanelGroup>
 );
-
 ReactDOM.render(instance);
 ```
 
