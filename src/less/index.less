@@ -219,19 +219,21 @@
 }
 
 .show-grid {
-  margin-top: 10px;
+  margin: 6px 0;
 
   [class*='@{ns}col-'] {
     padding: 10px 5px;
     color: @B000;
-  }
-
-  [class*='@{ns}col-']:nth-child(2n) {
-    background-color: @H700;
-  }
-
-  [class*='@{ns}col-']:nth-child(2n + 1) {
     background-color: @H500;
+    border: 1px dashed @H600;
+
+    [class*='@{ns}col-'] {
+      background-color: @H600;
+
+      [class*='@{ns}col-'] {
+        background-color: @H700;
+      }
+    }
   }
 }
 

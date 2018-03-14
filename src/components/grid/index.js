@@ -8,7 +8,8 @@ const examples = [
   require('./gutter.md'),
   require('./offset.md'),
   require('./pull-push.md'),
-  require('./hidden.md')
+  require('./hidden.md'),
+  require('./nested.md')
 ];
 
 export default () => {
