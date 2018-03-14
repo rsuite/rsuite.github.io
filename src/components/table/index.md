@@ -32,12 +32,14 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | height                 | number`(200)`                           | 高度                                                         |
 | rowHeight              | number`(46)`                            | 行高                                                         |
 | rowKey                 | string `('key')`                        | 每一个行对应的 `data` 中的唯一 `key`                         |
+| rowExpandedHeight      | number `(100)`                          | 可展开行的展开区域的高度                                     |
 | headerHeight           | number`(40)`                            | 表头高度                                                     |
 | isTree                 | boolean                                 | 是否展示为树表格                                             |
 | defaultExpandAllRows   | boolean                                 | 默认展开所有节点                                             |
 | defaultExpandedRowKeys | Array&lt;string&gt;                     | 通过 rowKey 指定默认展开的行                                 |
 | expandedRowKeys        | Array&lt;string&gt;                     | 通过 rowKey 指定展开的行 (受控)                              |
 | renderTreeToggle       | (icon:node,rowData:object)=> node       | 树形表格，在展开节点的回调函数                               |
+| renderRowExpanded      | (rowDate?: Object) => React.Node        | 自定义可以展开区域的内容                                     |
 | locale                 | object                                  | 本地化语言配置                                               |
 | loading                | boolean                                 | 显示 loading 状态                                            |
 | sortColumn             | string                                  | 排序列名称                                                   |

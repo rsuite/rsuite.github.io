@@ -46,15 +46,21 @@ const examples = [
 ];
 
 const JSONView = ({ formValue, formError }) => (
-  <Row>
+  <Row style={{ marginBottom: 10 }}>
     <Col md={12}>
-      <Panel header="formValue" style={{ background: 'rgb(0, 43, 54)' }}>
+      <Panel
+        header={<p style={{ color: '#fff' }}>formValue</p>}
+        style={{ background: 'rgb(0, 43, 54)', padding: 10 }}
+      >
         <JSONTree data={formValue} />
       </Panel>
     </Col>
 
     <Col md={12}>
-      <Panel header="formError" style={{ background: 'rgb(0, 43, 54)' }}>
+      <Panel
+        header={<p style={{ color: '#fff' }}>formError</p>}
+        style={{ background: 'rgb(0, 43, 54)', padding: 10 }}
+      >
         <JSONTree data={formError} />
       </Panel>
     </Col>

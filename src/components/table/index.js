@@ -35,7 +35,7 @@ const tabExamples = [
   },
   {
     title: '自定义列',
-    sorce: require('./custom-column.md')
+    sorce: require('./custom-cell.md')
   },
   {
     title: '排序',
