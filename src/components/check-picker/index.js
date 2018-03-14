@@ -12,7 +12,7 @@ const examples = [
   require('./disabled.md'),
   require('./searchable.md'),
   require('./extra-footer.md'),
-  require('./asyn.md')
+  require('./async.md')
 ];
 
 export default () => {

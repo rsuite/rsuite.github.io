@@ -4,7 +4,7 @@
 
 ```js
 const instance = (
-  <PanelGroup accordion defaultActiveKey={1}>
+  <PanelGroup accordion defaultActiveKey={1} bordered>
     <Panel header="Panel 1" eventKey={1}>
       <Paragraph size="short" />
     </Panel>

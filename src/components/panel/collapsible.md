@@ -4,7 +4,7 @@
 
 ```js
 const instance = (
-  <Panel header="Panel title" collapsible>
+  <Panel header="Panel title" collapsible bordered>
     <Paragraph size="short" />
   </Panel>
 );

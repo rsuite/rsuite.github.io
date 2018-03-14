@@ -8,17 +8,11 @@
 
 ## Props
 
-### `<Timeline>`
+### `<Tag>`
 
-| 属性名称       | 类型`(默认值)`             | 描述                                     |
-| -------------- | -------------------------- | ---------------------------------------- |
-| componentClass | React.ElementType `('ul')` | 可以渲染 string 或者 function 的元素类型 |
-| classPrefix    | string `('timeline')`      | className 前缀                           |
-
-### `<Timeline.Item>`
-
-| 属性名称       | 类型`(默认值)`             | 描述                                     |
-| -------------- | -------------------------- | ---------------------------------------- |
-| componentClass | React.ElementType `('li')` | 可以渲染 string 或者 function 的元素类型 |
-| classPrefix    | string `('timeline-item')` | className 前缀                           |
-| dot            | React.Node                 | 自定义时间轴点                           |
+| 属性名称       | 类型`(默认值)`                             | 描述                                     |
+| -------------- | ------------------------------------------ | ---------------------------------------- |
+| componentClass | React.ElementType `('ul')`                 | 可以渲染 string 或者 function 的元素类型 |
+| classPrefix    | string `('timeline')`                      | className 前缀                           |
+| closable       | boolean                                    |
+| onClose        | (event: SyntheticEvent&lt;any&gt;) => void | 点击关闭按钮的回调函数                   |

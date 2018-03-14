@@ -1,6 +1,9 @@
 # Panel 面板 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/panel/index.md)
 
-一个内容面板， 支持折叠面板。Panel 中可以放所有 `Data Entry` 组件，也可以放一个表单。
+一个内容面板， 支持折叠面板。Panel 中可以放所有 `Data Display` 组件，可以作为表单的容器。
+
+* `<Panel>` 面板
+* `<PanelGroup>` 面板组
 
 ## 演示
 

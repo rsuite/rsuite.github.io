@@ -3,7 +3,7 @@
 
 <!--start-code-->
 ```js
-const gridInstance = (
+const instance = (
   <Grid fluid>
     <Row className="show-grid">
       <Col xs={24} md={16}>xs={24} md={16}</Col>
@@ -26,6 +26,6 @@ const gridInstance = (
     </Row>
   </Grid>
 );
-ReactDOM.render(gridInstance);
+ReactDOM.render(instance);
 ```
 <!--end-code-->

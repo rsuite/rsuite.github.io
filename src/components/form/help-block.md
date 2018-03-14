@@ -9,7 +9,7 @@ const instance = (
   <Form>
     <FormGroup>
       <FormControl name="email" placeholder="Email" />
-      <HelpBlock>Secure email Address</HelpBlock>
+      <HelpBlock>This field is required</HelpBlock>
     </FormGroup>
 
     <FormGroup>

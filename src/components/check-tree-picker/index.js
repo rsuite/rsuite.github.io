@@ -8,7 +8,8 @@ const examples = [
   require('./basic.md'),
   require('./placement.md'),
   require('./disabled.md'),
-  require('./custom.md')
+  require('./custom.md'),
+  require('./async.md')
 ];
 
 export default () => {

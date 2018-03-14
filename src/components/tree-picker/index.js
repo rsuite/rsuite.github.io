@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { TreePicker } from '../../rsuiteSource';
+import { TreePicker, Icon } from '../../rsuiteSource';
 import data from '../../../resources/data/city';
 
 const context = require('./index.md');
@@ -9,7 +9,8 @@ const examples = [
   require('./placement.md'),
   require('./disabled.md'),
   require('./searchable.md'),
-  require('./custom.md')
+  require('./custom.md'),
+  require('./async.md')
 ];
 
 export default () => {
@@ -19,6 +20,7 @@ export default () => {
       examples={examples}
       dependencies={{
         TreePicker,
+        Icon,
         data
       }}
     />

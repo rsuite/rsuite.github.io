@@ -8,7 +8,8 @@ import {
   Button,
   IconButton,
   Divider,
-  Icon
+  Icon,
+  Checkbox
 } from '../../rsuiteSource';
 
 import fakeData from './data/users';
@@ -73,6 +74,7 @@ export default () => {
   return (
     <ComponentExample
       dependencies={{
+        Checkbox,
         Toggle,
         fakeData,
         fakeTreeData,

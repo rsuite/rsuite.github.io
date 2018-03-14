@@ -11,10 +11,8 @@ const examples = [
   require('./custom.md'),
   require('./disabled.md'),
   require('./searchable.md'),
-  require('./asyn.md')
+  require('./async.md')
 ];
-
-
 
 export default () => {
   return (

@@ -34,8 +34,21 @@ const NameCell = ({ rowData, dataKey, ...props }) => {
 
 const ImageCell = ({ rowData, dataKey, ...props }) => (
   <Cell {...props} style={{ padding: 0 }}>
-    <div style={{ width: 46, background: '#eee' }}>
+    <div style={{ width: 46, height: 46, background: '#f5f5f5' }}>
       <img src={rowData[dataKey]} width="46" />
+    </div>
+  </Cell>
+);
+
+const CheckCell = ({ rowData, onChange, checkedKeys, dataKey, ...props }) => (
+  <Cell {...props} style={{ padding: 0 }}>
+    <div style={{ lineHeight: '46px' }}>
+      <Checkbox
+        value={rowData[dataKey]}
+        inline
+        onChange={onChange}
+        checked={checkedKeys.some(item => item === rowData[dataKey])}
+      />
     </div>
   </Cell>
 );
@@ -61,23 +74,68 @@ const ActionCell = ({ rowData, dataKey, ...props }) => {
   );
 };
 
+const data = fakeData.filter((v, i) => i < 8);
 class CustomColumnTable extends React.Component {
   constructor(props) {
     super(props);
-    const data = fakeData.filter((v, i) => i < 8);
     this.state = {
+      checkedKeys: [],
       data
     };
+    this.handleCheckAll = this.handleCheckAll.bind(this);
+    this.handleCheck = this.handleCheck.bind(this);
+  }
+  handleCheckAll(value, checked) {
+    const checkedKeys = checked ? data.map(item => item.id) : [];
+    this.setState({
+      checkedKeys
+    });
+  }
+  handleCheck(value, checked) {
+    const { checkedKeys } = this.state;
+    const nextCheckedKeys = checked
+      ? [...checkedKeys, value]
+      : checkedKeys.filter(item => item !== value);
+
+    this.setState({
+      checkedKeys: nextCheckedKeys
+    });
   }
   render() {
-    const { data } = this.state;
+    const { data, checkedKeys } = this.state;
+
+    let checked = false;
+    let indeterminate = false;
+
+    if (checkedKeys.length === data.length) {
+      checked = true;
+    } else if (checkedKeys.length === 0) {
+      checked = false;
+    } else if (checkedKeys.length > 0 && checkedKeys.length < data.length) {
+      indeterminate = true;
+    }
+
     return (
       <div>
         <Table height={420} data={data}>
+          <Column width={50} align="center">
+            <HeaderCell style={{ padding: 0 }}>
+              <div style={{ lineHeight: '40px' }}>
+                <Checkbox
+                  inline
+                  checked={checked}
+                  indeterminate={indeterminate}
+                  onChange={this.handleCheckAll}
+                />
+              </div>
+            </HeaderCell>
+            <CheckCell dataKey="id" checkedKeys={checkedKeys} onChange={this.handleCheck} />
+          </Column>
           <Column width={80}>
             <HeaderCell>Avartar</HeaderCell>
             <ImageCell dataKey="avartar" />
           </Column>
+
           <Column width={160}>
             <HeaderCell>First Name</HeaderCell>
             <NameCell dataKey="firstName" />

@@ -1,10 +1,10 @@
-### 默认
+### 没有标题
 
 <!--start-code-->
 
 ```js
 const instance = (
-  <Panel header={<h3>Panel title</h3>}>
+  <Panel bordered>
     <Paragraph size="short" />
   </Panel>
 );

@@ -4,7 +4,7 @@
 
 ```js
 const instance = (
-  <PanelGroup accordion>
+  <PanelGroup accordion bordered>
     <Panel header="Panel 1" defaultExpanded>
       <Paragraph size="short" />
     </Panel>

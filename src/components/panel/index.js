@@ -9,6 +9,7 @@ const context = require('./index.md');
 const examples = [
   require('./basic.md'),
   require('./bordered.md'),
+  require('./no-header.md'),
   require('./collapsible.md'),
   require('./body-fill.md'),
   require('./panel-group.md'),

@@ -6,7 +6,7 @@
 const instance = (
   <div>
     <Tag>Text</Tag>
-    <Tag closable>Text</Tag>
+    <Tag closable>Closable</Tag>
     <Tag>
       <a target="_blank" href="http://www.hypers.com">
         Link
