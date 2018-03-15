@@ -890,3 +890,24 @@ path.bg {
   color: #fff;
   padding: 10px;
 }
+
+// Flex grid box
+.code-view {
+  .@{ns}flex-box-gird {
+    background-color: @B050;
+
+    &-item {
+      margin: 8px 0;
+      color: white;
+      text-align: center;
+    }
+
+    &-item:nth-child(2n+1) {
+      background-color: @H500;
+    }
+
+    &-item:nth-child(2n) {
+      background-color: @H600;
+    }
+  }
+}
