@@ -11,7 +11,7 @@ const instance = (
     <Content>
       <FlexboxGird justify="center">
         <FlexboxGird.Item colspan={12}>
-          <Panel header={<h3>Panel title</h3>} bordered>
+          <Panel header={<h3>Login</h3>} bordered>
             <Form>
               <FormGroup>
                 <ControlLabel>Username</ControlLabel>
@@ -31,6 +31,7 @@ const instance = (
         </FlexboxGird.Item>
       </FlexboxGird>
     </Content>
+    <Footer>Footer</Footer>
   </Container>
 );
 ReactDOM.render(instance);

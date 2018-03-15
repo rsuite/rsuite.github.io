@@ -19,11 +19,17 @@ import {
   FormGroup,
   ControlLabel,
   FormControl,
-  ButtonToolbar
+  ButtonToolbar,
+  Navbar
 } from '../../rsuiteSource';
 
 const context = require('./index.md');
-const examples = [require('./basic.md'), require('./sidebar-page.md'), require('./login-page.md')];
+const examples = [
+  require('./basic.md'),
+  require('./sidebar-page.md'),
+  require('./navbar-page.md'),
+  require('./login-page.md')
+];
 
 export default () => {
   return (
@@ -47,7 +53,8 @@ export default () => {
         FormGroup,
         ControlLabel,
         FormControl,
-        ButtonToolbar
+        ButtonToolbar,
+        Navbar
       }}
       context={context}
       examples={examples}

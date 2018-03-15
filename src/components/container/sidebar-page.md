@@ -3,9 +3,19 @@
 <!--start-code-->
 
 ```js
+const headerStyles = {
+  padding: 20,
+  fontSize: 16,
+  background: '#34c3ff',
+  color: ' #fff'
+};
+
 const instance = (
   <Container>
     <Sidebar appearance="inverse" style={{ width: 250 }}>
+      <Sidenav.Header>
+        <div style={headerStyles}>Brand</div>
+      </Sidenav.Header>
       <Sidenav defaultOpenKeys={['3', '4']} defaultActiveKey="2">
         <Sidenav.Body>
           <Nav>
@@ -41,7 +51,6 @@ const instance = (
       </Header>
       <Content>Content</Content>
     </Container>
-
   </Container>
 );
 ReactDOM.render(instance);
