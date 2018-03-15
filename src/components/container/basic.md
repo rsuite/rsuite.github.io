@@ -4,7 +4,7 @@
 
 ```js
 const instance = (
-  <div>
+  <div className="show-container">
     <Container>
       <Header>Header</Header>
       <Content>Content</Content>

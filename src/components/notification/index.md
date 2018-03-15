@@ -2,11 +2,11 @@
 
 用于全局通知，悬浮在页面角落。
 
-- `Notification.open` 默认通知。
-- `Notification.info` 信息通知。
-- `Notification.success` 成功信息通知。
-- `Notification.warning` 警告信息通知。
-- `Notification.error` 错误信息通知。
+* `Notification.open` 默认通知。
+* `Notification.info` 信息通知。
+* `Notification.success` 成功信息通知。
+* `Notification.warning` 警告信息通知。
+* `Notification.error` 错误信息通知。
 
 ## 获取组件
 
@@ -19,7 +19,6 @@ import { Notification } from 'rsuite';
 <!--{demo}-->
 
 ## Props
-
 
 ```typescript
 type Config{
@@ -35,63 +34,59 @@ type Config{
 }
 ```
 
-
 ### `Notification.open`
 
 ```js
-Notification.open(config:Config)
+Notification.open((config: Config));
 ```
 
 ### `Notification.info`
 
 ```js
-Notification.info(config:Config)
+Notification.info((config: Config));
 ```
 
 ### `Notification.success`
 
 ```js
-Notification.success(config:Config)
+Notification.success((config: Config));
 ```
 
 ### `Notification.warning`
 
 ```js
-Notification.warning(config:Config)
+Notification.warning((config: Config));
 ```
-
 
 ### `Notification.error`
 
 ```js
-Notification.error(config:Config)
+Notification.error((config: Config));
 ```
 
-
 ### type Config
-| Name            | Type                                                  | Default    | Description                |
-|-----------------|-------------------------------------------------------|------------|----------------------------|
-| title（必选）       | string                                                |            | 标题                         |
-| description（必选） | React.ElementType                                     | 1.5        | 描述                         |
-| duration        | number                                                | 4.5        | 消息框持续时间                    |
-| placement       | enum:'topLeft','topRight','bottomLeft','bottomRight' | 'topRight' | 消息框的位置，共有四种位置              |
-| top             | number                                                | 24         | 消息框距离顶部的距离                 |
-| bottom          | number                                                | 24         | 消息框距离底部的距离                 |
-| onClose         | ()=>void                                              |            | 关闭回调函数                     |
-| style           | Object                                                |            | 自定义样式                      |
-| key             | string                                                |            | 消息框唯一标识，如果要手动移除消息框，必须填写该字段 |
 
+| Name        | Type                                                 | Default    | Description                                          |
+| ----------- | ---------------------------------------------------- | ---------- | ---------------------------------------------------- |
+| title       | string                                               |            | 标题                                                 |
+| description | React.ElementType                                    | 1.5        | 描述                                                 |
+| duration    | number                                               | 4.5        | 消息框持续时间                                       |
+| placement   | enum:'topLeft','topRight','bottomLeft','bottomRight' | 'topRight' | 消息框的位置，共有四种位置                           |
+| top         | number                                               | 24         | 消息框距离顶部的距离                                 |
+| bottom      | number                                               | 24         | 消息框距离底部的距离                                 |
+| onClose     | ()=>void                                             |            | 关闭回调函数                                         |
+| style       | Object                                               |            | 自定义样式                                           |
+| key         | string                                               |            | 消息框唯一标识，如果要手动移除消息框，必须填写该字段 |
 
 ### `Notification.remove`
 
 手动移除消息框
 
 ```js
-
 Notification.open({
-  title:'Title',
-  description:'Message',
-  key:'myNotification'
+  title: 'Title',
+  description: 'Message',
+  key: 'myNotification'
 });
 
 Notification.remove('myNotification');
