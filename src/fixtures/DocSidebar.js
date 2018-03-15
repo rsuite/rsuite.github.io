@@ -77,14 +77,16 @@ class DocSidebar extends React.Component {
     });
 
     return (
-      <Sidebar className="fixed">
-        <div className="title-wrapper">
-          {icon} {activeTitle}
-        </div>
-        <Nav className="nav-docs" vertical>
-          {nodeItems}
-        </Nav>
-      </Sidebar>
+      <div className="rs-sidebar-wrapper fixed">
+        <Sidebar>
+          <div className="title-wrapper">
+            {icon} {activeTitle}
+          </div>
+          <Nav className="nav-docs" vertical>
+            {nodeItems}
+          </Nav>
+        </Sidebar>
+      </div>
     );
   }
 }
