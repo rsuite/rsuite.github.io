@@ -6,27 +6,27 @@
 const instance = (
   <Grid fluid>
     <Row className="show-grid">
-      <Col md={12} mdPush={12}>
-        md={12} mdPush={12} `left`
+      <Col xs={12} xsPush={12}>
+        xs={12} xsPush={12} `left`
       </Col>
-      <Col md={12} mdPull={12}>
-        md={12} mdPull={12} `right`
-      </Col>
-    </Row>
-
-    <Row className="show-grid">
-      <Col md={6}>md={6} `left`</Col>
-      <Col md={6} mdPush={12}>
-        md={6} mdPush={12} `right`
+      <Col xs={12} xsPull={12}>
+        xs={12} xsPull={12} `right`
       </Col>
     </Row>
 
     <Row className="show-grid">
-      <Col md={6} mdPush={18}>
-        md={6} mdPush={18} `left`
+      <Col xs={6}>xs={6} `left`</Col>
+      <Col xs={6} xsPush={12}>
+        xs={6} xsPush={12} `right`
       </Col>
-      <Col md={6} mdPull={6}>
-        md={6} mdPull={6} `right`
+    </Row>
+
+    <Row className="show-grid">
+      <Col xs={6} xsPush={18}>
+        xs={6} xsPush={18} `left`
+      </Col>
+      <Col xs={6} xsPull={6}>
+        xs={6} xsPull={6} `right`
       </Col>
     </Row>
   </Grid>

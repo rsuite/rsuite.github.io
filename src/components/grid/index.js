@@ -5,6 +5,7 @@ import { Grid, Button, Icon, Row, Col } from '../../rsuiteSource';
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
+  require('./responsive.md'),
   require('./gutter.md'),
   require('./offset.md'),
   require('./pull-push.md'),

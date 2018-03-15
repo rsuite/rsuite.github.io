@@ -7,31 +7,31 @@ const instance = (
   <Grid fluid>
     <Row className="show-grid">
       <Col md={4} mdOffset={20}>
-        md={4} mdOffset={20}
+        xs={4} xsOffset={20}
       </Col>
     </Row>
 
     <Row className="show-grid">
-      <Col md={8} mdOffset={16}>
-        md={8} mdOffset={16}
+      <Col xs={8} xsOffset={16}>
+        xs={8} xsOffset={16}
       </Col>
     </Row>
 
     <Row className="show-grid">
-      <Col md={12} mdOffset={12}>
-        md={12} mdOffset={12}
+      <Col xs={12} xsOffset={12}>
+        xs={12} xsOffset={12}
       </Col>
     </Row>
 
     <Row className="show-grid">
-      <Col md={16} mdOffset={8}>
-        md={16} mdOffset={8}
+      <Col xs={16} xsOffset={8}>
+        xs={16} xsOffset={8}
       </Col>
     </Row>
 
     <Row className="show-grid">
-      <Col md={20} mdOffset={4}>
-        md={20} mdOffset={4}
+      <Col xs={20} xsOffset={4}>
+        xs={20} xsOffset={4}
       </Col>
     </Row>
   </Grid>

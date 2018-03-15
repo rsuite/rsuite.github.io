@@ -6,37 +6,38 @@
 const instance = (
   <Grid fluid>
     <Row className="show-grid">
-      <Col md={2}>md={2}</Col>
-      <Col md={2}>md={2}</Col>
-      <Col md={2}>md={2}</Col>
-      <Col md={2}>md={2}</Col>
-      <Col md={2}>md={2}</Col>
-      <Col md={2}>md={2}</Col>
-      <Col md={2}>md={2}</Col>
-      <Col md={2}>md={2}</Col>
-      <Col md={2}>md={2}</Col>
-      <Col md={2}>md={2}</Col>
-      <Col md={2}>md={2}</Col>
-      <Col md={2}>md={2}</Col>
-    </Row>
-    <Row className="show-grid">
-      <Col md={4}>md={4}</Col>
-      <Col md={4}>md={4}</Col>
-      <Col md={4}>md={4}</Col>
-      <Col md={4}>md={4}</Col>
-      <Col md={4}>md={4}</Col>
-      <Col md={4}>md={4}</Col>
+      <Col xs={2}>xs={2}</Col>
+      <Col xs={2}>xs={2}</Col>
+      <Col xs={2}>xs={2}</Col>
+      <Col xs={2}>xs={2}</Col>
+      <Col xs={2}>xs={2}</Col>
+      <Col xs={2}>xs={2}</Col>
+      <Col xs={2}>xs={2}</Col>
+      <Col xs={2}>xs={2}</Col>
+      <Col xs={2}>xs={2}</Col>
+      <Col xs={2}>xs={2}</Col>
+      <Col xs={2}>xs={2}</Col>
+      <Col xs={2}>xs={2}</Col>
     </Row>
 
     <Row className="show-grid">
-      <Col md={8}>md={8}</Col>
-      <Col md={8}>md={8}</Col>
-      <Col md={8}>md={8}</Col>
+      <Col xs={4}>xs={4}</Col>
+      <Col xs={4}>xs={4}</Col>
+      <Col xs={4}>xs={4}</Col>
+      <Col xs={4}>xs={4}</Col>
+      <Col xs={4}>xs={4}</Col>
+      <Col xs={4}>xs={4}</Col>
     </Row>
 
     <Row className="show-grid">
-      <Col md={12}>md={12}</Col>
-      <Col md={12}>md={12}</Col>
+      <Col xs={8}>xs={8}</Col>
+      <Col xs={8}>xs={8}</Col>
+      <Col xs={8}>xs={8}</Col>
+    </Row>
+
+    <Row className="show-grid">
+      <Col xs={12}>xs={12}</Col>
+      <Col xs={12}>xs={12}</Col>
     </Row>
   </Grid>
 );

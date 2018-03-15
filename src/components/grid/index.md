@@ -1,4 +1,4 @@
-# Grid 网格 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/grid/index.md)
+# Grid 栅格 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/grid/index.md)
 
 一组用于网格布局的组件。
 

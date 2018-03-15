@@ -6,11 +6,11 @@
 const instance = (
   <Grid fluid>
     <Row className="show-grid">
-      <Col mdHidden md={12}>
-        mdHidden md={12}
+      <Col xsHidden xs={12}>
+        xsHidden xs={12}
       </Col>
-      <Col xs={12} md={12}>
-        xs={12} md={12}
+      <Col xs={12} xs={12}>
+        xs={12} xs={12}
       </Col>
     </Row>
   </Grid>

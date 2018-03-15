@@ -219,14 +219,13 @@
 }
 
 .show-grid {
-  margin: 6px 0;
-
   [class*='@{ns}col-'] {
     padding: 10px 5px;
     color: @B000;
     background-color: @H500;
-    border: 1px dashed @H600;
-
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 6px;
     [class*='@{ns}col-'] {
       background-color: @H600;
 
@@ -234,6 +233,10 @@
         background-color: @H700;
       }
     }
+  }
+
+  [class*='@{ns}col-']:nth-child(2n) {
+    opacity: 0.8;
   }
 }
 
