@@ -4,53 +4,57 @@
 
 ```js
 const instance = (
-  <div>
-    <FlexboxGird align="top">
-      <FlexboxGird.Item colspan={4}>
-        <div style={{ height: 40 }}>colspan={4}</div>
-      </FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4}>
-        <div style={{ height: 60 }}>colspan={4}</div>
-      </FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4}>
-        <div style={{ height: 80 }}>colspan={4}</div>
-      </FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4}>
-        <div style={{ height: 100 }}>colspan={4}</div>
-      </FlexboxGird.Item>
-    </FlexboxGird>
+  <div className="show-grid">
     <Divider />
 
-    <FlexboxGird align="middle">
+    <FlexboxGird align="top" justify="space-around">
       <FlexboxGird.Item colspan={4}>
-        <div style={{ height: 40 }}>colspan={4}</div>
+        <div style={{ lineHeight: 1 }}>colspan={4}</div>
       </FlexboxGird.Item>
       <FlexboxGird.Item colspan={4}>
-        <div style={{ height: 60 }}>colspan={4}</div>
+        <div style={{ lineHeight: 2 }}>colspan={4}</div>
       </FlexboxGird.Item>
       <FlexboxGird.Item colspan={4}>
-        <div style={{ height: 80 }}>colspan={4}</div>
+        <div style={{ lineHeight: 3 }}>colspan={4}</div>
       </FlexboxGird.Item>
       <FlexboxGird.Item colspan={4}>
-        <div style={{ height: 100 }}>colspan={4}</div>
-      </FlexboxGird.Item>
-    </FlexboxGird>
-    <Divider />
-    <FlexboxGird align="bottom">
-      <FlexboxGird.Item colspan={4}>
-        <div style={{ height: 40 }}>colspan={4}</div>
-      </FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4}>
-        <div style={{ height: 60 }}>colspan={4}</div>
-      </FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4}>
-        <div style={{ height: 80 }}>colspan={4}</div>
-      </FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4}>
-        <div style={{ height: 100 }}>colspan={4}</div>
+        <div style={{ lineHeight: 4 }}>colspan={4}</div>
       </FlexboxGird.Item>
     </FlexboxGird>
+
     <Divider />
+
+    <FlexboxGird align="middle" justify="space-around">
+      <FlexboxGird.Item colspan={4}>
+        <div style={{ lineHeight: 1 }}>colspan={4}</div>
+      </FlexboxGird.Item>
+      <FlexboxGird.Item colspan={4}>
+        <div style={{ lineHeight: 2 }}>colspan={4}</div>
+      </FlexboxGird.Item>
+      <FlexboxGird.Item colspan={4}>
+        <div style={{ lineHeight: 3 }}>colspan={4}</div>
+      </FlexboxGird.Item>
+      <FlexboxGird.Item colspan={4}>
+        <div style={{ lineHeight: 4 }}>colspan={4}</div>
+      </FlexboxGird.Item>
+    </FlexboxGird>
+
+    <Divider />
+
+    <FlexboxGird align="bottom" justify="space-around">
+      <FlexboxGird.Item colspan={4}>
+        <div style={{ lineHeight: 1 }}>colspan={4}</div>
+      </FlexboxGird.Item>
+      <FlexboxGird.Item colspan={4}>
+        <div style={{ lineHeight: 2 }}>colspan={4}</div>
+      </FlexboxGird.Item>
+      <FlexboxGird.Item colspan={4}>
+        <div style={{ lineHeight: 3 }}>colspan={4}</div>
+      </FlexboxGird.Item>
+      <FlexboxGird.Item colspan={4}>
+        <div style={{ lineHeight: 4 }}>colspan={4}</div>
+      </FlexboxGird.Item>
+    </FlexboxGird>
   </div>
 );
 ReactDOM.render(instance);

@@ -4,12 +4,14 @@
 
 ```js
 const instance = (
-  <FlexboxGird>
-    <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-    <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-    <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-    <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-  </FlexboxGird>
+  <div className="show-grid">
+    <FlexboxGird>
+      <FlexboxGird.Item colspan={6}>colspan={6}</FlexboxGird.Item>
+      <FlexboxGird.Item colspan={6}>colspan={6}</FlexboxGird.Item>
+      <FlexboxGird.Item colspan={6}>colspan={6}</FlexboxGird.Item>
+      <FlexboxGird.Item colspan={6}>colspan={6}</FlexboxGird.Item>
+    </FlexboxGird>
+  </div>
 );
 ReactDOM.render(instance);
 ```

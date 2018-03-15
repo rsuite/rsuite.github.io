@@ -1,6 +1,6 @@
 # Grid 栅格 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/grid/index.md)
 
-一组用于网格布局的组件。
+栅格布局的组件，提供 24 栅格， 参照 [Bootstrap](https://getbootstrap.com/docs/3.3/css/) 的响应式设计。
 
 包含下面组件：
 

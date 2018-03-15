@@ -325,14 +325,20 @@ export default [
       {
         id: 'grid',
         name: 'Grid',
-        title: '网格',
-        components: ['Grid', 'Grid.Row', 'Grid.Col']
+        title: '栅格',
+        components: ['Grid', 'Row', 'Col']
       },
       {
         id: 'flexbox-grid',
         name: 'FlexboxGird',
-        title: '弹性网格',
+        title: '弹性栅格',
         components: ['FlexboxGird', 'FlexboxGird.Item']
+      },
+      {
+        id: 'container',
+        name: 'Container',
+        title: '容器布局',
+        components: ['Container', 'Header', 'Footer', 'Content', 'Sidebar']
       },
       {
         group: true,

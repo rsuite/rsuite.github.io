@@ -4,7 +4,7 @@
 
 ```js
 const instance = (
-  <div>
+  <div className="show-grid">
     <FlexboxGird justify="start">
       <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
       <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
