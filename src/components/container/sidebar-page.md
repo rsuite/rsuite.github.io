@@ -66,7 +66,7 @@ class Page extends React.Component {
     return (
       <div className="show-fake-browser sidebar-page">
         <Container>
-          <Sidebar width={expand ? 260 : 56} collapsible>
+          <Sidebar style={{  display: 'flex',flexDirection: 'column'}}  width={expand ? 260 : 56} collapsible>
             <Sidenav.Header>
               <div style={headerStyles}>
                 <Icon icon="logo-analytics" size="lg" style={{ verticalAlign: 0 }} />
@@ -95,6 +95,7 @@ class Page extends React.Component {
                   >
                     <Dropdown.Item eventKey="3-1">Geo</Dropdown.Item>
                     <Dropdown.Item eventKey="3-2">Devices</Dropdown.Item>
+                    <Dropdown.Item eventKey="3-2">Brand</Dropdown.Item>
                     <Dropdown.Item eventKey="3-3">Loyalty</Dropdown.Item>
                     <Dropdown.Item eventKey="3-4">Visit Depth</Dropdown.Item>
                   </Dropdown>
@@ -105,8 +106,10 @@ class Page extends React.Component {
                     icon={<Icon icon="gears" />}
                   >
                     <Dropdown.Item eventKey="4-1">Applications</Dropdown.Item>
-                    <Dropdown.Item eventKey="4-2">Channels</Dropdown.Item>
-                    <Dropdown.Item eventKey="4-3">Versions</Dropdown.Item>
+                    <Dropdown.Item eventKey="4-2">Websites</Dropdown.Item>
+                    <Dropdown.Item eventKey="4-3">Channels</Dropdown.Item>
+                    <Dropdown.Item eventKey="4-4">Tags</Dropdown.Item>
+                    <Dropdown.Item eventKey="4-5">Versions</Dropdown.Item>
                   </Dropdown>
                 </Nav>
               </Sidenav.Body>
