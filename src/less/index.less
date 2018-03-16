@@ -135,8 +135,14 @@
     &.active {
       color: @H500;
     }
+
     &:focus {
-      background: @H600;
+      color: @H400;
+    }
+
+    &:hover:focus {
+      color: @H600;
+      background: transparent;
     }
   }
   &-menu {
@@ -723,6 +729,9 @@ path.bg {
         background: #42464e !important;
       }
     }
+    .rs-nav-item-content:focus {
+      background: #42464e !important;
+    }
     .@{ns}nav-item-active a {
       color: @H500;
     }
@@ -837,28 +846,6 @@ path.bg {
   margin-left: 10px;
 }
 
-.rs-divider {
-  display: block;
-  height: 1px;
-  width: 100%;
-  margin: 24px 0;
-  &-inner-text {
-    display: inline-block;
-    padding: 0 24px;
-  }
-}
-
-.rs-divider.rs-divider-vertical {
-  background: #ddd;
-  margin: 0 8px;
-  display: inline-block;
-  height: 0.9em;
-  width: 1px;
-  vertical-align: middle;
-  position: relative;
-  top: -0.06em;
-}
-
 .show-col {
   background: @H500;
   color: #fff;
@@ -883,7 +870,7 @@ path.bg {
   }
 
   [class*='@{ns}col-']:nth-child(2n) {
-    opacity: 0.8;
+    background-color: fade(@H500, 80);
   }
 }
 
