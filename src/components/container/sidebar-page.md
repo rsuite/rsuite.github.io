@@ -13,7 +13,7 @@ const headerStyles = {
 
 const NavToggle = ({ expand, onChange }) => {
   return (
-    <Navbar appearance="subtle" style={{ borderTop: '1px solid #eee' }} className="nav-toggle">
+    <Navbar appearance="subtle" className="nav-toggle">
       <Navbar.Body>
         {expand ? (
           <Nav>
@@ -58,7 +58,7 @@ class Page extends React.Component {
     return (
       <div className="show-fake-browser sidebar-page">
         <Container>
-          <Sidebar width={expand ? 260 : 56}>
+          <Sidebar width={expand ? 260 : 50} collapsible>
             <Sidenav.Header>
               <div style={headerStyles} />
             </Sidenav.Header>
@@ -86,10 +86,6 @@ class Page extends React.Component {
                     <Dropdown.Item eventKey="4-1">Applications</Dropdown.Item>
                     <Dropdown.Item eventKey="4-2">Channels</Dropdown.Item>
                     <Dropdown.Item eventKey="4-3">Versions</Dropdown.Item>
-                    <Dropdown.Menu eventKey="4-5" title="Custom Action">
-                      <Dropdown.Item eventKey="4-5-1">Action Name</Dropdown.Item>
-                      <Dropdown.Item eventKey="4-5-2">Action Params</Dropdown.Item>
-                    </Dropdown.Menu>
                   </Dropdown>
                 </Nav>
               </Sidenav.Body>
