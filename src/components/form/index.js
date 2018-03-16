@@ -35,6 +35,7 @@ import {
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
+  require('./fluid.md'),
   require('./horizontal.md'),
   require('./inline.md'),
   require('./modal-layout.md'),
