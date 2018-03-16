@@ -79,7 +79,7 @@ class Page extends React.Component {
             </Sidenav.Header>
             <Sidenav
               expanded={expand}
-              defaultOpenKeys={['3', '4']}
+              defaultOpenKeys={['3']}
               defaultActiveKey="2"
               appearance="subtle"
             >

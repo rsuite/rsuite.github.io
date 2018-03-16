@@ -1,10 +1,11 @@
 ### 默认
 
 <!--start-code-->
+
 ```js
 const instance = (
-  <div style={{height:100}}>
-    <Popover title="Title" style={{opacity:1}}>
+  <div style={{ height: 100 }}>
+    <Popover title="Title">
       <p>This is a defalut Popover </p>
       <p>Content</p>
     </Popover>
@@ -12,4 +13,5 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+
 <!--end-code-->
