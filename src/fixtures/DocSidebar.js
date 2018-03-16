@@ -67,12 +67,19 @@ class DocSidebar extends React.Component {
           return;
         }
 
-        const nav = (
-          <Nav.Item key={child.id} componentClass={Link} to={pathname} active={active}>
-            {child.name} <span className="title-zh">{child.title}</span>
-          </Nav.Item>
-        );
-        nodeItems.push(nav);
+        if (child.target === '_blank' && child.url) {
+          nodeItems.push(
+            <Nav.Item key={child.id} href={child.url} target="_blank">
+              {child.name} <span className="title-zh">{child.title}</span>
+            </Nav.Item>
+          );
+        } else {
+          nodeItems.push(
+            <Nav.Item key={child.id} componentClass={Link} to={pathname} active={active}>
+              {child.name} <span className="title-zh">{child.title}</span>
+            </Nav.Item>
+          );
+        }
       });
     });
 

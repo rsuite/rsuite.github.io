@@ -25,20 +25,14 @@ export default [
         name: '定制主题'
       },
       {
-        id: 'example-projects',
-        name: '示例项目'
-      },
-      {
         id: 'intl',
         name: '国际化'
       },
       {
-        id: 'supported-platforms',
-        name: '支持平台'
-      },
-      {
         id: 'logs',
-        name: '更新日志'
+        name: '更新日志',
+        target: '_blank',
+        url: 'https://github.com/rsuite/rsuite/releases'
       }
     ]
   },

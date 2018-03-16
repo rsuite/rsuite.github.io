@@ -9,7 +9,7 @@ class Page extends React.Component {
       <Content>
         <Row>
           <Col md={24}>
-            <MarkdownView>{require('./introduction.md')}</MarkdownView>
+            <MarkdownView>{require('./index.md')}</MarkdownView>
           </Col>
         </Row>
       </Content>
