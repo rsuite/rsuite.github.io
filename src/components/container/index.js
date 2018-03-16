@@ -1,5 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
+import Logo from '../../fixtures/Logo';
 import {
   Container,
   Header,
@@ -11,6 +12,7 @@ import {
   Sidenav,
   Nav,
   Icon,
+  IconButton,
   Toggle,
   Dropdown,
   FlexboxGird,
@@ -35,8 +37,10 @@ export default () => {
   return (
     <ComponentExample
       dependencies={{
+        Logo,
         Divider,
         Icon,
+        IconButton,
         Button,
         Container,
         Header,
