@@ -9,9 +9,7 @@ const instance = (
       <Header>
         <Navbar appearance="inverse">
           <Navbar.Header>
-            <a href="#" className="navbar-brand logo">
-              Brand
-            </a>
+            <a className="navbar-brand logo">BRAND</a>
           </Navbar.Header>
           <Navbar.Body>
             <Nav>
