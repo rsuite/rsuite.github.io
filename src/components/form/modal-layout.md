@@ -26,7 +26,7 @@ class ModalDemo extends React.Component {
             <Modal.Title>New User</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Form>
+            <Form fluid>
               <FormGroup>
                 <ControlLabel>Username</ControlLabel>
                 <FormControl name="name" />

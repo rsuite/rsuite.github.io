@@ -1,5 +1,7 @@
 ### 100% 宽度
 
+`fluid` 属性可以让表单中的 Input 100% 撑满容器，只在垂直布局中有效。
+
 <!--start-code-->
 
 ```js
@@ -13,7 +15,7 @@ const instance = (
     <FormGroup>
       <ControlLabel>Email</ControlLabel>
       <FormControl name="email" type="email" />
-      <HelpBlock tooltip>Required</HelpBlock>
+      <HelpBlock>Required</HelpBlock>
     </FormGroup>
     <FormGroup>
       <ControlLabel>Password</ControlLabel>

@@ -10,7 +10,7 @@ const headerStyles = {
   background: '#34c3ff',
   color: ' #fff',
   whiteSpace: 'nowrap',
-  overflow: 'hidden',
+  overflow: 'hidden'
 };
 
 const iconStyles = {
@@ -24,21 +24,19 @@ const NavToggle = ({ expand, onChange }) => {
   return (
     <Navbar appearance="subtle" className="nav-toggle">
       <Navbar.Body>
-        {expand ? (
-          <Nav>
-            <Dropdown
-              placement="topLeft"
-              trigger="click"
-              renderTitle={children => {
-                return <Icon style={iconStyles} icon="cog" />;
-              }}
-            >
-              <Dropdown.Item>Help</Dropdown.Item>
-              <Dropdown.Item>Settings</Dropdown.Item>
-              <Dropdown.Item>Sign out</Dropdown.Item>
-            </Dropdown>
-          </Nav>
-        ) : null}
+        <Nav>
+          <Dropdown
+            placement="topLeft"
+            trigger="click"
+            renderTitle={children => {
+              return <Icon style={iconStyles} icon="cog" />;
+            }}
+          >
+            <Dropdown.Item>Help</Dropdown.Item>
+            <Dropdown.Item>Settings</Dropdown.Item>
+            <Dropdown.Item>Sign out</Dropdown.Item>
+          </Dropdown>
+        </Nav>
 
         <Nav pullRight>
           <Nav.Item onClick={onChange} style={{ width: 56, textAlign: 'center' }}>
