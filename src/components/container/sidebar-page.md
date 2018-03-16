@@ -18,6 +18,7 @@ const NavToggle = ({ expand, onChange }) => {
         {expand ? (
           <Nav>
             <Dropdown
+              placement="rightTop"
               renderTitle={children => {
                 return <Icon icon="cog" />;
               }}
