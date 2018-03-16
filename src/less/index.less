@@ -135,8 +135,14 @@
     &.active {
       color: @H500;
     }
+
     &:focus {
-      background: @H600;
+      color: @H400;
+    }
+
+    &:hover:focus {
+      color: @H600;
+      background: transparent;
     }
   }
   &-menu {
@@ -723,6 +729,9 @@ path.bg {
         background: #42464e !important;
       }
     }
+    .rs-nav-item-content:focus {
+      background: #42464e !important;
+    }
     .@{ns}nav-item-active a {
       color: @H500;
     }
@@ -861,7 +870,7 @@ path.bg {
   }
 
   [class*='@{ns}col-']:nth-child(2n) {
-    opacity: 0.8;
+    background-color: fade(@H500, 80);
   }
 }
 
