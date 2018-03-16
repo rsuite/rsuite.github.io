@@ -9,7 +9,8 @@ const headerStyles = {
   height: 56,
   background: '#34c3ff',
   color: ' #fff',
-  whiteSpace: 'nowrap'
+  whiteSpace: 'nowrap',
+  overflow: 'hidden',
 };
 
 const iconStyles = {
