@@ -98,8 +98,8 @@ class Page extends React.Component {
                     <Dropdown.Item eventKey="4-1">Applications</Dropdown.Item>
                     <Dropdown.Item eventKey="4-2">Websites</Dropdown.Item>
                     <Dropdown.Item eventKey="4-3">Channels</Dropdown.Item>
-                    <Dropdown.Item eventKey="4-3">Tags</Dropdown.Item>
-                    <Dropdown.Item eventKey="4-4">Versions</Dropdown.Item>
+                    <Dropdown.Item eventKey="4-4">Tags</Dropdown.Item>
+                    <Dropdown.Item eventKey="4-5">Versions</Dropdown.Item>
                   </Dropdown>
                 </Nav>
               </Sidenav.Body>
