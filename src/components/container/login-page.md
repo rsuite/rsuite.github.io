@@ -17,7 +17,7 @@ const instance = (
         <FlexboxGird justify="center">
           <FlexboxGird.Item colspan={12}>
             <Panel header={<h3>Login</h3>} bordered>
-              <Form>
+              <Form fluid>
                 <FormGroup>
                   <ControlLabel>Username or email address</ControlLabel>
                   <FormControl name="name" />
