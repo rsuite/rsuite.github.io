@@ -66,7 +66,11 @@ class Page extends React.Component {
     return (
       <div className="show-fake-browser sidebar-page">
         <Container>
-          <Sidebar style={{  display: 'flex',flexDirection: 'column'}}  width={expand ? 260 : 56} collapsible>
+          <Sidebar
+            style={{ display: 'flex', flexDirection: 'column' }}
+            width={expand ? 260 : 56}
+            collapsible
+          >
             <Sidenav.Header>
               <div style={headerStyles}>
                 <Icon icon="logo-analytics" size="lg" style={{ verticalAlign: 0 }} />

@@ -119,6 +119,13 @@ export default [
         components: ['Drawer', 'Drawer.Header', 'Drawer.Body', 'Drawer.Footer']
       },
       {
+        id: 'divider',
+        name: 'Divider',
+        title: '分割线',
+        components: ['Divider']
+      },
+
+      {
         group: true,
         id: 'navigation',
         name: 'Navigation',
