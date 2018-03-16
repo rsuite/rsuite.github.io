@@ -4,11 +4,19 @@
 
 ```js
 const headerStyles = {
-  padding: 20,
+  padding: 18,
   fontSize: 16,
-  height: 62,
+  height: 56,
   background: '#34c3ff',
-  color: ' #fff'
+  color: ' #fff',
+  whiteSpace: 'nowrap'
+};
+
+const iconStyles = {
+  width: 56,
+  height: 56,
+  lineHeight: '56px',
+  textAlign: 'center'
 };
 
 const NavToggle = ({ expand, onChange }) => {
@@ -18,9 +26,10 @@ const NavToggle = ({ expand, onChange }) => {
         {expand ? (
           <Nav>
             <Dropdown
-              placement="rightTop"
+              placement="topLeft"
+              trigger="click"
               renderTitle={children => {
-                return <Icon icon="cog" />;
+                return <Icon style={iconStyles} icon="cog" />;
               }}
             >
               <Dropdown.Item>Help</Dropdown.Item>
@@ -31,8 +40,8 @@ const NavToggle = ({ expand, onChange }) => {
         ) : null}
 
         <Nav pullRight>
-          <Nav.Item onClick={onChange}>
-            <Icon icon="angle-left" />
+          <Nav.Item onClick={onChange} style={{ width: 56, textAlign: 'center' }}>
+            <Icon icon={expand ? 'angle-left' : 'angle-right'} />
           </Nav.Item>
         </Nav>
       </Navbar.Body>
@@ -58,9 +67,12 @@ class Page extends React.Component {
     return (
       <div className="show-fake-browser sidebar-page">
         <Container>
-          <Sidebar width={expand ? 260 : 50} collapsible>
+          <Sidebar width={expand ? 260 : 56} collapsible>
             <Sidenav.Header>
-              <div style={headerStyles} />
+              <div style={headerStyles}>
+                <Icon icon="logo-analytics" size="lg" style={{ verticalAlign: 0 }} />
+                <span style={{ marginLeft: 12 }}> BRAND</span>
+              </div>
             </Sidenav.Header>
             <Sidenav
               expanded={expand}
