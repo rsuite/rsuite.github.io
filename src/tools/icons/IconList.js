@@ -17,7 +17,7 @@ const parseIconByCategory = (obj, conf) => {
   return obj;
 };
 
-const NoneDom = () => <div className="col-md-24">无</div>;
+const NoneDom = () => <div className="rs-col-md-24">无</div>;
 
 class IconList extends React.Component {
   constructor(props) {
@@ -55,7 +55,7 @@ class IconList extends React.Component {
     return Object.keys(icons).sort((a, b) => a.localeCompare(b)).map((category, i) => {
       return (
         <div key={i}>
-          <h4 className="col-md-24">{category}</h4>
+          <h4 className="rs-col-md-24">{category}</h4>
           {
             icons[category].map((iconConf, j) => {
               const { id: icon } = iconConf;
