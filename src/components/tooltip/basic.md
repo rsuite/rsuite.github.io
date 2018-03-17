@@ -4,7 +4,7 @@
 
 ```js
 const instance = (
-  <Tooltip>
+  <Tooltip visible>
     This is a <i>tooltip</i> .
   </Tooltip>
 );

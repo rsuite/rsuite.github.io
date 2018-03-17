@@ -866,6 +866,14 @@ path.bg {
       [class*='@{ns}col-'] {
         background-color: @H700;
       }
+
+      [class*='@{ns}col-']:nth-child(2n) {
+        background-color: fade(@H700, 90);
+      }
+    }
+
+    [class*='@{ns}col-']:nth-child(2n) {
+      background-color: fade(@H600, 90);
     }
   }
 

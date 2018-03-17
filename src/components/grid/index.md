@@ -18,20 +18,20 @@
 
 | 属性名称       | 类型`(默认值)`              | 描述                                     |
 | -------------- | --------------------------- | ---------------------------------------- |
-| componentClass | React.ElementType `('div')` | 可以渲染 string 或者 function 的元素类型 |
+| componentClass | React.ElementType `('div')` | 为组件自定义元素类型 |
 | fluid          | boolean                     | 流体布局， （100% 宽度）                 |
 
 ### `<Row>`
 
 | 属性名称       | 类型`(默认值)`              | 描述                                     |
 | -------------- | --------------------------- | ---------------------------------------- |
-| componentClass | React.ElementType `('div')` | 可以渲染 string 或者 function 的元素类型 |
+| componentClass | React.ElementType `('div')` | 为组件自定义元素类型 |
 
 ### `<Col>`
 
 | 属性名称       | 类型`(默认值)`              | 描述                                     |
 | -------------- | --------------------------- | ---------------------------------------- |
-| componentClass | React.ElementType `('div')` | 可以渲染 string 或者 function 的元素类型 |
+| componentClass | React.ElementType `('div')` | 为组件自定义元素类型 |
 | xs             | number                      | < `480px` 响应式栅格                     |
 | sm             | number                      | ≥ `480px` 响应式栅格                     |
 | md             | number                      | ≥ `992px` 响应式栅格                     |

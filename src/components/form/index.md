@@ -38,10 +38,10 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 
 ---
 
-> APIs
+> methods
 
-* check(callback: (formError: Object) => void) => void
-* cleanErrors(callback: () => void) => void
+* check(callback: (formError: Object) => void) => void 检验表单数据
+* cleanErrors(callback: () => void) => void 清除错误信息
 
 ### `<FormControl>`
 

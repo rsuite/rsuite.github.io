@@ -40,7 +40,7 @@ import {
 | appearance     | enum: 'default', 'primary', 'link', 'subtle', 'ghost'<br/> `('default')` | 设置外观                                 |
 | color          | enum: 'red', 'orange','yellow', 'green', <br/>'cyan', 'blue', 'violet'   | 设置颜色                                 |
 | classPrefix    | string `('btn')`                                                         | className 前缀                           |
-| componentClass | React.ElementType `('button')`                                           | 可以渲染 string 或者 function 的元素类型 |
+| componentClass | React.ElementType `('button')`                                           | 为组件自定义元素类型 |
 | href           | string                                                                   | 按钮跳转链接                             |
 
 

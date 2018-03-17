@@ -24,4 +24,4 @@
 | 属性名称       | 类型 `(默认值)`            | 描述                                    |
 | -------------- | -------------------------- |
 | active         | boolean                    | 激活状态                                |
-| componentClass | React.ElementType `('ol')` | 可以渲染 string 或者 function 的元素类型 |
+| componentClass | React.ElementType `('ol')` | 为组件自定义元素类型 |
