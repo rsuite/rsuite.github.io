@@ -7,9 +7,9 @@ class Banner extends React.Component {
       <div id="banner" className="banner">
         {children}
         <div className="starry-warpper">
-          <div className='stars'></div>
-          <div className='stars2'></div>
-          <div className='stars3'></div>
+          <div className="stars" />
+          <div className="stars2" />
+          <div className="stars3" />
         </div>
       </div>
     );

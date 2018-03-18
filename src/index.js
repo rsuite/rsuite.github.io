@@ -11,9 +11,6 @@ import {
 
 // style
 import './less/index.less';
-
-require('./hypers-hire');
-
 import App from './App';
 import Frame from './fixtures/Frame';
 import Home from './Home';
@@ -22,6 +19,7 @@ import ready from './ready';
 import menu from './fixtures/menu';
 
 const routes = [];
+
 menu.forEach(item => {
   const children = [];
   item.children.forEach(child => {
@@ -30,15 +28,11 @@ menu.forEach(item => {
         <Route
           key={child.id}
           path={child.id}
-          getComponent={(location, cb) => {
+          getComponents={(location, cb) => {
             let name = location.params.name;
-            require.ensure(
-              [],
-              require => {
-                cb(null, require(`./${item.id}/${child.id}`));
-              },
-              'context'
-            );
+            require.ensure([], require => {
+              cb(null, require(`./${item.id}/${child.id}`));
+            });
           }}
         />
       );
@@ -49,7 +43,6 @@ menu.forEach(item => {
       {children}
     </Route>
   );
-
   routes.push(route);
 });
 

@@ -5,9 +5,8 @@
 ```js
 const instance = (
   <div className="show-grid">
-    <Divider />
-
-    <FlexboxGird align="top" >
+    <Divider>align="top"</Divider>
+    <FlexboxGird align="top">
       <FlexboxGird.Item colspan={6}>
         <div style={{ lineHeight: 1 }}>colspan={6}</div>
       </FlexboxGird.Item>
@@ -22,9 +21,8 @@ const instance = (
       </FlexboxGird.Item>
     </FlexboxGird>
 
-    <Divider />
-
-    <FlexboxGird align="middle" >
+    <Divider>align="middle"</Divider>
+    <FlexboxGird align="middle">
       <FlexboxGird.Item colspan={6}>
         <div style={{ lineHeight: 1 }}>colspan={6}</div>
       </FlexboxGird.Item>
@@ -39,9 +37,8 @@ const instance = (
       </FlexboxGird.Item>
     </FlexboxGird>
 
-    <Divider />
-
-    <FlexboxGird align="bottom" >
+    <Divider>align="bottom"</Divider>
+    <FlexboxGird align="bottom">
       <FlexboxGird.Item colspan={6}>
         <div style={{ lineHeight: 1 }}>colspan={6}</div>
       </FlexboxGird.Item>

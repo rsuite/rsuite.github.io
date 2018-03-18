@@ -5,94 +5,47 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const markdownRenderer = require('react-markdown-reader').renderer;
-const CSSSplitWebpackPlugin = require('css-split-webpack-plugin').default;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const iconPath = ['./node_modules/rsuite-theme', '../rsuite-theme'].map(relativePath =>
   path.resolve(__dirname, relativePath)
 );
 
 const { NODE_ENV, STYLE_DEBUG, IE_DEBUG } = process.env;
+const __DEV__ = NODE_ENV === 'development';
+const __PRO__ = NODE_ENV === 'production';
+
 const extractLess = new ExtractTextPlugin({
   filename: '[contenthash].css',
   // 当 DEBUG ie 时 需要启用 ExtractTextPlugin 用于分割 css
-  disable: NODE_ENV === 'development' && !IE_DEBUG
+  disable: __DEV__ && !IE_DEBUG
 });
-const plugins = [
-  new webpack.HotModuleReplacementPlugin(),
-  new webpack.NamedModulesPlugin(),
-  new webpack.DefinePlugin({
-    'process.env.NODE_ENV': JSON.stringify(NODE_ENV)
-  }),
-  extractLess,
-  // [IE9 最大 css 选择器数为 4095]{@link https://support.microsoft.com/zh-cn/help/262161/a-webpage-that-uses-css-styles-does-not-render-correctly-in-internet-e}
-  new CSSSplitWebpackPlugin({ size: 4000 }),
-  new webpack.optimize.ModuleConcatenationPlugin(),
-  new HtmlwebpackPlugin({
-    title: 'RSUITE | 一套 React 的 UI 组件库',
-    filename: (NODE_ENV === 'development' ? '' : '../') + 'index.html',
-    template: 'src/index.html',
-    inject: true,
-    hash: true
-  })
-];
-const publicPath = NODE_ENV === 'development' ? '/' : '/assets/';
-
-if (NODE_ENV === 'development') {
-  plugins.push(
-    new webpack.DllReferencePlugin({
-      context: path.resolve(__dirname, 'src/'),
-      manifest: require('./dist/vendor-manifest.json')
-    })
-  );
-}
-
-if (NODE_ENV === 'production') {
-  plugins.push(new webpack.optimize.UglifyJsPlugin());
-  plugins.push(new webpack.BannerPlugin(`Last update: ${new Date().toString()}`));
-  plugins.push(
-    new webpack.optimize.CommonsChunkPlugin({
-      names: 'vendor',
-      filename: 'vendor.js'
-    })
-  );
-  plugins.push(
-    new CompressionPlugin({
-      asset: '[path].gz[query]',
-      algorithm: 'gzip',
-      test: /\.(js|html)$/,
-      threshold: 10240,
-      minRatio: 0.8
-    })
-  );
-}
 
 const getStyleLoader = () => {
   const sourceMap = STYLE_DEBUG === 'SOURCE' ? '?sourceMap' : '';
   const loaders = ['css-loader', 'postcss-loader', 'less-loader'];
   const filterLoader = loader =>
-    STYLE_DEBUG === 'STYLE' || NODE_ENV === 'production' ? true : loader !== 'postcss-loader';
+    STYLE_DEBUG === 'STYLE' || __PRO__ ? true : loader !== 'postcss-loader';
+
   return loaders.filter(filterLoader).map(loader => ({
     loader: `${loader}${sourceMap}`
   }));
 };
 
-const common = {
-  entry: {
-    app: ['babel-polyfill', path.resolve(__dirname, 'src/index')],
-    vendor: ['react', 'react-dom']
-  },
-  devtool: 'cheap-module-eval-source-map',
+module.exports = {
   devServer: {
-    hot: true,
+    contentBase: path.join(__dirname, '/dist'),
+    compress: true,
     disableHostCheck: true,
     historyApiFallback: true,
-    publicPath: '/'
+    hot: true,
+    port: 3200
   },
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'assets'),
-    filename: '[name].[hash].js',
-    chunkFilename: '[name].[hash].js',
-    publicPath
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -140,7 +93,7 @@ const common = {
             loader: 'url-loader',
             options: {
               limit: 8192,
-              publicPath
+              publicPath: '/'
             }
           }
         ]
@@ -157,7 +110,7 @@ const common = {
               hash: 'sha512',
               digest: 'hex',
               name: 'resources/[hash].[ext]',
-              publicPath: NODE_ENV === 'development' ? '/' : './'
+              publicPath: '/'
             }
           }
         ]
@@ -176,23 +129,14 @@ const common = {
       }
     ]
   },
-  plugins: plugins
-};
-
-module.exports = () => {
-  if (NODE_ENV === 'development') {
-    return Object.assign({}, common, {
-      entry: [
-        // https://github.com/facebook/react/issues/8379#issuecomment-264934168
-        'babel-polyfill',
-        'react-hot-loader/patch',
-        'webpack-dev-server/client?http://127.0.0.1:3200',
-        'webpack/hot/only-dev-server',
-        path.resolve(__dirname, 'src/index')
-      ],
-      devtool: 'source-map'
-    });
-  }
-
-  return common;
+  plugins: [
+    extractLess,
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlwebpackPlugin({
+      title: 'RSUITE | 一套 React 的 UI 组件库',
+      template: 'src/index.html',
+      inject: true,
+      hash: true
+    })
+  ]
 };

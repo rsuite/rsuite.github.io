@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { CheckTreePicker } from '../../rsuiteSource';
+import { CheckTreePicker, Icon } from '../../rsuiteSource';
 import data from '../../../resources/data/city';
 
 const context = require('./index.md');
@@ -18,6 +18,7 @@ export default () => {
       context={context}
       examples={examples}
       dependencies={{
+        Icon,
         CheckTreePicker,
         data
       }}

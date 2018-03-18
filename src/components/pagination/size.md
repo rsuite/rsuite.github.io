@@ -1,14 +1,14 @@
 ### 尺寸
 
 <!--start-code-->
-```js
 
-class PaginationBasic  extends React.Component{
-  constructor(props){
+```js
+class PaginationBasic extends React.Component {
+  constructor(props) {
     super(props);
-    this.state={
+    this.state = {
       activePage: 5
-    }
+    };
     this.handleSelect = this.handleSelect.bind(this);
   }
 
@@ -27,14 +27,14 @@ class PaginationBasic  extends React.Component{
           activePage={this.state.activePage}
           onSelect={this.handleSelect}
         />
-        <hr />
+        <Divider />
         <Pagination
           size="md"
           pages={10}
           activePage={this.state.activePage}
           onSelect={this.handleSelect}
         />
-        <hr />
+        <Divider />
         <Pagination
           size="sm"
           pages={10}
@@ -48,4 +48,5 @@ class PaginationBasic  extends React.Component{
 
 ReactDOM.render(<PaginationBasic />);
 ```
+
 <!--end-code-->

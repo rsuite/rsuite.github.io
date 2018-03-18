@@ -1,21 +1,11 @@
 {
   "presets": [
+    "env",
     "stage-0",
-    "react",
-    [
-      "env",
-      {
-        "targets": {
-          "browsers": [
-            "> 1%",
-            "last 2 versions",
-            "ie >= 9"
-          ]
-        }
-      }
-    ]
+    "react"
   ],
   "plugins": [
+    "lodash",
     "transform-class-properties",
     "transform-runtime",
     "add-module-exports"

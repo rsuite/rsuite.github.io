@@ -8,9 +8,7 @@ class Frame extends Component {
       <div>
         <TopLevelNav />
         <DocSidebar />
-        <div className="page-context">
-          {this.props.children}
-        </div>
+        <div className="page-context">{this.props.children}</div>
       </div>
     );
   }

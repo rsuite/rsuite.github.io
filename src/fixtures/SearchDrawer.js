@@ -5,7 +5,6 @@ import algoliasearch from 'algoliasearch';
 import { Link } from 'react-router';
 import { Drawer, Input } from '../rsuiteSource';
 
-
 class SearchDrawer extends Component {
   constructor() {
     super();
@@ -31,31 +30,24 @@ class SearchDrawer extends Component {
       });
     });
   }
-  handleSearch = (keyword) => {
-    console.log(keyword);
+  handleSearch = keyword => {
     if (keyword === '') {
       this.setState({ list: [] });
     }
     this.setState({ keyword }, () => {
       this.querySearch(keyword);
     });
-  }
+  };
   handleClick = () => {
     const { onHide } = this.props;
     onHide && onHide();
-  }
+  };
   render() {
-
     const { show, onHide } = this.props;
     const { list } = this.state;
 
     return (
-      <Drawer
-        placement="left"
-        size="xs"
-        show={show}
-        onHide={onHide}
-      >
+      <Drawer placement="left" size="xs" show={show} onHide={onHide}>
         <Drawer.Header>
           <Drawer.Title>搜索</Drawer.Title>
         </Drawer.Header>
@@ -71,22 +63,23 @@ class SearchDrawer extends Component {
               let component = _.get(item, 'component');
               let content = _.get(item, 'content');
               let title = _.get(item, ['_highlightResult', 'title', 'value']);
-              title = `${component} > ${title.replace(/`/ig, '')}`;
+              title = `${component} > ${title.replace(/`/gi, '')}`;
               let url = `/components/${component}`;
 
               return (
                 <li key={index}>
-
-                  {
-                    title.indexOf('<em>') !== -1 ? (
-                      <Link
-                        to={url}
-                        onClick={this.handleClick}
-                        dangerouslySetInnerHTML={{ __html: `${title}<p>${content}</p>` }} />
-                    ) : (
-                        <Link onClick={this.handleClick} to={url}>{title}<p>{content}</p></Link>
-                      )
-                  }
+                  {title.indexOf('<em>') !== -1 ? (
+                    <Link
+                      to={url}
+                      onClick={this.handleClick}
+                      dangerouslySetInnerHTML={{ __html: `${title}<p>${content}</p>` }}
+                    />
+                  ) : (
+                    <Link onClick={this.handleClick} to={url}>
+                      {title}
+                      <p>{content}</p>
+                    </Link>
+                  )}
                 </li>
               );
             })}

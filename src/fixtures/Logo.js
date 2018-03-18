@@ -8,7 +8,10 @@ export default ({ width, height, className = '' }) => {
   };
 
   return (
-    <div style={style} className={`rsuite-logo animated animated-delay-half-seconds bounceIn ${className} `}>
+    <div
+      style={style}
+      className={`rsuite-logo animated animated-delay-half-seconds bounceIn ${className} `}
+    >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146 168">
         <title>RSUITE</title>
         <g>

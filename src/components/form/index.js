@@ -3,7 +3,7 @@ import ReactQuill from 'react-quill';
 import JSONTree from 'react-json-tree';
 
 import ComponentExample from '../ComponentExample';
-import 'react-quill/dist/quill.snow.css';
+
 import {
   HelpBlock,
   Form,

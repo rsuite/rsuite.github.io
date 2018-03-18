@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Nav, Navbar } from '../rsuiteSource';
+import { Col, Nav, Navbar, Divider } from '../rsuiteSource';
 import PageContainer from './PageContainer';
 import * as rsuite from '../rsuiteSource';
 import Paragraph from '../fixtures/Paragraph';
@@ -37,7 +37,7 @@ class ComponentExample extends React.Component {
         babelOptions={babelOptions}
         buttonClassName="btn-subtle btn-icon-circle"
         source={sorce}
-        dependencies={{ ...dependencies, Paragraph, rsuite }}
+        dependencies={{ ...dependencies, Paragraph, Divider, rsuite }}
       />
     );
   }
