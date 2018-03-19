@@ -27,3 +27,5 @@ const instance = (
 ReactDOM.render(instance);
 ```
 <!--end-code-->
+
+> 注意: [Safari ignoring tabindex](https://stackoverflow.com/questions/1848390/safari-ignoring-tabindex)

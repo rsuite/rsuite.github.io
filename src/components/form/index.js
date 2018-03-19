@@ -46,21 +46,16 @@ const examples = [
   require('./custom-check-form.md')
 ];
 
-const headerStyles = {
-  background: 'rgb(0, 43, 54)',
-  marginBottom: 20
-};
-
 const JSONView = ({ formValue, formError }) => (
   <Row style={{ marginBottom: 10 }}>
     <Col md={12}>
-      <Panel header={<p style={{ color: '#fff' }}>formValue</p>} style={headerStyles}>
+      <Panel className="json-tree-wrapper" header={<p>formValue</p>}>
         <JSONTree data={formValue} />
       </Panel>
     </Col>
 
     <Col md={12}>
-      <Panel header={<p style={{ color: '#fff' }}>formError</p>} style={headerStyles}>
+      <Panel className="json-tree-wrapper" header={<p>formError</p>}>
         <JSONTree data={formError} />
       </Panel>
     </Col>

@@ -3,6 +3,7 @@
 有三种事件可以触发提示 `tooltip` 的信息: `click`、`focus`、`hover`
 
 <!--start-code-->
+
 ```js
 const tooltip = (
   <Tooltip>
@@ -24,4 +25,7 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+
 <!--end-code-->
+
+> 注意: [Safari ignoring tabindex](https://stackoverflow.com/questions/1848390/safari-ignoring-tabindex)

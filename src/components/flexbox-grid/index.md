@@ -5,6 +5,12 @@
 * `<FlexboxGird>`
 * `<FlexboxGird.Item>`
 
+## 获取组件
+
+```js
+import { FlexboxGird } from 'rsuite';
+```
+
 ## 演示
 
 <!--{demo}-->

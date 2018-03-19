@@ -5,6 +5,12 @@
 * `<Panel>` 面板
 * `<PanelGroup>` 面板组
 
+## 获取组件
+
+```js
+import { Panel, PanelGroup } from 'rsuite';
+```
+
 ## 演示
 
 <!--{demo}-->

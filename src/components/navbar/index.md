@@ -6,6 +6,12 @@
 * `<Navbar.Header>` 设置导航栏头部信息。
 * `<Navbar.Body>` 设置导航栏选项。
 
+## 获取组件
+
+```js
+import { Navbar } from 'rsuite';
+```
+
 ## 演示
 
 <!--{demo}-->
@@ -14,8 +20,8 @@
 
 ### `<Navbar>`
 
-| 属性名称       | 类型`(默认值)`                                    | 描述           |
-| -------------- | ------------------------------------------------- | -------------- |
-| appearance     | enum: 'default', 'inverse', 'subtle'`('default')` | 导航栏外观     |
-| classPrefix    | string `('navbar')`                               | className 前缀 |
+| 属性名称       | 类型`(默认值)`                                    | 描述                 |
+| -------------- | ------------------------------------------------- | -------------------- |
+| appearance     | enum: 'default', 'inverse', 'subtle'`('default')` | 导航栏外观           |
+| classPrefix    | string `('navbar')`                               | className 前缀       |
 | componentClass | React.ElementType `('div')`                       | 为组件自定义元素类型 |

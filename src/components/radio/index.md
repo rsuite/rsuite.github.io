@@ -5,6 +5,12 @@
 * `<Radio>`
 * `<RadioGroup>`
 
+## 获取组件
+
+```js
+import { Radio, RadioGroup } from 'rsuite';
+```
+
 ## 演示
 
 <!--{demo}-->

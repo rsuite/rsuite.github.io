@@ -7,6 +7,12 @@
 
 > 如果需要在提示信息中显示复杂的内容，可以使用 `<Popover>` 代替 `<Tooltip>` 组件
 
+## 获取组件
+
+```js
+import { Tooltip, Whisper } from 'rsuite';
+```
+
 ## 演示
 
 <!--{demo}-->

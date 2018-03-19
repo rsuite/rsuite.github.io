@@ -1,6 +1,11 @@
 # AutoComplete 自动完成 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/auto-complete/index.md)
 
 
+## 获取组件
+
+```js
+import { AutoComplete } from 'rsuite';
+```
 
 ## 演示
 

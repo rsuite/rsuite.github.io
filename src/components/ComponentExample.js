@@ -11,6 +11,15 @@ const babelOptions = {
   plugins: ['transform-class-properties']
 };
 
+const CustomCodeView = ({ dependencies, ...rest }) => (
+  <CodeView
+    {...rest}
+    babelOptions={babelOptions}
+    buttonClassName="rs-btn-subtle rs-btn-icon-circle"
+    dependencies={{ ...dependencies, Paragraph, Divider, rsuite }}
+  />
+);
+
 class ComponentExample extends React.Component {
   static defaultProps = {
     tabExamples: []
@@ -31,15 +40,8 @@ class ComponentExample extends React.Component {
     }
 
     const { sorce } = tabExamples[tabIndex];
-    return (
-      <CodeView
-        key={tabIndex}
-        babelOptions={babelOptions}
-        buttonClassName="btn-subtle btn-icon-circle"
-        source={sorce}
-        dependencies={{ ...dependencies, Paragraph, Divider, rsuite }}
-      />
-    );
+
+    return <CustomCodeView key={tabIndex} source={sorce} dependencies={dependencies} />;
   }
 
   renderTabs() {
@@ -84,13 +86,7 @@ class ComponentExample extends React.Component {
       <PageContainer {...rest}>
         <MarkdownView>{docs[0]}</MarkdownView>
         {examples.map((item, index) => (
-          <CodeView
-            babelOptions={babelOptions}
-            buttonClassName="btn-subtle btn-icon-circle"
-            key={index}
-            source={item}
-            dependencies={{ ...dependencies, Paragraph, rsuite }}
-          />
+          <CustomCodeView key={index} source={item} dependencies={dependencies} />
         ))}
         {this.renderTabs()}
         {this.renderExampleByTabIndex()}

@@ -4,6 +4,12 @@
 
 `<Pagination>` 分页组件
 
+## 获取组件
+
+```js
+import { Pagination } from 'rsuite';
+```
+
 ## 演示
 
 <!--{demo}-->

@@ -1,26 +1,18 @@
 # InputNumber 数字输入框 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/input/index.md)
 
-
 ## 获取组件
-
 
 ```js
 import { InputNumber } from 'rsuite';
 ```
 
-
 ## 演示
 
 <!--{demo}-->
 
-
-
 ## Props
 
-
 ### `<InputNumber>`
-
-
 
 | 属性名称     | 类型 `(默认值)`                                                    | 描述                         |
 | ------------ | ------------------------------------------------------------------ | ---------------------------- |

@@ -1,6 +1,12 @@
 # Slider 滑动输入控件 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/slider/index.md)
 
-- `<Slider>` 滑动输入控件
+* `<Slider>` 滑动输入控件
+
+## 获取组件
+
+```js
+import { Slider } from 'rsuite';
+```
 
 ## 演示
 
@@ -21,7 +27,7 @@
 | handleTitle     | React.Node      | 自定义手柄内显示内容       |
 | barClassName    | string          | 自定义滑动条 class         |
 | disabled        | boolean         | 是否禁用                   |
-| graduated       | boolean         | 显示刻度               |
+| graduated       | boolean         | 显示刻度                   |
 | tooltip         | boolean`(true)` | 滑动时候，是否显示 tooltip |
-| progress        | boolean         | 显示滑动的进度条       |
-| vertical        | boolean         | 垂直滑动               |
+| progress        | boolean         | 显示滑动的进度条           |
+| vertical        | boolean         | 垂直滑动                   |

@@ -2,9 +2,14 @@
 
 引导用户按照流程完成任务的导航条。
 
-- `<Steps>` 步骤条组件
-- `<Steps.Item>`  步骤条内的每一个步骤。
+* `<Steps>` 步骤条组件
+* `<Steps.Item>` 步骤条内的每一个步骤。
 
+## 获取组件
+
+```js
+import { Steps } from 'rsuite';
+```
 
 ## 演示
 
@@ -19,10 +24,8 @@
 | classPrefix   | string `('steps')`                                 | className 前缀     |
 | vertical      | boolean                                            | 设置垂直显示       |
 | small         | boolean                                            | 设置小尺寸的步骤条 |
-| current       | number`(0)`                                             | 当前执行步骤       |
+| current       | number`(0)`                                        | 当前执行步骤       |
 | currentStatus | 'finish', 'wait', 'process', 'error' `('process')` | 当前执行步骤状态   |
-
-
 
 ### `<Steps.Item>`
 

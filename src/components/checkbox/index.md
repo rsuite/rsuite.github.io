@@ -5,6 +5,12 @@
 * `<Checkbox>`
 * `<CheckboxGroup>`
 
+## 获取组件
+
+```js
+import { Checkbox, CheckboxGroup } from 'rsuite';
+```
+
 ## 演示
 
 <!--{demo}-->

@@ -2,27 +2,21 @@
 
 用于多项数据选择，支持分组。
 
-- `<CheckPicker>`
-
+* `<CheckPicker>`
 
 ## 获取组件
-
 
 ```js
 import { CheckPicker } from 'rsuite';
 ```
 
-
 ## 演示
 
 <!--{demo}-->
 
-
 ## Props
 
-
 ### `<CheckPicker>`
-
 
 | 属性名称           | 类型`(默认值)`                                   | 描述                                 |
 | ------------------ | ------------------------------------------------ | ------------------------------------ |
@@ -34,7 +28,7 @@ import { CheckPicker } from 'rsuite';
 | valueKey           | string `('value')`                               | 设置选项值在 `data` 中的 `key`       |
 | labelKey           | string `('label')`                               | 设置选项显示内容在 `data` 中的 `key` |
 | value              | array                                            | 设置值 `受控`                        |
-| defaultValue       | array                                            | 设置默认值  `非受控`                 |
+| defaultValue       | array                                            | 设置默认值 `非受控`                  |
 | height             | number `(320)`                                   | 设置 Dropdown 的高度                 |
 | onChange           | (value:any, event)=>void                         | `value` 发生改变时的回调函数         |
 | onSelect           | (value:any, item: Object , event)=>void          | 选项被点击选择后的回调函数           |
@@ -51,7 +45,6 @@ import { CheckPicker } from 'rsuite';
 | searchable         | boolean `(true)`                                 | 可以搜索                             |
 | cleanable          | boolean `(true)`                                 | 可以清除                             |
 | placement          | enum: Placement`('bottomLeft')`                  | 位置                                 |
-
 
 ## Types
 

@@ -2,28 +2,21 @@
 
 对有层级关系结构的数据进行单项选择。
 
-- `<Cascader>`
-
+* `<Cascader>`
 
 ## 获取组件
-
 
 ```js
 import { Cascader } from 'rsuite';
 ```
 
-
 ## 演示
 
 <!--{demo}-->
 
-
 ## Props
 
-
 ### `<Cascader>`
-
-
 
 | 属性名称           | 类型`(默认值)`                               | 描述                                 |
 | ------------------ | -------------------------------------------- | ------------------------------------ |
@@ -57,5 +50,4 @@ import { Cascader } from 'rsuite';
 
 ```js
 Type Placement = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight' | 'leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom';
-
 ```

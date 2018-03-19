@@ -8,6 +8,12 @@
 * `<Footer>` 底部。
 * `<Sidebar>` 侧边栏。
 
+## 获取组件
+
+```js
+import { Container, Header, Content, Footer, Sidebar } from 'rsuite';
+```
+
 ## 演示
 
 <!--{demo}-->

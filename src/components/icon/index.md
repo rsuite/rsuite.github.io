@@ -4,6 +4,12 @@
 
 `<Icon>` 通过字体实现的矢量图形
 
+## 获取组件
+
+```js
+import { Icon } from 'rsuite';
+```
+
 ## 演示
 
 <!--{demo}-->

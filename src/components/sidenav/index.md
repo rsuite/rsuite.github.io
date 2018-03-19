@@ -6,6 +6,12 @@
 * `<Sidenav.Header>` 导航顶部内容区域。
 * `<Sidenav.Body>` 导航选项区域。
 
+## 获取组件
+
+```js
+import { Sidenav } from 'rsuite';
+```
+
 ## 演示
 
 <!--{demo}-->

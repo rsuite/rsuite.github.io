@@ -7,6 +7,12 @@
 
 > 如果只需要代替系统默认的 title 提示，可以使用 `<Tooltip>` 组件。
 
+## 获取组件
+
+```js
+import { Popover, Whisper } from 'rsuite';
+```
+
 ## 演示
 
 <!--{demo}-->

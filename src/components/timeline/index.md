@@ -2,6 +2,12 @@
 
 一个时间流信息显示组件
 
+## 获取组件
+
+```js
+import { Timeline } from 'rsuite';
+```
+
 ## 演示
 
 <!--{demo}-->
@@ -10,15 +16,15 @@
 
 ### `<Timeline>`
 
-| 属性名称       | 类型`(默认值)`             | 描述                                     |
-| -------------- | -------------------------- | ---------------------------------------- |
+| 属性名称       | 类型`(默认值)`             | 描述                 |
+| -------------- | -------------------------- | -------------------- |
 | componentClass | React.ElementType `('ul')` | 为组件自定义元素类型 |
-| classPrefix    | string `('timeline')`      | className 前缀                           |
+| classPrefix    | string `('timeline')`      | className 前缀       |
 
 ### `<Timeline.Item>`
 
-| 属性名称       | 类型`(默认值)`             | 描述                                     |
-| -------------- | -------------------------- | ---------------------------------------- |
+| 属性名称       | 类型`(默认值)`             | 描述                 |
+| -------------- | -------------------------- | -------------------- |
 | componentClass | React.ElementType `('li')` | 为组件自定义元素类型 |
-| classPrefix    | string `('timeline-item')` | className 前缀                           |
-| dot            | React.Node                 | 自定义时间轴点                           |
+| classPrefix    | string `('timeline-item')` | className 前缀       |
+| dot            | React.Node                 | 自定义时间轴点       |
