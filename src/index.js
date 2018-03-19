@@ -1,5 +1,6 @@
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
+import { hot } from 'react-hot-loader';
 import {
   Router,
   Route,
@@ -11,6 +12,7 @@ import {
 
 // style
 import './less/index.less';
+
 import App from './App';
 import Frame from './fixtures/Frame';
 import Home from './Home';
@@ -46,7 +48,7 @@ menu.forEach(item => {
   routes.push(route);
 });
 
-const mountApp = (
+const AppWithRouter = () => (
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Home} />
@@ -56,12 +58,16 @@ const mountApp = (
 );
 
 /*
-if (process.env.NODE_ENV !== 'production') {
+if (__DEV__) {
   const { whyDidYouUpdate } = require('why-did-you-update');
   whyDidYouUpdate(React);
 }
 */
 
+const hotRender = Component => {
+  ReactDOM.render(<Component />, document.getElementById('root'));
+};
+
 ready(values => {
-  render(mountApp, document.getElementById('root'));
+  hotRender(hot(module)(AppWithRouter));
 });

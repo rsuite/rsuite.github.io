@@ -31,13 +31,14 @@ const getStyleLoader = () => {
 module.exports = {
   devServer: {
     contentBase: path.join(__dirname, '/dist'),
-    compress: true,
+    //compress: true,
     disableHostCheck: true,
     historyApiFallback: true,
-    hot: true,
     port: 3200
   },
-  entry: './src/index.js',
+  entry: {
+    app: './src/index.js'
+  },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -127,7 +128,8 @@ module.exports = {
   },
   plugins: [
     extractLess,
-    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
+    // new webpack.HotModuleReplacementPlugin(),
     new HtmlwebpackPlugin({
       title: 'RSUITE | 一套 React 的 UI 组件库',
       template: 'src/index.html',

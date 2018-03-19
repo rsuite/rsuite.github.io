@@ -35,7 +35,7 @@ class ModalDemo extends React.Component {
               <FormGroup>
                 <ControlLabel>Email</ControlLabel>
                 <FormControl name="email" type="email" />
-                <HelpBlock tooltip>Required</HelpBlock>
+                <HelpBlock>Required</HelpBlock>
               </FormGroup>
               <FormGroup>
                 <ControlLabel>Password</ControlLabel>

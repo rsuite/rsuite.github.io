@@ -1,20 +1,16 @@
 {
-  "presets": [
-    "env",
-    "stage-0",
-    "react"
-  ],
+  "presets": ["env", "stage-0", "react"],
   "plugins": [
     "lodash",
     "transform-class-properties",
     "transform-runtime",
-    "add-module-exports"
+    "add-module-exports",
+    "react-hot-loader/babel",
+    "transform-dev"
   ],
   "env": {
     "production": {
-      "presets": [
-        "react-optimize"
-      ]
+      "presets": ["react-optimize"]
     }
   }
 }

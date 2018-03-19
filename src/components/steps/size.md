@@ -4,7 +4,7 @@
 
 ```js
 const instance = (
-  <Steps current={1} size="small">
+  <Steps current={1} small>
     <Steps.Item title="Finished" />
     <Steps.Item title="In progress" />
     <Steps.Item title="Waiting" />

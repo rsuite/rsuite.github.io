@@ -7,7 +7,7 @@
     "lib": "lib/"
   },
   "scripts": {
-    "dev": "webpack-dev-server --mode development --progress --hot --hotOnly",
+    "dev": "webpack-dev-server --mode development --progress --hot",
     "dev-ie": "IE_DEBUG=true npm run dev",
     "dev-styles": "STYLE_DEBUG=STYLE npm run dev",
     "dev-styles-source": "STYLE_DEBUG=SOURCE npm run dev",
