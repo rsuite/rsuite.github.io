@@ -7,11 +7,11 @@
     "lib": "lib/"
   },
   "scripts": {
-    "dev": "NODE_ENV=development webpack-dev-server --mode development --progress --hot --hotOnly",
+    "dev": "webpack-dev-server --mode development --progress --hot --hotOnly",
     "dev-ie": "IE_DEBUG=true npm run dev",
     "dev-styles": "STYLE_DEBUG=STYLE npm run dev",
     "dev-styles-source": "STYLE_DEBUG=SOURCE npm run dev",
-    "build": "NODE_ENV=production rm -rf assets &&  webpack --mode production --progress ",
+    "build": "NODE_ENV=production  webpack --mode production --progress ",
     "test": "karma start"
   },
   "keywords": ["react", "suite", "rsuite", "react-component"],

@@ -12,13 +12,10 @@ const iconPath = ['./node_modules/rsuite-theme', '../rsuite-theme'].map(relative
 );
 
 const { NODE_ENV, STYLE_DEBUG, IE_DEBUG } = process.env;
-const __DEV__ = NODE_ENV === 'development';
 const __PRO__ = NODE_ENV === 'production';
 
 const extractLess = new ExtractTextPlugin({
-  filename: '[contenthash].css',
-  // 当 DEBUG ie 时 需要启用 ExtractTextPlugin 用于分割 css
-  disable: __DEV__ && !IE_DEBUG
+  filename: '[contenthash].css'
 });
 
 const getStyleLoader = () => {
