@@ -22,8 +22,7 @@ const getStyleLoader = () => {
   const sourceMap = STYLE_DEBUG === 'SOURCE' ? '?sourceMap' : '';
   const loaders = ['css-loader', 'postcss-loader', 'less-loader'];
   const filterLoader = loader =>
-    STYLE_DEBUG === 'STYLE' || __PRO__ ? true : loader !== 'postcss-loader';
-
+    STYLE_DEBUG === 'STYLE' || IE_DEBUG || __PRO__ ? true : loader !== 'postcss-loader';
   return loaders.filter(filterLoader).map(loader => ({
     loader: `${loader}${sourceMap}`
   }));
