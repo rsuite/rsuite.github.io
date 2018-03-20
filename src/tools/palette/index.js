@@ -12,9 +12,7 @@ import {
   Radio,
   Toggle,
   Slider,
-  Navbar,
   Nav,
-  Icon,
   Input
 } from '../../rsuiteSource';
 import MarkdownView from '../../fixtures/MarkdownView';
@@ -34,6 +32,10 @@ class PalettePage extends React.Component {
     };
   }
 
+  /**
+   * @param color
+   * @return {Promise}
+   */
   changeLessColor = color => {
     return window.less.modifyVars({
       '@palette-color': color
