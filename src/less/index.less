@@ -629,18 +629,6 @@ path.bg {
   border: 1px solid #eee;
 }
 
-.panel-color-wrap {
-  margin-left: -10px;
-  .panel-color {
-    padding: 0;
-    list-style: none;
-    li {
-      padding: 13px;
-      font-family: 'DejaVu Sans Mono';
-    }
-  }
-}
-
 .sketch-picker {
   border: 1px solid #ddd;
   box-shadow: none !important;
@@ -1039,5 +1027,29 @@ path.bg {
   }
   .rs-panel-body {
     padding: 0px 4px 8px 10px;
+  }
+}
+.palette-wrapper {
+  display: flex;
+  flex-direction: row;
+  .palette-panel {
+    width: 276px;
+  }
+  .palette-preview {
+    margin-left: 10px;
+    padding: 0 10px;
+  }
+
+  .panel-color-wrap {
+    margin-left: -10px;
+    width: 220px;
+    .panel-color {
+      padding: 0;
+      list-style: none;
+      li {
+        padding: 13px;
+        font-family: 'DejaVu Sans Mono';
+      }
+    }
   }
 }

@@ -11,7 +11,11 @@ import {
   RadioGroup,
   Radio,
   Toggle,
-  Slider
+  Slider,
+  Navbar,
+  Nav,
+  Icon,
+  Input
 } from '../../rsuiteSource';
 import MarkdownView from '../../fixtures/MarkdownView';
 import { SketchPicker, CirclePicker } from 'react-color';
@@ -30,11 +34,11 @@ class PalettePage extends React.Component {
     };
   }
 
-  changeLessColor = (color) => {
+  changeLessColor = color => {
     return window.less.modifyVars({
       '@palette-color': color
     });
-  }
+  };
 
   handleChangeComplete = ({ hex: color }) => {
     this.setState({ color });
@@ -58,6 +62,7 @@ class PalettePage extends React.Component {
 
   render() {
     const { color } = this.state;
+
     return (
       <Content>
         <Row>
@@ -66,18 +71,28 @@ class PalettePage extends React.Component {
           </Col>
         </Row>
 
-        <Row>
-          <Col md={8}>
+        <div className="palette-wrapper">
+          <div className="palette-panel">
             <CirclePicker color={color} onChangeComplete={this.handleChangeComplete} />
             <br />
-            <br />
-            <SketchPicker color={color} onChangeComplete={this.handleChangeComplete} />
-          </Col>
-          <Col md={8} className="panel-color-wrap">
+            <SketchPicker
+              style={{ marginTop: 6 }}
+              color={color}
+              onChangeComplete={this.handleChangeComplete}
+            />
+          </div>
+          <div className="panel-color-wrap">
             <ColorPanel colors={computeColors(color)} />
-          </Col>
+          </div>
 
-          <Col md={8} style={{ padding: 10 }} id="palettePreview">
+          <div className="palette-preview" id="palettePreview">
+            <Nav appearance="tabs">
+              <Nav.Item active>Home</Nav.Item>
+              <Nav.Item>News</Nav.Item>
+              <Nav.Item>Solutions</Nav.Item>
+              <Nav.Item>Products</Nav.Item>
+            </Nav>
+            <hr />
             <ButtonToolbar>
               <Button appearance="default">Default</Button>
               <Button appearance="primary">Primary</Button>
@@ -85,22 +100,24 @@ class PalettePage extends React.Component {
               <Button appearance="ghost">Ghost</Button>
             </ButtonToolbar>
             <hr />
-            <CheckboxGroup name="check" defaultValue={['1', '2']}>
-              <Checkbox value="1">javascript</Checkbox>
-              <Checkbox value="2">css</Checkbox>
-              <Checkbox value="3">html</Checkbox>
+            <CheckboxGroup name="check" defaultValue={['1', '2']} inline>
+              <Checkbox value="1">Javascript</Checkbox>
+              <Checkbox value="2">CSS</Checkbox>
+              <Checkbox value="3">HTML</Checkbox>
             </CheckboxGroup>
             <hr />
-            <RadioGroup name="radio" defaultValue="1">
-              <Radio value="1">Male</Radio>
-              <Radio value="2">Female </Radio>
+            <RadioGroup name="radio" defaultValue="1" inline>
+              <Radio value="1">Front End</Radio>
+              <Radio value="2">Back End </Radio>
             </RadioGroup>
+            <hr />
+            <Input />
             <hr />
             <Toggle defaultChecked />
             <hr />
             <Slider progress defaultValue={50} />
-          </Col>
-        </Row>
+          </div>
+        </div>
       </Content>
     );
   }
