@@ -1,7 +1,7 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
 import { CheckTree, Toggle } from '../../rsuiteSource';
-import data from '../../../public/resources/data/city';
+import data from '../../resources/data/city';
 
 const context = require('./index.md');
 const examples = [

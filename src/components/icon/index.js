@@ -2,7 +2,7 @@ import React from 'react';
 import ComponentExample from '../ComponentExample';
 import { Icon, Button } from '../../rsuiteSource';
 
-import IconLogo from '../../../public/resources/images/logo.svg';
+import IconLogo from '../../resources/images/logo.svg';
 import * as SvgIcons from '../../fixtures/SvgIcons';
 
 const context = require('./index.md');
