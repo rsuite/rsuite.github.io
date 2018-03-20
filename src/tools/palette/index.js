@@ -30,6 +30,11 @@ class PalettePage extends React.Component {
     };
   }
 
+  /**
+   *
+   * @param color
+   * @return {Promise}
+   */
   changeLessColor = (color) => {
     return window.less.modifyVars({
       '@palette-color': color
