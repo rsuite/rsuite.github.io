@@ -1,3 +1,5 @@
+import { removeClass } from 'dom-lib';
+
 export function loadJsFile(url, callback) {
   var s = document.createElement('script'),
     head = document.getElementsByTagName('head')[0];
@@ -12,40 +14,40 @@ export function loadJsFile(url, callback) {
   return s;
 }
 
-
 const isIE = !!navigator.userAgent.match(/MSIE/);
 const filter = [];
 
 /**
  * polyfill & es6-shim
  */
-filter.push(new Promise((resolve, reject) => {
+filter.push(
+  new Promise((resolve, reject) => {
+    if (!isIE) {
+      return resolve();
+    }
 
-  if (!isIE) {
-    return resolve();
-  }
-
-  let count = 0;
-  const files = [
-    'http://cdn.bootcss.com/es5-shim/4.5.9/es5-shim.min.js',
-    'http://cdn.bootcss.com/es5-shim/4.5.9/es5-sham.min.js',
-    'http://cdn.bootcss.com/es6-shim/0.35.1/es6-shim.min.js',
-    'http://cdn.bootcss.com/es6-shim/0.35.1/es6-sham.min.js'
-  ];
-  //异步加载CSS文件
-  files.map((file) => {
-    loadJsFile(file, () => {
-      count++;
-      if (count === files.length) {
-        resolve();
-      }
+    let count = 0;
+    const files = [
+      'http://cdn.bootcss.com/es5-shim/4.5.9/es5-shim.min.js',
+      'http://cdn.bootcss.com/es5-shim/4.5.9/es5-sham.min.js',
+      'http://cdn.bootcss.com/es6-shim/0.35.1/es6-shim.min.js',
+      'http://cdn.bootcss.com/es6-shim/0.35.1/es6-sham.min.js'
+    ];
+    //异步加载CSS文件
+    files.map(file => {
+      loadJsFile(file, () => {
+        count++;
+        if (count === files.length) {
+          resolve();
+        }
+      });
     });
-  });
-
-}));
+  })
+);
 
 export default function ready(callback) {
   Promise.all(filter).then(values => {
     callback(values);
+    removeClass(document.getElementById('body'), 'body-loading');
   });
 }

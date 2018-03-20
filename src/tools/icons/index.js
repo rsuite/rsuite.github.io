@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { Container, Content, Row, Col } from '../../rsuiteSource';
+import { Row, Col } from '../../rsuiteSource';
 import MarkdownView from '../../fixtures/MarkdownView';
+import PageContainer from '../../fixtures/PageContainer';
 import IconList from './IconList';
 
 class IconPage extends React.Component {
@@ -18,15 +19,14 @@ class IconPage extends React.Component {
   render() {
     const { color } = this.state;
     return (
-      <Content>
+      <PageContainer>
         <Row>
           <Col md={24}>
             <MarkdownView>{require('./index.md')}</MarkdownView>
           </Col>
         </Row>
-
         <IconList />
-      </Content>
+      </PageContainer>
     );
   }
 }

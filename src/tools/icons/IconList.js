@@ -1,7 +1,6 @@
 import React from 'react';
 import { Input, Icon, Alert } from '../../rsuiteSource';
 import IconItem from './IconItem';
-import PageContainer from '../../fixtures/PageContainer';
 
 const ALL_ICONS = JSON.parse(require('fs').readFileSync(__dirname + '/icons.json', 'utf8'));
 
@@ -68,7 +67,7 @@ class IconList extends React.Component {
   render() {
     const { icons } = this.state;
     return (
-      <PageContainer className="icon-list-wrap">
+      <div className="icon-list-wrap">
         <Input
           size="lg"
           className="icon-search-input"
@@ -80,7 +79,7 @@ class IconList extends React.Component {
         <div className="row icon-item-list">
           {icons.length > 0 ? this.renderIcon(icons) : <NoneDom />}
         </div>
-      </PageContainer>
+      </div>
     );
   }
 }

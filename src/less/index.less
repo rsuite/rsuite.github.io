@@ -230,7 +230,10 @@
   // Handle
   &::-webkit-scrollbar-thumb {
     border-radius: @scrollbar-width / 2;
-    background-color: #8d8d8d;
+    background-color: fade(#8d8d8d, 30);
+    &:hover {
+      background-color: fade(#8d8d8d, 90);
+    }
   }
 
   // Track
@@ -717,6 +720,7 @@ path.bg {
 
 .code-view-wrapper {
   transition: 0.3s linear border-color;
+  margin: 18px 0;
   &:hover {
     border: 1px dashed @H500;
   }
@@ -903,19 +907,19 @@ path.bg {
     margin-top: 6px;
     margin-bottom: 6px;
     [class*='@{ns}col-'] {
-      background-color: @H600;
+      background-color: @H700;
 
       [class*='@{ns}col-'] {
-        background-color: @H700;
+        background-color: @H900;
       }
 
       [class*='@{ns}col-']:nth-child(2n) {
-        background-color: fade(@H700, 90);
+        background-color: fade(@H900, 90);
       }
     }
 
     [class*='@{ns}col-']:nth-child(2n) {
-      background-color: fade(@H600, 90);
+      background-color: fade(@H700, 90);
     }
   }
 

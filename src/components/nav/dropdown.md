@@ -1,10 +1,11 @@
 ### 多级导航
 
 <!--start-code-->
+
 ```js
 const instance = (
   <div>
-    <Nav >
+    <Nav>
       <Nav.Item active>Item A</Nav.Item>
       <Nav.Item>Item B</Nav.Item>
       <Nav.Item>Item C</Nav.Item>
@@ -25,4 +26,7 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+
 <!--end-code-->
+
+> 当使用多级导航时，直接使用 `<Dropdown>` 组件。
