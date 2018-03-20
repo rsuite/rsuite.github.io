@@ -45,7 +45,7 @@
 @danger-light-color: #fde9ef;
 ```
 
-修改后影响到 [Message](components/message) 等需要显示状态的组件。
+修改后影响到 [Message](../components/message) 等需要显示状态的组件。
 
 
 ### 更多自定义配置
