@@ -1,5 +1,4 @@
-
-function loadJsFile(url, callback) {
+export function loadJsFile(url, callback) {
   var s = document.createElement('script'),
     head = document.getElementsByTagName('head')[0];
   s.type = 'text/javascript';

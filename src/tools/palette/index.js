@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 import {
   Container,
   Content,
@@ -18,16 +17,43 @@ import MarkdownView from '../../fixtures/MarkdownView';
 import { SketchPicker, CirclePicker } from 'react-color';
 import computeColors from './computeColors';
 import ColorPanel from './ColorPanel';
+import { loadJsFile } from '../../ready';
+
+const lessUrl = 'https://cdn.bootcss.com/less.js/2.7.2/less.min.js';
 
 class PalettePage extends React.Component {
   constructor() {
     super();
+    this.lessLoaded = false;
     this.state = {
       color: '#2196f3'
     };
   }
-  handleChangeComplete = color => {
-    this.setState({ color: color.hex });
+
+  changeLessColor = (color) => {
+    return window.less.modifyVars({
+      '@palette-color': color
+    });
+  }
+
+  handleChangeComplete = ({ hex: color }) => {
+    this.setState({ color });
+    if (this.lessLoaded) {
+      this.changeLessColor(color);
+    } else {
+      // Less global config.
+      window.less = {
+        async: true,
+        logLevel: 0,
+        globalVars: {
+          '@palette-color': this.state.color
+        }
+      };
+      loadJsFile(lessUrl, () => {
+        this.lessLoaded = true;
+        this.changeLessColor(color);
+      });
+    }
   };
 
   render() {
@@ -51,7 +77,7 @@ class PalettePage extends React.Component {
             <ColorPanel colors={computeColors(color)} />
           </Col>
 
-          <Col md={8} style={{ padding: 10 }}>
+          <Col md={8} style={{ padding: 10 }} id="palettePreview">
             <ButtonToolbar>
               <Button appearance="default">Default</Button>
               <Button appearance="primary">Primary</Button>
