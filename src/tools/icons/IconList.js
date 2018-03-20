@@ -1,8 +1,7 @@
 import React from 'react';
 import { Input, Icon, Alert } from '../../rsuiteSource';
 import IconItem from './IconItem';
-import PageContainer from '../../components/PageContainer';
-
+import PageContainer from '../../fixtures/PageContainer';
 
 const ALL_ICONS = JSON.parse(require('fs').readFileSync(__dirname + '/icons.json', 'utf8'));
 
@@ -29,15 +28,15 @@ class IconList extends React.Component {
   handleCopy = (text, result) => {
     const message = result ? '复制成功' : '复制失败，浏览器不支持此功能';
     Alert.success(message);
-  }
+  };
 
-  handleSearch = (key) => {
+  handleSearch = key => {
     key = key.toUpperCase();
-    const filterByIconName = (searchKey) => {
+    const filterByIconName = searchKey => {
       return searchKey.indexOf(key) > -1;
     };
 
-    const filterByCatogry = (iconConf) => {
+    const filterByCatogry = iconConf => {
       const { id, filter = [], categories = [] } = iconConf;
       const searchKeys = [id, ...filter, ...categories].map(key => key.toUpperCase());
       return searchKeys.filter(filterByIconName).length > 0;
@@ -48,31 +47,30 @@ class IconList extends React.Component {
     this.setState({
       icons
     });
-  }
+  };
   renderIcon(icons) {
     icons = icons.reduce(parseIconByCategory, {});
 
-    return Object.keys(icons).sort((a, b) => a.localeCompare(b)).map((category, i) => {
-      return (
-        <div key={i}>
-          <h4 className="rs-col-md-24">{category}</h4>
-          {
-            icons[category].map((iconConf, j) => {
+    return Object.keys(icons)
+      .sort((a, b) => a.localeCompare(b))
+      .map((category, i) => {
+        return (
+          <div key={i}>
+            <h4 className="rs-col-md-24">{category}</h4>
+            {icons[category].map((iconConf, j) => {
               const { id: icon } = iconConf;
               return <IconItem icon={icon} key={`${j}-${icon}`} handleCopy={this.handleCopy} />;
-            })
-          }
-        </div>
-      );
-    });
+            })}
+          </div>
+        );
+      });
   }
   render() {
     const { icons } = this.state;
     return (
-
       <PageContainer className="icon-list-wrap">
         <Input
-          type='text'
+          type="text"
           placeholder="输入关键字进行搜索，如: hypers。然后点击图标，复制图标名称。"
           onChange={this.handleSearch}
         />

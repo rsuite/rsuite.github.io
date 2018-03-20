@@ -1,7 +1,8 @@
 import React from 'react';
 import clasNames from 'classnames';
-import { Nav, Row, Col, IconButton, Icon } from '../rsuiteSource';
 import { PageProvider, PageNav, PageContent } from 'rsuite-page-nav';
+
+import { Nav, Row, Col, IconButton, Icon } from '../rsuiteSource';
 
 class PageContainer extends React.Component {
   constructor(props) {

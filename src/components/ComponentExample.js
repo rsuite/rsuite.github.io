@@ -1,7 +1,8 @@
 import React from 'react';
 import { Col, Nav, Navbar, Divider } from '../rsuiteSource';
-import PageContainer from './PageContainer';
+
 import * as rsuite from '../rsuiteSource';
+import PageContainer from '../fixtures/PageContainer';
 import Paragraph from '../fixtures/Paragraph';
 import MarkdownView from '../fixtures/MarkdownView';
 import CodeView from '../fixtures/CodeView';

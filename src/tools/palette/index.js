@@ -1,6 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { Container, Content, Row, Col } from '../../rsuiteSource';
+import {
+  Container,
+  Content,
+  Row,
+  Col,
+  ButtonToolbar,
+  Button,
+  CheckboxGroup,
+  Checkbox,
+  RadioGroup,
+  Radio,
+  Toggle,
+  Slider
+} from '../../rsuiteSource';
 import MarkdownView from '../../fixtures/MarkdownView';
 import { SketchPicker, CirclePicker } from 'react-color';
 import computeColors from './computeColors';
@@ -34,8 +47,32 @@ class PalettePage extends React.Component {
             <br />
             <SketchPicker color={color} onChangeComplete={this.handleChangeComplete} />
           </Col>
-          <Col md={16} className="panel-color-wrap">
+          <Col md={8} className="panel-color-wrap">
             <ColorPanel colors={computeColors(color)} />
+          </Col>
+
+          <Col md={8} style={{ padding: 10 }}>
+            <ButtonToolbar>
+              <Button appearance="default">Default</Button>
+              <Button appearance="primary">Primary</Button>
+              <Button appearance="link">Link</Button>
+              <Button appearance="ghost">Ghost</Button>
+            </ButtonToolbar>
+            <hr />
+            <CheckboxGroup name="check" defaultValue={['1', '2']}>
+              <Checkbox value="1">javascript</Checkbox>
+              <Checkbox value="2">css</Checkbox>
+              <Checkbox value="3">html</Checkbox>
+            </CheckboxGroup>
+            <hr />
+            <RadioGroup name="radio" defaultValue="1">
+              <Radio value="1">Male</Radio>
+              <Radio value="2">Female </Radio>
+            </RadioGroup>
+            <hr />
+            <Toggle defaultChecked />
+            <hr />
+            <Slider progress defaultValue={50} />
           </Col>
         </Row>
       </Content>

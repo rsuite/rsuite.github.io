@@ -21,7 +21,7 @@ class IconPage extends React.Component {
       <Content>
         <Row>
           <Col md={24}>
-            <MarkdownView>{require('./readme.md')}</MarkdownView>
+            <MarkdownView>{require('./index.md')}</MarkdownView>
           </Col>
         </Row>
 

@@ -29,7 +29,7 @@
 
 ## 辅助色设置
 
-信息，成功，警告，失败分别对应的颜色
+信息，成功，警告，错误分别对应的颜色，修改后影响到 [Message](../components/message) 等需要显示状态的组件。
 
 ```less
 @info-color: #2196f3;
@@ -41,12 +41,10 @@
 @warning-color: #ffb300;
 @warning-light-color: #fff9e6;
 
-@danger-color: #f44336;
-@danger-light-color: #fde9ef;
+@error-color: #f44336;
+@error-light-color: #fde9ef;
 ```
 
-修改后影响到 [Message](../components/message) 等需要显示状态的组件。
+## 更多自定义配置
 
-### 更多自定义配置
-
-> 更多自定义配置，参考: [variables](https://github.com/rsuite/rsuite-theme/blob/next/src/less/variables.less)
+> 参考: [variables](https://github.com/rsuite/rsuite-theme/blob/next/src/less/variables.less)
