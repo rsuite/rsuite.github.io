@@ -30,8 +30,7 @@ const getStyleLoader = () => {
 
 module.exports = {
   devServer: {
-    contentBase: path.join(__dirname, '/dist'),
-    //compress: true,
+    contentBase: path.join(__dirname, 'public'),
     disableHostCheck: true,
     historyApiFallback: true,
     port: 3200

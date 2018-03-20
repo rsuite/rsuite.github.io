@@ -1,8 +1,8 @@
 import React from 'react';
 
 const images = {
-  default: require('../../resources/images/paragraph.png'),
-  short: require('../../resources/images/short-paragraph.png')
+  default: require('../../public/resources/images/paragraph.png'),
+  short: require('../../public/resources/images/short-paragraph.png')
 };
 
 export default ({ count = 1, width = '100%', size = 'default', style, children, ...props }) => (

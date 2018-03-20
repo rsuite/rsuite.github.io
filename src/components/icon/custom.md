@@ -7,7 +7,7 @@
 
 /**
  * import * as SvgIcons from '../../fixtures/SvgIcons'
- * import IconLogo from '../../../resources/images/logo.svg';
+ * import IconLogo from '../../../public/resources/images/logo.svg';
  * IconLogo, SvgIcons 是 import 的外部资源。
  */
 

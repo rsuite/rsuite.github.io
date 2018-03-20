@@ -1,7 +1,9 @@
 ### 垂直滑动
+
 <!-- start-code -->
+
 ```js
-export const VerticalSlider =  () => {
+export const VerticalSlider = () => {
   const style = {
     height: 400
   };
@@ -10,25 +12,24 @@ export const VerticalSlider =  () => {
       <Row>
         <Col md={2}>
           <div style={style}>
-            <Slider value={50} vertical />
+            <Slider defaultValue={50} vertical />
           </div>
         </Col>
         <Col md={2}>
           <div style={style}>
-            <Slider value={50}  vertical progress />
+            <Slider defaultValue={50} vertical progress />
           </div>
         </Col>
         <Col md={2}>
           <div style={style}>
-            <Slider value={50} min={0} step={5} max={100} graduated vertical progress/>
+            <Slider defaultValue={50} min={0} step={5} max={100} graduated vertical progress />
           </div>
         </Col>
       </Row>
     </div>
   );
 };
-ReactDOM.render(<VerticalSlider />)
+ReactDOM.render(<VerticalSlider />);
 ```
+
 <!-- end-code -->
-
-

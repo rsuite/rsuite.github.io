@@ -21,7 +21,8 @@ import { Slider } from 'rsuite';
 | min             | number`(0)`     | 滑动范围的最小值           |
 | max             | number`(100)`   | 滑动范围的最大值           |
 | step            | number`(1)`     | 滑动一步的值               |
-| value           | number`(0)`     | 值                         |
+| value           | number          | 值（受控）                 |
+| defaultValue    | number          | 默认值                     |
 | className       | string          | 自定义 class               |
 | handleClassName | string          | 自定义手柄的 class         |
 | handleTitle     | React.Node      | 自定义手柄内显示内容       |
