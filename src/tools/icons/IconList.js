@@ -56,7 +56,7 @@ class IconList extends React.Component {
       .map((category, i) => {
         return (
           <div key={i}>
-            <h4 className="rs-col-md-24">{category}</h4>
+            <h4 className="icon-list-group-title">{category}</h4>
             {icons[category].map((iconConf, j) => {
               const { id: icon } = iconConf;
               return <IconItem icon={icon} key={`${j}-${icon}`} handleCopy={this.handleCopy} />;
@@ -70,11 +70,13 @@ class IconList extends React.Component {
     return (
       <PageContainer className="icon-list-wrap">
         <Input
+          size="lg"
+          className="icon-search-input"
           type="text"
-          placeholder="输入关键字进行搜索，如: hypers。然后点击图标，复制图标名称。"
+          placeholder="搜索 Icon"
           onChange={this.handleSearch}
         />
-        <hr />
+
         <div className="row icon-item-list">
           {icons.length > 0 ? this.renderIcon(icons) : <NoneDom />}
         </div>

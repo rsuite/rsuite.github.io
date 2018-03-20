@@ -223,19 +223,19 @@
 
   // Scrollbar
   &::-webkit-scrollbar {
-    border-radius: @scrollbar-width/2;
+    border-radius: @scrollbar-width / 2;
     width: @scrollbar-width;
   }
 
   // Handle
   &::-webkit-scrollbar-thumb {
-    border-radius: @scrollbar-width/2;
+    border-radius: @scrollbar-width / 2;
     background-color: #8d8d8d;
   }
 
   // Track
   &::-webkit-scrollbar-track {
-    border-radius: @scrollbar-width/2;
+    border-radius: @scrollbar-width / 2;
     background: transparent;
   }
 }
@@ -393,8 +393,26 @@ code:not(.doc-highlight) {
   margin-left: 0;
 }
 
+.icon-search-input {
+  margin: 20px 0 40px 0;
+}
 .icon-item-list {
+  .icon-list-group-title {
+    margin-bottom: 2rem;
+  }
   .icon-item {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    padding: 10px;
+    cursor: pointer;
+    opacity: 0.8;
+    .icon-wrapper {
+      height: 50px;
+      text-align: center;
+    }
     .icon-content {
       display: block;
       width: 100%;
@@ -402,14 +420,20 @@ code:not(.doc-highlight) {
       text-align: center;
       line-height: 50px;
       font-size: 36px;
-      transition: transform 0.3s ease-in-out;
-      cursor: pointer;
-      &:hover {
-        transform: scale(1.5);
-      }
+    }
+    &:hover {
+      background: @H500;
+      color: #fff;
+      border-radius: 4px;
+      opacity: 1;
+    }
+    &:hover .icon-name-text {
+      color: @H050;
     }
   }
   .icon-name-text {
+    font-size: 0.8rem;
+    color: #adb5bd;
     width: 100%;
     text-align: center;
     height: 30px;
