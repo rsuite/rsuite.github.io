@@ -15,6 +15,7 @@
 @header-height: 64px;
 @media-xs: 768px;
 @media-md: 992px;
+@scrollbar-width: 10px;
 
 .main-container {
   padding-right: 180px;
@@ -218,6 +219,24 @@
     padding: 20px 12px 12px 12px;
     color: #aaa;
     border-bottom: 1px solid #eee;
+  }
+
+  // Scrollbar
+  &::-webkit-scrollbar {
+    border-radius: @scrollbar-width/2;
+    width: @scrollbar-width;
+  }
+
+  // Handle
+  &::-webkit-scrollbar-thumb {
+    border-radius: @scrollbar-width/2;
+    background-color: #8d8d8d;
+  }
+
+  // Track
+  &::-webkit-scrollbar-track {
+    border-radius: @scrollbar-width/2;
+    background: transparent;
   }
 }
 
