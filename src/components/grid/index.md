@@ -8,6 +8,13 @@
 * `<Row>`
 * `<Col>`
 
+对应屏幕宽度:
+
+* xs, extra-small: < `480px`
+* sm, small: ≥ `480px`
+* md, medium: ≥ `992px`
+* lg, large: ≥ `1200px`
+
 ## 获取组件
 
 ```js

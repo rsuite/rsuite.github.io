@@ -1,18 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router';
-import { Container, Content, Row, Col } from '../../rsuiteSource';
+import { Content as PageContent, Row, Col } from '../../rsuiteSource';
 import MarkdownView from '../../fixtures/MarkdownView';
 
 class Page extends React.Component {
   render() {
     return (
-      <Content>
+      <PageContent>
         <Row>
           <Col md={24}>
             <MarkdownView>{require('./index.md')}</MarkdownView>
           </Col>
         </Row>
-      </Content>
+      </PageContent>
     );
   }
 }

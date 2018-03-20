@@ -1,10 +1,14 @@
 ### 默认
 
 <!--start-code-->
+
 ```js
 const instance = (
- <InputNumber />
+  <div style={{ width: 160 }}>
+    <InputNumber />
+  </div>
 );
 ReactDOM.render(instance);
 ```
+
 <!--end-code-->

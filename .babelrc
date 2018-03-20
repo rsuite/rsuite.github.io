@@ -6,7 +6,8 @@
     "transform-runtime",
     "add-module-exports",
     "react-hot-loader/babel",
-    "transform-dev"
+    "transform-dev",
+    "rsuite"
   ],
   "env": {
     "production": {

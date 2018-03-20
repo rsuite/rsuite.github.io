@@ -362,7 +362,7 @@ export default [
     children: [
       {
         id: 'palette',
-        name: '调色盘'
+        name: '调色板'
       },
       {
         id: 'icons',

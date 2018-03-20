@@ -1,10 +1,14 @@
 ### 禁用
 
 <!--start-code-->
+
 ```js
 const instance = (
- <InputNumber disabled />
+  <div style={{ width: 160 }}>
+    <InputNumber disabled />
+  </div>
 );
 ReactDOM.render(instance);
 ```
+
 <!--end-code-->
