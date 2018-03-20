@@ -4,3 +4,5 @@
 
 * [Font Awesome](https://fontawesome.com/)
 * [iconfont](http://www.iconfont.cn/)
+
+> [如何使用？](/components/icon)

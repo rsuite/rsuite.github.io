@@ -2,14 +2,14 @@
 
 Schema 可以定义一个数据模型，用于对数据进行校验，可以对 `<Form>` 组件数据进行校验
 
-* `Schema.Model` 定义数据模型对象
-* `Schema.Types` 提供了一组数据类型：
-  * `StringType`
-  * `NumberType`
-  * `ArrayType`
-  * `DateType`
-  * `ObjectType`
-  * `BooleanType`
+* Schema.Model 定义数据模型对象
+* Schema.Types 提供了一组数据类型：
+  * StringType
+  * NumberType
+  * ArrayType
+  * DateType
+  * ObjectType
+  * BooleanType
 
 ## 如何使用？
 
