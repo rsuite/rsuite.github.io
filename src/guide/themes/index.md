@@ -47,7 +47,6 @@
 
 修改后影响到 [Message](components/message) 等需要显示状态的组件。
 
-
 ### 更多自定义配置
 
 > 更多自定义配置，参考: [variables](https://github.com/rsuite/rsuite-theme/blob/next/src/less/variables.less)

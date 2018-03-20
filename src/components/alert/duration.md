@@ -1,5 +1,11 @@
 ### 延迟关闭
 
+duration 是一个可选项，当设置为 0 时，则不自动关闭。
+
+```
+Alert.info(content: string, duration?: number, onClose?: () => void);
+```
+
 <!--start-code-->
 
 ```js

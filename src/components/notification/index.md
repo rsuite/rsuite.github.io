@@ -18,7 +18,55 @@ import { Notification } from 'rsuite';
 
 <!--{demo}-->
 
-## Props
+## Methods
+
+### `Notification.open`
+
+```
+Notification.open(config: Config);
+```
+
+### `Notification.info`
+
+```
+Notification.info(config: Config);
+```
+
+### `Notification.success`
+
+```
+Notification.success(config: Config);
+```
+
+### `Notification.warning`
+
+```
+Notification.warning(config: Config);
+```
+
+### `Notification.error`
+
+### `Notification.remove`
+
+```
+Notification.remove(key: string);
+```
+
+手动移除消息框
+
+```js
+Notification.open({
+  title: 'Title',
+  description: 'Message',
+  key: 'myNotification'
+});
+
+Notification.remove('myNotification');
+```
+
+## Types
+
+### Config
 
 ```typescript
 type Config{
@@ -34,60 +82,14 @@ type Config{
 }
 ```
 
-### `Notification.open`
-
-```js
-Notification.open((config: Config));
-```
-
-### `Notification.info`
-
-```js
-Notification.info((config: Config));
-```
-
-### `Notification.success`
-
-```js
-Notification.success((config: Config));
-```
-
-### `Notification.warning`
-
-```js
-Notification.warning((config: Config));
-```
-
-### `Notification.error`
-
-```js
-Notification.error((config: Config));
-```
-
-### type Config
-
 | 属性名称    | 类型 `(默认值)`                                                      | 描述                                                 |
 | ----------- | -------------------------------------------------------------------- | ---------------------------------------------------- |
 | title       | string                                                               | 标题                                                 |
 | description | React.Node                                                           | 描述                                                 |
-| duration    | number `(1.5)`                                                       | 消息框持续时间                                       |
+| duration    | number `(4500)`                                                      | 消息框持续时间 (单位：毫秒)                          |
 | placement   | enum: 'topLeft','topRight','bottomLeft','bottomRight' `('topRight')` | 消息框的位置                                         |
 | top         | number `(24)`                                                        | 消息框距离顶部的距离                                 |
 | bottom      | number `(24)`                                                        | 消息框距离底部的距离                                 |
 | onClose     | ()=>void                                                             | 关闭回调函数                                         |
 | style       | Object                                                               | 自定义样式                                           |
 | key         | string                                                               | 消息框唯一标识，如果要手动移除消息框，必须填写该字段 |
-
-### `Notification.remove`
-
-手动移除消息框
-
-```js
-Notification.open({
-  title: 'Title',
-  description: 'Message',
-  key: 'myNotification'
-});
-
-Notification.remove('myNotification');
-```
