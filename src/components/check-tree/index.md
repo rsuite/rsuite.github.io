@@ -1,6 +1,6 @@
 # CheckTree 树形多选控件 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/check-tree/index.md)
 
-* `<CheckTree>`
+* `<CheckTree>` 用于展示一个树结构数据，同时支持 Checkbox 选择。
 
 ## 获取组件
 
@@ -40,3 +40,9 @@ import { CheckTree } from 'rsuite';
 ```js
 Type Placement = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight' | 'leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom';
 ```
+
+## 相关组件
+
+* [`<Tree>`](./tree) 用于展示一个树结构数据。
+* [`<TreePicker>`](./tree-picker) 选择器组件，树形单项选择器。
+* [`<CheckTreePicker>`](./check-tree-picker) 选择器组件，在 TreePicker 节点上支持 Checkbox，用于多选 。

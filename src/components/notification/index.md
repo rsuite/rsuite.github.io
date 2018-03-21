@@ -1,4 +1,4 @@
-# Notification 通知 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/notification/index.md)
+# Notification 通知框 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/notification/index.md)
 
 用于全局通知，悬浮在页面角落。
 
@@ -93,3 +93,10 @@ type Config{
 | onClose     | ()=>void                                                             | 关闭回调函数                                         |
 | style       | Object                                                               | 自定义样式                                           |
 | key         | string                                                               | 消息框唯一标识，如果要手动移除消息框，必须填写该字段 |
+
+## 相关组件
+
+* [`<Popover>`](./popover) 弹出框
+* [`<Tooltip>`](./tooltip) 文字提示
+* [`<Message>`](./message) 消息框
+* [`<Alert`>](./alert) 提醒框

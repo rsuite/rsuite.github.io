@@ -2,7 +2,7 @@
 
 多项选择器中支持树形结构，用于复杂的数据结构进行多选。
 
-* `<CheckTreePicker>` 带 Checkbox 的树形组件
+* `<CheckTreePicker>` 选择器组件，在 TreePicker 节点上支持 Checkbox，用于多选 。
 
 ## 获取组件
 
@@ -53,3 +53,9 @@ import { CheckTreePicker } from 'rsuite';
 ```js
 Type Placement = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight' | 'leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom';
 ```
+
+## 相关组件
+
+* [`<CheckTree>`](./check-tree) 用于展示一个树结构数据，同时支持 Checkbox 选择。
+* [`<Tree>`](./tree) 用于展示一个树结构数据。
+* [`<TreePicker>`](./tree-picker) 选择器组件，树形单项选择器。

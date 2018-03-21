@@ -1,11 +1,10 @@
-# Popover 提示框 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/popover/index.md)
+# Popover 弹出框 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/popover/index.md)
 
-鼠标点击/移入的时候，弹出的提示框，用于显示更多内容。
+鼠标点击/移入的时候，弹出的弹出框，用于显示更多内容。
 
-* `<Popover>` 提示框。
+* `<Popover>` 弹出框。
 * `<Whisper>` 监听触发器，包裹被监听对象的外面，触发事件后通知到 `<Popover>` 展示出来。
 
-> 如果只需要代替系统默认的 title 提示，可以使用 `<Tooltip>` 组件。
 
 ## 获取组件
 
@@ -60,3 +59,11 @@ Type Placement =
   | 'leftBottom'
   | 'rightBottom';
 ```
+
+
+## 相关组件
+
+* [`<Tooltip>`](./tooltip) 文字提示
+* [`<Message>`](./message) 消息框
+* [`<Alert`>](./alert) 提醒框
+* [`<Notification>`](./notification) 通知框

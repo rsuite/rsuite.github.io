@@ -26,9 +26,6 @@ export default () => {
       }}
       context={context}
       examples={examples}
-    >
-    </ComponentExample>
+    />
   );
 };
-
-

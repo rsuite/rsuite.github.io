@@ -1,8 +1,6 @@
 # TreePicker 树形选择器 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/select-picker/index.md)
 
-* `<TreePicker>`
-
-> 当需要选项中支持 Checkbox，用于多选， 推荐使用 [`<CheckTreePicker>`](./check-tree-picker)
+* `<TreePicker>` 选择器组件，树形单项选择器。
 
 ## 获取组件
 
@@ -56,3 +54,9 @@ import { TreePicker } from 'rsuite';
 ```js
 Type Placement = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight' | 'leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom';
 ```
+
+## 相关组件
+
+* [`<CheckTreePicker>`](./check-tree-picker) 选择器组件，在 TreePicker 节点上支持 Checkbox，用于多选 。
+* [`<Tree>`](./tree) 用于展示一个树结构数据。
+* [`<CheckTree>`](./check-tree) 用于展示一个树结构数据，同时支持 Checkbox 选择。

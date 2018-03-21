@@ -28,3 +28,10 @@ import { Message } from 'rsuite';
 | showIcon    | boolean                                                | 显示图标             |
 | full        | boolean                                                | 撑满容器             |
 | classPrefix | string                                                 | className 前缀       |
+
+## 相关组件
+
+* [`<Popover>`](./popover) 弹出框
+* [`<Tooltip>`](./tooltip) 文字提示
+* [`<Alert`>](./alert) 提醒框
+* [`<Notification>`](./notification) 通知框

@@ -3,39 +3,40 @@
 `cascade` 属性可以设置 CheckTree 在选择的时候是否可考虑子父级的级联关系，默认为 `true`。
 
 <!--start-code-->
+
 ```js
-
-class Demo extends React.Component{
-  constructor(props){
+class Demo extends React.Component {
+  constructor(props) {
     super();
-    this.state={
-      cascade:false
-    }
+    this.state = {
+      cascade: false
+    };
   }
-  render(){
-
+  render() {
     return (
       <div>
-        Cascade: <Toggle
+        Cascade:{' '}
+        <Toggle
           checked={this.state.cascade}
-          onChange={(checked)=>{
+          onChange={checked => {
             this.setState({
-              cascade:checked
-            })
+              cascade: checked
+            });
           }}
         />
         <hr />
         <CheckTree
           defaultExpandAll
           cascade={this.state.cascade}
-          defaultValue={[2,38]}
+          defaultValue={[2, 38]}
           data={data}
         />
       </div>
-    )
+    );
   }
 }
 
 ReactDOM.render(<Demo />);
 ```
+
 <!--end-code-->

@@ -5,8 +5,6 @@
 * `<Tooltip>` 文字提示。
 * `<Whisper>` 监听触发器，包裹被监听对象的外面，触发事件后通知到 `<Tooltip>` 展示出来。
 
-> 如果需要在提示信息中显示复杂的内容，可以使用 `<Popover>` 代替 `<Tooltip>` 组件
-
 ## 获取组件
 
 ```js
@@ -63,3 +61,10 @@ Type Placement =
   | 'leftBottom'
   | 'rightBottom';
 ```
+
+## 相关组件
+
+* [`<Popover>`](./popover) 弹出框
+* [`<Message>`](./message) 消息框
+* [`<Alert`>](./alert) 提醒框
+* [`<Notification>`](./notification) 通知框

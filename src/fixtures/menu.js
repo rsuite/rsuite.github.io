@@ -73,19 +73,19 @@ export default [
       {
         id: 'popover',
         name: 'Popover',
-        title: '提示框',
+        title: '弹出框',
         components: ['Popover', 'Whisper']
       },
       {
         id: 'alert',
         name: 'Alert',
-        title: '提示框',
+        title: '提醒框',
         components: ['Alert']
       },
       {
         id: 'notification',
         name: 'Notification',
-        title: '信息通知框',
+        title: '通知框',
         components: ['Notification']
       },
       {
