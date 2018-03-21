@@ -7,13 +7,6 @@
     ]
   },
   {
-    "name": "add",
-    "id": "add",
-    "categories": [
-      "Hypers Icons"
-    ]
-  },
-  {
     "name": "Address Book",
     "id": "address-book",
     "categories": [
@@ -377,6 +370,16 @@
   {
     "name": "arrow-down",
     "id": "arrow-down",
+    "filter": [
+      "download"
+    ],
+    "categories": [
+      "Directional Icons"
+    ]
+  },
+  {
+    "name": "arrow-down",
+    "id": "arrow-down",
     "categories": [
       "Hypers Icons"
     ]
@@ -407,6 +410,27 @@
     ]
   },
   {
+    "name": "arrow-left",
+    "id": "arrow-left",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "arrow-left-line",
+    "id": "arrow-left-line",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "arrow-right",
+    "id": "arrow-right",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "arrow-right",
     "id": "arrow-right",
     "filter": [
@@ -418,10 +442,31 @@
     ]
   },
   {
+    "name": "arrow-right-line",
+    "id": "arrow-right-line",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "arrow-up",
     "id": "arrow-up",
     "categories": [
       "Directional Icons"
+    ]
+  },
+  {
+    "name": "arrow-up",
+    "id": "arrow-up",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "arrow-up-line",
+    "id": "arrow-up-line",
+    "categories": [
+      "Hypers Icons"
     ]
   },
   {
@@ -1252,6 +1297,19 @@
     ]
   },
   {
+    "name": "calendar",
+    "id": "calendar",
+    "filter": [
+      "date",
+      "time",
+      "when",
+      "event"
+    ],
+    "categories": [
+      "Web Application Icons"
+    ]
+  },
+  {
     "name": "Calendar Check Outlined",
     "id": "calendar-check-o",
     "filter": [
@@ -1606,6 +1664,13 @@
     ]
   },
   {
+    "name": "check",
+    "id": "check",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "Check Circle",
     "id": "check-circle",
     "filter": [
@@ -1882,13 +1947,6 @@
   {
     "name": "Close Circle",
     "id": "close-circle",
-    "categories": [
-      "Hypers Icons"
-    ]
-  },
-  {
-    "name": "Close2",
-    "id": "close2",
     "categories": [
       "Hypers Icons"
     ]
@@ -2221,6 +2279,13 @@
     ],
     "categories": [
       "Text Editor Icons"
+    ]
+  },
+  {
+    "name": "copy-o",
+    "id": "copy-o",
+    "categories": [
+      "Hypers Icons"
     ]
   },
   {
@@ -4390,26 +4455,6 @@
     ]
   },
   {
-    "name": "Info",
-    "id": "info",
-    "filter": [
-      "help",
-      "information",
-      "more",
-      "details"
-    ],
-    "categories": [
-      "Web Application Icons"
-    ]
-  },
-  {
-    "name": "info",
-    "id": "info",
-    "categories": [
-      "Hypers Icons"
-    ]
-  },
-  {
     "name": "Info Circle",
     "id": "info-circle",
     "filter": [
@@ -4423,8 +4468,14 @@
     ]
   },
   {
-    "name": "Info2",
-    "id": "info2",
+    "name": "info",
+    "id": "info",
+    "filter": [
+      "help",
+      "information",
+      "more",
+      "details"
+    ],
     "categories": [
       "Hypers Icons"
     ]
@@ -5527,6 +5578,34 @@
     ]
   },
   {
+    "name": "page-end",
+    "id": "page-end",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "page-next",
+    "id": "page-next",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "page-previous",
+    "id": "page-previous",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "page-top",
+    "id": "page-top",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "Pagelines",
     "id": "pagelines",
     "filter": [
@@ -5869,6 +5948,13 @@
     ],
     "categories": [
       "Web Application Icons"
+    ]
+  },
+  {
+    "name": "plus",
+    "id": "plus",
+    "categories": [
+      "Hypers Icons"
     ]
   },
   {
@@ -6466,13 +6552,6 @@
     ]
   },
   {
-    "name": "search",
-    "id": "search",
-    "categories": [
-      "Hypers Icons"
-    ]
-  },
-  {
     "name": "Search",
     "id": "search",
     "filter": [
@@ -6483,6 +6562,13 @@
     ],
     "categories": [
       "Web Application Icons"
+    ]
+  },
+  {
+    "name": "search",
+    "id": "search",
+    "categories": [
+      "Hypers Icons"
     ]
   },
   {
@@ -6542,6 +6628,20 @@
   {
     "name": "sequence",
     "id": "sequence",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "sequence-down",
+    "id": "sequence-down",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "sequence-up",
+    "id": "sequence-up",
     "categories": [
       "Hypers Icons"
     ]
@@ -8559,6 +8659,13 @@
     ]
   },
   {
+    "name": "warning",
+    "id": "warning",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "Exclamation Triangle",
     "id": "warning",
     "filter": [
@@ -8573,13 +8680,6 @@
     ],
     "categories": [
       "Web Application Icons"
-    ]
-  },
-  {
-    "name": "warning",
-    "id": "warning",
-    "categories": [
-      "Hypers Icons"
     ]
   },
   {
