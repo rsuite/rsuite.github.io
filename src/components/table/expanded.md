@@ -125,3 +125,16 @@ ReactDOM.render(<ExpandedTable />);
 ```
 
 <!--end-code-->
+
+要实现一个可以展开的 Table ,需要以下几个属性的组合完成。
+
+**第一步：给 Table 设置属性**
+
+* renderRowExpanded(rowData)=>React.Node 用来返回需要在展开面板中渲染的内容
+* rowExpandedHeight 设置可展开区域的高度， 默认是 100
+* expandedRowKeys（受控） 和 defaultExpandedRowKeys 用来配置需要展开的行。需要注意的是这两个属性接收的参数是一个的数组，数组中是 rowKey。
+* rowKey 给每一行数据对一个唯一 key , 对应 data 中的一个唯一值的 key。
+
+**第二步：自定义 Cell**
+
+自定义一个 Cell， 在内部放一个可以操作按钮，用于操作 expandedRowKeys 中的值。
