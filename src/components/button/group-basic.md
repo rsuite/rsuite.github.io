@@ -6,9 +6,9 @@
 const CustomButtonGroup = ({ appearance }) => (
   <ButtonToolbar>
     <ButtonGroup>
-      <Button appearance={appearance}>Top</Button>
-      <Button appearance={appearance}>Middle</Button>
-      <Button appearance={appearance}>Bottom</Button>
+      <Button appearance={appearance}>Left</Button>
+      <Button appearance={appearance}>Center</Button>
+      <Button appearance={appearance}>Right</Button>
     </ButtonGroup>
   </ButtonToolbar>
 );
