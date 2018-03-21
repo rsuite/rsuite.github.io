@@ -5,7 +5,7 @@
 ```js
 const instance = (
   <Panel header="Panel title" collapsible bordered>
-    <Paragraph size="short" />
+    <Paragraph />
   </Panel>
 );
 ReactDOM.render(instance);

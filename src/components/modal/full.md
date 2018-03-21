@@ -1,9 +1,9 @@
 ### 全屏
 
 <!--start-code-->
-```js
 
-class Demo extends React.Component{
+```js
+class Demo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -22,31 +22,32 @@ class Demo extends React.Component{
     return (
       <div className="modal-container">
         <ButtonToolbar>
-          <Button size="lg" onClick={this.open}>Open</Button>
+          <Button size="lg" onClick={this.open}>
+            Open
+          </Button>
         </ButtonToolbar>
-        <Modal
-          full
-          show={this.state.show}
-          onHide={this.close}
-          >
+        <Modal full show={this.state.show} onHide={this.close}>
           <Modal.Header>
             <Modal.Title>Modal Title</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Paragraph count={2} />
+            <Paragraph rows={8} />
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.close} appearance="primary">Confirm</Button>
-            <Button onClick={this.close} appearance="subtle">Cancel</Button>
+            <Button onClick={this.close} appearance="primary">
+              Confirm
+            </Button>
+            <Button onClick={this.close} appearance="subtle">
+              Cancel
+            </Button>
           </Modal.Footer>
         </Modal>
-
       </div>
     );
   }
-
 }
 
 ReactDOM.render(<Demo />);
 ```
+
 <!--end-code-->

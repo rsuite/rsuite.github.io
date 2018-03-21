@@ -5,9 +5,9 @@
 ```js
 const instance = (
   <div>
-    <Paragraph size="short" />
+    <Paragraph type="media" />
     <Divider>Divider</Divider>
-    <Paragraph size="short" />
+    <Paragraph type="media" />
   </div>
 );
 ReactDOM.render(instance);

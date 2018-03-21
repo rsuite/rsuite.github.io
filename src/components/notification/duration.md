@@ -7,7 +7,7 @@ function open() {
   Notification.open({
     title: 'Notify',
     duration: 20000,
-    description: <Paragraph size="short" />
+    description: <Paragraph style={{ width: 320 }} rows={3} />
   });
 }
 
