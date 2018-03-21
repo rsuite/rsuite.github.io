@@ -7,6 +7,13 @@
     ]
   },
   {
+    "name": "add",
+    "id": "add",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "Address Book",
     "id": "address-book",
     "categories": [
@@ -370,11 +377,15 @@
   {
     "name": "arrow-down",
     "id": "arrow-down",
-    "filter": [
-      "download"
-    ],
     "categories": [
-      "Directional Icons"
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "arrow-down-line",
+    "id": "arrow-down-line",
+    "categories": [
+      "Hypers Icons"
     ]
   },
   {
@@ -511,6 +522,13 @@
     ],
     "categories": [
       "Web Application Icons"
+    ]
+  },
+  {
+    "name": "attachment",
+    "id": "attachment",
+    "categories": [
+      "Hypers Icons"
     ]
   },
   {
@@ -1229,14 +1247,8 @@
   {
     "name": "calendar",
     "id": "calendar",
-    "filter": [
-      "date",
-      "time",
-      "when",
-      "event"
-    ],
     "categories": [
-      "Web Application Icons"
+      "Hypers Icons"
     ]
   },
   {
@@ -1609,6 +1621,13 @@
     ]
   },
   {
+    "name": "check-circle",
+    "id": "check-circle",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "Check Circle Outlined",
     "id": "check-circle-o",
     "filter": [
@@ -1854,6 +1873,13 @@
     ]
   },
   {
+    "name": "close",
+    "id": "close",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "Close Circle",
     "id": "close-circle",
     "categories": [
@@ -1997,6 +2023,20 @@
   {
     "name": "Coincide",
     "id": "coincide",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "collasped",
+    "id": "collasped",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "collasped-o",
+    "id": "collasped-o",
     "categories": [
       "Hypers Icons"
     ]
@@ -2799,6 +2839,13 @@
     ],
     "categories": [
       "Video Player Icons"
+    ]
+  },
+  {
+    "name": "expand-o",
+    "id": "expand-o",
+    "categories": [
+      "Hypers Icons"
     ]
   },
   {
@@ -4116,6 +4163,13 @@
     ]
   },
   {
+    "name": "help-o",
+    "id": "help-o",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "History",
     "id": "history",
     "categories": [
@@ -4346,6 +4400,13 @@
     ],
     "categories": [
       "Web Application Icons"
+    ]
+  },
+  {
+    "name": "info",
+    "id": "info",
+    "categories": [
+      "Hypers Icons"
     ]
   },
   {
@@ -6097,6 +6158,20 @@
     ]
   },
   {
+    "name": "reload",
+    "id": "reload",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "remind",
+    "id": "remind",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "Times",
     "id": "remove",
     "aliases": [
@@ -6391,6 +6466,13 @@
     ]
   },
   {
+    "name": "search",
+    "id": "search",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "Search",
     "id": "search",
     "filter": [
@@ -6455,6 +6537,13 @@
     ],
     "categories": [
       "Web Application Icons"
+    ]
+  },
+  {
+    "name": "sequence",
+    "id": "sequence",
+    "categories": [
+      "Hypers Icons"
     ]
   },
   {
@@ -7356,6 +7445,17 @@
     ]
   },
   {
+    "name": "Target",
+    "id": "target",
+    "filter": [
+      "target",
+      "广告跟踪"
+    ],
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "Tasks",
     "id": "tasks",
     "filter": [
@@ -7381,17 +7481,6 @@
     "categories": [
       "Web Application Icons",
       "Transportation Icons"
-    ]
-  },
-  {
-    "name": "Target",
-    "id": "target",
-    "filter": [
-      "target",
-      "广告跟踪"
-    ],
-    "categories": [
-      "Hypers Icons"
     ]
   },
   {
@@ -8487,6 +8576,35 @@
     ]
   },
   {
+    "name": "warning",
+    "id": "warning",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "Weapp",
+    "id": "weapp",
+    "filter": [
+      "微信小程序",
+      "wechatapp"
+    ],
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "Web",
+    "id": "web",
+    "filter": [
+      "项目类型",
+      "project type"
+    ],
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "Weixin (WeChat)",
     "id": "wechat",
     "aliases": [
@@ -8621,28 +8739,6 @@
     ],
     "categories": [
       "Currency Icons"
-    ]
-  },
-  {
-    "name": "Web",
-    "id": "web",
-    "filter": [
-      "项目类型",
-      "project type"
-    ],
-    "categories": [
-      "Hypers Icons"
-    ]
-  },
-  {
-    "name": "Weapp",
-    "id": "weapp",
-    "filter": [
-      "微信小程序",
-      "wechatapp"
-    ],
-    "categories": [
-      "Hypers Icons"
     ]
   },
   {
