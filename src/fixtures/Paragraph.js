@@ -8,7 +8,9 @@ const images = {
 
 export default ({ rows = 4, type = 'text', width = '100%', style, children, ...props }) => (
   <div style={{ width, ...style }} className="paragraph">
-    <Placeholder type={type} rows={rows} {...props} />
+    <Placeholder type={type} rows={rows} ready={false} {...props}>
+      <span />
+    </Placeholder>
     {children}
   </div>
 );

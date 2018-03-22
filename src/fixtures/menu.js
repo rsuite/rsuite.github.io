@@ -352,6 +352,12 @@ export default [
         name: 'Schema',
         title: '数据模型',
         apis: ['Schema.Model', 'Schema.Types']
+      },
+      {
+        id: 'animation',
+        name: 'Animation',
+        title: '动画',
+        apis: ['Transition', 'Fade', 'Collapse']
       }
     ]
   },
