@@ -1,5 +1,16 @@
 {
-  "presets": ["env", "stage-0", "react"],
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": ["last 2 versions"]
+        }
+      }
+    ],
+    "stage-0",
+    "react"
+  ],
   "plugins": [
     "lodash",
     "transform-class-properties",

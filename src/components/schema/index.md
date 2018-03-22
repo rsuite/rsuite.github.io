@@ -31,7 +31,7 @@ const checkResult = userModel.check({
 console.log(checkResult);
 ```
 
-Out: `checkResult`
+Output: `checkResult`
 
 ```js
 {
@@ -91,18 +91,18 @@ const myModel = Schema.Model({
 });
 ```
 
-<br/>
-<br/>
-## `Schema.Types`
-------
-- `StringType`
-- `NumberType`
-- `ArrayType`
-- `DateType`
-- `ObjectType`
-- `BooleanType`
+## Schema.Types
 
-### `StringType`
+---
+
+* `StringType`
+* `NumberType`
+* `ArrayType`
+* `DateType`
+* `ObjectType`
+* `BooleanType`
+
+### StringType
 
 * isRequired()
 
@@ -196,7 +196,7 @@ StringType().addRule(value => {
 }, '请输入合法字符');
 ```
 
-### `NumberType`
+### NumberType
 
 * isRequired()
 
@@ -248,7 +248,7 @@ NumberType().addRule(value => {
 }, '请输入有效的数字');
 ```
 
-### `ArrayType`
+### ArrayType
 
 * isRequired()
 
@@ -294,7 +294,7 @@ ArrayType().addRule(value => {
 }, '好事成双');
 ```
 
-### `DateType`
+### DateType
 
 * isRequired()
 
@@ -332,7 +332,7 @@ DateType().addRule(value => {
 }, '只能选择周二');
 ```
 
-### `ObjectType`
+### ObjectType
 
 * isRequired()
 
@@ -360,7 +360,7 @@ ObjectType().addRule(value => {
 }, 'id 与 email 必须有一个不能为空');
 ```
 
-### `BooleanType`
+### BooleanType
 
 * isRequired()
 

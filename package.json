@@ -10,7 +10,7 @@
     "dev": "webpack-dev-server --mode development --progress --hot",
     "dev-styles": "STYLE_DEBUG=STYLE npm run dev",
     "dev-styles-source": "STYLE_DEBUG=SOURCE npm run dev",
-    "build": "rm -R dist && NODE_ENV=production  webpack --mode production --progress && cp -R public/* ./dist/ ",
+    "build": "rm -rf dist && NODE_ENV=production  webpack --mode production --progress && cp -R public/* ./dist/ ",
     "test": "karma start"
   },
   "keywords": [
@@ -39,7 +39,8 @@
     "rsuite-page-nav": "^1.1.5",
     "rsuite-table": "^3.0.0-next.3",
     "rsuite-uploader": "^3.0.0-next",
-    "rsuite-utils": "^1.0.0-next.7"
+    "rsuite-utils": "^1.0.0-next.7",
+    "whatwg-fetch": "^2.0.3"
   },
   "peerDependencies": {
     "react": "^0.14.9 || >=15.3.0",

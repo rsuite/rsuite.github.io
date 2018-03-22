@@ -33,13 +33,15 @@ module.exports = {
     contentBase: path.join(__dirname, 'public'),
     disableHostCheck: true,
     historyApiFallback: true,
+    host: '0.0.0.0',
     port: 3200
   },
   entry: {
+    polyfills: './src/polyfills.js',
     app: './src/index.js'
   },
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
   },
