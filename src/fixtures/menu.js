@@ -358,6 +358,12 @@ export default [
         name: 'Animation',
         title: '动画',
         apis: ['Transition', 'Fade', 'Collapse']
+      },
+      {
+        id: 'portal',
+        name: 'Portal',
+        title: '入口',
+        apis: ['Portal']
       }
     ]
   },
