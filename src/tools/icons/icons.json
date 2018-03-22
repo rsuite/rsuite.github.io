@@ -378,6 +378,20 @@
     ]
   },
   {
+    "name": "arrow-down",
+    "id": "arrow-down",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "arrow-down-line",
+    "id": "arrow-down-line",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "Arrow Down2",
     "id": "arrow-down2",
     "categories": [
@@ -396,6 +410,27 @@
     ]
   },
   {
+    "name": "arrow-left",
+    "id": "arrow-left",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "arrow-left-line",
+    "id": "arrow-left-line",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "arrow-right",
+    "id": "arrow-right",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "arrow-right",
     "id": "arrow-right",
     "filter": [
@@ -407,10 +442,31 @@
     ]
   },
   {
+    "name": "arrow-right-line",
+    "id": "arrow-right-line",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "arrow-up",
     "id": "arrow-up",
     "categories": [
       "Directional Icons"
+    ]
+  },
+  {
+    "name": "arrow-up",
+    "id": "arrow-up",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "arrow-up-line",
+    "id": "arrow-up-line",
+    "categories": [
+      "Hypers Icons"
     ]
   },
   {
@@ -511,6 +567,13 @@
     ],
     "categories": [
       "Web Application Icons"
+    ]
+  },
+  {
+    "name": "attachment",
+    "id": "attachment",
+    "categories": [
+      "Hypers Icons"
     ]
   },
   {
@@ -1229,6 +1292,13 @@
   {
     "name": "calendar",
     "id": "calendar",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "calendar",
+    "id": "calendar",
     "filter": [
       "date",
       "time",
@@ -1594,6 +1664,13 @@
     ]
   },
   {
+    "name": "check",
+    "id": "check",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "Check Circle",
     "id": "check-circle",
     "filter": [
@@ -1606,6 +1683,13 @@
     ],
     "categories": [
       "Web Application Icons"
+    ]
+  },
+  {
+    "name": "check-circle",
+    "id": "check-circle",
+    "categories": [
+      "Hypers Icons"
     ]
   },
   {
@@ -1854,15 +1938,15 @@
     ]
   },
   {
-    "name": "Close Circle",
-    "id": "close-circle",
+    "name": "close",
+    "id": "close",
     "categories": [
       "Hypers Icons"
     ]
   },
   {
-    "name": "Close2",
-    "id": "close2",
+    "name": "Close Circle",
+    "id": "close-circle",
     "categories": [
       "Hypers Icons"
     ]
@@ -1997,6 +2081,20 @@
   {
     "name": "Coincide",
     "id": "coincide",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "collasped",
+    "id": "collasped",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "collasped-o",
+    "id": "collasped-o",
     "categories": [
       "Hypers Icons"
     ]
@@ -2181,6 +2279,13 @@
     ],
     "categories": [
       "Text Editor Icons"
+    ]
+  },
+  {
+    "name": "copy-o",
+    "id": "copy-o",
+    "categories": [
+      "Hypers Icons"
     ]
   },
   {
@@ -2799,6 +2904,13 @@
     ],
     "categories": [
       "Video Player Icons"
+    ]
+  },
+  {
+    "name": "expand-o",
+    "id": "expand-o",
+    "categories": [
+      "Hypers Icons"
     ]
   },
   {
@@ -4116,6 +4228,13 @@
     ]
   },
   {
+    "name": "help-o",
+    "id": "help-o",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "History",
     "id": "history",
     "categories": [
@@ -4336,19 +4455,6 @@
     ]
   },
   {
-    "name": "Info",
-    "id": "info",
-    "filter": [
-      "help",
-      "information",
-      "more",
-      "details"
-    ],
-    "categories": [
-      "Web Application Icons"
-    ]
-  },
-  {
     "name": "Info Circle",
     "id": "info-circle",
     "filter": [
@@ -4362,8 +4468,14 @@
     ]
   },
   {
-    "name": "Info2",
-    "id": "info2",
+    "name": "info",
+    "id": "info",
+    "filter": [
+      "help",
+      "information",
+      "more",
+      "details"
+    ],
     "categories": [
       "Hypers Icons"
     ]
@@ -5298,6 +5410,13 @@
     ]
   },
   {
+    "name": "more",
+    "id": "more",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "Graduation Cap",
     "id": "mortar-board",
     "aliases": [
@@ -5463,6 +5582,34 @@
     ],
     "categories": [
       "Text Editor Icons"
+    ]
+  },
+  {
+    "name": "page-end",
+    "id": "page-end",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "page-next",
+    "id": "page-next",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "page-previous",
+    "id": "page-previous",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "page-top",
+    "id": "page-top",
+    "categories": [
+      "Hypers Icons"
     ]
   },
   {
@@ -5813,6 +5960,13 @@
   {
     "name": "plus",
     "id": "plus",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "plus",
+    "id": "plus",
     "filter": [
       "add",
       "new",
@@ -6094,6 +6248,20 @@
     "id": "registered",
     "categories": [
       "Web Application Icons"
+    ]
+  },
+  {
+    "name": "reload",
+    "id": "reload",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "remind",
+    "id": "remind",
+    "categories": [
+      "Hypers Icons"
     ]
   },
   {
@@ -6404,6 +6572,13 @@
     ]
   },
   {
+    "name": "search",
+    "id": "search",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "Search Minus",
     "id": "search-minus",
     "filter": [
@@ -6455,6 +6630,27 @@
     ],
     "categories": [
       "Web Application Icons"
+    ]
+  },
+  {
+    "name": "sequence",
+    "id": "sequence",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "sequence-down",
+    "id": "sequence-down",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "sequence-up",
+    "id": "sequence-up",
+    "categories": [
+      "Hypers Icons"
     ]
   },
   {
@@ -7356,6 +7552,17 @@
     ]
   },
   {
+    "name": "Target",
+    "id": "target",
+    "filter": [
+      "target",
+      "广告跟踪"
+    ],
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "Tasks",
     "id": "tasks",
     "filter": [
@@ -7381,17 +7588,6 @@
     "categories": [
       "Web Application Icons",
       "Transportation Icons"
-    ]
-  },
-  {
-    "name": "Target",
-    "id": "target",
-    "filter": [
-      "target",
-      "广告跟踪"
-    ],
-    "categories": [
-      "Hypers Icons"
     ]
   },
   {
@@ -8470,6 +8666,13 @@
     ]
   },
   {
+    "name": "warning",
+    "id": "warning",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "Exclamation Triangle",
     "id": "warning",
     "filter": [
@@ -8484,6 +8687,28 @@
     ],
     "categories": [
       "Web Application Icons"
+    ]
+  },
+  {
+    "name": "Weapp",
+    "id": "weapp",
+    "filter": [
+      "微信小程序",
+      "wechatapp"
+    ],
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
+    "name": "Web",
+    "id": "web",
+    "filter": [
+      "项目类型",
+      "project type"
+    ],
+    "categories": [
+      "Hypers Icons"
     ]
   },
   {
@@ -8621,28 +8846,6 @@
     ],
     "categories": [
       "Currency Icons"
-    ]
-  },
-  {
-    "name": "Web",
-    "id": "web",
-    "filter": [
-      "项目类型",
-      "project type"
-    ],
-    "categories": [
-      "Hypers Icons"
-    ]
-  },
-  {
-    "name": "Weapp",
-    "id": "weapp",
-    "filter": [
-      "微信小程序",
-      "wechatapp"
-    ],
-    "categories": [
-      "Hypers Icons"
     ]
   },
   {
