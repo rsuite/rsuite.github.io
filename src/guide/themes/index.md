@@ -29,7 +29,7 @@
 
 ## 辅助色设置
 
-信息，成功，警告，错误分别对应的颜色，修改后影响到 [Message](../components/message) 等需要显示状态的组件。
+信息，成功，警告，错误分别对应的颜色，修改后影响到 [Message](../components/message)，[Notification](../components/notification) 等需要显示状态的组件。
 
 ```less
 @info-color: #2196f3;

@@ -5,7 +5,7 @@
 ```js
 const instance = (
   <Panel bordered>
-    <Paragraph size="short" />
+    <Paragraph />
   </Panel>
 );
 

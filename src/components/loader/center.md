@@ -4,7 +4,7 @@
 <!--start-code-->
 ```js
 const instance = (
-  <Paragraph>
+  <Paragraph rows={8}>
     <Loader center content="loading" />
   </Paragraph>
 );

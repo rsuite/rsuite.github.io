@@ -6,13 +6,13 @@
 const instance = (
   <PanelGroup>
     <Panel header="Panel 1">
-      <Paragraph size="short" />
+      <Paragraph />
     </Panel>
     <Panel header="Panel 2">
-      <Paragraph size="short" />
+      <Paragraph />
     </Panel>
     <Panel header="Panel 3">
-      <Paragraph size="short" />
+      <Paragraph />
     </Panel>
   </PanelGroup>
 );

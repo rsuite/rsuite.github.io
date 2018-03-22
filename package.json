@@ -10,12 +10,20 @@
     "dev": "webpack-dev-server --mode development --progress --hot",
     "dev-styles": "STYLE_DEBUG=STYLE npm run dev",
     "dev-styles-source": "STYLE_DEBUG=SOURCE npm run dev",
-    "build":
-      "rm -R dist && NODE_ENV=production  webpack --mode production --progress && cp -R public/* ./dist/ ",
+    "build": "rm -R dist && NODE_ENV=production  webpack --mode production --progress && cp -R public/* ./dist/ ",
     "test": "karma start"
   },
-  "keywords": ["react", "suite", "rsuite", "react-component"],
-  "files": ["CHANGELOG.md", "lib", "src"],
+  "keywords": [
+    "react",
+    "suite",
+    "rsuite",
+    "react-component"
+  ],
+  "files": [
+    "CHANGELOG.md",
+    "lib",
+    "src"
+  ],
   "author": "Simon Guo <simonguo.2009@gmail.com>",
   "license": "MIT",
   "repository": {
@@ -25,6 +33,7 @@
   "dependencies": {
     "moment": "^2.20.1",
     "react-json-tree": "^0.11.0",
+    "react-placeholder": "^2.0.0",
     "react-quill": "^1.2.6",
     "rsuite": "^3.0.0-next.12",
     "rsuite-page-nav": "^1.1.5",
@@ -94,7 +103,7 @@
     "postcss-loader": "^2.0.9",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
-    "react-code-view": "^1.1.7",
+    "react-code-view": "^1.1.8",
     "react-color": "^2.13.8",
     "react-dom": "^16.2.0",
     "react-hot-loader": "^4.0.0",

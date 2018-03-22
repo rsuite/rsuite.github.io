@@ -8,13 +8,13 @@
 const instance = (
   <PanelGroup accordion defaultActiveKey={1} bordered>
     <Panel header="Panel 1" eventKey={1}>
-      <Paragraph size="short" />
+      <Paragraph />
     </Panel>
     <Panel header="Panel 2" eventKey={2}>
-      <Paragraph size="short" />
+      <Paragraph />
     </Panel>
     <Panel header="Panel 3" eventKey={3}>
-      <Paragraph size="short" />
+      <Paragraph />
     </Panel>
   </PanelGroup>
 );

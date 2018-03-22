@@ -34,8 +34,17 @@ const NameCell = ({ rowData, dataKey, ...props }) => {
 
 const ImageCell = ({ rowData, dataKey, ...props }) => (
   <Cell {...props} style={{ padding: 0 }}>
-    <div style={{ width: 46, height: 46, background: '#f5f5f5' }}>
-      <img src={rowData[dataKey]} width="46" />
+    <div
+      style={{
+        width: 44,
+        height: 44,
+        background: '#f5f5f5',
+        borderRadius: 22,
+        overflow: `hidden`,
+        display: 'inline-block'
+      }}
+    >
+      <img src={rowData[dataKey]} width="44" />
     </div>
   </Cell>
 );
@@ -131,7 +140,7 @@ class CustomColumnTable extends React.Component {
             </HeaderCell>
             <CheckCell dataKey="id" checkedKeys={checkedKeys} onChange={this.handleCheck} />
           </Column>
-          <Column width={80}>
+          <Column width={80} align="center">
             <HeaderCell>Avartar</HeaderCell>
             <ImageCell dataKey="avartar" />
           </Column>

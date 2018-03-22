@@ -32,7 +32,7 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | height                 | number`(200)`                           | 高度                                                         |
 | rowHeight              | number`(46)`                            | 行高                                                         |
 | rowKey                 | string `('key')`                        | 每一个行对应的 `data` 中的唯一 `key`                         |
-| rowExpandedHeight      | number `(100)`                          | 可展开行的展开区域的高度                                     |
+| rowExpandedHeight      | number `(100)`                          | 设置可展开区域的高度                                     |
 | headerHeight           | number`(40)`                            | 表头高度                                                     |
 | isTree                 | boolean                                 | 是否展示为树表格                                             |
 | defaultExpandAllRows   | boolean                                 | 默认展开所有节点                                             |

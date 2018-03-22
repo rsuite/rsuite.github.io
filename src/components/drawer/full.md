@@ -1,8 +1,9 @@
 ### 全屏
-<!--start-code-->
-```js
 
-class Demo extends React.Component{
+<!--start-code-->
+
+```js
+class Demo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,62 +24,47 @@ class Demo extends React.Component{
     });
   }
   render() {
-
     const { placement, show } = this.state;
 
     return (
       <div>
-
         <ButtonToolbar>
-          <IconButton
-            icon={<Icon icon="angle-left"  />}
-            onClick={()=>this.toggleDrawer('left')}
-          >
+          <IconButton icon={<Icon icon="angle-left" />} onClick={() => this.toggleDrawer('left')}>
             Left
           </IconButton>
-          <IconButton
-            icon={<Icon icon="angle-right"  />}
-            onClick={()=>this.toggleDrawer('right')}
-          >
+          <IconButton icon={<Icon icon="angle-right" />} onClick={() => this.toggleDrawer('right')}>
             Right
           </IconButton>
-          <IconButton
-            icon={<Icon icon="angle-up"  />}
-            onClick={()=>this.toggleDrawer('top')}
-          >
+          <IconButton icon={<Icon icon="angle-up" />} onClick={() => this.toggleDrawer('top')}>
             Top
           </IconButton>
-          <IconButton
-            icon={<Icon icon="angle-down"  />}
-            onClick={()=>this.toggleDrawer('bottom')}
-          >
+          <IconButton icon={<Icon icon="angle-down" />} onClick={() => this.toggleDrawer('bottom')}>
             Bottom
           </IconButton>
         </ButtonToolbar>
 
-        <Drawer
-          full
-          placement={placement}
-          show={show}
-          onHide={this.close}
-        >
+        <Drawer full placement={placement} show={show} onHide={this.close}>
           <Drawer.Header>
             <Drawer.Title>Drawer Title</Drawer.Title>
           </Drawer.Header>
           <Drawer.Body>
-            <Paragraph count={1} />
+            <Paragraph rows={8} />
           </Drawer.Body>
           <Drawer.Footer>
-            <Button onClick={this.close} appearance="primary">Confirm</Button>
-            <Button onClick={this.close} appearance="subtle">Cancel</Button>
+            <Button onClick={this.close} appearance="primary">
+              Confirm
+            </Button>
+            <Button onClick={this.close} appearance="subtle">
+              Cancel
+            </Button>
           </Drawer.Footer>
         </Drawer>
       </div>
     );
   }
-
 }
 
 ReactDOM.render(<Demo />);
 ```
+
 <!--end-code-->

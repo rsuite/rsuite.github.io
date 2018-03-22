@@ -22,6 +22,10 @@ class PaginationBasic extends React.Component {
     return (
       <div>
         <Pagination
+          prev
+          last
+          next
+          first
           size="lg"
           pages={10}
           activePage={this.state.activePage}
@@ -29,6 +33,10 @@ class PaginationBasic extends React.Component {
         />
         <Divider />
         <Pagination
+          prev
+          last
+          next
+          first
           size="md"
           pages={10}
           activePage={this.state.activePage}
@@ -36,6 +44,10 @@ class PaginationBasic extends React.Component {
         />
         <Divider />
         <Pagination
+          prev
+          last
+          next
+          first
           size="sm"
           pages={10}
           activePage={this.state.activePage}

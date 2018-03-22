@@ -3,12 +3,13 @@
 <!--start-code-->
 
 ```js
+const styles = { marginBottom: 10 };
 const instance = (
   <div style={{ width: 160 }}>
-    <InputNumber size="lg" />
-    <InputNumber size="md" />
-    <InputNumber size="sm" />
-    <InputNumber size="xs" />
+    <InputNumber size="lg" style={styles} />
+    <InputNumber size="md" style={styles} />
+    <InputNumber size="sm" style={styles} />
+    <InputNumber size="xs" style={styles} />
   </div>
 );
 ReactDOM.render(instance);
