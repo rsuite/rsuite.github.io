@@ -5410,6 +5410,13 @@
     ]
   },
   {
+    "name": "more",
+    "id": "more",
+    "categories": [
+      "Hypers Icons"
+    ]
+  },
+  {
     "name": "Graduation Cap",
     "id": "mortar-board",
     "aliases": [
