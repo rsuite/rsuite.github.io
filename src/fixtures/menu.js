@@ -364,6 +364,12 @@ export default [
         name: 'Portal',
         title: '入口',
         apis: ['Portal']
+      },
+      {
+        id: 'dom-helper',
+        name: 'DOMHelper',
+        title: 'DOM 助手',
+        apis: ['DOMHelper']
       }
     ]
   },
