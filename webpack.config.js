@@ -3,7 +3,6 @@ const fs = require('fs');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
 const markdownRenderer = require('react-markdown-reader').renderer;
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
@@ -33,6 +32,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'public'),
     disableHostCheck: true,
     historyApiFallback: true,
+    compress: true,
     host: '0.0.0.0',
     port: 3200
   },

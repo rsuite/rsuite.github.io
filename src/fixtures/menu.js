@@ -118,6 +118,12 @@ export default [
         title: '分割线',
         components: ['Divider']
       },
+      {
+        id: 'progress',
+        name: 'Progress',
+        title: '进度条',
+        components: ['Progress.Line', 'Progress.Circle']
+      },
 
       {
         group: true,
@@ -166,12 +172,6 @@ export default [
         name: 'Breadcrumb',
         title: '面包屑',
         components: ['Pagination']
-      },
-      {
-        id: 'progress',
-        name: 'Progress',
-        title: '进度条',
-        components: ['Progress.Line', 'Progress.Circle']
       },
       {
         group: true,
