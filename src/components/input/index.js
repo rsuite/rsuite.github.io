@@ -5,7 +5,10 @@ import {
   InputGroup,
   Icon,
   Whisper,
-  Tooltip
+  Tooltip,
+  Grid,
+  Row,
+  Col
 } from '../../rsuiteSource';
 
 
@@ -29,7 +32,10 @@ export default () => {
         InputGroup,
         Icon,
         Whisper,
-        Tooltip
+        Tooltip,
+        Grid,
+        Row,
+        Col
       }}
       context={context}
       examples={examples}
