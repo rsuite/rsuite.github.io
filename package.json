@@ -10,20 +10,13 @@
     "dev": "webpack-dev-server --mode development --progress --hot",
     "dev-styles": "STYLE_DEBUG=STYLE npm run dev",
     "dev-styles-source": "STYLE_DEBUG=SOURCE npm run dev",
-    "build": "rm -rf dist && NODE_ENV=production  webpack --mode production --progress && cp -R public/* ./dist/ ",
-    "test": "karma start"
+    "build":
+      "rm -rf dist && NODE_ENV=production  webpack --mode production --progress && cp -R public/* ./dist/ ",
+    "test": "karma start",
+    "babel": "rm -rf lib && babel src/App.js --out-dir lib"
   },
-  "keywords": [
-    "react",
-    "suite",
-    "rsuite",
-    "react-component"
-  ],
-  "files": [
-    "CHANGELOG.md",
-    "lib",
-    "src"
-  ],
+  "keywords": ["react", "suite", "rsuite", "react-component"],
+  "files": ["CHANGELOG.md", "lib", "src"],
   "author": "Simon Guo <simonguo.2009@gmail.com>",
   "license": "MIT",
   "repository": {
@@ -53,6 +46,7 @@
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.2",
     "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-import": "^1.6.7",
     "babel-plugin-lodash": "^3.3.2",
     "babel-plugin-rsuite": "^1.0.0-beta",
     "babel-plugin-transform-class-properties": "^6.24.1",

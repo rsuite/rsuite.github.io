@@ -1,4 +1,4 @@
-### Style 样式
+### style
 
 ```typescript
 addStyle: (node: HTMLElement, property: string, value: string) => void;
@@ -9,6 +9,9 @@ removeStyle: (node: HTMLElement, propertys: Array<string>) => void;
 
 getStyle: (node: HTMLElement, property: string) => string;
 getStyle: (node: HTMLElement) => Object;
+
+
+translateDOMPositionXY: (style: Object, x: number, y: number) => Object;
 
 ```
 

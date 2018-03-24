@@ -18,7 +18,14 @@
     "add-module-exports",
     "react-hot-loader/babel",
     "transform-dev",
-    "rsuite"
+    [
+      "import",
+      {
+        "libraryName": "rsuite",
+        "libraryDirectory": "lib",
+        "camel2DashComponentName": false
+      }
+    ]
   ],
   "env": {
     "production": {

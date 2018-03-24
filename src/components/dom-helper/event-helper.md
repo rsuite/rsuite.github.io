@@ -1,4 +1,4 @@
-### Event 事件
+### events
 
 ```typescript
 on: (target: HTMLElement, eventName: string, listener: Function, capture: boolean = false) => {off: Function};

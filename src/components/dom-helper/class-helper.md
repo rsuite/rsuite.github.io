@@ -1,4 +1,4 @@
-### CSS Class
+### class
 
 ```typescript
 hasClass: (node: HTMLElement, className: string) => boolean;

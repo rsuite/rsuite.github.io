@@ -1,4 +1,4 @@
-### Scroll 滚动
+### scroll
 
 ```typescript
 scrollLeft: (node: HTMLElement) => number;
