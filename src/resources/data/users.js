@@ -8,9 +8,6 @@ export default [
     value: 'Kariane',
     role: 'Master'
   }, {
-    label: 'Gai',
-    value: 'Gai',
-  }, {
     label: 'Louisa',
     value: 'Louisa',
     role: 'Master'
