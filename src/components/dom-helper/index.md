@@ -1,6 +1,13 @@
 # DOMHelper DOM 助手[<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/dom-helper/index.md)
 
-在 React 项目中，我们不推荐直接操作 DOM ， 但是在 RSUITE 组件内部，为了一些考虑，不得不直接操作 DOM， 如果你也有类似的需求，可以直接使用它们。
+在 React 项目中，我们不推荐直接操作 DOM ， 但是在 RSUITE 组件内部，为了一些考虑不得不直接操作 DOM， 如果你也有类似的需求，可以直接使用这组方法。
+
+获取方法
+
+```js
+import { DOMHelper } from 'rsuite';
+const { addClass } = DOMHelper;
+```
 
 <!--{demo}-->
 
