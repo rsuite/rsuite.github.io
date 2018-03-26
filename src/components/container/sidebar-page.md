@@ -99,9 +99,9 @@ class Page extends React.Component {
                   >
                     <Dropdown.Item eventKey="3-1">Geo</Dropdown.Item>
                     <Dropdown.Item eventKey="3-2">Devices</Dropdown.Item>
-                    <Dropdown.Item eventKey="3-2">Brand</Dropdown.Item>
-                    <Dropdown.Item eventKey="3-3">Loyalty</Dropdown.Item>
-                    <Dropdown.Item eventKey="3-4">Visit Depth</Dropdown.Item>
+                    <Dropdown.Item eventKey="3-3">Brand</Dropdown.Item>
+                    <Dropdown.Item eventKey="3-4">Loyalty</Dropdown.Item>
+                    <Dropdown.Item eventKey="3-5">Visit Depth</Dropdown.Item>
                   </Dropdown>
                   <Dropdown
                     eventKey="4"

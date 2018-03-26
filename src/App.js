@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import get from 'lodash/get';
 import { scrollTop } from 'dom-lib';
 import DocSidebar from './fixtures/DocSidebar';
-import { Grid, Row, Col, IntlProvider } from 'rsuite';
+import { Grid } from './rsuiteSource';
 
 const contextTypes = {
   router: PropTypes.object.isRequired
