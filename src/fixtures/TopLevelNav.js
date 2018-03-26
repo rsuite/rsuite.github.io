@@ -10,7 +10,7 @@ import SearchDrawer from './SearchDrawer';
 function WithTooltipButton({ children, tip, ...props }) {
   return (
     <Whisper speaker={<Tooltip>{tip}</Tooltip>} placement="right" trigger="hover">
-      <Button {...props}>{children}</Button>
+      <Button size="lg" {...props}>{children}</Button>
     </Whisper>
   );
 }

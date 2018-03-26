@@ -1,7 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
 import { ButtonToolbar, Button, DOMHelper } from '../../rsuiteSource';
-import DOMMouseMoveTracker from '../../../../dom-lib/src/DOMMouseMoveTracker';
 const context = require('./index.md');
 const examples = [
   require('./class-helper.md'),
@@ -18,8 +17,7 @@ export default () => {
       dependencies={{
         ButtonToolbar,
         Button,
-        ...DOMHelper,
-        DOMMouseMoveTracker
+        ...DOMHelper
       }}
       context={context}
       examples={examples}

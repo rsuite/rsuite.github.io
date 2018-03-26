@@ -2,10 +2,10 @@
 
 ```typescript
 scrollLeft: (node: HTMLElement) => number;
-scrollLeft: (node: HTMLElement, val: number) => void;
+scrollLeft: (node: HTMLElement, value: number) => void;
 
 scrollTop: (node: HTMLElement) => number;
-scrollTop: (node: HTMLElement, val: number) => void;
+scrollTop: (node: HTMLElement, value: number) => void;
 ```
 
 <!--start-code-->
