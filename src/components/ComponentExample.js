@@ -8,7 +8,7 @@ import MarkdownView from '../fixtures/MarkdownView';
 import CodeView from '../fixtures/CodeView';
 
 const babelOptions = {
-  presets: ['stage-0', 'react', 'es2015'],
+  presets: ['env', 'stage-0', 'react'],
   plugins: ['transform-class-properties']
 };
 
