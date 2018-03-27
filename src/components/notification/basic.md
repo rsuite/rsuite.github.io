@@ -6,7 +6,7 @@
 function open() {
   Notification.open({
     title: 'Notify',
-    description: <Paragraph style={{ width: 320 }} rows={3} />
+    description: <Paragraph width={320} rows={3} />
   });
 }
 
