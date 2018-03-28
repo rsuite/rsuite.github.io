@@ -4,13 +4,15 @@ import classNames from 'classnames';
 import { Link } from 'react-router';
 import { Button, Icon, IconButton, Whisper, Tooltip } from '../rsuiteSource';
 import Logo from './Logo';
-import { guide, component, tools, search, lightbulb, lightbulbOn } from './SvgIcons';
+import { guide, component, tools, search, design, lightbulb, lightbulbOn } from './SvgIcons';
 import SearchDrawer from './SearchDrawer';
 
 function WithTooltipButton({ children, tip, ...props }) {
   return (
     <Whisper speaker={<Tooltip>{tip}</Tooltip>} placement="right" trigger="hover">
-      <Button size="lg" {...props}>{children}</Button>
+      <Button size="lg" {...props}>
+        {children}
+      </Button>
     </Whisper>
   );
 }
@@ -71,6 +73,16 @@ class TopLevelNav extends React.Component {
         <div className="top-level-nav-menu">
           <WithTooltipButton tip="搜索" className="icon-btn-circle" onClick={this.showSearchDrawer}>
             <Icon icon={search} svgStyle={svgStyle} size="lg" />
+          </WithTooltipButton>
+
+          <WithTooltipButton
+            tip="设计原型"
+            className="icon-btn-circle"
+            componentClass="a"
+            target="_blank"
+            href="/design/index.html"
+          >
+            <Icon icon={design} svgStyle={svgStyle} size="lg" />
           </WithTooltipButton>
 
           {menu.map(item => (
