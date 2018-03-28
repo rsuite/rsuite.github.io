@@ -109,6 +109,7 @@ class TopLevelNav extends React.Component {
               tip="GitHub"
               className="icon-btn-circle"
               href="https://github.com/rsuite/rsuite"
+              target="_blank"
             >
               <Icon icon="github" size="lg" />
             </WithTooltipButton>

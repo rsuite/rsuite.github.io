@@ -50,6 +50,9 @@ class Home extends React.Component {
               <Link className="hvr-underline-from-center" to="/guide/introduction">
                 新手指南
               </Link>
+              <a className="hvr-underline-from-center" href="/design/index.html" target="_blank">
+                设计
+              </a>
               <Link className="hvr-underline-from-center" to="/components/overview">
                 组件
               </Link>
