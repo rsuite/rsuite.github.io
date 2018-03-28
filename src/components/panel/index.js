@@ -20,6 +20,7 @@ const examples = [
 export default () => {
   return (
     <ComponentExample
+      id="Panel"
       dependencies={{
         Table,
         PanelGroup,

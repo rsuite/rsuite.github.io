@@ -13,6 +13,7 @@ const examples = [
 export default () => {
   return (
     <ComponentExample
+      id="FlexboxGird"
       dependencies={{
         Divider,
         Icon,

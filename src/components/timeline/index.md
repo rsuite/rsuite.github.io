@@ -1,4 +1,4 @@
-# Timeline 时间轴 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/timeline/index.md)
+# Timeline 时间轴 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/timeline/index.md)
 
 一个时间流信息显示组件
 

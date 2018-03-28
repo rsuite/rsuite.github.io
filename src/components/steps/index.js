@@ -17,6 +17,7 @@ const examples = [
 export default () => {
   return (
     <ComponentExample
+      id="Steps"
       context={context}
       dependencies={{
         Icon,

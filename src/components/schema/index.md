@@ -1,4 +1,4 @@
-# Schema [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/schema/index.md)
+# Schema [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/schema/index.md)
 
 Schema 可以定义一个数据模型，用于对数据进行校验，可以对 `<Form>` 组件数据进行校验
 

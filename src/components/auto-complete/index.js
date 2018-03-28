@@ -15,6 +15,7 @@ export default () => {
   return (
     <ComponentExample
       context={context}
+      id="AutoComplete"
       dependencies={{
         AutoComplete,
         Icon

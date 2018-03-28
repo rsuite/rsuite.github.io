@@ -8,12 +8,13 @@ const examples = [
   require('./disabled.md'),
   require('./radio-group.md'),
   require('./radio-group-inline.md'),
-  require('./radio-group-controller.md'),
+  require('./radio-group-controller.md')
 ];
 
 export default () => {
   return (
     <ComponentExample
+      id="Radio"
       dependencies={{
         Form,
         FormGroup,

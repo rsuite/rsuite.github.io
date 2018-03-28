@@ -1,4 +1,4 @@
-# Input 输入框 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/input/index.md)
+# Input 输入框 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/input/index.md)
 
 代替 HTML 原生控件，input、textarea。
 

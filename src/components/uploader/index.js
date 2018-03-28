@@ -14,6 +14,7 @@ const examples = [
 export default () => {
   return (
     <ComponentExample
+      id="Uploader"
       context={context}
       examples={examples}
       dependencies={{

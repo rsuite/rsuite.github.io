@@ -8,6 +8,7 @@ const examples = [require('./basic.md'), require('./color.md'), require('./dynam
 export default () => {
   return (
     <ComponentExample
+      id="Tag"
       dependencies={{
         Tag,
         IconButton,

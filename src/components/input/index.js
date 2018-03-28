@@ -1,16 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import {
-  Input,
-  InputGroup,
-  Icon,
-  Whisper,
-  Tooltip,
-  Grid,
-  Row,
-  Col
-} from '../../rsuiteSource';
-
+import { Input, InputGroup, Icon, Whisper, Tooltip, Grid, Row, Col } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [
@@ -27,6 +17,7 @@ const examples = [
 export default () => {
   return (
     <ComponentExample
+      id="Input"
       dependencies={{
         Input,
         InputGroup,

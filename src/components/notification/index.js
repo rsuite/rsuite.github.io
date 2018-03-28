@@ -2,8 +2,6 @@ import React from 'react';
 import ComponentExample from '../ComponentExample';
 import { Notification, Button, ButtonToolbar } from '../../rsuiteSource';
 
-
-
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
@@ -16,6 +14,7 @@ const examples = [
 export default () => {
   return (
     <ComponentExample
+      id="Notification"
       context={context}
       dependencies={{
         ButtonToolbar,

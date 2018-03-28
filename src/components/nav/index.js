@@ -16,6 +16,7 @@ const examples = [
 export default () => {
   return (
     <ComponentExample
+      id="Nav"
       dependencies={{
         Dropdown,
         Icon,

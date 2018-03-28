@@ -18,6 +18,7 @@ const examples = [
 export default () => {
   return (
     <ComponentExample
+      id="CheckPicker"
       context={context}
       examples={examples}
       dependencies={{

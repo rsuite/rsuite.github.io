@@ -1,4 +1,4 @@
-# Notification 通知框 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/notification/index.md)
+# Notification 通知框 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/notification/index.md)
 
 用于全局通知，悬浮在页面角落。
 

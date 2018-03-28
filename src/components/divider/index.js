@@ -8,6 +8,7 @@ const examples = [require('./basic.md'), require('./with-text.md'), require('./v
 export default () => {
   return (
     <ComponentExample
+      id="Divider"
       context={context}
       dependencies={{
         Divider,

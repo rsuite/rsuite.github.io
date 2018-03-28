@@ -1,4 +1,4 @@
-# InputNumber 数字输入框 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/input/index.md)
+# InputNumber 数字输入框 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/input/index.md)
 
 ## 获取组件
 

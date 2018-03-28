@@ -8,6 +8,7 @@ const examples = [require('./basic.md'), require('./size.md'), require('./advanc
 export default () => {
   return (
     <ComponentExample
+      id="Pagination"
       dependencies={{
         Toggle,
         Icon,

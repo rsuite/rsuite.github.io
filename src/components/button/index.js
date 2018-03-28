@@ -21,12 +21,11 @@ const examples = [
   require('./justified.md')
 ];
 
-
 export default () => {
-
   return (
     <div>
       <ComponentExample
+        id="Button"
         context={context}
         examples={examples}
         dependencies={{
@@ -40,7 +39,5 @@ export default () => {
         }}
       />
     </div>
-
-
   );
 };

@@ -1,4 +1,4 @@
-# Divider 分割线 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/divider/index.md)
+# Divider 分割线 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/divider/index.md)
 
 * `<Divider>` 分割线
 

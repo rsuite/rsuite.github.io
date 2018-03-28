@@ -8,6 +8,7 @@ const examples = [require('./basic.md')];
 export default () => {
   return (
     <ComponentExample
+      id="Portal"
       context={context}
       dependencies={{
         Button,

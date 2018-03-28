@@ -13,6 +13,7 @@ const examples = [
 export default () => {
   return (
     <ComponentExample
+      id="Sidenav"
       dependencies={{
         Icon,
         Button,

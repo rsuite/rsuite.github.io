@@ -36,6 +36,7 @@ const examples = [
 export default () => {
   return (
     <ComponentExample
+      id="Container"
       dependencies={{
         Logo,
         Divider,

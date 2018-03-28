@@ -1,4 +1,4 @@
-# Animation 动画 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/animation/index.md)
+# Animation 动画 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/animation/index.md)
 
 处理动画相关的组件
 

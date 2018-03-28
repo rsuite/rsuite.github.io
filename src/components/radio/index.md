@@ -1,4 +1,4 @@
-# Radio 单选框 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/radio/index.md)
+# Radio 单选框 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/radio/index.md)
 
 常用的单选框。 如果选项只有两个的情况下，也可以使用 Toggle 组件。
 

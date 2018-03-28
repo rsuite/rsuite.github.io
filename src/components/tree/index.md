@@ -1,4 +1,4 @@
-# Tree 树型控件 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/tree/index.md)
+# Tree 树型控件 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/tree/index.md)
 
 * `<Tree>` 用于展示一个树结构数据。
 

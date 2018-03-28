@@ -73,6 +73,7 @@ const tabExamples = [
 export default () => {
   return (
     <ComponentExample
+      id="Table"
       dependencies={{
         Checkbox,
         Toggle,

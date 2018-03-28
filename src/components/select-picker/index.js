@@ -17,6 +17,7 @@ const examples = [
 export default () => {
   return (
     <ComponentExample
+      id="SelectPicker"
       context={context}
       examples={examples}
       dependencies={{

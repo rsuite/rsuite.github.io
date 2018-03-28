@@ -10,6 +10,7 @@ console.log(Timeline, Timeline.Item);
 export default () => {
   return (
     <ComponentExample
+      id="Timeline"
       dependencies={{
         Timeline,
         Icon

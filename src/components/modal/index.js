@@ -11,10 +11,10 @@ const examples = [
   require('./overflow.md')
 ];
 
-
 export default () => {
   return (
     <ComponentExample
+      id="Modal"
       dependencies={{
         ButtonToolbar,
         Button,

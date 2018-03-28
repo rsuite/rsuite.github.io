@@ -65,6 +65,7 @@ const JSONView = ({ formValue, formError }) => (
 export default () => {
   return (
     <ComponentExample
+      id="Form"
       dependencies={{
         Row,
         Col,

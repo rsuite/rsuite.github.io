@@ -5,8 +5,6 @@ import { findNodeOfTree } from 'rsuite-utils/lib/utils';
 import data from '../../resources/data/province';
 import province from '../../resources/data/province-simplified';
 
-
-
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
@@ -19,6 +17,7 @@ const examples = [
 export default () => {
   return (
     <ComponentExample
+      id="Cascader"
       context={context}
       examples={examples}
       dependencies={{
@@ -28,7 +27,7 @@ export default () => {
         findNodeOfTree,
         Icon,
         get: _.get,
-        cloneDeep: _.cloneDeep,
+        cloneDeep: _.cloneDeep
       }}
     />
   );

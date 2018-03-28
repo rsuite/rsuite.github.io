@@ -8,6 +8,7 @@ const examples = [require('./basic.md'), require('./duration.md')];
 export default () => {
   return (
     <ComponentExample
+      id="Alert"
       context={context}
       dependencies={{
         ButtonToolbar,

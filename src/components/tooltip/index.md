@@ -1,4 +1,4 @@
-# Tooltip 文字提示 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/tooltip/index.md)
+# Tooltip 文字提示 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/tooltip/index.md)
 
 用于辅助的文字提示，可代替 HTML 元素默认的 title 属性。
 

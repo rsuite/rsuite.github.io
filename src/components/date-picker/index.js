@@ -20,6 +20,7 @@ const examples = [
 export default () => {
   return (
     <ComponentExample
+      id="DatePicker"
       context={context}
       examples={examples}
       dependencies={{

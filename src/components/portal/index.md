@@ -1,4 +1,4 @@
-# Portal 入口 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/portal/index.md)
+# Portal 入口 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/portal/index.md)
 
 `<Portal>` 组件的将子级组件将追加到指定的容器中，功能类似 React 16 中的 `ReactDOM.createPortal()`, 但是 `Portal` 组件支持 React 16 之前的版本。
 

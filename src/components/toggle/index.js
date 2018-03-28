@@ -10,10 +10,10 @@ const examples = [
   require('./disabled.md')
 ];
 
-
 export default () => {
   return (
     <ComponentExample
+      id="Toggle"
       dependencies={{
         Icon,
         Toggle,
@@ -24,4 +24,3 @@ export default () => {
     />
   );
 };
-

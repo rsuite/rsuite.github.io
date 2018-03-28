@@ -10,6 +10,7 @@ export default () => {
   return (
     <ComponentExample
       context={context}
+      id="Breadcrumb"
       dependencies={{
         Link,
         Icon,

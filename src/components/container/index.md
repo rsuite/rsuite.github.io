@@ -1,4 +1,4 @@
-# Container 容器布局 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/container/index.md)
+# Container 容器布局 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/container/index.md)
 
 容器布局可以定义页面的主体框架。
 

@@ -1,4 +1,4 @@
-# Popover 弹出框 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/popover/index.md)
+# Popover 弹出框 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/popover/index.md)
 
 鼠标点击/移入的时候，弹出的弹出框，用于显示更多内容。
 

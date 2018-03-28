@@ -1,8 +1,7 @@
 import React from 'react';
 import { Input, Icon, Alert } from '../../rsuiteSource';
 import IconItem from './IconItem';
-
-const ALL_ICONS = JSON.parse(require('fs').readFileSync(__dirname + '/icons.json', 'utf8'));
+import ALL_ICONS from './icons';
 
 const parseIconByCategory = (obj, conf) => {
   conf.categories.forEach(category => {

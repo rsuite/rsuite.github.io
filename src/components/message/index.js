@@ -9,12 +9,13 @@ const examples = [
   require('./description.md'),
   require('./icons.md'),
   require('./close.md'),
-  require('./full.md'),
+  require('./full.md')
 ];
 
 export default () => {
   return (
     <ComponentExample
+      id="Message"
       context={context}
       dependencies={{
         ButtonToolbar,

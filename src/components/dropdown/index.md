@@ -1,4 +1,4 @@
-# Dropdown 下拉菜单 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/dropdown/index.md)
+# Dropdown 下拉菜单 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/dropdown/index.md)
 
 下拉菜单是一种导航，如果需要选择值请使用 SelectPicker。
 

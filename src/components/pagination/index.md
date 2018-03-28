@@ -1,4 +1,4 @@
-# Pagination 分页 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/pagination/index.md)
+# Pagination 分页 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/pagination/index.md)
 
 分页导航，用于辅助长列表只加载部分数据，可以快速切换到指定数据页。
 

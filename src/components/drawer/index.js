@@ -17,13 +17,13 @@ const examples = [
   require('./backdrop.md'),
   require('./placement.md'),
   require('./size.md'),
-  require('./full.md'),
+  require('./full.md')
 ];
-
 
 export default () => {
   return (
     <ComponentExample
+      id="Drawer"
       dependencies={{
         Toggle,
         ButtonToolbar,

@@ -1,4 +1,4 @@
-# Cascader 级联选择器 [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/cascader/index.md)
+# Cascader 级联选择器 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/cascader/index.md)
 
 对有层级关系结构的数据进行单项选择。
 

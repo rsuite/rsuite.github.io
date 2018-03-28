@@ -2,8 +2,6 @@ import React from 'react';
 import ComponentExample from '../ComponentExample';
 import { Slider, Row, Col, Input } from '../../rsuiteSource';
 
-
-
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
@@ -18,6 +16,7 @@ const examples = [
 export default () => {
   return (
     <ComponentExample
+      id="Slider"
       context={context}
       dependencies={{
         Slider,

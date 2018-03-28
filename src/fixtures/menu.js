@@ -1,8 +1,7 @@
 import React from 'react';
 import { Icon, IconButton, Button } from '../rsuiteSource';
 import { guide, component, tools } from './SvgIcons';
-
-const components = JSON.parse(require('fs').readFileSync(__dirname + '/components.json', 'utf8'));
+import components from './components';
 
 const svgStyle = {
   width: 22

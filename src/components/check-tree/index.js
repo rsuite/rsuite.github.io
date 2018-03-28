@@ -9,6 +9,7 @@ const examples = [require('./basic.md'), require('./cascade.md'), require('./cus
 export default () => {
   return (
     <ComponentExample
+      id="CheckTree"
       context={context}
       examples={examples}
       dependencies={{

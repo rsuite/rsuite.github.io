@@ -2,7 +2,6 @@ import React from 'react';
 import ComponentExample from '../ComponentExample';
 import { Dropdown, Button, Icon, ButtonToolbar, IconButton, ButtonGroup } from '../../rsuiteSource';
 
-
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
@@ -20,6 +19,7 @@ const examples = [
 export default () => {
   return (
     <ComponentExample
+      id="Dropdown"
       dependencies={{
         ButtonToolbar,
         ButtonGroup,
