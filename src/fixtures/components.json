@@ -35,7 +35,8 @@
     "components": [
       "Tooltip",
       "Whisper"
-    ]
+    ],
+    "designHash": "artboard9"
   },
   {
     "id": "popover",
@@ -44,7 +45,8 @@
     "components": [
       "Popover",
       "Whisper"
-    ]
+    ],
+    "designHash": "artboard10"
   },
   {
     "id": "alert",
@@ -52,7 +54,8 @@
     "title": "提醒框",
     "components": [
       "Alert"
-    ]
+    ],
+    "designHash": "artboard11"
   },
   {
     "id": "notification",
@@ -60,7 +63,8 @@
     "title": "通知框",
     "components": [
       "Notification"
-    ]
+    ],
+    "designHash": "artboard12"
   },
   {
     "id": "message",
@@ -68,7 +72,8 @@
     "title": "消息框",
     "components": [
       "Message"
-    ]
+    ],
+    "designHash": "artboard13"
   },
   {
     "id": "loader",
@@ -76,7 +81,8 @@
     "title": "加载器",
     "components": [
       "Loader"
-    ]
+    ],
+    "designHash": "artboard14"
   },
   {
     "id": "modal",
@@ -87,7 +93,8 @@
       "Modal.Header",
       "Modal.Body",
       "Modal.Footer"
-    ]
+    ],
+    "designHash": "artboard15"
   },
   {
     "id": "drawer",
@@ -98,7 +105,8 @@
       "Drawer.Header",
       "Drawer.Body",
       "Drawer.Footer"
-    ]
+    ],
+    "designHash": "artboard17"
   },
   {
     "id": "divider",
@@ -106,7 +114,8 @@
     "title": "分割线",
     "components": [
       "Divider"
-    ]
+    ],
+    "designHash": "artboard18"
   },
   {
     "id": "progress",
@@ -115,7 +124,8 @@
     "components": [
       "Progress.Line",
       "Progress.Circle"
-    ]
+    ],
+    "designHash": "artboard19"
   },
   {
     "group": true,
@@ -131,7 +141,8 @@
       "Dropdown",
       "Dropdown.Item",
       "Dropdown.Menu"
-    ]
+    ],
+    "designHash": "artboard20"
   },
   {
     "id": "nav",
@@ -141,7 +152,8 @@
       "Nav",
       "Nav.Item",
       "Nav.Dropdown"
-    ]
+    ],
+    "designHash": "artboard22"
   },
   {
     "id": "navbar",
@@ -152,7 +164,8 @@
       "Navbar.Header",
       "Navbar.Brand",
       "Navbar.Body"
-    ]
+    ],
+    "designHash": "artboard23"
   },
   {
     "id": "sidenav",
@@ -171,7 +184,8 @@
     "components": [
       "Steps",
       "Steps.Item"
-    ]
+    ],
+    "designHash": "artboard28"
   },
   {
     "id": "pagination",
@@ -180,7 +194,8 @@
     "components": [
       "Breadcrumb",
       "Breadcrumb.Item"
-    ]
+    ],
+    "designHash": "artboard29"
   },
   {
     "id": "breadcrumb",
@@ -188,7 +203,8 @@
     "title": "面包屑",
     "components": [
       "Pagination"
-    ]
+    ],
+    "designHash": "artboard30"
   },
   {
     "group": true,
@@ -223,7 +239,8 @@
       "InputGroup",
       "InputGroup.Button",
       "InputGroup.Addon"
-    ]
+    ],
+    "designHash": "artboard32"
   },
   {
     "id": "input-number",
@@ -231,7 +248,8 @@
     "title": "数字输入框",
     "components": [
       "InputNumber"
-    ]
+    ],
+    "designHash": "artboard35"
   },
   {
     "id": "auto-complete",
@@ -239,7 +257,8 @@
     "title": "自动完成控件",
     "components": [
       "AutoComplete"
-    ]
+    ],
+    "designHash": "artboard36"
   },
   {
     "id": "toggle",
@@ -247,7 +266,8 @@
     "title": "开关",
     "components": [
       "Toggle"
-    ]
+    ],
+    "designHash": "artboard37"
   },
   {
     "id": "select-picker",
@@ -255,7 +275,8 @@
     "title": "单项选择器",
     "components": [
       "SelectPicker"
-    ]
+    ],
+    "designHash": "artboard38"
   },
   {
     "id": "check-picker",
@@ -263,7 +284,8 @@
     "title": "多项选择器",
     "components": [
       "CheckPicker"
-    ]
+    ],
+    "designHash": "artboard39"
   },
   {
     "id": "tree-picker",
@@ -271,7 +293,8 @@
     "title": "树形单项选择器",
     "components": [
       "TreePicker"
-    ]
+    ],
+    "designHash": "artboard40"
   },
   {
     "id": "check-tree-picker",
@@ -279,7 +302,8 @@
     "title": "树形多项选择器",
     "components": [
       "CheckTreePicker"
-    ]
+    ],
+    "designHash": "artboard41"
   },
   {
     "id": "cascader",
@@ -303,7 +327,8 @@
     "title": "日期范围选择器",
     "components": [
       "DateRangePicker"
-    ]
+    ],
+    "designHash": "artboard47"
   },
   {
     "id": "slider",
@@ -319,7 +344,8 @@
     "title": "上传控件",
     "components": [
       "Uploader"
-    ]
+    ],
+    "designHash": "artboard49"
   },
   {
     "id": "form",
@@ -349,7 +375,8 @@
       "Table.HeaderCell",
       "Table.Cell",
       "Table.Pagination"
-    ]
+    ],
+    "designHash": "artboard53"
   },
   {
     "id": "tree",
@@ -374,7 +401,8 @@
     "components": [
       "Panel",
       "PanelGroup"
-    ]
+    ],
+    "designHash": "artboard60"
   },
   {
     "id": "timeline",
@@ -391,7 +419,8 @@
     "title": "标签",
     "components": [
       "Tag"
-    ]
+    ],
+    "designHash": "artboard62"
   },
   {
     "group": true,
@@ -428,7 +457,8 @@
       "Footer",
       "Content",
       "Sidebar"
-    ]
+    ],
+    "designHash": "artboard64"
   },
   {
     "group": true,
