@@ -1,4 +1,4 @@
-# Navbar 导航栏 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/navbar/index.md)
+# Navbar 导航栏 
 
 对 Nav 的一个封装，一般用于页面顶部导航。
 

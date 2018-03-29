@@ -1,4 +1,4 @@
-# Icon 图标 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/icon/index.md)
+# Icon 图标 
 
 图标组件，除了内置的常用图标外，还可以自定义引入 SVG 图标。
 

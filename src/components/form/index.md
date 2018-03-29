@@ -1,4 +1,4 @@
-# Form 表单 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/form/index.md)
+# Form 表单 
 
 一组处理表单数据的组件和模型。
 

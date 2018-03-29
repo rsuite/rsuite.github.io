@@ -1,4 +1,4 @@
-# Sidenav 侧导航 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/nav-menu/index.md)
+# Sidenav 侧导航 
 
 对 Nav 的一个封装，用于页面侧边栏。
 

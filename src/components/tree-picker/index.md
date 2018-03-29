@@ -1,4 +1,4 @@
-# TreePicker 树形选择器 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/select-picker/index.md)
+# TreePicker 树形选择器
 
 * `<TreePicker>` 选择器组件，树形单项选择器。
 

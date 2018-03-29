@@ -1,4 +1,4 @@
-# Progress 进度条 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/progress/index.md)
+# Progress 进度条 
 
 用于显示某个操作进度的状态。
 

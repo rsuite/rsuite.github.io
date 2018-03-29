@@ -1,4 +1,4 @@
-# Uploader 上传文件 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/uploader/index.md)
+# Uploader 上传文件 
 
 * `<Uploader>`
 

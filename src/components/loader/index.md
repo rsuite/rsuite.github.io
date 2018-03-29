@@ -1,4 +1,4 @@
-# Loader 加载器 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/loader/index.md)
+# Loader 加载器 
 
 用于数据加载过程中，提供状态的一个组件。
 

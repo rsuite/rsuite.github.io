@@ -1,4 +1,4 @@
-# FlexboxGird 弹性栅格 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/flexbox-grid/index.md)
+# FlexboxGird 弹性栅格 
 
 通过 CSS Flexbox 实现的栅格布局组件，提供 24 栅格。
 

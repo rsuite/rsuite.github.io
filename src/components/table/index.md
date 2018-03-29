@@ -1,4 +1,4 @@
-# Table 表格 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/table/index.md)
+# Table 表格 
 
 以表格的方式展示数据。
 

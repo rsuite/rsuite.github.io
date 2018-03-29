@@ -1,4 +1,4 @@
-# Drawer 抽屉 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/drawer/index.md)
+# Drawer 抽屉 
 
 一个从页面边缘滑动出来的浮层，可以替代 Modal 放更多内容。
 

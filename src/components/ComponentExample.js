@@ -96,7 +96,7 @@ class ComponentExample extends React.Component {
     const footer = docs[1];
 
     return (
-      <PageContainer {...rest} designHash={designHash} routerId={routerId}>
+      <PageContainer {...rest} designHash={designHash} routerId={`components/${routerId}`} >
         <MarkdownView>{header}</MarkdownView>
         {examples.map((item, index) => (
           <CustomCodeView key={index} source={item} dependencies={dependencies} />

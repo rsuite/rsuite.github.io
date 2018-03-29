@@ -6,7 +6,7 @@ import MarkdownView from '../../fixtures/MarkdownView';
 class Page extends React.Component {
   render() {
     return (
-      <PageContainer>
+      <PageContainer routerId="guide/themes">
         <MarkdownView>{require('./index.md')}</MarkdownView>
       </PageContainer>
     );

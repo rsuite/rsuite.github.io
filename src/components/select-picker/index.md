@@ -1,4 +1,4 @@
-# SelectPicker 单项选择器 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/select-picker/index.md)
+# SelectPicker 单项选择器 
 
 用于单项数据选择，支持分组。
 
