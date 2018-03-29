@@ -45,5 +45,4 @@ docs/assets
 dist
 yarn.lock
 package-lock.json
-assets
 /index.html

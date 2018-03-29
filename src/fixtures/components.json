@@ -106,7 +106,7 @@
       "Drawer.Body",
       "Drawer.Footer"
     ],
-    "designHash": "artboard17"
+    "designHash": "artboard16"
   },
   {
     "id": "divider",
@@ -153,7 +153,7 @@
       "Nav.Item",
       "Nav.Dropdown"
     ],
-    "designHash": "artboard22"
+    "designHash": "artboard21"
   },
   {
     "id": "navbar",
@@ -219,7 +219,8 @@
     "components": [
       "Checkbox",
       "CheckboxGroup"
-    ]
+    ],
+    "designHash": "artboard31"
   },
   {
     "id": "radio",
@@ -228,7 +229,8 @@
     "components": [
       "Radio",
       "RadioGroup"
-    ]
+    ],
+    "designHash": "artboard32"
   },
   {
     "id": "input",
@@ -240,7 +242,7 @@
       "InputGroup.Button",
       "InputGroup.Addon"
     ],
-    "designHash": "artboard32"
+    "designHash": "artboard33"
   },
   {
     "id": "input-number",
@@ -249,7 +251,7 @@
     "components": [
       "InputNumber"
     ],
-    "designHash": "artboard35"
+    "designHash": "artboard36"
   },
   {
     "id": "auto-complete",
@@ -258,7 +260,7 @@
     "components": [
       "AutoComplete"
     ],
-    "designHash": "artboard36"
+    "designHash": "artboard37"
   },
   {
     "id": "toggle",
@@ -267,7 +269,7 @@
     "components": [
       "Toggle"
     ],
-    "designHash": "artboard37"
+    "designHash": "artboard38"
   },
   {
     "id": "select-picker",
@@ -276,7 +278,7 @@
     "components": [
       "SelectPicker"
     ],
-    "designHash": "artboard38"
+    "designHash": "artboard39"
   },
   {
     "id": "check-picker",
@@ -285,7 +287,7 @@
     "components": [
       "CheckPicker"
     ],
-    "designHash": "artboard39"
+    "designHash": "artboard40"
   },
   {
     "id": "tree-picker",
@@ -294,7 +296,7 @@
     "components": [
       "TreePicker"
     ],
-    "designHash": "artboard40"
+    "designHash": "artboard41"
   },
   {
     "id": "check-tree-picker",
@@ -303,7 +305,7 @@
     "components": [
       "CheckTreePicker"
     ],
-    "designHash": "artboard41"
+    "designHash": "artboard42"
   },
   {
     "id": "cascader",
@@ -328,7 +330,7 @@
     "components": [
       "DateRangePicker"
     ],
-    "designHash": "artboard47"
+    "designHash": "artboard48"
   },
   {
     "id": "slider",
@@ -345,7 +347,7 @@
     "components": [
       "Uploader"
     ],
-    "designHash": "artboard49"
+    "designHash": "artboard50"
   },
   {
     "id": "form",
@@ -376,7 +378,7 @@
       "Table.Cell",
       "Table.Pagination"
     ],
-    "designHash": "artboard53"
+    "designHash": "artboard54"
   },
   {
     "id": "tree",
@@ -402,7 +404,7 @@
       "Panel",
       "PanelGroup"
     ],
-    "designHash": "artboard60"
+    "designHash": "artboard61"
   },
   {
     "id": "timeline",
@@ -420,7 +422,7 @@
     "components": [
       "Tag"
     ],
-    "designHash": "artboard62"
+    "designHash": "artboard63"
   },
   {
     "group": true,
