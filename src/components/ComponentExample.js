@@ -30,14 +30,12 @@ class ComponentExample extends React.Component {
 
   constructor(props) {
     super(props);
-    const designHash = _.get(
-      components.find(item => item.id === props.id || item.name === props.id),
-      'designHash'
-    );
+    const component = components.find(item => item.id === props.id || item.name === props.id);
 
     this.state = {
       tabIndex: 0,
-      designHash
+      designHash: _.get(component, 'designHash'),
+      routerId: _.get(component, 'id')
     };
   }
 
@@ -92,20 +90,13 @@ class ComponentExample extends React.Component {
       ...rest
     } = this.props;
 
-    const { designHash } = this.state;
+    const { designHash, routerId } = this.state;
     const docs = context.split('<!--{demo}-->');
-    let header = docs[0];
+    const header = docs[0];
     const footer = docs[1];
 
-    if (designHash) {
-      header = header.replace(
-        '</h1>',
-        `</h1><a class="link-view-design" href='/design/index.html#${designHash}' target="_blank">原型设计</a>`
-      );
-    }
-
     return (
-      <PageContainer {...rest}>
+      <PageContainer {...rest} designHash={designHash} routerId={routerId}>
         <MarkdownView>{header}</MarkdownView>
         {examples.map((item, index) => (
           <CustomCodeView key={index} source={item} dependencies={dependencies} />

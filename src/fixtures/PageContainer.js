@@ -2,7 +2,8 @@ import React from 'react';
 import clasNames from 'classnames';
 import { PageProvider, PageNav, PageContent } from 'rsuite-page-nav';
 
-import { Nav, Row, Col, IconButton, Icon } from '../rsuiteSource';
+import { Nav, Row, Col, IconButton, Icon, ButtonToolbar } from '../rsuiteSource';
+import { design } from './SvgIcons';
 
 class PageContainer extends React.Component {
   constructor(props) {
@@ -17,8 +18,9 @@ class PageContainer extends React.Component {
     });
   };
   render() {
-    const { children, ...rest } = this.props;
+    const { children, designHash, routerId, ...rest } = this.props;
     const { hideNav } = this.state;
+
     return (
       <PageProvider>
         <Row {...rest} className={clasNames({ ['hide-page-nav']: hideNav })}>
@@ -26,11 +28,33 @@ class PageContainer extends React.Component {
             <PageContent>{children}</PageContent>
           </Col>
           <Col md={8} xsHidden smHidden>
-            <IconButton
-              className="menu-button"
-              icon={<Icon icon="navicon" />}
-              onClick={this.handleNavicon}
-            />
+            <ButtonToolbar className="menu-button">
+              {designHash ? (
+                <IconButton
+                  appearance="subtle"
+                  icon={<Icon icon={design} />}
+                  target="_blank"
+                  title="设计原型"
+                  href={`/design/index.html#${designHash}`}
+                />
+              ) : null}
+              {routerId ? (
+                <IconButton
+                  appearance="subtle"
+                  icon={<Icon icon="edit2" />}
+                  target="_blank"
+                  title="编辑当前页面"
+                  href={`https://github.com/rsuite/rsuite.github.io/edit/master/src/components/${routerId}/index.md`}
+                />
+              ) : null}
+
+              <IconButton
+                appearance="subtle"
+                title="折叠菜单"
+                icon={<Icon icon="navicon" />}
+                onClick={this.handleNavicon}
+              />
+            </ButtonToolbar>
             <PageNav
               showOrderNumber={false}
               width={150}
