@@ -18,7 +18,7 @@ const COMPONENTS_JSON_PATH = '../src/fixtures/components.json';
   const artboadrsData = _.get(jsonData, 'artboards').map((data, index) => ({
     ...data,
     name: trimNumber(data.name),
-    index
+    index: `${index}`
   }));
   const artboards = _.keyBy(artboadrsData, 'name');
 
