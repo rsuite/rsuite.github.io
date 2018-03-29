@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "webpack-dev-server --mode development --progress --hot",
     "dev-styles": "STYLE_DEBUG=STYLE npm run dev",
-    "dev-styles-source": "STYLE_DEBUG=SOURCE npm run dev --devtool source-map",
+    "dev-styles-source": "STYLE_DEBUG=SOURCE npm run dev",
     "build": "rm -rf dist && NODE_ENV=production  webpack --mode production --progress && cp -R public/* ./dist/ ",
     "test": "karma start",
     "babel": "rm -rf lib && babel src/App.js --out-dir lib"
