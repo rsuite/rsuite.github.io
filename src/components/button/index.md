@@ -1,4 +1,4 @@
-# Button 按钮 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/button/index.md)
+# Button 按钮
 
 常用的操作按钮，按钮组合，按钮布局。
 

@@ -6,7 +6,7 @@ import MarkdownView from '../../fixtures/MarkdownView';
 class InstallationPage extends React.Component {
   render() {
     return (
-      <PageContainer>
+      <PageContainer routerId="guide/usage">
         <MarkdownView>{require('./index.md')}</MarkdownView>
       </PageContainer>
     );

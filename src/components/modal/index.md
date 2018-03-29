@@ -1,4 +1,4 @@
-# Modal 模态框 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/modal/index.md)
+# Modal 模态框 
 
 一套模态对话框组件，用于消息提示、确认消息和提交内容。 如果需要放置更多内容可以使用 Drawer。
 

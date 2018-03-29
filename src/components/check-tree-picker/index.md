@@ -1,4 +1,4 @@
-# CheckTreePicker 树形多项选择器 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/check-tree-picker/index.md)
+# CheckTreePicker 树形多项选择器 
 
 多项选择器中支持树形结构，用于复杂的数据结构进行多选。
 

@@ -1,4 +1,4 @@
-# CheckTree 树形多选控件 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/check-tree/index.md)
+# CheckTree 树形多选控件 
 
 * `<CheckTree>` 用于展示一个树结构数据，同时支持 Checkbox 选择。
 

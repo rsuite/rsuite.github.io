@@ -1,4 +1,4 @@
-# Breadcrumb 面包屑[<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/breadcrumb/index.md)
+# Breadcrumb 面包屑
 
 用于显示当前页面路径，并能快速返回到历史页面。
 

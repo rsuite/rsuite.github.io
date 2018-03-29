@@ -1,4 +1,4 @@
-# Alert 提醒框 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/alert/index.md)
+# Alert 提醒框
 
 用于页面中操作交互后的全局提示信息，悬浮在页面顶部的中间。
 

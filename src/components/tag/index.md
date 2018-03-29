@@ -1,4 +1,4 @@
-# Tag 标签 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/Tag/index.md)
+# Tag 标签 
 
 ## 获取组件
 

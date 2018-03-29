@@ -1,4 +1,4 @@
-# CheckPicker 多项选择器 [<i class="rs-icon rs-icon-edit2" ></i>](https://github.com/rsuite/rsuite.github.io/blob/master/src/components/check-picker/index.md)
+# CheckPicker 多项选择器 
 
 用于多项数据选择，支持分组。
 
