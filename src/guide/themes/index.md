@@ -23,7 +23,7 @@
 ## 字体样式设置
 
 ```less
-@font-family-base: sans-serif, 'Open Sans', 'Hiragino Sans GB', STXihei, 'Microsoft YaHei';
+@font-family-base: "Lucida Grande", "Avenir Next", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", STXihei, sans-serif;
 @font-size-base: 14px;
 ```
 
