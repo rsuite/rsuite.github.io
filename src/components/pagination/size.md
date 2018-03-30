@@ -53,6 +53,17 @@ class PaginationBasic extends React.Component {
           activePage={this.state.activePage}
           onSelect={this.handleSelect}
         />
+        <Divider />
+        <Pagination
+          prev
+          last
+          next
+          first
+          size="xs"
+          pages={10}
+          activePage={this.state.activePage}
+          onSelect={this.handleSelect}
+        />
       </div>
     );
   }
