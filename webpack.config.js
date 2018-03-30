@@ -137,5 +137,6 @@ module.exports = {
       inject: true,
       hash: true
     })
-  ]
+  ],
+  devtool: STYLE_DEBUG === 'SOURCE' && 'source-map'
 };

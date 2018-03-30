@@ -19,7 +19,7 @@
       "ButtonGroup",
       "IconButton"
     ],
-    "designHash": "artboard0"
+    "designHash": "artboard2"
   },
   {
     "id": "icon",
@@ -37,7 +37,7 @@
       "Tooltip",
       "Whisper"
     ],
-    "designHash": "artboard9"
+    "designHash": "artboard20"
   },
   {
     "id": "popover",
@@ -47,7 +47,7 @@
       "Popover",
       "Whisper"
     ],
-    "designHash": "artboard10"
+    "designHash": "artboard18"
   },
   {
     "id": "alert",
@@ -56,7 +56,7 @@
     "components": [
       "Alert"
     ],
-    "designHash": "artboard11"
+    "designHash": "artboard1"
   },
   {
     "id": "notification",
@@ -65,7 +65,7 @@
     "components": [
       "Notification"
     ],
-    "designHash": "artboard12"
+    "designHash": "artboard17"
   },
   {
     "id": "message",
@@ -74,7 +74,7 @@
     "components": [
       "Message"
     ],
-    "designHash": "artboard13"
+    "designHash": "artboard15"
   },
   {
     "id": "loader",
@@ -95,7 +95,7 @@
       "Modal.Body",
       "Modal.Footer"
     ],
-    "designHash": "artboard15"
+    "designHash": "artboard16"
   },
   {
     "id": "drawer",
@@ -107,7 +107,7 @@
       "Drawer.Body",
       "Drawer.Footer"
     ],
-    "designHash": "artboard16"
+    "designHash": "artboard12"
   },
   {
     "id": "divider",
@@ -116,7 +116,7 @@
     "components": [
       "Divider"
     ],
-    "designHash": "artboard18"
+    "designHash": "artboard11"
   },
   {
     "id": "progress",
@@ -143,7 +143,7 @@
       "Dropdown.Item",
       "Dropdown.Menu"
     ],
-    "designHash": "artboard20"
+    "designHash": "artboard22"
   },
   {
     "id": "nav",
@@ -154,7 +154,7 @@
       "Nav.Item",
       "Nav.Dropdown"
     ],
-    "designHash": "artboard21"
+    "designHash": "artboard23"
   },
   {
     "id": "navbar",
@@ -166,7 +166,7 @@
       "Navbar.Brand",
       "Navbar.Body"
     ],
-    "designHash": "artboard23"
+    "designHash": "artboard25"
   },
   {
     "id": "sidenav",
@@ -186,7 +186,7 @@
       "Steps",
       "Steps.Item"
     ],
-    "designHash": "artboard28"
+    "designHash": "artboard31"
   },
   {
     "id": "pagination",
@@ -196,7 +196,7 @@
       "Breadcrumb",
       "Breadcrumb.Item"
     ],
-    "designHash": "artboard29"
+    "designHash": "artboard27"
   },
   {
     "id": "breadcrumb",
@@ -205,7 +205,7 @@
     "components": [
       "Pagination"
     ],
-    "designHash": "artboard30"
+    "designHash": "artboard21"
   },
   {
     "group": true,
@@ -221,7 +221,7 @@
       "Checkbox",
       "CheckboxGroup"
     ],
-    "designHash": "artboard31"
+    "designHash": "artboard34"
   },
   {
     "id": "radio",
@@ -231,7 +231,7 @@
       "Radio",
       "RadioGroup"
     ],
-    "designHash": "artboard32"
+    "designHash": "artboard49"
   },
   {
     "id": "input",
@@ -243,7 +243,7 @@
       "InputGroup.Button",
       "InputGroup.Addon"
     ],
-    "designHash": "artboard33"
+    "designHash": "artboard45"
   },
   {
     "id": "input-number",
@@ -252,7 +252,7 @@
     "components": [
       "InputNumber"
     ],
-    "designHash": "artboard36"
+    "designHash": "artboard48"
   },
   {
     "id": "auto-complete",
@@ -261,7 +261,7 @@
     "components": [
       "AutoComplete"
     ],
-    "designHash": "artboard37"
+    "designHash": "artboard32"
   },
   {
     "id": "toggle",
@@ -270,7 +270,7 @@
     "components": [
       "Toggle"
     ],
-    "designHash": "artboard38"
+    "designHash": "artboard52"
   },
   {
     "id": "select-picker",
@@ -279,7 +279,7 @@
     "components": [
       "SelectPicker"
     ],
-    "designHash": "artboard39"
+    "designHash": "artboard50"
   },
   {
     "id": "check-picker",
@@ -288,7 +288,7 @@
     "components": [
       "CheckPicker"
     ],
-    "designHash": "artboard40"
+    "designHash": "artboard35"
   },
   {
     "id": "tree-picker",
@@ -297,7 +297,7 @@
     "components": [
       "TreePicker"
     ],
-    "designHash": "artboard41"
+    "designHash": "artboard53"
   },
   {
     "id": "check-tree-picker",
@@ -306,7 +306,7 @@
     "components": [
       "CheckTreePicker"
     ],
-    "designHash": "artboard42"
+    "designHash": "artboard36"
   },
   {
     "id": "cascader",
@@ -331,7 +331,7 @@
     "components": [
       "DateRangePicker"
     ],
-    "designHash": "artboard48"
+    "designHash": "artboard41"
   },
   {
     "id": "slider",
@@ -348,7 +348,7 @@
     "components": [
       "Uploader"
     ],
-    "designHash": "artboard50"
+    "designHash": "artboard54"
   },
   {
     "id": "form",
@@ -379,7 +379,7 @@
       "Table.Cell",
       "Table.Pagination"
     ],
-    "designHash": "artboard54"
+    "designHash": "artboard56"
   },
   {
     "id": "tree",
@@ -405,7 +405,7 @@
       "Panel",
       "PanelGroup"
     ],
-    "designHash": "artboard61"
+    "designHash": "artboard55"
   },
   {
     "id": "timeline",
@@ -461,7 +461,7 @@
       "Content",
       "Sidebar"
     ],
-    "designHash": "artboard64"
+    "designHash": "artboard66"
   },
   {
     "group": true,

@@ -5,19 +5,18 @@ const fs = require('fs');
 const { promisify } = require('util');
 const _ = require('lodash');
 const readfile = filePath => promisify(fs.readFile)(filePath, 'utf8');
-const trimNumber = string => string.replace(/\d+.*\d+\s+/, '');
 const relativePath = path => require('path').join(__dirname, path);
 
 const DESIGN_INDEX_PATH = '../public/design/index.html';
 const COMPONENTS_JSON_PATH = '../src/fixtures/components.json';
 
-(async function() {
+(async function () {
   const designHtmlData = await readfile(relativePath(DESIGN_INDEX_PATH));
   const componentsData = JSON.parse(await readfile(relativePath(COMPONENTS_JSON_PATH)));
   const jsonData = JSON.parse(/\$\(function\(\)\{ SMApp\((.*)\) \}\)\;/.exec(designHtmlData)[1]);
   const artboadrsData = _.get(jsonData, 'artboards').map((data, index) => ({
     ...data,
-    name: trimNumber(data.name),
+    name: data.name,
     index: `${index}`
   }));
   const artboards = _.keyBy(artboadrsData, 'name');
