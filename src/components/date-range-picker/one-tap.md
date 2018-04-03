@@ -1,27 +1,20 @@
 ### 单击模式
-<!--start-code-->
-```js
 
-const DateRangePickerOneTap = props => (
+<!--start-code-->
+
+```js
+const instance = (
   <div className="field">
     <p>-选择单日</p>
-    <DateRangePicker
-      oneTap
-    />
+    <DateRangePicker oneTap ranges={[]} />
     <p>-选择单周</p>
-    <DateRangePicker
-      hoverRange="week"
-      oneTap
-    />
+    <DateRangePicker oneTap hoverRange="week" ranges={[]} />
     <p>-选择单月</p>
-    <DateRangePicker
-       hoverRange="month"
-       oneTap
-    />
+    <DateRangePicker oneTap hoverRange="month" ranges={[]} />
   </div>
 );
 
-ReactDOM.render(<DateRangePickerOneTap />);
+ReactDOM.render(instance);
 ```
-<!--end-code-->
 
+<!--end-code-->
