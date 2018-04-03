@@ -5,7 +5,7 @@
 ```js
 
 const instance = (
-  <Slider />
+  <Slider progress />
 );
 ReactDOM.render(instance);
 ```

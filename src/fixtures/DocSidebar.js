@@ -71,6 +71,7 @@ class DocSidebar extends React.Component {
           nodeItems.push(
             <Nav.Item key={child.id} href={child.url} target="_blank">
               {child.name} <span className="title-zh">{child.title}</span>
+              <Icon icon="external-link" className="external-link" />
             </Nav.Item>
           );
         } else {
