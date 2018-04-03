@@ -1,5 +1,8 @@
 ### 位置
 
+* `left` , `top` , `right` , `bottom` 是 4 个方向, 表示显示的位置。
+* `leftTop` , 在 left 后面加了一个 top, 这里的 top 是对齐方式，表示在触发点的左侧显示，同时居上对齐。
+
 <!--start-code-->
 
 ```js
@@ -7,9 +10,7 @@ const CustomComponent = ({ placement }) => (
   <Whisper
     placement={placement}
     speaker={
-      <Tooltip>
-        This is a help <i>tooltip</i> .
-      </Tooltip>
+      <Tooltip>This is a ToolTip for simple text hints. It can replace the title property</Tooltip>
     }
   >
     <Button appearance="subtle">{placement}</Button>

@@ -3,11 +3,12 @@
 有三种事件可以触发提示 `Popover` 的信息: `click`、`focus`、`hover`
 
 <!--start-code-->
+
 ```js
 const speaker = (
   <Popover title="Title">
-    <p>This is a <code>Popover</code> </p>
-    <p>This is a <code>Popover</code> </p>
+    <p>This is a defalut Popover </p>
+    <p>Content</p>
   </Popover>
 );
 
@@ -26,6 +27,7 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+
 <!--end-code-->
 
 > 注意: [Safari ignoring tabindex](https://stackoverflow.com/questions/1848390/safari-ignoring-tabindex)

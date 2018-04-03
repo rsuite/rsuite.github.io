@@ -1,4 +1,4 @@
-# Grid 栅格 
+# Grid 栅格
 
 栅格布局的组件，提供 24 栅格， 参照 [Bootstrap](https://getbootstrap.com/docs/3.3/css/) 的响应式设计。
 
@@ -39,6 +39,7 @@ import { Grid, Row, Col } from 'rsuite';
 | 属性名称       | 类型`(默认值)`              | 描述                 |
 | -------------- | --------------------------- | -------------------- |
 | componentClass | React.ElementType `('div')` | 为组件自定义元素类型 |
+| gutter         | number                      | 栅格的间距           |
 
 ### `<Col>`
 
