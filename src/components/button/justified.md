@@ -14,13 +14,13 @@ const CustomButtonGroup = ({ appearance })=>(
 );
 
 const instance = (
-  <ButtonToolbar>
+  <div>
     <CustomButtonGroup />
     <CustomButtonGroup appearance="primary" />
     <CustomButtonGroup appearance="link" />
     <CustomButtonGroup appearance="subtle" />
     <CustomButtonGroup appearance="ghost" />
-  </ButtonToolbar>
+  </div>
 );
 ReactDOM.render(instance);
 ```
