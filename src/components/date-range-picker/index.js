@@ -6,6 +6,7 @@ import { DateRangePicker } from '../../rsuiteSource';
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
+  require('./placeholder.md'),
   require('./hover-range.md'),
   require('./one-tap.md'),
   require('./disabled.md'),
