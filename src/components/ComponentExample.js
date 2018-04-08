@@ -32,6 +32,7 @@ class ComponentExample extends React.Component {
     super(props);
     const component = components.find(item => item.id === props.id || item.name === props.id);
 
+    console.log(props.id);
     this.state = {
       tabIndex: 0,
       designHash: _.get(component, 'designHash'),

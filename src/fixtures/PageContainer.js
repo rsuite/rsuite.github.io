@@ -21,6 +21,8 @@ class PageContainer extends React.Component {
     const { children, designHash, routerId, ...rest } = this.props;
     const { hideNav } = this.state;
 
+    console.log(routerId);
+
     return (
       <PageProvider>
         <Row {...rest} className={clasNames({ ['hide-page-nav']: hideNav })}>

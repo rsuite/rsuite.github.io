@@ -311,7 +311,7 @@
   },
   {
     "id": "cascader",
-    "name": "Cascader ",
+    "name": "Cascader",
     "title": "级联选择器",
     "components": [
       "Cascader"
@@ -320,7 +320,7 @@
   },
   {
     "id": "date-picker",
-    "name": "DatePicker ",
+    "name": "DatePicker",
     "title": "日期选择器",
     "components": [
       "DatePicker"
@@ -338,7 +338,7 @@
   },
   {
     "id": "slider",
-    "name": "Slider ",
+    "name": "Slider",
     "title": "滑动输入控件",
     "components": [
       "Slider"
