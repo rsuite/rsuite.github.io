@@ -1,47 +1,71 @@
 ### 外观
 
 `appearance` 属性设置导航栏外观:
-- 'default'(默认值) 默认导航栏。
-- 'inverse'  反色的导航栏。
-- 'subtle'  弱化的导航栏。
+
+* 'default'(默认值) 默认导航栏。
+* 'inverse' 反色的导航栏。
+* 'subtle' 弱化的导航栏。
 
 <!--start-code-->
-```js
 
-const NavBarInstance = ({...props})=>{
+```js
+const NavBarInstance = ({ onSelect, activeKey, ...props }) => {
   return (
     <Navbar {...props}>
       <Navbar.Header>
-        <a href="#" className="navbar-brand logo">RSUITE</a>
+        <a href="#" className="navbar-brand logo">
+          RSUITE
+        </a>
       </Navbar.Header>
       <Navbar.Body>
-        <Nav>
-          <Nav.Item icon={<Icon icon="home" />} >Home</Nav.Item>
-          <Nav.Item>News</Nav.Item>
-          <Nav.Item>Products</Nav.Item>
+        <Nav onSelect={onSelect} activeKey={activeKey}>
+          <Nav.Item eventKey="1" icon={<Icon icon="home" />}>
+            Home
+          </Nav.Item>
+          <Nav.Item eventKey="2">News</Nav.Item>
+          <Nav.Item eventKey="3">Products</Nav.Item>
           <Dropdown title="About">
-            <Dropdown.Item>Company</Dropdown.Item>
-            <Dropdown.Item>Team</Dropdown.Item>
-            <Dropdown.Item>Contact</Dropdown.Item>
+            <Dropdown.Item eventKey="4">Company</Dropdown.Item>
+            <Dropdown.Item eventKey="5">Team</Dropdown.Item>
+            <Dropdown.Item eventKey="6">Contact</Dropdown.Item>
           </Dropdown>
         </Nav>
         <Nav pullRight>
-          <Nav.Item icon={<Icon icon="cog" />} >Settings</Nav.Item>
+          <Nav.Item icon={<Icon icon="cog" />}>Settings</Nav.Item>
         </Nav>
       </Navbar.Body>
     </Navbar>
   );
+};
+
+class Demo extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSelect = this.handleSelect.bind(this);
+    this.state = {
+      activeKey: null
+    };
+  }
+  handleSelect(eventKey) {
+    this.setState({
+      activeKey: eventKey
+    });
+  }
+  render() {
+    const { activeKey } = this.state;
+    return (
+      <div>
+        <NavBarInstance activeKey={activeKey} onSelect={this.handleSelect} />
+        <hr />
+        <NavBarInstance appearance="inverse" activeKey={activeKey} onSelect={this.handleSelect} />
+        <hr />
+        <NavBarInstance appearance="subtle" activeKey={activeKey} onSelect={this.handleSelect} />
+      </div>
+    );
+  }
 }
 
-const instance = (
-  <div>
-    <NavBarInstance />
-    <hr />
-    <NavBarInstance appearance="inverse" />
-    <hr />
-    <NavBarInstance appearance="subtle" />
-  </div>
-);
-ReactDOM.render(instance);
+ReactDOM.render(<Demo />);
 ```
+
 <!--end-code-->

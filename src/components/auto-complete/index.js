@@ -1,14 +1,14 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { AutoComplete, Icon } from '../../rsuiteSource';
-
+import { AutoComplete, InputGroup, Icon } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
   require('./email.md'),
   require('./render-item.md'),
-  require('./disabled.md')
+  require('./disabled.md'),
+  require('./input-group.md')
 ];
 
 export default () => {
@@ -17,6 +17,7 @@ export default () => {
       context={context}
       id="AutoComplete"
       dependencies={{
+        InputGroup,
         AutoComplete,
         Icon
       }}

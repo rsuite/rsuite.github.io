@@ -1,6 +1,13 @@
 <!--start-code-->
 
 ```js
+
+/**
+ * import fakeData from
+ * https://github.com/rsuite/rsuite.github.io/blob/next/src/components/table/data/users.js
+ */
+
+
 export const EditCell = ({ rowData, dataKey, onChange, ...props }) => {
   const editing = rowData.status === 'EDIT';
   return (

@@ -6,6 +6,7 @@ import { DatePicker } from '../../rsuiteSource';
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
+  require('./placeholder.md'),
   require('./inline.md'),
   require('./format.md'),
   require('./format-month.md'),

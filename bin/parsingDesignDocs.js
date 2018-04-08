@@ -5,14 +5,13 @@ const fs = require('fs');
 const { promisify } = require('util');
 const _ = require('lodash');
 const readfile = filePath => promisify(fs.readFile)(filePath, 'utf8');
-const relativePath = path => require('path').join(__dirname, path);
 
-const DESIGN_INDEX_PATH = '../public/design/index.html';
-const COMPONENTS_JSON_PATH = '../src/fixtures/components.json';
+const DESIGN_INDEX_PATH = './public/design/index.html';
+const COMPONENTS_JSON_PATH = './src/fixtures/components.json';
 
-(async function () {
-  const designHtmlData = await readfile(relativePath(DESIGN_INDEX_PATH));
-  const componentsData = JSON.parse(await readfile(relativePath(COMPONENTS_JSON_PATH)));
+(async function() {
+  const designHtmlData = await readfile(DESIGN_INDEX_PATH);
+  const componentsData = JSON.parse(await readfile(COMPONENTS_JSON_PATH));
   const jsonData = JSON.parse(/\$\(function\(\)\{ SMApp\((.*)\) \}\)\;/.exec(designHtmlData)[1]);
   const artboadrsData = _.get(jsonData, 'artboards').map((data, index) => ({
     ...data,
@@ -29,4 +28,4 @@ const COMPONENTS_JSON_PATH = '../src/fixtures/components.json';
     }
   });
   fs.writeFile(COMPONENTS_JSON_PATH, JSON.stringify(componentsData, null, '  '));
-}());
+})();

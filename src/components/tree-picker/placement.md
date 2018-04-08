@@ -1,36 +1,36 @@
 ### 位置
 
 <!--start-code-->
-```js
 
-const CustomSelectPicker=({placement})=>(
-  <TreePicker
-    defaultExpandAll
-    data={data}
-    placement={placement}
-    placeholder={placement}
-  />
+```js
+/**
+ * import data from
+ * https://github.com/rsuite/rsuite.github.io/blob/next/src/resources/data/city.js
+ */
+
+const CustomSelectPicker = ({ placement }) => (
+  <TreePicker defaultExpandAll data={data} placement={placement} placeholder={placement} />
 );
 
 const instance = (
   <table className="placement-table">
     <tbody>
       <tr>
-        <td></td>
+        <td />
         <td>
           <CustomSelectPicker placement="topLeft" />
         </td>
         <td>
           <CustomSelectPicker placement="topRight" />
         </td>
-        <td></td>
+        <td />
       </tr>
       <tr>
         <td>
           <CustomSelectPicker placement="leftTop" />
         </td>
-        <td></td>
-        <td></td>
+        <td />
+        <td />
         <td>
           <CustomSelectPicker placement="rightTop" />
         </td>
@@ -39,26 +39,26 @@ const instance = (
         <td>
           <CustomSelectPicker placement="leftBottom" />
         </td>
-        <td></td>
-        <td></td>
+        <td />
+        <td />
         <td>
           <CustomSelectPicker placement="rightBottom" />
         </td>
       </tr>
       <tr>
-        <td></td>
+        <td />
         <td>
           <CustomSelectPicker placement="bottomLeft" />
         </td>
         <td>
           <CustomSelectPicker placement="bottomRight" />
         </td>
-        <td></td>
+        <td />
       </tr>
     </tbody>
   </table>
-
 );
 ReactDOM.render(instance);
 ```
+
 <!--end-code-->

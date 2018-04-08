@@ -7,8 +7,6 @@
 * `Alert.warning` 警告信息提醒。
 * `Alert.error` 错误信息提醒。
 
-
-
 ## 获取组件
 
 ```js

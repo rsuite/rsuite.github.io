@@ -1,6 +1,11 @@
 <!--start-code-->
 
 ```js
+/**
+ * import fakeDataForColSpan from
+ * https://github.com/rsuite/rsuite.github.io/blob/next/src/components/table/data/usersForColSpan.js
+ */
+
 class ColspanTable extends React.Component {
   constructor(props) {
     super(props);

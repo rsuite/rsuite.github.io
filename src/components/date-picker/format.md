@@ -1,12 +1,21 @@
 ### 日期+时间
 
 <!--start-code-->
+
 ```js
-const DatePickerInstance = props => (
-  <DatePicker format="YYYY-MM-DD HH:mm:ss" />
+const instance = (
+  <DatePicker
+    format="YYYY-MM-DD HH:mm:ss"
+    ranges={[
+      {
+        label: 'Now',
+        value: moment()
+      }
+    ]}
+  />
 );
 
-ReactDOM.render(<DatePickerInstance />);
-
+ReactDOM.render(instance);
 ```
+
 <!--end-code-->
