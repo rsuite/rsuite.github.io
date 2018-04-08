@@ -15,14 +15,13 @@ const COMPONENTS_JSON_PATH = './src/fixtures/components.json';
   const jsonData = JSON.parse(/\$\(function\(\)\{ SMApp\((.*)\) \}\)\;/.exec(designHtmlData)[1]);
   const artboadrsData = _.get(jsonData, 'artboards').map((data, index) => ({
     ...data,
-    name: data.name,
+    name: data.name.toLowerCase(),
     index: `${index}`
   }));
   const artboards = _.keyBy(artboadrsData, 'name');
-
   componentsData.forEach(obj => {
     const { name } = obj;
-    const designHashIndex = _.get(artboards, `${name}.index`) || null;
+    const designHashIndex = _.get(artboards, `${name.toLowerCase()}.index`) || null;
     if (designHashIndex) {
       obj.designHash = `artboard${designHashIndex}`;
     }
