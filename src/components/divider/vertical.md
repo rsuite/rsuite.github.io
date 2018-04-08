@@ -5,11 +5,11 @@
 ```js
 const instance = (
   <div>
-    <Button appearance="link">Edit</Button>
+    <a>Edit</a>
     <Divider vertical />
-    <Button appearance="link">Update</Button>
+    <a>Update</a>
     <Divider vertical />
-    <Button appearance="link">Save</Button>
+    <a>Save</a>
   </div>
 );
 ReactDOM.render(instance);
