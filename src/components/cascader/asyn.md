@@ -3,6 +3,10 @@
 
 <!--start-code-->
 ```js
+/**
+ * import province from
+ * https://github.com/rsuite/rsuite.github.io/blob/next/src/resources/data/province-simplified.js
+ */
 
 
 function asynGetData(node, callback) {

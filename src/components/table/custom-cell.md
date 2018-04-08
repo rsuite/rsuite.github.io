@@ -1,6 +1,11 @@
 <!--start-code-->
 
 ```js
+/**
+ * import fakeData from
+ * https://github.com/rsuite/rsuite.github.io/blob/next/src/components/table/data/users.js
+ */
+
 const DateCell = ({ rowData, dataKey, ...props }) => (
   <Cell {...props}>{rowData[dataKey].toLocaleString()}</Cell>
 );

@@ -3,6 +3,12 @@
 <!--start-code-->
 
 ```js
+
+/**
+ * import data from
+ * https://github.com/rsuite/rsuite.github.io/blob/next/src/resources/data/users.js
+ */
+
 class AsynExample extends React.Component {
   constructor(props) {
     super(props);

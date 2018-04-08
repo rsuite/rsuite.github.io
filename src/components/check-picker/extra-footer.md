@@ -2,6 +2,11 @@
 
 <!--start-code-->
 ```js
+/**
+ * import data from
+ * https://github.com/rsuite/rsuite.github.io/blob/next/src/resources/data/users.js
+ */
+
 const footerStyles = {
   padding: 10,
   textAlign: 'right',

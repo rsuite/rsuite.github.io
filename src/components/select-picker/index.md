@@ -1,4 +1,4 @@
-# SelectPicker 单项选择器 
+# SelectPicker 单项选择器
 
 用于单项数据选择，支持分组。
 
@@ -53,3 +53,4 @@ import { SelectPicker } from 'rsuite';
 ```js
 Type Placement = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight' | 'leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom';
 ```
+
