@@ -29,7 +29,6 @@ import { CheckTreePicker } from 'rsuite';
 | disabledItemValues | Array&lt;any&gt;                                                           | 禁用节点列表                    |
 | defaultExpandAll   | boolean                                                                    | 默认展开所有节点                |
 | cascade            | boolean                                                                    | checktree 是否级联选择          |
-| locale             | Object `` | 本地语言                                                       |
 | placeholder        | React.Node `('Select')`                                                    | 占位符                          |
 | disabled           | boolean                                                                    | 是否禁用 Picker                 |
 | seasrchable        | boolean `(true)`                                                           | 是否可以清楚                    |
