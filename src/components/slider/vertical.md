@@ -25,6 +25,22 @@ export const VerticalSlider = () => {
             <Slider defaultValue={50} min={0} step={10} max={100} graduated vertical progress />
           </div>
         </Col>
+        <Col md={2}>
+          <div style={style}>
+            <Slider
+              defaultValue={50}
+              min={0}
+              step={10}
+              max={100}
+              graduated
+              vertical
+              progress
+              renderMark={mark => {
+                return <span>{mark} °C</span>;
+              }}
+            />
+          </div>
+        </Col>
       </Row>
     </div>
   );
