@@ -13,9 +13,7 @@ const iconPath = ['./node_modules/rsuite-theme', '../rsuite-theme'].map(relative
 const { NODE_ENV, STYLE_DEBUG } = process.env;
 const __PRO__ = NODE_ENV === 'production';
 
-const extractLess = new ExtractTextPlugin({
-  filename: '[contenthash].css'
-});
+const extractLess = new ExtractTextPlugin('style.css');
 
 const getStyleLoader = () => {
   const sourceMap = STYLE_DEBUG === 'SOURCE' ? '?sourceMap' : '';
