@@ -33,4 +33,4 @@ import { Slider } from 'rsuite';
 | progress        | boolean                      | 显示滑动的进度条           |
 | vertical        | boolean                      | 垂直滑动                   |
 | onChange        | (value: number) => void      | 数据发生改变的回调函数     |
-| renderMark      | (mark: number) => React.Node | 自定义渲染标尺上的 Mark    |
+| renderMark      | (mark: number) => React.Node | 自定义渲染标尺上的标签     |

@@ -7,16 +7,28 @@ class ModalDemo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      formValue: {
+        name: '',
+        email: '',
+        password: '',
+        textarea: ''
+      },
       show: false
     };
     this.close = this.close.bind(this);
     this.open = this.open.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
   close() {
     this.setState({ show: false });
   }
   open() {
     this.setState({ show: true });
+  }
+  handleChange(value) {
+    this.setState({
+      formValue: value
+    });
   }
   render() {
     return (
@@ -26,7 +38,7 @@ class ModalDemo extends React.Component {
             <Modal.Title>New User</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Form fluid>
+            <Form fluid onChange={this.handleChange} formValue={this.state.formValue}>
               <FormGroup>
                 <ControlLabel>Username</ControlLabel>
                 <FormControl name="name" />
