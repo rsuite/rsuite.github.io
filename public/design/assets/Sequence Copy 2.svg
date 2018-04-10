@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>Sequence Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Sequence-Copy-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <path d="M6,11 L3,8" id="Line-8" stroke="#34C3FF"></path>
+        <path d="M9,4 L6,1" id="Line-8-Copy" stroke="#34C3FF"></path>
+        <path d="M9,11 L6,8" id="Line-8" stroke="#34C3FF" transform="translate(7.500000, 9.500000) scale(-1, 1) translate(-7.500000, -9.500000) "></path>
+        <path d="M6,4 L3,1" id="Line-8-Copy-2" stroke="#34C3FF" transform="translate(4.500000, 2.500000) scale(-1, 1) translate(-4.500000, -2.500000) "></path>
+    </g>
+</svg>
