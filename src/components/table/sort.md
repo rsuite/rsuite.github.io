@@ -46,7 +46,6 @@ class SortTable extends React.Component {
     });
 
     setTimeout(() => {
-      console.log(sortColumn);
       this.setState({
         sortColumn,
         sortType,

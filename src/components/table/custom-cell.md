@@ -76,7 +76,6 @@ const EmailCell = ({ rowData, dataKey, ...props }) => (
 const ActionCell = ({ rowData, dataKey, ...props }) => {
   function handleAction() {
     alert(`id:${rowData[dataKey]}`);
-    console.log(rowData, dataKey);
   }
 
   return (

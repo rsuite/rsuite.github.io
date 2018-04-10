@@ -30,7 +30,6 @@ class PaginationTable extends React.Component {
   }
   getData() {
     const { displayLength, page } = this.state;
-    console.log(displayLength, page);
     return fakeData.filter((v, i) => {
       const start = displayLength * (page - 1);
       const end = start + displayLength;
@@ -40,7 +39,6 @@ class PaginationTable extends React.Component {
   render() {
     const data = this.getData();
     const { loading, displayLength, page } = this.state;
-    console.log(data);
 
     return (
       <div>

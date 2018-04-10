@@ -3,7 +3,7 @@
 <!--start-code-->
 ```js
 
-class ModalsBasic extends React.Component{
+class BasicDemo extends React.Component{
   constructor(props) {
     super(props);
     this.state = {
@@ -46,6 +46,6 @@ class ModalsBasic extends React.Component{
   }
 }
 
-ReactDOM.render(<ModalsBasic />);
+ReactDOM.render(<BasicDemo />);
 ```
 <!--end-code-->
