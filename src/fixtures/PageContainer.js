@@ -52,6 +52,14 @@ class PageContainer extends React.Component {
 
               <IconButton
                 appearance="subtle"
+                title="提交Bug"
+                icon={<Icon icon="bug" />}
+                target="_blank"
+                href={' https://github.com/rsuite/rsuite/issues/new'}
+              />
+
+              <IconButton
+                appearance="subtle"
                 title="折叠菜单"
                 icon={<Icon icon="navicon" />}
                 onClick={this.handleNavicon}
