@@ -30,10 +30,10 @@ menu.forEach(item => {
         <Route
           key={child.id}
           path={child.id}
-          getComponents={(location, cb) => {
+          getComponents={(location, resolve) => {
             let name = location.params.name;
             require.ensure([], require => {
-              cb(null, require(`./${item.id}/${child.id}`));
+              resolve(null, require(`./${item.id}/${child.id}`));
             });
           }}
         />
