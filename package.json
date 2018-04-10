@@ -10,22 +10,14 @@
     "dev": "webpack-dev-server --mode development --progress --hot",
     "dev-styles": "STYLE_DEBUG=STYLE npm run dev",
     "dev-styles-source": "STYLE_DEBUG=SOURCE npm run dev",
-    "build": "rm -rf dist && NODE_ENV=production  webpack --mode production --progress && cp -R public/* ./dist/ ",
+    "build":
+      "rm -rf dist && NODE_ENV=production  webpack --mode production --progress && cp -R public/* ./dist/ ",
     "test": "karma start",
     "babel": "rm -rf lib && babel src/App.js --out-dir lib",
     "parsing-design-docs": "node ./bin/parsingDesignDocs.js"
   },
-  "keywords": [
-    "react",
-    "suite",
-    "rsuite",
-    "react-component"
-  ],
-  "files": [
-    "CHANGELOG.md",
-    "lib",
-    "src"
-  ],
+  "keywords": ["react", "suite", "rsuite", "react-component"],
+  "files": ["CHANGELOG.md", "lib", "src"],
   "author": "Simon Guo <simonguo.2009@gmail.com>",
   "license": "MIT",
   "repository": {
@@ -34,9 +26,9 @@
   },
   "dependencies": {
     "moment": "^2.20.1",
+    "react-draft-wysiwyg": "^1.12.11",
     "react-json-tree": "^0.11.0",
     "react-paragraph": "^1.0.0",
-    "react-quill": "^1.2.6",
     "rsuite": "^3.0.0-next.12",
     "rsuite-page-nav": "^1.1.5",
     "rsuite-table": "^3.0.0-next.3",
