@@ -27,20 +27,6 @@ const CustomField = ({ name, message, label, accepter, error, ...props }) => (
   </FormGroup>
 );
 
-const Editor = ({ onChange, defaultValue, ...props }) => {
-  function handleChange(content) {
-    onChange(content);
-  }
-  return (
-    <ReactQuill
-      style={{ width: 500, height: 200 }}
-      theme="snow"
-      onChange={handleChange}
-      defaultValue={defaultValue}
-    />
-  );
-};
-
 class CustomFieldForm extends React.Component {
   constructor(props) {
     super(props);
@@ -74,6 +60,7 @@ class CustomFieldForm extends React.Component {
         <Form
           ref={ref => (this.form = ref)}
           onChange={formValue => {
+            console.log(formValue);
             this.setState({ formValue });
           }}
           onCheck={formError => {
@@ -130,12 +117,6 @@ class CustomFieldForm extends React.Component {
             ]}
           />
 
-          <CustomField
-            name="description"
-            label="Description"
-            accepter={Editor}
-            error={formError.description}
-          />
 
           <FormGroup>
             <Button appearance="primary" onClick={this.handleSubmit}>

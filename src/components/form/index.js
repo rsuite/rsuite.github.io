@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactQuill from 'react-quill';
 import JSONTree from 'react-json-tree';
 
 import ComponentExample from '../ComponentExample';
@@ -92,7 +91,6 @@ export default () => {
         Panel,
         Radio,
         Modal,
-        ReactQuill,
         JSONTree,
         JSONView
       }}

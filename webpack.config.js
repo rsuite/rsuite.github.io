@@ -13,7 +13,7 @@ const iconPath = ['./node_modules/rsuite-theme', '../rsuite-theme'].map(relative
 const { NODE_ENV, STYLE_DEBUG } = process.env;
 const __PRO__ = NODE_ENV === 'production';
 
-const extractLess = new ExtractTextPlugin('style.css');
+const extractLess = new ExtractTextPlugin('style.[hash].css');
 
 const getStyleLoader = () => {
   const sourceMap = STYLE_DEBUG === 'SOURCE' ? '?sourceMap' : '';
@@ -39,7 +39,7 @@ module.exports = {
     app: './src/index.js'
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].bundle.js?[hash]',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/'
   },
@@ -47,7 +47,10 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: ['transform-loader?brfs', 'babel-loader?babelrc'],
+        use: [
+          'transform-loader?brfs', // Use browserify transforms as webpack-loader.
+          'babel-loader?babelrc'
+        ],
         exclude: /node_modules/
       },
       {
@@ -132,8 +135,7 @@ module.exports = {
     new HtmlwebpackPlugin({
       title: 'RSUITE | 一套 React 的 UI 组件库',
       template: 'src/index.html',
-      inject: true,
-      hash: true
+      inject: true
     })
   ],
   devtool: STYLE_DEBUG === 'SOURCE' && 'source-map'
