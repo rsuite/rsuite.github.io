@@ -1,19 +1,13 @@
 {
   "presets": [
-    [
-      "env",
-      {
-        "targets": {
-          "browsers": ["last 2 versions"]
-        }
-      }
-    ],
+    "env",
     "stage-0",
     "react"
   ],
   "plugins": [
     "lodash",
     "transform-class-properties",
+    "transform-proto-to-assign",
     "transform-runtime",
     "add-module-exports",
     "react-hot-loader/babel",
