@@ -2,11 +2,14 @@
 
 ## 引入 less
 
-在 less 中引入 rsuite 默认主题
+在 less 中引入 rsuite 默认样式
 
 ```less
-@import '~rsuite/themes/default';
+@import '~rsuite/lib/less/index.less';
 ```
+
+如果你使用 [webpack](http://webpack.github.io/) 构建项目，需要配置 [less-loader](https://github.com/webpack-contrib/less-loader) 。
+
 
 ## 定制主题色
 
