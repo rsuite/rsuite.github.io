@@ -46,10 +46,10 @@ class CustomFieldForm extends React.Component {
   handleSubmit() {
     const { formValue } = this.state;
     if (!this.form.check()) {
-      console.error('Form Error');
+      Alert.error('Error');
       return;
     }
-    console.log(formValue, 'Form Value');
+    Alert.success('Success');
   }
   render() {
     const { formError, formValue } = this.state;
@@ -64,6 +64,7 @@ class CustomFieldForm extends React.Component {
             this.setState({ formValue });
           }}
           onCheck={formError => {
+            console.log(formError, 'formError');
             this.setState({ formError });
           }}
           formDefaultValue={formValue}
@@ -116,7 +117,6 @@ class CustomFieldForm extends React.Component {
               { label: 'Done', value: 'done' }
             ]}
           />
-
 
           <FormGroup>
             <Button appearance="primary" onClick={this.handleSubmit}>

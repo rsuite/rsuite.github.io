@@ -28,6 +28,7 @@ import {
   Toggle,
   Panel,
   Modal,
+  Alert,
   SelectPicker
 } from '../../rsuiteSource';
 
@@ -66,6 +67,7 @@ export default () => {
     <ComponentExample
       id="Form"
       dependencies={{
+        Alert,
         Row,
         Col,
         Schema,
