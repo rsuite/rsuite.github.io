@@ -18,11 +18,10 @@ import Frame from './fixtures/Frame';
 import Home from './Home';
 
 import ready from './ready';
+import { setTitle, defateTilte } from './title';
 import menu from './fixtures/menu';
 
-const routes = [];
-
-menu.forEach(item => {
+const routes = menu.map(item => {
   const children = [];
   item.children.forEach(child => {
     !child.group &&
@@ -31,27 +30,26 @@ menu.forEach(item => {
           key={child.id}
           path={child.id}
           getComponents={(location, resolve) => {
-            let name = location.params.name;
             require.ensure([], require => {
               resolve(null, require(`./${item.id}/${child.id}`));
+              setTitle(`${child.title || ''} ${child.name} - ${item.name}`);
             });
           }}
         />
       );
   });
 
-  const route = (
+  return (
     <Route key={item.id} path={item.id} component={Frame}>
       {children}
     </Route>
   );
-  routes.push(route);
 });
 
 const AppWithRouter = () => (
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={Home} />
+      <IndexRoute component={Home} onEnter={defateTilte} />
       {routes}
     </Route>
   </Router>
