@@ -6,7 +6,7 @@ const HtmlwebpackPlugin = require('html-webpack-plugin');
 const markdownRenderer = require('react-markdown-reader').renderer;
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-const iconPath = ['./node_modules/rsuite-theme', '../rsuite-theme'].map(relativePath =>
+const iconPath = ['./node_modules/rsuite/src/less', '../rsuite/src/less'].map(relativePath =>
   path.resolve(__dirname, relativePath)
 );
 
