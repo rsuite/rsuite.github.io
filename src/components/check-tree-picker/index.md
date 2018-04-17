@@ -31,7 +31,7 @@ import { CheckTreePicker } from 'rsuite';
 | cascade            | boolean                                                                    | checktree 是否级联选择          |
 | placeholder        | React.Node `('Select')`                                                    | 占位符                          |
 | disabled           | boolean                                                                    | 是否禁用 Picker                 |
-| seasrchable        | boolean `(true)`                                                           | 是否可以清楚                    |
+| cleanable          | boolean `(true)`                                                           | 是否可以清楚                    |
 | seasrchable        | boolean `(true)`                                                           | 是否显示搜索框                  |
 | onSearch           | (searchKeyword:string, event)=>boolean                                     | 搜索回调函数                    |
 | onOpen             | ()=>boolean                                                                | 展开的回调函数                  |

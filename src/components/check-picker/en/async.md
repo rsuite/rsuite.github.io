@@ -1,0 +1,51 @@
+### Asynchronous
+
+<!--start-code-->
+
+```js
+/**
+ * import data from
+ * https://github.com/rsuite/rsuite.github.io/blob/next/src/resources/data/users.js
+ */
+
+class AsynExample extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: []
+    };
+    this.handleUpdate = this.handleUpdate.bind(this);
+  }
+  handleUpdate() {
+    if (this.state.items.length === 0) {
+      setTimeout(() => {
+        this.setState({ items: data });
+      }, 1000);
+    }
+  }
+  render() {
+    const { items } = this.state;
+    return (
+      <CheckPicker
+        data={items}
+        onOpen={this.handleUpdate}
+        onSearch={this.handleUpdate}
+        renderMenu={menu => {
+          if (items.length === 0) {
+            return (
+              <p style={{ padding: 4, color: '#999', textAlign: 'center' }}>
+                <Icon icon="spinner" spin /> loading...
+              </p>
+            );
+          }
+          return menu;
+        }}
+      />
+    );
+  }
+}
+
+ReactDOM.render(<AsynExample />);
+```
+
+<!--end-code-->
