@@ -24,7 +24,7 @@ import ReactDOM from 'react-dom';
 import { Button } from 'rsuite';
 
 // import default style
-import 'rsuite/themes/default/index.less';
+import 'rsuite/styles/less/index.less';
 
 function App() {
   return <Button>Hello World</Button>;
