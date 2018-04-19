@@ -26,6 +26,11 @@ class IconPage extends React.Component {
           </Col>
         </Row>
         <IconList />
+        <Row>
+          <Col md={24}>
+            <MarkdownView>{require('./footer.md')}</MarkdownView>
+          </Col>
+        </Row>
       </PageContainer>
     );
   }
