@@ -23,9 +23,6 @@
   {
     "name": "Address Card",
     "id": "address-card",
-    "aliases": [
-      "vcard"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -33,9 +30,6 @@
   {
     "name": "Address Card Outlined",
     "id": "address-card-o",
-    "aliases": [
-      "vcard-o"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -121,9 +115,6 @@
   {
     "name": "American Sign Language Interpreting",
     "id": "american-sign-language-interpreting",
-    "aliases": [
-      "asl-interpreting"
-    ],
     "categories": [
       "Web Application Icons",
       "Accessibility Icons"
@@ -532,9 +523,6 @@
   {
     "name": "American Sign Language Interpreting",
     "id": "asl-interpreting",
-    "aliases": [
-      "asl-interpreting"
-    ],
     "categories": [
       "Web Application Icons",
       "Accessibility Icons"
@@ -594,9 +582,6 @@
   {
     "name": "Car",
     "id": "automobile",
-    "aliases": [
-      "automobile"
-    ],
     "filter": [
       "vehicle"
     ],
@@ -657,10 +642,6 @@
   {
     "name": "University",
     "id": "bank",
-    "aliases": [
-      "institution",
-      "bank"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -668,9 +649,6 @@
   {
     "name": "Bar Chart",
     "id": "bar-chart",
-    "aliases": [
-      "bar-chart-o"
-    ],
     "filter": [
       "graph",
       "analytics"
@@ -683,9 +661,6 @@
   {
     "name": "Bar Chart",
     "id": "bar-chart-o",
-    "aliases": [
-      "bar-chart-o"
-    ],
     "filter": [
       "graph",
       "analytics"
@@ -708,10 +683,6 @@
   {
     "name": "Bars",
     "id": "bars",
-    "aliases": [
-      "navicon",
-      "reorder"
-    ],
     "filter": [
       "menu",
       "drag",
@@ -732,10 +703,6 @@
   {
     "name": "Bath",
     "id": "bath",
-    "aliases": [
-      "bathtub",
-      "s15"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -743,10 +710,6 @@
   {
     "name": "Bath",
     "id": "bathtub",
-    "aliases": [
-      "bathtub",
-      "s15"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -754,10 +717,6 @@
   {
     "name": "Battery Full",
     "id": "battery",
-    "aliases": [
-      "battery-4",
-      "battery"
-    ],
     "filter": [
       "power"
     ],
@@ -768,9 +727,6 @@
   {
     "name": "Battery Empty",
     "id": "battery-0",
-    "aliases": [
-      "battery-0"
-    ],
     "filter": [
       "power"
     ],
@@ -781,9 +737,6 @@
   {
     "name": "Battery 1/4 Full",
     "id": "battery-1",
-    "aliases": [
-      "battery-1"
-    ],
     "filter": [
       "power"
     ],
@@ -794,9 +747,6 @@
   {
     "name": "Battery 1/2 Full",
     "id": "battery-2",
-    "aliases": [
-      "battery-2"
-    ],
     "filter": [
       "power"
     ],
@@ -807,9 +757,6 @@
   {
     "name": "Battery 3/4 Full",
     "id": "battery-3",
-    "aliases": [
-      "battery-3"
-    ],
     "filter": [
       "power"
     ],
@@ -820,10 +767,6 @@
   {
     "name": "Battery Full",
     "id": "battery-4",
-    "aliases": [
-      "battery-4",
-      "battery"
-    ],
     "filter": [
       "power"
     ],
@@ -834,9 +777,6 @@
   {
     "name": "Battery Empty",
     "id": "battery-empty",
-    "aliases": [
-      "battery-0"
-    ],
     "filter": [
       "power"
     ],
@@ -847,10 +787,6 @@
   {
     "name": "Battery Full",
     "id": "battery-full",
-    "aliases": [
-      "battery-4",
-      "battery"
-    ],
     "filter": [
       "power"
     ],
@@ -861,9 +797,6 @@
   {
     "name": "Battery 1/2 Full",
     "id": "battery-half",
-    "aliases": [
-      "battery-2"
-    ],
     "filter": [
       "power"
     ],
@@ -874,9 +807,6 @@
   {
     "name": "Battery 1/4 Full",
     "id": "battery-quarter",
-    "aliases": [
-      "battery-1"
-    ],
     "filter": [
       "power"
     ],
@@ -887,9 +817,6 @@
   {
     "name": "Battery 3/4 Full",
     "id": "battery-three-quarters",
-    "aliases": [
-      "battery-3"
-    ],
     "filter": [
       "power"
     ],
@@ -902,9 +829,6 @@
     "id": "bed",
     "filter": [
       "travel"
-    ],
-    "aliases": [
-      "hotel"
     ],
     "categories": [
       "Web Application Icons"
@@ -1026,9 +950,6 @@
   {
     "name": "Bitcoin (BTC)",
     "id": "bitcoin",
-    "aliases": [
-      "bitcoin"
-    ],
     "categories": [
       "Currency Icons",
       "Brand Icons"
@@ -1079,9 +1000,6 @@
     "filter": [
       "lightning",
       "weather"
-    ],
-    "aliases": [
-      "flash"
     ],
     "categories": [
       "Web Application Icons"
@@ -1157,9 +1075,6 @@
   {
     "name": "Bitcoin (BTC)",
     "id": "btc",
-    "aliases": [
-      "bitcoin"
-    ],
     "categories": [
       "Currency Icons",
       "Brand Icons"
@@ -1271,9 +1186,6 @@
   {
     "name": "Taxi",
     "id": "cab",
-    "aliases": [
-      "cab"
-    ],
     "filter": [
       "vehicle"
     ],
@@ -1380,9 +1292,6 @@
   {
     "name": "Car",
     "id": "car",
-    "aliases": [
-      "automobile"
-    ],
     "filter": [
       "vehicle"
     ],
@@ -1434,9 +1343,6 @@
   {
     "name": "Caret Square Outlined Down",
     "id": "caret-square-o-down",
-    "aliases": [
-      "toggle-down"
-    ],
     "filter": [
       "more",
       "dropdown",
@@ -1454,9 +1360,6 @@
       "previous",
       "back"
     ],
-    "aliases": [
-      "toggle-left"
-    ],
     "categories": [
       "Web Application Icons",
       "Directional Icons"
@@ -1469,9 +1372,6 @@
       "next",
       "forward"
     ],
-    "aliases": [
-      "toggle-right"
-    ],
     "categories": [
       "Web Application Icons",
       "Directional Icons"
@@ -1480,9 +1380,6 @@
   {
     "name": "Caret Square Outlined Up",
     "id": "caret-square-o-up",
-    "aliases": [
-      "toggle-up"
-    ],
     "categories": [
       "Web Application Icons",
       "Directional Icons"
@@ -1612,9 +1509,6 @@
     "filter": [
       "chain"
     ],
-    "aliases": [
-      "chain"
-    ],
     "categories": [
       "Text Editor Icons"
     ]
@@ -1624,9 +1518,6 @@
     "id": "chain-broken",
     "filter": [
       "remove"
-    ],
-    "aliases": [
-      "unlink"
     ],
     "categories": [
       "Text Editor Icons"
@@ -1890,9 +1781,6 @@
     "filter": [
       "copy"
     ],
-    "aliases": [
-      "paste"
-    ],
     "categories": [
       "Text Editor Icons"
     ]
@@ -1923,10 +1811,6 @@
   {
     "name": "Times",
     "id": "close",
-    "aliases": [
-      "remove",
-      "close"
-    ],
     "filter": [
       "close",
       "exit",
@@ -1984,11 +1868,6 @@
   {
     "name": "Japanese Yen (JPY)",
     "id": "cny",
-    "aliases": [
-      "cny",
-      "rmb",
-      "yen"
-    ],
     "categories": [
       "Currency Icons"
     ]
@@ -2057,9 +1936,6 @@
     "filter": [
       "settings"
     ],
-    "aliases": [
-      "gear"
-    ],
     "categories": [
       "Web Application Icons",
       "Spinner Icons"
@@ -2068,9 +1944,6 @@
   {
     "name": "cogs",
     "id": "cogs",
-    "aliases": [
-      "gears"
-    ],
     "filter": [
       "settings"
     ],
@@ -2274,9 +2147,6 @@
       "clone",
       "copy"
     ],
-    "aliases": [
-      "copy"
-    ],
     "categories": [
       "Text Editor Icons"
     ]
@@ -2379,9 +2249,6 @@
   {
     "name": "Scissors",
     "id": "cut",
-    "aliases": [
-      "cut"
-    ],
     "categories": [
       "Text Editor Icons"
     ]
@@ -2407,9 +2274,6 @@
     "filter": [
       "speedometer",
       "fast"
-    ],
-    "aliases": [
-      "dashboard"
     ],
     "categories": [
       "Web Application Icons"
@@ -2447,10 +2311,6 @@
   {
     "name": "Deaf",
     "id": "deaf",
-    "aliases": [
-      "deafness",
-      "hard-of-hearing"
-    ],
     "categories": [
       "Web Application Icons",
       "Accessibility Icons"
@@ -2459,10 +2319,6 @@
   {
     "name": "Deaf",
     "id": "deafness",
-    "aliases": [
-      "deafness",
-      "hard-of-hearing"
-    ],
     "categories": [
       "Web Application Icons",
       "Accessibility Icons"
@@ -2471,9 +2327,6 @@
   {
     "name": "Outdent",
     "id": "dedent",
-    "aliases": [
-      "dedent"
-    ],
     "categories": [
       "Text Editor Icons"
     ]
@@ -2528,9 +2381,6 @@
   {
     "name": "US Dollar",
     "id": "dollar",
-    "aliases": [
-      "dollar"
-    ],
     "categories": [
       "Currency Icons"
     ]
@@ -2582,9 +2432,6 @@
   {
     "name": "Identification Card",
     "id": "drivers-license",
-    "aliases": [
-      "drivers-license"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -2592,9 +2439,6 @@
   {
     "name": "Identification Card Outlined",
     "id": "drivers-license-o",
-    "aliases": [
-      "drivers-license-o"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -2631,9 +2475,6 @@
       "write",
       "edit",
       "update"
-    ],
-    "aliases": [
-      "edit"
     ],
     "categories": [
       "Web Application Icons"
@@ -2684,9 +2525,6 @@
   {
     "name": "Galactic Empire",
     "id": "empire",
-    "aliases": [
-      "ge"
-    ],
     "categories": [
       "Brand Icons"
     ]
@@ -2804,9 +2642,6 @@
   {
     "name": "Euro (EUR)",
     "id": "eur",
-    "aliases": [
-      "euro"
-    ],
     "categories": [
       "Currency Icons"
     ]
@@ -2814,9 +2649,6 @@
   {
     "name": "Euro (EUR)",
     "id": "euro",
-    "aliases": [
-      "euro"
-    ],
     "categories": [
       "Currency Icons"
     ]
@@ -2879,9 +2711,6 @@
       "problem",
       "notification",
       "alert"
-    ],
-    "aliases": [
-      "warning"
     ],
     "categories": [
       "Web Application Icons"
@@ -2979,9 +2808,6 @@
   {
     "name": "Font Awesome",
     "id": "fa",
-    "aliases": [
-      "fa"
-    ],
     "categories": [
       "Brand Icons"
     ]
@@ -2989,9 +2815,6 @@
   {
     "name": "Facebook",
     "id": "facebook",
-    "aliases": [
-      "facebook-f"
-    ],
     "filter": [
       "social network"
     ],
@@ -3002,9 +2825,6 @@
   {
     "name": "Facebook",
     "id": "facebook-f",
-    "aliases": [
-      "facebook-f"
-    ],
     "filter": [
       "social network"
     ],
@@ -3068,9 +2888,6 @@
     "filter": [
       "blog"
     ],
-    "aliases": [
-      "feed"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -3121,9 +2938,6 @@
   {
     "name": "Archive File Outlined",
     "id": "file-archive-o",
-    "aliases": [
-      "file-zip-o"
-    ],
     "categories": [
       "Web Application Icons",
       "File Type Icons"
@@ -3132,9 +2946,6 @@
   {
     "name": "Audio File Outlined",
     "id": "file-audio-o",
-    "aliases": [
-      "file-sound-o"
-    ],
     "categories": [
       "Web Application Icons",
       "File Type Icons"
@@ -3159,10 +2970,6 @@
   {
     "name": "Image File Outlined",
     "id": "file-image-o",
-    "aliases": [
-      "file-photo-o",
-      "file-picture-o"
-    ],
     "categories": [
       "Web Application Icons",
       "File Type Icons"
@@ -3171,9 +2978,6 @@
   {
     "name": "Video File Outlined",
     "id": "file-movie-o",
-    "aliases": [
-      "file-movie-o"
-    ],
     "categories": [
       "Web Application Icons",
       "File Type Icons"
@@ -3204,10 +3008,6 @@
   {
     "name": "Image File Outlined",
     "id": "file-photo-o",
-    "aliases": [
-      "file-photo-o",
-      "file-picture-o"
-    ],
     "categories": [
       "Web Application Icons",
       "File Type Icons"
@@ -3216,10 +3016,6 @@
   {
     "name": "Image File Outlined",
     "id": "file-picture-o",
-    "aliases": [
-      "file-photo-o",
-      "file-picture-o"
-    ],
     "categories": [
       "Web Application Icons",
       "File Type Icons"
@@ -3236,9 +3032,6 @@
   {
     "name": "Audio File Outlined",
     "id": "file-sound-o",
-    "aliases": [
-      "file-sound-o"
-    ],
     "categories": [
       "Web Application Icons",
       "File Type Icons"
@@ -3275,9 +3068,6 @@
   {
     "name": "Video File Outlined",
     "id": "file-video-o",
-    "aliases": [
-      "file-movie-o"
-    ],
     "categories": [
       "Web Application Icons",
       "File Type Icons"
@@ -3294,9 +3084,6 @@
   {
     "name": "Archive File Outlined",
     "id": "file-zip-o",
-    "aliases": [
-      "file-zip-o"
-    ],
     "categories": [
       "Web Application Icons",
       "File Type Icons"
@@ -3308,9 +3095,6 @@
     "filter": [
       "duplicate",
       "clone",
-      "copy"
-    ],
-    "aliases": [
       "copy"
     ],
     "categories": [
@@ -3416,9 +3200,6 @@
       "lightning",
       "weather"
     ],
-    "aliases": [
-      "flash"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -3446,9 +3227,6 @@
   {
     "name": "Floppy Outlined",
     "id": "floppy-o",
-    "aliases": [
-      "save"
-    ],
     "categories": [
       "Text Editor Icons"
     ]
@@ -3501,9 +3279,6 @@
   {
     "name": "Font Awesome",
     "id": "font-awesome",
-    "aliases": [
-      "fa"
-    ],
     "categories": [
       "Brand Icons"
     ]
@@ -3581,9 +3356,6 @@
   {
     "name": "Futbol Outlined",
     "id": "futbol-o",
-    "aliases": [
-      "soccer-ball-o"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -3606,9 +3378,6 @@
       "lawyer",
       "opinion"
     ],
-    "aliases": [
-      "legal"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -3623,9 +3392,6 @@
   {
     "name": "Galactic Empire",
     "id": "ge",
-    "aliases": [
-      "ge"
-    ],
     "categories": [
       "Brand Icons"
     ]
@@ -3635,9 +3401,6 @@
     "id": "gear",
     "filter": [
       "settings"
-    ],
-    "aliases": [
-      "gear"
     ],
     "categories": [
       "Web Application Icons",
@@ -3661,9 +3424,6 @@
   {
     "name": "cogs",
     "id": "gears",
-    "aliases": [
-      "gears"
-    ],
     "filter": [
       "settings"
     ],
@@ -3776,9 +3536,6 @@
   {
     "name": "Gratipay (Gittip)",
     "id": "gittip",
-    "aliases": [
-      "gittip"
-    ],
     "filter": [
       "heart",
       "like",
@@ -3874,9 +3631,6 @@
   {
     "name": "Google Plus Official",
     "id": "google-plus-circle",
-    "aliases": [
-      "google-plus-circle"
-    ],
     "categories": [
       "Brand Icons"
     ]
@@ -3884,9 +3638,6 @@
   {
     "name": "Google Plus Official",
     "id": "google-plus-official",
-    "aliases": [
-      "google-plus-circle"
-    ],
     "categories": [
       "Brand Icons"
     ]
@@ -3912,9 +3663,6 @@
   {
     "name": "Graduation Cap",
     "id": "graduation-cap",
-    "aliases": [
-      "mortar-board"
-    ],
     "filter": [
       "learning",
       "school",
@@ -3927,9 +3675,6 @@
   {
     "name": "Gratipay (Gittip)",
     "id": "gratipay",
-    "aliases": [
-      "gittip"
-    ],
     "filter": [
       "heart",
       "like",
@@ -3955,9 +3700,6 @@
       "profiles",
       "persons"
     ],
-    "aliases": [
-      "group"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -3976,10 +3718,6 @@
   {
     "name": "Hacker News",
     "id": "hacker-news",
-    "aliases": [
-      "y-combinator-square",
-      "yc-square"
-    ],
     "categories": [
       "Brand Icons"
     ]
@@ -3987,9 +3725,6 @@
   {
     "name": "Rock (Hand)",
     "id": "hand-grab-o",
-    "aliases": [
-      "hand-grab-o"
-    ],
     "categories": [
       "Web Application Icons",
       "Hand Icons"
@@ -4060,9 +3795,6 @@
   {
     "name": "Paper (Hand)",
     "id": "hand-paper-o",
-    "aliases": [
-      "hand-stop-o"
-    ],
     "filter": [
       "stop"
     ],
@@ -4090,9 +3822,6 @@
   {
     "name": "Rock (Hand)",
     "id": "hand-rock-o",
-    "aliases": [
-      "hand-grab-o"
-    ],
     "categories": [
       "Web Application Icons",
       "Hand Icons"
@@ -4117,9 +3846,6 @@
   {
     "name": "Paper (Hand)",
     "id": "hand-stop-o",
-    "aliases": [
-      "hand-stop-o"
-    ],
     "filter": [
       "stop"
     ],
@@ -4138,10 +3864,6 @@
   {
     "name": "Deaf",
     "id": "hard-of-hearing",
-    "aliases": [
-      "deafness",
-      "hard-of-hearing"
-    ],
     "categories": [
       "Web Application Icons",
       "Accessibility Icons"
@@ -4268,9 +3990,6 @@
     "filter": [
       "travel"
     ],
-    "aliases": [
-      "hotel"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -4285,9 +4004,6 @@
   {
     "name": "Hourglass Start",
     "id": "hourglass-1",
-    "aliases": [
-      "hourglass-1"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -4295,9 +4011,6 @@
   {
     "name": "Hourglass Half",
     "id": "hourglass-2",
-    "aliases": [
-      "hourglass-2"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -4305,9 +4018,6 @@
   {
     "name": "Hourglass End",
     "id": "hourglass-3",
-    "aliases": [
-      "hourglass-3"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -4315,9 +4025,6 @@
   {
     "name": "Hourglass End",
     "id": "hourglass-end",
-    "aliases": [
-      "hourglass-3"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -4325,9 +4032,6 @@
   {
     "name": "Hourglass Half",
     "id": "hourglass-half",
-    "aliases": [
-      "hourglass-2"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -4342,9 +4046,6 @@
   {
     "name": "Hourglass Start",
     "id": "hourglass-start",
-    "aliases": [
-      "hourglass-1"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -4384,9 +4085,6 @@
   {
     "name": "Identification Card",
     "id": "id-card",
-    "aliases": [
-      "drivers-license"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -4394,9 +4092,6 @@
   {
     "name": "Identification Card Outlined",
     "id": "id-card-o",
-    "aliases": [
-      "drivers-license-o"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -4404,10 +4099,6 @@
   {
     "name": "Shekel (ILS)",
     "id": "ils",
-    "aliases": [
-      "shekel",
-      "sheqel"
-    ],
     "categories": [
       "Currency Icons"
     ]
@@ -4415,10 +4106,6 @@
   {
     "name": "Picture Outlined",
     "id": "image",
-    "aliases": [
-      "photo",
-      "image"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -4483,9 +4170,6 @@
   {
     "name": "Indian Rupee (INR)",
     "id": "inr",
-    "aliases": [
-      "rupee"
-    ],
     "categories": [
       "Currency Icons"
     ]
@@ -4500,10 +4184,6 @@
   {
     "name": "University",
     "id": "institution",
-    "aliases": [
-      "institution",
-      "bank"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -4522,9 +4202,6 @@
   {
     "name": "Transgender",
     "id": "intersex",
-    "aliases": [
-      "intersex"
-    ],
     "categories": [
       "Gender Icons"
     ]
@@ -4564,11 +4241,6 @@
   {
     "name": "Japanese Yen (JPY)",
     "id": "jpy",
-    "aliases": [
-      "cny",
-      "rmb",
-      "yen"
-    ],
     "categories": [
       "Currency Icons"
     ]
@@ -4605,9 +4277,6 @@
   {
     "name": "Korean Won (KRW)",
     "id": "krw",
-    "aliases": [
-      "won"
-    ],
     "categories": [
       "Currency Icons"
     ]
@@ -4680,9 +4349,6 @@
       "lawyer",
       "opinion"
     ],
-    "aliases": [
-      "legal"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -4727,14 +4393,6 @@
   {
     "name": "Life Ring",
     "id": "life-buoy",
-    "aliases": [
-      {
-        "life-bouy": "Deprecated - remove in 5.0.0"
-      },
-      "life-buoy",
-      "life-saver",
-      "support"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -4742,14 +4400,6 @@
   {
     "name": "Life Ring",
     "id": "life-ring",
-    "aliases": [
-      {
-        "life-bouy": "Deprecated - remove in 5.0.0"
-      },
-      "life-buoy",
-      "life-saver",
-      "support"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -4757,14 +4407,6 @@
   {
     "name": "Life Ring",
     "id": "life-saver",
-    "aliases": [
-      {
-        "life-bouy": "Deprecated - remove in 5.0.0"
-      },
-      "life-buoy",
-      "life-saver",
-      "support"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -4796,9 +4438,6 @@
     "name": "Link",
     "id": "link",
     "filter": [
-      "chain"
-    ],
-    "aliases": [
       "chain"
     ],
     "categories": [
@@ -5044,9 +4683,6 @@
   {
     "name": "Share",
     "id": "mail-forward",
-    "aliases": [
-      "mail-forward"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -5054,9 +4690,6 @@
   {
     "name": "Reply",
     "id": "mail-reply",
-    "aliases": [
-      "mail-reply"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -5064,9 +4697,6 @@
   {
     "name": "reply-all",
     "id": "mail-reply-all",
-    "aliases": [
-      "mail-reply-all"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -5348,9 +4978,6 @@
       "number",
       "telephone"
     ],
-    "aliases": [
-      "mobile-phone"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -5366,9 +4993,6 @@
       "iphone",
       "number",
       "telephone"
-    ],
-    "aliases": [
-      "mobile-phone"
     ],
     "categories": [
       "Web Application Icons"
@@ -5419,9 +5043,6 @@
   {
     "name": "Graduation Cap",
     "id": "mortar-board",
-    "aliases": [
-      "mortar-board"
-    ],
     "filter": [
       "learning",
       "school",
@@ -5464,10 +5085,6 @@
   {
     "name": "Bars",
     "id": "navicon",
-    "aliases": [
-      "navicon",
-      "reorder"
-    ],
     "filter": [
       "menu",
       "drag",
@@ -5577,9 +5194,6 @@
   {
     "name": "Outdent",
     "id": "outdent",
-    "aliases": [
-      "dedent"
-    ],
     "categories": [
       "Text Editor Icons"
     ]
@@ -5637,9 +5251,6 @@
   {
     "name": "Paper Plane",
     "id": "paper-plane",
-    "aliases": [
-      "send"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -5647,9 +5258,6 @@
   {
     "name": "Paper Plane Outlined",
     "id": "paper-plane-o",
-    "aliases": [
-      "send-o"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -5676,9 +5284,6 @@
     "id": "paste",
     "filter": [
       "copy"
-    ],
-    "aliases": [
-      "paste"
     ],
     "categories": [
       "Text Editor Icons"
@@ -5765,9 +5370,6 @@
       "edit",
       "update"
     ],
-    "aliases": [
-      "edit"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -5818,10 +5420,6 @@
   {
     "name": "Picture Outlined",
     "id": "photo",
-    "aliases": [
-      "photo",
-      "image"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -5829,10 +5427,6 @@
   {
     "name": "Picture Outlined",
     "id": "picture-o",
-    "aliases": [
-      "photo",
-      "image"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -6158,10 +5752,6 @@
   {
     "name": "Rebel Alliance",
     "id": "ra",
-    "aliases": [
-      "ra",
-      "resistance"
-    ],
     "categories": [
       "Brand Icons"
     ]
@@ -6188,10 +5778,6 @@
   {
     "name": "Rebel Alliance",
     "id": "rebel",
-    "aliases": [
-      "ra",
-      "resistance"
-    ],
     "categories": [
       "Brand Icons"
     ]
@@ -6267,10 +5853,6 @@
   {
     "name": "Times",
     "id": "remove",
-    "aliases": [
-      "remove",
-      "close"
-    ],
     "filter": [
       "close",
       "exit",
@@ -6291,10 +5873,6 @@
   {
     "name": "Bars",
     "id": "reorder",
-    "aliases": [
-      "navicon",
-      "reorder"
-    ],
     "filter": [
       "menu",
       "drag",
@@ -6319,9 +5897,6 @@
       "redo",
       "forward"
     ],
-    "aliases": [
-      "rotate-right"
-    ],
     "categories": [
       "Text Editor Icons"
     ]
@@ -6329,9 +5904,6 @@
   {
     "name": "Reply",
     "id": "reply",
-    "aliases": [
-      "mail-reply"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -6339,9 +5911,6 @@
   {
     "name": "reply-all",
     "id": "reply-all",
-    "aliases": [
-      "mail-reply-all"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -6349,10 +5918,6 @@
   {
     "name": "Rebel Alliance",
     "id": "resistance",
-    "aliases": [
-      "ra",
-      "resistance"
-    ],
     "categories": [
       "Brand Icons"
     ]
@@ -6386,11 +5951,6 @@
   {
     "name": "Japanese Yen (JPY)",
     "id": "rmb",
-    "aliases": [
-      "cny",
-      "rmb",
-      "yen"
-    ],
     "categories": [
       "Currency Icons"
     ]
@@ -6422,9 +5982,6 @@
     "filter": [
       "back"
     ],
-    "aliases": [
-      "rotate-left"
-    ],
     "categories": [
       "Text Editor Icons"
     ]
@@ -6436,9 +5993,6 @@
       "redo",
       "forward"
     ],
-    "aliases": [
-      "rotate-right"
-    ],
     "categories": [
       "Text Editor Icons"
     ]
@@ -6446,10 +6000,6 @@
   {
     "name": "Russian Ruble (RUB)",
     "id": "rouble",
-    "aliases": [
-      "ruble",
-      "rouble"
-    ],
     "categories": [
       "Currency Icons"
     ]
@@ -6459,9 +6009,6 @@
     "id": "rss",
     "filter": [
       "blog"
-    ],
-    "aliases": [
-      "feed"
     ],
     "categories": [
       "Web Application Icons"
@@ -6481,10 +6028,6 @@
   {
     "name": "Russian Ruble (RUB)",
     "id": "rub",
-    "aliases": [
-      "ruble",
-      "rouble"
-    ],
     "categories": [
       "Currency Icons"
     ]
@@ -6492,10 +6035,6 @@
   {
     "name": "Russian Ruble (RUB)",
     "id": "ruble",
-    "aliases": [
-      "ruble",
-      "rouble"
-    ],
     "categories": [
       "Currency Icons"
     ]
@@ -6503,9 +6042,6 @@
   {
     "name": "Indian Rupee (INR)",
     "id": "rupee",
-    "aliases": [
-      "rupee"
-    ],
     "categories": [
       "Currency Icons"
     ]
@@ -6513,10 +6049,6 @@
   {
     "name": "Bath",
     "id": "s15",
-    "aliases": [
-      "bathtub",
-      "s15"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -6534,9 +6066,6 @@
   {
     "name": "Floppy Outlined",
     "id": "save",
-    "aliases": [
-      "save"
-    ],
     "categories": [
       "Text Editor Icons"
     ]
@@ -6544,9 +6073,6 @@
   {
     "name": "Scissors",
     "id": "scissors",
-    "aliases": [
-      "cut"
-    ],
     "categories": [
       "Text Editor Icons"
     ]
@@ -6615,9 +6141,6 @@
   {
     "name": "Paper Plane",
     "id": "send",
-    "aliases": [
-      "send"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -6625,9 +6148,6 @@
   {
     "name": "Paper Plane Outlined",
     "id": "send-o",
-    "aliases": [
-      "send-o"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -6670,9 +6190,6 @@
   {
     "name": "Share",
     "id": "share",
-    "aliases": [
-      "mail-forward"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -6726,10 +6243,6 @@
   {
     "name": "Shekel (ILS)",
     "id": "shekel",
-    "aliases": [
-      "shekel",
-      "sheqel"
-    ],
     "categories": [
       "Currency Icons"
     ]
@@ -6737,10 +6250,6 @@
   {
     "name": "Shekel (ILS)",
     "id": "sheqel",
-    "aliases": [
-      "shekel",
-      "sheqel"
-    ],
     "categories": [
       "Currency Icons"
     ]
@@ -6833,9 +6342,6 @@
   {
     "name": "Sign Language",
     "id": "sign-language",
-    "aliases": [
-      "signing"
-    ],
     "categories": [
       "Web Application Icons",
       "Accessibility Icons"
@@ -6869,9 +6375,6 @@
   {
     "name": "Sign Language",
     "id": "signing",
-    "aliases": [
-      "signing"
-    ],
     "categories": [
       "Web Application Icons",
       "Accessibility Icons"
@@ -6987,9 +6490,6 @@
   {
     "name": "Futbol Outlined",
     "id": "soccer-ball-o",
-    "aliases": [
-      "soccer-ball-o"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -6999,9 +6499,6 @@
     "id": "sort",
     "filter": [
       "order"
-    ],
-    "aliases": [
-      "unsorted"
     ],
     "categories": [
       "Web Application Icons"
@@ -7038,9 +6535,6 @@
   {
     "name": "Sort Ascending",
     "id": "sort-asc",
-    "aliases": [
-      "sort-up"
-    ],
     "filter": [
       "arrow"
     ],
@@ -7057,9 +6551,6 @@
       "menu",
       "arrow"
     ],
-    "aliases": [
-      "sort-down"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -7072,9 +6563,6 @@
       "more",
       "menu",
       "arrow"
-    ],
-    "aliases": [
-      "sort-down"
     ],
     "categories": [
       "Web Application Icons"
@@ -7103,9 +6591,6 @@
   {
     "name": "Sort Ascending",
     "id": "sort-up",
-    "aliases": [
-      "sort-up"
-    ],
     "filter": [
       "arrow"
     ],
@@ -7237,10 +6722,6 @@
       "rating",
       "score"
     ],
-    "aliases": [
-      "star-half-empty",
-      "star-half-full"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -7254,10 +6735,6 @@
       "rating",
       "score"
     ],
-    "aliases": [
-      "star-half-empty",
-      "star-half-full"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -7270,10 +6747,6 @@
       "achievement",
       "rating",
       "score"
-    ],
-    "aliases": [
-      "star-half-empty",
-      "star-half-full"
     ],
     "categories": [
       "Web Application Icons"
@@ -7482,14 +6955,6 @@
   {
     "name": "Life Ring",
     "id": "support",
-    "aliases": [
-      {
-        "life-bouy": "Deprecated - remove in 5.0.0"
-      },
-      "life-buoy",
-      "life-saver",
-      "support"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -7523,9 +6988,6 @@
     "filter": [
       "speedometer",
       "fast"
-    ],
-    "aliases": [
-      "dashboard"
     ],
     "categories": [
       "Web Application Icons"
@@ -7579,9 +7041,6 @@
   {
     "name": "Taxi",
     "id": "taxi",
-    "aliases": [
-      "cab"
-    ],
     "filter": [
       "vehicle"
     ],
@@ -7600,9 +7059,6 @@
   {
     "name": "Television",
     "id": "television",
-    "aliases": [
-      "tv"
-    ],
     "filter": [
       "display",
       "computer",
@@ -7712,10 +7168,6 @@
   {
     "name": "Thermometer Full",
     "id": "thermometer",
-    "aliases": [
-      "thermometer-4",
-      "thermometer"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -7723,9 +7175,6 @@
   {
     "name": "Thermometer Empty",
     "id": "thermometer-0",
-    "aliases": [
-      "thermometer-0"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -7733,9 +7182,6 @@
   {
     "name": "Thermometer 1/4 Full",
     "id": "thermometer-1",
-    "aliases": [
-      "thermometer-1"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -7743,9 +7189,6 @@
   {
     "name": "Thermometer 1/2 Full",
     "id": "thermometer-2",
-    "aliases": [
-      "thermometer-2"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -7753,9 +7196,6 @@
   {
     "name": "Thermometer 3/4 Full",
     "id": "thermometer-3",
-    "aliases": [
-      "thermometer-3"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -7763,10 +7203,6 @@
   {
     "name": "Thermometer Full",
     "id": "thermometer-4",
-    "aliases": [
-      "thermometer-4",
-      "thermometer"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -7774,9 +7210,6 @@
   {
     "name": "Thermometer Empty",
     "id": "thermometer-empty",
-    "aliases": [
-      "thermometer-0"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -7784,10 +7217,6 @@
   {
     "name": "Thermometer Full",
     "id": "thermometer-full",
-    "aliases": [
-      "thermometer-4",
-      "thermometer"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -7795,9 +7224,6 @@
   {
     "name": "Thermometer 1/2 Full",
     "id": "thermometer-half",
-    "aliases": [
-      "thermometer-2"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -7805,9 +7231,6 @@
   {
     "name": "Thermometer 1/4 Full",
     "id": "thermometer-quarter",
-    "aliases": [
-      "thermometer-1"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -7815,9 +7238,6 @@
   {
     "name": "Thermometer 3/4 Full",
     "id": "thermometer-three-quarters",
-    "aliases": [
-      "thermometer-3"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -7908,10 +7328,6 @@
   {
     "name": "Times",
     "id": "times",
-    "aliases": [
-      "remove",
-      "close"
-    ],
     "filter": [
       "close",
       "exit",
@@ -7949,9 +7365,6 @@
   {
     "name": "Window Close",
     "id": "times-rectangle",
-    "aliases": [
-      "times-rectangle"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -7959,9 +7372,6 @@
   {
     "name": "Window Close Outline",
     "id": "times-rectangle-o",
-    "aliases": [
-      "times-rectangle-o"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -7982,9 +7392,6 @@
   {
     "name": "Caret Square Outlined Down",
     "id": "toggle-down",
-    "aliases": [
-      "toggle-down"
-    ],
     "filter": [
       "more",
       "dropdown",
@@ -8001,9 +7408,6 @@
     "filter": [
       "previous",
       "back"
-    ],
-    "aliases": [
-      "toggle-left"
     ],
     "categories": [
       "Web Application Icons",
@@ -8031,9 +7435,6 @@
       "next",
       "forward"
     ],
-    "aliases": [
-      "toggle-right"
-    ],
     "categories": [
       "Web Application Icons",
       "Directional Icons"
@@ -8042,9 +7443,6 @@
   {
     "name": "Caret Square Outlined Up",
     "id": "toggle-up",
-    "aliases": [
-      "toggle-up"
-    ],
     "categories": [
       "Web Application Icons",
       "Directional Icons"
@@ -8067,9 +7465,6 @@
   {
     "name": "Transgender",
     "id": "transgender",
-    "aliases": [
-      "intersex"
-    ],
     "categories": [
       "Gender Icons"
     ]
@@ -8178,9 +7573,6 @@
   {
     "name": "Turkish Lira (TRY)",
     "id": "try",
-    "aliases": [
-      "turkish-lira"
-    ],
     "categories": [
       "Currency Icons"
     ]
@@ -8210,9 +7602,6 @@
   {
     "name": "Turkish Lira (TRY)",
     "id": "turkish-lira",
-    "aliases": [
-      "turkish-lira"
-    ],
     "categories": [
       "Currency Icons"
     ]
@@ -8220,9 +7609,6 @@
   {
     "name": "Television",
     "id": "tv",
-    "aliases": [
-      "tv"
-    ],
     "filter": [
       "display",
       "computer",
@@ -8288,9 +7674,6 @@
     "filter": [
       "back"
     ],
-    "aliases": [
-      "rotate-left"
-    ],
     "categories": [
       "Text Editor Icons"
     ]
@@ -8306,10 +7689,6 @@
   {
     "name": "University",
     "id": "university",
-    "aliases": [
-      "institution",
-      "bank"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -8319,9 +7698,6 @@
     "id": "unlink",
     "filter": [
       "remove"
-    ],
-    "aliases": [
-      "unlink"
     ],
     "categories": [
       "Text Editor Icons"
@@ -8358,9 +7734,6 @@
     "id": "unsorted",
     "filter": [
       "order"
-    ],
-    "aliases": [
-      "unsorted"
     ],
     "categories": [
       "Web Application Icons"
@@ -8400,9 +7773,6 @@
   {
     "name": "US Dollar",
     "id": "usd",
-    "aliases": [
-      "dollar"
-    ],
     "categories": [
       "Currency Icons"
     ]
@@ -8500,9 +7870,6 @@
       "profiles",
       "persons"
     ],
-    "aliases": [
-      "group"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -8510,9 +7877,6 @@
   {
     "name": "Address Card",
     "id": "vcard",
-    "aliases": [
-      "vcard"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -8520,9 +7884,6 @@
   {
     "name": "Address Card Outlined",
     "id": "vcard-o",
-    "aliases": [
-      "vcard-o"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -8682,9 +8043,6 @@
       "notification",
       "alert"
     ],
-    "aliases": [
-      "warning"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -8714,9 +8072,6 @@
   {
     "name": "Weixin (WeChat)",
     "id": "wechat",
-    "aliases": [
-      "wechat"
-    ],
     "categories": [
       "Brand Icons"
     ]
@@ -8731,9 +8086,6 @@
   {
     "name": "Weixin (WeChat)",
     "id": "weixin",
-    "aliases": [
-      "wechat"
-    ],
     "categories": [
       "Brand Icons"
     ]
@@ -8790,9 +8142,6 @@
   {
     "name": "Window Close",
     "id": "window-close",
-    "aliases": [
-      "times-rectangle"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -8800,9 +8149,6 @@
   {
     "name": "Window Close Outline",
     "id": "window-close-o",
-    "aliases": [
-      "times-rectangle-o"
-    ],
     "categories": [
       "Web Application Icons"
     ]
@@ -8841,9 +8187,6 @@
   {
     "name": "Korean Won (KRW)",
     "id": "won",
-    "aliases": [
-      "won"
-    ],
     "categories": [
       "Currency Icons"
     ]
@@ -8909,9 +8252,6 @@
   {
     "name": "Y Combinator",
     "id": "y-combinator",
-    "aliases": [
-      "yc"
-    ],
     "categories": [
       "Brand Icons"
     ]
@@ -8919,10 +8259,6 @@
   {
     "name": "Hacker News",
     "id": "y-combinator-square",
-    "aliases": [
-      "y-combinator-square",
-      "yc-square"
-    ],
     "categories": [
       "Brand Icons"
     ]
@@ -8937,9 +8273,6 @@
   {
     "name": "Y Combinator",
     "id": "yc",
-    "aliases": [
-      "yc"
-    ],
     "categories": [
       "Brand Icons"
     ]
@@ -8947,10 +8280,6 @@
   {
     "name": "Hacker News",
     "id": "yc-square",
-    "aliases": [
-      "y-combinator-square",
-      "yc-square"
-    ],
     "categories": [
       "Brand Icons"
     ]
@@ -8965,11 +8294,6 @@
   {
     "name": "Japanese Yen (JPY)",
     "id": "yen",
-    "aliases": [
-      "cny",
-      "rmb",
-      "yen"
-    ],
     "categories": [
       "Currency Icons"
     ]
