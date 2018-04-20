@@ -292,7 +292,7 @@
     margin: 0 0 10px;
     font-size: 14px;
     border-left: 5px solid #eee;
-    background: #f5f5f5;
+    opacity: 0.8;
   }
 }
 
@@ -604,12 +604,16 @@ path.bg {
 
 .react-logo-run {
   animation: move 5s ease-in-out infinite;
-  .run-offset('M231.7,200c0,17.4-1.7,88-31.7,88s-31.7-70.6-31.7-88s1.7-88,31.7-88S231.7,182.6,231.7,200z');
+  .run-offset(
+    'M231.7,200c0,17.4-1.7,88-31.7,88s-31.7-70.6-31.7-88s1.7-88,31.7-88S231.7,182.6,231.7,200z'
+  );
 }
 
 .react-logo-run-2 {
   animation: move 7s ease-out infinite;
-  .run-offset('M216.1,227.7c-15,8.9-76.6,43.4-91.9,17.6s44.6-63.2,59.6-72.1s76.6-43.4,91.9-17.6S231.1,218.8,216.1,227.7z');
+  .run-offset(
+    'M216.1,227.7c-15,8.9-76.6,43.4-91.9,17.6s44.6-63.2,59.6-72.1s76.6-43.4,91.9-17.6S231.1,218.8,216.1,227.7z'
+  );
 }
 
 @keyframes move {
@@ -1088,7 +1092,7 @@ path.bg {
 
 .custom-exiting,
 .custom-entering {
-  animation: .3s linear;
+  animation: 0.3s linear;
   animation-fill-mode: forwards;
 }
 
@@ -1111,4 +1115,23 @@ path.bg {
 .link-view-design {
   display: block;
   margin-bottom: 8px;
+}
+
+.palette-logo-tool {
+  margin-top: 20px;
+}
+
+.palette-image-preview {
+  position: relative;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 6px;
+}
+.palette-image-position-dot {
+  position: absolute;
+  background: #fff;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  border: 1px solid #000;
 }

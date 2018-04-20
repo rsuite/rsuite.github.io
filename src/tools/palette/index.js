@@ -20,6 +20,7 @@ import MarkdownView from '../../fixtures/MarkdownView';
 import { SketchPicker, CirclePicker } from 'react-color';
 import computeColors from './computeColors';
 import ColorPanel from './ColorPanel';
+import ImageToColors from './ImageToColors';
 import { loadJsFile } from '../../ready';
 
 const lessUrl = 'https://cdn.bootcss.com/less.js/2.7.2/less.min.js';
@@ -90,7 +91,6 @@ class PalettePage extends React.Component {
 
           <div className="palette-preview" id="palettePreview">
             <Panel header={<h3>预览</h3>} bordered>
-
               <ButtonToolbar>
                 <Button appearance="default">Default</Button>
                 <Button appearance="primary">Primary</Button>
@@ -117,6 +117,12 @@ class PalettePage extends React.Component {
             </Panel>
           </div>
         </div>
+
+        <ImageToColors
+          onColorChange={value => {
+            this.handleChangeComplete({ hex: value['#'] });
+          }}
+        />
       </Content>
     );
   }
