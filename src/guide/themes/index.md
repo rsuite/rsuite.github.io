@@ -58,9 +58,9 @@
 
 ### 本地部署字体文件
 
-RSUITE 中使用的图标字体文件都是部署在 cdnjs， 如果您希望本地部署，则需要在 less 中覆盖图标字体的路径：
+RSUITE 中使用的图标字体文件都是部署在 [jsDelivr CDN](http://cdn.jsdelivr.net/npm/rsuite-icon-font@3.0.0/fonts/)， 如果您希望本地部署，则需要在 less 中覆盖图标字体的路径：
 
-```
+```diff
 @import '~rsuite/styles/less/index.less';
 @icon-font-path: "./fonts";
 ```

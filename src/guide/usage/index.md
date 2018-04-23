@@ -5,13 +5,13 @@
 首先需要在本地正确安装和配置 Node.js 环境。
 
 ```bash
-npm install rsuite@next --save
+npm install rsuite --save
 ```
 
 如果您在使用 yarn 也可以通过 yarn 安装:
 
 ```bash
-yarn add rsuite@next
+yarn add rsuite
 ```
 
 ## 代码示例

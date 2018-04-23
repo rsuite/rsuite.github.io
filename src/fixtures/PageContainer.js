@@ -58,7 +58,7 @@ class PageContainer extends React.Component {
               <IconButton
                 appearance="subtle"
                 title="折叠菜单"
-                icon={<Icon icon="navicon" />}
+                icon={<Icon icon="bars" />}
                 onClick={this.handleNavicon}
               />
             </ButtonToolbar>
