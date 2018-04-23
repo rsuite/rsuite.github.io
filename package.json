@@ -1,7 +1,7 @@
 {
   "name": "rsuite-docs",
   "version": "3.0.0",
-  "description": "RSuite components built with React",
+  "description": "RSUITE components built with React",
   "main": "lib/index.js",
   "directories": {
     "lib": "lib/"
@@ -26,7 +26,7 @@
     "lib",
     "src"
   ],
-  "author": "Simon Guo <simonguo.2009@gmail.com>",
+  "author": "HYPERS Team",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -34,12 +34,10 @@
   },
   "dependencies": {
     "moment": "^2.20.1",
-    "react-draft-wysiwyg": "^1.12.11",
     "react-json-tree": "^0.11.0",
     "react-paragraph": "^1.0.0",
     "rsuite-page-nav": "^1.1.5",
-    "rsuite-utils": "^1.0.0",
-    "whatwg-fetch": "^2.0.3"
+    "rsuite-utils": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^0.14.9 || >=15.3.0",
