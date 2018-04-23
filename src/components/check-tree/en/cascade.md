@@ -7,7 +7,7 @@ The `cascade` attribute can set whether or not CheckTree can consider the cascad
 ```js
 /**
  * import data from
- * https://github.com/rsuite/rsuite.github.io/blob/next/src/resources/data/city.js
+ * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/city.js
  */
 
 class Demo extends React.Component {

@@ -7,7 +7,7 @@
 ```js
 /**
  * import data from
- * https://github.com/rsuite/rsuite.github.io/blob/next/src/resources/data/users.js
+ * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/users.js
  */
 
 const footerStyles = {

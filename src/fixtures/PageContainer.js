@@ -43,7 +43,7 @@ class PageContainer extends React.Component {
                   icon={<Icon icon="edit2" />}
                   target="_blank"
                   title="编辑当前页面"
-                  href={`https://github.com/rsuite/rsuite.github.io/edit/next/src/${routerId}/index.md`}
+                  href={`https://github.com/rsuite/rsuite.github.io/edit/master/src/${routerId}/index.md`}
                 />
               ) : null}
 

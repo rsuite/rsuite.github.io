@@ -18,7 +18,7 @@
 @base-color: #00bcd4;
 ```
 
-配置主题基色以后，会生成一组色板（@H050 - @H900， H 是 Hue 的缩写 ）参考: [commonly-variables](https://github.com/rsuite/rsuite/blob/next/styles/less/commonly-variables.less)。
+配置主题基色以后，会生成一组色板（@H050 - @H900， H 是 Hue 的缩写 ）参考: [commonly-variables](https://github.com/rsuite/rsuite/blob/master/styles/less/commonly-variables.less)。
 
 在配置前可以[调色板](/tools/palette)中预览颜色，选择 @H500 作为主题基色。
 
@@ -50,7 +50,7 @@
 
 ## 更多自定义配置
 
-> 参考: [variables](https://github.com/rsuite/rsuite/blob/next/styles/less/variables.less)
+> 参考: [variables](https://github.com/rsuite/rsuite/blob/master/styles/less/variables.less)
 
 ## 注意
 

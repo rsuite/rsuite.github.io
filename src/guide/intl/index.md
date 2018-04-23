@@ -16,11 +16,11 @@ ReactDOM.render(
 );
 ```
 
-目前支持的语言: [locales](https://github.com/rsuite/rsuite/tree/next/src/IntlProvider/locales)
+目前支持的语言: [locales](https://github.com/rsuite/rsuite/tree/master/src/IntlProvider/locales)
 
 ## 扩展或者修改语言
 
-参考 [default](https://github.com/rsuite/rsuite/blob/next/src/IntlProvider/locales/default.js) 中的配置，做一个新的配置，把新的配置，传递给 `<IntlProvider>` 的 `locale` 属性。
+参考 [default](https://github.com/rsuite/rsuite/blob/master/src/IntlProvider/locales/default.js) 中的配置，做一个新的配置，把新的配置，传递给 `<IntlProvider>` 的 `locale` 属性。
 
 ## 与 react-intl 同时使用
 

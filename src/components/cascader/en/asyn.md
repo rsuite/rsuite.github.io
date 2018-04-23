@@ -5,7 +5,7 @@
 ```js
 /**
  * import province from
- * https://github.com/rsuite/rsuite.github.io/blob/next/src/resources/data/province-simplified.js
+ * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/province-simplified.js
  */
 
 

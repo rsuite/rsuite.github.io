@@ -4,7 +4,7 @@
 
 /**
  * import fakeTreeData from
- * https://github.com/rsuite/rsuite.github.io/blob/next/src/components/table/data/tree.js
+ * https://github.com/rsuite/rsuite.github.io/blob/master/src/components/table/data/tree.js
  */
 
 class TreeTable extends React.Component {

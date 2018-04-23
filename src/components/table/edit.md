@@ -4,7 +4,7 @@
 
 /**
  * import fakeData from
- * https://github.com/rsuite/rsuite.github.io/blob/next/src/components/table/data/users.js
+ * https://github.com/rsuite/rsuite.github.io/blob/master/src/components/table/data/users.js
  */
 
 
