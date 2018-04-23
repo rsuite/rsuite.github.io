@@ -232,7 +232,7 @@
       "Radio",
       "RadioGroup"
     ],
-    "designHash": "artboard49"
+    "designHash": "artboard50"
   },
   {
     "id": "input",
@@ -244,7 +244,7 @@
       "InputGroup.Button",
       "InputGroup.Addon"
     ],
-    "designHash": "artboard45"
+    "designHash": "artboard46"
   },
   {
     "id": "input-number",
@@ -253,7 +253,7 @@
     "components": [
       "InputNumber"
     ],
-    "designHash": "artboard48"
+    "designHash": "artboard49"
   },
   {
     "id": "auto-complete",
@@ -271,7 +271,7 @@
     "components": [
       "Toggle"
     ],
-    "designHash": "artboard52"
+    "designHash": "artboard53"
   },
   {
     "id": "select-picker",
@@ -280,7 +280,7 @@
     "components": [
       "SelectPicker"
     ],
-    "designHash": "artboard50"
+    "designHash": "artboard51"
   },
   {
     "id": "check-picker",
@@ -298,7 +298,7 @@
     "components": [
       "TreePicker"
     ],
-    "designHash": "artboard53"
+    "designHash": "artboard54"
   },
   {
     "id": "check-tree-picker",
@@ -343,7 +343,7 @@
     "components": [
       "Slider"
     ],
-    "designHash": "artboard51"
+    "designHash": "artboard52"
   },
   {
     "id": "uploader",
@@ -352,7 +352,7 @@
     "components": [
       "Uploader"
     ],
-    "designHash": "artboard54"
+    "designHash": "artboard55"
   },
   {
     "id": "form",
@@ -383,7 +383,7 @@
       "Table.Cell",
       "Table.Pagination"
     ],
-    "designHash": "artboard56"
+    "designHash": "artboard57"
   },
   {
     "id": "tree",
@@ -409,7 +409,7 @@
       "Panel",
       "PanelGroup"
     ],
-    "designHash": "artboard55"
+    "designHash": "artboard56"
   },
   {
     "id": "timeline",
@@ -419,7 +419,7 @@
       "Timeline",
       "Timeline.Item"
     ],
-    "designHash": "artboard64"
+    "designHash": "artboard65"
   },
   {
     "id": "tag",
@@ -428,7 +428,7 @@
     "components": [
       "Tag"
     ],
-    "designHash": "artboard63"
+    "designHash": "artboard64"
   },
   {
     "group": true,
@@ -466,7 +466,7 @@
       "Content",
       "Sidebar"
     ],
-    "designHash": "artboard66"
+    "designHash": "artboard67"
   },
   {
     "group": true,
