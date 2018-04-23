@@ -15,11 +15,6 @@ class App extends React.Component {
     if (get(location, 'pathname') !== get(nextProps, 'location.pathname')) {
       scrollTop(window, 0);
     }
-
-    window._ha &&
-      _ha('send', 'pageview', {
-        url: document.location.href
-      });
   }
 
   render() {
