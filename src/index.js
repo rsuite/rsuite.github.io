@@ -1,5 +1,6 @@
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
+import { hot } from 'react-hot-loader';
 import {
   Router,
   Route,
@@ -9,43 +10,62 @@ import {
   browserHistory
 } from 'react-router';
 
-
 // style
 import './less/index.less';
 
-require('./hypers-hire');
-
-import App from './components/App';
-
-// Pages
-import PageIndex from './pages/PageIndex';
-import PageGettingStarted from './pages/PageGettingStarted';
-import PageComponents from './pages/PageComponents';
-import PageComponentsDoc from './pages/PageComponentsDoc';
-import PageExamples from './pages/PageExamples';
+import App from './App';
+import Frame from './fixtures/Frame';
+import Home from './Home';
 
 import ready from './ready';
+import { setTitle, defateTilte } from './title';
+import menu from './fixtures/menu';
 
-const history = process.env.NODE_ENV === 'production' ? browserHistory : hashHistory;
-const mountApp = (
-  <Router history={history}>
+const routes = menu.map(item => {
+  const children = [];
+  item.children.forEach(child => {
+    !child.group &&
+      children.push(
+        <Route
+          key={child.id}
+          path={child.id}
+          getComponents={(location, resolve) => {
+            require.ensure([], require => {
+              resolve(null, require(`./${item.id}/${child.id}`));
+              setTitle(`${child.title || ''} ${child.name} - ${item.name}`);
+            });
+          }}
+        />
+      );
+  });
 
-    <Route path="/" component={App}>
-      <IndexRoute component={PageIndex} />
-      <Route path="getting-started" component={PageGettingStarted} />
-      <Route path="examples" component={PageExamples} />
-
-      <Route path="components" component={PageComponents}>
-        <Route path=":name" component={PageComponentsDoc} />
-        <IndexRedirect to="buttons" />
-      </Route>
+  return (
+    <Route key={item.id} path={item.id} component={Frame}>
+      {children}
     </Route>
+  );
+});
 
+const AppWithRouter = () => (
+  <Router history={browserHistory}>
+    <Route path="/" component={App}>
+      <IndexRoute component={Home} onEnter={defateTilte} />
+      {routes}
+    </Route>
   </Router>
 );
 
-ready((values) => {
-  render(mountApp, document.getElementById('root'));
+/*
+if (__DEV__) {
+  const { whyDidYouUpdate } = require('why-did-you-update');
+  whyDidYouUpdate(React);
+}
+*/
+
+const hotRender = Component => {
+  ReactDOM.render(<Component />, document.getElementById('root'));
+};
+
+ready(values => {
+  hotRender(hot(module)(AppWithRouter));
 });
-
-

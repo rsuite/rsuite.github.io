@@ -34,7 +34,7 @@ node_modules
 .node_repl_history
 
 .vscode
-_build
+scripts
 build
 .DS_Store
 lib/
@@ -44,3 +44,5 @@ docs/assets
 .idea
 dist
 yarn.lock
+package-lock.json
+/index.html

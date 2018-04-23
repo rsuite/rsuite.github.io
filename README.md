@@ -38,7 +38,7 @@ npm i rsuite --save
 示例：
 
 ```js
-import { Button } from 'rsuite';
+import { Button } from '../../rsuiteSource';
 
 ReactDOM.render(<Button>Button</Button>, mountNode);
 ```

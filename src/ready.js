@@ -1,5 +1,6 @@
+import { removeClass } from 'dom-lib';
 
-function loadJsFile(url, callback) {
+export function loadJsFile(url, callback) {
   var s = document.createElement('script'),
     head = document.getElementsByTagName('head')[0];
   s.type = 'text/javascript';
@@ -13,37 +14,16 @@ function loadJsFile(url, callback) {
   return s;
 }
 
-
-const isIE = !!navigator.userAgent.match(/MSIE/);
 const filter = [];
-
-/**
- * polyfill & es6-shim
- */
-filter.push(new Promise((resolve, reject) => {
-  if (!isIE) {
-    return resolve();
-  }
-
-  let count = 0;
-  const files = [
-    'https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js'
-  ];
-  //异步加载CSS文件
-  files.map((file) => {
-    loadJsFile(file, () => {
-      count++;
-      if (count === files.length) {
-        resolve();
-      }
-    });
-  });
-
-}));
+filter.push(
+  new Promise((resolve, reject) => {
+    resolve();
+  })
+);
 
 export default function ready(callback) {
   Promise.all(filter).then(values => {
     callback(values);
+    removeClass(document.getElementById('body'), 'body-loading');
   });
 }

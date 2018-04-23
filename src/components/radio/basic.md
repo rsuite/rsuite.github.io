@@ -1,13 +1,12 @@
-### Radio
+### 默认
 
 <!--start-code-->
 ```js
 const instance = (
-  <Form>
-    <FormGroup controlId='Radio'>
-      <Radio checked > Radio</Radio>
-    </FormGroup>
-  </Form>
+  <div>
+    <Radio> Radio</Radio>
+    <Radio checked> Checked Radio</Radio>
+  </div>
 );
 ReactDOM.render(instance);
 ```

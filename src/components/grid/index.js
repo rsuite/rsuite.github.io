@@ -1,19 +1,24 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Grid, Button, IconFont, Row, Col } from 'rsuite';
-
+import { Grid, Button, Icon, Row, Col } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [
   require('./basic.md'),
+  require('./responsive.md'),
+  require('./gutter.md'),
+  require('./offset.md'),
+  require('./pull-push.md'),
+  require('./hidden.md'),
+  require('./nested.md')
 ];
-
 
 export default () => {
   return (
     <ComponentExample
+      id="Grid"
       dependencies={{
-        IconFont,
+        Icon,
         Button,
         Grid,
         Row,

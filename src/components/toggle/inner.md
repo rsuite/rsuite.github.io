@@ -13,8 +13,8 @@ const instance = (
     />
 
     <Toggle
-      checkedChildren={<IconFont icon="check"/>}
-      unCheckedChildren={<IconFont icon="close"/>}
+      checkedChildren={<Icon icon="check"/>}
+      unCheckedChildren={<Icon icon="close"/>}
     />
   </div>
 );

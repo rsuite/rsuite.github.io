@@ -1,14 +1,16 @@
 
-### 块级按钮
+### 适应容器宽度
 
-创建块级的按钮，给组件设置一个 `block` 属性
+一般适用于流式布局，或者在某个容器的顶部、底部撑满整行。
+
+设置一个 `block` 属性。
 
 <!--start-code-->
 ```js
 const instance = (
   <ButtonToolbar>
-    <Button shape='default' block>Block</Button>
-    <Button shape='primary' block>Block</Button>
+    <Button appearance='default' block>Block</Button>
+    <Button appearance='primary' block>Block</Button>
   </ButtonToolbar>
 );
 ReactDOM.render(instance);

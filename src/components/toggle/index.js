@@ -1,6 +1,6 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Button, Toggle } from 'rsuite';
+import { Button, Toggle, Icon } from '../../rsuiteSource';
 
 const context = require('./index.md');
 const examples = [
@@ -10,11 +10,12 @@ const examples = [
   require('./disabled.md')
 ];
 
-
 export default () => {
   return (
     <ComponentExample
+      id="Toggle"
       dependencies={{
+        Icon,
         Toggle,
         Button
       }}
@@ -23,4 +24,3 @@ export default () => {
     />
   );
 };
-

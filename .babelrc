@@ -1,23 +1,29 @@
 {
   "presets": [
+    "env",
     "stage-0",
-    "react",
+    "react"
+  ],
+  "plugins": [
+    "lodash",
+    "transform-class-properties",
+    "transform-proto-to-assign",
+    "transform-runtime",
+    "add-module-exports",
+    "react-hot-loader/babel",
+    "transform-dev",
     [
-      "env",
+      "import",
       {
-        "targets": {
-          "browsers": [
-            "> 1%",
-            "last 2 versions",
-            "ie >= 9"
-          ]
-        }
+        "libraryName": "rsuite",
+        "libraryDirectory": "lib",
+        "camel2DashComponentName": false
       }
     ]
   ],
-  "plugins": [
-    "transform-class-properties",
-    "transform-runtime",
-    "add-module-exports"
-  ]
+  "env": {
+    "production": {
+      "presets": ["react-optimize"]
+    }
+  }
 }

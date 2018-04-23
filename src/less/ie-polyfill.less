@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+.rsuite-logo > svg {
+  @height: 39px;
+  height: ~"@{height}\9";
+
+  // IE 11
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    & {
+      height: @height;
+    }
+  }
+}

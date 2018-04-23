@@ -1,0 +1,127 @@
+/* stylelint-disable */
+@palette-color: #4caf50;
+.color-palette-mixin {
+  @functions: ~`(
+      function () {/*
+     * Color utility functions
+     * Source: http://stackoverflow.com/questions/5560248/programmatically-lighten-or-darken-a-hex-color-or-rgb-and-blend-colors
+     * Github: https://github.com/mbitson/mcg
+     */
+        var shadeColor = function (color, percent) {var f = parseInt(color.slice(1), 16),
+      t = percent < 0 ? 0: 255,
+      p = percent < 0 ? percent * -1: percent,
+      R = f >> 16,
+      G = f >> 8 & 0x00ff,
+      B = f & 0x0000FF; return '#' +
+        (
+          0x1000000 + (Math.round((t - R) * p) + R) * 0x10000 + (Math.round((t - G) * p) + G) *
+            0x100 + (Math.round((t - B) * p) + B)
+        )
+        .toString(16) .slice(1) ;} /**
+     * 计算系统颜色
+     * @param color
+     * @param percent (正值表示lighter,负值表示darken)
+     */
+        this.palette = function (color, percent) {var colorConfig = {'50': 0.9,
+      '100': 0.7,
+      '200': 0.5,
+      '300': 0.333,
+      '400': 0.166,
+      '500': 0,
+      '600': -0.125,
+      '700': -0.25,
+      '800': -0.375,
+      '900': -0.5}; percent = colorConfig[percent] === undefined ? percent: colorConfig[percent] ; var
+        colorValue = color.slice(1) ; colorValue = colorValue.length === 3 ? colorValue.split('') .map(
+          s=>s.repeat(2)
+        ) .join(''): colorValue ; colorValue = colorValue.toLowerCase() ; return shadeColor(
+          '#' + colorValue,
+          percent
+        ) ;}}
+    )
+    () `;
+}
+// It is hacky way to make this function will be compiled preferentially by less
+.color-palette-mixin();
+.inner-active-shadow(@shadow-color:@checkbox-default-border-color) {
+  box-shadow: 0 0 0 2px fadeOut(@shadow-color, 60%);
+}
+.repaint-input(@name) {
+  &-@{name}-wrapper::before {
+    border-color: @H500;
+  }
+  &-@{name} label:hover .@{ns}-@{name}-inner::before {
+    border-color: @H500;
+  }
+  &-@{name}-checked .@{ns}-@{name}-wrapper .@{ns}-@{name}-inner::before {
+    border-color: @H500;
+    background-color: @H500;
+  }
+  &-@{name}:hover .@{ns}-@{name}-wrapper:focus .@{ns}-@{name}-inner::before {
+    .inner-active-shadow(@H500);
+  }
+}
+#palettePreview {
+  @H500: @palette-color;
+  @H600: color(~`palette('@{H500}', 600) `);
+  @H700: color(~`palette('@{H500}', 700) `);
+  @ns: rs;
+  .@{ns} {
+    //#== Button
+    &-btn-primary {
+      background-color: @H500;
+      &:hover,
+      &:focus {
+        background-color: @H600;
+      }
+      &:active {
+        background-color: @H700;
+      }
+    }
+    &-btn-link {
+      color: @H500;
+      &:hover,
+      &:focus {
+        color: @H600;
+      }
+      &:active {
+        color: @H700;
+      }
+    }
+    &-nav-item-active a {
+      color: @H500;
+    }
+    &-input:focus,
+    &-input:hover {
+      border-color: @H500;
+    }
+    &-btn-ghost {
+      color: @H500;
+      border-color: @H500;
+      &:hover,
+      &:focus {
+        color: @H600;
+        border-color: @H600;
+      }
+      &:active {
+        color: @H700;
+        border-color: @H700;
+      }
+    }
+    //#== Checkbox
+    .repaint-input(checkbox);
+    //#== Radio
+    .repaint-input(radio);
+    //#== Toggle
+    &-btn-toggle {
+      background-color: @H500;
+    }
+    //#== Slider
+    &-slider-progress-bar {
+      background-color: @H500;
+    }
+    &-slider-handle::before {
+      border-color: @H500;
+    }
+  }
+}

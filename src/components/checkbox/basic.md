@@ -1,13 +1,12 @@
-### Checkbox
+### 默认
 
 <!--start-code-->
 ```js
 const instance = (
-  <Form>
-    <FormGroup controlId='checkbox'>
-      <Checkbox defaultChecked > Checkbox</Checkbox>
-    </FormGroup>
-  </Form>
+  <div>
+    <Checkbox> Default</Checkbox>
+    <Checkbox defaultChecked > Checked</Checkbox>
+  </div>
 );
 ReactDOM.render(instance);
 ```

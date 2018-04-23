@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>attachment</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="attachment" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle-29" fill="#575757" x="4" y="3" width="1" height="9"></rect>
+        <path d="M6.58535285,11.5 C6.79127106,12.0825962 7.34689059,12.5 8,12.5 C8.65310941,12.5 9.20872894,12.0825962 9.41464715,11.5 L6.58535285,11.5 Z" id="Oval" stroke="#575757"></path>
+        <path d="M9.44999094,2.5 C9.21835578,1.35887984 8.20947896,0.5 7,0.5 C5.79052104,0.5 4.78164422,1.35887984 4.55000906,2.5 L9.44999094,2.5 Z" id="Oval-Copy" stroke="#575757"></path>
+        <path d="M4.53544443,12.5 C4.77805926,14.1961471 6.23676405,15.5 8,15.5 C9.76323595,15.5 11.2219407,14.1961471 11.4645556,12.5 L4.53544443,12.5 Z" id="Oval-Copy-2" stroke="#575757"></path>
+        <rect id="Rectangle-29-Copy" fill="#575757" x="6" y="5" width="1" height="6"></rect>
+        <rect id="Rectangle-29-Copy-3" fill="#575757" x="11" y="5" width="1" height="7"></rect>
+        <rect id="Rectangle-29-Copy-2" fill="#575757" x="9" y="3" width="1" height="8"></rect>
+    </g>
+</svg>

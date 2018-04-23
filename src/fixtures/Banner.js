@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import CodeView from 'react-code-view';
 
 class Banner extends React.Component {
   render() {
@@ -8,6 +6,11 @@ class Banner extends React.Component {
     return (
       <div id="banner" className="banner">
         {children}
+        <div className="starry-warpper">
+          <div className="stars" />
+          <div className="stars2" />
+          <div className="stars3" />
+        </div>
       </div>
     );
   }

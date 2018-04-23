@@ -3,49 +3,11 @@
 <!--start-code-->
 ```js
 
-class PaginationBasic  extends React.Component{
-  constructor(props){
-    super(props);
-    this.state={
-      activePage: 5
-    }
-    this.handleSelect = this.handleSelect.bind(this);
-  }
+const instance=(
+  <Pagination pages={10} activePage={1} />
+);
 
-  handleSelect(eventKey) {
-    this.setState({
-      activePage: eventKey
-    });
-  }
+ReactDOM.render(instance);
 
-  render() {
-    return (
-      <div>
-        <Pagination
-          size="lg"
-          pages={10}
-          activePage={this.state.activePage}
-          onSelect={this.handleSelect}
-        />
-        <br />
-        <Pagination
-          size="md"
-          pages={10}
-          activePage={this.state.activePage}
-          onSelect={this.handleSelect}
-        />
-        <br />
-        <Pagination
-          size="sm"
-          pages={10}
-          activePage={this.state.activePage}
-          onSelect={this.handleSelect}
-        />
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(<PaginationBasic />);
 ```
 <!--end-code-->

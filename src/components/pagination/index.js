@@ -1,20 +1,20 @@
 import React from 'react';
 import ComponentExample from '../ComponentExample';
-import { Pagination, Button, IconFont } from 'rsuite';
+import { Pagination, Button, Icon, Toggle, Divider } from '../../rsuiteSource';
 
 const context = require('./index.md');
-const examples = [
-  require('./basic.md'),
-  require('./advanced.md')
-];
+const examples = [require('./basic.md'), require('./size.md'), require('./advanced.md')];
 
 export default () => {
   return (
     <ComponentExample
+      id="Pagination"
       dependencies={{
-        IconFont,
+        Toggle,
+        Icon,
         Pagination,
-        Button
+        Button,
+        Divider
       }}
       context={context}
       examples={examples}
