@@ -22,6 +22,10 @@ export default [
         name: '如何使用'
       },
       {
+        id: 'use-with-create-react-app',
+        name: '在 create-react-app 中使用'
+      },
+      {
         id: 'themes',
         name: '定制主题'
       },
