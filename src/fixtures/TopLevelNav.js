@@ -122,7 +122,11 @@ class TopLevelNav extends React.Component {
               <Icon icon="github" size="lg" />
             </WithTooltipButton>
 
-            <WithTooltipButton className="icon-btn-circle" onClick={this.handleToggleMenu}>
+            <WithTooltipButton
+              tip={showSubmenu ? '收起菜单' : '展开菜单'}
+              className="icon-btn-circle"
+              onClick={this.handleToggleMenu}
+            >
               <Icon icon={showSubmenu ? 'angle-left' : 'angle-right'} size="lg" />
             </WithTooltipButton>
           </div>
