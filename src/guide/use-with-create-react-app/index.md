@@ -1,16 +1,16 @@
 # 在 create-react-app 中使用
-[create-react-app][create-react-app] 可以帮助快速建立一个`react`工程，本向导将介绍如何将`rsuite`于`create-react-app`结合使用，并进行
+[create-react-app][create-react-app] 可以帮助快速建立一个 `react` 工程，本向导将介绍如何将 `rsuite` 于 `create-react-app` 结合使用，并进行
 ## 初始化一个项目
 ```bash
 npx create-react-app test-app
 ```
-执行后，工具将自动生成一个 `react` 开发脚手架，并安装开发`react`所必须的所有依赖。安装完成后，我们执行
+执行后，工具将自动生成一个 `react` 开发脚手架，并安装开发 `react` 所必须的所有依赖。安装完成后执行
 ```bash
 yarn start
 ```
 然后访问 `http://0.0.0.0:3000/`，看到 Welcome to React 页面就是安装成功了。
 
-**注意**:`npx` 需要你本机的 Node 版本高于 **6** ，你可以使用[nvm][nvm](macOS/Linux)或 [nvm-windows][nvm-windows]方便的进行切换你本机的 node 版本。
+**注意**:`npx` 需要你本机的 Node 版本高于 **6** ，你可以使用 [nvm][nvm] (macOS/Linux) 或 [nvm-windows][nvm-windows] 方便的进行切换你本机的 node 版本。
 
 
 ## 引入 rsuite
@@ -52,6 +52,7 @@ $ yarn add rsuite
 ## 定制主题
 要使用定制主题功能，必须要修改 create-react-app 的默认配置。
 1. 安装必要依赖。
+
 ```bash
 yarn add react-app-rewired react-app-rewire-less
 ```
@@ -92,7 +93,7 @@ module.exports = function override(config, env) {
   return config;
 }
 ```
-重新执行`yarn start`，看到红色按钮就是配置成功了。
+重新执行 `yarn start`，看到红色按钮就是配置成功了。
 
 这里使用 [react-app-rewired][react-app-rewired] 和 [react-app-rewire-less][react-app-rewire-less],配合 [less-loader][less-loader] 利用 `modifyVars` 配置实现定制主题。更多方法，详见[定制主题](/guide/themes)。
 
