@@ -85,7 +85,7 @@ class DocSidebar extends React.Component {
     });
 
     return (
-      <div className="rs-sidebar-wrapper fixed">
+      <div className="rs-sidebar-wrapper fixed" {...this.props}>
         <Sidebar>
           <div className="title-wrapper">
             {icon} {activeTitle}

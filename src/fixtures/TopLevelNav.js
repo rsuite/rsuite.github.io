@@ -43,6 +43,8 @@ const menu = [
 
 class TopLevelNav extends React.Component {
   static contextTypes = {
+    showSubmenu: PropTypes.bool,
+    onToggleMenu: PropTypes.func,
     router: PropTypes.object.isRequired
   };
 
@@ -59,9 +61,12 @@ class TopLevelNav extends React.Component {
   hideSearchDrawer = () => {
     this.setState({ search: false });
   };
-
+  handleToggleMenu = (event, show) => {
+    const { onToggleMenu } = this.props;
+    onToggleMenu(show);
+  };
   render() {
-    const { children } = this.props;
+    const { children, showSubmenu } = this.props;
     const { router } = this.context;
 
     return (
@@ -92,6 +97,9 @@ class TopLevelNav extends React.Component {
               className="icon-btn-circle"
               componentClass={Link}
               to={item.to}
+              onClick={event => {
+                this.handleToggleMenu(event, true);
+              }}
             >
               <Icon
                 icon={item.icon}
@@ -112,6 +120,10 @@ class TopLevelNav extends React.Component {
               target="_blank"
             >
               <Icon icon="github" size="lg" />
+            </WithTooltipButton>
+
+            <WithTooltipButton className="icon-btn-circle" onClick={this.handleToggleMenu}>
+              <Icon icon={showSubmenu ? 'angle-left' : 'angle-right'} size="lg" />
             </WithTooltipButton>
           </div>
         </div>
