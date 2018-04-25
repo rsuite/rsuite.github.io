@@ -1123,6 +1123,7 @@ path.bg {
   padding: 10px;
   border-radius: 6px;
 }
+
 .palette-image-position-dot {
   position: absolute;
   background: #fff;
@@ -1130,4 +1131,10 @@ path.bg {
   height: 8px;
   border-radius: 4px;
   border: 1px solid #000;
+}
+
+.menu-nav .hvr-underline-from-center:not(:last-child) {
+  @media (max-width: @screen-tablet) {
+    display: none;
+  }
 }
