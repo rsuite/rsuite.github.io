@@ -32,7 +32,7 @@ RSUITE（React Suite 的简写）是 一套 React 组件库，为后台产品而
 
 ## 社区
 
-与开发团队沟通 [![Discord](https://img.shields.io/badge/Discord-Join%20chat%20%E2%86%92-738bd7.svg)](https://discord.gg/GmPXTH3)
+与开发团队沟通 [![Discord](https://img.shields.io/badge/Discord-Join%20chat%20%E2%86%92-738bd7.svg)](https://discord.gg/R8mnjwh)
 
 使用中如果存在问题，[报告 Bug](https://github.com/rsuite/rsuite/issues/new)
 

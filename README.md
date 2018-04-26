@@ -21,7 +21,7 @@ RSUITE 目标就是让 WEB 开发更快捷，同时具有一定的灵活性和�
 
 社区
 
-[![Discord](https://img.shields.io/badge/Discord-Join%20chat%20%E2%86%92-738bd7.svg)](https://discord.gg/GmPXTH3)
+[![Discord](https://img.shields.io/badge/Discord-Join%20chat%20%E2%86%92-738bd7.svg)](https://discord.gg/R8mnjwh)
 
 
 
