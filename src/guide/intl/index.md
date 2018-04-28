@@ -27,7 +27,7 @@ ReactDOM.render(
 ```jsx
 import { IntlProvider } from 'react-intl';
 import { IntlProvider as RSIntlProvider } from 'rsuite';
-import zhCN from 'rsuite/lib/IntlProvider/zh_CN';
+import zhCN from 'rsuite/lib/IntlProvider/locales/zh_CN';
 
 ReactDOM.render(
   <IntlProvider locale="zh">
