@@ -46,6 +46,7 @@ import { TreePicker } from 'rsuite';
 | renderValue       | (activeNode, placeholder)=>React.Node              | 自定义渲染 placeholder          |
 | renderExtraFooter | ()=>React.Node                                     | 自定义页脚内容                  |
 | placement         | enum: Placement `('bottomLeft')`                   | 打开位置                        |
+| menuClassName     | string                                             | 选项菜单的 className            |
 
 ## Types
 

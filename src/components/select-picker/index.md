@@ -45,6 +45,7 @@ import { SelectPicker } from 'rsuite';
 | searchable         | boolean `(true)`                                 | 可以搜索                             |
 | cleanable          | boolean `(true)`                                 | 可以清除                             |
 | placement          | enum: Placement`('bottomLeft')`                  | 位置                                 |
+| menuClassName      | string                                           | 选项菜单的 className                 |
 
 ## Types
 
@@ -53,4 +54,3 @@ import { SelectPicker } from 'rsuite';
 ```js
 Type Placement = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight' | 'leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom';
 ```
-

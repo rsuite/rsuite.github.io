@@ -1,4 +1,4 @@
-# CheckPicker 多项选择器 
+# CheckPicker 多项选择器
 
 用于多项数据选择，支持分组。
 
@@ -45,6 +45,7 @@ import { CheckPicker } from 'rsuite';
 | searchable         | boolean `(true)`                                 | 可以搜索                             |
 | cleanable          | boolean `(true)`                                 | 可以清除                             |
 | placement          | enum: Placement`('bottomLeft')`                  | 位置                                 |
+| menuClassName      | string                                           | 选项菜单的 className                 |
 
 ## Types
 

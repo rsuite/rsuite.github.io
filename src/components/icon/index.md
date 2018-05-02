@@ -1,8 +1,9 @@
-# Icon 图标 
+# Icon 图标
 
 图标组件，除了内置的常用图标外，还可以自定义引入 SVG 图标。
 
-`<Icon>` 通过字体实现的矢量图形
+`<Icon>` 通过字体实现的矢量图形。
+
 
 ## 获取组件
 
@@ -15,6 +16,8 @@ import { Icon } from 'rsuite';
 <!--{demo}-->
 
 ## Props
+
+[图标库](/tools/icons)
 
 ### `<Icon>`
 

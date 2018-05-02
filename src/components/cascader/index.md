@@ -44,3 +44,4 @@ import { Cascader } from 'rsuite';
 | open               | boolean                                       | 打开 (受控)                          |
 | defaultOpen        | boolean                                       | 默认打开                             |
 | placement          | enum: 'bottomLeft','topLeft' `('bottomLeft')` | 打开位置                             |
+| menuClassName      | string                                        | 选项菜单的 className                 |

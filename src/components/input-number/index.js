@@ -10,7 +10,8 @@ const examples = [
   require('./max-min.md'),
   require('./step.md'),
   require('./disabled.md'),
-  require('./fix.md')
+  require('./fix.md'),
+  require('./control.md')
 ];
 
 export default () => {

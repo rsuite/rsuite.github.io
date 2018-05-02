@@ -1,4 +1,4 @@
-# DateRangePicker 日期范围选择器 
+# DateRangePicker 日期范围选择器
 
 用于快速选择一个日期范围
 
@@ -40,6 +40,7 @@ import { DateRangePicker } from 'rsuite';
 | placement      | enum: [Placement](#Placement) `('bottomLeft')`                                                      | 显示位置                                                        |
 | limitStartYear | number `(5)`                                                                                        | 相对当前选择日期，设置可选年份上限                              |
 | limitEndYear   | number `(5)`                                                                                        | 相对当前选择日期，设置可选年份下限                              |
+| menuClassName  | string                                                                                              | 选项菜单的 className                                            |
 
 ## Types
 
