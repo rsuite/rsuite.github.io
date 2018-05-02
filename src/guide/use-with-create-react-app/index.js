@@ -5,7 +5,7 @@ import MarkdownView from '../../fixtures/MarkdownView';
 class UseWithCreateReactAppPage extends React.Component {
   render() {
     return (
-      <PageContainer routerId="guide/usage">
+      <PageContainer routerId="guide/use-with-create-react-app">
         <MarkdownView>{require('./index.md')}</MarkdownView>
       </PageContainer>
     );
