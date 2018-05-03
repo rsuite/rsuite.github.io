@@ -1,9 +1,5 @@
 {
-  "presets": [
-    "env",
-    "stage-0",
-    "react"
-  ],
+  "presets": ["env", "stage-0", "react", "rsuite"],
   "plugins": [
     "lodash",
     "transform-class-properties",
@@ -11,15 +7,7 @@
     "transform-runtime",
     "add-module-exports",
     "react-hot-loader/babel",
-    "transform-dev",
-    [
-      "import",
-      {
-        "libraryName": "rsuite",
-        "libraryDirectory": "lib",
-        "camel2DashComponentName": false
-      }
-    ]
+    "transform-dev"
   ],
   "env": {
     "production": {
