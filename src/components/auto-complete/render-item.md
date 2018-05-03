@@ -14,10 +14,10 @@ const data = [
 const instance = (
   <AutoComplete
     data={data}
-    renderItem={value => {
+    renderItem={item => {
       return (
         <p>
-          <Icon icon="star" /> {value}
+          <Icon icon="star" /> {item.label}
         </p>
       );
     }}
