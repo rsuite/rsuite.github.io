@@ -107,7 +107,7 @@ class Page extends React.Component {
                     eventKey="4"
                     trigger="hover"
                     title="Settings"
-                    icon={<Icon icon="gears" />}
+                    icon={<Icon icon="gear-circle" />}
                   >
                     <Dropdown.Item eventKey="4-1">Applications</Dropdown.Item>
                     <Dropdown.Item eventKey="4-2">Websites</Dropdown.Item>

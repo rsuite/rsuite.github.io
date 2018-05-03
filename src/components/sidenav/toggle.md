@@ -35,7 +35,7 @@ class Demo extends React.Component{
                 <Dropdown.Item eventKey="3-3">Loyalty</Dropdown.Item>
                 <Dropdown.Item eventKey="3-4">Visit Depth</Dropdown.Item>
               </Dropdown>
-              <Dropdown eventKey="4" title="Settings" icon={<Icon icon="gears" />}>
+              <Dropdown eventKey="4" title="Settings" icon={<Icon icon="gear-circle" />}>
                 <Dropdown.Item eventKey="4-1" >Applications</Dropdown.Item>
                 <Dropdown.Item eventKey="4-2">Channels</Dropdown.Item>
                 <Dropdown.Item eventKey="4-3">Versions</Dropdown.Item>
