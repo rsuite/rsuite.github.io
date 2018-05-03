@@ -2,11 +2,11 @@
 [create-react-app][create-react-app] 可以帮助快速建立一个 `react` 工程，本向导将介绍如何将 `rsuite` 于 `create-react-app` 结合使用，并进行
 ## 初始化一个项目
 ```bash
-npx create-react-app test-app
+$ npx create-react-app test-app
 ```
 执行后，工具将自动生成一个 `react` 开发脚手架，并安装开发 `react` 所必须的所有依赖。安装完成后执行
 ```bash
-yarn start
+$ yarn start
 ```
 然后访问 `http://0.0.0.0:3000/`，看到 Welcome to React 页面就是安装成功了。
 
@@ -23,10 +23,10 @@ $ yarn add rsuite
   import React, { Component } from 'react';
 - import logo from './logo.svg';
   import './App.css';
-  
+
 + import 'rsuite/dist/styles/rsuite.min.css';
 + import { Button } from 'rsuite';
-  
+
   class App extends Component {
     render() {
       return (
@@ -43,7 +43,7 @@ $ yarn add rsuite
       );
     }
   }
-  
+
   export default App;
 ```
 
