@@ -5,13 +5,13 @@
 首先需要在本地正确安装和配置 Node.js 环境。
 
 ```bash
-npm install rsuite --save
+$ npm install rsuite --save
 ```
 
 如果您在使用 yarn 也可以通过 yarn 安装:
 
 ```bash
-yarn add rsuite
+$ yarn add rsuite
 ```
 
 ## 代码示例
@@ -51,27 +51,18 @@ import { Button } from 'rsuite';
 import Button from 'rsuite/lib/Button';
 ```
 
-可以使用 babel 插件 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import) 处理这个问题。
+可以使用 babel 插件 [babel-preset-rsuite](https://github.com/rsuite/babel-preset-rsuite) 处理这个问题。
 
-### 安装 babel-plugin-import
+### 安装 babel-preset-rsuite
 
 ```bash
-npm install babel-plugin-import --save-dev
+$ npm install babel-preset-rsuite --save-dev
 ```
 
 ### .babelrc 配置
 
 ```json
 {
-  "plugins": [
-    [
-      "import",
-      {
-        "libraryName": "rsuite",
-        "libraryDirectory": "lib",
-        "camel2DashComponentName": false
-      }
-    ]
-  ]
+  "presets": ["rsuite"]
 }
 ```
