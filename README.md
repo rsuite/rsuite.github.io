@@ -1,134 +1,114 @@
+<p align="center">
+  <a href="https://rsuitejs.com" target="_blank" rel="noopener noreferrer">
+   <img height="100" src="https://user-images.githubusercontent.com/15609339/39298633-53826e50-4979-11e8-99fa-fac162d0830e.png" alt="RSUITE logo">
+  </a>
+</p>
 
 
-# 关于 RSUITE [<i class="icon icon-edit2" ></i>](https://github.com/rsuite/rsuite/blob/master/README.md)
+[![npm][npm-svg]][npm-home] [![Travis][travis-svg]][travis-home] [![Coverage Status][coverage-svg]][coverage-home] [![Discord][discord-svg]][discord-invite]
 
-------
+RSUITE (React Suite) is a set of react component libraries for enterprise system products. Built by HYPERS front-end team and UX team, mainly serving company's big data products.
 
-RSUITE  `[ɑː(r)swiːt]` 是一套基于 React 开发的 UI 组件库，产生于 HYPERS 前端团队，同时也是面向企业级后台产品的一套前端解决方案。
+After three major revisions, a large number of components and rich functionality have been accumulated.
 
-RSUITE 目标就是让 WEB 开发更快捷，同时具有一定的灵活性和扩展性，致力于改善前端工程师的开发体验。
+### Browser Compatibility
 
+| IE   | Edge | Firefox | Chrome | Safari |
+| ---- | ---- | ------- | ------ | ------ |
+| >=10 | >=14 | >= 45   | >= 49  | >= 10  |
 
-------
-版本与状态
+ - IE<=9 is no longer supported since RSUITE 3.0.
+ - RSUITE is designed and implemented for use on modern desktop browsers rather than mobile browsers.
 
-[![npm][npm-badge]][npm]
+### UI Design
 
-[![npm][npm-beta-badge]][npm-beta]
-
-[![Travis][build-badge]][build] [![Coverage Status][coverage-badge]][coverage]
-
-
-社区
-
-[![Discord](https://img.shields.io/badge/Discord-Join%20chat%20%E2%86%92-738bd7.svg)](https://discord.gg/R8mnjwh)
+RSUITE Design Prototype and specification, click to [view][rsuite-design]
 
 
+## Installation
 
-## 快速开始
+RSUITE is available as an [npm package][npm-home].
 
-<br/>
-安装:
-
-```
+```bash
 npm i rsuite --save
 ```
 
+or if you prefer Yarn
 
-示例：
+```bash
+yarn add rsuite
+```
+
+## Usage
+
+Here's a simple example
 
 ```js
-import { Button } from '../../rsuiteSource';
+import { Button } from 'rsuite';
+
+import '~rsuite/lib/less/index.less';
 
 ReactDOM.render(<Button>Button</Button>, mountNode);
 ```
 
+[**Live preview on CodeSandbox**][live-preview-on-codesandbox]
 
-## 创建一个 RSUITE 应用
+### Documentation
 
-通过 `create-rsuite-app` 快速创建一个 RSUITE 应用。  另外，应用中还集成了以下内容:
+You can go through [full documentation][rsuite-doc-guide] or start with following sections
 
-- `Redux`: 数据流管理
-- `React Router`: 路由管理
-- `React Intl`: 国际化
-- `ESLint`: 代码检查
-- `Webpack`: 应用构建及开发环境搭建
-- `Babel`: 代码编译
-
-详细参考 [dependencies](https://github.com/rsuite/create-rsuite-app/blob/master/generators/app/templates/package.json#L12-L33)
-
-安装:
-
-```
-npm i -g yo
-npm i -g generator-create-rsuite-app
-```
-
-创建项目:
-
-```
-# 创建并进入项目文件夹
-mkdir your-project && cd your-project
-
-// 使用脚手架安装项目
-yo create-rsuite-app
-```
-
-运行项目:
-
-等待 `npm install`  安装完成后，执行下面命令，打开 `localhost:3002` 即可运行项目。
-
-```
-npm run dev
-```
-
-> 使用中如果存在问题，提交 [issues](https://github.com/rsuite/create-rsuite-app/issues/new)
-
-## 主题相关
+* [Quick start][rsuite-doc-guide]
+* [Customizing themes][rsuite-doc-guide-themes]
+* [Internationalization][rsuite-doc-guide-intl]
+* [Components][rsuite-components-overview]
 
 
+## Changelog
 
-- 方式 1 ：引用 less 文件
-
-```less
-// 如果需要使用一些拓展组件，应该引入组件样式
-@import "~rsuite/lib/less/index";
-
-// 引入 RSUITE 样式
-@import "~rsuite-theme/dist/less/rsuite";
-
-// 修改主题颜色,不设置则使用 RSUITE 默认颜色
-@base-color: #6292f0;
-
-// 可以修改主题中的变量参数，来自定义自己的主题
-// 参考 https://github.com/rsuite/rsuite-theme/blob/master/src/less/variables.less
-```
-
-- 方式 2 : CDN
-
-```html
-<link rel="stylesheet" href="https://unpkg.com/rsuite-theme/dist/css/rsuite.min.css" />
-```
-
-- 其他详细配置参考 [rsuite-theme](https://rsuitejs.com/components/theme)
+Detailed changes for each release are documented in the [release notes][release-notes].
 
 
-> 使用中如果存在问题，提交 [issues](https://github.com/rsuite/rsuite-theme/issues/new)
+## Contribution
+
+Make sure you've read the [guidelines][contributing] before you start contributing.
+
+Editor preferences are available in the [.prettierrc][prettierrc] for easy use in common code editors. Read more and download plugins at https://prettier.io/.
 
 
+## Supporting RSUITE
 
-[npm-badge]: https://img.shields.io/npm/v/rsuite.svg
-[npm]: https://www.npmjs.com/package/rsuite
+If you like RSUITE, you can show your support by either
 
+- Starring this repo
+- [Leaving a comment here][issues-11] if you are using RSUITE in your project (like we do :smile:)
+- [Becoming a backer][opencollective-home] on OpenCollective
 
-[npm-beta-badge]: https://img.shields.io/npm/v/rsuite/beta.svg
-[npm-beta]: https://www.npmjs.com/package/rsuite
-
-
-[build-badge]: https://travis-ci.org/rsuite/rsuite.svg
-[build]: https://travis-ci.org/rsuite/rsuite
-
-[coverage-badge]: https://coveralls.io/repos/github/rsuite/rsuite/badge.svg?branch=next
-[coverage]: https://coveralls.io/github/rsuite/rsuite
+[![opencollective-now][opencollective-svg]][opencollective-home]
 
 
+## License
+
+RSUITE is [MIT licensed][LICENSE]. Copyright (c) 2016-present, HYPERS.
+
+[readm-cn]:https://github.com/rsuite/rsuite/blob/master/README_zh.md
+[npm-svg]:https://badge.fury.io/js/rsuite.svg
+[npm-home]:https://www.npmjs.com/package/rsuite
+[travis-svg]:https://travis-ci.org/rsuite/rsuite.svg?branch=master
+[travis-home]:https://travis-ci.org/rsuite/rsuite
+[coverage-svg]:https://coveralls.io/repos/github/rsuite/rsuite/badge.svg?branch=master
+[coverage-home]:https://coveralls.io/github/rsuite/rsuite?branch=master
+[discord-svg]:https://img.shields.io/badge/Discord-Join%20chat%20%E2%86%92-738bd7.svg
+[discord-invite]:https://discord.gg/R8mnjwh
+[rsuite-design]:https://rsuitejs.com/design/index.html
+[live-preview-on-codesandbox]:https://codesandbox.io/s/mo7jxvr9x9?from-embed
+[rsuite-doc-guide]:https://rsuitejs.com/guide/introduction
+[rsuite-doc-guide-themes]:https://rsuitejs.com/guide/themes
+[rsuite-doc-guide-intl]:https://rsuitejs.com/guide/intl
+[rsuite-components-overview]:https://rsuitejs.com/components/overview
+[release-notes]:https://github.com/rsuite/rsuite/releases
+[contributing]:https://github.com/rsuite/rsuite/blob/master/CONTRIBUTING.md
+[prettierrc]:https://github.com/rsuite/rsuite/wiki/.prettierrc
+[issues-11]:https://github.com/rsuite/rsuite/issues/11
+[opencollective-svg]:https://opencollective.com/rsuite/tiers/backer.svg?avatarHeight=36
+[opencollective-home]:https://opencollective.com/rsuite
+[LICENSE]:https://github.com/rsuite/rsuite/blob/master/LICENSE
