@@ -1,11 +1,11 @@
-# Drawer 抽屉 
+# Drawer 抽屉
 
 一个从页面边缘滑动出来的浮层，可以替代 Modal 放更多内容。
 
 ## 获取组件
 
 ```js
-import { Drawer} from 'rsuite';
+import { Drawer } from 'rsuite';
 ```
 
 ## 演示
@@ -33,6 +33,6 @@ import { Drawer} from 'rsuite';
 | onExit            | () => void                                     | 退出前动画过渡的回调函数                                                                                |
 | onExiting         | () => void                                     | 退中前动画过渡的回调函数                                                                                |
 | onExited          | () => void                                     | 退后前动画过渡的回调函数                                                                                |
-| show              | boolean                                        | 显示 Drawer                                                                                             |
+| show \*           | boolean                                        | 显示 Drawer                                                                                             |
 | size              | enum: 'lg', 'md', 'sm', 'xs'                   | 设置 Drawer 尺寸                                                                                        |
 | placement         | enum: 'top','right','bottom', 'left' `(right)` | 设置 Drawer 显示的位置                                                                                  |

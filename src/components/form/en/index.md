@@ -48,7 +48,7 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 | Property       | Type`(default)`                  | Description                                                                      |
 | -------------- | -------------------------------- | -------------------------------------------------------------------------------- |
 | classPrefix    | string `('form-control')`        | prefix of className                                                              |
-| name           | string                           | name of form-control                                                             |
+| name \*        | string                           | name of form-control                                                             |
 | accepter       | React.ElementType `(Input)`      | proxied components                                                               |
 | checkTrigger   | enum: 'change','blur','none'     | The data validation trigger type, and it wiill overrides the setting on `<Form>` |
 | errorMessage   | React.Node                       | show error messages                                                              |
@@ -77,8 +77,12 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 | htmlFor     | string                  | attribute of the html label tag, defaults to the controlId of the FormGroup |
 | tooltip     | boolean                 | Whether to show through the Tooltip component                               |
 
+## Types
+
+### Placement
+
 ```js
-Type Placement =
+type Placement =
   | 'bottomLeft'
   | 'bottomRight'
   | 'topLeft'

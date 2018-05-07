@@ -1,4 +1,4 @@
-# Nav 导航 
+# Nav 导航
 
 提供多种形式的导航菜单列表，可以是横向、纵向布局。
 
@@ -21,16 +21,17 @@ import { Nav, Dropdown } from 'rsuite';
 
 ### `<Nav>`
 
-| 属性名称    | 类型`(默认值)`                                      | 描述                                          |
-| ----------- | --------------------------------------------------- | --------------------------------------------- |
-| classPrefix | string `('nav')`                                    | class 前缀                                    |
-| tabs        | boolean                                             | 标签式导航                                    |
-| pills       | boolean                                             | 胶囊式导航                                    |
-| justified   | boolean                                             | 宽度自适应                                    |
-| stacked     | boolean                                             | 垂直导航                                      |
-| pullRight   | boolean                                             | 显示在右侧                                    |
-| activeKey   | any                                                 | 激活的 `key`, 对应 `<Nav.Item>` 中 `eventKey` |
-| onSelect    | (eventKey: any, event: SyntheticEvent<\*>) => void, | 选择事件触发的回调函数                        |
+| 属性名称    | 类型`(默认值)`                                             | 描述                                          |
+| ----------- | ---------------------------------------------------------- | --------------------------------------------- |
+| classPrefix | string `('nav')`                                           | class 前缀                                    |
+| children \* | React.ChildrenArray&lt;NavItem or Dropdown&gt;             | 组件内容                                      |
+| tabs        | boolean                                                    | 标签式导航                                    |
+| pills       | boolean                                                    | 胶囊式导航                                    |
+| justified   | boolean                                                    | 宽度自适应                                    |
+| stacked     | boolean                                                    | 垂直导航                                      |
+| pullRight   | boolean                                                    | 显示在右侧                                    |
+| activeKey   | any                                                        | 激活的 `key`, 对应 `<Nav.Item>` 中 `eventKey` |
+| onSelect    | (eventKey: any, event: SyntheticEvent&lt;any&gt;) => void, | 选择事件触发的回调函数                        |
 
 ### `<Nav.Item>`
 
@@ -38,7 +39,8 @@ import { Nav, Dropdown } from 'rsuite';
 | -------------- | --------------------------------------------------- | ---------------------- |
 | active         | boolean                                             | 激活状态               |
 | disabled       | boolean                                             | 禁用状态               |
+| children \*    | React.Node                                          | 组件内容               |
 | icon           | React.Element&lt;typeof Icon&gt;                    | 设置图标               |
 | href           | string                                              | 链接                   |
-| onSelect       | (eventKey: any, event: SyntheticEvent<\*>) => void, | 选择事件触发的回调函数 |
+| onSelect       | (eventKey: any, event: SyntheticEvent&lt;any&gt;) => void, | 选择事件触发的回调函数 |
 | componentClass | React.ElementType                                   | 为组件自定义元素类型   |

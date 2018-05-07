@@ -21,7 +21,7 @@ import { CheckPicker } from 'rsuite';
 | Property           | Type`(Default)`                                              | Description                                             |
 | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------- |
 | classPrefix        | string `('picker-select')`                                   | prefix of className                                     |
-| data               | Array&lt;DataItemType&gt;                                    | componetn data                                          |
+| data \*            | Array&lt;DataItemType&gt;                                    | componetn data                                          |
 | disabled           | boolean                                                      | whether disabled componet                               |
 | disabledItemValues | Array&lt;DataItemType.value&gt;                              | values of disabledItems                                 |
 | groupBy            | string                                                       | set group condition key in data                         |
@@ -50,15 +50,23 @@ import { CheckPicker } from 'rsuite';
 ### Placement
 
 ```js
-Type Placement = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight' | 'leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom';
+type Placement =
+  | 'bottomLeft'
+  | 'bottomRight'
+  | 'topLeft'
+  | 'topRight'
+  | 'leftTop'
+  | 'rightTop'
+  | 'leftBottom'
+  | 'rightBottom';
 ```
 
 ### DataItemType
 
 ```ts
-Type DataItemType = {
-  value: any,
-  label: React.Node
-  groupBy?: string,
-}
+type DataItemType = {
+  value: any;
+  label: React.Node;
+  groupBy?: string;
+};
 ```

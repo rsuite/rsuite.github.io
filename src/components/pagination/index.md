@@ -1,4 +1,4 @@
-# Pagination 分页 
+# Pagination 分页
 
 分页导航，用于辅助长列表只加载部分数据，可以快速切换到指定数据页。
 
@@ -20,9 +20,9 @@ import { Pagination } from 'rsuite';
 
 | 属性名称             | 类型 `(默认值)`                  | 描述                        |
 | -------------------- | -------------------------------- | --------------------------- |
-| activePage           | number `(1)`                     | 当前页码                    |
-| pages                | number `(1)`                     | 页数                        |
-| maxButtons           | number                           | 分页按钮最多显示数          |
+| activePage \*        | number `(1)`                     | 当前页码                    |
+| pages \*             | number `(1)`                     | 页数                        |
+| maxButtons           | number `(0)`                     | 分页按钮最多显示数          |
 | first                | boolean                          | 显示第一页                  |
 | last                 | boolean                          | 显示最后一页                |
 | prev                 | boolean                          | 显示上一页                  |

@@ -26,6 +26,7 @@ import { Button, IconButton, ButtonGroup, ButtonToolbar } from 'rsuite';
 | active         | boolean                                                                  | 激活状态             |
 | block          | boolean                                                                  | 显示为块级元素       |
 | disabled       | boolean                                                                  | 禁用                 |
+| children \*    | React.Node                                                               | 组件的内容           |
 | size           | enum: 'lg', 'md', 'sm', 'xs' `('md')`                                    | 设置按钮尺寸         |
 | appearance     | enum: 'default', 'primary', 'link', 'subtle', 'ghost'<br/> `('default')` | 设置外观             |
 | color          | enum: 'red', 'orange','yellow', 'green', <br/>'cyan', 'blue', 'violet'   | 设置颜色             |

@@ -20,7 +20,7 @@ import { CheckTree } from 'rsuite';
 | ------------------ | ------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
 | value              | Array&lt;DataItemType.value&gt;                                                             | (Controlled) specifies the values of the selected tree node |
 | defaultValue       | Array&lt;DataItemType.value&gt;                                                             | (UnControlled) default values of the selected tree node     |
-| data               | Array&lt;[DataItemType](#DataItemType)&gt;                                                  | tree data                                                   |
+| data \*            | Array&lt;[DataItemType](#DataItemType)&gt;                                                  | tree data                                                   |
 | valueKey           | string `('value')`                                                                          | set value key in data                                       |
 | labelKey           | string `('label')`                                                                          | set label key in data                                       |
 | childKey           | string `('children')`                                                                       | set childrenKey key in data                                 |
@@ -35,20 +35,14 @@ import { CheckTree } from 'rsuite';
 
 ## Types
 
-### Placement
-
-```js
-Type Placement = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight' | 'leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom';
-```
-
 ### DataItemType
 
 ```ts
-Type DataItemType = {
-  value: any,
-  label: React.Node,
-  children?:Array<DataItemType>
-}
+type DataItemType = {
+  value: any;
+  label: React.Node;
+  children?: Array<DataItemType>;
+};
 ```
 
 ## Related components

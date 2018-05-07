@@ -21,7 +21,7 @@ import { Cascader } from 'rsuite';
 | 属性名称           | 类型`(默认值)`                                               | 描述                                 |
 | ------------------ | ------------------------------------------------------------ | ------------------------------------ |
 | classPrefix        | string `('picker-cascader')`                                 | className 前缀                       |
-| data               | Array&lt;[DataItemType](#DataItemType)&gt;                   | 组件数据                             |
+| data \*            | Array&lt;[DataItemType](#DataItemType)&gt;                   | 组件数据                             |
 | disabled           | boolean                                                      | 禁用组件                             |
 | disabledItemValues | Array&lt;DataItemType.value&gt;                              | 禁用选项                             |
 | groupBy            | string                                                       | 设置分组条件在 `data` 中的 `key`     |
@@ -51,15 +51,15 @@ import { Cascader } from 'rsuite';
 ### Placement
 
 ```ts
-Type Placement = 'bottomLeft'  | 'topLeft' ;
+type Placement = 'bottomLeft' | 'topLeft';
 ```
 
 ### DataItemType
 
 ```ts
-Type DataItemType = {
-  value: any,
-  label: React.Node,
-  children?:Array<DataItemType>
-}
+type DataItemType = {
+  value: any;
+  label: React.Node;
+  children?: Array<DataItemType>;
+};
 ```

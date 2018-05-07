@@ -32,7 +32,7 @@ import { Dropdown } from 'rsuite';
 | onClose         | () => void                                                                                                                              | 菜单关闭的回调函数                               |
 | onOpen          | () => void                                                                                                                              | 菜单弹出的回调函数                               |
 | onToggle        | (open?: boolean) => void                                                                                                                | 菜单状态切换的回调函数                           |
-| onSelect        | (eventKey: any, event: SyntheticEvent<\*>) => void                                                                                      | 选择后的回调函数                                 |
+| onSelect        | (eventKey: any, event: SyntheticEvent&lt;any&gt;) => void                                                                                      | 选择后的回调函数                                 |
 | renderTitle     | (children?: React.Node) => React.Node                                                                                                   | 自定义 title                                     |
 | placement       | enum: <br/>'bottomLeft', 'bottomRight', 'topLeft', 'topRight', <br/>'leftTop', 'rightTop', 'leftBottom', 'rightBottom' `('bottomLeft')` | 菜单显示位置                                     |
 | icon            | React.Element&lt;typeof Icon&gt;                                                                                                        | 设置图标                                         |
@@ -43,12 +43,13 @@ import { Dropdown } from 'rsuite';
 | 属性名称       | 类型 `(默认值)`                                    | 描述                   |
 | -------------- | -------------------------------------------------- | ---------------------- |
 | classPrefix    | string `('dropdown-item')`                         |
+| children \*    | React.Node                                         | 组件内容               |
 | divider        | boolean                                            | 显示为分割线           |
 | panel          | boolean                                            | 显示一个自定义的面板   |
 | active         | boolean                                            | 选中当前选项           |
 | disabled       | boolean                                            | 禁用当前选项           |
 | eventKey       | any                                                | 当前选项的值           |
-| onSelect       | (eventKey: any, event: SyntheticEvent<\*>) => void | 选中当前选项的回调函数 |
+| onSelect       | (eventKey: any, event: SyntheticEvent&lt;any&gt;) => void | 选中当前选项的回调函数 |
 | componentClass | React.ElementType                                  | 为组件自定义元素类型   |
 | icon           | React.Element&lt;typeof Icon&gt;                   | 设置图标               |
 

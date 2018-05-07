@@ -20,8 +20,8 @@ import { CheckPicker } from 'rsuite';
 
 | 属性名称           | 类型`(默认值)`                                               | 描述                                 |
 | ------------------ | ------------------------------------------------------------ | ------------------------------------ |
-| classPrefix        | string `('picker-check')`                                   | className 前缀                       |
-| data               | Array&lt;[DataItemType](#DataItemType)&gt;                              | 组件数据                             |
+| classPrefix        | string `('picker-check')`                                    | className 前缀                       |
+| data \*            | Array&lt;[DataItemType](#DataItemType)&gt;                   | 组件数据                             |
 | disabled           | boolean                                                      | 禁用组件                             |
 | disabledItemValues | Array&lt;DataItemType.value&gt;                              | 禁用选项                             |
 | groupBy            | string                                                       | 设置分组条件在 `data` 中的 `key`     |
@@ -51,15 +51,23 @@ import { CheckPicker } from 'rsuite';
 ### Placement
 
 ```js
-Type Placement = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight' | 'leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom';
+type Placement =
+  | 'bottomLeft'
+  | 'bottomRight'
+  | 'topLeft'
+  | 'topRight'
+  | 'leftTop'
+  | 'rightTop'
+  | 'leftBottom'
+  | 'rightBottom';
 ```
 
 ### DataItemType
 
 ```ts
-Type DataItemType = {
-  value: any,
-  label: React.Node
-  groupBy?: string,
-}
+type DataItemType = {
+  value: any;
+  label: React.Node;
+  groupBy?: string;
+};
 ```

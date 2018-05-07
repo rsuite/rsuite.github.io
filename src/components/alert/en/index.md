@@ -45,11 +45,11 @@ Alert.error(content: string, duration?: number, onClose?: () => void);
 
 _props description_
 
-| Property | Type`(Default)` | Description                                                                                               |
-| -------- | --------------- | --------------------------------------------------------------------------------------------------------- |
-| content  | string          | content of alert                                                                                       |
-| duration | number `(2000)` | the duration of the display, automatically closes the reminder box after the duration (unit:milliseconds) |
-| onClose  | ()=>void        | callback when Alert is closed                                                                             |
+| Property   | Type`(Default)` | Description                                                                                               |
+| ---------- | --------------- | --------------------------------------------------------------------------------------------------------- |
+| content \* | string          | content of alert                                                                                          |
+| duration   | number `(2000)` | the duration of the display, automatically closes the reminder box after the duration (unit:milliseconds) |
+| onClose    | ()=>void        | callback when Alert is closed                                                                             |
 
 ### `Alert.config`
 
