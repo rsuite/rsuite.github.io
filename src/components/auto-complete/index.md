@@ -17,7 +17,7 @@ import { AutoComplete } from 'rsuite';
 | 属性名称      | 类型`(默认值)`                                     | 描述                         |
 | ------------- | -------------------------------------------------- | ---------------------------- |
 | classPrefix   | string `('auto-complete')`                         | className 前缀               |
-| data          | Array&lt;[DataItemType](#DataItemType)&gt;         | 组件数据                     |
+| data \*       | Array&lt;[DataItemType](#DataItemType)&gt;         | 组件数据                     |
 | disabled      | boolean                                            | 禁用组件                     |
 | value         | DataItemType.value                                 | 设置值 `受控`                |
 | defaultValue  | DataItemType.value                                 | 设置默认值 `非受控`          |
@@ -32,9 +32,9 @@ import { AutoComplete } from 'rsuite';
 ### DataItemType
 
 ```ts
-Type DataItemType = {
-  value: any,
-  label: React.Node,
-  children?: Array<DataItemType>
-}
+type DataItemType = {
+  value: any;
+  label: React.Node;
+  children?: Array<DataItemType>;
+};
 ```

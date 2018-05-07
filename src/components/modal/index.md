@@ -1,4 +1,4 @@
-# Modal 模态框 
+# Modal 模态框
 
 一套模态对话框组件，用于消息提示、确认消息和提交内容。 如果需要放置更多内容可以使用 Drawer。
 
@@ -43,7 +43,7 @@ import { Modal } from 'rsuite';
 | onExit               | () => void                          | 退出前动画过渡的回调函数                                                                             |
 | onExiting            | () => void                          | 退中前动画过渡的回调函数                                                                             |
 | onExited             | () => void                          | 退后前动画过渡的回调函数                                                                             |
-| show                 | boolean                             | 显示 Modal                                                                                           |
+| show \*              | boolean                             | 显示 Modal                                                                                           |
 | size                 | enum: 'lg', 'md', 'sm', 'xs' `(sm)` | Modal 尺寸                                                                                           |
 
 ### `<Modal.Header>`
@@ -52,7 +52,7 @@ import { Modal } from 'rsuite';
 | ----------- | ----------------------------------- | --------------------------- |
 | classPrefix | string `('modal-header')`           | className 前缀              |
 | closeButton | boolean `(true)`                    | 当设置为 true, 显示关闭按钮 |
-| onHide      | (event: SyntheticEvent<\*>) => void | 点击关闭按钮的回调函数      |
+| onHide      | (event: SyntheticEvent&lt;any&gt;) => void | 点击关闭按钮的回调函数      |
 
 ### `<Modal.Title>`
 

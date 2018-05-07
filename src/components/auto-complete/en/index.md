@@ -19,7 +19,7 @@ import { AutoComplete } from 'rsuite';
 | Property     | Type`(Default)`                                    | Description                                                                      |
 | ------------ | -------------------------------------------------- | -------------------------------------------------------------------------------- |
 | classPrefix  | string `('auto-complete')`                         | prefix of className                                                              |
-| data         | Array&lt;[DataItemType](#DataItemType)&gt;         | data of component                                                                |
+| data \*      | Array&lt;[DataItemType](#DataItemType)&gt;         | data of component                                                                |
 | disabled     | boolean                                            | whether disabled select                                                          |
 | value        | DataItemType.value                                 | selected option                                                                  |
 | defaultValue | DataItemType.value                                 | initial selected option.                                                         |
@@ -33,9 +33,9 @@ import { AutoComplete } from 'rsuite';
 ### DataItemType
 
 ```ts
-Type DataItemType = {
-  value: any,
-  label: React.Node,
-  children?: Array<DataItemType>
-}
+type DataItemType = {
+  value: any;
+  label: React.Node;
+  children?: Array<DataItemType>;
+};
 ```

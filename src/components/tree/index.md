@@ -21,7 +21,7 @@ import { Tree } from 'rsuite';
 | classPrefix      | string`('picker-tree')`                              | class 前缀                      |
 | value            | Array&lt;DataItemType.value&gt;                      | 当前选中的值                    |
 | defaultValue     | Array&lt;DataItemType.value&gt;                      | 默认选中的值                    |
-| data             | Array&lt;[DataItemType](#DataItemType)&gt;           | tree 数据                       |
+| data \*          | Array&lt;[DataItemType](#DataItemType)&gt;           | tree 数据                       |
 | valueKey         | string `('value')`                                   | tree 数据结构 value 属性名称    |
 | labelKey         | string `('label')`                                   | tree 数据结构 label 属性名称    |
 | childrenKey      | string `('children')`                                | tree 数据结构 children 属性名称 |
@@ -36,11 +36,11 @@ import { Tree } from 'rsuite';
 ### DataItemType
 
 ```ts
-Type DataItemType = {
-  value: any,
-  label: React.Node,
-  children?:Array<DataItemType>
-}
+type DataItemType = {
+  value: any;
+  label: React.Node;
+  children?: Array<DataItemType>;
+};
 ```
 
 ## 相关组件

@@ -26,6 +26,7 @@ import { Button, IconButton, ButtonGroup, ButtonToolbar } from 'rsuite';
 | active         | boolean                                                                  | active state                                    |
 | block          | boolean                                                                  | display block buttons                           |
 | disabled       | boolean                                                                  | disabled button                                 |
+| children \*    | React.Node                                                               | The content of the component.                   |
 | size           | enum: 'lg', 'md', 'sm', 'xs' `('md')`                                    | set button size                                 |
 | appearance     | enum: 'default', 'primary', 'link', 'subtle', 'ghost'<br/> `('default')` | set button appearence                           |
 | color          | enum: 'red', 'orange','yellow', 'green', <br/>'cyan', 'blue', 'violet'   | set button color                                |
@@ -46,10 +47,10 @@ IconButton 继承所有 Button 的属性
 
 ### `<ButtonGroup>`
 
-| Property    | Type `(Default)`             | Description                |
-| ----------- | ---------------------------- | -------------------------- |
-| block       | boolean                      | display block buttongroups |
-| justified   | boolean                      | horizontal constant width layout    |
-| vertical    | boolean                      | vertical layouts of button |
-| size        | enum: `lg`, `md`, `sm`, `xs` | set button size            |
-| classPrefix | string `('btn-group')`       | prefix of className        |
+| Property    | Type `(Default)`             | Description                      |
+| ----------- | ---------------------------- | -------------------------------- |
+| block       | boolean                      | display block buttongroups       |
+| justified   | boolean                      | horizontal constant width layout |
+| vertical    | boolean                      | vertical layouts of button       |
+| size        | enum: `lg`, `md`, `sm`, `xs` | set button size                  |
+| classPrefix | string `('btn-group')`       | prefix of className              |

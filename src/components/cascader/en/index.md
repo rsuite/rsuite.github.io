@@ -21,7 +21,7 @@ import { Cascader } from 'rsuite';
 | Property           | Type`(Default)`                                              | Description                                             |
 | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------- |
 | classPrefix        | string `('picker-cascader')`                                 | prefix of className                                     |
-| data               | Array&lt;[DataItemType](#DataItemType)&gt;                   | compoent data                                           |
+| data \*            | Array&lt;[DataItemType](#DataItemType)&gt;                   | compoent data                                           |
 | disabled           | boolean                                                      | disabled compnent                                       |
 | disabledItemValues | Array&lt;DataItemType.value&gt;                              | disabled items                                          |
 | groupBy            | string                                                       | set group condition key in data                         |
@@ -50,15 +50,15 @@ import { Cascader } from 'rsuite';
 ### Placement
 
 ```ts
-Type Placement = 'bottomLeft'  | 'topLeft' ;
+type Placement = 'bottomLeft' | 'topLeft';
 ```
 
 ### DataItemType
 
 ```ts
-Type DataItemType = {
-  value: any,
-  label: React.Node,
-  children?:Array<DataItemType>
-}
+type DataItemType = {
+  value: any;
+  label: React.Node;
+  children?: Array<DataItemType>;
+};
 ```

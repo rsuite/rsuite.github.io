@@ -21,7 +21,7 @@ import { SelectPicker } from 'rsuite';
 | 属性名称           | 类型`(默认值)`                                               | 描述                                 |
 | ------------------ | ------------------------------------------------------------ | ------------------------------------ |
 | classPrefix        | string `('picker-select')`                                   | className 前缀                       |
-| data               | Array&lt;[DataItemType](#DataItemType)&gt;                   | 组件数据                             |
+| data \*            | Array&lt;[DataItemType](#DataItemType)&gt;                   | 组件数据                             |
 | groupBy            | string                                                       | 设置分组条件在 `data` 中的 `key`     |
 | valueKey           | string `('value')`                                           | 设置选项值在 `data` 中的 `key`       |
 | labelKey           | string `('label')`                                           | 设置选项显示内容在 `data` 中的 `key` |
@@ -51,15 +51,23 @@ import { SelectPicker } from 'rsuite';
 ### Placement
 
 ```ts
-Type Placement = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight' | 'leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom';
+type Placement =
+  | 'bottomLeft'
+  | 'bottomRight'
+  | 'topLeft'
+  | 'topRight'
+  | 'leftTop'
+  | 'rightTop'
+  | 'leftBottom'
+  | 'rightBottom';
 ```
 
 ### DataItemType
 
 ```ts
-Type DataItemType = {
-  value: any,
-  label: React.Node
-  groupBy?: string,
-}
+type DataItemType = {
+  value: any;
+  label: React.Node;
+  groupBy?: string;
+};
 ```

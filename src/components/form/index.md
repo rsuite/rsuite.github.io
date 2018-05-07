@@ -1,4 +1,4 @@
-# Form 表单 
+# Form 表单
 
 一组处理表单数据的组件和模型。
 
@@ -48,7 +48,7 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 | 名称           | 类型`(默认值)`                   | 描述                                       |
 | -------------- | -------------------------------- | ------------------------------------------ |
 | classPrefix    | string `('form-control')`        | className 前缀                             |
-| name           | string                           | 表单元素名称                               |
+| name \*        | string                           | 表单元素名称                               |
 | accepter       | React.ElementType `(Input)`      | 受代理的组件                               |
 | checkTrigger   | enum: 'change','blur','none'     | 数据校验的触发类型,会覆盖 `<Form>`上的设置 |
 | errorMessage   | React.Node                       | 显示错误信息                               |
@@ -78,7 +78,7 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 | tooltip     | boolean                 | 是否通过 Tooltip 组件显示                                      |
 
 ```js
-Type Placement =
+type Placement =
   | 'bottomLeft'
   | 'bottomRight'
   | 'topLeft'

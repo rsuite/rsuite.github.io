@@ -1,4 +1,4 @@
-# Uploader 上传文件 
+# Uploader 上传文件
 
 * `<Uploader>`
 
@@ -18,7 +18,7 @@ import { Uploader } from 'rsuite';
 
 | 属性名称          | 类型 `(默认值)`                                                            | 描述                                                                          |
 | ----------------- | -------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| action            | string                                                                     | 文件上传地址, 必选                                                            |
+| action \*         | string                                                                     | 文件上传地址, 必选                                                            |
 | accept            | string                                                                     | 接受上传的文件类型                                                            |
 | autoUpload        | boolean `(true)`                                                           | 选择文件后自动上传                                                            |
 | classPrerix       | string `('uploader')`                                                      | className 前缀                                                                |
@@ -39,7 +39,7 @@ import { Uploader } from 'rsuite';
 | onError           | (fileList: Array<FileType>) => void                                        | 上传出现错误的回调函数                                                        |
 | onSuccess         | (response: Object, file: FileType) => void                                 | 上传成功后的回调函数                                                          |
 | onProgress        | (response: Object, file: FileType) => void                                 | 上传进度发生变化的回调函数                                                    |
-| onPreview         | (file: FileType, event: SyntheticEvent<\*>) => void                        | 在文件列表中，点击已上传的文件的回调函数                                      |
+| onPreview         | (file: FileType, event: SyntheticEvent&lt;any&gt;) => void                 | 在文件列表中，点击已上传的文件的回调函数                                      |
 | onRemove          | (file: FileType) => void                                                   | 在文件列表中，点击删除一个文件的回调函数                                      |
 | onReupload        | (file: FileType) => void                                                   | 在文件列表中，对上传失败的文件，点击重新上传的回调函数                        |
 

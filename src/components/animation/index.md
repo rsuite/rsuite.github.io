@@ -26,7 +26,7 @@ const { Fade, Collapse, Transition } = Animation;
 
 | 属性名称          | 类型 `(默认值)`                      | 描述                       |
 | ----------------- | ------------------------------------ | -------------------------- |
-| in                | boolean                              | 进入                       |
+| in \*             | boolean                              | 进入                       |
 | unmountOnExit     | boolean                              | 在退出时卸载组件           |
 | transitionAppear  | boolean                              | 初始显示的时候开启过渡效果 |
 | timeout           | number `(300)`                       | 动画过渡延迟时间           |
@@ -45,7 +45,7 @@ const { Fade, Collapse, Transition } = Animation;
 
 | 属性名称          | 类型 `(默认值)`                                  | 描述                       |
 | ----------------- | ------------------------------------------------ | -------------------------- |
-| in                | boolean                                          | 进入                       |
+| in \*             | boolean                                          | 进入                       |
 | unmountOnExit     | boolean                                          | 在退出时卸载组件           |
 | transitionAppear  | boolean                                          | 初始显示的时候开启过渡效果 |
 | timeout           | number`(300)`                                    | 动画过渡延迟时间           |
@@ -67,7 +67,7 @@ const { Fade, Collapse, Transition } = Animation;
 
 | 属性名称          | 类型 `(默认值)`                      | 描述                       |
 | ----------------- | ------------------------------------ | -------------------------- |
-| in                | boolean                              | 进入                       |
+| in \*             | boolean                              | 进入                       |
 | unmountOnExit     | boolean                              | 在退出时卸载组件           |
 | transitionAppear  | boolean                              | 初始显示的时候开启过渡效果 |
 | timeout           | number `(1000)`                      | 动画过渡延迟时间           |

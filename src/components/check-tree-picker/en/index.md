@@ -22,7 +22,7 @@ import { CheckTreePicker } from 'rsuite';
 | ------------------ | -------------------------------------------------------------------------- | ----------------------------------------------------------- |
 | value              | Array&lt;any&gt;                                                           | (Controlled) specifies the values of the selected tree node |
 | defaultValue       | Array&lt;any&gt;                                                           | (UnControlled) default values of the selected tree node     |
-| data               | Array&lt;Object&gt;                                                        | tree data                                                   |
+| data \*            | Array&lt;Object&gt;                                                        | tree data                                                   |
 | valueKey           | string `('value')`                                                         | set value key in data                                       |
 | labelKey           | string `('label')`                                                         | set label key in data                                       |
 | childKey           | string `('children')`                                                      | set children key in data                                    |
@@ -50,7 +50,15 @@ import { CheckTreePicker } from 'rsuite';
 ### Placement
 
 ```js
-Type Placement = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight' | 'leftTop' | 'rightTop' | 'leftBottom' | 'rightBottom';
+type Placement =
+  | 'bottomLeft'
+  | 'bottomRight'
+  | 'topLeft'
+  | 'topRight'
+  | 'leftTop'
+  | 'rightTop'
+  | 'leftBottom'
+  | 'rightBottom';
 ```
 
 ## Related Components
