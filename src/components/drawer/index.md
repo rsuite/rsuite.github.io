@@ -31,8 +31,8 @@ import { Drawer } from 'rsuite';
 | onEntering        | () => void                                     | 显示中动画过渡的回调函数                                                                                |
 | onEntered         | () => void                                     | 显示后动画过渡的回调函数                                                                                |
 | onExit            | () => void                                     | 退出前动画过渡的回调函数                                                                                |
-| onExiting         | () => void                                     | 退中前动画过渡的回调函数                                                                                |
-| onExited          | () => void                                     | 退后前动画过渡的回调函数                                                                                |
+| onExiting         | () => void                                     | 退出中动画过渡的回调函数                                                                                |
+| onExited          | () => void                                     | 退出后动画过渡的回调函数                                                                                |
 | show \*           | boolean                                        | 显示 Drawer                                                                                             |
 | size              | enum: 'lg', 'md', 'sm', 'xs'                   | 设置 Drawer 尺寸                                                                                        |
 | placement         | enum: 'top','right','bottom', 'left' `(right)` | 设置 Drawer 显示的位置                                                                                  |

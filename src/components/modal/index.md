@@ -41,8 +41,8 @@ import { Modal } from 'rsuite';
 | onEntering           | () => void                          | 显示中动画过渡的回调函数                                                                             |
 | onEntered            | () => void                          | 显示后动画过渡的回调函数                                                                             |
 | onExit               | () => void                          | 退出前动画过渡的回调函数                                                                             |
-| onExiting            | () => void                          | 退中前动画过渡的回调函数                                                                             |
-| onExited             | () => void                          | 退后前动画过渡的回调函数                                                                             |
+| onExiting            | () => void                          | 退出中动画过渡的回调函数                                                                             |
+| onExited             | () => void                          | 退出后动画过渡的回调函数                                                                             |
 | show \*              | boolean                             | 显示 Modal                                                                                           |
 | size                 | enum: 'lg', 'md', 'sm', 'xs' `(sm)` | Modal 尺寸                                                                                           |
 
