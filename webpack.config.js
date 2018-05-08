@@ -5,6 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
 const markdownRenderer = require('react-markdown-reader').renderer;
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const CompressionPlugin = require('compression-webpack-plugin');
 
 const iconPath = ['./node_modules/rsuite/styles', '../rsuite/styles'].map(relativePath =>
   path.resolve(__dirname, relativePath)
@@ -136,6 +137,9 @@ module.exports = {
       title: 'RSUITE | 一套 React 的 UI 组件库',
       template: 'src/index.html',
       inject: true
+    }),
+    new CompressionPlugin({
+      asset: '[path].gz'
     })
   ],
   devtool: STYLE_DEBUG === 'SOURCE' && 'source-map'
