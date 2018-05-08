@@ -137,9 +137,6 @@ module.exports = {
       title: 'RSUITE | 一套 React 的 UI 组件库',
       template: 'src/index.html',
       inject: true
-    }),
-    new CompressionPlugin({
-      asset: '[path].gz'
     })
   ],
   devtool: STYLE_DEBUG === 'SOURCE' && 'source-map'

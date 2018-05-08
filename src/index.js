@@ -24,19 +24,18 @@ import menu from './fixtures/menu';
 const routes = menu.map(item => {
   const children = [];
   item.children.forEach(child => {
-    !child.group &&
+    if (!child.group && !child.target) {
       children.push(
         <Route
           key={child.id}
           path={child.id}
-          getComponents={(location, resolve) => {
-            require.ensure([], require => {
-              resolve(null, require(`./${item.id}/${child.id}`));
-              setTitle(`${child.title || ''} ${child.name} - ${item.name}`);
-            });
+          component={require(`./${item.id}/${child.id}`)}
+          onEnter={() => {
+            setTitle(`${child.title || ''} ${child.name} - ${item.name}`);
           }}
         />
       );
+    }
   });
 
   return (
