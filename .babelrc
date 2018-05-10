@@ -1,8 +1,7 @@
 {
-  "presets": ["env", "stage-0", "react", "rsuite"],
+  "presets": ["env", "stage-1", "react", "rsuite"],
   "plugins": [
     "lodash",
-    "transform-class-properties",
     "transform-proto-to-assign",
     "transform-runtime",
     "add-module-exports",

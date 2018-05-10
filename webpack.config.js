@@ -11,7 +11,7 @@ const iconPath = ['./node_modules/rsuite/styles', '../rsuite/styles'].map(relati
   path.resolve(__dirname, relativePath)
 );
 
-const { NODE_ENV, STYLE_DEBUG } = process.env;
+const { NODE_ENV, STYLE_DEBUG, ENV_LOCALE } = process.env;
 const __PRO__ = NODE_ENV === 'production';
 
 const extractLess = new ExtractTextPlugin('style.[hash].css');
@@ -137,6 +137,11 @@ module.exports = {
       title: 'RSUITE | 一套 React 的 UI 组件库',
       template: 'src/index.html',
       inject: true
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        LOCALE_ENV: JSON.stringify(process.env.LOCALE_ENV)
+      }
     })
   ],
   devtool: STYLE_DEBUG === 'SOURCE' && 'source-map'

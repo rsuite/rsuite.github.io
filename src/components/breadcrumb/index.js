@@ -1,22 +1,15 @@
 import React from 'react';
-import ComponentExample from '../ComponentExample';
 import { Breadcrumb, Icon } from '../../rsuiteSource';
 import { Link } from 'react-router';
 
-const context = require('./index.md');
-const examples = [require('./basic.md'), require('./separator.md')];
+import createComponentExample from '../createComponentExample';
 
-export default () => {
-  return (
-    <ComponentExample
-      context={context}
-      id="Breadcrumb"
-      dependencies={{
-        Link,
-        Icon,
-        Breadcrumb
-      }}
-      examples={examples}
-    />
-  );
-};
+export default createComponentExample({
+  id: 'Breadcrumb',
+  examples: ['basic', 'separator'],
+  dependencies: {
+    Link,
+    Icon,
+    Breadcrumb
+  }
+});

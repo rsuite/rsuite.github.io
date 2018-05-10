@@ -1,19 +1,16 @@
-### 禁用
+### Disabled
 
 <!--start-code-->
+
 ```js
 /**
  * import data from
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/users.js
  */
 
-const instance=(
+const instance = (
   <div>
-    <CheckPicker
-      data={data}
-      defaultValue={['Julius']}
-      disabled
-    />
+    <CheckPicker data={data} defaultValue={['Julius']} disabled />
     <hr />
     <p>禁用选项</p>
     <CheckPicker
@@ -22,7 +19,8 @@ const instance=(
       disabledItemValues={['Eugenia', 'Travon', 'Vincenza']}
     />
   </div>
-)
+);
 ReactDOM.render(instance);
 ```
+
 <!--end-code-->

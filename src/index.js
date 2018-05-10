@@ -21,35 +21,37 @@ import ready from './ready';
 import { setTitle, defateTilte } from './title';
 import menu from './fixtures/menu';
 
-const routes = menu.map(item => {
-  const children = [];
-  item.children.forEach(child => {
-    if (!child.group && !child.target) {
-      children.push(
-        <Route
-          key={child.id}
-          path={child.id}
-          component={require(`./${item.id}/${child.id}`)}
-          onEnter={() => {
-            setTitle(`${child.title || ''} ${child.name} - ${item.name}`);
-          }}
-        />
-      );
-    }
-  });
+function createRouters(localePath = '') {
+  return menu.map(item => {
+    const children = [];
+    item.children.forEach(child => {
+      if (!child.group && !child.target) {
+        children.push(
+          <Route
+            key={child.id}
+            path={child.id}
+            component={require(`./${item.id}/${child.id}${localePath}`)}
+            onEnter={() => {
+              setTitle(`${child.title || ''} ${child.name} - ${item.name}`);
+            }}
+          />
+        );
+      }
+    });
 
-  return (
-    <Route key={item.id} path={item.id} component={Frame}>
-      {children}
-    </Route>
-  );
-});
+    return (
+      <Route key={item.id} path={item.id} component={Frame}>
+        {children}
+      </Route>
+    );
+  });
+}
 
 const AppWithRouter = () => (
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Home} onEnter={defateTilte} />
-      {routes}
+      {createRouters()}
     </Route>
   </Router>
 );

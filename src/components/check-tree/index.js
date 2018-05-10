@@ -1,23 +1,15 @@
 import React from 'react';
-import ComponentExample from '../ComponentExample';
 import { CheckTree, Toggle, Icon } from '../../rsuiteSource';
 import data from '../../resources/data/city';
+import createComponentExample from '../createComponentExample';
 
-const context = require('./index.md');
-const examples = [require('./basic.md'), require('./cascade.md'), require('./custom.md')];
-
-export default () => {
-  return (
-    <ComponentExample
-      id="CheckTree"
-      context={context}
-      examples={examples}
-      dependencies={{
-        CheckTree,
-        Toggle,
-        Icon,
-        data
-      }}
-    />
-  );
-};
+export default createComponentExample({
+  id: 'CheckTree',
+  examples: ['basic', 'cascade', 'custom'],
+  dependencies: {
+    CheckTree,
+    Toggle,
+    Icon,
+    data
+  }
+});
