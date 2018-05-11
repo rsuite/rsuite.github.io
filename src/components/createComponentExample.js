@@ -28,7 +28,8 @@ const CustomCodeView = ({ dependencies, ...rest }) => (
 );
 
 const createComponentExample = ({ id, examples = [], dependencies }) => {
-  const componentPath = `${_.kebabCase(id)}/${LOCALE_ENV}/`;
+  const name = _.kebabCase(id);
+  const componentPath = LOCALE_ENV === 'en' ? `${name}/en/` : `${name}/`;
   const context = require(`./${componentPath}index.md`);
   const componentExamples = examples.map(item => require(`./${componentPath}${item}.md`));
 
@@ -88,7 +89,7 @@ const createComponentExample = ({ id, examples = [], dependencies }) => {
       );
     }
     render() {
-      const { tabExamples = [], children, ...rest } = this.props;
+      const { tabExamples = [], children } = this.props;
 
       const { designHash, routerId } = this.state;
       const docs = context.split('<!--{demo}-->');
@@ -97,7 +98,6 @@ const createComponentExample = ({ id, examples = [], dependencies }) => {
 
       return (
         <PageContainer
-          {...rest}
           designHash={designHash}
           routerId={routerId ? `components/${routerId}` : null}
         >
@@ -114,9 +114,7 @@ const createComponentExample = ({ id, examples = [], dependencies }) => {
     }
   }
 
-  return props => {
-    return <ComponentExample {...props} />;
-  };
+  return ComponentExample;
 };
 
 export default createComponentExample;
