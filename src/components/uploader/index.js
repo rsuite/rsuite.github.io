@@ -1,26 +1,12 @@
 import React from 'react';
-import ComponentExample from '../ComponentExample';
+import createComponentExample from '../createComponentExample';
 import { Uploader, Icon } from '../../rsuiteSource';
 
-const context = require('./index.md');
-const examples = [
-  require('./basic.md'),
-  require('./picture.md'),
-  require('./picture-text.md'),
-  require('./file-list.md'),
-  require('./disabled.md')
-];
-
-export default () => {
-  return (
-    <ComponentExample
-      id="Uploader"
-      context={context}
-      examples={examples}
-      dependencies={{
-        Icon,
-        Uploader
-      }}
-    />
-  );
-};
+export default createComponentExample({
+  id: 'Uploader',
+  examples: ['basic', 'picture', 'picture-text', 'file-list', 'disabled'],
+  dependencies: {
+    Icon,
+    Uploader
+  }
+});
