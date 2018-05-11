@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { Sidebar, Nav, Icon, FormControl } from '../rsuiteSource';
 import { Link } from 'react-router';
 import _ from 'lodash';
-
 import menu from './menu';
+import LOCALE_ENV from '../LOCALE_ENV';
 
 function filterNodesOfTree(data, check) {
   const findNodes = (nodes = []) => {
@@ -73,17 +73,21 @@ class DocSidebar extends React.Component {
             return;
           }
 
+          const title =
+            LOCALE_ENV === 'en' ? null : <span className="title-zh">{child.title}</span>;
+
           if (child.target === '_blank' && child.url) {
             nodeItems.push(
               <Nav.Item key={child.id} href={child.url} target="_blank">
-                {child.name} <span className="title-zh">{child.title}</span>
+                {child.name} {title}
                 <Icon icon="external-link" className="external-link" />
               </Nav.Item>
             );
           } else {
             nodeItems.push(
               <Nav.Item key={child.id} componentClass={Link} to={pathname} active={active}>
-                {child.name} <span className="title-zh">{child.title}</span>
+                {child.name}
+                {title}
               </Nav.Item>
             );
           }

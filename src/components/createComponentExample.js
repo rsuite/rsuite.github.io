@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import { Col, Nav, Navbar, Divider, Icon } from '../rsuiteSource';
+import { Col, Nav, Navbar, Divider, Icon, ButtonGroup, Button } from '../rsuiteSource';
 
 import * as rsuite from '../rsuiteSource';
 import PageContainer from '../fixtures/PageContainer';
@@ -9,11 +9,14 @@ import MarkdownView from '../fixtures/MarkdownView';
 import CodeView from '../fixtures/CodeView';
 import components from '../fixtures/components';
 import LOCALE_ENV from '../LOCALE_ENV';
+import { getDict } from '../locales';
 
 const babelOptions = {
   presets: ['env', 'stage-0', 'react'],
   plugins: ['transform-class-properties']
 };
+
+const dist = getDict();
 
 const CustomCodeView = ({ dependencies, ...rest }) => (
   <CodeView
@@ -24,7 +27,7 @@ const CustomCodeView = ({ dependencies, ...rest }) => (
   />
 );
 
-const createComponentExample = ({ id, examples, dependencies }) => {
+const createComponentExample = ({ id, examples = [], dependencies }) => {
   const componentPath = `${_.kebabCase(id)}/${LOCALE_ENV}/`;
   const context = require(`./${componentPath}index.md`);
   const componentExamples = examples.map(item => require(`./${componentPath}${item}.md`));
@@ -66,21 +69,21 @@ const createComponentExample = ({ id, examples, dependencies }) => {
       }
       return (
         <div>
-          <h3>高级功能</h3>
-          <Navbar>
-            <Nav
-              activeKey={tabIndex}
-              onSelect={tabIndex => {
-                this.setState({ tabIndex });
-              }}
-            >
-              {tabExamples.map((item, index) => (
-                <Nav.Item key={index} eventKey={index}>
-                  {item.title}
-                </Nav.Item>
-              ))}
-            </Nav>
-          </Navbar>
+          <h3>{dist.common.advanced} </h3>
+
+          <ButtonGroup size="sm">
+            {tabExamples.map((item, index) => (
+              <Button
+                key={index}
+                appearance={index === tabIndex ? 'primary' : 'default'}
+                onClick={() => {
+                  this.setState({ tabIndex: index });
+                }}
+              >
+                {item.title}
+              </Button>
+            ))}
+          </ButtonGroup>
         </div>
       );
     }
@@ -111,8 +114,8 @@ const createComponentExample = ({ id, examples, dependencies }) => {
     }
   }
 
-  return () => {
-    return <ComponentExample />;
+  return props => {
+    return <ComponentExample {...props} />;
   };
 };
 

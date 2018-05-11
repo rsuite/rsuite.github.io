@@ -1,4 +1,4 @@
-# Buttons Button
+# Button
 
 Commonly used operating buttons, button combinations, button layouts.
 
@@ -36,7 +36,8 @@ import { Button, IconButton, ButtonGroup, ButtonToolbar } from 'rsuite';
 
 ### `<IconButton>`
 
-IconButton 继承所有 Button 的属性
+
+`Iconbutton` extends all props of `Button`
 
 | Property    | Type `(Default)`                 | Description            |
 | ----------- | -------------------------------- | ---------------------- |

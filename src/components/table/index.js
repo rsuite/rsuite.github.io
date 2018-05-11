@@ -1,5 +1,4 @@
 import React from 'react';
-import ComponentExample from '../ComponentExample';
 import {
   Table,
   Toggle,
@@ -15,86 +14,54 @@ import {
 import fakeData from './data/users';
 import fakeTreeData from './data/treeData';
 import fakeDataForColSpan from './data/usersForColSpan';
+import createComponentExample from '../createComponentExample';
+import LOCALE_ENV from '../../LOCALE_ENV';
+import { getDict } from '../../locales';
 
 const { HeaderCell, Pagination, Cell, Column } = Table;
 const TablePagination = Pagination;
+const localePath = LOCALE_ENV === 'en' ? 'en/' : '';
 
-const context = require('./index.md');
-const examples = [require('./default.md')];
+const dict = getDict();
+
 const tabExamples = [
-  {
-    title: '可调整列宽',
-    sorce: require('./resizable.md')
-  },
-  {
-    title: '流体列宽',
-    sorce: require('./fluid-column.md')
-  },
-  {
-    title: '自动换行',
-    sorce: require('./word-wrap.md')
-  },
-  {
-    title: '自定义列',
-    sorce: require('./custom-cell.md')
-  },
-  {
-    title: '排序',
-    sorce: require('./sort.md')
-  },
-  {
-    title: '分页',
-    sorce: require('./pagination.md')
-  },
-  {
-    title: '树形展示',
-    sorce: require('./tree.md')
-  },
-  {
-    title: '可展开',
-    sorce: require('./expanded.md')
-  },
+  'resizable',
+  'fluid-column',
+  'word-wrap',
+  'custom-cell',
+  'sort',
+  'pagination',
+  'tree',
+  'expanded',
+  'edit',
+  'loading',
+  'colspan'
+].map(item => ({
+  title: dict.table[`tab.${item}`],
+  sorce: require(`./${localePath}${item}.md`)
+}));
 
-  {
-    title: '可编辑',
-    sorce: require('./edit.md')
-  },
-  {
-    title: '加载中',
-    sorce: require('./loading.md')
-  },
-
-  {
-    title: '合并单元格',
-    sorce: require('./colspan.md')
+const ComponentExample = createComponentExample({
+  id: 'Table',
+  examples: ['default'],
+  dependencies: {
+    Checkbox,
+    Toggle,
+    fakeData,
+    fakeTreeData,
+    fakeDataForColSpan,
+    TablePagination,
+    Popover,
+    Whisper,
+    Icon,
+    Divider,
+    IconButton,
+    Table,
+    Button,
+    HeaderCell,
+    Cell,
+    Column
   }
-];
+});
 
-export default () => {
-  return (
-    <ComponentExample
-      id="Table"
-      dependencies={{
-        Checkbox,
-        Toggle,
-        fakeData,
-        fakeTreeData,
-        fakeDataForColSpan,
-        TablePagination,
-        Popover,
-        Whisper,
-        Icon,
-        Divider,
-        IconButton,
-        Table,
-        Button,
-        HeaderCell,
-        Cell,
-        Column
-      }}
-      context={context}
-      examples={examples}
-      tabExamples={tabExamples}
-    />
-  );
-};
+export default () => <ComponentExample tabExamples={tabExamples} />;

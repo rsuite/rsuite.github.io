@@ -1,29 +1,14 @@
 import React from 'react';
-import ComponentExample from '../ComponentExample';
 import { TreePicker, Icon } from '../../rsuiteSource';
 import data from '../../resources/data/city';
+import createComponentExample from '../createComponentExample';
 
-const context = require('./index.md');
-const examples = [
-  require('./basic.md'),
-  require('./placement.md'),
-  require('./disabled.md'),
-  require('./searchable.md'),
-  require('./custom.md'),
-  require('./async.md')
-];
-
-export default () => {
-  return (
-    <ComponentExample
-      id="TreePicker"
-      context={context}
-      examples={examples}
-      dependencies={{
-        TreePicker,
-        Icon,
-        data
-      }}
-    />
-  );
-};
+export default createComponentExample({
+  id: 'TreePicker',
+  examples: ['basic', 'placement', 'disabled', 'searchable', 'custom', 'async'],
+  dependencies: {
+    TreePicker,
+    Icon,
+    data
+  }
+});

@@ -1,6 +1,6 @@
 import React from 'react';
-import createComponentExample from '../createComponentExample';
 import { Uploader, Icon } from '../../rsuiteSource';
+import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
   id: 'Uploader',
