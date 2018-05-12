@@ -18,7 +18,7 @@ import { AutoComplete } from 'rsuite';
 
 | Property     | Type`(Default)`                                    | Description                                                                      |
 | ------------ | -------------------------------------------------- | -------------------------------------------------------------------------------- |
-| classPrefix  | string `('auto-complete')`                         | prefix of className                                                              |
+| classPrefix  | string `('auto-complete')`                         | The prefix for component CSS class                                                              |
 | data \*      | Array&lt;[DataItemType](#DataItemType)&gt;         | data of component                                                                |
 | disabled     | boolean                                            | whether disabled select                                                          |
 | value        | DataItemType.value                                 | selected option                                                                  |

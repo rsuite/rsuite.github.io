@@ -23,7 +23,7 @@ import { Dropdown } from 'rsuite';
 | 属性名称        | 类型 `(默认值)`                                           | 描述                                             |
 | --------------- | --------------------------------------------------------- | ------------------------------------------------ |
 | activeKey       | any                                                       | 激活状态的选项，对应 Dropdown.Item 中的 eventKey |
-| classPrefix     | string `('dropdown')`                                     | className 前缀                                   |
+| classPrefix     | string `('dropdown')`                                     | 组件 CSS 类的前缀                                   |
 | disabled        | boolean                                                   | 禁用组件                                         |
 | dropup          | boolean                                                   | 菜单向上弹出                                     |
 | menuStyle       | Object                                                    | 菜单样式                                         |

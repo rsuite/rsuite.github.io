@@ -21,7 +21,7 @@ import { Loader } from 'rsuite';
 | 属性名称    | 类型 `(默认值)`                         | 描述             |
 | ----------- | --------------------------------------- | ---------------- |
 | backdrop    | boolean                                 | 显示背景         |
-| classPrefix | string                                  | className 前缀   |
+| classPrefix | string                                  | 组件 CSS 类的前缀   |
 | size        | enum: 'lg', 'md', 'sm', 'xs'`('md')`    | 设置加载器尺寸   |
 | center      | boolean                                 | 在容器中居中显示 |
 | content     | React.Node                              | 自定义描述文本   |

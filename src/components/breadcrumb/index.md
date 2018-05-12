@@ -22,7 +22,7 @@ import { Breadcrumb } from 'rsuite';
 | 属性名称    | 类型 `(默认值)`                                        | 描述           |
 | ----------- | ------------------------------------------------------ | -------------- |
 | separator   | React.Node `(<i className="icon icon-angle-right" />)` | 分隔符         |
-| classPrefix | string `('breadcrumb')`                                | className 前缀 |
+| classPrefix | string `('breadcrumb')`                                | 组件 CSS 类的前缀 |
 
 ### `<Breadcrumb.Item>`
 

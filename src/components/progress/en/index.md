@@ -21,7 +21,7 @@ import { Progress } from 'rsuite';
 
 | Property    | Type `(Default)`                  | Description             |
 | ----------- | --------------------------------- | ----------------------- |
-| classPrefix | string `('progress')`             | The prefix of className |
+| classPrefix | string `('progress')`             | The prefix for component CSS class |
 | percent     | number `(0)`                      | Percent of progress     |
 | strokeWidth | number                            | Line width              |
 | strokeColor | string                            | Line Color              |
@@ -34,7 +34,7 @@ import { Progress } from 'rsuite';
 
 | Property      | Type `(Default)`                                 | Description                              |
 | ------------- | ------------------------------------------------ | ---------------------------------------- |
-| classPrefix   | string `('progress')`                            | The prefix of className                  |
+| classPrefix   | string `('progress')`                            | The prefix for component CSS class                  |
 | percent       | number `(0)`                                     | Percent of progress                      |
 | strokeWidth   | number `(6)`                                     | Line width                               |
 | strokeColor   | string                                           | Line Color                               |

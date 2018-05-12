@@ -24,7 +24,7 @@ import { Panel, PanelGroup } from 'rsuite';
 | bordered        | boolean            | 显示线框           |
 | bodyFill        | boolean            | 内容区域撑满容器   |
 | collapsible     | boolean            | 可折叠的           |
-| classPrefix     | string `('panel')` | className 前缀     |
+| classPrefix     | string `('panel')` | 组件 CSS 类的前缀     |
 | defaultExpanded | boolean            | 默认展开           |
 | expanded        | boolean            | 展开面板           |
 | eventKey        | any                | 面板对应的事件 key |
@@ -36,7 +36,7 @@ import { Panel, PanelGroup } from 'rsuite';
 | 属性名称         | 类型`(默认值)`                                 | 描述                                     |
 | ---------------- | ---------------------------------------------- | ---------------------------------------- |
 | accordion        | boolean                                        | 可折叠的面板                             |
-| classPrefix      | string                                         | className 前缀                           |
+| classPrefix      | string                                         | 组件 CSS 类的前缀                           |
 | activeKey        | any                                            | 展开的面板，对应 `<Panel>` 的 `eventKey` |
 | defaultActiveKey | any                                            | 默认展开面板                             |
 | onSelect         | (eventKey: any, event: SyntheticEvent) => void | 切换展开面板的回调函数                   |

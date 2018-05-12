@@ -16,7 +16,7 @@ import { InputNumber } from 'rsuite';
 
 | 属性名称     | 类型 `(默认值)`                                                    | 描述                         |
 | ------------ | ------------------------------------------------------------------ | ---------------------------- |
-| classPrefix  | string `('input-number')`                                          | class 前缀                   |
+| classPrefix  | string `('input-number')`                                          | 组件 CSS 类的前缀                   |
 | min          | number `(-Infinity)`                                               | 最小值                       |
 | max          | number `(Infinity)`                                                | 最大值                       |
 | step         | number `(1)`                                                       | 每次改变步数，可以为小数     |

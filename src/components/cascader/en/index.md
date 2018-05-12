@@ -20,7 +20,7 @@ import { Cascader } from 'rsuite';
 
 | Property           | Type`(Default)`                                              | Description                                             |
 | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------- |
-| classPrefix        | string `('picker-cascader')`                                 | prefix of className                                     |
+| classPrefix        | string `('picker-cascader')`                                 | The prefix for component CSS class                                     |
 | data \*            | Array&lt;[DataItemType](#DataItemType)&gt;                   | compoent data                                           |
 | disabled           | boolean                                                      | disabled compnent                                       |
 | disabledItemValues | Array&lt;DataItemType.value&gt;                              | disabled items                                          |

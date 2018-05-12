@@ -1,17 +1,17 @@
-# Popover 弹出框
+# Popover
 
-鼠标点击/移入的时候，弹出的弹出框，用于显示更多内容。
+When the mouse clicks/moves in, the pop-up pop-up box is used to display more content.
 
-* `<Popover>` 弹出框。
-* `<Whisper>` 监听触发器，包裹被监听对象的外面，触发事件后通知到 `<Popover>` 展示出来。
+* `<Popover>` Pop-up box.
+* `<Whisper>` Monitor triggers, wrap the outside of the listener object, and notify the `Tooltip` when the event is triggered.
 
-## 获取组件
+## Usage
 
 ```js
 import { Popover, Whisper } from 'rsuite';
 ```
 
-## 演示
+## Examples
 
 <!--{demo}-->
 
@@ -19,11 +19,11 @@ import { Popover, Whisper } from 'rsuite';
 
 ### `<Popover>`
 
-| 属性名称    | 类型                 | 描述           |
-| ----------- | -------------------- | -------------- |
-| classPrefix | string `('popover')` | 组件 CSS 类的前缀 |
-| children \* | React.Node           | 组件的内容     |
-| title       | React.Node           | 标题           |
+| Property    | Type `(Default)`     | Description                         |
+| ----------- | -------------------- | ----------------------------------- |
+| classPrefix | string `('popover')` | The prefix for component CSS class. |
+| children \* | React.Node           | The content of the component.       |
+| title       | React.Node           | The title of the component.         |
 
 ### `<Whisper>`
 

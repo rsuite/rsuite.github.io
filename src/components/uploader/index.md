@@ -21,7 +21,7 @@ import { Uploader } from 'rsuite';
 | action \*         | string                                                                     | 文件上传地址, 必选                                                            |
 | accept            | string                                                                     | 接受上传的文件类型                                                            |
 | autoUpload        | boolean `(true)`                                                           | 选择文件后自动上传                                                            |
-| classPrefix       | string `('uploader')`                                                      | className 前缀                                                                |
+| classPrefix       | string `('uploader')`                                                      | 组件 CSS 类的前缀                                                                |
 | fileList          | Array<FileType>                                                            | 已经上传的文件列表 （受控）                                                   |
 | defaultFileList   | Array<FileType>                                                            | 已经上传的文件列表                                                            |
 | data              | Object                                                                     | 上传所带的参数                                                                |

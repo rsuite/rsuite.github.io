@@ -27,7 +27,7 @@ import { Message } from 'rsuite';
 | description | React.Node                                             | 消息描述信息         |
 | showIcon    | boolean                                                | 显示图标             |
 | full        | boolean                                                | 撑满容器             |
-| classPrefix | string                                                 | className 前缀       |
+| classPrefix | string                                                 | 组件 CSS 类的前缀       |
 
 ## 相关组件
 

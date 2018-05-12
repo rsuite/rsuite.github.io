@@ -23,6 +23,6 @@ import { Toggle } from 'rsuite';
 | disabled          | boolean                | Disabled                             |
 | checkedChildren   | node                   | Checked display content              |
 | unCheckedChildren | node                   | Unselected display content           |
-| classPrefix       | string `'toggle'`      | Prefix of className                  |
+| classPrefix       | string `'toggle'`      | The prefix for component CSS class                  |
 | size              | enum: 'lg', 'md', 'sm' | Toggle size                          |
 | onChange          | function               | Callback function when state changes |

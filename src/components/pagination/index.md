@@ -30,4 +30,4 @@ import { Pagination } from 'rsuite';
 | ellipsis             | boolean                          | 显示省略符                  |
 | boundaryLinks        | boolean                          | 显示边界分页按钮 1 和 pages |
 | buttonComponentClass | React.ElementType `(SafeAnchor)` | 为组件自定义元素类型        |
-| classPrefix          | string `('pagination')`          | className 前缀              |
+| classPrefix          | string `('pagination')`          | 组件 CSS 类的前缀              |

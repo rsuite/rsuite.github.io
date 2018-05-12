@@ -24,7 +24,7 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 
 | Property         | Type `(default)`                                        | Description                                                                  |
 | ---------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| classPrefix      | string `('form')`                                       | prefix of className                                                          |
+| classPrefix      | string `('form')`                                       | The prefix for component CSS class                                                          |
 | layout           | enum: 'horizontal', 'vertical', 'inline' `('vertical')` | Set the left and right columns of the layout of the elements within the form |
 | formValue        | object                                                  | (Controlled) value of form                                                   |
 | formDefaultValue | object                                                  | (Uncontrolled) default value of form                                         |
@@ -47,7 +47,7 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 
 | Property       | Type`(default)`                  | Description                                                                      |
 | -------------- | -------------------------------- | -------------------------------------------------------------------------------- |
-| classPrefix    | string `('form-control')`        | prefix of className                                                              |
+| classPrefix    | string `('form-control')`        | The prefix for component CSS class                                                              |
 | name \*        | string                           | name of form-control                                                             |
 | accepter       | React.ElementType `(Input)`      | proxied components                                                               |
 | checkTrigger   | enum: 'change','blur','none'     | The data validation trigger type, and it wiill overrides the setting on `<Form>` |
@@ -58,14 +58,14 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 
 | Property    | Type`(default)`         | Description                      |
 | ----------- | ----------------------- | -------------------------------- |
-| classPrefix | string `('form-group')` | prefix of className              |
+| classPrefix | string `('form-group')` | The prefix for component CSS class              |
 | controlId   | string                  | sets id for controlled component |
 
 ### `<ControlLabel>`
 
 | Property    | Type`(default)`            | Description                                                                 |
 | ----------- | -------------------------- | --------------------------------------------------------------------------- |
-| classPrefix | string `('control-label')` | prefix os className                                                         |
+| classPrefix | string `('control-label')` | The prefix for component CSS class                                                         |
 | htmlFor     | string                     | attribute of the html label tag, defaults to the controlId of the FormGroup |
 | srOnly      | boolean                    | screen reader only                                                          |
 
@@ -73,7 +73,7 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 
 | Property    | Type`(default)`         | Description                                                                 |
 | ----------- | ----------------------- | --------------------------------------------------------------------------- |
-| classPrefix | string `('help-block')` | prefix of className                                                         |
+| classPrefix | string `('help-block')` | The prefix for component CSS class                                                         |
 | htmlFor     | string                  | attribute of the html label tag, defaults to the controlId of the FormGroup |
 | tooltip     | boolean                 | Whether to show through the Tooltip component                               |
 

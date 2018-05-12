@@ -21,7 +21,7 @@ import { FlexboxGird } from 'rsuite';
 
 | Property    | Type`(default)`                                                              | Description            |
 | ----------- | ---------------------------------------------------------------------------- | ---------------------- |
-| classPrefix | string `('flex-box-gird')`                                                   | prefix of className    |
+| classPrefix | string `('flex-box-gird')`                                                   | The prefix for component CSS class    |
 | align       | enum: 'top' , 'middle' , 'bottom' `('top')`                                  | align                  |
 | justify     | enum : 'start', 'end', 'center', 'space-around', 'space-between' `('start')` | horizontal arrangement |
 
@@ -29,6 +29,6 @@ import { FlexboxGird } from 'rsuite';
 
 | Property    | Type`(default)`                 | Description             |
 | ----------- | ------------------------------- | ----------------------- |
-| classPrefix | string `('flex-box-gird-item')` | prefix of className     |
+| classPrefix | string `('flex-box-gird-item')` | The prefix for component CSS class     |
 | colspan     | number `(0)`                    | spacing between grids   |
 | order       | number `(0)`                    | grid orders for sorting |

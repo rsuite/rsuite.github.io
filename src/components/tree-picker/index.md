@@ -18,7 +18,7 @@ import { TreePicker } from 'rsuite';
 
 | 属性名称          | 类型 `(默认值)`                                               | 描述                            |
 | ----------------- | ------------------------------------------------------------- | ------------------------------- |
-| classPrefix       | string`('picker-tree')`                                       | class 前缀                      |
+| classPrefix       | string`('picker-tree')`                                       | 组件 CSS 类的前缀                      |
 | value             | DataItemType.value                                            | 当前选中的值                    |
 | defaultValue      | DataItemType.value                                            | 默认选中的值                    |
 | data \*           | Array&lt;[DataItemType](#DataItemType)&gt;                    | tree 数据                       |
