@@ -1,27 +1,13 @@
 import React from 'react';
-import ComponentExample from '../ComponentExample';
 import { Notification, Button, ButtonToolbar } from '../../rsuiteSource';
+import createComponentExample from '../createComponentExample';
 
-const context = require('./index.md');
-const examples = [
-  require('./basic.md'),
-  require('./status.md'),
-  require('./placement.md'),
-  require('./custom.md'),
-  require('./duration.md')
-];
-
-export default () => {
-  return (
-    <ComponentExample
-      id="Notification"
-      context={context}
-      dependencies={{
-        ButtonToolbar,
-        Button,
-        Notification
-      }}
-      examples={examples}
-    />
-  );
-};
+export default createComponentExample({
+  id: 'Notification',
+  examples: ['basic', 'status', 'placement', 'custom', 'duration'],
+  dependencies: {
+    ButtonToolbar,
+    Button,
+    Notification
+  }
+});

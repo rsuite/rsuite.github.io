@@ -18,6 +18,6 @@ import { Divider } from 'rsuite';
 
 | Property    | Type`(default)`      | Description                   |
 | ----------- | -------------------- | ----------------------------- |
-| classPrefix | string `('divider')` | The prefix for component CSS class           |
+| classPrefix | string `('divider')` | The prefix of the component CSS class           |
 | vertical    | boolean              | vertical dividing line        |
 | children    | React.Node           | set text in the dividing line |

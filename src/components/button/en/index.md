@@ -30,7 +30,7 @@ import { Button, IconButton, ButtonGroup, ButtonToolbar } from 'rsuite';
 | size           | enum: 'lg', 'md', 'sm', 'xs' `('md')`                                    | set button size                                 |
 | appearance     | enum: 'default', 'primary', 'link', 'subtle', 'ghost'<br/> `('default')` | set button appearence                           |
 | color          | enum: 'red', 'orange','yellow', 'green', <br/>'cyan', 'blue', 'violet'   | set button color                                |
-| classPrefix    | string `('btn')`                                                         | The prefix for component CSS class              |
+| classPrefix    | string `('btn')`                                                         | The prefix of the component CSS class              |
 | componentClass | React.ElementType `('button')`                                           | you can use a custom element for this component |
 | href           | string                                                                   | redirect url of link button                     |
 
@@ -44,7 +44,7 @@ import { Button, IconButton, ButtonGroup, ButtonToolbar } from 'rsuite';
 | circle      | boolean                          | set circle button                  |
 | icon        | React.Element&lt;typeof Icon&gt; | set the icon of button             |
 | placement   | enum: 'left', 'right' `('left')` | placement of icon                  |
-| classPrefix | string `('btn-icon')`            | The prefix for component CSS class |
+| classPrefix | string `('btn-icon')`            | The prefix of the component CSS class |
 
 ### `<ButtonGroup>`
 
@@ -54,4 +54,4 @@ import { Button, IconButton, ButtonGroup, ButtonToolbar } from 'rsuite';
 | justified   | boolean                      | horizontal constant width layout   |
 | vertical    | boolean                      | vertical layouts of button         |
 | size        | enum: `lg`, `md`, `sm`, `xs` | set button size                    |
-| classPrefix | string `('btn-group')`       | The prefix for component CSS class |
+| classPrefix | string `('btn-group')`       | The prefix of the component CSS class |

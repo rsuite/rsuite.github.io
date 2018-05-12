@@ -24,7 +24,7 @@ import { Tooltip, Whisper } from 'rsuite';
 | --------------- | -------------------- | ---------------------------------------- |
 | positionLeft    | number               | Relative 'left' position offset          |
 | positionTop     | number               | Relative 'top' position offset           |
-| classPrefix     | string `('tooltip')` | The prefix for component CSS class                  |
+| classPrefix     | string `('tooltip')` | The prefix of the component CSS class                  |
 | arrowOffsetLeft | number or string     | Arrow relative to 'left' position offset |
 | arrowOffsetTop  | number or string     | Arrow relative to 'top' position offset  |
 | children \*     | React.Node           | The content of the component.            |

@@ -18,7 +18,7 @@ import { Tree } from 'rsuite';
 
 | Property         | Type `(Default)`                                     | Description                                 |
 | ---------------- | ---------------------------------------------------- | ------------------------------------------- |
-| classPrefix      | string`('picker-tree')`                              | The prefix for component CSS class                         |
+| classPrefix      | string`('picker-tree')`                              | The prefix of the component CSS class                         |
 | value            | Array&lt;DataItemType.value&gt;                      | Selected value                              |
 |                  |
 | defaultValue     | Array&lt;DataItemType.value&gt;                      | Default selected Value                      |

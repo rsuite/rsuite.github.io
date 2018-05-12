@@ -20,7 +20,7 @@ import { CheckPicker } from 'rsuite';
 
 | Property           | Type`(Default)`                                              | Description                                             |
 | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------- |
-| classPrefix        | string `('picker-select')`                                   | The prefix for component CSS class                                     |
+| classPrefix        | string `('picker-select')`                                   | The prefix of the component CSS class                                     |
 | data \*            | Array&lt;DataItemType&gt;                                    | componetn data                                          |
 | disabled           | boolean                                                      | whether disabled componet                               |
 | disabledItemValues | Array&lt;DataItemType.value&gt;                              | values of disabledItems                                 |

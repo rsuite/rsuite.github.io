@@ -1,6 +1,6 @@
-### 触发事件
+### Triggering events
 
-有三种事件可以触发提示 `Popover` 的信息: `click`、`focus`、`hover`
+There are three kinds of events that can trigger the message `Popover`: `click`、`focus`、`hover`
 
 <!--start-code-->
 
@@ -30,4 +30,4 @@ ReactDOM.render(instance);
 
 <!--end-code-->
 
-> 注意: [Safari ignoring tabindex](https://stackoverflow.com/questions/1848390/safari-ignoring-tabindex)
+> Note: [Safari ignoring tabindex](https://stackoverflow.com/questions/1848390/safari-ignoring-tabindex)

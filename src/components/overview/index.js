@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router';
 import _ from 'lodash';
-import ComponentExample from '../ComponentExample';
 import menu from '../../fixtures/menu';
+import createComponentExample from '../createComponentExample';
 
+const ComponentExample = createComponentExample({ id: 'overview' });
 const context = require('./index.md');
 const examples = [];
 const components = _.get(menu, '1.children').filter(item => item.id !== 'overview');
@@ -11,7 +12,7 @@ const components = _.get(menu, '1.children').filter(item => item.id !== 'overvie
 export default () => {
   return (
     <div>
-      <ComponentExample context={context} examples={examples} />
+      <ComponentExample />
       <div className="component-overview">
         <ul>
           {components.map(item => {
