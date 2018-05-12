@@ -45,7 +45,7 @@ import { TreePicker } from 'rsuite';
 | renderValue       | (activeNode:DataItemType, placeholder:React.Node)=>React.Node | Custom Render Placeholder                   |
 | renderExtraFooter | ()=>React.Node                                                | Customizing footer Content                  |
 | placement         | enum: [Placement](#Placement)`('bottomLeft')`                 | Expand placement                            |
-| menuClassName     | string                                                        | className of Menu                           |
+| menuClassName     | string                                                        | A css class to apply to the Menu DOM node  |
 
 ## Types
 

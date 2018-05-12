@@ -25,9 +25,9 @@ import { Slider } from 'rsuite';
 | step            | number`(1)`                  | Slide the value of one step                   |
 | value           | number                       | Value (Controlled)                            |
 | defaultValue    | number                       | Default value                                 |
-| handleClassName | string                       | Custom Handle className                       |
+| handleClassName | string                       | A css class to apply to the Handle node.      |
 | handleTitle     | React.Node                   | Customizing what is displayed inside a handle |
-| barClassName    | string                       | Custom Bar className                          |
+| barClassName    | string                       | A css class to apply to the Bar DOM node.     |
 | disabled        | boolean                      | The disabled of component                     |
 | graduated       | boolean                      | Show Ticks                                    |
 | tooltip         | boolean`(true)`              | Whether to show `Tooltip` when sliding        |

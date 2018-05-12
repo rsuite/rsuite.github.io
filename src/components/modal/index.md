@@ -27,10 +27,10 @@ import { Modal } from 'rsuite';
 | -------------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------- |
 | autoFocus            | boolean `(true)`                    | 当设置为 true, Modal 被打开是自动焦点移到其自身,辅助屏幕阅读器容易访问                               |
 | backdrop             | unions: boolean, 'static'           | 当设置为 true，Modal 打开时会显示背景，点击背景会关闭 Modal，如果不想关闭 Modal，可以设置为 'static' |
-| backdropClassName    | string                              | 为背景设置一个自定义 className                                                                       |
+| backdropClassName    | string                              | 应用于 backdrop DOM 节点的 css class                                                                 |
 | classPrefix          | string `('modal')`                  | className 前缀                                                                                       |
-| dialogComponentClass | React.ElementType `(ModalDialog)`   | 自定义 Dialog 组件                                                                                   |
-| dialogClassName      | string                              | Dialog className                                                                                     |
+| dialogComponentClass | React.ElementType `(ModalDialog)`   | 以对 Dialog 使用自定义元素类型                                                                     |
+| dialogClassName      | string                              | 应用于 Dialog DOM 节点的 css class                                                                   |
 | enforceFocus         | boolean `(true)`                    | 当设置为 true, Modal 将防止焦点在打开时离开,辅助屏幕阅读器容易访问                                   |
 | full                 | boolean                             | 撑满全屏                                                                                             |
 | keyboard             | boolean `(true)`                    | 按下 esc 键时关闭 Modal                                                                              |
@@ -48,10 +48,10 @@ import { Modal } from 'rsuite';
 
 ### `<Modal.Header>`
 
-| 属性名称    | 类型 `(默认值 )`                    | 描述                        |
-| ----------- | ----------------------------------- | --------------------------- |
-| classPrefix | string `('modal-header')`           | className 前缀              |
-| closeButton | boolean `(true)`                    | 当设置为 true, 显示关闭按钮 |
+| 属性名称    | 类型 `(默认值 )`                           | 描述                        |
+| ----------- | ------------------------------------------ | --------------------------- |
+| classPrefix | string `('modal-header')`                  | className 前缀              |
+| closeButton | boolean `(true)`                           | 当设置为 true, 显示关闭按钮 |
 | onHide      | (event: SyntheticEvent&lt;any&gt;) => void | 点击关闭按钮的回调函数      |
 
 ### `<Modal.Title>`

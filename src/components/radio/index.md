@@ -21,7 +21,6 @@ import { Radio, RadioGroup } from 'rsuite';
 
 | 属性名称       | 类型                                                             | 描述                                   |
 | -------------- | ---------------------------------------------------------------- | -------------------------------------- |
-| id             | React.ElementType                                                | 为组件自定义元素类型                   |
 | name           | string                                                           | 用于表单对应的名称                     |
 | inline         | boolean                                                          | 内联布局                               |
 | title          | string                                                           | HTML title                             |

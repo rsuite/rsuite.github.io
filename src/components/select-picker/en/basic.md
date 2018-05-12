@@ -1,0 +1,15 @@
+### Default
+
+<!--start-code-->
+
+```js
+/**
+ * import data from
+ * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/users.js
+ */
+
+const instance = <SelectPicker data={data} />;
+ReactDOM.render(instance);
+```
+
+<!--end-code-->

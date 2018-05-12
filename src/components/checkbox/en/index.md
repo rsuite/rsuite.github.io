@@ -26,7 +26,7 @@ import { Checkbox, CheckboxGroup } from 'rsuite';
 | inline         | boolean                                                          | inline layout                                                           |
 | title          | string                                                           | HTML title                                                              |
 | disabled       | boolean                                                          | whether disabled                                                        |
-| checked        | boolean                                                          | specifies whether the checkbox is selected                              |
+| checked        | boolean                                                          | Specifies whether the checkbox is selected                              |
 | defaultChecked | boolean                                                          | Specifies the initial state: whether or not the checkbox is selected    |
 | onChange       | (value: any, checked: boolean, event: SyntheticInputEvent)=>void | callback fired when checkbox is triggered and state changes             |
 | inputRef       | React.ElementRef                                                 | ref of input element                                                    |
