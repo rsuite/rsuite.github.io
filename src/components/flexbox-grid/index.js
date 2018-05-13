@@ -1,27 +1,14 @@
 import React from 'react';
-import ComponentExample from '../ComponentExample';
 import { FlexboxGird, Button, Icon, Divider } from '../../rsuiteSource';
+import createComponentExample from '../createComponentExample';
 
-const context = require('./index.md');
-const examples = [
-  require('./basic.md'),
-  require('./justify.md'),
-  require('./align.md'),
-  require('./order.md')
-];
-
-export default () => {
-  return (
-    <ComponentExample
-      id="FlexboxGird"
-      dependencies={{
-        Divider,
-        Icon,
-        Button,
-        FlexboxGird
-      }}
-      context={context}
-      examples={examples}
-    />
-  );
-};
+export default createComponentExample({
+  id: 'FlexboxGrid',
+  examples: ['basic', 'justify', 'align', 'order'],
+  dependencies: {
+    Divider,
+    Icon,
+    Button,
+    FlexboxGrid: FlexboxGird
+  }
+});

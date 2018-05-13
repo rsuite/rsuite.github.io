@@ -27,7 +27,7 @@ import { Slider } from 'rsuite';
 | defaultValue    | number                       | Default value                                 |
 | handleClassName | string                       | A css class to apply to the Handle node.      |
 | handleTitle     | React.Node                   | Customizing what is displayed inside a handle |
-| barClassName    | string                       | A css class to apply to the Bar DOM node.     |
+| barClassName    | string                       | A css class to apply to the Bar DOM node     |
 | disabled        | boolean                      | The disabled of component                     |
 | graduated       | boolean                      | Show Ticks                                    |
 | tooltip         | boolean`(true)`              | Whether to show `Tooltip` when sliding        |

@@ -1,14 +1,14 @@
-# FlexboxGird
+# FlexboxGrid
 
 Grid layout component implemented via CSS Flexbox, providing 24 grids.
 
-* `<FlexboxGird>`
-* `<FlexboxGird.Item>`
+* `<FlexboxGrid>`
+* `<FlexboxGrid.Item>`
 
 ## Usage
 
 ```js
-import { FlexboxGird } from 'rsuite';
+import { FlexboxGrid } from 'rsuite';
 ```
 
 ## Examples
@@ -17,7 +17,7 @@ import { FlexboxGird } from 'rsuite';
 
 ## Props
 
-### `<FlexboxGird>`
+### `<FlexboxGrid>`
 
 | Property    | Type`(default)`                                                              | Description            |
 | ----------- | ---------------------------------------------------------------------------- | ---------------------- |
@@ -25,7 +25,7 @@ import { FlexboxGird } from 'rsuite';
 | align       | enum: 'top' , 'middle' , 'bottom' `('top')`                                  | align                  |
 | justify     | enum : 'start', 'end', 'center', 'space-around', 'space-between' `('start')` | horizontal arrangement |
 
-### `<FlexboxGird.Item>`
+### `<FlexboxGrid.Item>`
 
 | Property    | Type`(default)`                 | Description             |
 | ----------- | ------------------------------- | ----------------------- |

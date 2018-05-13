@@ -4,6 +4,9 @@ import { Row, Col } from '../../rsuiteSource';
 import MarkdownView from '../../fixtures/MarkdownView';
 import PageContainer from '../../fixtures/PageContainer';
 import IconList from './IconList';
+import LOCALE_ENV from '../../LOCALE_ENV';
+
+const localePath = LOCALE_ENV === 'en' ? `${name}/en/` : `${name}/`;
 
 class IconPage extends React.Component {
   constructor() {
@@ -22,13 +25,13 @@ class IconPage extends React.Component {
       <PageContainer>
         <Row>
           <Col md={24}>
-            <MarkdownView>{require('./index.md')}</MarkdownView>
+            <MarkdownView>{require(`.${localePath}index.md`)}</MarkdownView>
           </Col>
         </Row>
         <IconList />
         <Row>
           <Col md={24}>
-            <MarkdownView>{require('./footer.md')}</MarkdownView>
+            <MarkdownView>{require(`.${localePath}footer.md`)}</MarkdownView>
           </Col>
         </Row>
       </PageContainer>

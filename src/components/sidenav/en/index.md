@@ -25,4 +25,4 @@ import { Sidenav } from 'rsuite';
 | -------------- | ------------------------------------ | ----------- | ----------------------------------------------------- |
 | appearance     | enum: 'default', 'inverse', 'subtle' | 'default'   | Menu style                                            |
 | classPrefix    | string                               | 'sidenav'   | The prefix of the component CSS class                               |
-| componentClass | React.ElementType                    | 'div'       | You can use a custom element type for this component. |
+| componentClass | React.ElementType                    | 'div'       | You can use a custom element type for this component |

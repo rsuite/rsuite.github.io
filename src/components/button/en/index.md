@@ -23,35 +23,35 @@ import { Button, IconButton, ButtonGroup, ButtonToolbar } from 'rsuite';
 
 | Property       | Type `(Default)`                                                         | Description                                     |
 | -------------- | ------------------------------------------------------------------------ | ----------------------------------------------- |
-| active         | boolean                                                                  | active state                                    |
-| block          | boolean                                                                  | display block buttons                           |
-| disabled       | boolean                                                                  | disabled button                                 |
+| active         | boolean                                                                  | Active state                                    |
+| block          | boolean                                                                  | Display block buttons                           |
+| disabled       | boolean                                                                  | Disabled button                                 |
 | children \*    | React.Node                                                               | The content of the component.                   |
-| size           | enum: 'lg', 'md', 'sm', 'xs' `('md')`                                    | set button size                                 |
-| appearance     | enum: 'default', 'primary', 'link', 'subtle', 'ghost'<br/> `('default')` | set button appearence                           |
-| color          | enum: 'red', 'orange','yellow', 'green', <br/>'cyan', 'blue', 'violet'   | set button color                                |
-| classPrefix    | string `('btn')`                                                         | The prefix of the component CSS class              |
-| componentClass | React.ElementType `('button')`                                           | you can use a custom element for this component |
-| href           | string                                                                   | redirect url of link button                     |
+| size           | enum: 'lg', 'md', 'sm', 'xs' `('md')`                                    | Set button size                                 |
+| appearance     | enum: 'default', 'primary', 'link', 'subtle', 'ghost'<br/> `('default')` | Set button appearence                           |
+| color          | enum: 'red', 'orange','yellow', 'green', <br/>'cyan', 'blue', 'violet'   | Set button color                                |
+| classPrefix    | string `('btn')`                                                         | The prefix of the component CSS class           |
+| componentClass | React.ElementType `('button')`                                           | You can use a custom element for this component |
+| href           | string                                                                   | Redirect url of link button                     |
 
 ### `<IconButton>`
 
 
 `Iconbutton` extends all props of `Button`
 
-| Property    | Type `(Default)`                 | Description                        |
-| ----------- | -------------------------------- | ---------------------------------- |
-| circle      | boolean                          | set circle button                  |
-| icon        | React.Element&lt;typeof Icon&gt; | set the icon of button             |
-| placement   | enum: 'left', 'right' `('left')` | placement of icon                  |
+| Property    | Type `(Default)`                 | Description                           |
+| ----------- | -------------------------------- | ------------------------------------- |
+| circle      | boolean                          | Set circle button                     |
+| icon        | React.Element&lt;typeof Icon&gt; | Set the icon of button                |
+| placement   | enum: 'left', 'right' `('left')` | The placement of icon                 |
 | classPrefix | string `('btn-icon')`            | The prefix of the component CSS class |
 
 ### `<ButtonGroup>`
 
-| Property    | Type `(Default)`             | Description                        |
-| ----------- | ---------------------------- | ---------------------------------- |
-| block       | boolean                      | display block buttongroups         |
-| justified   | boolean                      | horizontal constant width layout   |
-| vertical    | boolean                      | vertical layouts of button         |
-| size        | enum: `lg`, `md`, `sm`, `xs` | set button size                    |
+| Property    | Type `(Default)`             | Description                           |
+| ----------- | ---------------------------- | ------------------------------------- |
+| block       | boolean                      | Display block buttongroups            |
+| justified   | boolean                      | Horizontal constant width layout      |
+| vertical    | boolean                      | Vertical layouts of button            |
+| size        | enum: `lg`, `md`, `sm`, `xs` | Set button size                       |
 | classPrefix | string `('btn-group')`       | The prefix of the component CSS class |

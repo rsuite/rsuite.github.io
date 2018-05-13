@@ -19,14 +19,14 @@ import { Breadcrumb } from 'rsuite';
 
 ### `<Breadcrumb>`
 
-| Property    | Type `(Default)`                                       | Description         |
-| ----------- | ------------------------------------------------------ | ------------------- |
-| separator   | React.Node `(<i className="icon icon-angle-right" />)` | custom separator    |
+| Property    | Type `(Default)`                                       | Description                           |
+| ----------- | ------------------------------------------------------ | ------------------------------------- |
+| separator   | React.Node `(<i className="icon icon-angle-right" />)` | Custom separator                      |
 | classPrefix | string `('breadcrumb')`                                | The prefix of the component CSS class |
 
 ### `<Breadcrumb.Item>`
 
-| Property       | Type `(Default)`           | Description          |
-| -------------- | -------------------------- | -------------------- |
-| active         | boolean                    | active state             |
-| componentClass | React.ElementType `('ol')` | you can use a custom element for this component |
+| Property       | Type `(Default)`           | Description                                     |
+| -------------- | -------------------------- | ----------------------------------------------- |
+| active         | boolean                    | Active state                                    |
+| componentClass | React.ElementType `('ol')` | You can use a custom element for this component |

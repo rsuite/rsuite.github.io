@@ -7,6 +7,9 @@ import _ from 'lodash';
 import Banner from './fixtures/Banner';
 import Logo from './fixtures/Logo';
 import ReactLogo from './fixtures/ReactLogo';
+import { getDict } from './locales';
+
+const dict = getDict();
 
 class Home extends React.Component {
   constructor(props) {
@@ -45,19 +48,19 @@ class Home extends React.Component {
               <Logo width={120} />
               <p style={{ marginTop: 16 }}>RSUITE</p>
             </h1>
-            <p className="sub-title">一套 React 的 UI 组件库</p>
+            <p className="sub-title"> {dict.common.resume}</p>
             <div className="menu-nav">
               <Link className="hvr-underline-from-center" to="/guide/introduction">
-                新手指南
+                {dict.common.guide}
               </Link>
               <a className="hvr-underline-from-center" href="/design/index.html" target="_blank">
-                设计
+                {dict.common.design}
               </a>
               <Link className="hvr-underline-from-center" to="/components/overview">
-                组件
+                {dict.common.components}
               </Link>
               <Link className="hvr-underline-from-center" to="/tools/palette">
-                工具
+                {dict.common.tools}
               </Link>
               <a
                 className="hvr-underline-from-center"

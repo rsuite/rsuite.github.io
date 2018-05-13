@@ -14,8 +14,8 @@ const instance = (
         </Navbar>
       </Header>
       <Content>
-        <FlexboxGird justify="center">
-          <FlexboxGird.Item colspan={12}>
+        <FlexboxGrid justify="center">
+          <FlexboxGrid.Item colspan={12}>
             <Panel header={<h3>Login</h3>} bordered>
               <Form fluid>
                 <FormGroup>
@@ -34,8 +34,8 @@ const instance = (
                 </FormGroup>
               </Form>
             </Panel>
-          </FlexboxGird.Item>
-        </FlexboxGird>
+          </FlexboxGrid.Item>
+        </FlexboxGrid>
       </Content>
       <Footer>Footer</Footer>
     </Container>

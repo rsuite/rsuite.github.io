@@ -22,7 +22,9 @@ import computeColors from './computeColors';
 import ColorPanel from './ColorPanel';
 import ImageToColors from './ImageToColors';
 import { loadJsFile } from '../../ready';
+import LOCALE_ENV from '../../LOCALE_ENV';
 
+const localePath = LOCALE_ENV === 'en' ? `${name}/en/` : `${name}/`;
 const lessUrl = 'https://cdn.bootcss.com/less.js/2.7.2/less.min.js';
 
 class PalettePage extends React.Component {
@@ -71,7 +73,7 @@ class PalettePage extends React.Component {
       <Content>
         <Row>
           <Col md={24}>
-            <MarkdownView>{require('./index.md')}</MarkdownView>
+            <MarkdownView>{require(`.${localePath}index.md`)}</MarkdownView>
           </Col>
         </Row>
 
@@ -90,7 +92,7 @@ class PalettePage extends React.Component {
           </div>
 
           <div className="palette-preview" id="palettePreview">
-            <Panel header={<h3>预览</h3>} bordered>
+            <Panel header={<h3>Preview</h3>} bordered>
               <ButtonToolbar>
                 <Button appearance="default">Default</Button>
                 <Button appearance="primary">Primary</Button>

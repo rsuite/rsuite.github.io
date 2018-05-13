@@ -6,40 +6,40 @@
 const instance = (
   <div className="show-grid">
     <Divider>justify="start"</Divider>
-    <FlexboxGird justify="start">
-      <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-    </FlexboxGird>
+    <FlexboxGrid justify="start">
+      <FlexboxGrid.Item colspan={4}>colspan={4}</FlexboxGrid.Item>
+      <FlexboxGrid.Item colspan={4}>colspan={4}</FlexboxGrid.Item>
+      <FlexboxGrid.Item colspan={4}>colspan={4}</FlexboxGrid.Item>
+      <FlexboxGrid.Item colspan={4}>colspan={4}</FlexboxGrid.Item>
+    </FlexboxGrid>
     <Divider>justify="center"</Divider>
-    <FlexboxGird justify="center">
-      <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-    </FlexboxGird>
+    <FlexboxGrid justify="center">
+      <FlexboxGrid.Item colspan={4}>colspan={4}</FlexboxGrid.Item>
+      <FlexboxGrid.Item colspan={4}>colspan={4}</FlexboxGrid.Item>
+      <FlexboxGrid.Item colspan={4}>colspan={4}</FlexboxGrid.Item>
+      <FlexboxGrid.Item colspan={4}>colspan={4}</FlexboxGrid.Item>
+    </FlexboxGrid>
     <Divider>justify="end"</Divider>
-    <FlexboxGird justify="end">
-      <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-    </FlexboxGird>
+    <FlexboxGrid justify="end">
+      <FlexboxGrid.Item colspan={4}>colspan={4}</FlexboxGrid.Item>
+      <FlexboxGrid.Item colspan={4}>colspan={4}</FlexboxGrid.Item>
+      <FlexboxGrid.Item colspan={4}>colspan={4}</FlexboxGrid.Item>
+      <FlexboxGrid.Item colspan={4}>colspan={4}</FlexboxGrid.Item>
+    </FlexboxGrid>
     <Divider>justify="space-between"</Divider>
-    <FlexboxGird justify="space-between">
-      <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-    </FlexboxGird>
+    <FlexboxGrid justify="space-between">
+      <FlexboxGrid.Item colspan={4}>colspan={4}</FlexboxGrid.Item>
+      <FlexboxGrid.Item colspan={4}>colspan={4}</FlexboxGrid.Item>
+      <FlexboxGrid.Item colspan={4}>colspan={4}</FlexboxGrid.Item>
+      <FlexboxGrid.Item colspan={4}>colspan={4}</FlexboxGrid.Item>
+    </FlexboxGrid>
     <Divider>justify="space-around"</Divider>
-    <FlexboxGird justify="space-around">
-      <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4}>colspan={4}</FlexboxGird.Item>
-    </FlexboxGird>
+    <FlexboxGrid justify="space-around">
+      <FlexboxGrid.Item colspan={4}>colspan={4}</FlexboxGrid.Item>
+      <FlexboxGrid.Item colspan={4}>colspan={4}</FlexboxGrid.Item>
+      <FlexboxGrid.Item colspan={4}>colspan={4}</FlexboxGrid.Item>
+      <FlexboxGrid.Item colspan={4}>colspan={4}</FlexboxGrid.Item>
+    </FlexboxGrid>
   </div>
 );
 ReactDOM.render(instance);

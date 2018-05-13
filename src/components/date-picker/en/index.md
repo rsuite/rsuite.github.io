@@ -22,15 +22,15 @@ import { DatePicker } from 'rsuite';
 
 | Property            | Type`(default)`                                | Description                                                                          |
 | ------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------ |
-| value               | moment$Moment                                  | (Controller) to set date                                                             |
-| defaultValue        | moment$Moment                                  | to set default value                                                                 |
-| calendarDefaultDate | moment$Moment                                  | calendar panel default presentation date and time                                    |
-| onChange            | (date:moment$Moment)=>void                     | callback fired when value changed                                                    |
-| onSelect            | (date:moment$Moment)=>void                     | callback fired when date or time is selected                                         |
-| onOpen              | ()=>void                                       | callback fired when open component                                                   |
-| onClose             | ()=>void                                       | callback fired when close component                                                  |
+| value               | moment$Moment                                  | Value (Controlled)                                                                   |
+| defaultValue        | moment$Moment                                  | Default value                                                                        |
+| calendarDefaultDate | moment$Moment                                  | Calendar panel default presentation date and time                                    |
+| onChange            | (date:moment$Moment)=>void                     | Callback fired when value changed                                                    |
+| onSelect            | (date:moment$Moment)=>void                     | Callback fired when date or time is selected                                         |
+| onOpen              | ()=>void                                       | Callback fired when open component                                                   |
+| onClose             | ()=>void                                       | Callback fired when close component                                                  |
 | placeholder         | string                                         | placeholder                                                                          |
-| format              | string `('YYYY-MM-DD')`                        | format date                                                                          |
+| format              | string `('YYYY-MM-DD')`                        | Format date                                                                          |
 | locale              | Object [`(Locale)`](#Locale)                   | i18n config                                                                          |
 | ranges              | Array<[Range](#Range)> [`(Ranges)`](#Ranges)   | Shortcut config                                                                      |
 | inline              | boolean                                        | display date panel when component initial                                            |
@@ -42,12 +42,12 @@ import { DatePicker } from 'rsuite';
 | hideHours           | (hour:number, date:moment$Moment)=>boolean     | hidden hours                                                                         |
 | hideMinutes         | (minute:number, date:moment$Moment)=>boolean   | hidden minutes                                                                       |
 | hideSeconds         | (second:number, date:moment$Moment)=>boolean   | hidden seconds                                                                       |
-| cleanable           | boolean `(true)`                               | whether the selected value can be cleared                                            |
+| cleanable           | boolean `(true)`                               | Whether the selected value can be cleared                                            |
 | isoWeek             | boolean                                        | ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day |
-| open                | boolean                                        | whether open the component                                                           |
-| defaultOpen         | boolean                                        | default value of open property                                                       |
-| placement           | enum: [Placement](#Placement) `('bottomLeft')` | placement of component                                                               |
-| limitStartYear      | number `(5)`                                   | set an optional year limit relative to the current selection date                    |
+| open                | boolean                                        | Whether open the component                                                           |
+| defaultOpen         | boolean                                        | Default value of open property                                                       |
+| placement           | enum: [Placement](#Placement) `('bottomLeft')` | The placement of component                                                           |
+| limitStartYear      | number `(5)`                                   | Set an optional year limit relative to the current selection date                    |
 | limitEndYear        | number `(5)`                                   | Sets the lower limit of the available year relative to the current selection date    |
 
 ## Types

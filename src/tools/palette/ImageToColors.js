@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Input, Panel, DOMHelper } from '../../rsuiteSource';
+import { getDict } from '../../locales';
 
+const dict = getDict();
 const { getOffset } = DOMHelper;
 
 function ImageColor(img) {
@@ -91,11 +93,11 @@ class ImageToColors extends React.Component {
     };
 
     return (
-      <Panel header={<h3>分析产品商标颜色</h3>} bordered className="palette-logo-tool">
+      <Panel header={<h3>{dict.palette.title}</h3>} bordered className="palette-logo-tool">
         <ul>
-          <li>上传产品的 Logo</li>
-          <li>通过分析 Logo 中的配色，制作主题颜色</li>
-          <li>点击 Logo 合适的位置，改变主题颜色</li>
+          <li>{dict.palette.step1}</li>
+          <li>{dict.palette.step2}</li>
+          <li>{dict.palette.step3}</li>
         </ul>
         <hr />
         <Input type="file" onChange={this.handleChange} style={{ width: 200 }} />

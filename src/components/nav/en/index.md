@@ -44,4 +44,4 @@ import { Nav, Dropdown } from 'rsuite';
 | icon           | React.Element&lt;typeof Icon&gt;                           | Sets the icon for the component                       |
 | href           | string                                                     | Link                                                  |
 | onSelect       | (eventKey: any, event: SyntheticEvent&lt;any&gt;) => void, | Select the callback function that the event triggers. |
-| componentClass | React.ElementType                                          | Customizes the element type for the component.        |
+| componentClass | React.ElementType                                          | You can use a custom element type for this component        |

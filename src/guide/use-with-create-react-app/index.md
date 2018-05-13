@@ -1,6 +1,6 @@
 # 在 create-react-app 中使用
 
-[create-react-app][create-react-app] 可以帮助快速建立一个 `react` 工程，本向导将介绍如何将 `rsuite` 于 `create-react-app` 结合使用，并进行
+[create-react-app][create-react-app] 可以帮助快速建立一个 `react` 工程，本向导将介绍如何将 `rsuite` 于 `create-react-app` 结合使用。
 
 ## 初始化一个项目
 

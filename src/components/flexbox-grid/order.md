@@ -5,20 +5,20 @@
 ```js
 const instance = (
   <div className="show-grid">
-    <FlexboxGird>
-      <FlexboxGird.Item colspan={4} order={4}>
+    <FlexboxGrid>
+      <FlexboxGrid.Item colspan={4} order={4}>
         order={4}
-      </FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4} order={3}>
+      </FlexboxGrid.Item>
+      <FlexboxGrid.Item colspan={4} order={3}>
         order={3}
-      </FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4} order={2}>
+      </FlexboxGrid.Item>
+      <FlexboxGrid.Item colspan={4} order={2}>
         order={2}
-      </FlexboxGird.Item>
-      <FlexboxGird.Item colspan={4} order={1}>
+      </FlexboxGrid.Item>
+      <FlexboxGrid.Item colspan={4} order={1}>
         order={1}
-      </FlexboxGird.Item>
-    </FlexboxGird>
+      </FlexboxGrid.Item>
+    </FlexboxGrid>
   </div>
 );
 ReactDOM.render(instance);

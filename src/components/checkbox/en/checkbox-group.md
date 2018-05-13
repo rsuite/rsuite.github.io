@@ -1,9 +1,10 @@
 ### Checkbox Group
 
 <!--start-code-->
+
 ```js
 const instance = (
-  <CheckboxGroup name="checkboxList" >
+  <CheckboxGroup name="checkboxList">
     <p>Group1</p>
     <Checkbox>Item A</Checkbox>
     <Checkbox>Item B</Checkbox>
@@ -14,4 +15,5 @@ const instance = (
 );
 ReactDOM.render(instance);
 ```
+
 <!--end-code-->

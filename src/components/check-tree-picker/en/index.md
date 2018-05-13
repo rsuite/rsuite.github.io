@@ -18,7 +18,7 @@ import { CheckTreePicker } from 'rsuite';
 
 ### <CheckTreePicker>
 
-| Property           | Type `(default)`                                                           | Description                                                 |
+| Property           | Type `(Default)`                                                           | Description                                                 |
 | ------------------ | -------------------------------------------------------------------------- | ----------------------------------------------------------- |
 | value              | Array&lt;any&gt;                                                           | (Controlled) specifies the values of the selected tree node |
 | defaultValue       | Array&lt;any&gt;                                                           | (UnControlled) default values of the selected tree node     |

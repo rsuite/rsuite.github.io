@@ -1,14 +1,14 @@
-# FlexboxGird 弹性栅格 
+# FlexboxGrid 弹性栅格 
 
 通过 CSS Flexbox 实现的栅格布局组件，提供 24 栅格。
 
-* `<FlexboxGird>`
-* `<FlexboxGird.Item>`
+* `<FlexboxGrid>`
+* `<FlexboxGrid.Item>`
 
 ## 获取组件
 
 ```js
-import { FlexboxGird } from 'rsuite';
+import { FlexboxGrid } from 'rsuite';
 ```
 
 ## 演示
@@ -17,7 +17,7 @@ import { FlexboxGird } from 'rsuite';
 
 ## Props
 
-### `<FlexboxGird>`
+### `<FlexboxGrid>`
 
 | 属性名称    | 类型`(默认值)`                                                               | 描述           |
 | ----------- | ---------------------------------------------------------------------------- | -------------- |
@@ -25,7 +25,7 @@ import { FlexboxGird } from 'rsuite';
 | align       | enum: 'top' , 'middle' , 'bottom' `('top')`                                  | 对齐方式       |
 | justify     | enum : 'start', 'end', 'center', 'space-around', 'space-between' `('start')` | 水平排列方式   |
 
-### `<FlexboxGird.Item>`
+### `<FlexboxGrid.Item>`
 
 | 属性名称    | 类型`(默认值)`                  | 描述               |
 | ----------- | ------------------------------- | ------------------ |
