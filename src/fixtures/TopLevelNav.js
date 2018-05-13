@@ -28,19 +28,19 @@ const menu = [
   {
     key: 'guide',
     tip: dict.common.guide,
-    to: '/guide/introduction',
+    to: `${localePath}guide/introduction`,
     icon: guide
   },
   {
     key: 'components',
     tip: dict.common.components,
-    to: '/components/overview',
+    to: `${localePath}components/overview`,
     icon: component
   },
   {
     key: 'tools',
     tip: dict.common.tools,
-    to: '/tools/palette',
+    to: `${localePath}tools/palette`,
     icon: tools
   }
 ];
