@@ -6,6 +6,10 @@ import { Button, Icon, IconButton, Whisper, Tooltip } from '../rsuiteSource';
 import Logo from './Logo';
 import { guide, component, tools, search, design, lightbulb, lightbulbOn } from './SvgIcons';
 import SearchDrawer from './SearchDrawer';
+import { getDict } from '../locales';
+import { localePath } from '../LOCALE_ENV';
+
+const dict = getDict();
 
 function WithTooltipButton({ children, tip, ...props }) {
   return (
@@ -23,19 +27,19 @@ const svgStyle = {
 const menu = [
   {
     key: 'guide',
-    tip: '新手指南',
+    tip: dict.common.guide,
     to: '/guide/introduction',
     icon: guide
   },
   {
     key: 'components',
-    tip: '组件',
+    tip: dict.common.components,
     to: '/components/overview',
     icon: component
   },
   {
     key: 'tools',
-    tip: '工具',
+    tip: dict.common.tools,
     to: '/tools/palette',
     icon: tools
   }
@@ -71,17 +75,21 @@ class TopLevelNav extends React.Component {
 
     return (
       <div className="top-level-nav">
-        <Link to="/">
+        <Link to={`${localePath}`}>
           <Logo width={26} className="logo-sm" />
         </Link>
 
         <div className="top-level-nav-menu">
-          <WithTooltipButton tip="搜索" className="icon-btn-circle" onClick={this.showSearchDrawer}>
+          <WithTooltipButton
+            tip={dict.common.search}
+            className="icon-btn-circle"
+            onClick={this.showSearchDrawer}
+          >
             <Icon icon={search} svgStyle={svgStyle} size="lg" />
           </WithTooltipButton>
 
           <WithTooltipButton
-            tip="设计原型"
+            tip={dict.common.design}
             className="icon-btn-circle"
             componentClass="a"
             target="_blank"
@@ -123,7 +131,7 @@ class TopLevelNav extends React.Component {
             </WithTooltipButton>
 
             <WithTooltipButton
-              tip={showSubmenu ? '收起菜单' : '展开菜单'}
+              tip={showSubmenu ? dict.common.closeMenu : dict.common.openMenu}
               className="icon-btn-circle"
               onClick={this.handleToggleMenu}
             >

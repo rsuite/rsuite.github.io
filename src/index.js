@@ -20,8 +20,9 @@ import Home from './Home';
 import ready from './ready';
 import { setTitle, defateTilte } from './title';
 import menu from './fixtures/menu';
+import LOCALE_ENV from './LOCALE_ENV';
 
-function createRouters(localePath = '') {
+function createRouters() {
   return menu.map(item => {
     const children = [];
     item.children.forEach(child => {
@@ -30,9 +31,9 @@ function createRouters(localePath = '') {
           <Route
             key={child.id}
             path={child.id}
-            component={require(`./${item.id}/${child.id}${localePath}`)}
+            component={require(`./${item.id}/${child.id}`)}
             onEnter={() => {
-              setTitle(`${child.title || ''} ${child.name} - ${item.name}`);
+              setTitle(`${child.name} - ${item.name}`);
             }}
           />
         );
@@ -49,7 +50,7 @@ function createRouters(localePath = '') {
 
 const AppWithRouter = () => (
   <Router history={browserHistory}>
-    <Route path="/" component={App}>
+    <Route path={LOCALE_ENV === 'en' ? '/en/' : '/'} component={App}>
       <IndexRoute component={Home} onEnter={defateTilte} />
       {createRouters()}
     </Route>

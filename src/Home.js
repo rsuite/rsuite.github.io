@@ -8,6 +8,7 @@ import Banner from './fixtures/Banner';
 import Logo from './fixtures/Logo';
 import ReactLogo from './fixtures/ReactLogo';
 import { getDict } from './locales';
+import { localePath } from './LOCALE_ENV';
 
 const dict = getDict();
 
@@ -50,16 +51,16 @@ class Home extends React.Component {
             </h1>
             <p className="sub-title"> {dict.common.resume}</p>
             <div className="menu-nav">
-              <Link className="hvr-underline-from-center" to="/guide/introduction">
+              <Link className="hvr-underline-from-center" to={`${localePath}guide/introduction`}>
                 {dict.common.guide}
               </Link>
               <a className="hvr-underline-from-center" href="/design/index.html" target="_blank">
                 {dict.common.design}
               </a>
-              <Link className="hvr-underline-from-center" to="/components/overview">
+              <Link className="hvr-underline-from-center" to={`${localePath}components/overview`}>
                 {dict.common.components}
               </Link>
-              <Link className="hvr-underline-from-center" to="/tools/palette">
+              <Link className="hvr-underline-from-center" to={`${localePath}tools/palette`}>
                 {dict.common.tools}
               </Link>
               <a

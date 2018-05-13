@@ -11,8 +11,9 @@ const iconPath = ['./node_modules/rsuite/styles', '../rsuite/styles'].map(relati
   path.resolve(__dirname, relativePath)
 );
 
-const { NODE_ENV, STYLE_DEBUG, ENV_LOCALE } = process.env;
+const { NODE_ENV, STYLE_DEBUG, ENV_LOCALE, LOCALE_ENV } = process.env;
 const __PRO__ = NODE_ENV === 'production';
+const __EN__ = LOCALE_ENV === 'en' && __PRO__;
 
 const extractLess = new ExtractTextPlugin('style.[hash].css');
 
@@ -41,8 +42,8 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js?[hash]',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
+    path: path.resolve(__dirname, __EN__ ? 'dist/en' : 'dist'),
+    publicPath: __EN__ ? '/en/' : '/'
   },
   module: {
     rules: [

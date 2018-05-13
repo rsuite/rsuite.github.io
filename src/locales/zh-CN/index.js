@@ -1,5 +1,6 @@
 export default {
   common: {
+    search: '搜索',
     resume: '一套 React 的 UI 组件库',
     advanced: '高级功能',
     guide: '新手指南',
@@ -13,7 +14,12 @@ export default {
     intl: '国际化',
     changeLog: '更新日志',
     palette: '调色板',
-    icons: '图标库'
+    icons: '图标库',
+    closeMenu: '收起菜单',
+    openMenu: '展开菜单',
+    edit: '编辑当前页面',
+    newIssues: '提交Bug',
+    collapseMenu: '折叠菜单'
   },
   table: {
     'tab.resizable': '可调整列宽',

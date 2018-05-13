@@ -4,6 +4,9 @@ import get from 'lodash/get';
 import algoliasearch from 'algoliasearch';
 import { Link } from 'react-router';
 import { Drawer, Input } from '../rsuiteSource';
+import { getDict } from '../locales';
+
+const dict = getDict();
 
 class SearchDrawer extends Component {
   constructor() {
@@ -49,11 +52,11 @@ class SearchDrawer extends Component {
     return (
       <Drawer placement="left" size="xs" show={show} onHide={onHide}>
         <Drawer.Header>
-          <Drawer.Title>搜索</Drawer.Title>
+          <Drawer.Title>{dict.common.search}</Drawer.Title>
         </Drawer.Header>
         <Drawer.Body>
           <Input
-            placeholder="搜索..."
+            placeholder={dict.common.search}
             className="search-input"
             value={this.state.keyword}
             onChange={this.handleSearch}

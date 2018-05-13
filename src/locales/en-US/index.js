@@ -1,5 +1,6 @@
 export default {
   common: {
+    search: 'Search',
     resume: 'A suite of React components',
     advanced: 'Advanced',
     guide: 'Guide',
@@ -13,7 +14,12 @@ export default {
     intl: 'Internationalization',
     changeLog: 'Change log',
     palette: 'Palette',
-    icons: 'Icons'
+    icons: 'Icons',
+    closeMenu: 'Close Menu',
+    openMenu: 'Open Menu',
+    edit: 'Edit the current page',
+    newIssues: 'Report Bug',
+    collapseMenu:'Collapse Menu'
   },
   table: {
     'tab.resizable': 'Resizable',
