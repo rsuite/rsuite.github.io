@@ -57,4 +57,4 @@ ReactDOM.render(<Demo />);
 
 <!--end-code-->
 
-> 针对 subtle/tabs 导航，可以设置一个 `reversed` 属性颠倒方向，用来适配导航在上下左右都可以使用。
+> For subtle and tabs navigation, you can set a reversed property to reverse direction and fit all directions.

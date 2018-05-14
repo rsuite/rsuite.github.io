@@ -29,4 +29,4 @@ ReactDOM.render(instance);
 
 <!--end-code-->
 
-> 当使用多级导航时，直接使用 `<Dropdown>` 组件。
+> Use the '<Dropdown>' component directly when using multi-level navigation.
