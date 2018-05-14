@@ -1,23 +1,15 @@
 import React from 'react';
-import ComponentExample from '../ComponentExample';
 import { Navbar, Nav, Button, Icon, Dropdown } from '../../rsuiteSource';
+import createComponentExample from '../createComponentExample';
 
-const context = require('./index.md');
-const examples = [require('./basic.md'), require('./appearance.md')];
-
-export default () => {
-  return (
-    <ComponentExample
-      id="Navbar"
-      dependencies={{
-        Dropdown,
-        Icon,
-        Button,
-        Navbar,
-        Nav
-      }}
-      context={context}
-      examples={examples}
-    />
-  );
-};
+export default createComponentExample({
+  id: 'Navbar',
+  examples: ['basic', 'appearance'],
+  dependencies: {
+    Dropdown,
+    Icon,
+    Button,
+    Navbar,
+    Nav
+  }
+});

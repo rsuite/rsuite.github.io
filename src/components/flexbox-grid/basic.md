@@ -5,12 +5,12 @@
 ```js
 const instance = (
   <div className="show-grid">
-    <FlexboxGird>
-      <FlexboxGird.Item colspan={6}>colspan={6}</FlexboxGird.Item>
-      <FlexboxGird.Item colspan={6}>colspan={6}</FlexboxGird.Item>
-      <FlexboxGird.Item colspan={6}>colspan={6}</FlexboxGird.Item>
-      <FlexboxGird.Item colspan={6}>colspan={6}</FlexboxGird.Item>
-    </FlexboxGird>
+    <FlexboxGrid>
+      <FlexboxGrid.Item colspan={6}>colspan={6}</FlexboxGrid.Item>
+      <FlexboxGrid.Item colspan={6}>colspan={6}</FlexboxGrid.Item>
+      <FlexboxGrid.Item colspan={6}>colspan={6}</FlexboxGrid.Item>
+      <FlexboxGrid.Item colspan={6}>colspan={6}</FlexboxGrid.Item>
+    </FlexboxGrid>
   </div>
 );
 ReactDOM.render(instance);

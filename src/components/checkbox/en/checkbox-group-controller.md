@@ -1,4 +1,4 @@
-### (Controlled) Checkbox Group
+### Checkbox Group (Controlled)
 
 <!--start-code-->
 

@@ -22,7 +22,7 @@ import { Icon } from 'rsuite';
 
 | 属性名称       | 类型 `(默认值)`                    | 描述                                    |
 | -------------- | ---------------------------------- | --------------------------------------- |
-| classPrefix    | string `('icon')`                  | class 前缀                              |
+| classPrefix    | string `('icon')`                  | 组件 CSS 类的前缀                              |
 | componentClass | React.ElementType `('i')`          | 为组件自定义元素类型                    |
 | icon \*        | union: string,SvgSymbol            | 使用的 icon 名                          |
 | size           | enum: 'lg', '2x', '3x', '4x', '5x' | 放大图标                                |

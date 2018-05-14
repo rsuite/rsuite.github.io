@@ -18,7 +18,7 @@ import { TreePicker } from 'rsuite';
 
 | 属性名称          | 类型 `(默认值)`                                               | 描述                            |
 | ----------------- | ------------------------------------------------------------- | ------------------------------- |
-| classPrefix       | string`('picker-tree')`                                       | class 前缀                      |
+| classPrefix       | string`('picker-tree')`                                       | 组件 CSS 类的前缀                      |
 | value             | DataItemType.value                                            | 当前选中的值                    |
 | defaultValue      | DataItemType.value                                            | 默认选中的值                    |
 | data \*           | Array&lt;[DataItemType](#DataItemType)&gt;                    | tree 数据                       |
@@ -46,7 +46,7 @@ import { TreePicker } from 'rsuite';
 | renderValue       | (activeNode:DataItemType, placeholder:React.Node)=>React.Node | 自定义渲染 placeholder          |
 | renderExtraFooter | ()=>React.Node                                                | 自定义页脚内容                  |
 | placement         | enum: [Placement](#Placement)`('bottomLeft')`                 | 打开位置                        |
-| menuClassName     | string                                                        | 选项菜单的 className            |
+| menuClassName     | string                                                        | 应用于菜单 DOM 节点的 css class    |
 
 ## Types
 

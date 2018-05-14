@@ -23,5 +23,5 @@ import { Sidenav } from 'rsuite';
 | 属性名称       | 类型                                 | 默认值    | 描述                 |
 | -------------- | ------------------------------------ | --------- | -------------------- |
 | appearance     | enum: 'default', 'inverse', 'subtle' | 'default' | 菜单外观             |
-| classPrefix    | string                               | 'sidenav' | className 前缀       |
+| classPrefix    | string                               | 'sidenav' | 组件 CSS 类的前缀       |
 | componentClass | React.ElementType                    | 'div'     | 为组件自定义元素类型 |

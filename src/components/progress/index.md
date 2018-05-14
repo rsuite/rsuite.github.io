@@ -21,7 +21,7 @@ import { Progress } from 'rsuite';
 
 | 属性名称    | 类型 `(默认值)`                   | 描述         |
 | ----------- | --------------------------------- | ------------ |
-| classPrefix | string `('progress')`             | class 前缀   |
+| classPrefix | string `('progress')`             | 组件 CSS 类的前缀   |
 | percent     | number `(0)`                      | 进度百分比   |
 | strokeWidth | number                            | 线条宽度     |
 | strokeColor | string                            | 线条颜色     |
@@ -34,7 +34,7 @@ import { Progress } from 'rsuite';
 
 | 属性名称      | 类型 `(默认值)`                                  | 描述                     |
 | ------------- | ------------------------------------------------ | ------------------------ |
-| classPrefix   | string `('progress')`                            | class 前缀               |
+| classPrefix   | string `('progress')`                            | 组件 CSS 类的前缀               |
 | percent       | number `(0)`                                     | 进度百分比               |
 | strokeWidth   | number `(6)`                                     | 线条宽度                 |
 | strokeColor   | string                                           | 线条颜色                 |

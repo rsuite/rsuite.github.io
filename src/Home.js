@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import { addStyle, getHeight, on } from 'dom-lib';
 import { Container, Content, Row, Col, Icon } from './rsuiteSource';
@@ -9,6 +10,9 @@ import Logo from './fixtures/Logo';
 import ReactLogo from './fixtures/ReactLogo';
 
 class Home extends React.Component {
+  static contextTypes = {
+    locale: PropTypes.object
+  };
   constructor(props) {
     super();
     this.state = {};
@@ -37,6 +41,8 @@ class Home extends React.Component {
   };
 
   render() {
+    const { locale } = this.context;
+    const localePath = locale.id === 'en-US' ? '/en/' : '/';
     return (
       <div>
         <Banner id="banner">
@@ -45,19 +51,19 @@ class Home extends React.Component {
               <Logo width={120} />
               <p style={{ marginTop: 16 }}>RSUITE</p>
             </h1>
-            <p className="sub-title">一套 React 的 UI 组件库</p>
+            <p className="sub-title"> {locale.common.resume}</p>
             <div className="menu-nav">
-              <Link className="hvr-underline-from-center" to="/guide/introduction">
-                新手指南
+              <Link className="hvr-underline-from-center" to={`${localePath}guide/introduction`}>
+                {locale.common.guide}
               </Link>
               <a className="hvr-underline-from-center" href="/design/index.html" target="_blank">
-                设计
+                {locale.common.design}
               </a>
-              <Link className="hvr-underline-from-center" to="/components/overview">
-                组件
+              <Link className="hvr-underline-from-center" to={`${localePath}components/overview`}>
+                {locale.common.components}
               </Link>
-              <Link className="hvr-underline-from-center" to="/tools/palette">
-                工具
+              <Link className="hvr-underline-from-center" to={`${localePath}tools/palette`}>
+                {locale.common.tools}
               </Link>
               <a
                 className="hvr-underline-from-center"

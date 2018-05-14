@@ -1,33 +1,26 @@
 import React from 'react';
 import moment from 'moment';
-import ComponentExample from '../ComponentExample';
+
 import { DatePicker } from '../../rsuiteSource';
+import createComponentExample from '../createComponentExample';
 
-const context = require('./index.md');
-const examples = [
-  require('./basic.md'),
-  require('./placeholder.md'),
-  require('./inline.md'),
-  require('./format.md'),
-  require('./format-month.md'),
-  require('./format-time.md'),
-  require('./iso-week.md'),
-  require('./disabled.md'),
-  require('./intl.md'),
-  require('./placement.md'),
-  require('./custom.md')
-];
-
-export default () => {
-  return (
-    <ComponentExample
-      id="DatePicker"
-      context={context}
-      examples={examples}
-      dependencies={{
-        moment,
-        DatePicker
-      }}
-    />
-  );
-};
+export default createComponentExample({
+  id: 'DatePicker',
+  examples: [
+    'basic',
+    'placeholder',
+    'inline',
+    'format',
+    'format-month',
+    'format-time',
+    'iso-week',
+    'disabled',
+    'intl',
+    'placement',
+    'custom'
+  ],
+  dependencies: {
+    moment,
+    DatePicker
+  }
+});

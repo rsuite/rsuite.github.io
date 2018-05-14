@@ -1,30 +1,22 @@
 import React from 'react';
 import moment from 'moment';
-import ComponentExample from '../ComponentExample';
 import { DateRangePicker } from '../../rsuiteSource';
+import createComponentExample from '../createComponentExample';
 
-const context = require('./index.md');
-const examples = [
-  require('./basic.md'),
-  require('./placeholder.md'),
-  require('./hover-range.md'),
-  require('./one-tap.md'),
-  require('./disabled.md'),
-  require('./toolbar.md'),
-  require('./value.md'),
-  require('./intl.md')
-];
-
-export default () => {
-  return (
-    <ComponentExample
-      id="DateRangePicker"
-      context={context}
-      examples={examples}
-      dependencies={{
-        moment,
-        DateRangePicker
-      }}
-    />
-  );
-};
+export default createComponentExample({
+  id: 'DateRangePicker',
+  examples: [
+    'basic',
+    'placeholder',
+    'hover-range',
+    'one-tap',
+    'disabled',
+    'toolbar',
+    'value',
+    'intl'
+  ],
+  dependencies: {
+    moment,
+    DateRangePicker
+  }
+});

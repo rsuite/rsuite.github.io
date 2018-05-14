@@ -20,7 +20,7 @@ import { CheckPicker } from 'rsuite';
 
 | 属性名称           | 类型`(默认值)`                                               | 描述                                 |
 | ------------------ | ------------------------------------------------------------ | ------------------------------------ |
-| classPrefix        | string `('picker-check')`                                    | className 前缀                       |
+| classPrefix        | string `('picker-check')`                                    | 组件 CSS 类的前缀                       |
 | data \*            | Array&lt;[DataItemType](#DataItemType)&gt;                   | 组件数据                             |
 | disabled           | boolean                                                      | 禁用组件                             |
 | disabledItemValues | Array&lt;DataItemType.value&gt;                              | 禁用选项                             |

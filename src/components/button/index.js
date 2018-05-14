@@ -1,43 +1,34 @@
 import React from 'react';
-import ComponentExample from '../ComponentExample';
 import { Button, IconButton, ButtonGroup, ButtonToolbar, Panel, Icon } from '../../rsuiteSource';
 import * as SvgIcons from '../../fixtures/SvgIcons';
 
-const context = require('./index.md');
-const examples = [
-  require('./basic.md'),
-  require('./appearance.md'),
-  require('./size.md'),
-  require('./color.md'),
-  require('./custom.md'),
-  require('./icon-button.md'),
-  require('./block.md'),
-  require('./disabled.md'),
-  require('./active.md'),
-  require('./loading.md'),
-  require('./group-basic.md'),
-  require('./vertical.md'),
-  require('./toolbar.md'),
-  require('./justified.md')
-];
+import createComponentExample from '../createComponentExample';
 
-export default () => {
-  return (
-    <div>
-      <ComponentExample
-        id="Button"
-        context={context}
-        examples={examples}
-        dependencies={{
-          SvgIcons,
-          Button,
-          IconButton,
-          ButtonGroup,
-          ButtonToolbar,
-          Icon,
-          Panel
-        }}
-      />
-    </div>
-  );
-};
+export default createComponentExample({
+  id: 'Button',
+  examples: [
+    'basic',
+    'appearance',
+    'size',
+    'color',
+    'custom',
+    'icon-button',
+    'block',
+    'disabled',
+    'active',
+    'loading',
+    'group-basic',
+    'vertical',
+    'toolbar',
+    'justified'
+  ],
+  dependencies: {
+    SvgIcons,
+    Button,
+    IconButton,
+    ButtonGroup,
+    ButtonToolbar,
+    Icon,
+    Panel
+  }
+});

@@ -18,7 +18,7 @@ import { CheckTreePicker } from 'rsuite';
 
 ### <CheckTreePicker>
 
-| Property           | Type `(default)`                                                           | Description                                                 |
+| Property           | Type `(Default)`                                                           | Description                                                 |
 | ------------------ | -------------------------------------------------------------------------- | ----------------------------------------------------------- |
 | value              | Array&lt;any&gt;                                                           | (Controlled) specifies the values of the selected tree node |
 | defaultValue       | Array&lt;any&gt;                                                           | (UnControlled) default values of the selected tree node     |
@@ -43,7 +43,7 @@ import { CheckTreePicker } from 'rsuite';
 | renderTreeIcon     | (nodeData:Array&lt;Object&gt;)=>React.Node                                 | custom render the icon of tree node                         |
 | renderValue        | (values:Array&lt;Object&gt;, checkedItems:Array&lt;Object&gt;)=>React.Node | custom render placeholder                                   |
 | renderExtraFooter  | ()=>React.Node                                                             | custom render extra footer                                  |
-| placement          | enum: Placement `('bottomLeft')`                                           | placement of component                                      |
+| placement          | enum: Placement `('bottomLeft')`                                           | Placement of component                                      |
 
 ## Types
 

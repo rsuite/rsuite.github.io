@@ -4,7 +4,7 @@
 
 * `<Dropdown>` 下拉菜单。
 * `<Dropdown.Item>` 下拉菜单选项。
-* `<Dropdown.Menu>` 下拉菜单中创建只菜单。
+* `<Dropdown.Menu>` 下拉菜单中创建子菜单。
 
 ## 获取组件
 
@@ -23,9 +23,8 @@ import { Dropdown } from 'rsuite';
 | 属性名称        | 类型 `(默认值)`                                           | 描述                                             |
 | --------------- | --------------------------------------------------------- | ------------------------------------------------ |
 | activeKey       | any                                                       | 激活状态的选项，对应 Dropdown.Item 中的 eventKey |
-| classPrefix     | string `('dropdown')`                                     | className 前缀                                   |
+| classPrefix     | string `('dropdown')`                                     | 组件 CSS 类的前缀                                |
 | disabled        | boolean                                                   | 禁用组件                                         |
-| dropup          | boolean                                                   | 菜单向上弹出                                     |
 | menuStyle       | Object                                                    | 菜单样式                                         |
 | title           | React.Node                                                | 菜单默认显示内容                                 |
 | toggleClassName | string                                                    | 设置 Toggle 的 className                         |

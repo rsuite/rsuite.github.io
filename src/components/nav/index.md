@@ -23,7 +23,7 @@ import { Nav, Dropdown } from 'rsuite';
 
 | 属性名称    | 类型`(默认值)`                                             | 描述                                          |
 | ----------- | ---------------------------------------------------------- | --------------------------------------------- |
-| classPrefix | string `('nav')`                                           | class 前缀                                    |
+| classPrefix | string `('nav')`                                           | 组件 CSS 类的前缀                                    |
 | children \* | React.ChildrenArray&lt;NavItem or Dropdown&gt;             | 组件内容                                      |
 | tabs        | boolean                                                    | 标签式导航                                    |
 | pills       | boolean                                                    | 胶囊式导航                                    |

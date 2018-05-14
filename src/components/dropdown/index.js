@@ -1,35 +1,27 @@
 import React from 'react';
-import ComponentExample from '../ComponentExample';
 import { Dropdown, Button, Icon, ButtonToolbar, IconButton, ButtonGroup } from '../../rsuiteSource';
+import createComponentExample from '../createComponentExample';
 
-const context = require('./index.md');
-const examples = [
-  require('./basic.md'),
-  require('./trigger.md'),
-  require('./active.md'),
-  require('./disabled.md'),
-  require('./icons.md'),
-  require('./divider.md'),
-  require('./placement.md'),
-  require('./submenu.md'),
-  require('./custom.md'),
-  require('./buttons.md')
-];
-
-export default () => {
-  return (
-    <ComponentExample
-      id="Dropdown"
-      dependencies={{
-        ButtonToolbar,
-        ButtonGroup,
-        IconButton,
-        Icon,
-        Dropdown,
-        Button
-      }}
-      context={context}
-      examples={examples}
-    />
-  );
-};
+export default createComponentExample({
+  id: 'Dropdown',
+  examples: [
+    'basic',
+    'trigger',
+    'active',
+    'disabled',
+    'icons',
+    'divider',
+    'placement',
+    'submenu',
+    'custom',
+    'buttons'
+  ],
+  dependencies: {
+    ButtonToolbar,
+    ButtonGroup,
+    IconButton,
+    Icon,
+    Dropdown,
+    Button
+  }
+});

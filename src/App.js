@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
 import { scrollTop } from 'dom-lib';
-import DocSidebar from './fixtures/DocSidebar';
 import { Grid } from './rsuiteSource';
+
+// style
+import './less/index.less';
 
 const contextTypes = {
   router: PropTypes.object.isRequired

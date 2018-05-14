@@ -16,7 +16,7 @@ import { AutoComplete } from 'rsuite';
 
 | 属性名称      | 类型`(默认值)`                                     | 描述                         |
 | ------------- | -------------------------------------------------- | ---------------------------- |
-| classPrefix   | string `('auto-complete')`                         | className 前缀               |
+| classPrefix   | string `('auto-complete')`                         | 组件 CSS 类的前缀               |
 | data \*       | Array&lt;[DataItemType](#DataItemType)&gt;         | 组件数据                     |
 | disabled      | boolean                                            | 禁用组件                     |
 | value         | DataItemType.value                                 | 设置值 `受控`                |

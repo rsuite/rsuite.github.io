@@ -1,10 +1,10 @@
-## Default
+### Default
 
 <!--start-code-->
+
 ```js
-const instance=(
-  <DateRangePicker />
-)
+const instance = <DateRangePicker />;
 ReactDOM.render(instance);
 ```
+
 <!--end-code-->

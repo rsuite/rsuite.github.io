@@ -1,9 +1,6 @@
 import React from 'react';
-import ComponentExample from '../ComponentExample';
+import createComponentExample from '../createComponentExample';
 
-const context = require('./index.md');
-const examples = [];
-
-export default () => {
-  return <ComponentExample context={context} examples={examples} />;
-};
+export default createComponentExample({
+  id: 'Schema'
+});

@@ -11,7 +11,6 @@ class Frame extends Component {
   }
   handleToggleMenu = show => {
     const { showSubmenu } = this.state;
-    console.log(show, showSubmenu);
     this.setState({
       showSubmenu: _.isUndefined(show) ? !showSubmenu : show
     });

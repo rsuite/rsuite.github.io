@@ -1,4 +1,4 @@
-# Navbar 导航栏 
+# Navbar 导航栏
 
 对 Nav 的一个封装，一般用于页面顶部导航。
 
@@ -23,5 +23,5 @@ import { Navbar } from 'rsuite';
 | 属性名称       | 类型`(默认值)`                                    | 描述                 |
 | -------------- | ------------------------------------------------- | -------------------- |
 | appearance     | enum: 'default', 'inverse', 'subtle'`('default')` | 导航栏外观           |
-| classPrefix    | string `('navbar')`                               | className 前缀       |
+| classPrefix    | string `('navbar')`                               | 组件 CSS 类的前缀       |
 | componentClass | React.ElementType `('div')`                       | 为组件自定义元素类型 |

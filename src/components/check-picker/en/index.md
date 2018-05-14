@@ -20,30 +20,30 @@ import { CheckPicker } from 'rsuite';
 
 | Property           | Type`(Default)`                                              | Description                                             |
 | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------- |
-| classPrefix        | string `('picker-select')`                                   | prefix of className                                     |
-| data \*            | Array&lt;DataItemType&gt;                                    | componetn data                                          |
-| disabled           | boolean                                                      | whether disabled componet                               |
-| disabledItemValues | Array&lt;DataItemType.value&gt;                              | values of disabledItems                                 |
-| groupBy            | string                                                       | set group condition key in data                         |
-| valueKey           | string `('value')`                                           | set value key in data                                   |
-| labelKey           | string `('label')`                                           | set label key in data                                   |
-| value              | any                                                          | (Controlled) specifies the values of the selected items |
-| defaultValue       | any                                                          | (UnControlled) default values of the selected items     |
-| height             | number `(320)`                                               | height of Dropdown                                      |
-| onChange           | (value:DataItemType.value, event)=>void                      | callback fired when value change                        |
-| onSelect           | (value:DataItemType.value, item: DataItemType , event)=>void | callback fired when item is selected                    |
-| onSearch           | (searchKeyword:string, event)=>void                          | callback fired when search                              |
-| onOpen             | ()=>void                                                     | callback fired when open component                      |
-| onClose            | ()=>void                                                     | callback fired when close component                     |
-| onGroupTitleClick  | (event)=>void                                                | callback fired when click the group title               |
-| placeholder        | React.Node `('Select')`                                      |                                                         |
-| renderValue        | (label:React.Node, item: DataItemType)=>React.Node           | custom render selected items                            |
-| renderMenuItem     | (label:React.Node, item: DataItemType)=>React.Node           | custom render menuItems                                 |
-| renderMenuGroup    | (groupTitle:React.Node, item:DataItemType)=>React.Node       | custom render menu Group                                |
-| renderExtraFooter  | ()=>React.Node                                               | custom render extra footer                              |
-| searchable         | boolean `(true)`                                             | whether dispaly search input box                        |
-| cleanable          | boolean `(true)`                                             | whether the selected value can be cleared               |
-| placement          | enum: [Placement](#Placement)`('bottomLeft')`                | placement of component                                  |
+| classPrefix        | string `('picker-select')`                                   | The prefix of the component CSS class                   |
+| data \*            | Array&lt;DataItemType&gt;                                    | The data of component                                   |
+| disabled           | boolean                                                      | Whether disabled componet                               |
+| disabledItemValues | Array&lt;DataItemType.value&gt;                              | Values of disabledItems                                 |
+| groupBy            | string                                                       | Set group condition key in data                         |
+| valueKey           | string `('value')`                                           | Set value key in data                                   |
+| labelKey           | string `('label')`                                           | Set label key in data                                   |
+| value              | any                                                          | Specifies the values of the selected items (Controlled) |
+| defaultValue       | any                                                          | Default values of the selected items                    |
+| height             | number `(320)`                                               | The height of Dropdown                                      |
+| onChange           | (value:DataItemType.value, event)=>void                      | Callback fired when value change                        |
+| onSelect           | (value:DataItemType.value, item: DataItemType , event)=>void | Callback fired when item is selected                    |
+| onSearch           | (searchKeyword:string, event)=>void                          | Callback fired when search                              |
+| onOpen             | ()=>void                                                     | Callback fired when open component                      |
+| onClose            | ()=>void                                                     | Callback fired when close component                     |
+| onGroupTitleClick  | (event)=>void                                                | Callback fired when click the group title               |
+| placeholder        | React.Node `('Select')`                                      | Setting placeholders                                    |
+| renderValue        | (label:React.Node, item: DataItemType)=>React.Node           | Custom render selected items                            |
+| renderMenuItem     | (label:React.Node, item: DataItemType)=>React.Node           | Custom render menuItems                                 |
+| renderMenuGroup    | (groupTitle:React.Node, item:DataItemType)=>React.Node       | Custom render menu Group                                |
+| renderExtraFooter  | ()=>React.Node                                               | Custom render extra footer                              |
+| searchable         | boolean `(true)`                                             | Whether dispaly search input box                        |
+| cleanable          | boolean `(true)`                                             | Whether the selected value can be cleared               |
+| placement          | enum: [Placement](#Placement)`('bottomLeft')`                | The placement of component                              |
 
 ## Types
 

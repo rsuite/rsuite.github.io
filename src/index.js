@@ -1,65 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { hot } from 'react-hot-loader';
-import {
-  Router,
-  Route,
-  IndexRoute,
-  IndexRedirect,
-  hashHistory,
-  browserHistory
-} from 'react-router';
-
-// style
-import './less/index.less';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { IntlProvider } from 'rsuite-intl';
 
 import App from './App';
-import Frame from './fixtures/Frame';
 import Home from './Home';
 
 import ready from './ready';
-import { setTitle, defateTilte } from './title';
-import menu from './fixtures/menu';
+import { defateTilte } from './title';
+import { createRouters } from './routers';
+import { getDict } from './locales';
 
-const routes = menu.map(item => {
-  const children = [];
-  item.children.forEach(child => {
-    if (!child.group && !child.target) {
-      children.push(
-        <Route
-          key={child.id}
-          path={child.id}
-          component={require(`./${item.id}/${child.id}`)}
-          onEnter={() => {
-            setTitle(`${child.title || ''} ${child.name} - ${item.name}`);
-          }}
-        />
-      );
-    }
-  });
-
-  return (
-    <Route key={item.id} path={item.id} component={Frame}>
-      {children}
-    </Route>
-  );
-});
-
+const locale = 'zh';
 const AppWithRouter = () => (
-  <Router history={browserHistory}>
-    <Route path="/" component={App}>
-      <IndexRoute component={Home} onEnter={defateTilte} />
-      {routes}
-    </Route>
-  </Router>
+  <IntlProvider locale={getDict(locale)}>
+    <Router history={browserHistory}>
+      <Route path="/" component={App}>
+        <IndexRoute component={Home} onEnter={defateTilte} />
+        {createRouters(locale)}
+      </Route>
+    </Router>
+  </IntlProvider>
 );
-
-/*
-if (__DEV__) {
-  const { whyDidYouUpdate } = require('why-did-you-update');
-  whyDidYouUpdate(React);
-}
-*/
 
 const hotRender = Component => {
   ReactDOM.render(<Component />, document.getElementById('root'));

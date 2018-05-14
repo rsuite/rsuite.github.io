@@ -1,3 +1,6 @@
+import { getDict } from './locales';
+
+const dist = getDict();
 const TITLE = 'RSUITE 3 | React Suite';
 
 export const pageview = title => {
@@ -15,7 +18,7 @@ export const setTitle = title => {
 };
 
 export const defateTilte = () => {
-  const newTitle = `${TITLE} |  一套 React 的 UI 组件库`;
+  const newTitle = `${TITLE} | ${dist.common.resume}`;
   document.title = newTitle;
   pageview(newTitle);
 };

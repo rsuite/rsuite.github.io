@@ -25,6 +25,6 @@ import { Toggle } from 'rsuite';
 | disabled          | boolean                |          |      | 禁用                 |
 | checkedChildren   | node                   |          |      | 选中显示的内容       |
 | unCheckedChildren | node                   |          |      | 非选中显示的内容     |
-| classPrefix       | string                 | 'toggle' |      | class 前缀           |
+| classPrefix       | string                 | 'toggle' |      | 组件 CSS 类的前缀           |
 | size              | enum: 'lg', 'md', 'sm' |          |      | 开关尺寸             |
 | onChange          | function               |          |      | 状态改变时的回调函数 |

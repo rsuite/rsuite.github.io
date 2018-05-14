@@ -1,8 +1,6 @@
 import React from 'react';
 import JSONTree from 'react-json-tree';
 
-import ComponentExample from '../ComponentExample';
-
 import {
   HelpBlock,
   Form,
@@ -31,20 +29,7 @@ import {
   Alert,
   SelectPicker
 } from '../../rsuiteSource';
-
-const context = require('./index.md');
-const examples = [
-  require('./basic.md'),
-  require('./fluid.md'),
-  require('./horizontal.md'),
-  require('./inline.md'),
-  require('./modal-layout.md'),
-  require('./help-block.md'),
-  require('./error-message.md'),
-  require('./form-check.md'),
-  require('./custom-form-control.md'),
-  require('./custom-check-form.md')
-];
+import createComponentExample from '../createComponentExample';
 
 const JSONView = ({ formValue, formError }) => (
   <Row style={{ marginBottom: 10 }}>
@@ -62,42 +47,48 @@ const JSONView = ({ formValue, formError }) => (
   </Row>
 );
 
-export default () => {
-  return (
-    <ComponentExample
-      id="Form"
-      dependencies={{
-        Alert,
-        Row,
-        Col,
-        Schema,
-        HelpBlock,
-        Form,
-        FormGroup,
-        FormControl,
-        InputGroup,
-        InputNumber,
-        ErrorMessage,
-        Dropdown,
-        Toggle,
-        Icon,
-        Button,
-        ButtonGroup,
-        ButtonToolbar,
-        ControlLabel,
-        CheckboxGroup,
-        CheckPicker,
-        SelectPicker,
-        RadioGroup,
-        Checkbox,
-        Panel,
-        Radio,
-        Modal,
-        JSONTree,
-        JSONView
-      }}
-      context={context}
-      examples={examples}
-    />
-  );
-};
+export default createComponentExample({
+  id: 'Form',
+  examples: [
+    'basic',
+    'fluid',
+    'horizontal',
+    'inline',
+    'modal-layout',
+    'help-block',
+    'error-message',
+    'form-check',
+    'custom-form-control',
+    'custom-check-form'
+  ],
+  dependencies: {
+    Alert,
+    Row,
+    Col,
+    Schema,
+    HelpBlock,
+    Form,
+    FormGroup,
+    FormControl,
+    InputGroup,
+    InputNumber,
+    ErrorMessage,
+    Dropdown,
+    Toggle,
+    Icon,
+    Button,
+    ButtonGroup,
+    ButtonToolbar,
+    ControlLabel,
+    CheckboxGroup,
+    CheckPicker,
+    SelectPicker,
+    RadioGroup,
+    Checkbox,
+    Panel,
+    Radio,
+    Modal,
+    JSONTree,
+    JSONView
+  }
+});

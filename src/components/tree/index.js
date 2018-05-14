@@ -1,21 +1,13 @@
 import React from 'react';
-import ComponentExample from '../ComponentExample';
 import { Tree } from '../../rsuiteSource';
 import data from '../../resources/data/city';
+import createComponentExample from '../createComponentExample';
 
-const context = require('./index.md');
-const examples = [require('./basic.md')];
-
-export default () => {
-  return (
-    <ComponentExample
-      id="Tree"
-      context={context}
-      examples={examples}
-      dependencies={{
-        Tree,
-        data
-      }}
-    />
-  );
-};
+export default createComponentExample({
+  id: 'Tree',
+  examples: ['basic'],
+  dependencies: {
+    Tree,
+    data
+  }
+});

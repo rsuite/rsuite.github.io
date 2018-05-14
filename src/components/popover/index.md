@@ -21,7 +21,7 @@ import { Popover, Whisper } from 'rsuite';
 
 | 属性名称    | 类型                 | 描述           |
 | ----------- | -------------------- | -------------- |
-| classPrefix | string `('popover')` | className 前缀 |
+| classPrefix | string `('popover')` | 组件 CSS 类的前缀 |
 | children \* | React.Node           | 组件的内容     |
 | title       | React.Node           | 标题           |
 

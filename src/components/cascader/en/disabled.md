@@ -1,23 +1,18 @@
 ### Disabled
 
 <!--start-code-->
-```js
 
+```js
 /**
  * import data from
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/province.js
  */
 
-const instance=(
+const instance = (
   <div>
-    <Cascader
-      data={data}
-      valueKey="name"
-      labelKey="name"
-      disabled
-    />
+    <Cascader data={data} valueKey="name" labelKey="name" disabled />
     <hr />
-    <p>禁用选项</p>
+    <p>Disabled Option</p>
     <Cascader
       data={data}
       valueKey="name"
@@ -26,7 +21,8 @@ const instance=(
       disabledItemValues={['北京', '广东', '天津']}
     />
   </div>
-)
+);
 ReactDOM.render(instance);
 ```
+
 <!--end-code-->

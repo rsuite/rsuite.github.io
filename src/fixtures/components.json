@@ -448,11 +448,11 @@
   },
   {
     "id": "flexbox-grid",
-    "name": "FlexboxGird",
+    "name": "FlexboxGrid",
     "title": "弹性栅格",
     "components": [
-      "FlexboxGird",
-      "FlexboxGird.Item"
+      "FlexboxGrid",
+      "FlexboxGrid.Item"
     ]
   },
   {

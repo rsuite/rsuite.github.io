@@ -20,31 +20,12 @@ function WithTooltipButton({ children, tip, ...props }) {
 const svgStyle = {
   fill: '#fff'
 };
-const menu = [
-  {
-    key: 'guide',
-    tip: '新手指南',
-    to: '/guide/introduction',
-    icon: guide
-  },
-  {
-    key: 'components',
-    tip: '组件',
-    to: '/components/overview',
-    icon: component
-  },
-  {
-    key: 'tools',
-    tip: '工具',
-    to: '/tools/palette',
-    icon: tools
-  }
-];
 
 class TopLevelNav extends React.Component {
   static contextTypes = {
     showSubmenu: PropTypes.bool,
     onToggleMenu: PropTypes.func,
+    locale: PropTypes.object,
     router: PropTypes.object.isRequired
   };
 
@@ -67,21 +48,47 @@ class TopLevelNav extends React.Component {
   };
   render() {
     const { children, showSubmenu } = this.props;
-    const { router } = this.context;
+    const { router, locale } = this.context;
+    const localePath = locale.id === 'en-US' ? '/en/' : '/';
+
+    const menu = [
+      {
+        key: 'guide',
+        tip: locale.common.guide,
+        to: `${localePath}guide/introduction`,
+        icon: guide
+      },
+      {
+        key: 'components',
+        tip: locale.common.components,
+        to: `${localePath}components/overview`,
+        icon: component
+      },
+      {
+        key: 'tools',
+        tip: locale.common.tools,
+        to: `${localePath}tools/palette`,
+        icon: tools
+      }
+    ];
 
     return (
       <div className="top-level-nav">
-        <Link to="/">
+        <Link to={`${localePath}`}>
           <Logo width={26} className="logo-sm" />
         </Link>
 
         <div className="top-level-nav-menu">
-          <WithTooltipButton tip="搜索" className="icon-btn-circle" onClick={this.showSearchDrawer}>
+          <WithTooltipButton
+            tip={locale.common.search}
+            className="icon-btn-circle"
+            onClick={this.showSearchDrawer}
+          >
             <Icon icon={search} svgStyle={svgStyle} size="lg" />
           </WithTooltipButton>
 
           <WithTooltipButton
-            tip="设计原型"
+            tip={locale.common.design}
             className="icon-btn-circle"
             componentClass="a"
             target="_blank"
@@ -123,7 +130,7 @@ class TopLevelNav extends React.Component {
             </WithTooltipButton>
 
             <WithTooltipButton
-              tip={showSubmenu ? '收起菜单' : '展开菜单'}
+              tip={showSubmenu ? locale.common.closeMenu : locale.common.openMenu}
               className="icon-btn-circle"
               onClick={this.handleToggleMenu}
             >

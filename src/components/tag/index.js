@@ -1,22 +1,14 @@
 import React from 'react';
-import ComponentExample from '../ComponentExample';
 import { Tag, Icon, IconButton, Input } from '../../rsuiteSource';
+import createComponentExample from '../createComponentExample';
 
-const context = require('./index.md');
-const examples = [require('./basic.md'), require('./color.md'), require('./dynamic.md')];
-
-export default () => {
-  return (
-    <ComponentExample
-      id="Tag"
-      dependencies={{
-        Tag,
-        IconButton,
-        Input,
-        Icon
-      }}
-      context={context}
-      examples={examples}
-    />
-  );
-};
+export default createComponentExample({
+  id: 'Tag',
+  examples: ['basic', 'color', 'dynamic'],
+  dependencies: {
+    Tag,
+    IconButton,
+    Input,
+    Icon
+  }
+});

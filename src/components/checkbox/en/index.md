@@ -21,24 +21,24 @@ import { Checkbox, CheckboxGroup } from 'rsuite';
 
 | Property       | Type `(default)`                                                 | Description                                                             |
 | -------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| id             | React.ElementType                                                | custom element type for the component                                   |
-| name           | string                                                           | used for the name of the form                                           |
-| inline         | boolean                                                          | inline layout                                                           |
+| id             | React.ElementType                                                | Custom element type for the component                                   |
+| name           | string                                                           | Used for the name of the form                                           |
+| inline         | boolean                                                          | Inline layout                                                           |
 | title          | string                                                           | HTML title                                                              |
-| disabled       | boolean                                                          | whether disabled                                                        |
-| checked        | boolean                                                          | specifies whether the checkbox is selected                              |
+| disabled       | boolean                                                          | Whether disabled                                                        |
+| checked        | boolean                                                          | Specifies whether the checkbox is selected                              |
 | defaultChecked | boolean                                                          | Specifies the initial state: whether or not the checkbox is selected    |
-| onChange       | (value: any, checked: boolean, event: SyntheticInputEvent)=>void | callback fired when checkbox is triggered and state changes             |
-| inputRef       | React.ElementRef                                                 | ref of input element                                                    |
-| value          | any                                                              | correspond to the value of CheckboxGroup, determine whether to select   |
+| onChange       | (value: any, checked: boolean, event: SyntheticInputEvent)=>void | Callback fired when checkbox is triggered and state changes             |
+| inputRef       | React.ElementRef                                                 | Ref of input element                                                    |
+| value          | any                                                              | Correspond to the value of CheckboxGroup, determine whether to select   |
 | indeterminate  | boolean                                                          | When being a checkbox , setting styles after the child part is selected |
 
 ### `<CheckboxGroup>`
 
 | Property     | Type `(default)`        | Description                                                 |
 | ------------ | ----------------------- | ----------------------------------------------------------- |
-| name         | string                  | used for the name of the form                               |
-| inline       | boolean                 | inline layout                                               |
-| value        | Array                   | (Controlled) value of checked box                           |
-| defaultValue | Array                   | default value                                               |
-| onChange     | (value:any,event)=>void | callback fired when checkbox is triggered and state changes |
+| name         | string                  | Used for the name of the form                               |
+| inline       | boolean                 | Inline layout                                               |
+| value        | Array                   | Value of checked box  (Controlled)                          |
+| defaultValue | Array                   | Default value                                               |
+| onChange     | (value:any,event)=>void | Callback fired when checkbox is triggered and state changes |
