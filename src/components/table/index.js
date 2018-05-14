@@ -19,9 +19,9 @@ import { getDict } from '../../locales';
 
 const { HeaderCell, Pagination, Cell, Column } = Table;
 const TablePagination = Pagination;
-const dict = getDict();
 
 export default locale => {
+  const dict = getDict(locale);
   const localePath = locale === 'en' ? 'en/' : '';
   const tabExamples = [
     'resizable',
@@ -43,6 +43,7 @@ export default locale => {
   const ComponentExample = createComponentExample({
     id: 'Table',
     examples: ['default'],
+    dict,
     dependencies: {
       Checkbox,
       Toggle,

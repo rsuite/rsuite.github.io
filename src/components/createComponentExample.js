@@ -15,8 +15,6 @@ const babelOptions = {
   plugins: ['transform-class-properties']
 };
 
-const dist = getDict();
-
 const CustomCodeView = ({ dependencies, ...rest }) => (
   <CodeView
     {...rest}
@@ -29,6 +27,7 @@ const CustomCodeView = ({ dependencies, ...rest }) => (
 const createComponentExample = ({ id, examples = [], dependencies }) => {
   return locale => {
     const name = _.kebabCase(id);
+    const dist = getDict(locale);
     const componentPath = locale === 'en' ? `${name}/en/` : `${name}/`;
     const context = require(`./${componentPath}index.md`);
     const componentExamples = examples.map(item => require(`./${componentPath}${item}.md`));
