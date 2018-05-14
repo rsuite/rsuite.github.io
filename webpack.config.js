@@ -11,9 +11,8 @@ const iconPath = ['./node_modules/rsuite/styles', '../rsuite/styles'].map(relati
   path.resolve(__dirname, relativePath)
 );
 
-const { NODE_ENV, STYLE_DEBUG, ENV_LOCALE, LOCALE_ENV } = process.env;
+const { NODE_ENV, STYLE_DEBUG, ENV_LOCALE } = process.env;
 const __PRO__ = NODE_ENV === 'production';
-const __EN__ = LOCALE_ENV === 'en' && __PRO__;
 
 const extractLess = new ExtractTextPlugin('style.[hash].css');
 
@@ -38,12 +37,24 @@ module.exports = {
   },
   entry: {
     polyfills: './src/polyfills.js',
-    app: './src/index.js'
+    app: './src/index.js',
+    app_en: './src/index-en.js'
   },
   output: {
     filename: '[name].bundle.js?[hash]',
-    path: path.resolve(__dirname, __EN__ ? 'dist/en' : 'dist'),
-    publicPath: __EN__ ? '/en/' : '/'
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /node_modules\//,
+          name: 'vendor',
+          chunks: 'initial'
+        }
+      }
+    }
   },
   module: {
     rules: [
@@ -136,13 +147,16 @@ module.exports = {
     // new webpack.HotModuleReplacementPlugin(),
     new HtmlwebpackPlugin({
       title: 'RSUITE | 一套 React 的 UI 组件库',
+      chunks: ['vendor', 'app'],
       template: 'src/index.html',
       inject: true
     }),
-    new webpack.DefinePlugin({
-      'process.env': {
-        LOCALE_ENV: JSON.stringify(process.env.LOCALE_ENV)
-      }
+    new HtmlwebpackPlugin({
+      title: 'RSUITE | A suite of React components',
+      chunks: ['vendor', 'app_en'],
+      filename: 'en/index.html',
+      template: 'src/index.html',
+      inject: true
     })
   ],
   devtool: STYLE_DEBUG === 'SOURCE' && 'source-map'

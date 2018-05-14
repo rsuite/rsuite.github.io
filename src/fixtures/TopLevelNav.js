@@ -6,10 +6,6 @@ import { Button, Icon, IconButton, Whisper, Tooltip } from '../rsuiteSource';
 import Logo from './Logo';
 import { guide, component, tools, search, design, lightbulb, lightbulbOn } from './SvgIcons';
 import SearchDrawer from './SearchDrawer';
-import { getDict } from '../locales';
-import { localePath } from '../LOCALE_ENV';
-
-const dict = getDict();
 
 function WithTooltipButton({ children, tip, ...props }) {
   return (
@@ -24,31 +20,12 @@ function WithTooltipButton({ children, tip, ...props }) {
 const svgStyle = {
   fill: '#fff'
 };
-const menu = [
-  {
-    key: 'guide',
-    tip: dict.common.guide,
-    to: `${localePath}guide/introduction`,
-    icon: guide
-  },
-  {
-    key: 'components',
-    tip: dict.common.components,
-    to: `${localePath}components/overview`,
-    icon: component
-  },
-  {
-    key: 'tools',
-    tip: dict.common.tools,
-    to: `${localePath}tools/palette`,
-    icon: tools
-  }
-];
 
 class TopLevelNav extends React.Component {
   static contextTypes = {
     showSubmenu: PropTypes.bool,
     onToggleMenu: PropTypes.func,
+    locale: PropTypes.object,
     router: PropTypes.object.isRequired
   };
 
@@ -71,7 +48,29 @@ class TopLevelNav extends React.Component {
   };
   render() {
     const { children, showSubmenu } = this.props;
-    const { router } = this.context;
+    const { router, locale } = this.context;
+    const localePath = locale.id === 'en-US' ? '/en/' : '/';
+
+    const menu = [
+      {
+        key: 'guide',
+        tip: locale.common.guide,
+        to: `${localePath}guide/introduction`,
+        icon: guide
+      },
+      {
+        key: 'components',
+        tip: locale.common.components,
+        to: `${localePath}components/overview`,
+        icon: component
+      },
+      {
+        key: 'tools',
+        tip: locale.common.tools,
+        to: `${localePath}tools/palette`,
+        icon: tools
+      }
+    ];
 
     return (
       <div className="top-level-nav">
@@ -81,7 +80,7 @@ class TopLevelNav extends React.Component {
 
         <div className="top-level-nav-menu">
           <WithTooltipButton
-            tip={dict.common.search}
+            tip={locale.common.search}
             className="icon-btn-circle"
             onClick={this.showSearchDrawer}
           >
@@ -89,7 +88,7 @@ class TopLevelNav extends React.Component {
           </WithTooltipButton>
 
           <WithTooltipButton
-            tip={dict.common.design}
+            tip={locale.common.design}
             className="icon-btn-circle"
             componentClass="a"
             target="_blank"
@@ -131,7 +130,7 @@ class TopLevelNav extends React.Component {
             </WithTooltipButton>
 
             <WithTooltipButton
-              tip={showSubmenu ? dict.common.closeMenu : dict.common.openMenu}
+              tip={showSubmenu ? locale.common.closeMenu : locale.common.openMenu}
               className="icon-btn-circle"
               onClick={this.handleToggleMenu}
             >

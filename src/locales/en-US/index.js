@@ -1,4 +1,5 @@
 export default {
+  id: 'en-US',
   common: {
     search: 'Search',
     resume: 'A suite of React components',
@@ -19,7 +20,7 @@ export default {
     openMenu: 'Open Menu',
     edit: 'Edit the current page',
     newIssues: 'Report Bug',
-    collapseMenu:'Collapse Menu'
+    collapseMenu: 'Collapse Menu'
   },
   table: {
     'tab.resizable': 'Resizable',

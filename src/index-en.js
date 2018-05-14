@@ -12,11 +12,11 @@ import { defateTilte } from './title';
 import { createRouters } from './routers';
 import { getDict } from './locales';
 
-const locale = 'zh';
+const locale = 'en';
 const AppWithRouter = () => (
   <IntlProvider locale={getDict(locale)}>
     <Router history={browserHistory}>
-      <Route path="/" component={App}>
+      <Route path="/en/" component={App}>
         <IndexRoute component={Home} onEnter={defateTilte} />
         {createRouters(locale)}
       </Route>

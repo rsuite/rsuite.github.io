@@ -1,4 +1,5 @@
 export default {
+  id: 'zh-CN',
   common: {
     search: '搜索',
     resume: '一套 React 的 UI 组件库',

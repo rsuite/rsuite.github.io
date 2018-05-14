@@ -1,4 +1,3 @@
-import LOCALE_ENV from '../LOCALE_ENV';
 import en from './en-US';
 import zh from './zh-CN';
 
@@ -7,8 +6,8 @@ const dict = {
   zh: zh
 };
 
-export function getDict() {
-  if (LOCALE_ENV === 'en') {
+export function getDict(locale) {
+  if (locale === 'en') {
     return en;
   }
   return zh;

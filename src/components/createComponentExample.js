@@ -8,7 +8,6 @@ import Paragraph from '../fixtures/Paragraph';
 import MarkdownView from '../fixtures/MarkdownView';
 import CodeView from '../fixtures/CodeView';
 import components from '../fixtures/components';
-import LOCALE_ENV from '../LOCALE_ENV';
 import { getDict } from '../locales';
 
 const babelOptions = {
@@ -28,93 +27,95 @@ const CustomCodeView = ({ dependencies, ...rest }) => (
 );
 
 const createComponentExample = ({ id, examples = [], dependencies }) => {
-  const name = _.kebabCase(id);
-  const componentPath = LOCALE_ENV === 'en' ? `${name}/en/` : `${name}/`;
-  const context = require(`./${componentPath}index.md`);
-  const componentExamples = examples.map(item => require(`./${componentPath}${item}.md`));
+  return locale => {
+    const name = _.kebabCase(id);
+    const componentPath = locale === 'en' ? `${name}/en/` : `${name}/`;
+    const context = require(`./${componentPath}index.md`);
+    const componentExamples = examples.map(item => require(`./${componentPath}${item}.md`));
 
-  class ComponentExample extends React.Component {
-    static defaultProps = {
-      tabExamples: []
-    };
-
-    constructor(props) {
-      super(props);
-      const component = components.find(item => item.id === id || item.name === id);
-      this.state = {
-        tabIndex: 0,
-        designHash: _.get(component, 'designHash'),
-        routerId: _.get(component, 'id')
+    class ComponentExample extends React.Component {
+      static defaultProps = {
+        tabExamples: []
       };
-    }
 
-    renderExampleByTabIndex() {
-      const { tabExamples } = this.props;
-      const { tabIndex } = this.state;
-
-      if (!tabExamples.length) {
-        return null;
+      constructor(props) {
+        super(props);
+        const component = components.find(item => item.id === id || item.name === id);
+        this.state = {
+          tabIndex: 0,
+          designHash: _.get(component, 'designHash'),
+          routerId: _.get(component, 'id')
+        };
       }
 
-      const { sorce } = tabExamples[tabIndex];
+      renderExampleByTabIndex() {
+        const { tabExamples } = this.props;
+        const { tabIndex } = this.state;
 
-      return <CustomCodeView key={tabIndex} source={sorce} dependencies={dependencies} />;
-    }
+        if (!tabExamples.length) {
+          return null;
+        }
 
-    renderTabs() {
-      const { tabExamples } = this.props;
-      const { tabIndex } = this.state;
+        const { sorce } = tabExamples[tabIndex];
 
-      if (!tabExamples.length) {
-        return null;
+        return <CustomCodeView key={tabIndex} source={sorce} dependencies={dependencies} />;
       }
-      return (
-        <div>
-          <h3>{dist.common.advanced} </h3>
 
-          <ButtonGroup size="sm">
-            {tabExamples.map((item, index) => (
-              <Button
-                key={index}
-                appearance={index === tabIndex ? 'primary' : 'default'}
-                onClick={() => {
-                  this.setState({ tabIndex: index });
-                }}
-              >
-                {item.title}
-              </Button>
+      renderTabs() {
+        const { tabExamples } = this.props;
+        const { tabIndex } = this.state;
+
+        if (!tabExamples.length) {
+          return null;
+        }
+        return (
+          <div>
+            <h3>{dist.common.advanced} </h3>
+
+            <ButtonGroup size="sm">
+              {tabExamples.map((item, index) => (
+                <Button
+                  key={index}
+                  appearance={index === tabIndex ? 'primary' : 'default'}
+                  onClick={() => {
+                    this.setState({ tabIndex: index });
+                  }}
+                >
+                  {item.title}
+                </Button>
+              ))}
+            </ButtonGroup>
+          </div>
+        );
+      }
+      render() {
+        const { tabExamples = [], children } = this.props;
+
+        const { designHash, routerId } = this.state;
+        const docs = context.split('<!--{demo}-->');
+        const header = docs[0];
+        const footer = docs[1];
+
+        return (
+          <PageContainer
+            designHash={designHash}
+            routerId={routerId ? `components/${routerId}` : null}
+          >
+            <MarkdownView>{header}</MarkdownView>
+            {componentExamples.map((item, index) => (
+              <CustomCodeView key={index} source={item} dependencies={dependencies} />
             ))}
-          </ButtonGroup>
-        </div>
-      );
+            {this.renderTabs()}
+            {this.renderExampleByTabIndex()}
+            <MarkdownView>{footer}</MarkdownView>
+            {children}
+          </PageContainer>
+        );
+      }
     }
-    render() {
-      const { tabExamples = [], children } = this.props;
 
-      const { designHash, routerId } = this.state;
-      const docs = context.split('<!--{demo}-->');
-      const header = docs[0];
-      const footer = docs[1];
-
-      return (
-        <PageContainer
-          designHash={designHash}
-          routerId={routerId ? `components/${routerId}` : null}
-        >
-          <MarkdownView>{header}</MarkdownView>
-          {componentExamples.map((item, index) => (
-            <CustomCodeView key={index} source={item} dependencies={dependencies} />
-          ))}
-          {this.renderTabs()}
-          {this.renderExampleByTabIndex()}
-          <MarkdownView>{footer}</MarkdownView>
-          {children}
-        </PageContainer>
-      );
-    }
-  }
-
-  return ComponentExample;
+    return ComponentExample;
+  };
 };
 
 export default createComponentExample;

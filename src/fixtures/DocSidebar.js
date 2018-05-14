@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { Sidebar, Nav, Icon, FormControl } from '../rsuiteSource';
 import { Link } from 'react-router';
 import _ from 'lodash';
-import menu from './menu';
-import LOCALE_ENV from '../LOCALE_ENV';
+import { getMenu } from './menu';
 
 function filterNodesOfTree(data, check) {
   const findNodes = (nodes = []) => {
@@ -24,6 +23,7 @@ function filterNodesOfTree(data, check) {
 
 class DocSidebar extends React.Component {
   static contextTypes = {
+    locale: PropTypes.object,
     router: PropTypes.object.isRequired
   };
 
@@ -36,6 +36,8 @@ class DocSidebar extends React.Component {
   getMenuItems() {
     const { keyword } = this.state;
     const key = _.trim(keyword.toLocaleLowerCase());
+    const { locale } = this.context;
+    const menu = getMenu(locale);
     return (
       filterNodesOfTree(_.cloneDeep(menu), item => {
         if (!item.id) {
@@ -53,7 +55,9 @@ class DocSidebar extends React.Component {
     const nodeItems = [];
     const menuItems = this.getMenuItems();
     const rootPath = this.getRootPath();
-    const isActive = this.context.router.isActive;
+    const { locale, router } = this.context;
+    const isActive = router.isActive;
+    const menu = getMenu(locale);
 
     const { name: activeTitle, icon } = menu.filter(({ id }) => isActive(`${rootPath}${id}`))[0];
 
@@ -74,7 +78,7 @@ class DocSidebar extends React.Component {
           }
 
           const title =
-            LOCALE_ENV === 'en' ? null : <span className="title-zh">{child.title}</span>;
+            locale.id === 'en-US' ? null : <span className="title-zh">{child.title}</span>;
 
           if (child.target === '_blank' && child.url) {
             nodeItems.push(
