@@ -29,4 +29,4 @@ ReactDOM.render(instance);
 
 <!--end-code-->
 
-> Use the '<Dropdown>' component directly when using multi-level navigation.
+> Use the `<Dropdown>` component directly when using multi-level navigation.
