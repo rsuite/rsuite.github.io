@@ -147,13 +147,13 @@ module.exports = {
     // new webpack.HotModuleReplacementPlugin(),
     new HtmlwebpackPlugin({
       title: 'RSUITE | 一套 React 的 UI 组件库',
-      chunks: ['vendor', 'app'],
+      chunks: ['polyfills', 'vendor', 'app'],
       template: 'src/index.html',
       inject: true
     }),
     new HtmlwebpackPlugin({
       title: 'RSUITE | A suite of React components',
-      chunks: ['vendor', 'app_en'],
+      chunks: ['polyfills', 'vendor', 'app_en'],
       filename: 'en/index.html',
       template: 'src/index.html',
       inject: true
