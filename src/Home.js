@@ -17,6 +17,18 @@ class Home extends React.Component {
     super();
     this.state = {};
   }
+  componentWillMount() {
+    const { locale } = this.context;
+    let localeKey = localStorage.getItem('localeKey');
+    if (!localeKey) {
+      localeKey = navigator.language.match(/(\S+)-/)[1];
+    }
+
+    if (locale.id.match(/(\S+)-/)[1] !== localeKey) {
+      const localePath = localeKey === 'en' ? '/en/' : '/';
+      location.href = `${location.origin}${localePath}`;
+    }
+  }
 
   componentDidMount() {
     this._onWindowResizeListener = on(window, 'resize', this.handleWindowResize);

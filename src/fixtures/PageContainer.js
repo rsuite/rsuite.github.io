@@ -1,14 +1,16 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import clasNames from 'classnames';
 import { PageProvider, PageNav, PageContent } from 'rsuite-page-nav';
 
-import { Nav, Row, Col, IconButton, Icon, ButtonToolbar, Dropdown } from '../rsuiteSource';
+import { Nav, Row, Col, IconButton, Button, Icon, ButtonToolbar, Dropdown } from '../rsuiteSource';
 import { design } from './SvgIcons';
-import { getDict } from '../locales';
-
-const dict = getDict();
 
 class PageContainer extends React.Component {
+  static contextTypes = {
+    router: PropTypes.object.isRequired,
+    locale: PropTypes.object
+  };
   constructor(props) {
     super(props);
     this.state = {
@@ -20,9 +22,20 @@ class PageContainer extends React.Component {
       hideNav: !this.state.hideNav
     });
   };
+  handleChangeLanguage = () => {
+    const { locale, router } = this.context;
+    const pathname = location.pathname.replace('/en/', '');
+    const isEN = locale.id === 'en-US';
+    const nextPathName = isEN ? `/${pathname}` : `/en${pathname}`;
+    location.href = `${location.origin}${nextPathName}`;
+
+    localStorage.setItem('localeKey', isEN ? 'zh' : 'en');
+  };
   render() {
     const { children, designHash, routerId, ...rest } = this.props;
     const { hideNav } = this.state;
+    const { locale } = this.context;
+
     return (
       <PageProvider>
         <Row {...rest} className={clasNames({ ['hide-page-nav']: hideNav })}>
@@ -36,7 +49,7 @@ class PageContainer extends React.Component {
                   appearance="subtle"
                   icon={<Icon icon={design} />}
                   target="_blank"
-                  title={dict.common.design}
+                  title={locale.common.design}
                   href={`/design/index.html#${designHash}`}
                 />
               ) : null}
@@ -45,35 +58,30 @@ class PageContainer extends React.Component {
                   appearance="subtle"
                   icon={<Icon icon="edit2" />}
                   target="_blank"
-                  title={dict.common.edit}
+                  title={locale.common.edit}
                   href={`https://github.com/rsuite/rsuite.github.io/edit/master/src/${routerId}/index.md`}
                 />
               ) : null}
 
               <IconButton
                 appearance="subtle"
-                title={dict.common.newIssues}
+                title={locale.common.newIssues}
                 icon={<Icon icon="bug" />}
                 target="_blank"
                 href={' https://github.com/rsuite/rsuite/issues/new'}
               />
-              {/**
-              <Dropdown
-                title="New"
-                placement="bottomRight"
-                renderTitle={children => {
-                  return <IconButton appearance="subtle" icon={<Icon icon="globe" />} />;
-                }}
-              >
-                <Dropdown.Item eventKey="zh">简体中文</Dropdown.Item>
-                <Dropdown.Item eventKey="en">English</Dropdown.Item>
-              </Dropdown>
 
-              **/}
+              <Button
+                appearance="subtle"
+                icon={<Icon icon="bars" />}
+                onClick={this.handleChangeLanguage}
+              >
+                {locale.id === 'en-US' ? '中文' : 'EN'}
+              </Button>
 
               <IconButton
                 appearance="subtle"
-                title={dict.common.collapseMenu}
+                title={locale.common.collapseMenu}
                 icon={<Icon icon="bars" />}
                 onClick={this.handleNavicon}
               />
