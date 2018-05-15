@@ -71,7 +71,7 @@ export default getLocalePath(localePath => {
       const { color } = this.state;
 
       return (
-        <PageContainer>
+        <PageContainer hidePageNav>
           <Row>
             <Col md={24}>
               <MarkdownView>{require(`.${localePath}index.md`)}</MarkdownView>

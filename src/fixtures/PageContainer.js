@@ -14,7 +14,7 @@ class PageContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hideNav: false
+      hideNav: props.hidePageNav || false
     };
   }
   handleNavicon = () => {
@@ -32,7 +32,7 @@ class PageContainer extends React.Component {
     localStorage.setItem('localeKey', isEN ? 'zh' : 'en');
   };
   render() {
-    const { children, designHash, routerId, ...rest } = this.props;
+    const { children, designHash, routerId, hidePageNav, ...rest } = this.props;
     const { hideNav } = this.state;
     const { locale } = this.context;
 
@@ -86,6 +86,7 @@ class PageContainer extends React.Component {
                 onClick={this.handleNavicon}
               />
             </ButtonToolbar>
+
             <PageNav
               showOrderNumber={false}
               width={150}
