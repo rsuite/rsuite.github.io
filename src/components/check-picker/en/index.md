@@ -1,4 +1,4 @@
-# CheckPicker multiple selector
+# CheckPicker
 
 Used for multiple data selection, support grouping.
 

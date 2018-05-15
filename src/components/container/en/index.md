@@ -1,4 +1,4 @@
-# Container Container Layout
+# Container
 
 The container layout can define the main frame of the page.
 

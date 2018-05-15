@@ -15,7 +15,8 @@
     "build": "npm run clear-dist && npm run build-webpack",
     "test": "karma start",
     "babel": "rm -rf lib && babel src/App.js --out-dir lib",
-    "parsing-design-docs": "node ./bin/parsingDesignDocs.js"
+    "parsing-design-docs": "node ./bin/parsingDesignDocs.js",
+    "algolia":"node scripts/algolia-indices.js"
   },
   "keywords": [
     "react",
