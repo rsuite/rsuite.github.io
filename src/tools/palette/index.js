@@ -23,6 +23,7 @@ import ColorPanel from './ColorPanel';
 import ImageToColors from './ImageToColors';
 import { loadJsFile } from '../../ready';
 import getLocalePath from '../../fixtures/getLocalePath';
+import PageContainer from '../../fixtures/PageContainer';
 
 const lessUrl = 'https://cdn.bootcss.com/less.js/2.7.2/less.min.js';
 
@@ -70,7 +71,7 @@ export default getLocalePath(localePath => {
       const { color } = this.state;
 
       return (
-        <Content>
+        <PageContainer>
           <Row>
             <Col md={24}>
               <MarkdownView>{require(`.${localePath}index.md`)}</MarkdownView>
@@ -125,7 +126,7 @@ export default getLocalePath(localePath => {
               this.handleChangeComplete({ hex: value['#'] });
             }}
           />
-        </Content>
+        </PageContainer>
       );
     }
   }

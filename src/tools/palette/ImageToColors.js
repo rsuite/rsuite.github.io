@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Input, Panel, DOMHelper } from '../../rsuiteSource';
-import { getDict } from '../../locales';
-
-const dict = getDict();
 const { getOffset } = DOMHelper;
 
 function ImageColor(img) {
@@ -39,6 +36,9 @@ function ImageColor(img) {
 }
 
 class ImageToColors extends React.Component {
+  static contextTypes = {
+    locale: PropTypes.object
+  };
   static propTypes = {
     onColorChange: PropTypes.func
   };
@@ -87,17 +87,18 @@ class ImageToColors extends React.Component {
   render() {
     const { colors } = this.props;
     const { imgData, imgPosition } = this.state;
+    const { locale } = this.context;
     const dotStyles = {
       left: imgPosition.x,
       top: imgPosition.y
     };
 
     return (
-      <Panel header={<h3>{dict.palette.title}</h3>} bordered className="palette-logo-tool">
+      <Panel header={<h3>{locale.palette.title}</h3>} bordered className="palette-logo-tool">
         <ul>
-          <li>{dict.palette.step1}</li>
-          <li>{dict.palette.step2}</li>
-          <li>{dict.palette.step3}</li>
+          <li>{locale.palette.step1}</li>
+          <li>{locale.palette.step2}</li>
+          <li>{locale.palette.step3}</li>
         </ul>
         <hr />
         <Input type="file" onChange={this.handleChange} style={{ width: 200 }} />
