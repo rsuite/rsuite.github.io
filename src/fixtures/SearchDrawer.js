@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import debounce from 'lodash/debounce';
 import get from 'lodash/get';
 import algoliasearch from 'algoliasearch';
 import { Link } from 'react-router';
 import { Drawer, Input } from '../rsuiteSource';
-import { getDict } from '../locales';
-
-const dict = getDict();
 
 class SearchDrawer extends Component {
+  static contextTypes = {
+    locale: PropTypes.object
+  };
   constructor() {
     super();
     this.state = {
@@ -20,8 +21,10 @@ class SearchDrawer extends Component {
     this.initIndex();
   }
   initIndex() {
+    const { locale } = this.context;
+    const indexKey = locale.id === 'en-US' ? 'rsuite-en' : 'rsuite-zh';
     const client = algoliasearch('PTK5IGAK3K', 'dd3a62fc583bb0749dafa15cc61588bf');
-    this.index = client.initIndex('rsuite-zh');
+    this.index = client.initIndex(indexKey);
   }
   querySearch(query, cb) {
     if (!query) {
@@ -48,15 +51,16 @@ class SearchDrawer extends Component {
   render() {
     const { show, onHide } = this.props;
     const { list } = this.state;
+    const { locale } = this.context;
 
     return (
       <Drawer placement="left" size="xs" show={show} onHide={onHide}>
         <Drawer.Header>
-          <Drawer.Title>{dict.common.search}</Drawer.Title>
+          <Drawer.Title>{locale.common.search}</Drawer.Title>
         </Drawer.Header>
         <Drawer.Body>
           <Input
-            placeholder={dict.common.search}
+            placeholder={locale.common.search}
             className="search-input"
             value={this.state.keyword}
             onChange={this.handleSearch}
