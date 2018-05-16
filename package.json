@@ -16,7 +16,7 @@
     "test": "karma start",
     "babel": "rm -rf lib && babel src/App.js --out-dir lib",
     "parsing-design-docs": "node ./bin/parsingDesignDocs.js",
-    "algolia":"node scripts/algolia-indices.js"
+    "algolia": "node scripts/algolia-indices.js"
   },
   "keywords": [
     "react",
@@ -39,6 +39,7 @@
     "moment": "^2.20.1",
     "react-json-tree": "^0.11.0",
     "react-paragraph": "^1.0.0",
+    "react-text-mask": "^5.4.1",
     "rsuite": "^3.0.2",
     "rsuite-intl": "^1.0.4",
     "rsuite-page-nav": "^1.1.7",

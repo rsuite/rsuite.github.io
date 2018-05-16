@@ -1,5 +1,6 @@
 import React from 'react';
 import JSONTree from 'react-json-tree';
+import MaskedInput from 'react-text-mask';
 
 import {
   HelpBlock,
@@ -59,6 +60,7 @@ export default createComponentExample({
     'error-message',
     'form-check',
     'custom-form-control',
+    'custom-third-party-libraries',
     'custom-check-form'
   ],
   dependencies: {
@@ -89,6 +91,7 @@ export default createComponentExample({
     Radio,
     Modal,
     JSONTree,
-    JSONView
+    JSONView,
+    MaskedInput
   }
 });
