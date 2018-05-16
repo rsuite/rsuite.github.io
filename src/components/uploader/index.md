@@ -21,7 +21,7 @@ import { Uploader } from 'rsuite';
 | action \*         | string                                                                     | 文件上传地址, 必选                                                            |
 | accept            | string                                                                     | 接受上传的文件类型                                                            |
 | autoUpload        | boolean `(true)`                                                           | 选择文件后自动上传                                                            |
-| classPrefix       | string `('uploader')`                                                      | 组件 CSS 类的前缀                                                                |
+| classPrefix       | string `('uploader')`                                                      | 组件 CSS 类的前缀                                                             |
 | fileList          | Array<FileType>                                                            | 已经上传的文件列表 （受控）                                                   |
 | defaultFileList   | Array<FileType>                                                            | 已经上传的文件列表                                                            |
 | data              | Object                                                                     | 上传所带的参数                                                                |
@@ -36,9 +36,9 @@ import { Uploader } from 'rsuite';
 | shouldUpload      | (file: FileType) => boolean                                                | 允许上传文件。在文件上传前的的校验函数，返回 false 则不上传                   |
 | onChange          | (fileList: Array<FileType>) => void                                        | 上传队列发生改变的回调函数                                                    |
 | onUpload          | (file: FileType) => void                                                   | 上传文件开始的回调函数                                                        |
-| onError           | (fileList: Array<FileType>) => void                                        | 上传出现错误的回调函数                                                        |
+| onError           | (reason: Object, file: FileType) => void                                        | 上传出现错误的回调函数                                                        |
 | onSuccess         | (response: Object, file: FileType) => void                                 | 上传成功后的回调函数                                                          |
-| onProgress        | (response: Object, file: FileType) => void                                 | 上传进度发生变化的回调函数                                                    |
+| onProgress        | (percent: number, file: FileType) => void                                  | 上传进度发生变化的回调函数                                                    |
 | onPreview         | (file: FileType, event: SyntheticEvent&lt;any&gt;) => void                 | 在文件列表中，点击已上传的文件的回调函数                                      |
 | onRemove          | (file: FileType) => void                                                   | 在文件列表中，点击删除一个文件的回调函数                                      |
 | onReupload        | (file: FileType) => void                                                   | 在文件列表中，对上传失败的文件，点击重新上传的回调函数                        |
