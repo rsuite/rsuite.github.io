@@ -20,11 +20,12 @@ class Home extends React.Component {
   componentWillMount() {
     const { locale } = this.context;
     let localeKey = localStorage.getItem('localeKey');
-    if (!localeKey) {
+
+    if (localeKey === null) {
       localeKey = navigator.language.match(/(\S+)-/)[1];
     }
 
-    if (locale.id.match(/(\S+)-/)[1] !== localeKey) {
+    if (localeKey && locale.id.match(/(\S+)-/)[1] !== localeKey) {
       const localePath = localeKey === 'en' ? '/en/' : '/';
       location.href = `${location.origin}${localePath}`;
     }
