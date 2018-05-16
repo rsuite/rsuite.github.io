@@ -15,8 +15,7 @@ const model = Schema.Model({
     .isRequired('This field is required.'),
   status: ArrayType()
     .minLength(2, 'Please select at least 2 types of Status.')
-    .isRequired('This field is required.'),
-  description: StringType().isRequired('This field is required.')
+    .isRequired('This field is required.')
 });
 
 const CustomField = ({ name, message, label, accepter, error, ...props }) => (
@@ -34,8 +33,7 @@ class CustomFieldForm extends React.Component {
       number: 10,
       skills: ['Node.js'],
       browser: 'Chrome',
-      status: ['open'],
-      description: 'Hello world !'
+      status: ['open']
     };
     this.state = {
       formValue: formValue,
