@@ -8,6 +8,7 @@ import _ from 'lodash';
 import Banner from './fixtures/Banner';
 import Logo from './fixtures/Logo';
 import ReactLogo from './fixtures/ReactLogo';
+import LanguageSwitchButton from './fixtures/LanguageSwitchButton';
 
 class Home extends React.Component {
   static contextTypes = {
@@ -17,20 +18,6 @@ class Home extends React.Component {
     super();
     this.state = {};
   }
-  componentWillMount() {
-    const { locale } = this.context;
-    let localeKey = localStorage.getItem('localeKey');
-
-    if (localeKey === null) {
-      localeKey = navigator.language.match(/(\S+)-/)[1];
-    }
-
-    if (localeKey && locale.id.match(/(\S+)-/)[1] !== localeKey) {
-      const localePath = localeKey === 'en' ? '/en/' : '/';
-      location.href = `${location.origin}${localePath}`;
-    }
-  }
-
   componentDidMount() {
     this._onWindowResizeListener = on(window, 'resize', this.handleWindowResize);
     this.handleWindowResize();
@@ -100,6 +87,12 @@ class Home extends React.Component {
             />
           </div>
         </Banner>
+        <LanguageSwitchButton
+          language={locale.id}
+          href={localePath}
+          appearance={'link'}
+          className="btn-switch"
+        />
         <Content id="index-content" className="box-wrapper" />
       </div>
     );

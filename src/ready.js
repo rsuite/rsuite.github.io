@@ -1,7 +1,18 @@
 import { removeClass } from 'dom-lib';
+
+const shortKey = localeKey => localeKey.match(/(\S+)-/)[1];
 const filter = [];
+
 filter.push(
   new Promise((resolve, reject) => {
+    const localePathName = !!~location.href.indexOf('/en/') ? 'en' : 'zh';
+    const localeKey = localStorage.getItem('localeKey') || 'en-US';
+
+    if (localeKey && shortKey(localeKey) !== localePathName) {
+      location.href = [location.origin, shortKey(localeKey) === 'en' ? 'en/' : ''].join('/');
+      return;
+    }
+
     resolve();
   })
 );

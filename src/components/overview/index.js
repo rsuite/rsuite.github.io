@@ -6,7 +6,7 @@ import createComponentExample from '../createComponentExample';
 
 const context = require('./index.md');
 const examples = [];
-const components = _.get(menu, '1.children').filter(item => item.id !== 'overview');
+const components = menu[1].children.filter(item => item.id !== 'overview');
 
 export default locale => {
   const ComponentExample = createComponentExample({ id: 'overview' })(locale);

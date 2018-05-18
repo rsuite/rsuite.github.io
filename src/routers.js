@@ -9,14 +9,17 @@ export const createRouters = locale => {
     const children = [];
     item.children.forEach(child => {
       if (!child.group && !child.target) {
-        const getComponent = require(`./${item.id}/${child.id}`);
-        const component = getComponent(locale);
-
         children.push(
           <Route
             key={child.id}
             path={child.id}
-            component={component}
+            getComponents={(location, callback) => {
+              require.ensure([], require => {
+                const getComponent = require(`./${item.id}/${child.id}`);
+                const component = getComponent(locale);
+                callback(null, component);
+              });
+            }}
             onEnter={() => {
               setTitle(`${child.name} - ${item.name}`);
             }}

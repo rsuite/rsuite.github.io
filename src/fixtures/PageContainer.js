@@ -5,6 +5,7 @@ import { PageProvider, PageNav, PageContent } from 'rsuite-page-nav';
 
 import { Nav, Row, Col, IconButton, Button, Icon, ButtonToolbar, Dropdown } from '../rsuiteSource';
 import { design } from './SvgIcons';
+import LanguageSwitchButton from './LanguageSwitchButton';
 
 class PageContainer extends React.Component {
   static contextTypes = {
@@ -23,13 +24,11 @@ class PageContainer extends React.Component {
     });
   };
   handleChangeLanguage = () => {
-    const { locale, router } = this.context;
+    const { locale } = this.context;
     const pathname = location.pathname.replace('/en/', '');
     const isEN = locale.id === 'en-US';
     const nextPathName = isEN ? `/${pathname}` : `/en${pathname}`;
     location.href = `${location.origin}${nextPathName}`;
-
-    localStorage.setItem('localeKey', isEN ? 'zh' : 'en');
   };
   render() {
     const { children, designHash, routerId, hidePageNav, ...rest } = this.props;
@@ -71,13 +70,7 @@ class PageContainer extends React.Component {
                 href={' https://github.com/rsuite/rsuite/issues/new'}
               />
 
-              <Button
-                appearance="subtle"
-                icon={<Icon icon="bars" />}
-                onClick={this.handleChangeLanguage}
-              >
-                {locale.id === 'en-US' ? '中文' : 'EN'}
-              </Button>
+              <LanguageSwitchButton language={locale.id} onClick={this.handleChangeLanguage} />
 
               <IconButton
                 appearance="subtle"

@@ -20,8 +20,8 @@ class App extends React.Component {
   }
 
   render() {
-    const { location } = this.props;
-    const className = location.pathname === '/' ? 'home-page' : '';
+    const pathname = this.props.location.pathname;
+    const className = pathname === '/' || pathname === '/en/' ? 'home-page' : '';
     return (
       <div className={`doc-page ${className} night`}>
         <Grid className="doc-container" fluid>
