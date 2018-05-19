@@ -12,6 +12,11 @@ const contextTypes = {
 };
 
 class App extends React.Component {
+  componentDidMount() {
+    const { onRemoveLoading } = this.props;
+    onRemoveLoading && onRemoveLoading();
+  }
+
   componentWillReceiveProps(nextProps) {
     const { location } = this.props;
     if (get(location, 'pathname') !== get(nextProps, 'location.pathname')) {

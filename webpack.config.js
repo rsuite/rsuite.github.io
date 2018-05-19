@@ -5,7 +5,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
 const markdownRenderer = require('react-markdown-reader').renderer;
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const CompressionPlugin = require('compression-webpack-plugin');
 
 const iconPath = ['./node_modules/rsuite/styles', '../rsuite/styles'].map(relativePath =>
   path.resolve(__dirname, relativePath)
@@ -63,7 +62,7 @@ module.exports = {
       {
         test: /\.js$/,
         use: [
-          'transform-loader?brfs', // Use browserify transforms as webpack-loader.
+          //'transform-loader?brfs', // Use browserify transforms as webpack-loader.
           'babel-loader?babelrc'
         ],
         exclude: /node_modules/
@@ -158,7 +157,7 @@ module.exports = {
       template: 'src/index.html',
       inject: true
     }),
-    //new BundleAnalyzerPlugin({ openAnalyzer: false })
+    new BundleAnalyzerPlugin({ openAnalyzer: false })
   ],
   devtool: STYLE_DEBUG === 'SOURCE' && 'source-map'
 };

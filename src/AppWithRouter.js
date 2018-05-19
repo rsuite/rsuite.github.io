@@ -6,6 +6,7 @@ import { IntlProvider } from 'rsuite-intl';
 
 import App from './App';
 import Home from './Home';
+import PageLoader from './fixtures/PageLoader';
 
 import ready from './ready';
 import { defateTilte } from './title';
@@ -13,22 +14,68 @@ import { createRouters } from './routers';
 import { getDict } from './locales';
 
 export default locale => {
-  const AppWithRouter = () => (
-    <IntlProvider locale={getDict(locale)}>
-      <Router history={browserHistory}>
-        <Route path={locale === 'en' ? '/en/' : '/'} component={App}>
-          <IndexRoute component={Home} onEnter={defateTilte} />
-          {createRouters(locale)}
-        </Route>
-      </Router>
-    </IntlProvider>
-  );
+  class AppRouters extends React.Component {
+    shouldComponentUpdate() {
+      return false;
+    }
+    render() {
+      const { onEnter, onEntered, onRemoveLoading } = this.props;
+      return (
+        <IntlProvider locale={getDict(locale)}>
+          <Router history={browserHistory}>
+            <Route
+              path={locale === 'en' ? '/en/' : '/'}
+              component={props => <App {...props} onRemoveLoading={onRemoveLoading} />}
+            >
+              <IndexRoute component={Home} onEnter={defateTilte} />
+              {createRouters(locale, onEnter, onEntered)}
+            </Route>
+          </Router>
+        </IntlProvider>
+      );
+    }
+  }
+
+  class AppWithRouter extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        Enter: false
+      };
+    }
+
+    handleEnter = () => {
+      this.setState({
+        Enter: true
+      });
+    };
+    handleEntered = () => {
+      this.setState({
+        Enter: false
+      });
+    };
+    render() {
+      const { onRemoveLoading } = this.props;
+      const { Enter } = this.state;
+
+      return (
+        <div>
+          <PageLoader show={Enter} />
+          <AppRouters
+            onRemoveLoading={onRemoveLoading}
+            onEnter={this.handleEnter}
+            onEntered={this.handleEntered}
+          />
+        </div>
+      );
+    }
+  }
 
   const hotRender = Component => {
     ReactDOM.render(<Component />, document.getElementById('root'));
   };
 
-  ready(values => {
-    hotRender(hot(module)(AppWithRouter));
+  ready((values, callback) => {
+    hotRender(hot(module)(() => <AppWithRouter onRemoveLoading={callback} />));
   });
 };

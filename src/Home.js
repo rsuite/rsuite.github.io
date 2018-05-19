@@ -16,13 +16,15 @@ class Home extends React.Component {
   };
   constructor(props) {
     super();
-    this.state = {};
+    this.state = {
+      running: false
+    };
   }
   componentDidMount() {
     this._onWindowResizeListener = on(window, 'resize', this.handleWindowResize);
     this.handleWindowResize();
     const setRunning = setTimeout(() => {
-      this.setState({ running: true });
+      this.home && this.setState({ running: true });
       clearTimeout(setRunning);
     }, 1.7e3);
   }
@@ -42,9 +44,15 @@ class Home extends React.Component {
 
   render() {
     const { locale } = this.context;
+    const { showLaserBeam } = this.state;
     const localePath = locale.id === 'en-US' ? '/en/' : '/';
+
     return (
-      <div>
+      <div
+        ref={ref => {
+          this.home = ref;
+        }}
+      >
         <Banner id="banner">
           <div className="banner-content">
             <h1 className="logo">
@@ -56,22 +64,24 @@ class Home extends React.Component {
               <Link className="hvr-underline-from-center" to={`${localePath}guide/introduction`}>
                 {locale.common.guide}
               </Link>
-              <a className="hvr-underline-from-center" href="/design/index.html" target="_blank">
-                {locale.common.design}
-              </a>
+
               <Link className="hvr-underline-from-center" to={`${localePath}components/overview`}>
                 {locale.common.components}
               </Link>
               <Link className="hvr-underline-from-center" to={`${localePath}tools/palette`}>
                 {locale.common.tools}
               </Link>
+              <a className="hvr-underline-from-center" href="/design/index.html" target="_blank">
+                {locale.common.design}
+                <Icon icon="external-link-square" className="external-link" />
+              </a>
               <a
                 className="hvr-underline-from-center"
                 href="https://github.com/rsuite/rsuite"
                 target="_blank"
               >
                 GitHub
-                <Icon icon="external-link" className="external-link" />
+                <Icon icon="external-link-square" className="external-link" />
               </a>
             </div>
             <ReactLogo

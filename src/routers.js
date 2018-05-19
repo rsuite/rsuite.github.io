@@ -4,7 +4,7 @@ import menu from './fixtures/menu';
 import Frame from './fixtures/Frame';
 import { setTitle } from './title';
 
-export const createRouters = locale => {
+export const createRouters = (locale, onEnter, onEntered) => {
   return menu.map(item => {
     const children = [];
     item.children.forEach(child => {
@@ -14,10 +14,12 @@ export const createRouters = locale => {
             key={child.id}
             path={child.id}
             getComponents={(location, callback) => {
+              onEnter();
               require.ensure([], require => {
                 const getComponent = require(`./${item.id}/${child.id}`);
                 const component = getComponent(locale);
                 callback(null, component);
+                onEntered();
               });
             }}
             onEnter={() => {
