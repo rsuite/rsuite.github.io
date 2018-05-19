@@ -1,6 +1,13 @@
 import { removeClass } from 'dom-lib';
 
-const shortKey = localeKey => localeKey.match(/(\S+)-/)[1];
+const shortKey = localeKey => {
+  try {
+    return localeKey.match(/(\S+)-/)[1];
+  } catch (error) {
+    return 'en';
+  }
+};
+
 const filter = [];
 
 filter.push(
