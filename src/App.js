@@ -12,6 +12,11 @@ const contextTypes = {
 };
 
 class App extends React.Component {
+  componentDidMount() {
+    const { onRemoveLoading } = this.props;
+    onRemoveLoading && onRemoveLoading();
+  }
+
   componentWillReceiveProps(nextProps) {
     const { location } = this.props;
     if (get(location, 'pathname') !== get(nextProps, 'location.pathname')) {
@@ -20,8 +25,8 @@ class App extends React.Component {
   }
 
   render() {
-    const { location } = this.props;
-    const className = location.pathname === '/' ? 'home-page' : '';
+    const pathname = this.props.location.pathname;
+    const className = pathname === '/' || pathname === '/en/' ? 'home-page' : '';
     return (
       <div className={`doc-page ${className} night`}>
         <Grid className="doc-container" fluid>

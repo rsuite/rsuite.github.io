@@ -8,6 +8,7 @@ import _ from 'lodash';
 import Banner from './fixtures/Banner';
 import Logo from './fixtures/Logo';
 import ReactLogo from './fixtures/ReactLogo';
+import LanguageSwitchButton from './fixtures/LanguageSwitchButton';
 
 class Home extends React.Component {
   static contextTypes = {
@@ -15,27 +16,15 @@ class Home extends React.Component {
   };
   constructor(props) {
     super();
-    this.state = {};
+    this.state = {
+      running: false
+    };
   }
-  componentWillMount() {
-    const { locale } = this.context;
-    let localeKey = localStorage.getItem('localeKey');
-
-    if (localeKey === null) {
-      localeKey = navigator.language.match(/(\S+)-/)[1];
-    }
-
-    if (localeKey && locale.id.match(/(\S+)-/)[1] !== localeKey) {
-      const localePath = localeKey === 'en' ? '/en/' : '/';
-      location.href = `${location.origin}${localePath}`;
-    }
-  }
-
   componentDidMount() {
     this._onWindowResizeListener = on(window, 'resize', this.handleWindowResize);
     this.handleWindowResize();
     const setRunning = setTimeout(() => {
-      this.setState({ running: true });
+      this.home && this.setState({ running: true });
       clearTimeout(setRunning);
     }, 1.7e3);
   }
@@ -55,9 +44,15 @@ class Home extends React.Component {
 
   render() {
     const { locale } = this.context;
+    const { showLaserBeam } = this.state;
     const localePath = locale.id === 'en-US' ? '/en/' : '/';
+
     return (
-      <div>
+      <div
+        ref={ref => {
+          this.home = ref;
+        }}
+      >
         <Banner id="banner">
           <div className="banner-content">
             <h1 className="logo">
@@ -69,22 +64,24 @@ class Home extends React.Component {
               <Link className="hvr-underline-from-center" to={`${localePath}guide/introduction`}>
                 {locale.common.guide}
               </Link>
-              <a className="hvr-underline-from-center" href="/design/index.html" target="_blank">
-                {locale.common.design}
-              </a>
+
               <Link className="hvr-underline-from-center" to={`${localePath}components/overview`}>
                 {locale.common.components}
               </Link>
               <Link className="hvr-underline-from-center" to={`${localePath}tools/palette`}>
                 {locale.common.tools}
               </Link>
+              <a className="hvr-underline-from-center" href="/design/index.html" target="_blank">
+                {locale.common.design}
+                <Icon icon="external-link-square" className="external-link" />
+              </a>
               <a
                 className="hvr-underline-from-center"
                 href="https://github.com/rsuite/rsuite"
                 target="_blank"
               >
                 GitHub
-                <Icon icon="external-link" className="external-link" />
+                <Icon icon="external-link-square" className="external-link" />
               </a>
             </div>
             <ReactLogo
@@ -100,6 +97,12 @@ class Home extends React.Component {
             />
           </div>
         </Banner>
+        <LanguageSwitchButton
+          language={locale.id}
+          href={localePath}
+          appearance={'link'}
+          className="btn-switch"
+        />
         <Content id="index-content" className="box-wrapper" />
       </div>
     );

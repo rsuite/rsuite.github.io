@@ -11,7 +11,7 @@ import components from '../fixtures/components';
 import { getDict } from '../locales';
 
 const babelOptions = {
-  presets: ['env', 'stage-0', 'react'],
+  presets: ['env', 'stage-1', 'react'],
   plugins: ['transform-class-properties']
 };
 

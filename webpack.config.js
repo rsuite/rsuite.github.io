@@ -5,7 +5,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
 const markdownRenderer = require('react-markdown-reader').renderer;
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const CompressionPlugin = require('compression-webpack-plugin');
 
 const iconPath = ['./node_modules/rsuite/styles', '../rsuite/styles'].map(relativePath =>
   path.resolve(__dirname, relativePath)
@@ -25,6 +24,8 @@ const getStyleLoader = () => {
     loader: `${loader}${sourceMap}`
   }));
 };
+
+const languages = ['javascript', 'bash', 'xml', 'css', 'less', 'json', 'diff', 'typescript'];
 
 module.exports = {
   devServer: {
@@ -48,10 +49,10 @@ module.exports = {
   optimization: {
     splitChunks: {
       cacheGroups: {
-        vendor: {
-          test: /node_modules\//,
-          name: 'vendor',
-          chunks: 'initial'
+        commons: {
+          name: 'commons',
+          chunks: 'initial',
+          minChunks: 2
         }
       }
     }
@@ -61,7 +62,7 @@ module.exports = {
       {
         test: /\.js$/,
         use: [
-          'transform-loader?brfs', // Use browserify transforms as webpack-loader.
+          //'transform-loader?brfs', // Use browserify transforms as webpack-loader.
           'babel-loader?babelrc'
         ],
         exclude: /node_modules/
@@ -84,16 +85,8 @@ module.exports = {
             loader: 'markdown-loader',
             options: {
               pedantic: true,
-              renderer: markdownRenderer
+              renderer: markdownRenderer(languages)
             }
-          }
-        ]
-      },
-      {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader'
           }
         ]
       },
@@ -143,21 +136,28 @@ module.exports = {
   },
   plugins: [
     extractLess,
+    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /zh-cn|en-gb/),
+    new webpack.ContextReplacementPlugin(
+      /highlight\.js\/lib\/languages$/,
+      new RegExp(`^./(${languages.join('|')})$`)
+    ),
+
     new webpack.NamedModulesPlugin(),
     // new webpack.HotModuleReplacementPlugin(),
     new HtmlwebpackPlugin({
       title: 'RSUITE | 一套 React 的 UI 组件库',
-      chunks: ['polyfills', 'vendor', 'app'],
+      chunks: ['polyfills', 'commons', 'app'],
       template: 'src/index.html',
       inject: true
     }),
     new HtmlwebpackPlugin({
       title: 'RSUITE | A suite of React components',
-      chunks: ['polyfills', 'vendor', 'app_en'],
+      chunks: ['polyfills', 'commons', 'app_en'],
       filename: 'en/index.html',
       template: 'src/index.html',
       inject: true
-    })
+    }),
+    // new BundleAnalyzerPlugin({ openAnalyzer: false })
   ],
   devtool: STYLE_DEBUG === 'SOURCE' && 'source-map'
 };
