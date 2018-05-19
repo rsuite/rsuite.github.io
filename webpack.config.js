@@ -157,7 +157,7 @@ module.exports = {
       template: 'src/index.html',
       inject: true
     }),
-    new BundleAnalyzerPlugin({ openAnalyzer: false })
+    // new BundleAnalyzerPlugin({ openAnalyzer: false })
   ],
   devtool: STYLE_DEBUG === 'SOURCE' && 'source-map'
 };
