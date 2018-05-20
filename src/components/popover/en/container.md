@@ -15,10 +15,16 @@ class Demo extends React.Component {
     return (
       <div>
         <div
+          style={{
+            height: 120,
+            background: '#f1f1f1',
+            padding: 10
+          }}
           ref={ref => {
             this.container = ref;
           }}
         />
+        <hr />
         <Whisper
           trigger="click"
           container={() => {
