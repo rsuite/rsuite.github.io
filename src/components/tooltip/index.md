@@ -23,7 +23,7 @@ import { Tooltip, Whisper } from 'rsuite';
 | --------------- | -------------------- | -------------------------- |
 | positionLeft    | number               | 相对 `left` 位置偏移量     |
 | positionTop     | number               | 相对 `top` 位置偏移量      |
-| classPrefix     | string `('tooltip')` | 组件 CSS 类的前缀             |
+| classPrefix     | string `('tooltip')` | 组件 CSS 类的前缀          |
 | arrowOffsetLeft | number or string     | 箭头相对 `left` 位置偏移量 |
 | arrowOffsetTop  | number or string     | 箭头相对 `top` 位置偏移量  |
 
@@ -41,6 +41,7 @@ import { Tooltip, Whisper } from 'rsuite';
 | onClick      | () => void                                             | 点击的回调函数                  |     |
 | onFocus      | () => void                                             | 获取焦点的回调函数              |     |
 | onMouseLeave | () => void                                             | 鼠标离开的回调函数              |     |
+| container    | HTMLElement or (() => HTMLElement)                     | 设置渲染的容器                  |
 
 ## Types
 

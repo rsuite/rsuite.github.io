@@ -19,26 +19,27 @@ import { Popover, Whisper } from 'rsuite';
 
 ### `<Popover>`
 
-| 属性名称    | 类型                 | 描述           |
-| ----------- | -------------------- | -------------- |
+| 属性名称    | 类型                 | 描述              |
+| ----------- | -------------------- | ----------------- |
 | classPrefix | string `('popover')` | 组件 CSS 类的前缀 |
-| children \* | React.Node           | 组件的内容     |
-| title       | React.Node           | 标题           |
+| children \* | React.Node           | 组件的内容        |
+| title       | React.Node           | 标题              |
 
 ### `<Whisper>`
 
-| 属性名称     | 类型 `(默认值)`                                        | 描述                            |     |
-| ------------ | ------------------------------------------------------ | ------------------------------- | --- |
-| placement    | enum: [Placement](#Placement) `('top')`                | 显示位置                        |     |
-| trigger      | union: 'click', 'hover', 'focus' `(['hover','focus'])` | 触发事件,可以通过数组配置多事件 |     |
-| delay        | number                                                 | 延迟时间                        |     |
-| delayShow    | number                                                 | 展示的延迟时间                  |     |
-| delayHide    | number                                                 | 隐藏的延迟时间                  |     |
-| speaker \*   | union: Tooltip, Popover                                | 展示的元素                      |     |
-| onBlur       | () => void                                             | 失去焦点回调函数                |     |
-| onClick      | () => void                                             | 点击的回调函数                  |     |
-| onFocus      | () => void                                             | 获取焦点的回调函数              |     |
-| onMouseLeave | () => void                                             | 鼠标离开的回调函数              |     |
+| 属性名称     | 类型 `(默认值)`                                        | 描述                            |
+| ------------ | ------------------------------------------------------ | ------------------------------- |
+| placement    | enum: [Placement](#Placement) `('top')`                | 显示位置                        |
+| trigger      | union: 'click', 'hover', 'focus' `(['hover','focus'])` | 触发事件,可以通过数组配置多事件 |
+| delay        | number                                                 | 延迟时间                        |
+| delayShow    | number                                                 | 展示的延迟时间                  |
+| delayHide    | number                                                 | 隐藏的延迟时间                  |
+| speaker \*   | union: Tooltip, Popover                                | 展示的元素                      |
+| onBlur       | () => void                                             | 失去焦点回调函数                |
+| onClick      | () => void                                             | 点击的回调函数                  |
+| onFocus      | () => void                                             | 获取焦点的回调函数              |
+| onMouseLeave | () => void                                             | 鼠标离开的回调函数              |
+| container    | HTMLElement or (() => HTMLElement)                     | 设置渲染的容器                  |
 
 ## Types
 

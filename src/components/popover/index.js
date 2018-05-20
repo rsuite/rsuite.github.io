@@ -4,7 +4,7 @@ import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
   id: 'Popover',
-  examples: ['basic', 'placement', 'trigger'],
+  examples: ['basic', 'placement', 'trigger', 'container'],
   dependencies: {
     ButtonToolbar,
     Button,

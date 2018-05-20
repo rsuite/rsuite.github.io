@@ -19,13 +19,11 @@ import { Popover, Whisper } from 'rsuite';
 
 ### `<Popover>`
 
-| Property    | Type `(Default)`     | Description                         |
-| ----------- | -------------------- | ----------------------------------- |
+| Property    | Type `(Default)`     | Description                            |
+| ----------- | -------------------- | -------------------------------------- |
 | classPrefix | string `('popover')` | The prefix of the component CSS class. |
-| children \* | React.Node           | The content of the component.       |
-| title       | React.Node           | The title of the component.         |
-
-### `<Whisper>`
+| children \* | React.Node           | The content of the component.          |
+| title       | React.Node           | The title of the component.            |
 
 ### `<Whisper>`
 
@@ -41,6 +39,8 @@ import { Popover, Whisper } from 'rsuite';
 | onClick      | () => void                                             | Click on the callback function  |
 | onFocus      | () => void                                             | Callback function to get focus  |
 | onMouseLeave | () => void                                             | Mouse leave callback function   |
+| container    | HTMLElement or (() => HTMLElement)                     | Sets the rendering container    |
+
 
 ## Types
 
