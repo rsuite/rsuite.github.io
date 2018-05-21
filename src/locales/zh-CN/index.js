@@ -33,7 +33,8 @@ export default {
     'tab.expanded': '可展开',
     'tab.edit': '可编辑',
     'tab.loading': '加载中',
-    'tab.colspan': '合并单元格'
+    'tab.colspan': '合并单元格',
+    'tab.summary': '汇总'
   },
   palette: {
     title: '分析产品商标颜色',

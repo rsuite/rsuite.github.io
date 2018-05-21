@@ -33,7 +33,8 @@ export default {
     'tab.expanded': 'Expandable',
     'tab.edit': 'Editable',
     'tab.loading': 'Loading',
-    'tab.colspan': 'Colspan'
+    'tab.colspan': 'Colspan',
+    'tab.summary': 'Summary'
   },
   palette: {
     title: 'Get the product color',

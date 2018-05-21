@@ -13,7 +13,9 @@ export default [
     catchPhrase: 'Intuitive impactful software',
     companyName: 'Lebsack - Nicolas',
     words: 'saepe et omnis',
-    sentence: 'Quos aut sunt id nihil qui.'
+    sentence: 'Quos aut sunt id nihil qui.',
+    stars: 820,
+    followers: 70
   },
   {
     id: 2,
@@ -29,7 +31,9 @@ export default [
     catchPhrase: 'De-engineered discrete secured line',
     companyName: 'Glover - Hermiston',
     words: 'deleniti dolor nihil',
-    sentence: 'Illo quidem libero corporis laborum.'
+    sentence: 'Illo quidem libero corporis laborum.',
+    stars: 1200,
+    followers: 170
   },
   {
     id: 3,
@@ -45,7 +49,10 @@ export default [
     catchPhrase: 'Ergonomic 6th generation challenge',
     companyName: 'Williamson - Kassulke',
     words: 'quidem earum magnam',
-    sentence: 'Nam qui perferendis ut rem vitae saepe.'
+    sentence: 'Nam qui perferendis ut rem vitae saepe.',
+    stars: 610,
+    followers: 170
+
   },
   {
     id: 4,
@@ -61,7 +68,9 @@ export default [
     catchPhrase: 'Upgradable local model',
     companyName: 'Hilpert, Eichmann and Brown',
     words: 'exercitationem rerum sit',
-    sentence: 'Qui rerum ipsa atque qui.'
+    sentence: 'Qui rerum ipsa atque qui.',
+    stars: 5322,
+    followers: 170
   },
   {
     id: 5,
@@ -77,7 +86,9 @@ export default [
     catchPhrase: 'Exclusive human-resource knowledge base',
     companyName: 'Mayer - Considine',
     words: 'voluptatum tempore at',
-    sentence: 'Enim quia deleniti molestiae aut.'
+    sentence: 'Enim quia deleniti molestiae aut.',
+    stars: 852,
+    followers: 770
   },
   {
     id: 6,
@@ -93,7 +104,9 @@ export default [
     catchPhrase: 'Virtual hybrid throughput',
     companyName: 'Nikolaus and Sons',
     words: 'alias minus repudiandae',
-    sentence: 'Sed qui eius excepturi sunt voluptates.'
+    sentence: 'Sed qui eius excepturi sunt voluptates.',
+    stars: 3209,
+    followers: 2780
   },
   {
     id: 7,
@@ -109,7 +122,9 @@ export default [
     catchPhrase: 'Profit-focused radical help-desk',
     companyName: 'Corwin, Maggio and Wintheiser',
     words: 'temporibus possimus neque',
-    sentence: 'Eum amet ea non natus qui assumenda illo officia qui.'
+    sentence: 'Eum amet ea non natus qui assumenda illo officia qui.',
+    stars: 9920,
+    followers: 570
   },
   {
     id: 8,
@@ -125,7 +140,9 @@ export default [
     catchPhrase: 'Total system-worthy contingency',
     companyName: 'Gulgowski - Botsford',
     words: 'deleniti ipsa hic',
-    sentence: 'Ducimus id quaerat neque.'
+    sentence: 'Ducimus id quaerat neque.',
+    stars: 3820,
+    followers: 880
   },
   {
     id: 9,
@@ -141,7 +158,9 @@ export default [
     catchPhrase: 'Virtual dedicated definition',
     companyName: 'Maggio LLC',
     words: 'libero unde est',
-    sentence: 'Non adipisci hic laboriosam et qui laudantium aspernatur.'
+    sentence: 'Non adipisci hic laboriosam et qui laudantium aspernatur.',
+    stars: 330,
+    followers: 590
   },
   {
     id: 10,
@@ -157,7 +176,9 @@ export default [
     catchPhrase: 'Organic user-facing functionalities',
     companyName: 'Leffler, Cummerata and Price',
     words: 'sed exercitationem quas',
-    sentence: 'Voluptas dolorem quasi aspernatur.'
+    sentence: 'Voluptas dolorem quasi aspernatur.',
+    stars: 923,
+    followers: 704
   },
   {
     id: 11,
@@ -173,7 +194,9 @@ export default [
     catchPhrase: 'Stand-alone global customer loyalty',
     companyName: 'Heller, Rosenbaum and Lockman',
     words: 'ut quia ut',
-    sentence: 'Eos consequatur magni incidunt.'
+    sentence: 'Eos consequatur magni incidunt.',
+    stars: 421,
+    followers: 403
   },
   {
     id: 12,
@@ -189,7 +212,9 @@ export default [
     catchPhrase: 'Multi-lateral zero defect analyzer',
     companyName: 'Mante, Oberbrunner and Collins',
     words: 'eos fuga repellat',
-    sentence: 'Cum corporis molestias quia.'
+    sentence: 'Cum corporis molestias quia.',
+    stars: 8203,
+    followers: 704
   },
   {
     id: 13,
@@ -205,7 +230,9 @@ export default [
     catchPhrase: 'Switchable asymmetric function',
     companyName: 'Greenholt, Homenick and Considine',
     words: 'sed incidunt quo',
-    sentence: 'Sed adipisci aliquam ut eius ut ipsa consequatur.'
+    sentence: 'Sed adipisci aliquam ut eius ut ipsa consequatur.',
+    stars: 8209,
+    followers: 909
   },
   {
     id: 14,
@@ -221,7 +248,9 @@ export default [
     catchPhrase: 'Mandatory user-facing methodology',
     companyName: 'Kshlerin - Pfeffer',
     words: 'eaque enim unde',
-    sentence: 'Sed voluptas fugiat nihil delectus architecto et voluptatibus quis voluptas.'
+    sentence: 'Sed voluptas fugiat nihil delectus architecto et voluptatibus quis voluptas.',
+    stars: 8251,
+    followers: 178
   },
   {
     id: 15,
@@ -237,7 +266,9 @@ export default [
     catchPhrase: 'Customizable non-volatile paradigm',
     companyName: 'Lemke, Mitchell and Harber',
     words: 'dolores ipsum earum',
-    sentence: 'Nemo molestiae ad sit cupiditate neque.'
+    sentence: 'Nemo molestiae ad sit cupiditate neque.',
+    stars: 3099,
+    followers: 707
   },
   {
     id: 16,
@@ -253,7 +284,9 @@ export default [
     catchPhrase: 'Triple-buffered fault-tolerant concept',
     companyName: 'Gislason - Nicolas',
     words: 'perferendis magnam minima',
-    sentence: 'Fuga in dolorem vel eligendi deserunt voluptatem.'
+    sentence: 'Fuga in dolorem vel eligendi deserunt voluptatem.',
+    stars: 8491,
+    followers: 463
   },
   {
     id: 17,
@@ -269,7 +302,9 @@ export default [
     catchPhrase: 'Centralized systematic parallelism',
     companyName: 'Olson and Sons',
     words: 'facere est in',
-    sentence: 'Ducimus aliquid ut.'
+    sentence: 'Ducimus aliquid ut.',
+    stars: 9820,
+    followers: 670
   },
   {
     id: 18,
@@ -285,7 +320,9 @@ export default [
     catchPhrase: 'Open-source impactful framework',
     companyName: 'Volkman and Sons',
     words: 'a tempore hic',
-    sentence: 'Quod veniam nemo impedit mollitia.'
+    sentence: 'Quod veniam nemo impedit mollitia.',
+    stars: 1220,
+    followers: 708
   },
   {
     id: 19,
@@ -301,7 +338,9 @@ export default [
     catchPhrase: 'Ergonomic human-resource algorithm',
     companyName: 'Grady LLC',
     words: 'libero ut repellat',
-    sentence: 'Vel quod ullam.'
+    sentence: 'Vel quod ullam.',
+    stars: 420,
+    followers: 30
   },
   {
     id: 20,
@@ -317,6 +356,8 @@ export default [
     catchPhrase: 'Enterprise-wide system-worthy data-warehouse',
     companyName: 'Ankunding Group',
     words: 'blanditiis voluptates repellat',
-    sentence: 'Non quis non dignissimos sit rerum voluptatem culpa quibusdam.'
+    sentence: 'Non quis non dignissimos sit rerum voluptatem culpa quibusdam.',
+    stars: 20,
+    followers: 188
   }
 ];

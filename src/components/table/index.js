@@ -34,7 +34,8 @@ export default locale => {
     'expanded',
     'edit',
     'loading',
-    'colspan'
+    'colspan',
+    'summary'
   ].map(item => ({
     title: dict.table[`tab.${item}`],
     sorce: require(`./${localePath}${item}.md`)

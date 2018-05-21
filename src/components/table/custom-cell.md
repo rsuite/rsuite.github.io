@@ -41,11 +41,12 @@ const ImageCell = ({ rowData, dataKey, ...props }) => (
   <Cell {...props} style={{ padding: 0 }}>
     <div
       style={{
-        width: 44,
-        height: 44,
+        width: 40,
+        height: 40,
         background: '#f5f5f5',
-        borderRadius: 22,
-        overflow: `hidden`,
+        borderRadius: 20,
+        marginTop: 2,
+        overflow: 'hidden',
         display: 'inline-block'
       }}
     >
