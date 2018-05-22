@@ -14,14 +14,16 @@ import {
   Slider,
   Nav,
   Input,
-  Panel
+  Panel,
+  Loader
 } from '../../rsuiteSource';
-import MarkdownView from '../../fixtures/MarkdownView';
+
 import { SketchPicker, CirclePicker } from 'react-color';
 import computeColors from './computeColors';
 import ColorPanel from './ColorPanel';
 import ImageToColors from './ImageToColors';
-import { loadJsFile } from '../../ready';
+import MarkdownView from '../../fixtures/MarkdownView';
+import loadJsFile from '../../fixtures/loadJsFile';
 import getLocalePath from '../../fixtures/getLocalePath';
 import PageContainer from '../../fixtures/PageContainer';
 
@@ -33,6 +35,7 @@ export default getLocalePath(localePath => {
       super();
       this.lessLoaded = false;
       this.state = {
+        showLoading: false,
         color: '#2196f3'
       };
     }
@@ -60,16 +63,21 @@ export default getLocalePath(localePath => {
             '@palette-color': this.state.color
           }
         };
+        this.setState({
+          showLoading: true
+        });
         loadJsFile(lessUrl, () => {
           this.lessLoaded = true;
           this.changeLessColor(color);
+          this.setState({
+            showLoading: false
+          });
         });
       }
     };
 
     render() {
-      const { color } = this.state;
-
+      const { color, showLoading } = this.state;
       return (
         <PageContainer hidePageNav>
           <Row>
@@ -117,6 +125,7 @@ export default getLocalePath(localePath => {
                 <Toggle defaultChecked />
                 <hr />
                 <Slider progress defaultValue={50} />
+                {showLoading ? <Loader backdrop content="loading..." vertical /> : null}
               </Panel>
             </div>
           </div>
