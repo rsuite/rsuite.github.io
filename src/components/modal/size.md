@@ -43,7 +43,7 @@ class Demo extends React.Component{
             <Paragraph />
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.close} appearance="primary">Confirm</Button>
+            <Button onClick={this.close} appearance="primary">Ok</Button>
             <Button onClick={this.close} appearance="subtle">Cancel</Button>
           </Modal.Footer>
         </Modal>

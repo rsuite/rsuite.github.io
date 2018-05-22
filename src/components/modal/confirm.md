@@ -1,14 +1,13 @@
-### 滚动条
+### Confirm
 
 <!--start-code-->
 
 ```js
-class Demo extends React.Component {
+class Confirm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: false,
-      overflow: false
+      show: false
     };
     this.close = this.close.bind(this);
     this.open = this.open.bind(this);
@@ -16,31 +15,28 @@ class Demo extends React.Component {
   close() {
     this.setState({ show: false });
   }
-  open(event) {
+  open() {
     this.setState({ show: true });
   }
   render() {
-    const { overflow, show } = this.state;
     return (
       <div className="modal-container">
-        <span>Overflow </span>
-        <Toggle
-          checked={overflow}
-          onChange={checked => {
-            this.setState({ overflow: checked });
-          }}
-        />
-        <hr />
         <ButtonToolbar>
-          <Button onClick={this.open}>Open</Button>
+          <Button onClick={this.open}> Open</Button>
         </ButtonToolbar>
 
-        <Modal overflow={overflow} show={show} onHide={this.close}>
-          <Modal.Header>
-            <Modal.Title>Modal Title</Modal.Title>
-          </Modal.Header>
+        <Modal backdrop="static" show={this.state.show} onHide={this.close} size="xs">
           <Modal.Body>
-            <Paragraph rows={80} />
+            <Icon
+              icon="remind"
+              style={{
+                color: '#ffb300',
+                fontSize: 24
+              }}
+            />
+            {'  '}
+            Once a project is disabled, there will be no update on project report, and project
+            members can access history data only. Are you sure you want to proceed?
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.close} appearance="primary">
@@ -56,7 +52,7 @@ class Demo extends React.Component {
   }
 }
 
-ReactDOM.render(<Demo />);
+ReactDOM.render(<Confirm />);
 ```
 
 <!--end-code-->

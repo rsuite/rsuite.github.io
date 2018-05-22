@@ -4,7 +4,7 @@ import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
   id: 'Modal',
-  examples: ['basic', 'backdrop', 'size', 'full', 'overflow'],
+  examples: ['basic', 'backdrop', 'size', 'full', 'overflow', 'confirm'],
   dependencies: {
     ButtonToolbar,
     Button,

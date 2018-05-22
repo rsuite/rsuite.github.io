@@ -34,7 +34,7 @@ class BasicDemo extends React.Component {
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.close} appearance="primary">
-              Confirm
+              Ok
             </Button>
             <Button onClick={this.close} appearance="subtle">
               Cancel
