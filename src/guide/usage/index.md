@@ -51,7 +51,7 @@ import { Button } from 'rsuite';
 import Button from 'rsuite/lib/Button';
 ```
 
-可以使用 babel 插件 [babel-preset-rsuite](https://github.com/rsuite/babel-preset-rsuite) 处理这个问题。
+可以使用 babel preset [babel-preset-rsuite](https://github.com/rsuite/babel-preset-rsuite) 处理这个问题。
 
 ### 安装 babel-preset-rsuite
 
@@ -66,3 +66,5 @@ $ npm install babel-preset-rsuite --save-dev
   "presets": ["rsuite"]
 }
 ```
+
+> 注意： 如果在项目中使用了 webpack 的 [Tree Shaking](https://webpack.docschina.org/guides/tree-shaking/), 则不能使用该 preset。

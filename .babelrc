@@ -7,8 +7,7 @@
       }
     ],
     "stage-1",
-    "react",
-    "rsuite"
+    "react"
   ],
   "plugins": [
     "lodash",
