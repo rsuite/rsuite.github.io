@@ -36,11 +36,14 @@
     "url": "git@github.com:rsuite/rsuite.git"
   },
   "dependencies": {
+    "eslint-plugin-prettier": "^2.6.0",
     "moment": "^2.20.1",
+    "prettier": "^1.12.1",
     "react-json-tree": "^0.11.0",
+    "react-loadable": "^5.4.0",
     "react-paragraph": "^1.0.0",
     "react-text-mask": "^5.4.1",
-    "rsuite": "^3.0.2",
+    "rsuite": "^3.0.5",
     "rsuite-intl": "^1.0.4",
     "rsuite-page-nav": "^1.1.7",
     "rsuite-utils": "^1.0.0"

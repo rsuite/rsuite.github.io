@@ -2,7 +2,7 @@
  * Created by Godfery on 2017/3/24.
  */
 import React from 'react';
-import { Icon } from '../../rsuiteSource';
+import { Icon } from 'rsuite';
 import Clipboard from 'rsuite-clipboard';
 
 class IconItem extends React.Component {

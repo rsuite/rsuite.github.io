@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, FormGroup, Button, Checkbox, CheckboxGroup, Icon } from '../../rsuiteSource';
+import { Form, FormGroup, Button, Checkbox, CheckboxGroup, Icon } from 'rsuite';
 
 import createComponentExample from '../createComponentExample';
 

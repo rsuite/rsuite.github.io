@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tag, Icon, IconButton, Input } from '../../rsuiteSource';
+import { Tag, Icon, IconButton, Input } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({

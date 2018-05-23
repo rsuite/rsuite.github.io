@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, FormGroup, RadioGroup, Icon, Button, Radio } from '../../rsuiteSource';
+import { Form, FormGroup, RadioGroup, Icon, Button, Radio } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({

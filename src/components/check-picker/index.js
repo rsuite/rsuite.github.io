@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckPicker, Button, Icon, Checkbox } from '../../rsuiteSource';
+import { CheckPicker, Button, Icon, Checkbox } from 'rsuite';
 import data from '../../resources/data/users';
 import createComponentExample from '../createComponentExample';
 

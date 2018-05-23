@@ -1,5 +1,5 @@
 import React from 'react';
-import { Portal, Button } from '../../rsuiteSource';
+import { Portal, Button } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({

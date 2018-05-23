@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import _ from 'lodash';
 import DocSidebar from './DocSidebar';
 import TopLevelNav from './TopLevelNav';
 

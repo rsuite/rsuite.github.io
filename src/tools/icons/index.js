@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { Row, Col } from '../../rsuiteSource';
+import { Row, Col } from 'rsuite';
 import MarkdownView from '../../fixtures/MarkdownView';
 import PageContainer from '../../fixtures/PageContainer';
 import getLocalePath from '../../fixtures/getLocalePath';

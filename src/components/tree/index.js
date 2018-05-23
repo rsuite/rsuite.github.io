@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tree } from '../../rsuiteSource';
+import { Tree } from 'rsuite';
 import data from '../../resources/data/city';
 import createComponentExample from '../createComponentExample';
 

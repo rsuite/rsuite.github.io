@@ -16,7 +16,7 @@ export const createRouters = (locale, onEnter, onEntered) => {
             getComponents={(location, callback) => {
               onEnter();
               require.ensure([], require => {
-                const getComponent = require(`./${item.id}/${child.id}`);
+                const getComponent = require(`./${item.id}/${child.id}`)['default'];
                 const component = getComponent(locale);
                 callback(null, component);
                 onEntered();

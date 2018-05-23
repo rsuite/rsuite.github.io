@@ -4,7 +4,7 @@ import debounce from 'lodash/debounce';
 import get from 'lodash/get';
 import algoliasearch from 'algoliasearch';
 import { Link } from 'react-router';
-import { Drawer, Input } from '../rsuiteSource';
+import { Drawer, Input } from 'rsuite';
 
 class SearchDrawer extends Component {
   static contextTypes = {

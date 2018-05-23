@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckTreePicker, Icon } from '../../rsuiteSource';
+import { CheckTreePicker, Icon } from 'rsuite';
 import data from '../../resources/data/city';
 import createComponentExample from '../createComponentExample';
 

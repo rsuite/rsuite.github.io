@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pagination, Button, Icon, Toggle, Divider } from '../../rsuiteSource';
+import { Pagination, Button, Icon, Toggle, Divider } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({

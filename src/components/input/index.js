@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input, InputGroup, Icon, Whisper, Tooltip, Grid, Row, Col } from '../../rsuiteSource';
+import { Input, InputGroup, Icon, Whisper, Tooltip, Grid, Row, Col } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({

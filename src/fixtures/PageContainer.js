@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import clasNames from 'classnames';
 import { PageProvider, PageNav, PageContent } from 'rsuite-page-nav';
 
-import { Nav, Row, Col, IconButton, Button, Icon, ButtonToolbar, Dropdown } from '../rsuiteSource';
+import { Nav, Row, Col, IconButton, Button, Icon, ButtonToolbar, Dropdown } from 'rsuite';
 import { design } from './SvgIcons';
 import LanguageSwitchButton from './LanguageSwitchButton';
 

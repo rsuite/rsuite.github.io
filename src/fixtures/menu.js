@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon, IconButton, Button } from '../rsuiteSource';
+import { Icon, IconButton, Button } from 'rsuite';
 import { guide, component, tools } from './SvgIcons';
 import components from './components';
 import { getDict } from '../locales';

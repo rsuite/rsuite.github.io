@@ -1,5 +1,5 @@
 import React from 'react';
-import { Slider, Row, Col, Input } from '../../rsuiteSource';
+import { Slider, Row, Col, Input } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({

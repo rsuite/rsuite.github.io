@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sidenav, Nav, Button, Icon, Toggle, Dropdown } from '../../rsuiteSource';
+import { Sidenav, Nav, Button, Icon, Toggle, Dropdown } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({

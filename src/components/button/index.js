@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, IconButton, ButtonGroup, ButtonToolbar, Panel, Icon } from '../../rsuiteSource';
+import { Button, IconButton, ButtonGroup, ButtonToolbar, Panel, Icon } from 'rsuite';
 import * as SvgIcons from '../../fixtures/SvgIcons';
 
 import createComponentExample from '../createComponentExample';

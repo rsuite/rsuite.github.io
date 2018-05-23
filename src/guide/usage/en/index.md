@@ -66,3 +66,5 @@ $ npm install babel-preset-rsuite --save-dev
   "presets": ["rsuite"]
 }
 ```
+
+> Note: If you use webpack [Tree Shaking](https://webpack.js.org/guides/tree-shaking/) in your project, you cannot use it.

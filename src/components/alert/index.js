@@ -1,5 +1,5 @@
 import React from 'react';
-import { Alert, Button, ButtonToolbar } from '../../rsuiteSource';
+import { Alert, Button, ButtonToolbar } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({

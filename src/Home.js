@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import { addStyle, getHeight, on } from 'dom-lib';
-import { Container, Content, Row, Col, Icon } from './rsuiteSource';
-import _ from 'lodash';
+import { Container, Content, Row, Col, Icon } from 'rsuite';
 
 import Banner from './fixtures/Banner';
 import Logo from './fixtures/Logo';

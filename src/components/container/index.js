@@ -14,7 +14,7 @@ import {
   IconButton,
   Toggle,
   Dropdown,
-  FlexboxGird,
+  FlexboxGrid,
   Panel,
   Form,
   FormGroup,
@@ -22,7 +22,7 @@ import {
   FormControl,
   ButtonToolbar,
   Navbar
-} from '../../rsuiteSource';
+} from 'rsuite';
 
 import createComponentExample from '../createComponentExample';
 
@@ -44,7 +44,7 @@ export default createComponentExample({
     Nav,
     Toggle,
     Dropdown,
-    FlexboxGrid: FlexboxGird,
+    FlexboxGrid,
     Panel,
     Form,
     FormGroup,

@@ -7,7 +7,3 @@ import zhCN from '../../rsuite/src/IntlProvider/locales/zh_CN';
 import enGB from '../../rsuite/src/IntlProvider/locales/en_GB';
 
 */
-
-const rsuite = require('rsuite');
-
-export default rsuite;

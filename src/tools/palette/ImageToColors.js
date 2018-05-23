@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Input, Panel, DOMHelper } from '../../rsuiteSource';
+import { Input, Panel, DOMHelper } from 'rsuite';
 const { getOffset } = DOMHelper;
 
 function ImageColor(img) {
