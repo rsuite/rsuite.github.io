@@ -1,4 +1,5 @@
 import { removeClass } from 'dom-lib';
+import loadJsFile from './fixtures/loadJsFile';
 
 const shortKey = localeKey => {
   try {
@@ -10,6 +11,10 @@ const shortKey = localeKey => {
 
 const filter = [];
 
+
+/**
+ * Determine the current locale and switch to the corresponding path.
+ */
 filter.push(
   new Promise((resolve, reject) => {
     const localePathName = !!~location.href.indexOf('/en/') ? 'en' : 'zh';
@@ -20,7 +25,6 @@ filter.push(
       location.href = [location.origin, shortKey(localeKey) === 'en' ? 'en/' : ''].join('/');
       return;
     }
-
     resolve();
   })
 );

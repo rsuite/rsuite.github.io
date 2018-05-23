@@ -9,7 +9,7 @@ import {
   Divider,
   Icon,
   Checkbox
-} from '../../rsuiteSource';
+} from 'rsuite';
 
 import fakeData from './data/users';
 import fakeTreeData from './data/treeData';

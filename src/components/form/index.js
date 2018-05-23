@@ -1,6 +1,5 @@
 import React from 'react';
-import JSONTree from 'react-json-tree';
-import MaskedInput from 'react-text-mask';
+import Loadable from 'react-loadable';
 
 import {
   HelpBlock,
@@ -29,8 +28,18 @@ import {
   Modal,
   Alert,
   SelectPicker
-} from '../../rsuiteSource';
+} from 'rsuite';
 import createComponentExample from '../createComponentExample';
+
+const JSONTree = Loadable({
+  loader: () => import('react-json-tree'),
+  loading: () => <div>loading...</div>
+});
+
+const MaskedInput = Loadable({
+  loader: () => import('react-text-mask'),
+  loading: () => <div>loading...</div>
+});
 
 const JSONView = ({ formValue, formError }) => (
   <Row style={{ marginBottom: 10 }}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Loader } from '../../rsuiteSource';
+import { Loader } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({

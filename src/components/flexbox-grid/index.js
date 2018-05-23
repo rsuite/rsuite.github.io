@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlexboxGird, Button, Icon, Divider } from '../../rsuiteSource';
+import { FlexboxGrid, Button, Icon, Divider } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
@@ -9,6 +9,6 @@ export default createComponentExample({
     Divider,
     Icon,
     Button,
-    FlexboxGrid: FlexboxGird
+    FlexboxGrid
   }
 });

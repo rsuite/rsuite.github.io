@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputNumber } from '../../rsuiteSource';
+import { InputNumber } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Steps, Icon, ButtonGroup, Button } from '../../rsuiteSource';
+import { Steps, Icon, ButtonGroup, Button } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({

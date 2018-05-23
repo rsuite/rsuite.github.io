@@ -8,7 +8,7 @@ import {
   Icon,
   RadioGroup,
   Radio
-} from '../../rsuiteSource';
+} from 'rsuite';
 
 import createComponentExample from '../createComponentExample';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Divider, Button, ButtonGroup } from '../../rsuiteSource';
+import { Divider, Button, ButtonGroup } from 'rsuite';
 
 import createComponentExample from '../createComponentExample';
 

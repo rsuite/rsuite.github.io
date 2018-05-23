@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import get from 'lodash/get';
 import { scrollTop } from 'dom-lib';
-import { Grid } from './rsuiteSource';
+import { Grid } from 'rsuite';
 
 // style
 import './less/index.less';

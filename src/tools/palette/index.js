@@ -16,9 +16,8 @@ import {
   Input,
   Panel,
   Loader
-} from '../../rsuiteSource';
-
-import { SketchPicker, CirclePicker } from 'react-color';
+} from 'rsuite';
+import Loadable from 'react-loadable';
 import computeColors from './computeColors';
 import ColorPanel from './ColorPanel';
 import ImageToColors from './ImageToColors';
@@ -26,6 +25,16 @@ import MarkdownView from '../../fixtures/MarkdownView';
 import loadJsFile from '../../fixtures/loadJsFile';
 import getLocalePath from '../../fixtures/getLocalePath';
 import PageContainer from '../../fixtures/PageContainer';
+
+const SketchPicker = Loadable({
+  loader: () => import('react-color/lib/components/sketch/Sketch'),
+  loading: () => <div>loading...</div>
+});
+
+const CirclePicker = Loadable({
+  loader: () => import('react-color/lib/components/circle/Circle'),
+  loading: () => <div>loading...</div>
+});
 
 const lessUrl = 'https://cdn.bootcss.com/less.js/2.7.2/less.min.js';
 

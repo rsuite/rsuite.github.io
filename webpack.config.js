@@ -5,6 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
 const markdownRenderer = require('react-markdown-reader').renderer;
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
 const iconPath = ['./node_modules/rsuite/styles', '../rsuite/styles'].map(relativePath =>
   path.resolve(__dirname, relativePath)
@@ -157,7 +158,11 @@ module.exports = {
       template: 'src/index.html',
       inject: true
     }),
-    // new BundleAnalyzerPlugin({ openAnalyzer: false })
+    new LodashModuleReplacementPlugin({
+      collections: true,
+      paths: true
+    }),
+    //new BundleAnalyzerPlugin({ openAnalyzer: false })
   ],
   devtool: STYLE_DEBUG === 'SOURCE' && 'source-map'
 };

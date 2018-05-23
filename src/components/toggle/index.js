@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Toggle, Icon } from '../../rsuiteSource';
+import { Button, Toggle, Icon } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({

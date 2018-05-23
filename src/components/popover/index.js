@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonToolbar, Button, Whisper, Popover } from '../../rsuiteSource';
+import { ButtonToolbar, Button, Whisper, Popover } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({

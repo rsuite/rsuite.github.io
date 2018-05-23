@@ -1,5 +1,5 @@
 import React from 'react';
-import { Uploader, Icon } from '../../rsuiteSource';
+import { Uploader, Icon } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({

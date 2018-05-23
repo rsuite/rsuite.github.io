@@ -1,7 +1,6 @@
 import React from 'react';
-import { Input, Icon, Alert } from '../../rsuiteSource';
+import { Input, Icon, Alert } from 'rsuite';
 import IconItem from './IconItem';
-import ALL_ICONS from './icons';
 
 const parseIconByCategory = (obj, conf) => {
   conf.categories.forEach(category => {
@@ -20,15 +19,27 @@ class IconList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      icons: ALL_ICONS
+      allIcons: [],
+      icons: []
     };
   }
+
+  componentWillMount() {
+    import('./icons').then(allIcons => {
+      this.setState({
+        allIcons: allIcons.default,
+        icons: allIcons.default
+      });
+    });
+  }
+
   handleCopy = (text, result) => {
     const message = result ? '复制成功' : '复制失败，浏览器不支持此功能';
     Alert.success(message);
   };
 
   handleSearch = key => {
+    const { allIcons } = this.state;
     key = key.toUpperCase();
     const filterByIconName = searchKey => {
       return searchKey.indexOf(key) > -1;
@@ -40,7 +51,7 @@ class IconList extends React.Component {
       return searchKeys.filter(filterByIconName).length > 0;
     };
 
-    const icons = ALL_ICONS.filter(filterByCatogry);
+    const icons = allIcons.filter(filterByCatogry);
 
     this.setState({
       icons

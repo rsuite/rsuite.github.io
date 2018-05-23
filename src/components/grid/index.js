@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Button, Icon, Row, Col } from '../../rsuiteSource';
+import { Grid, Button, Icon, Row, Col } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dropdown, Button, Icon, ButtonToolbar, IconButton, ButtonGroup } from '../../rsuiteSource';
+import { Dropdown, Button, Icon, ButtonToolbar, IconButton, ButtonGroup } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({

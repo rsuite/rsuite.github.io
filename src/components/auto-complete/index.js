@@ -1,5 +1,5 @@
 import React from 'react';
-import { AutoComplete, InputGroup, Icon } from '../../rsuiteSource';
+import { AutoComplete, InputGroup, Icon } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({

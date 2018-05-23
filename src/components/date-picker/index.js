@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-import { DatePicker } from '../../rsuiteSource';
+import { DatePicker } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({

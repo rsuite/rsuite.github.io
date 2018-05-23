@@ -1,8 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
-import { Col, Nav, Navbar, Divider, Icon, ButtonGroup, Button } from '../rsuiteSource';
+import { Col, Nav, Navbar, Divider, Icon, ButtonGroup, Button } from 'rsuite';
 
-import * as rsuite from '../rsuiteSource';
 import PageContainer from '../fixtures/PageContainer';
 import Paragraph from '../fixtures/Paragraph';
 import MarkdownView from '../fixtures/MarkdownView';
@@ -20,7 +19,7 @@ const CustomCodeView = ({ dependencies, ...rest }) => (
     {...rest}
     babelOptions={babelOptions}
     buttonClassName="rs-btn-subtle rs-btn-icon-circle"
-    dependencies={{ ...dependencies, Paragraph, Divider, rsuite }}
+    dependencies={{ ...dependencies, Paragraph, Divider }}
   />
 );
 
