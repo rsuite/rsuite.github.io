@@ -10,6 +10,7 @@ const components = menu[1].children.filter(item => item.id !== 'overview');
 
 export default locale => {
   const ComponentExample = createComponentExample({ id: 'overview' })(locale);
+  const localePath = locale === 'zh' ? '/' : '/en/';
   return () => {
     return (
       <div>
@@ -26,7 +27,7 @@ export default locale => {
               } else {
                 return (
                   <li key={item.id}>
-                    <Link to={`/components/${item.id}`} className="header">
+                    <Link to={`${localePath}components/${item.id}`} className="header">
                       {item.name}
                     </Link>
                     <ul className="content">
