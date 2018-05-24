@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Banner extends React.Component {
+class Banner extends React.PureComponent {
   render() {
     const { children } = this.props;
     return (

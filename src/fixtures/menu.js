@@ -13,32 +13,32 @@ export const getMenu = locale => {
   return [
     {
       id: 'guide',
-      name: locale.common.guide,
+      name: _.get(locale, 'common.guide'),
       icon: <Icon icon={guide} svgStyle={svgStyle} size="3x" />,
       children: [
         {
           id: 'introduction',
-          name: locale.common.introduction
+          name: _.get(locale, 'common.introduction')
         },
         {
           id: 'usage',
-          name: locale.common.usage
+          name: _.get(locale, 'common.usage')
         },
         {
           id: 'use-with-create-react-app',
-          name: locale.common.useWithCreateReactApp
+          name: _.get(locale, 'common.useWithCreateReactApp')
         },
         {
           id: 'themes',
-          name: locale.common.customizeTheme
+          name: _.get(locale, 'common.customizeTheme')
         },
         {
           id: 'intl',
-          name: locale.common.intl
+          name: _.get(locale, 'common.intl')
         },
         {
           id: 'logs',
-          name: locale.common.changeLog,
+          name: _.get(locale, 'common.changeLog'),
           target: '_blank',
           url: 'https://github.com/rsuite/rsuite/releases'
         }
@@ -46,22 +46,22 @@ export const getMenu = locale => {
     },
     {
       id: 'components',
-      name: locale.common.components,
+      name: _.get(locale, 'common.components'),
       icon: <Icon icon={component} svgStyle={svgStyle} size="3x" />,
       children: components
     },
     {
       id: 'tools',
-      name: locale.common.tools,
+      name: _.get(locale, 'common.tools'),
       icon: <Icon icon={tools} svgStyle={svgStyle} />,
       children: [
         {
           id: 'palette',
-          name: locale.common.palette
+          name: _.get(locale, 'common.palette')
         },
         {
           id: 'icons',
-          name: locale.common.icons
+          name: _.get(locale, 'common.icons')
         }
       ]
     }

@@ -22,7 +22,7 @@ class SearchDrawer extends Component {
   }
   initIndex() {
     const { locale } = this.context;
-    const indexKey = locale.id === 'en-US' ? 'rsuite-en' : 'rsuite-zh';
+    const indexKey = _.get(locale, 'id') === 'en-US' ? 'rsuite-en' : 'rsuite-zh';
     const client = algoliasearch('PTK5IGAK3K', 'dd3a62fc583bb0749dafa15cc61588bf');
     this.index = client.initIndex(indexKey);
   }
@@ -56,11 +56,11 @@ class SearchDrawer extends Component {
     return (
       <Drawer placement="left" size="xs" show={show} onHide={onHide}>
         <Drawer.Header>
-          <Drawer.Title>{locale.common.search}</Drawer.Title>
+          <Drawer.Title>{_.get(locale, 'common.search')}</Drawer.Title>
         </Drawer.Header>
         <Drawer.Body>
           <Input
-            placeholder={locale.common.search}
+            placeholder={_.get(locale, 'common.search')}
             className="search-input"
             value={this.state.keyword}
             onChange={this.handleSearch}

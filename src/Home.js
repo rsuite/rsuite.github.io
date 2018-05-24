@@ -44,7 +44,7 @@ class Home extends React.Component {
   render() {
     const { locale } = this.context;
     const { showLaserBeam } = this.state;
-    const localePath = locale.id === 'en-US' ? '/en/' : '/';
+    const localePath = _.get(locale, 'id') === 'en-US' ? '/en/' : '/';
 
     return (
       <div
@@ -58,20 +58,20 @@ class Home extends React.Component {
               <Logo width={120} />
               <p style={{ marginTop: 16 }}>RSUITE</p>
             </h1>
-            <p className="sub-title"> {locale.common.resume}</p>
+            <p className="sub-title"> {_.get(locale, 'common.resume')}</p>
             <div className="menu-nav">
               <Link className="hvr-underline-from-center" to={`${localePath}guide/introduction`}>
-                {locale.common.guide}
+                {_.get(locale, 'common.guide')}
               </Link>
 
               <Link className="hvr-underline-from-center" to={`${localePath}components/overview`}>
-                {locale.common.components}
+                {_.get(locale, 'common.components')}
               </Link>
               <Link className="hvr-underline-from-center" to={`${localePath}tools/palette`}>
-                {locale.common.tools}
+                {_.get(locale, 'common.tools')}
               </Link>
               <a className="hvr-underline-from-center" href="/design/index.html" target="_blank">
-                {locale.common.design}
+                {_.get(locale, 'common.design')}
                 <Icon icon="external-link-square" className="external-link" />
               </a>
               <a
@@ -97,7 +97,7 @@ class Home extends React.Component {
           </div>
         </Banner>
         <LanguageSwitchButton
-          language={locale.id}
+          language={_.get(locale, 'id')}
           href={localePath}
           appearance={'link'}
           className="btn-switch"

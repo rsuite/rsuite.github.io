@@ -1,10 +1,14 @@
 import React from 'react';
 import { Route } from 'react-router';
-import menu from './fixtures/menu';
+
 import Frame from './fixtures/Frame';
+import { getMenu } from './fixtures/menu';
+import { getDict } from './locales';
 import { setTitle } from './title';
 
 export const createRouters = (locale, onEnter, onEntered) => {
+  const menu = getMenu(getDict(locale));
+
   return menu.map(item => {
     const children = [];
     item.children.forEach(child => {
@@ -14,12 +18,12 @@ export const createRouters = (locale, onEnter, onEntered) => {
             key={child.id}
             path={child.id}
             getComponents={(location, callback) => {
-              onEnter();
+              onEnter && onEnter();
               require.ensure([], require => {
                 const getComponent = require(`./${item.id}/${child.id}`)['default'];
                 const component = getComponent(locale);
-                callback(null, component);
-                onEntered();
+                callback && callback(null, component);
+                onEntered && onEntered();
               });
             }}
             onEnter={() => {

@@ -11,7 +11,7 @@ const contextTypes = {
   router: PropTypes.object.isRequired
 };
 
-class App extends React.Component {
+class App extends React.PureComponent {
   componentDidMount() {
     const { onRemoveLoading } = this.props;
     onRemoveLoading && onRemoveLoading();

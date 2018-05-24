@@ -1,51 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Sidebar, Nav, Icon, FormControl } from 'rsuite';
+import { Sidebar, Nav, Icon } from 'rsuite';
 import { Link } from 'react-router';
 import _ from 'lodash';
 import { getMenu } from './menu';
 
-function filterNodesOfTree(data, check) {
-  const findNodes = (nodes = []) => {
-    return nodes.filter(item => {
-      if (_.isArray(item.children)) {
-        const nextChildren = findNodes(item.children);
-        if (nextChildren && nextChildren.length) {
-          item.children = nextChildren;
-          return true;
-        }
-      }
-      return check(item);
-    });
-  };
-  return findNodes(data);
-}
-
-class DocSidebar extends React.Component {
+class DocSidebar extends React.PureComponent {
   static contextTypes = {
     locale: PropTypes.object,
     router: PropTypes.object.isRequired
   };
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      keyword: ''
-    };
-  }
   getMenuItems() {
-    const { keyword } = this.state;
-    const key = _.trim(keyword.toLocaleLowerCase());
     const { locale } = this.context;
-    const menu = getMenu(locale);
-    return (
-      filterNodesOfTree(_.cloneDeep(menu), item => {
-        if (!item.id) {
-          return false;
-        }
-        return item.id.indexOf(key) >= 0 || item.name.indexOf(key) >= 0;
-      }) || []
-    );
+    return getMenu(locale);
   }
   getRootPath() {
     return _.get(this.context.router, 'routes.0.path');
@@ -78,7 +45,9 @@ class DocSidebar extends React.Component {
           }
 
           const title =
-            locale.id === 'en-US' ? null : <span className="title-zh">{child.title}</span>;
+            _.get(locale, 'id') === 'en-US' ? null : (
+              <span className="title-zh">{child.title}</span>
+            );
 
           if (child.target === '_blank' && child.url) {
             nodeItems.push(
