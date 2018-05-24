@@ -11,16 +11,24 @@
     "dev-styles": "STYLE_DEBUG=STYLE npm run dev",
     "dev-styles-source": "STYLE_DEBUG=SOURCE npm run dev",
     "clear-dist": "rm -rf dist",
-    "build-webpack":
-      "NODE_ENV=production  webpack --mode production --progress && cp -R public/* ./dist/ ",
+    "build-webpack": "NODE_ENV=production  webpack --mode production --progress && cp -R public/* ./dist/ ",
     "build": "npm run clear-dist && npm run build-webpack",
     "test": "karma start",
     "babel": "rm -rf lib && babel src/App.js --out-dir lib",
     "parsing-design-docs": "node ./bin/parsingDesignDocs.js",
     "algolia": "node scripts/algolia-indices.js"
   },
-  "keywords": ["react", "suite", "rsuite", "react-component"],
-  "files": ["CHANGELOG.md", "lib", "src"],
+  "keywords": [
+    "react",
+    "suite",
+    "rsuite",
+    "react-component"
+  ],
+  "files": [
+    "CHANGELOG.md",
+    "lib",
+    "src"
+  ],
   "author": "HYPERS Team",
   "license": "MIT",
   "repository": {
@@ -28,7 +36,6 @@
     "url": "git@github.com:rsuite/rsuite.git"
   },
   "dependencies": {
-    "eslint-plugin-prettier": "^2.6.0",
     "moment": "^2.20.1",
     "prettier": "^1.12.1",
     "react-json-tree": "^0.11.0",
@@ -42,6 +49,7 @@
     "prop-types": "^15.6.0",
     "react-code-view": "^1.1.8",
     "react-color": "^2.13.8",
+    "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-markdown-reader": "^1.1.0",
     "react-router": "3.2.0"
@@ -76,6 +84,7 @@
     "docsearch.js": "^2.5.2",
     "dom-lib": "^0.2.6",
     "eslint": "^2.8.0",
+    "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-babel": "^3.2.0",
     "eslint-plugin-react": "^5.0.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
