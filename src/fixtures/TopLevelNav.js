@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 import classNames from 'classnames';
 import { Link } from 'react-router';
 import { Button, Icon, IconButton, Whisper, Tooltip } from 'rsuite';
@@ -49,24 +50,24 @@ class TopLevelNav extends React.Component {
   render() {
     const { children, showSubmenu } = this.props;
     const { router, locale } = this.context;
-    const localePath = locale.id === 'en-US' ? '/en/' : '/';
+    const localePath = _.get(locale, 'id') === 'en-US' ? '/en/' : '/';
 
     const menu = [
       {
         key: 'guide',
-        tip: locale.common.guide,
+        tip: _.get(locale, 'common.guide'),
         to: `${localePath}guide/introduction`,
         icon: guide
       },
       {
         key: 'components',
-        tip: locale.common.components,
+        tip: _.get(locale, 'common.components'),
         to: `${localePath}components/overview`,
         icon: component
       },
       {
         key: 'tools',
-        tip: locale.common.tools,
+        tip: _.get(locale, 'common.tools'),
         to: `${localePath}tools/palette`,
         icon: tools
       }
@@ -80,7 +81,7 @@ class TopLevelNav extends React.Component {
 
         <div className="top-level-nav-menu">
           <WithTooltipButton
-            tip={locale.common.search}
+            tip={_.get(locale, 'common.search')}
             className="icon-btn-circle"
             onClick={this.showSearchDrawer}
           >
@@ -88,7 +89,7 @@ class TopLevelNav extends React.Component {
           </WithTooltipButton>
 
           <WithTooltipButton
-            tip={locale.common.design}
+            tip={_.get(locale, 'common.design')}
             className="icon-btn-circle"
             componentClass="a"
             target="_blank"
@@ -130,7 +131,9 @@ class TopLevelNav extends React.Component {
             </WithTooltipButton>
 
             <WithTooltipButton
-              tip={showSubmenu ? locale.common.closeMenu : locale.common.openMenu}
+              tip={
+                showSubmenu ? _.get(locale, 'common.closeMenu') : _.get(locale, 'common.openMenu')
+              }
               className="icon-btn-circle"
               onClick={this.handleToggleMenu}
             >
