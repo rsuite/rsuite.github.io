@@ -96,6 +96,7 @@ class Page extends React.Component {
                     trigger="hover"
                     title="Advanced"
                     icon={<Icon icon="magic" />}
+                    placement="rightTop"
                   >
                     <Dropdown.Item eventKey="3-1">Geo</Dropdown.Item>
                     <Dropdown.Item eventKey="3-2">Devices</Dropdown.Item>
@@ -108,6 +109,7 @@ class Page extends React.Component {
                     trigger="hover"
                     title="Settings"
                     icon={<Icon icon="gear-circle" />}
+                    placement="rightTop"
                   >
                     <Dropdown.Item eventKey="4-1">Applications</Dropdown.Item>
                     <Dropdown.Item eventKey="4-2">Websites</Dropdown.Item>
