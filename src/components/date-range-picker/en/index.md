@@ -1,4 +1,4 @@
-# DateRangePicker Date range selector
+# DateRangePicker
 
 Used to quickly select a date range
 

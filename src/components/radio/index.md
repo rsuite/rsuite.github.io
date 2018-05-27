@@ -33,10 +33,10 @@ import { Radio, RadioGroup } from 'rsuite';
 
 ### `<RadioGroup>`
 
-| 性名称       | 类型`(默认值)`                              | 描述               |
-| ------------ | ------------------------------------------- | ------------------ |
-| name         | string                                      | 用于表单对应的名称 |
-| inline       | boolean                                     | 内联布局           |
-| value        | any                                         | 值(受控)           |
-| defaultValue | any                                         | 默认值             |
-| onChange     | (value:any,event:SyntheticInputEvent)=>void | 值改变后的回调函数 |
+| 性名称       | 类型`(默认值)`                               | 描述               |
+| ------------ | -------------------------------------------- | ------------------ |
+| name         | string                                       | 用于表单对应的名称 |
+| inline       | boolean                                      | 内联布局           |
+| value        | any                                          | 值(受控)           |
+| defaultValue | any                                          | 默认值             |
+| onChange     | (value:any, event:SyntheticInputEvent)=>void | 值改变后的回调函数 |
