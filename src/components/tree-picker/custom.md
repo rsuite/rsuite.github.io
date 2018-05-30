@@ -15,7 +15,7 @@ const instance = (
     renderTreeNode={nodeData => {
       return (
         <span>
-          <i className="icon icon-map-marker" /> {nodeData.label}
+          <i className="rs-icon rs-icon-map-marker" /> {nodeData.label}
         </span>
       );
     }}
@@ -23,7 +23,7 @@ const instance = (
     renderValue={(activeNode, placeholder) => {
       return activeNode ? (
         <span>
-          <i className="icon icon-map-marker" /> {activeNode.label}
+          <i className="rs-icon rs-icon-map-marker" /> {activeNode.label}
         </span>
       ) : (
         placeholder
