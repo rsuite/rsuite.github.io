@@ -14,7 +14,7 @@ const instance = (
     data={data}
     placeholder={
       <span>
-        <i className="rs-icon rs-icon-map-marker" /> 选择地区
+        <i className="rs-icon rs-icon-map-marker" /> Location
       </span>
     }
     renderTreeNode={nodeData => {

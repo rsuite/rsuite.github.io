@@ -8,9 +8,10 @@ import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
   id: 'Cascader',
-  examples: ['basic', 'placement', 'custom', 'disabled', 'asyn'],
+  examples: ['basic', 'placement', 'custom', 'custom-toggle', 'disabled', 'asyn'],
   dependencies: {
     Cascader,
+    Button,
     data,
     province,
     findNodeOfTree,

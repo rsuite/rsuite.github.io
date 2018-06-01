@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import { DateRangePicker } from 'rsuite';
+import { DateRangePicker, Button } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
@@ -13,10 +13,12 @@ export default createComponentExample({
     'disabled',
     'toolbar',
     'value',
-    'intl'
+    'intl',
+    'custom-toggle'
   ],
   dependencies: {
     moment,
+    Button,
     DateRangePicker
   }
 });
