@@ -1,4 +1,4 @@
-# Dropdown select menu
+# Dropdown
 
 A drop-down menu is a navigation that uses selectpicker if you want to select a value.
 
