@@ -1,6 +1,6 @@
 ### Container
 
-`Popover` renders inside the container and scrolls along with the button.
+Positioned popover components in scrolling container
 
 <!--start-code-->
 
@@ -21,6 +21,7 @@ class Demo extends React.Component {
           height: 200,
           overflow: 'auto',
           background: '#f1f1f1',
+          boxShadow: '#999 1px 1px 5px inset',
           padding: 50
         }}
         ref={ref => {
@@ -39,7 +40,7 @@ class Demo extends React.Component {
             }}
             speaker={speaker}
           >
-            <Button>Click</Button>
+            <Button appearance="primary">Click</Button>
           </Whisper>
         </div>
       </div>

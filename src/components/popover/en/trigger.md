@@ -12,19 +12,59 @@ const speaker = (
   </Popover>
 );
 
+class TriggerDemo extends React.Component {
+  render() {
+    return (
+      <div>
+        <Whisper
+          placement="top"
+          speaker={speaker}
+          triggerRef={ref => {
+            this.trigger = ref;
+          }}
+        >
+          <span>Popover</span>
+        </Whisper>
+        <hr />
+        <ButtonToolbar>
+          <Button
+            onClick={() => {
+              this.trigger.show();
+            }}
+          >
+            Trigger Show
+          </Button>
+          <Button
+            onClick={() => {
+              this.trigger.hide();
+            }}
+          >
+            Trigger Hide
+          </Button>
+        </ButtonToolbar>
+      </div>
+    );
+  }
+}
+
 const instance = (
-  <ButtonToolbar>
-    <Whisper placement="top" trigger="click" speaker={speaker}>
-      <Button>Click</Button>
-    </Whisper>
-    <Whisper placement="top" trigger="focus" speaker={speaker}>
-      <Button>Focus</Button>
-    </Whisper>
-    <Whisper placement="top" trigger="hover" speaker={speaker}>
-      <Button>Hover</Button>
-    </Whisper>
-  </ButtonToolbar>
+  <div>
+    <ButtonToolbar>
+      <Whisper placement="top" trigger="click" speaker={speaker}>
+        <Button>Click</Button>
+      </Whisper>
+      <Whisper placement="top" trigger="focus" speaker={speaker}>
+        <Button>Focus</Button>
+      </Whisper>
+      <Whisper placement="top" trigger="hover" speaker={speaker}>
+        <Button>Hover</Button>
+      </Whisper>
+    </ButtonToolbar>
+    <hr />
+    <TriggerDemo />
+  </div>
 );
+
 ReactDOM.render(instance);
 ```
 

@@ -1,5 +1,14 @@
 import React from 'react';
-import { Dropdown, Button, Icon, ButtonToolbar, IconButton, ButtonGroup } from 'rsuite';
+import {
+  Dropdown,
+  Button,
+  Icon,
+  ButtonToolbar,
+  IconButton,
+  ButtonGroup,
+  Popover,
+  Whisper
+} from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
@@ -14,7 +23,9 @@ export default createComponentExample({
     'placement',
     'submenu',
     'custom',
-    'buttons'
+    'buttons',
+    'menu-items',
+    'with-popover'
   ],
   dependencies: {
     ButtonToolbar,
@@ -22,6 +33,8 @@ export default createComponentExample({
     IconButton,
     Icon,
     Dropdown,
-    Button
+    Button,
+    Popover,
+    Whisper
   }
 });
