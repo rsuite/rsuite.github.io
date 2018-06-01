@@ -32,7 +32,12 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     disableHostCheck: true,
-    historyApiFallback: true,
+    historyApiFallback:{
+      rewrites: [
+        { from: /^\/en/, to: '/en/index.html' },
+        { from: /./, to: '/index.html' }
+      ]
+    },
     compress: true,
     host: '0.0.0.0',
     port: 3200

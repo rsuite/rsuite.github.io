@@ -1,5 +1,7 @@
 ### 设置容器
 
+`Popover` 会渲染在容器内部，跟随按钮一起滚动。
+
 <!--start-code-->
 
 ```js
@@ -13,27 +15,33 @@ const speaker = (
 class Demo extends React.Component {
   render() {
     return (
-      <div>
+      <div
+        style={{
+          position: 'relative',
+          height: 200,
+          overflow: 'auto',
+          background: '#f1f1f1',
+          padding: 50
+        }}
+        ref={ref => {
+          this.container = ref;
+        }}
+      >
         <div
           style={{
-            height: 120,
-            background: '#f1f1f1',
-            padding: 10
+            height: 500
           }}
-          ref={ref => {
-            this.container = ref;
-          }}
-        />
-        <hr />
-        <Whisper
-          trigger="click"
-          container={() => {
-            return this.container;
-          }}
-          speaker={speaker}
         >
-          <Button>Click</Button>
-        </Whisper>
+          <Whisper
+            trigger="click"
+            container={() => {
+              return this.container;
+            }}
+            speaker={speaker}
+          >
+            <Button>Click</Button>
+          </Whisper>
+        </div>
       </div>
     );
   }

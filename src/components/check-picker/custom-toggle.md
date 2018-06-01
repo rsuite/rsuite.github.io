@@ -10,7 +10,7 @@
 
 const instance = (
   <div>
-    <SelectPicker
+    <CheckPicker
       data={data}
       groupBy="role"
       appearance="primary"
@@ -18,7 +18,7 @@ const instance = (
       toggleComponentClass={Button}
     />
     <hr />
-    <SelectPicker
+    <CheckPicker
       data={data}
       groupBy="role"
       block

@@ -8,6 +8,7 @@ import {
   IconButton,
   Divider,
   Icon,
+  Nav,
   Checkbox
 } from 'rsuite';
 
@@ -46,6 +47,7 @@ export default locale => {
     examples: ['default'],
     dict,
     dependencies: {
+      Nav,
       Checkbox,
       Toggle,
       fakeData,

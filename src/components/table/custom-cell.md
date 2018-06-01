@@ -79,11 +79,24 @@ const ActionCell = ({ rowData, dataKey, ...props }) => {
     alert(`id:${rowData[dataKey]}`);
   }
 
+  const speaker = (
+    <Popover>
+      <Nav vertical>
+        <Nav.Item>View </Nav.Item>
+        <Nav.Item>Report</Nav.Item>
+        <Divider />
+        <Nav.Item>Remove</Nav.Item>
+      </Nav>
+    </Popover>
+  );
+
   return (
-    <Cell {...props}>
-      <a onClick={handleAction}> Edit </a>
+    <Cell {...props} className="link-group">
+      <IconButton appearance="subtle" onClick={handleAction} icon={<Icon icon="edit2" />} />
       <Divider vertical />
-      <a onClick={handleAction}> Remove </a>
+      <Whisper placement="bottomRight" trigger="click" speaker={speaker}>
+        <IconButton appearance="subtle" icon={<Icon icon="more" />} />
+      </Whisper>
     </Cell>
   );
 };

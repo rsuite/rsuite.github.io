@@ -1,5 +1,5 @@
 import React from 'react';
-import { SelectPicker, Button, Icon } from '../../rsuiteSource';
+import { SelectPicker, Button, Icon } from 'rsuite';
 import data from '../../resources/data/users';
 import createComponentExample from '../createComponentExample';
 
