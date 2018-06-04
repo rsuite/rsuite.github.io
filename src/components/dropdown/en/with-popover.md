@@ -3,30 +3,50 @@
 <!--start-code-->
 
 ```js
-const Menu = () => (
-  <Dropdown.Menu>
-    <Dropdown.Item>New File</Dropdown.Item>
-    <Dropdown.Item>New File with Current Profile</Dropdown.Item>
-    <Dropdown.Item>Download As...</Dropdown.Item>
-    <Dropdown.Item>Export PDF</Dropdown.Item>
-    <Dropdown.Item>Export HTML</Dropdown.Item>
-    <Dropdown.Item>Settings</Dropdown.Item>
-    <Dropdown.Item>About</Dropdown.Item>
+const Menu = ({ onSelect }) => (
+  <Dropdown.Menu onSelect={onSelect}>
+    <Dropdown.Item eventKey={1}>New File</Dropdown.Item>
+    <Dropdown.Item eventKey={2}>New File with Current Profile</Dropdown.Item>
+    <Dropdown.Item eventKey={3}>Download As...</Dropdown.Item>
+    <Dropdown.Item eventKey={4}>Export PDF</Dropdown.Item>
+    <Dropdown.Item eventKey={5}>Export HTML</Dropdown.Item>
+    <Dropdown.Item eventKey={6}>Settings</Dropdown.Item>
+    <Dropdown.Item eventKey={7}>About</Dropdown.Item>
   </Dropdown.Menu>
 );
 
-const MenuPopover = props => (
-  <Popover {...props} full>
-    <Menu />
+const MenuPopover = ({ onSelect, ...rest }) => (
+  <Popover {...rest} full>
+    <Menu onSelect={onSelect} />
   </Popover>
 );
 
-const instance = (
-  <Whisper placement="bottomLeft" trigger="click" speaker={<MenuPopover />}>
-    <Button>File</Button>
-  </Whisper>
-);
-ReactDOM.render(instance);
+class WithPopover extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSelectMenu = this.handleSelectMenu.bind(this);
+  }
+  handleSelectMenu(eventKey, event) {
+    console.log(eventKey);
+    this.trigger.hide();
+  }
+  render() {
+    return (
+      <Whisper
+        placement="bottomLeft"
+        trigger="click"
+        triggerRef={ref => {
+          this.trigger = ref;
+        }}
+        speaker={<MenuPopover onSelect={this.handleSelectMenu} />}
+      >
+        <Button>File</Button>
+      </Whisper>
+    );
+  }
+}
+
+ReactDOM.render(<WithPopover />);
 ```
 
 <!--end-code-->

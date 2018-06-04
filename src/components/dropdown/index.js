@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import {
   Dropdown,
   Button,
@@ -25,7 +26,8 @@ export default createComponentExample({
     'custom',
     'buttons',
     'menu-items',
-    'with-popover'
+    'with-popover',
+    'with-router'
   ],
   dependencies: {
     ButtonToolbar,
@@ -35,6 +37,7 @@ export default createComponentExample({
     Dropdown,
     Button,
     Popover,
-    Whisper
+    Whisper,
+    Link
   }
 });

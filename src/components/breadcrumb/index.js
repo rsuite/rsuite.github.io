@@ -6,7 +6,7 @@ import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
   id: 'Breadcrumb',
-  examples: ['basic', 'separator'],
+  examples: ['basic', 'separator', 'with-router'],
   dependencies: {
     Link,
     Icon,
