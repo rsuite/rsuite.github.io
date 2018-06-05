@@ -20,12 +20,12 @@ import { SelectPicker } from 'rsuite';
 
 | Property           | Type `(Default)`                                             | Description                                            |
 | ------------------ | ------------------------------------------------------------ | ------------------------------------------------------ |
-| classPrefix        | string `('picker-select')`                                   | The prefix of the component CSS class                                |
+| classPrefix        | string `('picker-select')`                                   | The prefix of the component CSS class                  |
 | data \*            | Array&lt;[DataItemType](#DataItemType)&gt;                   | Selectable data                                        |
 | groupBy            | string                                                       | Set grouping criteria 'key' in 'data'                  |
 | valueKey           | string `('value')`                                           | Set option value 'key' in 'data'                       |
 | labelKey           | string `('label')`                                           | Set options to display the 'key' in 'data'             |
-| disabled           | boolean                                                      | Whether or not component is disabled                  |
+| disabled           | boolean                                                      | Whether or not component is disabled                   |
 | disabledItemValues | Array&lt;DataItemType.value&gt;                              | Disable optional                                       |
 | value              | DataItemType.value                                           | Value (Controlled)                                     |
 | defaultValue       | DataItemType.value                                           | Default value                                          |
@@ -43,7 +43,7 @@ import { SelectPicker } from 'rsuite';
 | renderMenuGroup    | (groupTitle:React.Node, item:DataItemType)=>React.Node       | Custom Render Options Group                            |
 | searchable         | boolean `(true)`                                             | Whether you can search for options.                    |
 | cleanable          | boolean `(true)`                                             | Whether the option can be emptied.                     |
-| placement          | enum: [Placement](#Placement)`('bottomLeft')`                | The placement of component                                 |
+| placement          | enum: [Placement](#Placement)`('bottomLeft')`                | The placement of component                             |
 | menuClassName      | string                                                       | A css class to apply to the Menu DOM node.             |
 
                                       |
@@ -61,7 +61,12 @@ type Placement =
   | 'leftTop'
   | 'rightTop'
   | 'leftBottom'
-  | 'rightBottom';
+  | 'rightBottom'
+  | 'auto'
+  | 'autoVerticalLeft'
+  | 'autoVerticalRight'
+  | 'autoHorizontalTop'
+  | 'autoHorizontalBottom';
 ```
 
 ### DataItemType
