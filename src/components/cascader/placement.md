@@ -3,7 +3,6 @@
 <!--start-code-->
 
 ```js
-
 /**
  * import data from
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/province.js
@@ -23,6 +22,7 @@ const instance = (
   <div>
     <CustomCascader placement="topLeft" />
     <CustomCascader placement="bottomLeft" />
+    <CustomCascader placement="autoVerticalLeft" />
   </div>
 );
 ReactDOM.render(instance);
