@@ -13,7 +13,8 @@ export default createComponentExample({
     'custom-toggle',
     'disabled',
     'searchable',
-    'async'
+    'async',
+    'container'
   ],
   dependencies: {
     SelectPicker,

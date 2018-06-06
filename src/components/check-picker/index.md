@@ -45,6 +45,7 @@ import { CheckPicker } from 'rsuite';
 | cleanable          | boolean `(true)`                                                 | 可以清除                             |
 | placement          | enum: [Placement](#Placement)`('bottomLeft')`                    | 位置                                 |
 | menuClassName      | string                                                           | 选项菜单的 className                 |
+| container          | HTMLElement or (() => HTMLElement)                               | 设置渲染的容器                       |
 
 ## Types
 

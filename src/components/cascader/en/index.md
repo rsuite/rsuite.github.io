@@ -44,6 +44,7 @@ import { Cascader } from 'rsuite';
 | open               | boolean                                                      | Whether open the component                             |
 | defaultOpen        | boolean                                                      | Default value of open property                         |
 | placement          | enum: [Placement](#Placement)`('bottomLeft')`                | The placement of component                             |
+| container          | HTMLElement or (() => HTMLElement)                           | Sets the rendering container                           |
 
 ## Types
 

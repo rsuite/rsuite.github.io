@@ -45,6 +45,7 @@ import { SelectPicker } from 'rsuite';
 | cleanable          | boolean `(true)`                                             | 可以清除                             |
 | placement          | enum: [Placement](#Placement)`('bottomLeft')`                | 位置                                 |
 | menuClassName      | string                                                       | 应用于菜单 DOM 节点的 css class      |
+| container          | HTMLElement or (() => HTMLElement)                           | 设置渲染的容器                       |
 
 ## Types
 

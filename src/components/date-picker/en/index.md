@@ -55,6 +55,7 @@ import { DatePicker } from 'rsuite';
 | placement             | enum: [Placement](#Placement) `('bottomLeft')`        | The placement of component                                                           |
 | limitStartYear        | number `(5)`                                          | Set an optional year limit relative to the current selection date                    |
 | limitEndYear          | number `(5)`                                          | Set the lower limit of the available year relative to the current selection date     |
+| container             | HTMLElement or (() => HTMLElement)                    | Sets the rendering container                                                         |
 
 ## Types
 

@@ -18,7 +18,7 @@ import { TreePicker } from 'rsuite';
 
 | Property          | Type `(Default)`                                              | Description                                 |
 | ----------------- | ------------------------------------------------------------- | ------------------------------------------- |
-| classPrefix       | string`('picker-tree')`                                       | The prefix of the component CSS class                        |
+| classPrefix       | string`('picker-tree')`                                       | The prefix of the component CSS class       |
 | value             | DataItemType.value                                            | Selected value                              |
 | defaultValue      | DataItemType.value                                            | Default selected Value                      |
 | data \*           | Array&lt;[DataItemType](#DataItemType)&gt;                    | Tree data                                   |
@@ -45,7 +45,9 @@ import { TreePicker } from 'rsuite';
 | renderValue       | (activeNode:DataItemType, placeholder:React.Node)=>React.Node | Custom Render Placeholder                   |
 | renderExtraFooter | ()=>React.Node                                                | Customizing footer Content                  |
 | placement         | enum: [Placement](#Placement)`('bottomLeft')`                 | Expand placement                            |
-| menuClassName     | string                                                        | A css class to apply to the Menu DOM node  |
+| menuClassName     | string                                                        | A css class to apply to the Menu DOM node   |
+| container         | HTMLElement or (() => HTMLElement)                            | Sets the rendering container                |
+
 
 ## Types
 
@@ -60,7 +62,12 @@ type Placement =
   | 'leftTop'
   | 'rightTop'
   | 'leftBottom'
-  | 'rightBottom';
+  | 'rightBottom'
+  | 'auto'
+  | 'autoVerticalLeft'
+  | 'autoVerticalRight'
+  | 'autoHorizontalTop'
+  | 'autoHorizontalBottom';
 ```
 
 ### DataItemType
