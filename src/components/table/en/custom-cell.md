@@ -41,11 +41,12 @@ const ImageCell = ({ rowData, dataKey, ...props }) => (
   <Cell {...props} style={{ padding: 0 }}>
     <div
       style={{
-        width: 44,
-        height: 44,
+        width: 40,
+        height: 40,
         background: '#f5f5f5',
-        borderRadius: 22,
-        overflow: `hidden`,
+        borderRadius: 20,
+        marginTop: 2,
+        overflow: 'hidden',
         display: 'inline-block'
       }}
     >
@@ -73,21 +74,63 @@ const EmailCell = ({ rowData, dataKey, ...props }) => (
   </Cell>
 );
 
+const Menu = ({ onSelect }) => (
+  <Dropdown.Menu onSelect={onSelect}>
+    <Dropdown.Item eventKey={3}>Download As...</Dropdown.Item>
+    <Dropdown.Item eventKey={4}>Export PDF</Dropdown.Item>
+    <Dropdown.Item eventKey={5}>Export HTML</Dropdown.Item>
+    <Dropdown.Item eventKey={6}>Settings</Dropdown.Item>
+    <Dropdown.Item eventKey={7}>About</Dropdown.Item>
+  </Dropdown.Menu>
+);
+
+const MenuPopover = ({ onSelect, ...rest }) => (
+  <Popover {...rest} full>
+    <Menu onSelect={onSelect} />
+  </Popover>
+);
+
+class CustomWhisper extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSelectMenu = this.handleSelectMenu.bind(this);
+  }
+  handleSelectMenu(eventKey, event) {
+    console.log(eventKey);
+    this.trigger.hide();
+  }
+  render() {
+    return (
+      <Whisper
+        placement="autoVerticalLeft"
+        trigger="click"
+        triggerRef={ref => {
+          this.trigger = ref;
+        }}
+        speaker={<MenuPopover onSelect={this.handleSelectMenu} />}
+      >
+        {this.props.children}
+      </Whisper>
+    );
+  }
+}
+
 const ActionCell = ({ rowData, dataKey, ...props }) => {
   function handleAction() {
     alert(`id:${rowData[dataKey]}`);
   }
-
   return (
-    <Cell {...props}>
-      <a onClick={handleAction}> Edit </a>
+    <Cell {...props} className="link-group">
+      <IconButton appearance="subtle" onClick={handleAction} icon={<Icon icon="edit2" />} />
       <Divider vertical />
-      <a onClick={handleAction}> Remove </a>
+      <CustomWhisper>
+        <IconButton appearance="subtle" icon={<Icon icon="more" />} />
+      </CustomWhisper>
     </Cell>
   );
 };
 
-const data = fakeData.filter((v, i) => i < 8);
+const data = fakeData.filter((v, i) => i < 20);
 class CustomColumnTable extends React.Component {
   constructor(props) {
     super(props);
@@ -113,6 +156,8 @@ class CustomColumnTable extends React.Component {
     this.setState({
       checkedKeys: nextCheckedKeys
     });
+
+    console.log(this.table);
   }
   render() {
     const { data, checkedKeys } = this.state;
