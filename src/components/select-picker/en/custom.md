@@ -16,14 +16,14 @@ const instance = (
     renderMenuItem={(label, item) => {
       return (
         <div>
-          <i className="icon icon-user" /> {label}
+          <i className="rs-icon rs-icon-user" /> {label}
         </div>
       );
     }}
     renderMenuGroup={(label, item) => {
       return (
         <div>
-          <i className="icon icon-group" /> {label} - ({item.children.length})
+          <i className="rs-icon rs-icon-group" /> {label} - ({item.children.length})
         </div>
       );
     }}
@@ -31,7 +31,7 @@ const instance = (
       return (
         <div>
           <span style={{ color: '#575757' }}>
-            <i className="icon icon-user" /> User :
+            <i className="rs-icon rs-icon-user" /> User :
           </span>{' '}
           {label}
         </div>

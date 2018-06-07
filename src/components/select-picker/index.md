@@ -20,7 +20,7 @@ import { SelectPicker } from 'rsuite';
 
 | 属性名称           | 类型`(默认值)`                                               | 描述                                 |
 | ------------------ | ------------------------------------------------------------ | ------------------------------------ |
-| classPrefix        | string `('picker-select')`                                   | 组件 CSS 类的前缀                       |
+| classPrefix        | string `('picker-select')`                                   | 组件 CSS 类的前缀                    |
 | data \*            | Array&lt;[DataItemType](#DataItemType)&gt;                   | 组件数据                             |
 | groupBy            | string                                                       | 设置分组条件在 `data` 中的 `key`     |
 | valueKey           | string `('value')`                                           | 设置选项值在 `data` 中的 `key`       |
@@ -44,7 +44,8 @@ import { SelectPicker } from 'rsuite';
 | searchable         | boolean `(true)`                                             | 可以搜索                             |
 | cleanable          | boolean `(true)`                                             | 可以清除                             |
 | placement          | enum: [Placement](#Placement)`('bottomLeft')`                | 位置                                 |
-| menuClassName      | string                                                       | 应用于菜单 DOM 节点的 css class                |
+| menuClassName      | string                                                       | 应用于菜单 DOM 节点的 css class      |
+| container          | HTMLElement or (() => HTMLElement)                           | 设置渲染的容器                       |
 
 ## Types
 
@@ -59,7 +60,12 @@ type Placement =
   | 'leftTop'
   | 'rightTop'
   | 'leftBottom'
-  | 'rightBottom';
+  | 'rightBottom'
+  | 'auto'
+  | 'autoVerticalLeft'
+  | 'autoVerticalRight'
+  | 'autoHorizontalTop'
+  | 'autoHorizontalBottom';
 ```
 
 ### DataItemType

@@ -46,6 +46,7 @@ import { CheckTreePicker } from 'rsuite';
 | renderExtraFooter  | ()=>React.Node                                                                               | 自定义页脚内容                  |
 | placement          | enum: Placement `('bottomLeft')`                                                             | 打开位置                        |
 | menuClassName      | string                                                                                       | 选项菜单的 className            |
+| container          | HTMLElement or (() => HTMLElement)                           | 设置渲染的容器                       |
 
 ## Types
 
@@ -60,7 +61,12 @@ type Placement =
   | 'leftTop'
   | 'rightTop'
   | 'leftBottom'
-  | 'rightBottom';
+  | 'rightBottom'
+  | 'auto'
+  | 'autoVerticalLeft'
+  | 'autoVerticalRight'
+  | 'autoHorizontalTop'
+  | 'autoHorizontalBottom';
 ```
 
 ### DataItemType

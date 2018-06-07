@@ -47,6 +47,8 @@ import { TreePicker } from 'rsuite';
 | renderExtraFooter | ()=>React.Node                                                | 自定义页脚内容                  |
 | placement         | enum: [Placement](#Placement)`('bottomLeft')`                 | 打开位置                        |
 | menuClassName     | string                                                        | 应用于菜单 DOM 节点的 css class    |
+| container          | HTMLElement or (() => HTMLElement)                           | 设置渲染的容器                       |
+
 
 ## Types
 
@@ -61,7 +63,12 @@ type Placement =
   | 'leftTop'
   | 'rightTop'
   | 'leftBottom'
-  | 'rightBottom';
+  | 'rightBottom'
+  | 'auto'
+  | 'autoVerticalLeft'
+  | 'autoVerticalRight'
+  | 'autoHorizontalTop'
+  | 'autoHorizontalBottom';
 ```
 
 ### DataItemType

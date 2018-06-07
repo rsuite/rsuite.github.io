@@ -44,6 +44,8 @@ import { CheckTreePicker } from 'rsuite';
 | renderValue        | (values:Array&lt;Object&gt;, checkedItems:Array&lt;Object&gt;)=>React.Node | custom render placeholder                                   |
 | renderExtraFooter  | ()=>React.Node                                                             | custom render extra footer                                  |
 | placement          | enum: Placement `('bottomLeft')`                                           | Placement of component                                      |
+| container          | HTMLElement or (() => HTMLElement)                                         | Sets the rendering container                                |
+
 
 ## Types
 
@@ -58,7 +60,12 @@ type Placement =
   | 'leftTop'
   | 'rightTop'
   | 'leftBottom'
-  | 'rightBottom';
+  | 'rightBottom'
+  | 'auto'
+  | 'autoVerticalLeft'
+  | 'autoVerticalRight'
+  | 'autoHorizontalTop'
+  | 'autoHorizontalBottom';
 ```
 
 ## Related Components

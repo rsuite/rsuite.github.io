@@ -40,6 +40,7 @@ import { Popover, Whisper } from 'rsuite';
 | onFocus      | () => void                                             | 获取焦点的回调函数              |
 | onMouseLeave | () => void                                             | 鼠标离开的回调函数              |
 | container    | HTMLElement or (() => HTMLElement)                     | 设置渲染的容器                  |
+| triggerRef   | React.ElementRef                                       | trigger 的 ref                  |
 
 ## Types
 
@@ -58,7 +59,12 @@ type Placement =
   | 'leftTop'
   | 'rightTop'
   | 'leftBottom'
-  | 'rightBottom';
+  | 'rightBottom'
+  | 'auto'
+  | 'autoVerticalLeft'
+  | 'autoVerticalRight'
+  | 'autoHorizontalTop'
+  | 'autoHorizontalBottom';
 ```
 
 ## 相关组件

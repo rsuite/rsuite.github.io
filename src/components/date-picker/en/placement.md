@@ -1,59 +1,70 @@
 ### Placement
 
 <!--start-code-->
-```js
 
-const CustomCheckPicker=({placement})=>(
+```js
+const CustomDatePicker = ({ placement }) => (
   <DatePicker placement={placement} placeholder={placement} />
 );
 
 const instance = (
-  <table className="placement-table">
-    <tbody>
-      <tr>
-        <td></td>
-        <td>
-          <CustomCheckPicker placement="topLeft" />
-        </td>
-        <td>
-          <CustomCheckPicker placement="topRight" />
-        </td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>
-          <CustomCheckPicker placement="leftTop" />
-        </td>
-        <td></td>
-        <td></td>
-        <td>
-          <CustomCheckPicker placement="rightTop" />
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <CustomCheckPicker placement="leftBottom" />
-        </td>
-        <td></td>
-        <td></td>
-        <td>
-          <CustomCheckPicker placement="rightBottom" />
-        </td>
-      </tr>
-      <tr>
-        <td></td>
-        <td>
-          <CustomCheckPicker placement="bottomLeft" />
-        </td>
-        <td>
-          <CustomCheckPicker placement="bottomRight" />
-        </td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <div>
+    <table className="placement-table">
+      <tbody>
+        <tr>
+          <td />
+          <td>
+            <CustomDatePicker placement="topLeft" />
+          </td>
+          <td>
+            <CustomDatePicker placement="topRight" />
+          </td>
+          <td />
+        </tr>
+        <tr>
+          <td>
+            <CustomDatePicker placement="leftTop" />
+          </td>
+          <td />
+          <td />
+          <td>
+            <CustomDatePicker placement="rightTop" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <CustomDatePicker placement="leftBottom" />
+          </td>
+          <td />
+          <td />
+          <td>
+            <CustomDatePicker placement="rightBottom" />
+          </td>
+        </tr>
+        <tr>
+          <td />
+          <td>
+            <CustomDatePicker placement="bottomLeft" />
+          </td>
+          <td>
+            <CustomDatePicker placement="bottomRight" />
+          </td>
+          <td />
+        </tr>
+      </tbody>
+    </table>
+    <hr />
 
+    <CustomDatePicker placement="auto" />
+    <CustomDatePicker placement="autoVerticalRight" />
+    <CustomDatePicker placement="autoVerticalLeft" />
+    <CustomDatePicker placement="autoHorizontalTop" />
+    <CustomDatePicker placement="autoHorizontalBottom" />
+  </div>
 );
 ReactDOM.render(instance);
 ```
+
 <!--end-code-->
+
+> Tip: When set to `auto*`, try to scroll the page, or change the browser size, it will automatically appear in the right place.

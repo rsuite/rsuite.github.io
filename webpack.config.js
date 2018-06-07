@@ -28,141 +28,154 @@ const getStyleLoader = () => {
 
 const languages = ['javascript', 'bash', 'xml', 'css', 'less', 'json', 'diff', 'typescript'];
 
-module.exports = {
-  devServer: {
-    contentBase: path.join(__dirname, 'public'),
-    disableHostCheck: true,
-    historyApiFallback: true,
-    compress: true,
-    host: '0.0.0.0',
-    port: 3200
-  },
-  entry: {
-    polyfills: './src/polyfills.js',
-    app: './src/index.js',
-    app_en: './src/index-en.js'
-  },
-  output: {
-    filename: '[name].bundle.js?[hash]',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
-  },
-  optimization: {
-    splitChunks: {
-      cacheGroups: {
-        commons: {
-          name: 'commons',
-          chunks: 'initial',
-          minChunks: 2
+module.exports = Object.assign(
+  {
+    devServer: {
+      contentBase: path.join(__dirname, 'public'),
+      disableHostCheck: true,
+      historyApiFallback: {
+        rewrites: [
+          { from: /^\/en/, to: '/en/index.html' },
+          { from: /./, to: '/index.html' }
+        ]
+      },
+      compress: true,
+      host: '0.0.0.0',
+      port: 3200
+    },
+    entry: {
+      polyfills: './src/polyfills.js',
+      app: './src/index.js',
+      app_en: './src/index-en.js'
+    },
+    output: {
+      filename: '[name].bundle.js?[hash]',
+      path: path.resolve(__dirname, 'dist'),
+      publicPath: '/'
+    },
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          commons: {
+            name: 'commons',
+            chunks: 'initial',
+            minChunks: 2
+          }
         }
       }
-    }
-  },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        use: [
-          //'transform-loader?brfs', // Use browserify transforms as webpack-loader.
-          'babel-loader?babelrc'
-        ],
-        exclude: /node_modules/
-      },
-      {
-        test: /\.(less|css)$/,
-        loader: extractLess.extract({
-          use: getStyleLoader(),
-          // use style-loader in development
-          fallback: 'style-loader?{attrs:{prop: "value"}}'
-        })
-      },
-      {
-        test: /\.md$/,
-        use: [
-          {
-            loader: 'html-loader'
-          },
-          {
-            loader: 'markdown-loader',
-            options: {
-              pedantic: true,
-              renderer: markdownRenderer(languages)
+    },
+    module: {
+      rules: [
+        {
+          test: /\.js$/,
+          use: [
+            //'transform-loader?brfs', // Use browserify transforms as webpack-loader.
+            'babel-loader?babelrc'
+          ],
+          exclude: /node_modules/
+        },
+        {
+          test: /\.(less|css)$/,
+          loader: extractLess.extract({
+            use: getStyleLoader(),
+            // use style-loader in development
+            fallback: 'style-loader?{attrs:{prop: "value"}}'
+          })
+        },
+        {
+          test: /\.md$/,
+          use: [
+            {
+              loader: 'html-loader'
+            },
+            {
+              loader: 'markdown-loader',
+              options: {
+                pedantic: true,
+                renderer: markdownRenderer(languages)
+              }
             }
-          }
-        ]
-      },
-      {
-        test: /\.(jpg|png)$/,
-        //`publicPath`  only use to assign assets path in build
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192,
-              publicPath: '/'
+          ]
+        },
+        {
+          test: /\.(jpg|png)$/,
+          //`publicPath`  only use to assign assets path in build
+          use: [
+            {
+              loader: 'url-loader',
+              options: {
+                limit: 8192,
+                publicPath: '/'
+              }
             }
-          }
-        ]
-      },
-      {
-        test: /\.(woff|woff2|eot|ttf|svg)($|\?)/,
-        include: iconPath,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 1,
-              size: 16,
-              hash: 'sha512',
-              digest: 'hex',
-              name: 'resources/[hash].[ext]',
-              publicPath: '/'
+          ]
+        },
+        {
+          test: /\.(woff|woff2|eot|ttf|svg)($|\?)/,
+          include: iconPath,
+          use: [
+            {
+              loader: 'url-loader',
+              options: {
+                limit: 1,
+                size: 16,
+                hash: 'sha512',
+                digest: 'hex',
+                name: 'resources/[hash].[ext]',
+                publicPath: '/'
+              }
             }
-          }
-        ]
-      },
-      {
-        test: /\.svg$/,
-        exclude: iconPath,
-        use: [
-          {
-            loader: 'svg-sprite-loader',
-            options: {
-              symbolId: 'icon-[name]'
+          ]
+        },
+        {
+          test: /\.svg$/,
+          exclude: iconPath,
+          use: [
+            {
+              loader: 'svg-sprite-loader',
+              options: {
+                symbolId: 'icon-[name]'
+              }
             }
-          }
-        ]
-      }
-    ]
-  },
-  plugins: [
-    extractLess,
-    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /zh-cn|en-gb/),
-    new webpack.ContextReplacementPlugin(
-      /highlight\.js\/lib\/languages$/,
-      new RegExp(`^./(${languages.join('|')})$`)
-    ),
+          ]
+        }
+      ]
+    },
+    plugins: [
+      extractLess,
+      new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /zh-cn|en-gb/),
+      new webpack.ContextReplacementPlugin(
+        /highlight\.js\/lib\/languages$/,
+        new RegExp(`^./(${languages.join('|')})$`)
+      ),
 
-    new webpack.NamedModulesPlugin(),
-    // new webpack.HotModuleReplacementPlugin(),
-    new HtmlwebpackPlugin({
-      title: 'RSUITE | 一套 React 的 UI 组件库',
-      chunks: ['polyfills', 'commons', 'app'],
-      template: 'src/index.html',
-      inject: true
-    }),
-    new HtmlwebpackPlugin({
-      title: 'RSUITE | A suite of React components',
-      chunks: ['polyfills', 'commons', 'app_en'],
-      filename: 'en/index.html',
-      template: 'src/index.html',
-      inject: true
-    }),
-    new LodashModuleReplacementPlugin({
-      collections: true,
-      paths: true
-    }),
-    //new BundleAnalyzerPlugin({ openAnalyzer: false })
-  ],
-  devtool: STYLE_DEBUG === 'SOURCE' && 'source-map'
-};
+      new webpack.NamedModulesPlugin(),
+      // new webpack.HotModuleReplacementPlugin(),
+      new HtmlwebpackPlugin({
+        title: 'RSUITE | 一套 React 的 UI 组件库',
+        chunks: ['polyfills', 'commons', 'app'],
+        template: 'src/index.html',
+        inject: true
+      }),
+      new HtmlwebpackPlugin({
+        title: 'RSUITE | A suite of React components',
+        chunks: ['polyfills', 'commons', 'app_en'],
+        filename: 'en/index.html',
+        template: 'src/index.html',
+        inject: true
+      }),
+      new LodashModuleReplacementPlugin({
+        collections: true,
+        paths: true
+      })
+      //new BundleAnalyzerPlugin({ openAnalyzer: false })
+    ],
+    devtool: STYLE_DEBUG === 'SOURCE' && 'source-map'
+  },
+  __PRO__ ? {} : {
+    resolve: {
+      alias: {
+        rsuite: path.resolve(__dirname, '../rsuite/src/index')
+      }
+    }
+  });

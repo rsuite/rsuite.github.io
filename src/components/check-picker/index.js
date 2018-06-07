@@ -10,10 +10,12 @@ export default createComponentExample({
     'group',
     'placement',
     'custom',
+    'custom-toggle',
     'disabled',
     'searchable',
     'extra-footer',
-    'async'
+    'async',
+    'container'
   ],
   dependencies: {
     Checkbox,

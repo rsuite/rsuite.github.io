@@ -13,7 +13,7 @@ const instance=(
     valueKey="name"
     labelKey="name"
     renderMenuItem={(label, item) => {
-      return <div><i className="icon icon-circle" /> {label}</div>;
+      return <div><i className="rs-icon rs-icon-circle" /> {label}</div>;
     }}
     renderValue={(activePaths) => {
       return activePaths.map(item => item.name).join(' : ');

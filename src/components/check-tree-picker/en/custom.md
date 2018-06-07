@@ -14,13 +14,13 @@ const instance = (
     data={data}
     placeholder={
       <span>
-        <i className="icon icon-map-marker" /> 选择地区
+        <i className="rs-icon rs-icon-map-marker" /> Location
       </span>
     }
     renderTreeNode={nodeData => {
       return (
         <span>
-          <i className="icon icon-map-marker" /> {nodeData.label}
+          <i className="rs-icon rs-icon-map-marker" /> {nodeData.label}
         </span>
       );
     }}
@@ -28,7 +28,7 @@ const instance = (
       return (
         <span>
           <span style={{ color: '#575757' }}>
-            <i className="icon icon-map-marker" /> 地区 :
+            <i className="rs-icon rs-icon-map-marker" /> 地区 :
           </span>{' '}
           {checkedItems.map(item => item.label).join(' , ')}
         </span>

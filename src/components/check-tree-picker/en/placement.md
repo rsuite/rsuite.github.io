@@ -8,7 +8,7 @@
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/city.js
  */
 
-const CustomSelectPicker = ({ placement }) => (
+const CustomTreePicker = ({ placement }) => (
   <CheckTreePicker
     defaultExpandAll
     data={data}
@@ -19,50 +19,59 @@ const CustomSelectPicker = ({ placement }) => (
 );
 
 const instance = (
-  <table className="placement-table">
-    <tbody>
-      <tr>
-        <td />
-        <td>
-          <CustomSelectPicker placement="topLeft" />
-        </td>
-        <td>
-          <CustomSelectPicker placement="topRight" />
-        </td>
-        <td />
-      </tr>
-      <tr>
-        <td>
-          <CustomSelectPicker placement="leftTop" />
-        </td>
-        <td />
-        <td />
-        <td>
-          <CustomSelectPicker placement="rightTop" />
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <CustomSelectPicker placement="leftBottom" />
-        </td>
-        <td />
-        <td />
-        <td>
-          <CustomSelectPicker placement="rightBottom" />
-        </td>
-      </tr>
-      <tr>
-        <td />
-        <td>
-          <CustomSelectPicker placement="bottomLeft" />
-        </td>
-        <td>
-          <CustomSelectPicker placement="bottomRight" />
-        </td>
-        <td />
-      </tr>
-    </tbody>
-  </table>
+  <div>
+    <table className="placement-table">
+      <tbody>
+        <tr>
+          <td />
+          <td>
+            <CustomTreePicker placement="topLeft" />
+          </td>
+          <td>
+            <CustomTreePicker placement="topRight" />
+          </td>
+          <td />
+        </tr>
+        <tr>
+          <td>
+            <CustomTreePicker placement="leftTop" />
+          </td>
+          <td />
+          <td />
+          <td>
+            <CustomTreePicker placement="rightTop" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <CustomTreePicker placement="leftBottom" />
+          </td>
+          <td />
+          <td />
+          <td>
+            <CustomTreePicker placement="rightBottom" />
+          </td>
+        </tr>
+        <tr>
+          <td />
+          <td>
+            <CustomTreePicker placement="bottomLeft" />
+          </td>
+          <td>
+            <CustomTreePicker placement="bottomRight" />
+          </td>
+          <td />
+        </tr>
+      </tbody>
+    </table>
+    <hr />
+
+    <CustomTreePicker placement="auto" />
+    <CustomTreePicker placement="autoVerticalRight" />
+    <CustomTreePicker placement="autoVerticalLeft" />
+    <CustomTreePicker placement="autoHorizontalTop" />
+    <CustomTreePicker placement="autoHorizontalBottom" />
+  </div>
 );
 ReactDOM.render(instance);
 ```

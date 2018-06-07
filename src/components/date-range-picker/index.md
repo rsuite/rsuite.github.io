@@ -41,6 +41,7 @@ import { DateRangePicker } from 'rsuite';
 | limitStartYear | number `(5)`                                                                                        | 相对当前选择日期，设置可选年份上限                              |
 | limitEndYear   | number `(5)`                                                                                        | 相对当前选择日期，设置可选年份下限                              |
 | menuClassName  | string                                                                                              | 选项菜单的 className                                            |
+| container      | HTMLElement or (() => HTMLElement)                                                                  | 设置渲染的容器                                                  |
 
 ## Types
 
@@ -55,7 +56,12 @@ type Placement =
   | 'leftTop'
   | 'rightTop'
   | 'leftBottom'
-  | 'rightBottom';
+  | 'rightBottom'
+  | 'auto'
+  | 'autoVerticalLeft'
+  | 'autoVerticalRight'
+  | 'autoHorizontalTop'
+  | 'autoHorizontalBottom';
 ```
 
 ### Range

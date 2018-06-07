@@ -8,7 +8,9 @@ import {
   IconButton,
   Divider,
   Icon,
-  Checkbox
+  Nav,
+  Checkbox,
+  Dropdown
 } from 'rsuite';
 
 import fakeData from './data/users';
@@ -46,6 +48,7 @@ export default locale => {
     examples: ['default'],
     dict,
     dependencies: {
+      Nav,
       Checkbox,
       Toggle,
       fakeData,
@@ -61,7 +64,8 @@ export default locale => {
       Button,
       HeaderCell,
       Cell,
-      Column
+      Column,
+      Dropdown
     }
   })(locale);
 

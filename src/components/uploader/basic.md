@@ -3,7 +3,7 @@
 <!--start-code-->
 
 ```js
-const instance = <Uploader action="//jsonplaceholder.typicode.com/posts/" />;
+const instance = <Uploader multiple action="//jsonplaceholder.typicode.com/posts/" />;
 
 ReactDOM.render(instance);
 ```

@@ -1,13 +1,24 @@
 import React from 'react';
-import { SelectPicker, Icon } from 'rsuite';
+import { SelectPicker, Button, Icon } from 'rsuite';
 import data from '../../resources/data/users';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
   id: 'SelectPicker',
-  examples: ['basic', 'group', 'placement', 'custom', 'disabled', 'searchable', 'async'],
+  examples: [
+    'basic',
+    'group',
+    'placement',
+    'custom',
+    'custom-toggle',
+    'disabled',
+    'searchable',
+    'async',
+    'container'
+  ],
   dependencies: {
     SelectPicker,
+    Button,
     Icon,
     data
   }

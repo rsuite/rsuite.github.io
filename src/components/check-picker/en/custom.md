@@ -13,12 +13,12 @@ const instance=(
     groupBy="role"
     placeholder="Select User"
     renderMenuItem={(label, item) => {
-      return <div><i className="icon icon-user" /> {label}</div>;
+      return <div><i className="rs-icon rs-icon-user" /> {label}</div>;
     }}
     renderMenuGroup={(label, item) => {
       return (
         <div>
-          <i className="icon icon-group" /> {label} - ({item.children.length})
+          <i className="rs-icon rs-icon-group" /> {label} - ({item.children.length})
         </div>
       );
     }}
@@ -26,7 +26,7 @@ const instance=(
       return (
         <span>
           <span style={{color:'#575757'}}>
-            <i className="icon icon-user" /> Users :
+            <i className="rs-icon rs-icon-user" /> Users :
           </span> {value.join(' , ')}
         </span>
       );
