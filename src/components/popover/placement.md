@@ -15,6 +15,7 @@ const Speaker = ({ content, ...props }) => {
 const CustomComponent = ({ placement }) => (
   <Whisper
     placement={placement}
+    trigger="click"
     speaker={<Speaker content={`I am positioned to the ${placement}`} />}
   >
     <Button appearance="subtle">{placement}</Button>

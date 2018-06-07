@@ -8,6 +8,7 @@
 ```js
 const CustomComponent = ({ placement }) => (
   <Whisper
+    trigger="click"
     placement={placement}
     speaker={
       <Tooltip>This is a ToolTip for simple text hints. It can replace the title property</Tooltip>

@@ -1,6 +1,5 @@
 ### Placement
 
-
 <!--start-code-->
 
 ```js
@@ -15,6 +14,7 @@ const Speaker = ({ content, ...props }) => {
 
 const CustomComponent = ({ placement }) => (
   <Whisper
+    trigger="click"
     placement={placement}
     speaker={<Speaker content={`I am positioned to the ${placement}`} />}
   >
