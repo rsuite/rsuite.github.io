@@ -4,6 +4,6 @@ import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
   id: 'AutoComplete',
-  examples: ['basic', 'email', 'render-item', 'disabled', 'input-group'],
+  examples: ['basic', 'email', 'render-item', 'disabled', 'input-group', 'controlled'],
   dependencies: { InputGroup, AutoComplete, Icon }
 });
