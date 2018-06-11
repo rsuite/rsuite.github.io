@@ -17,7 +17,7 @@
     "babel": "rm -rf lib && babel src/App.js --out-dir lib",
     "parsing-design-docs": "node ./bin/parsingDesignDocs.js",
     "algolia": "node scripts/algolia-indices.js",
-    "create-router":"node scripts/create-router.js"
+    "create-router": "node scripts/create-router.js"
   },
   "keywords": [
     "react",
@@ -72,7 +72,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-optimize": "^1.0.1",
-    "babel-preset-rsuite": "0.0.4",
+    "babel-preset-rsuite": "0.0.5",
     "babel-preset-stage-1": "^6.24.1",
     "brfs": "^1.4.3",
     "chai": "^3.5.0",
