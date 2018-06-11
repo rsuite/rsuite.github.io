@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 import { Icon, IconButton, Button } from 'rsuite';
 import { guide, component, tools } from './SvgIcons';
 import components from './components';
