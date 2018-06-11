@@ -90,6 +90,8 @@ const MenuPopover = ({ onSelect, ...rest }) => (
   </Popover>
 );
 
+let tableBody;
+
 class CustomWhisper extends React.Component {
   constructor(props) {
     super(props);
@@ -106,6 +108,9 @@ class CustomWhisper extends React.Component {
         trigger="click"
         triggerRef={ref => {
           this.trigger = ref;
+        }}
+        container={() => {
+          return tableBody;
         }}
         speaker={<MenuPopover onSelect={this.handleSelectMenu} />}
       >
@@ -175,7 +180,14 @@ class CustomColumnTable extends React.Component {
 
     return (
       <div>
-        <Table height={420} data={data}>
+        <Table
+          height={420}
+          data={data}
+          id="table"
+          bodyRef={ref => {
+            tableBody = ref;
+          }}
+        >
           <Column width={50} align="center">
             <HeaderCell style={{ padding: 0 }}>
               <div style={{ lineHeight: '40px' }}>

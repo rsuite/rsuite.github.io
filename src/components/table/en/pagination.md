@@ -6,7 +6,6 @@
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/components/table/data/users.js
  */
 
-
 class PaginationTable extends React.Component {
   constructor(props) {
     super(props);
@@ -30,10 +29,11 @@ class PaginationTable extends React.Component {
   }
   getData() {
     const { displayLength, page } = this.state;
+
     return fakeData.filter((v, i) => {
       const start = displayLength * (page - 1);
       const end = start + displayLength;
-      return i > start && i <= end;
+      return i >= start && i < end;
     });
   }
   render() {

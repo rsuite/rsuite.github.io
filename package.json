@@ -16,7 +16,8 @@
     "test": "karma start",
     "babel": "rm -rf lib && babel src/App.js --out-dir lib",
     "parsing-design-docs": "node ./bin/parsingDesignDocs.js",
-    "algolia": "node scripts/algolia-indices.js"
+    "algolia": "node scripts/algolia-indices.js",
+    "create-router":"node scripts/create-router.js"
   },
   "keywords": [
     "react",
