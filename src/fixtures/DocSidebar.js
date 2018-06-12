@@ -53,7 +53,7 @@ class DocSidebar extends React.PureComponent {
             nodeItems.push(
               <Nav.Item key={child.id} href={child.url} target="_blank">
                 {child.name} {title}
-                <Icon icon="external-link" className="external-link" />
+                <Icon icon="external-link-square" className="external-link" />
               </Nav.Item>
             );
           } else {
