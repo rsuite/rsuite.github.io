@@ -3,7 +3,7 @@
     "env",
     "stage-1",
     "react",
-    ["rsuite", { "style": true }]
+    ["rsuite", { "style": false }]
   ],
   "plugins": [
     "lodash",
