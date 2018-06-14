@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import debounce from 'lodash/debounce';
+import _ from 'lodash';
 import get from 'lodash/get';
 import algoliasearch from 'algoliasearch';
 import { Link } from 'react-router';

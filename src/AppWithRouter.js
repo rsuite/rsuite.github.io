@@ -13,6 +13,13 @@ import { defateTilte } from './title';
 import { createRouters } from './routers';
 import { getDict } from './locales';
 
+if (__DEV__) {
+  require('./less/index-dev.less');
+} else {
+  require('./less/index.less');
+}
+
+
 export default locale => {
   class AppRouters extends React.Component {
     shouldComponentUpdate() {

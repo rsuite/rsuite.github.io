@@ -1,6 +1,7 @@
 import React from 'react';
 import { Input, Icon, Alert } from 'rsuite';
 import IconItem from './IconItem';
+import icons from './icons.json';
 
 const parseIconByCategory = (obj, conf) => {
   conf.categories.forEach(category => {
@@ -19,20 +20,10 @@ class IconList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      allIcons: [],
-      icons: []
+      allIcons: icons,
+      icons: icons
     };
   }
-
-  componentWillMount() {
-    import('./icons').then(allIcons => {
-      this.setState({
-        allIcons: allIcons.default,
-        icons: allIcons.default
-      });
-    });
-  }
-
   handleCopy = (text, result) => {
     const message = result ? '复制成功' : '复制失败，浏览器不支持此功能';
     Alert.success(message);
@@ -64,13 +55,13 @@ class IconList extends React.Component {
       .sort((a, b) => a.localeCompare(b))
       .map((category, i) => {
         return (
-          <div key={i}>
-            <h4 className="icon-list-group-title">{category}</h4>
+          <React.Fragment key={i}>
+            <h3 className="icon-list-group-title">{category}</h3>
             {icons[category].map((iconConf, j) => {
               const { id: icon } = iconConf;
               return <IconItem icon={icon} key={`${j}-${icon}`} handleCopy={this.handleCopy} />;
             })}
-          </div>
+          </React.Fragment>
         );
       });
   }

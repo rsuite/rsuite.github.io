@@ -13,8 +13,7 @@ export default locale => {
   const localePath = locale === 'zh' ? '/' : '/en/';
   return () => {
     return (
-      <div>
-        <ComponentExample />
+      <ComponentExample>
         <div className="component-overview">
           <ul>
             {components.map(item => {
@@ -49,7 +48,7 @@ export default locale => {
             })}
           </ul>
         </div>
-      </div>
+      </ComponentExample>
     );
   };
 };

@@ -34,10 +34,7 @@ module.exports = Object.assign(
       contentBase: path.join(__dirname, 'public'),
       disableHostCheck: true,
       historyApiFallback: {
-        rewrites: [
-          { from: /^\/en/, to: '/en/index.html' },
-          { from: /./, to: '/index.html' }
-        ]
+        rewrites: [{ from: /^\/en/, to: '/en/index.html' }, { from: /./, to: '/index.html' }]
       },
       compress: true,
       host: '0.0.0.0',
@@ -172,10 +169,13 @@ module.exports = Object.assign(
     ],
     devtool: STYLE_DEBUG === 'SOURCE' && 'source-map'
   },
-  __PRO__ ? {} : {
-    resolve: {
-      alias: {
-        rsuite: path.resolve(__dirname, '../rsuite/src/index')
+  __PRO__
+    ? {}
+    : {
+        resolve: {
+          alias: {
+            rsuite: path.resolve(__dirname, '../rsuite/src/index')
+          }
+        }
       }
-    }
-  });
+);

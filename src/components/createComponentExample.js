@@ -39,8 +39,9 @@ const createComponentExample = ({ id, examples = [], dependencies }) => {
       constructor(props) {
         super(props);
         const component = components.find(item => item.id === id || item.name === id);
+        const tabIndex = sessionStorage.getItem(`${id}-tab-index`);
         this.state = {
-          tabIndex: 0,
+          tabIndex: tabIndex ? +tabIndex : 0,
           designHash: _.get(component, 'designHash'),
           routerId: _.get(component, 'id')
         };
@@ -77,6 +78,7 @@ const createComponentExample = ({ id, examples = [], dependencies }) => {
                   appearance={index === tabIndex ? 'primary' : 'default'}
                   onClick={() => {
                     this.setState({ tabIndex: index });
+                    sessionStorage.setItem(`${id}-tab-index`, index);
                   }}
                 >
                   {item.title}
