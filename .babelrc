@@ -2,8 +2,7 @@
   "presets": [
     "env",
     "stage-1",
-    "react",
-    ["rsuite", { "style": false }]
+    "react"
   ],
   "plugins": [
     "lodash",

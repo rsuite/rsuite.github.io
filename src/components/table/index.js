@@ -12,6 +12,7 @@ import {
   Checkbox,
   Dropdown
 } from 'rsuite';
+import _ from 'lodash';
 
 import fakeData from './data/users';
 import fakeTreeData from './data/treeData';
@@ -48,6 +49,7 @@ export default locale => {
     examples: ['default'],
     dict,
     dependencies: {
+      _,
       Nav,
       Checkbox,
       Toggle,
