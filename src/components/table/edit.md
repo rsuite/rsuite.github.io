@@ -1,12 +1,10 @@
 <!--start-code-->
 
 ```js
-
 /**
  * import fakeData from
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/components/table/data/users.js
  */
-
 
 export const EditCell = ({ rowData, dataKey, onChange, ...props }) => {
   const editing = rowData.status === 'EDIT';
@@ -53,7 +51,7 @@ class EditTable extends React.Component {
   }
   handleChange(id, key, value) {
     const { data } = this.state;
-    const nextData = _.clone(data);
+    const nextData = _clone(data);
     nextData.find(item => item.id === id)[key] = value;
     this.setState({
       data: nextData
@@ -61,7 +59,7 @@ class EditTable extends React.Component {
   }
   handleEditState(id) {
     const { data } = this.state;
-    const nextData = _.clone(data);
+    const nextData = _clone(data);
     const activeItem = nextData.find(item => item.id === id);
     activeItem.status = activeItem.status ? null : 'EDIT';
 
@@ -73,10 +71,7 @@ class EditTable extends React.Component {
     const { data } = this.state;
     return (
       <div>
-        <Table
-          height={420}
-          data={data}
-        >
+        <Table height={420} data={data}>
           <Column width={200}>
             <HeaderCell>First Name</HeaderCell>
             <EditCell dataKey="firstName" onChange={this.handleChange} />
