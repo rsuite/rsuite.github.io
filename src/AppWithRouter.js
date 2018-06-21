@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { hot } from 'react-hot-loader';
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute, browserHistory, hashHistory } from 'react-router';
 import { IntlProvider } from 'rsuite-intl';
 
 import App from './App';
@@ -19,7 +19,6 @@ if (__DEV__) {
   require('./less/index.less');
 }
 
-
 export default locale => {
   class AppRouters extends React.Component {
     shouldComponentUpdate() {
@@ -29,7 +28,7 @@ export default locale => {
       const { onEnter, onEntered, onRemoveLoading } = this.props;
       return (
         <IntlProvider locale={getDict(locale)}>
-          <Router history={browserHistory}>
+          <Router history={DEPLOY_ENV === 'gitee' ? hashHistory : browserHistory}>
             <Route
               path={locale === 'en' ? '/en/' : '/'}
               component={props => <App {...props} onRemoveLoading={onRemoveLoading} />}

@@ -11,12 +11,15 @@ const shortKey = localeKey => {
 
 const filter = [];
 
-
 /**
  * Determine the current locale and switch to the corresponding path.
  */
 filter.push(
   new Promise((resolve, reject) => {
+    if (DEPLOY_ENV === 'gitee') {
+      resolve();
+      return;
+    }
     const localePathName = !!~location.href.indexOf('/en/') ? 'en' : 'zh';
     const localeKey = localStorage.getItem('localeKey') || 'en-US';
     const isHomePage = location.pathname === '/' || location.pathname === '/en/';

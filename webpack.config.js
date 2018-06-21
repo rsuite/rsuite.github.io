@@ -145,7 +145,9 @@ module.exports = Object.assign(
         /highlight\.js\/lib\/languages$/,
         new RegExp(`^./(${languages.join('|')})$`)
       ),
-
+      new webpack.DefinePlugin({
+        'DEPLOY_ENV': JSON.stringify(process.env.DEPLOY_ENV)
+      }),
       new webpack.NamedModulesPlugin(),
       // new webpack.HotModuleReplacementPlugin(),
       new HtmlwebpackPlugin({

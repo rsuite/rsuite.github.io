@@ -51,7 +51,7 @@ Can be rewritten as:
 import Button from 'rsuite/lib/Button';
 ```
 
-You can use the Babel plug-in [babel-preset-rsuite] to handle this problem.
+You can use the Babel plug-in [babel-preset-rsuite](https://github.com/rsuite/babel-preset-rsuite) to handle this problem.
 
 ### Install babel-preset-rsuite
 
