@@ -8,11 +8,13 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --mode development --progress --hot",
+    "dev-gitee": "DEPLOY_ENV=gitee npm run dev",
     "dev-styles": "STYLE_DEBUG=STYLE npm run dev",
     "dev-styles-source": "STYLE_DEBUG=SOURCE npm run dev",
     "clear-dist": "rm -rf dist",
     "build-webpack": "NODE_ENV=production  webpack --mode production --progress && cp -R public/* ./dist/ ",
     "build": "npm run clear-dist && npm run build-webpack",
+    "build-gitee": "DEPLOY_ENV=gitee npm run build",
     "test": "karma start",
     "babel": "rm -rf lib && babel src/App.js --out-dir lib",
     "parsing-design-docs": "node ./bin/parsingDesignDocs.js",
@@ -53,7 +55,7 @@
     "rsuite": "^3.1.1",
     "rsuite-intl": "^1.0.4",
     "rsuite-page-nav": "^1.1.7",
-    "rsuite-utils": "^1.0.5"
+    "rsuite-utils": "^1.2.0"
   },
   "devDependencies": {
     "algoliasearch": "^3.24.9",

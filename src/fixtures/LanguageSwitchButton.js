@@ -15,6 +15,10 @@ class LanguageSwitchButton extends React.Component {
     onClick && onClick();
   };
   render() {
+    if (DEPLOY_ENV === 'gitee') {
+      return null;
+    }
+
     const { language, appearance, ...rest } = this.props;
     return (
       <Button {...rest} appearance={appearance} onClick={this.handleChangeLanguage}>
