@@ -21,11 +21,11 @@ const instance = (
       <InputGroup.Addon>.com</InputGroup.Addon>
     </InputGroup>
 
-    <InputGroup style={styles}>
-      <InputGroup.Addon>$</InputGroup.Addon>
-      <Input />
-      <InputGroup.Addon>.00</InputGroup.Addon>
-    </InputGroup>
+   <InputGroup style={styles}>
+     <InputGroup.Addon>$</InputGroup.Addon>
+     <InputNumber />
+     <InputGroup.Addon>.00</InputGroup.Addon>
+   </InputGroup>
 
     <InputGroup style={styles}>
       <Input />

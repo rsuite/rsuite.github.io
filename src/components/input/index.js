@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input, InputGroup, Icon, Whisper, Tooltip, Grid, Row, Col } from 'rsuite';
+import { Input, InputNumber, InputGroup, Icon, Whisper, Tooltip, Grid, Row, Col } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
@@ -16,6 +16,7 @@ export default createComponentExample({
   ],
   dependencies: {
     Input,
+    InputNumber,
     InputGroup,
     Icon,
     Whisper,
