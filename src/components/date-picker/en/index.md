@@ -56,6 +56,7 @@ import { DatePicker } from 'rsuite';
 | limitStartYear        | number `(5)`                                          | Set an optional year limit relative to the current selection date                    |
 | limitEndYear          | number `(5)`                                          | Set the lower limit of the available year relative to the current selection date     |
 | container             | HTMLElement or (() => HTMLElement)                    | Sets the rendering container                                                         |
+| toggleComponentClass  | React.ElementType `('a')`                             | You can use a custom element for this component                                      |
 
 ## Types
 

@@ -1,5 +1,8 @@
 ### Backdrop
 
+
+When set to true, the Modal will display the background when it is opened. Clicking on the background will close the Modal. If you do not want to close the Modal, set it to 'static'.
+
 <!--start-code-->
 
 ```js
@@ -24,14 +27,19 @@ class Demo extends React.Component {
     return (
       <div className="modal-container">
         <span>Backdrop: </span>
-        <Toggle
-          checked={backdrop}
-          checkedChildren="Open"
-          unCheckedChildren="Close"
-          onChange={checked => {
-            this.setState({ backdrop: checked });
+
+        <RadioGroup
+          name="radioList"
+          inline
+          value={backdrop}
+          onChange={value => {
+            this.setState({ backdrop: value });
           }}
-        />
+        >
+          <Radio value={true}>true</Radio>
+          <Radio value={false}>false</Radio>
+          <Radio value="static">static</Radio>
+        </RadioGroup>
         <hr />
         <ButtonToolbar>
           <Button onClick={this.open}> Open</Button>
