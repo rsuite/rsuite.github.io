@@ -19,6 +19,7 @@ export default createComponentExample({
     'trigger',
     'active',
     'disabled',
+    'no-caret',
     'icons',
     'divider',
     'placement',

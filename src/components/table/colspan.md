@@ -19,6 +19,7 @@ class ColspanTable extends React.Component {
         <Table
           bordered
           height={420}
+          headerHeight={80}
           data={this.state.data}
           onRowClick={data => {
             console.log(data);
@@ -29,17 +30,23 @@ class ColspanTable extends React.Component {
             <Cell dataKey="id" />
           </Column>
 
-          <Column width={130} fixed colSpan={2} resizable>
-            <HeaderCell>Name</HeaderCell>
+          <Column width={130} fixed colSpan={2}>
+            <HeaderCell className="header-cell-group">
+              <div className="header-cell-group-title">Name</div>
+              <div className="header-cell-group-subtitle">
+                <span style={{ width: 130 }}>First Name</span>
+                <span style={{ width: 130 }}>Last Name</span>
+              </div>
+            </HeaderCell>
             <Cell dataKey="firstName" />
           </Column>
 
-          <Column width={130} fixed resizable>
+          <Column width={130} fixed>
             <HeaderCell />
             <Cell dataKey="lastName" />
           </Column>
 
-          <Column width={200} resizable colSpan={2}>
+          <Column width={200} colSpan={2}>
             <HeaderCell>Address</HeaderCell>
             <Cell dataKey="city" />
           </Column>
@@ -74,3 +81,25 @@ ReactDOM.render(<ColspanTable />);
 ```
 
 当 `lastName` 对应列的值为 `null` 或者 `undefined` 的时候，则会被 `firstName` 列合并。注意，如果想要合并列头（`HeaderCell`）, 在被合并的列头不要设置 `children`。
+
+
+自定义 Less :
+
+```less
+.rs-table {
+  .header-cell-group {
+    .rs-table-cell-content {
+      padding: 0;
+    }
+    &-title,
+    &-subtitle span {
+      padding: 10px;
+      border-bottom: 1px solid #f2f2f5;
+    }
+    &-subtitle span {
+      display: inline-block;
+      border-right: 1px solid #f2f2f5;
+    }
+  }
+}
+```

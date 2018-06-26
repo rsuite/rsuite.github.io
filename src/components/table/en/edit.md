@@ -27,14 +27,15 @@ export const EditCell = ({ rowData, dataKey, onChange, ...props }) => {
 
 const ActionCell = ({ rowData, dataKey, onClick, ...props }) => {
   return (
-    <Cell {...props}>
-      <a
+    <Cell {...props} style={{ padding: '6px 0' }}>
+      <Button
+        appearance="link"
         onClick={() => {
           onClick && onClick(rowData.id);
         }}
       >
         {rowData.status === 'EDIT' ? 'Save' : 'Edit'}
-      </a>
+      </Button>
     </Cell>
   );
 };

@@ -39,6 +39,8 @@ import { Popover, Whisper } from 'rsuite';
 | onClick      | () => void                                             | 点击的回调函数                  |
 | onFocus      | () => void                                             | 获取焦点的回调函数              |
 | onMouseLeave | () => void                                             | 鼠标离开的回调函数              |
+| onOpen       | ()=>void                                               | 打开回调函数                    |
+| onClose      | ()=>void                                               | 关闭回调函数                    |
 | container    | HTMLElement or (() => HTMLElement)                     | 设置渲染的容器                  |
 | triggerRef   | React.ElementRef                                       | trigger 的 ref                  |
 

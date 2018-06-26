@@ -1,13 +1,13 @@
 ### Limits
 
-limits: 1 - 100
+limits: 10 - 100
 
 <!--start-code-->
 
 ```js
 const instance = (
   <div style={{ width: 160 }}>
-    <InputNumber defaultValue={1} max={100} min={1} />
+    <InputNumber defaultValue={10} max={100} min={10} />
   </div>
 );
 ReactDOM.render(instance);

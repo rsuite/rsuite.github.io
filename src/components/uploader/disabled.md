@@ -3,7 +3,24 @@
 <!--start-code-->
 
 ```js
-const instance = <Uploader disabled action="//jsonplaceholder.typicode.com/posts/" />;
+const fileList = [
+  {
+    name: 'file1.jpg',
+    fileKey: 1
+  },
+  {
+    name: 'file2.jpg',
+    fileKey: 2
+  }
+];
+const instance = (
+  <Uploader
+    disabled
+    disabledFileItem
+    defaultFileList={fileList}
+    action="//jsonplaceholder.typicode.com/posts/"
+  />
+);
 
 ReactDOM.render(instance);
 ```

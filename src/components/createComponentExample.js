@@ -71,7 +71,7 @@ const createComponentExample = ({ id, examples = [], dependencies }) => {
           <div>
             <h3>{dist.common.advanced} </h3>
 
-            <ButtonGroup size="sm">
+            <ButtonGroup size="xs">
               {tabExamples.map((item, index) => (
                 <Button
                   key={index}
