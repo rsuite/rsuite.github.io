@@ -8,14 +8,15 @@
 <!--start-code-->
 
 ```js
-const { ArrayType, StringType } = Schema.Types;
+const { ArrayType, StringType, NumberType } = Schema.Types;
 const model = Schema.Model({
   skills: ArrayType()
     .minLength(2, 'Please select at least 2 types of Skills.')
     .isRequired('This field is required.'),
   status: ArrayType()
     .minLength(2, 'Please select at least 2 types of Status.')
-    .isRequired('This field is required.')
+    .isRequired('This field is required.'),
+  level: NumberType().min(5, 'This field must be greater than 5')
 });
 
 const CustomField = ({ name, message, label, accepter, error, ...props }) => (
@@ -33,7 +34,9 @@ class CustomFieldForm extends React.Component {
       number: 10,
       skills: ['Node.js'],
       browser: 'Chrome',
-      status: ['open']
+      status: ['open'],
+      level: 1,
+      level2: 1
     };
     this.state = {
       formValue: formValue,
@@ -105,7 +108,8 @@ class CustomFieldForm extends React.Component {
             label="Status"
             accepter={CheckPicker}
             error={formError.status}
-            errorPlacement="rightTop"
+            toggleComponentClass={Button}
+            style={{ display: 'inline-block' }}
             data={[
               { label: 'Todo', value: 'todo' },
               { label: 'Open', value: 'open' },
@@ -114,6 +118,16 @@ class CustomFieldForm extends React.Component {
               { label: 'Processing', value: 'processing' },
               { label: 'Done', value: 'done' }
             ]}
+          />
+
+          <CustomField
+            accepter={Slider}
+            min={0}
+            max={20}
+            name="level"
+            label="Level"
+            style={{ width: 200, margin: '10px 0' }}
+            errorMessage={formError.level}
           />
 
           <FormGroup>
