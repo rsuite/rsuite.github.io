@@ -1,12 +1,13 @@
 import React from 'react';
-import { Uploader, Icon } from 'rsuite';
+import { Uploader, Icon, Button } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
   id: 'Uploader',
-  examples: ['basic', 'picture', 'picture-text', 'file-list', 'disabled'],
+  examples: ['basic', 'picture', 'picture-text', 'file-list', 'disabled', 'custom-toggle'],
   dependencies: {
     Icon,
-    Uploader
+    Uploader,
+    Button
   }
 });
