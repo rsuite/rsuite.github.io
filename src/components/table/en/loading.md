@@ -10,12 +10,20 @@ class LoadingTable extends React.Component {
   constructor(props) {
     super(props);
     const data = fakeData.filter((v, i) => i < 8);
-    this.state = { data };
+    this.state = {
+      data,
+      loading: true
+    };
+    this.handleToggle = this.handleToggle.bind(this);
+  }
+  handleToggle(loading){
+    this.setState({ loading });
   }
   render() {
+    const {loading} = this.state;
     return (
       <div>
-        <Table loading height={400} data={this.state.data}>
+        <Table loading={loading} height={400} data={this.state.data}>
           <Column width={70} align="center" fixed>
             <HeaderCell>Id</HeaderCell>
             <Cell dataKey="id" />
@@ -66,6 +74,15 @@ class LoadingTable extends React.Component {
             <Cell dataKey="email" />
           </Column>
         </Table>
+        <hr/>
+        <div>
+          Loading：<Toggle
+            checkedChildren="On"
+            unCheckedChildren="Off"
+            checked={loading}
+            onChange={this.handleToggle}
+          />
+        </div>
       </div>
     );
   }
