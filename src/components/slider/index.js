@@ -4,7 +4,7 @@ import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
   id: 'Slider',
-  examples: ['basic', 'progress', 'graduated', 'vertical', 'disabled', 'value', 'custom'],
+  examples: ['basic', 'progress', 'graduated', 'vertical', 'disabled', 'value', 'custom', 'size'],
   dependencies: {
     Slider,
     Input,

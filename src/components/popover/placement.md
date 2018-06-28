@@ -91,8 +91,12 @@ const instance = (
     <hr />
 
     <CustomComponent placement="auto" />
+    <br />
+    <CustomComponent placement="autoVertical" />
     <CustomComponent placement="autoVerticalRight" />
     <CustomComponent placement="autoVerticalLeft" />
+    <br />
+    <CustomComponent placement="autoHorizontal" />
     <CustomComponent placement="autoHorizontalTop" />
     <CustomComponent placement="autoHorizontalBottom" />
   </div>

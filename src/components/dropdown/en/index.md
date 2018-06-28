@@ -20,22 +20,24 @@ import { Dropdown } from 'rsuite';
 
 ### `<Dropdown>`
 
-| Property        | Type`(default)`                                                                                                                         | Description                                                                             |
-| --------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| activeKey       | any                                                                                                                                     | The option to activate the state, corresponding to the `eventkey` in the Dropdown.item. |
-| classPrefix     | string `('dropdown')`                                                                                                                   | The prefix of the component CSS class                                                   |
-| disabled        | boolean                                                                                                                                 | Whether or not component is disabled                                                    |
-| menuStyle       | Object                                                                                                                                  | The style of the menu.                                                                  |
-| title           | React.Node                                                                                                                              | Menu defaults to display content.                                                       |
-| toggleClassName | string                                                                                                                                  | A css class to apply to the Toggle DOM node                                             |
-| onClose         | () => void                                                                                                                              | The callback function that the menu closes                                              |
-| onOpen          | () => void                                                                                                                              | Menu Pop-up callback function                                                           |
-| onToggle        | (open?: boolean) => void                                                                                                                | Callback function for menu state switching.                                             |
-| onSelect        | (eventKey: any, event: SyntheticEvent&lt;any&gt;) => void                                                                               | Selected callback function                                                              |
-| renderTitle     | (children?: React.Node) => React.Node                                                                                                   | Custom title                                                                            |
-| placement       | enum: [Placement](#Placement) `('bottomLeft')`                                                                                          | The placement of Menu                                                                   |
-| icon            | React.Element&lt;typeof Icon&gt;                                                                                                        | Set the icon                                                                            |
-| trigger         | union: <br/>'click', 'hover', 'contextMenu', <br/>Array<'click', 'hover', 'contextMenu'> `('click')`                                    | Triggering events                                                                       |
+| Property             | Type`(default)`                                                                                      | Description                                                                             |
+| -------------------- | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| activeKey            | any                                                                                                  | The option to activate the state, corresponding to the `eventkey` in the Dropdown.item. |
+| classPrefix          | string `('dropdown')`                                                                                | The prefix of the component CSS class                                                   |
+| disabled             | boolean                                                                                              | Whether or not component is disabled                                                    |
+| menuStyle            | Object                                                                                               | The style of the menu.                                                                  |
+| title                | React.Node                                                                                           | Menu defaults to display content.                                                       |
+| toggleClassName      | string                                                                                               | A css class to apply to the Toggle DOM node                                             |
+| onClose              | () => void                                                                                           | The callback function that the menu closes                                              |
+| onOpen               | () => void                                                                                           | Menu Pop-up callback function                                                           |
+| onToggle             | (open?: boolean) => void                                                                             | Callback function for menu state switching.                                             |
+| onSelect             | (eventKey: any, event: SyntheticEvent&lt;any&gt;) => void                                            | Selected callback function                                                              |
+| renderTitle          | (children?: React.Node) => React.Node                                                                | Custom title                                                                            |
+| placement            | enum: [Placement](#Placement) `('bottomLeft')`                                                       | The placement of Menu                                                                   |
+| icon                 | React.Element&lt;typeof Icon&gt;                                                                     | Set the icon                                                                            |
+| trigger              | union: <br/>'click', 'hover', 'contextMenu', <br/>Array<'click', 'hover', 'contextMenu'> `('click')` | Triggering events                                                                       |
+| toggleComponentClass | React.ElementType `(Button)`                                                                         | You can use a custom element for this component                                         |
+
 
 ### `<Dropdown.Item>`
 

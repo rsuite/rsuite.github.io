@@ -27,7 +27,8 @@ import {
   Panel,
   Modal,
   Alert,
-  SelectPicker
+  SelectPicker,
+  Slider
 } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
@@ -101,6 +102,7 @@ export default createComponentExample({
     Modal,
     JSONTree,
     JSONView,
-    MaskedInput
+    MaskedInput,
+    Slider
   }
 });

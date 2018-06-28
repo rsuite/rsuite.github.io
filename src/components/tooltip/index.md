@@ -60,7 +60,14 @@ type Placement =
   | 'leftTop'
   | 'rightTop'
   | 'leftBottom'
-  | 'rightBottom';
+  | 'rightBottom'
+  | 'auto'
+  | 'autoVertical'
+  | 'autoVerticalLeft'
+  | 'autoVerticalRight'
+  | 'autoHorizontal'
+  | 'autoHorizontalTop'
+  | 'autoHorizontalBottom';
 ```
 
 ## 相关组件

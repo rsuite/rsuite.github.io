@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonToolbar, Button, Modal, Icon, Toggle } from 'rsuite';
+import { ButtonToolbar, Button, Modal, Icon, Toggle, RadioGroup, Radio } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
@@ -10,6 +10,8 @@ export default createComponentExample({
     Button,
     Modal,
     Icon,
-    Toggle
+    Toggle,
+    RadioGroup,
+    Radio
   }
 });

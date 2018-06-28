@@ -8,7 +8,7 @@ class Demo extends React.Component {
     super(props);
     this.state = {
       show: false,
-      overflow: false
+      overflow: true
     };
     this.close = this.close.bind(this);
     this.open = this.open.bind(this);

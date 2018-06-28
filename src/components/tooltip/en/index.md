@@ -62,9 +62,15 @@ type Placement =
   | 'leftTop'
   | 'rightTop'
   | 'leftBottom'
-  | 'rightBottom';
+  | 'rightBottom'
+  | 'auto'
+  | 'autoVertical'
+  | 'autoVerticalLeft'
+  | 'autoVerticalRight'
+  | 'autoHorizontal'
+  | 'autoHorizontalTop'
+  | 'autoHorizontalBottom';
 ```
-
 ## Related components
 
 * [`<Popover>`](./popover)

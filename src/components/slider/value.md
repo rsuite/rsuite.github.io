@@ -1,5 +1,7 @@
 ### 显示值
+
 <!-- start-code -->
+
 ```js
 class ValueSlider extends React.Component {
   constructor(props) {
@@ -16,9 +18,10 @@ class ValueSlider extends React.Component {
         <Row>
           <Col md={6}>
             <Slider
-              style={{marginTop:16}}
+              style={{ marginTop: 16 }}
               value={value}
-              onChange={(value) => {
+              onChange={value => {
+                console.log(value);
                 this.setState({ value });
               }}
             />
@@ -31,6 +34,7 @@ class ValueSlider extends React.Component {
     );
   }
 }
-ReactDOM.render(<ValueSlider />)
+ReactDOM.render(<ValueSlider />);
 ```
+
 <!-- end-code -->
