@@ -63,8 +63,10 @@ type Placement =
   | 'leftBottom'
   | 'rightBottom'
   | 'auto'
+  | 'autoVertical'
   | 'autoVerticalLeft'
   | 'autoVerticalRight'
+  | 'autoHorizontal'
   | 'autoHorizontalTop'
   | 'autoHorizontalBottom';
 ```
