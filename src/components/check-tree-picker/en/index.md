@@ -2,7 +2,7 @@
 
 CheckTreePicker are supported in multiple selectors for multiple selection of complex data structures.
 
-* `<CheckTreePicker>` The selector component supports Checkbox on the TreePicker node for multiple selection.
+- `<CheckTreePicker>` The selector component supports Checkbox on the TreePicker node for multiple selection.
 
 ## Usage
 
@@ -28,6 +28,7 @@ import { CheckTreePicker } from 'rsuite';
 | childKey             | string `('children')`                                                      | set children key in data                                    |
 | disabledItemValues   | Array&lt;any&gt;                                                           | values of disabled tree node                                |
 | defaultExpandAll     | boolean                                                                    | expand all tree node                                        |
+| expandAll            | boolean                                                                    | Expand or unExpand all nodes(Controlled)                    |
 | cascade              | boolean                                                                    | whether cascade select                                      |
 | placeholder          | React.Node `('Select')`                                                    |                                                             |
 | disabled             | boolean                                                                    | whether disabled                                            |
@@ -46,7 +47,6 @@ import { CheckTreePicker } from 'rsuite';
 | placement            | enum: Placement `('bottomLeft')`                                           | Placement of component                                      |
 | container            | HTMLElement or (() => HTMLElement)                                         | Sets the rendering container                                |
 | toggleComponentClass | React.ElementType `('a')`                                                  | You can use a custom element for this component             |
-
 
 ## Types
 
@@ -71,6 +71,6 @@ type Placement =
 
 ## Related Components
 
-* [`<CheckTree>`](./check-tree)
-* [`<Tree>`](./tree)
-* [`<TreePicker>`](./tree-picker)
+- [`<CheckTree>`](./check-tree)
+- [`<Tree>`](./tree)
+- [`<TreePicker>`](./tree-picker)

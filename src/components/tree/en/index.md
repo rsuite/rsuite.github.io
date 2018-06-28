@@ -1,6 +1,6 @@
 # Tree
 
-* `<Tree>` Used to show a tree-structured data.
+- `<Tree>` Used to show a tree-structured data.
 
 ## Usage
 
@@ -18,10 +18,10 @@ import { Tree } from 'rsuite';
 
 | Property         | Type `(Default)`                                     | Description                                 |
 | ---------------- | ---------------------------------------------------- | ------------------------------------------- |
-| classPrefix      | string`('picker-tree')`                              | The prefix of the component CSS class                         |
-| value            | Array&lt;DataItemType.value&gt;                      | Selected value                              |
+| classPrefix      | string`('picker-tree')`                              | The prefix of the component CSS class       |
+| value            | DataItemType.value                                   | Selected value                              |
 |                  |
-| defaultValue     | Array&lt;DataItemType.value&gt;                      | Default selected Value                      |
+| defaultValue     | DataItemType.value                                   | Default selected Value                      |
 |                  |
 | data \*          | Array&lt;[DataItemType](#DataItemType)&gt;           | Tree Data                                   |
 | valueKey         | string `('value')`                                   | Tree data Structure Value property name     |
@@ -30,6 +30,8 @@ import { Tree } from 'rsuite';
 | disabledItems    | Array&lt;DataItemType.value&gt;                      | Disable Node list                           |
 |                  |
 | defaultExpandAll | boolean                                              | Expand all nodes By default                 |
+| expandAll        | boolean                                              | Expand or unExpand all nodes(Controlled)    |
+| searchKeyword    | string                                               | searchKeyword (Controlled)                  |
 |                  |
 | onExpand         | (activeNode:DataItemType, layer:number)=>void        | Whether inline display tree                 |
 |                  |
@@ -54,6 +56,6 @@ type DataItemType = {
 
 ## Related components
 
-* [`<CheckTree>`](./check-tree) Selector component, which supports a Checkbox on the Treepicker node for multiple selections.
-* [`<TreePicker>`](./tree-picker) Used to show a tree-structured data.
-* [`<CheckTreePicker>`](./check-tree-picker) Used to show a tree-structured data while supporting Checkbox selection.
+- [`<CheckTree>`](./check-tree) Selector component, which supports a Checkbox on the Treepicker node for multiple selections.
+- [`<TreePicker>`](./tree-picker) Used to show a tree-structured data.
+- [`<CheckTreePicker>`](./check-tree-picker) Used to show a tree-structured data while supporting Checkbox selection.

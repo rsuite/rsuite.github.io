@@ -1,6 +1,6 @@
 # CheckTree
 
-* `<CheckTree>` is used to display a tree structure data and supports Checkbox selection.
+- `<CheckTree>` is used to display a tree structure data and supports Checkbox selection.
 
 ## Usage
 
@@ -26,6 +26,8 @@ import { CheckTree } from 'rsuite';
 | childKey           | string `('children')`                                                                       | Set childrenKey key in data                                 |
 | disabledItemValues | Array&lt;DataItemType.value&gt;                                                             | Values of disabled tree node                                |
 | defaultExpandAll   | boolean                                                                                     | Expand all tree node                                        |
+| expandAll          | boolean                                                                                     | Expand or unExpand all nodes(Controlled)                    |
+| searchKeyword      | string                                                                                      | searchKeyword (Controlled)                                  |
 | cascade            | boolean `(true)`                                                                            | Whether cascade select                                      |
 | onChange           | (values:Array&lt;DataItemType.value&gt;)=>void                                              | Callback fired when value change                            |
 | onExpand           | (activeNode:DataItemType, layer:number)=>void                                               | Callback fired when tree node expand state changed          |
@@ -47,6 +49,6 @@ type DataItemType = {
 
 ## Related components
 
-* [`<Tree>`](./tree)
-* [`<TreePicker>`](./tree-picker)
-* [`<CheckTreePicker>`](./check-tree-picker)
+- [`<Tree>`](./tree)
+- [`<TreePicker>`](./tree-picker)
+- [`<CheckTreePicker>`](./check-tree-picker)

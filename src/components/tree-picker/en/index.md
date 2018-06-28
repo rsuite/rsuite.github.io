@@ -1,6 +1,6 @@
 # TreePicker
 
-* `<TreePicker>` Selector component, tree single selector.
+- `<TreePicker>` Selector component, tree single selector.
 
 ## Usage
 
@@ -27,6 +27,7 @@ import { TreePicker } from 'rsuite';
 | childrenKey          | string `('children')`                                         | Tree data structure Children property name      |
 | disabledItems        | Array&lt;DataItemType.value&gt;                               | Disable Node list                               |
 | defaultExpandAll     | boolean                                                       | Expand all nodes By default                     |
+| expandAll            | boolean                                                       | Expand or unExpand all nodes(Controlled)        |
 | inline               | boolean                                                       | Whether inline display tree                     |
 | open                 | boolean                                                       | Open (Controlled)                               |
 | defaultOpen          | boolean                                                       | Open by default                                 |
@@ -48,7 +49,6 @@ import { TreePicker } from 'rsuite';
 | menuClassName        | string                                                        | A css class to apply to the Menu DOM node       |
 | container            | HTMLElement or (() => HTMLElement)                            | Sets the rendering container                    |
 | toggleComponentClass | React.ElementType `('a')`                                     | You can use a custom element for this component |
-
 
 ## Types
 
@@ -83,6 +83,6 @@ type DataItemType = {
 
 ## Related components
 
-* [`<CheckTreePicker>`](./check-tree-picker) Selector component, which supports a Checkbox on the Treepicker node for multiple selections.
-* [`<Tree>`](./tree) Used to show a tree-structured data.
-* [`<CheckTree>`](./check-tree) Used to show a tree-structured data while supporting Checkbox selection.
+- [`<CheckTreePicker>`](./check-tree-picker) Selector component, which supports a Checkbox on the Treepicker node for multiple selections.
+- [`<Tree>`](./tree) Used to show a tree-structured data.
+- [`<CheckTree>`](./check-tree) Used to show a tree-structured data while supporting Checkbox selection.

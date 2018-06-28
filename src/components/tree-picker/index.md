@@ -1,6 +1,6 @@
 # TreePicker 树形选择器
 
-* `<TreePicker>` 选择器组件，树形单项选择器。
+- `<TreePicker>` 选择器组件，树形单项选择器。
 
 ## 获取组件
 
@@ -27,6 +27,7 @@ import { TreePicker } from 'rsuite';
 | childrenKey          | string `('children')`                                         | tree 数据结构 children 属性名称 |
 | disabledItems        | Array&lt;DataItemType.value&gt;                               | 禁用节点列表                    |
 | defaultExpandAll     | boolean                                                       | 默认展开所有节点                |
+| expandAll            | boolean                                                       | (受控)展示/收起所有节点         |
 | inline               | boolean                                                       | 是否内联显示 tree               |
 | open                 | boolean                                                       | 打开（受控）                    |
 | defaultOpen          | boolean                                                       | 默认打开                        |
@@ -49,7 +50,6 @@ import { TreePicker } from 'rsuite';
 | menuClassName        | string                                                        | 应用于菜单 DOM 节点的 css class |
 | container            | HTMLElement or (() => HTMLElement)                            | 设置渲染的容器                  |
 | toggleComponentClass | React.ElementType `('a')`                                     | 为组件自定义元素类型            |
-
 
 ## Types
 
@@ -84,6 +84,6 @@ type DataItemType = {
 
 ## 相关组件
 
-* [`<CheckTreePicker>`](./check-tree-picker) 选择器组件，在 TreePicker 节点上支持 Checkbox，用于多选 。
-* [`<Tree>`](./tree) 用于展示一个树结构数据。
-* [`<CheckTree>`](./check-tree) 用于展示一个树结构数据，同时支持 Checkbox 选择。
+- [`<CheckTreePicker>`](./check-tree-picker) 选择器组件，在 TreePicker 节点上支持 Checkbox，用于多选 。
+- [`<Tree>`](./tree) 用于展示一个树结构数据。
+- [`<CheckTree>`](./check-tree) 用于展示一个树结构数据，同时支持 Checkbox 选择。

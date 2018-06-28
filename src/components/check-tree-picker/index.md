@@ -2,7 +2,7 @@
 
 多项选择器中支持树形结构，用于复杂的数据结构进行多选。
 
-* `<CheckTreePicker>` 选择器组件，在 TreePicker 节点上支持 Checkbox，用于多选 。
+- `<CheckTreePicker>` 选择器组件，在 TreePicker 节点上支持 Checkbox，用于多选 。
 
 ## 获取组件
 
@@ -28,11 +28,12 @@ import { CheckTreePicker } from 'rsuite';
 | childKey             | string `('children')`                                                                        | tree 数据结构 children 属性名称 |
 | disabledItemValues   | Array&lt;DataItemType.value&gt;                                                              | 禁用节点列表                    |
 | defaultExpandAll     | boolean                                                                                      | 默认展开所有节点                |
+| expandAll            | boolean                                                                                      | (受控)展示/收起所有节点           |
 | cascade              | boolean                                                                                      | checktree 是否级联选择          |
 | placeholder          | React.Node `('Select')`                                                                      | 占位符                          |
 | disabled             | boolean                                                                                      | 是否禁用 Picker                 |
 | cleanable            | boolean `(true)`                                                                             | 是否可以清楚                    |
-| seasrchable          | boolean `(true)`                                                                             | 是否显示搜索框                  |
+| searchable           | boolean `(true)`                                                                             | 是否显示搜索框                  |
 | onSearch             | (searchKeyword:string, event)=>boolean                                                       | 搜索回调函数                    |
 | onOpen               | ()=>boolean                                                                                  | 展开的回调函数                  |
 | onClose              | ()=>boolean                                                                                  | 关闭的回调函数                  |
@@ -82,6 +83,6 @@ type DataItemType = {
 
 ## 相关组件
 
-* [`<CheckTree>`](./check-tree) 用于展示一个树结构数据，同时支持 Checkbox 选择。
-* [`<Tree>`](./tree) 用于展示一个树结构数据。
-* [`<TreePicker>`](./tree-picker) 选择器组件，树形单项选择器。
+- [`<CheckTree>`](./check-tree) 用于展示一个树结构数据，同时支持 Checkbox 选择。
+- [`<Tree>`](./tree) 用于展示一个树结构数据。
+- [`<TreePicker>`](./tree-picker) 选择器组件，树形单项选择器。
