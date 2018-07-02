@@ -19,10 +19,10 @@ import { AutoComplete } from 'rsuite';
 | classPrefix   | string `('auto-complete')`                                      | 组件 CSS 类的前缀                       |
 | data \*       | Array&lt;string&gt;, Array&lt;[DataItemType](#DataItemType)&gt; | 组件数据                                |
 | disabled      | boolean                                                         | 禁用组件                                |
-| value         | DataItemType.value                                              | 设置值 `受控`                           |
-| defaultValue  | DataItemType.value                                              | 设置默认值 `非受控`                     |
-| onChange      | (value:DataItemType.value, event)=>void                         | `value` 发生改变时的回调函数            |
-| onSelect      | (value:DataItemType, event)=>void                               | 选项被点击选择后的回调函数              |
+| value         | string                                                          | 设置值 `受控`                           |
+| defaultValue  | string                                                          | 设置默认值 `非受控`                     |
+| onChange      | (value:string, event)=>void                                     | `value` 发生改变时的回调函数            |
+| onSelect      | (item:DataItemType, event)=>void                                | 选项被点击选择后的回调函数              |
 | placeholder   | React.Node                                                      | 占位符                                  |
 | renderItem    | (label:React.Node, item: DataItemType)=>React.Node              | 自定义被选中的选项                      |
 | menuClassName | string                                                          | 选项菜单的 className                    |
@@ -34,8 +34,7 @@ import { AutoComplete } from 'rsuite';
 
 ```ts
 type DataItemType = {
-  value: any;
-  label: React.Node;
-  children?: Array<DataItemType>;
+  value: string,
+  label: React.Node
 };
 ```
