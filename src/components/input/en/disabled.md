@@ -12,7 +12,7 @@ const instance = (
   <div>
     <Input style={styles} disabled />
     <InputGroup style={styles} disabled>
-      <Input disabled />
+      <Input />
       <InputGroup.Addon>
         <Icon icon="search" />
       </InputGroup.Addon>
