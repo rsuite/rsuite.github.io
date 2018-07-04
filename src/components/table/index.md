@@ -26,7 +26,8 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 
 | 属性名称               | 类型 `(默认值)`                         | 描述                                                         |
 | ---------------------- | --------------------------------------- | ------------------------------------------------------------ |
-| bordered               | boolean                                 | 显示边框线                                                   |
+| bordered               | boolean                                 | 表格边框                                                     |
+| cellBordered           | boolean                                 | 单元格边框                                                   |
 | data \*                | Array&lt;Object&gt;                     | 表格数据                                                     |
 | width                  | number                                  | 宽度                                                         |
 | height                 | number`(200)`                           | 高度                                                         |

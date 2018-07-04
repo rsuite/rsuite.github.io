@@ -26,7 +26,8 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 
 | Property               | Type `(Default)`                        | Description                                                                                   |
 | ---------------------- | --------------------------------------- | --------------------------------------------------------------------------------------------- |
-| bordered               | boolean                                 | Show border lines                                                                             |
+| bordered               | boolean                                 | Show border                                                                                   |
+| cellBordered           | boolean                                 | Show cell border                                                                              |
 | data \*                | Array&lt;Object&gt;                     | Table data                                                                                    |
 | width                  | number                                  | Table width                                                                                   |
 | height                 | number`(200)`                           | Table height                                                                                  |

@@ -18,6 +18,7 @@ class ColspanTable extends React.Component {
       <div>
         <Table
           bordered
+          cellBordered
           height={420}
           headerHeight={80}
           data={this.state.data}
