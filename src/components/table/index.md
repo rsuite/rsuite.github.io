@@ -26,10 +26,14 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 
 | 属性名称               | 类型 `(默认值)`                         | 描述                                                         |
 | ---------------------- | --------------------------------------- | ------------------------------------------------------------ |
-| bordered               | boolean                                 | 显示边框线                                                   |
+| bordered               | boolean                                 | 表格边框                                                     |
+| cellBordered           | boolean                                 | 单元格边框                                                   |
 | data \*                | Array&lt;Object&gt;                     | 表格数据                                                     |
 | width                  | number                                  | 宽度                                                         |
 | height                 | number`(200)`                           | 高度                                                         |
+| autoHeight             | boolean                                 | 自动高度                                                     |
+| minHeight              | number `(0)`                            | 最小高度                                                     |
+| setRowHeight           | (rowData:object)=> number               | 自定义设置行高                                               |
 | rowHeight              | number`(46)`                            | 行高                                                         |
 | rowKey                 | string `('key')`                        | 每一个行对应的 `data` 中的唯一 `key`                         |
 | rowExpandedHeight      | number `(100)`                          | 设置可展开区域的高度                                         |
@@ -44,10 +48,10 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | loading                | boolean                                 | 显示 loading 状态                                            |
 | sortColumn             | string                                  | 排序列名称                                                   |
 | sortType               | enum: 'desc', 'asc'                     | 排序类型                                                     |
+| showHeader             | boolean `(true)`                        | 显示表头                                                     |
 | onExpandChange         | (expanded:boolean,rowData:object)=>void | 树形表格，在展开节点的回调函数                               |
 | onRowClick             | (rowData:object)=>void                  | 行点击后的回调函数， 返回 `rowDate`                          |
 | onSortColumn           | (dataKey:string, sortType:string)=>void | 点击排序列的回调函数，返回 `sortColumn`, `sortType` 这两个值 |
-| setRowHeight           | (rowData:object)=> number               | 自定义设置行高                                               |
 | onScroll               | (scrollX:object, scrollY:object)=>void  | 滚动条滚动时候的回调函数                                     |
 
 ### `<Table.Column>`

@@ -21,10 +21,10 @@ import { AutoComplete } from 'rsuite';
 | classPrefix   | string `('auto-complete')`                                      | The prefix of the component CSS class                                            |
 | data \*       | Array&lt;string&gt;, Array&lt;[DataItemType](#DataItemType)&gt; | The data of component                                                            |
 | disabled      | boolean                                                         | Whether disabled select                                                          |
-| value         | DataItemType.value                                              | Value (Controlled)                                                               |
-| defaultValue  | DataItemType.value                                              | Default value                                                                    |
-| onChange      | (value:DataItemType.value, event)=>void                         | Called when select an option or input value change, or value of input is changed |
-| onSelect      | (value:DataItemType, event)=>void                               | Called when a option is selected.                                                |
+| value         | string                                                          | Value (Controlled)                                                               |
+| defaultValue  | string                                                          | Default value                                                                    |
+| onChange      | (value:string, event)=>void                                     | Called when select an option or input value change, or value of input is changed |
+| onSelect      | (item: DataItemType, event)=>void                               | Called when a option is selected.                                                |
 | placeholder   | React.Node                                                      | The placeholder of input                                                         |
 | renderItem    | (label:React.Node, item: DataItemType)=>React.Node              | Custom selected option                                                           |
 | selectOnEnter | boolean `(true)`                                                | When set to `false`, the Enter key selection function is invalid                 |
@@ -35,8 +35,7 @@ import { AutoComplete } from 'rsuite';
 
 ```ts
 type DataItemType = {
-  value: any;
-  label: React.Node;
-  children?: Array<DataItemType>;
+  value: string
+  label: React.Node
 };
 ```

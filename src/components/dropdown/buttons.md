@@ -5,6 +5,11 @@
 ```js
 const instance = (
   <ButtonToolbar>
+    <Dropdown title="Save" toggleComponentClass={Button} appearance="default">
+      <Dropdown.Item>Save as...</Dropdown.Item>
+      <Dropdown.Item>Save & New</Dropdown.Item>
+    </Dropdown>
+
     <ButtonGroup>
       <Button>Save</Button>
       <Dropdown

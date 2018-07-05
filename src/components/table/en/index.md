@@ -26,10 +26,14 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 
 | Property               | Type `(Default)`                        | Description                                                                                   |
 | ---------------------- | --------------------------------------- | --------------------------------------------------------------------------------------------- |
-| bordered               | boolean                                 | Show border lines                                                                             |
+| bordered               | boolean                                 | Show border                                                                                   |
+| cellBordered           | boolean                                 | Show cell border                                                                              |
 | data \*                | Array&lt;Object&gt;                     | Table data                                                                                    |
 | width                  | number                                  | Table width                                                                                   |
 | height                 | number`(200)`                           | Table height                                                                                  |
+| autoHeight             | boolean                                 | Automatic height                                                                              |
+| minHeight              | number `(0)`                            | Minimum height                                                                                |
+| setRowHeight           | (rowData:object)=> number               | Custom Settings Row Height                                                                    |
 | rowHeight              | number`(46)`                            | Row height                                                                                    |
 | rowKey                 | string `('key')`                        | Each row corresponds to the unique `key` in `data`                                            |
 | rowExpandedHeight      | number `(100)`                          | Set the height of an expandable area                                                          |
@@ -43,10 +47,10 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | loading                | boolean                                 | Show loading                                                                                  |
 | sortColumn             | string                                  | Sort Column Name                                                                              |
 | sortType               | enum: 'desc', 'asc'                     | Sort Type                                                                                     |
+| showHeader             | boolean `(true)`                        | Display header                                                                                |
 | onExpandChange         | (expanded:boolean,rowData:object)=>void | Tree table, the callback function in the expanded node                                        |
 | onRowClick             | (rowData:object)=>void                  | Click the callback function after the row and return to `rowDate`                             |
 | onSortColumn           | (dataKey:string, sortType:string)=>void | Click the callback function of the sort sequence to return the value `sortColumn`, `sortType` |
-| setRowHeight           | (rowData:object)=> number               | Custom Settings Row Height                                                                    |
 | onScroll               | (scrollX:object, scrollY:object)=>void  | Callback function for scroll bar scrolling                                                    |
 
 ### `<Table.Column>`

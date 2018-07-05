@@ -1,22 +1,25 @@
 ### 禁用
 
 <!--start-code-->
-```js
 
-const styles={
-  width:300,
-  marginBottom:10
-}
+```js
+const styles = {
+  width: 300,
+  marginBottom: 10
+};
 
 const instance = (
- <div>
+  <div>
     <Input style={styles} disabled />
     <InputGroup style={styles} disabled>
-      <Input disabled />
-      <InputGroup.Addon><Icon icon="search" /></InputGroup.Addon>
+      <Input />
+      <InputGroup.Addon>
+        <Icon icon="search" />
+      </InputGroup.Addon>
     </InputGroup>
- </div>
+  </div>
 );
 ReactDOM.render(instance);
 ```
+
 <!--end-code-->
