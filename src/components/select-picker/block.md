@@ -1,4 +1,4 @@
-### 禁用搜索框
+### 撑满
 
 <!--start-code-->
 
@@ -8,14 +8,7 @@
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/users.js
  */
 
-const instance = (
-  <SelectPicker
-    data={data}
-    style={{ width: 224 }}
-    menuStyle={{ width: 224 }}
-    searchable={false}
-  />
-);
+const instance = <SelectPicker data={data} block />;
 ReactDOM.render(instance);
 ```
 

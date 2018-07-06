@@ -10,8 +10,9 @@
 
 const instance = (
   <div>
-    <SelectPicker data={data} appearance="default" placeholder="Default" />
-    <SelectPicker data={data} appearance="subtle" placeholder="Subtle" />
+    <SelectPicker data={data} appearance="default" placeholder="Default" style={{ width: 224 }} />
+    <hr />
+    <SelectPicker data={data} appearance="subtle" placeholder="Subtle" style={{ width: 224 }} />
   </div>
 );
 ReactDOM.render(instance);

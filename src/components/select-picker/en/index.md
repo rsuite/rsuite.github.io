@@ -22,6 +22,7 @@ import { SelectPicker } from 'rsuite';
 | -------------------- | ------------------------------------------------------------ | ------------------------------------------------------ |
 | classPrefix          | string `('picker-select')`                                   | The prefix of the component CSS class                  |
 | data \*              | Array&lt;[DataItemType](#DataItemType)&gt;                   | Selectable data                                        |
+| block                | boolean                                                      | Blocking an entire row                                 |
 | groupBy              | string                                                       | Set grouping criteria 'key' in 'data'                  |
 | valueKey             | string `('value')`                                           | Set option value 'key' in 'data'                       |
 | labelKey             | string `('label')`                                           | Set options to display the 'key' in 'data'             |

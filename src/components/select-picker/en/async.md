@@ -29,6 +29,7 @@ class AsynExample extends React.Component {
     return (
       <SelectPicker
         data={items}
+        style={{ width: 224 }}
         onOpen={this.handleUpdate}
         onSearch={this.handleUpdate}
         renderMenu={menu => {

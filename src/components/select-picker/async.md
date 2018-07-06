@@ -3,7 +3,6 @@
 <!--start-code-->
 
 ```js
-
 /**
  * import data from
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/users.js
@@ -29,6 +28,7 @@ class AsynExample extends React.Component {
     return (
       <SelectPicker
         data={items}
+        style={{ width: 224 }}
         onOpen={this.handleUpdate}
         onSearch={this.handleUpdate}
         renderMenu={menu => {

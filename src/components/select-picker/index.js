@@ -8,10 +8,10 @@ export default createComponentExample({
   examples: [
     'basic',
     'appearance',
+    'block',
     'group',
     'placement',
     'custom',
-    'custom-toggle',
     'disabled',
     'searchable',
     'async',

@@ -1,38 +1,48 @@
 ### 自定义选项
 
 <!--start-code-->
+
 ```js
 /**
  * import data from
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/users.js
  */
 
-const instance=(
+const instance = (
   <SelectPicker
     data={data}
     groupBy="role"
     placeholder="Select User"
+    style={{ width: 224 }}
     renderMenuItem={(label, item) => {
-      return <div><i className="rs-icon rs-icon-user" /> {label}</div>;
+      return (
+        <div>
+          <i className="rs-icon rs-icon-user" /> {label}
+        </div>
+      );
     }}
     renderMenuGroup={(label, item) => {
       return (
         <div>
-          <i className="rs-icon rs-icon-group" /> {label} - ({item.children.length})
+          <i className="rs-icon rs-icon-group" /> {label} - ({
+            item.children.length
+          })
         </div>
       );
     }}
     renderValue={(label, item) => {
       return (
         <div>
-          <span style={{color:'#575757'}}>
+          <span style={{ color: '#575757' }}>
             <i className="rs-icon rs-icon-user" /> User :
-          </span>  {label}
+          </span>{' '}
+          {label}
         </div>
       );
     }}
   />
-)
+);
 ReactDOM.render(instance);
 ```
+
 <!--end-code-->
