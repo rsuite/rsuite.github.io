@@ -1,4 +1,4 @@
-### Use with the button
+### Appearance
 
 <!--start-code-->
 
@@ -14,15 +14,16 @@ const instance = (
       data={data}
       valueKey="name"
       labelKey="name"
-      toggleComponentClass={Button}
+      appearance="default"
+      placeholder="Default"
     />
-    <hr />
+
     <Cascader
       data={data}
       valueKey="name"
       labelKey="name"
-      block
-      toggleComponentClass={Button}
+      appearance="subtle"
+      placeholder="Subtle"
     />
   </div>
 );

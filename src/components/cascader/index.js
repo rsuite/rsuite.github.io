@@ -8,7 +8,16 @@ import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
   id: 'Cascader',
-  examples: ['basic', 'placement', 'custom', 'custom-toggle', 'disabled', 'asyn', 'container'],
+  examples: [
+    'basic',
+    'appearance',
+    'placement',
+    'custom',
+    'custom-toggle',
+    'disabled',
+    'asyn',
+    'container'
+  ],
   dependencies: {
     Cascader,
     Button,

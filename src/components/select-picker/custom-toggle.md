@@ -13,7 +13,6 @@ const instance = (
     <SelectPicker
       data={data}
       groupBy="role"
-      appearance="primary"
       placeholder="Select User"
       toggleComponentClass={Button}
     />

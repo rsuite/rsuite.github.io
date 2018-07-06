@@ -13,7 +13,6 @@ const instance = (
     <CheckPicker
       data={data}
       groupBy="role"
-      appearance="primary"
       placeholder="Select User"
       toggleComponentClass={Button}
     />

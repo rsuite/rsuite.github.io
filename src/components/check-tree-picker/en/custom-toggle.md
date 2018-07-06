@@ -12,7 +12,6 @@ const instance = (
   <div>
     <CheckTreePicker
       data={data}
-      appearance="primary"
       toggleComponentClass={Button}
     />
     <hr />

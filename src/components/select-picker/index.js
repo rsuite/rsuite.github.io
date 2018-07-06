@@ -7,6 +7,7 @@ export default createComponentExample({
   id: 'SelectPicker',
   examples: [
     'basic',
+    'appearance',
     'group',
     'placement',
     'custom',
