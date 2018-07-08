@@ -5,7 +5,7 @@
 ```js
 const instance = (
   <div>
-    <DatePicker appearance="primary" toggleComponentClass={Button} />
+    <DatePicker toggleComponentClass={Button} />
     <hr />
     <DatePicker block toggleComponentClass={Button} />
   </div>
