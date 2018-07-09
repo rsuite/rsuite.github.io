@@ -1,4 +1,4 @@
-### 自定义选项
+### Custom
 
 <!--start-code-->
 
@@ -9,11 +9,11 @@
  */
 
 const instance = (
-  <CheckPicker
+  <InputPicker
     data={data}
     groupBy="role"
     placeholder="Select User"
-    block
+    style={{ width: 224 }}
     renderMenuItem={(label, item) => {
       return (
         <div>
@@ -30,14 +30,14 @@ const instance = (
         </div>
       );
     }}
-    renderValue={(value, items) => {
+    renderValue={(label, item) => {
       return (
-        <span>
+        <div>
           <span style={{ color: '#575757' }}>
-            <i className="rs-icon rs-icon-user" /> Users :
+            <i className="rs-icon rs-icon-user" /> User :
           </span>{' '}
-          {value.join(' , ')}
-        </span>
+          {label}
+        </div>
       );
     }}
   />

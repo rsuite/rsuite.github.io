@@ -159,7 +159,13 @@
     "id": "form",
     "name": "Form",
     "title": "表单",
-    "components": ["Form", "FormControl", "FormGroup", "ControlLabel", "HelpBlock"]
+    "components": [
+      "Form",
+      "FormControl",
+      "FormGroup",
+      "ControlLabel",
+      "HelpBlock"
+    ]
   },
   {
     "id": "checkbox",
@@ -179,7 +185,12 @@
     "id": "input",
     "name": "Input",
     "title": "输入框",
-    "components": ["Input", "InputGroup", "InputGroup.Button", "InputGroup.Addon"],
+    "components": [
+      "Input",
+      "InputGroup",
+      "InputGroup.Button",
+      "InputGroup.Addon"
+    ],
     "designHash": "artboard46"
   },
   {
@@ -202,6 +213,12 @@
     "title": "开关",
     "components": ["Toggle"],
     "designHash": "artboard53"
+  },
+  {
+    "id": "input-picker",
+    "name": "InputPicker",
+    "title": "输入选择器",
+    "components": ["InputPicker"]
   },
   {
     "id": "select-picker",
@@ -276,7 +293,13 @@
     "id": "table",
     "name": "Table",
     "title": "表格",
-    "components": ["Table", "Table.Column", "Table.HeaderCell", "Table.Cell", "Table.Pagination"],
+    "components": [
+      "Table",
+      "Table.Column",
+      "Table.HeaderCell",
+      "Table.Cell",
+      "Table.Pagination"
+    ],
     "designHash": "artboard57"
   },
   {
