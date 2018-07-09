@@ -47,6 +47,10 @@ import { Cascader } from 'rsuite';
 | menuClassName        | string                                                             | 选项菜单的 className                 |
 | container            | HTMLElement or (() => HTMLElement)                                 | 设置渲染的容器                       |
 | toggleComponentClass | React.ElementType `('a')`                                          | 为组件自定义元素类型                 |
+| menuWidth            | number                                                             | 设置菜单的宽度                       |
+| menuHeight           | number                                                             | 设置菜单的高度                       |
+
+
 
 ## Types
 

@@ -1,4 +1,4 @@
-### Default
+### 撑满
 
 <!--start-code-->
 
@@ -8,14 +8,7 @@
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/province.js
  */
 
-const instance = (
-  <Cascader
-    data={data}
-    valueKey="name"
-    labelKey="name"
-    style={{ width: 224 }}
-  />
-);
+const instance = <Cascader block data={data} valueKey="name" labelKey="name" />;
 ReactDOM.render(instance);
 ```
 

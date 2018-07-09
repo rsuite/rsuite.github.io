@@ -59,11 +59,12 @@ const instance = (
       </tbody>
     </table>
     <hr />
-
     <CustomCheckPicker placement="auto" />
-    <CustomCheckPicker placement="autoVerticalRight" />
+    <hr />
+    <CustomCheckPicker placement="autoVerticalRight" />{' '}
     <CustomCheckPicker placement="autoVerticalLeft" />
-    <CustomCheckPicker placement="autoHorizontalTop" />
+    <hr />
+    <CustomCheckPicker placement="autoHorizontalTop" />{' '}
     <CustomCheckPicker placement="autoHorizontalBottom" />
   </div>
 );

@@ -1,9 +1,9 @@
-### 默认
+### Block
 
 <!--start-code-->
 
 ```js
-const instance = <DatePicker style={{ width: 280 }} />;
+const instance = <DatePicker block />;
 ReactDOM.render(instance);
 ```
 

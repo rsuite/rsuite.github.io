@@ -11,6 +11,7 @@ const instance=(
   <CheckPicker
     data={data}
     groupBy="role"
+    style={{ width: 224 }}
   />
 )
 ReactDOM.render(instance);

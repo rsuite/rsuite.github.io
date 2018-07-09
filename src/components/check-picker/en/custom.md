@@ -12,6 +12,7 @@ const instance=(
     data={data}
     groupBy="role"
     placeholder="Select User"
+    style={{ width: 224 }}
     renderMenuItem={(label, item) => {
       return <div><i className="rs-icon rs-icon-user" /> {label}</div>;
     }}

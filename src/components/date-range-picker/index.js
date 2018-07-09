@@ -7,6 +7,8 @@ export default createComponentExample({
   id: 'DateRangePicker',
   examples: [
     'basic',
+    'appearance',
+    'block',
     'placeholder',
     'hover-range',
     'one-tap',

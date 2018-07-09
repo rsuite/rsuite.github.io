@@ -11,6 +11,7 @@ export default createComponentExample({
   examples: [
     'basic',
     'appearance',
+    'block',
     'placement',
     'custom',
     'custom-toggle',

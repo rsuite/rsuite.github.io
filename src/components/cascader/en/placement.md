@@ -20,8 +20,8 @@ const CustomCascader = ({ placement }) => (
 
 const instance = (
   <div>
-    <CustomCascader placement="topLeft" />
-    <CustomCascader placement="bottomLeft" />
+    <CustomCascader placement="topLeft" />{' '}
+    <CustomCascader placement="bottomLeft" />{' '}
     <CustomCascader placement="autoVerticalLeft" />
   </div>
 );

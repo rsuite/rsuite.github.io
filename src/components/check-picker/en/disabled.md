@@ -16,6 +16,7 @@ const instance = (
     <CheckPicker
       data={data}
       defaultValue={['Julius']}
+      style={{ width: 224 }}
       disabledItemValues={['Eugenia', 'Travon', 'Vincenza']}
     />
   </div>

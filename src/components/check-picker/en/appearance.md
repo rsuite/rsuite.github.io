@@ -10,8 +10,19 @@
 
 const instance = (
   <div>
-    <CheckPicker data={data} appearance="default" placeholder="Default" />
-    <CheckPicker data={data} appearance="subtle" placeholder="Subtle" />
+    <CheckPicker
+      data={data}
+      appearance="default"
+      placeholder="Default"
+      style={{ width: 224 }}
+    />
+    <hr />
+    <CheckPicker
+      data={data}
+      appearance="subtle"
+      placeholder="Subtle"
+      style={{ width: 224 }}
+    />
   </div>
 );
 ReactDOM.render(instance);

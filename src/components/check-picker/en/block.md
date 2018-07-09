@@ -1,4 +1,4 @@
-### Disabled Search
+### Block
 
 <!--start-code-->
 
@@ -8,9 +8,7 @@
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/users.js
  */
 
-const instance = (
-  <CheckPicker data={data} searchable={false} style={{ width: 224 }} />
-);
+const instance = <CheckPicker data={data} block />;
 ReactDOM.render(instance);
 ```
 

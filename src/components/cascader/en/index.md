@@ -46,6 +46,8 @@ import { Cascader } from 'rsuite';
 | placement            | enum: [Placement](#Placement)`('bottomLeft')`                      | The placement of component                             |
 | container            | HTMLElement or (() => HTMLElement)                                 | Sets the rendering container                           |
 | toggleComponentClass | React.ElementType `('a')`                                          | You can use a custom element for this component        |
+| menuWidth            | number                                                             | Sets the width of the menu                             |
+| menuHeight           | number                                                             | Sets the height of the menu                            |
 
 
 ## Types
