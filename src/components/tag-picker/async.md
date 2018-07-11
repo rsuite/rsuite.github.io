@@ -13,13 +13,24 @@ class AsynExample extends React.Component {
     super(props);
     this.state = {
       loading: false,
-      items: []
+      items: [],
+      cacheData: []
     };
     this.handleSearch = this.handleSearch.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
   }
 
   componentWillMount() {
     this.getUsers('react');
+  }
+
+  handleSelect(value, item, event) {
+    const { cacheData } = this.state;
+    _.remove(cacheData, v => v === value);
+    cacheData.push(item);
+    this.setState({
+      cacheData
+    });
   }
 
   getUsers(word) {
@@ -50,10 +61,13 @@ class AsynExample extends React.Component {
     return (
       <TagPicker
         data={items}
-        style={{ width: 300 }} menuStyle={{width: 300}}
+        cacheData={this.state.cacheData}
+        style={{ width: 300 }}
+        menuStyle={{ width: 300 }}
         labelKey="login"
         valueKey="id"
         onSearch={this.handleSearch}
+        onSelect={this.handleSelect}
         renderMenu={menu => {
           if (loading) {
             return (
