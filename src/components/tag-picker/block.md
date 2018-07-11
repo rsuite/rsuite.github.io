@@ -1,4 +1,4 @@
-### Default
+### 撑满
 
 <!--start-code-->
 
@@ -8,7 +8,7 @@
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/users.js
  */
 
-const instance = <InputPicker data={data} style={{ width: 224 }} />;
+const instance = <TagPicker data={data} block />;
 ReactDOM.render(instance);
 ```
 

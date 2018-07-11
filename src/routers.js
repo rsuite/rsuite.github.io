@@ -472,6 +472,24 @@ export const createRouters = (locale, onEnter, onEntered) => {
         />
 
         <Route
+          path="tag-picker"
+          getComponents={(location, callback) => {
+            onEnter && onEnter();
+            require.ensure([], require => {
+              const getComponent = require('./components/tag-picker')[
+                'default'
+              ];
+              const component = getComponent(locale);
+              callback && callback(null, component);
+              onEntered && onEntered();
+            });
+          }}
+          onEnter={() => {
+            setTitle('TagPicker - components');
+          }}
+        />
+
+        <Route
           path="select-picker"
           getComponents={(location, callback) => {
             onEnter && onEnter();

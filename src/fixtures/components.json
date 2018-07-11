@@ -221,6 +221,12 @@
     "components": ["InputPicker"]
   },
   {
+    "id": "tag-picker",
+    "name": "TagPicker",
+    "title": "标签选择器",
+    "components": ["TagPicker"]
+  },
+  {
     "id": "select-picker",
     "name": "SelectPicker",
     "title": "单项选择器",
