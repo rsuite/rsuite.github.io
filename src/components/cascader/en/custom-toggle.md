@@ -14,7 +14,6 @@ const instance = (
       data={data}
       valueKey="name"
       labelKey="name"
-      appearance="primary"
       toggleComponentClass={Button}
     />
     <hr />

@@ -10,9 +10,18 @@
 
 const instance = (
   <div>
-    <TreePicker data={data} appearance="primary" toggleComponentClass={Button} />
+    <TreePicker
+      data={data}
+      toggleComponentClass={Button}
+      style={{ width: 246 }}
+    />
     <hr />
-    <TreePicker data={data} block toggleComponentClass={Button} />
+    <TreePicker
+      data={data}
+      block
+      toggleComponentClass={Button}
+      style={{ width: 246 }}
+    />
   </div>
 );
 ReactDOM.render(instance);

@@ -30,6 +30,7 @@ class AsynExample extends React.Component {
         data={items}
         onOpen={this.handleUpdate}
         onSearch={this.handleUpdate}
+        style={{ width: 224 }}
         renderMenu={menu => {
           if (items.length === 0) {
             return (

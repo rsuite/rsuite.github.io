@@ -20,6 +20,8 @@ import { CheckTreePicker } from 'rsuite';
 
 | 属性名称             | 类型 `(默认值)`                                                                              | 描述                            |
 | -------------------- | -------------------------------------------------------------------------------------------- | ------------------------------- |
+| appearance           | enum: 'default', 'subtle' `('default')`                                                      | 设置外观                        |
+| block                | boolean                                                                                      | 堵塞整行                        |
 | value                | Array&lt;DataItemType.value&gt;                                                              | 当前选中的值                    |
 | defaultValue         | Array&lt;DataItemType.value&gt;                                                              | 默认选中的值                    |
 | data \*              | Array&lt;[DataItemType](#DataItemType)&gt;                                                   | tree 数据                       |
@@ -28,7 +30,7 @@ import { CheckTreePicker } from 'rsuite';
 | childKey             | string `('children')`                                                                        | tree 数据结构 children 属性名称 |
 | disabledItemValues   | Array&lt;DataItemType.value&gt;                                                              | 禁用节点列表                    |
 | defaultExpandAll     | boolean                                                                                      | 默认展开所有节点                |
-| expandAll            | boolean                                                                                      | (受控)展示/收起所有节点           |
+| expandAll            | boolean                                                                                      | (受控)展示/收起所有节点         |
 | cascade              | boolean                                                                                      | checktree 是否级联选择          |
 | placeholder          | React.Node `('Select')`                                                                      | 占位符                          |
 | disabled             | boolean                                                                                      | 是否禁用 Picker                 |

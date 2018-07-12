@@ -790,8 +790,13 @@ path.bg {
   }
 }
 
-.placement-table tr td:first-child {
-  text-align: right;
+.placement-table {
+  td {
+    padding: 4px;
+  }
+  tr td:first-child {
+    text-align: right;
+  }
 }
 
 .table-content-editing .@{ns}input {
@@ -883,6 +888,9 @@ path.bg {
     left: -2px;
     background-color: @B000;
   }
+}
+.code-view .field p {
+  line-height: 32px;
 }
 
 .tag-input,

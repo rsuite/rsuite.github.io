@@ -1,18 +1,17 @@
-
 ### Asynchronous
 
 <!--start-code-->
+
 ```js
 /**
  * import province from
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/province-simplified.js
  */
 
-
 function asynGetData(node, callback) {
-  const findNode = findNodeOfTree(province, item => (node.id === item.id));
+  const findNode = findNodeOfTree(province, item => node.id === item.id);
   const children = get(findNode, 'children');
-  const data = children.map((item) => {
+  const data = children.map(item => {
     if (item.children) {
       return {
         ...item,
@@ -28,7 +27,6 @@ function asynGetData(node, callback) {
 }
 
 class AsynExample extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -45,8 +43,8 @@ class AsynExample extends React.Component {
           labelKey="name"
           placeholder="请选择"
           value={this.state.value}
+          style={{ width: 224 }}
           renderMenu={(children, menu, parentNode) => {
-
             if (children.length === 0) {
               return (
                 <p style={{ padding: 4, color: '#999', textAlign: 'center' }}>
@@ -55,21 +53,21 @@ class AsynExample extends React.Component {
               );
             }
             return menu;
-
           }}
-          onSelect={(node) => {
-
+          onSelect={node => {
             if (node.children && node.children.length === 0) {
-              asynGetData(node, (children) => {
+              asynGetData(node, children => {
                 const nextData = cloneDeep(this.state.data);
-                const selectedNode = findNodeOfTree(nextData, item => (node.id === item.id));
+                const selectedNode = findNodeOfTree(
+                  nextData,
+                  item => node.id === item.id
+                );
                 selectedNode.children = children;
                 this.setState({
                   data: nextData
                 });
               });
             }
-
           }}
           onChange={(value, event) => {
             console.log(value, 'onChange');
@@ -84,6 +82,6 @@ class AsynExample extends React.Component {
 }
 
 ReactDOM.render(<AsynExample />);
-
 ```
+
 <!--end-code-->

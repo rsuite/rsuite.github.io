@@ -8,7 +8,14 @@
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/city.js
  */
 
-const instance = <TreePicker defaultExpandAll data={data} searchable={false} />;
+const instance = (
+  <TreePicker
+    defaultExpandAll
+    data={data}
+    searchable={false}
+    style={{ width: 246 }}
+  />
+);
 ReactDOM.render(instance);
 ```
 

@@ -20,7 +20,9 @@ import { SelectPicker } from 'rsuite';
 
 | Property             | Type `(Default)`                                             | Description                                            |
 | -------------------- | ------------------------------------------------------------ | ------------------------------------------------------ |
-| classPrefix          | string `('picker-select')`                                   | The prefix of the component CSS class                  |
+| appearance           | enum: 'default', 'subtle' `('default')`                      | Set picker appearence                                  |
+| block                | boolean                                                      | Blocking an entire row                                 |
+| classPrefix          | string `('picker')`                                          | The prefix of the component CSS class                  |
 | data \*              | Array&lt;[DataItemType](#DataItemType)&gt;                   | Selectable data                                        |
 | groupBy              | string                                                       | Set grouping criteria 'key' in 'data'                  |
 | valueKey             | string `('value')`                                           | Set option value 'key' in 'data'                       |

@@ -10,10 +10,10 @@
 
 const instance = (
   <div>
-    <TreePicker data={data} disabled />
+    <TreePicker data={data} disabled style={{ width: 246 }} />
     <hr />
     <p>禁用选项</p>
-    <TreePicker defaultExpandAll data={data} disabledItemValues={[2]} />
+    <TreePicker defaultExpandAll data={data} disabledItemValues={[2]} style={{ width: 246 }}/>
   </div>
 );
 ReactDOM.render(instance);

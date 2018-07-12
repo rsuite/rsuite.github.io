@@ -12,6 +12,7 @@ const instance = (
   <CheckTreePicker
     defaultExpandAll
     data={data}
+    style={{ width: 272 }}
     placeholder={
       <span>
         <i className="rs-icon rs-icon-map-marker" /> 选择地区

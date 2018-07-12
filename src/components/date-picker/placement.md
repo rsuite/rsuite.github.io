@@ -54,11 +54,12 @@ const instance = (
       </tbody>
     </table>
     <hr />
-
     <CustomDatePicker placement="auto" />
-    <CustomDatePicker placement="autoVerticalRight" />
+    <hr />
+    <CustomDatePicker placement="autoVerticalRight" />{' '}
     <CustomDatePicker placement="autoVerticalLeft" />
-    <CustomDatePicker placement="autoHorizontalTop" />
+    <hr />
+    <CustomDatePicker placement="autoHorizontalTop" />{' '}
     <CustomDatePicker placement="autoHorizontalBottom" />
   </div>
 );

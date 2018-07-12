@@ -28,6 +28,7 @@ class AsynExample extends React.Component {
     return (
       <CheckTreePicker
         data={items}
+        style={{ width: 272 }}
         defaultExpandAll
         onOpen={this.handleUpdate}
         onSearch={this.handleUpdate}

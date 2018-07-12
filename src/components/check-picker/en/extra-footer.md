@@ -35,6 +35,7 @@ class ExtraFooterExample extends React.Component {
           }}
           value={this.state.value}
           onChange={this.handleChange}
+          style={{ width: 224 }}
           renderExtraFooter={() => (
             <div style={footerStyles}>
               <Button

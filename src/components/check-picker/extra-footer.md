@@ -60,6 +60,7 @@ class ExtraFooterExample extends React.Component {
           innerRef={ref => {
             this.picker = ref;
           }}
+          style={{ width: 224 }}
           value={this.state.value}
           onChange={this.handleChange}
           renderExtraFooter={() => (

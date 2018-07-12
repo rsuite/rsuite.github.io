@@ -8,7 +8,14 @@
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/users.js
  */
 
-const instance = <SelectPicker data={data} searchable={false} />;
+const instance = (
+  <SelectPicker
+    data={data}
+    searchable={false}
+    style={{ width: 224 }}
+    menuStyle={{ width: 224 }}
+  />
+);
 ReactDOM.render(instance);
 ```
 

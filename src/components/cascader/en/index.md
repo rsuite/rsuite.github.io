@@ -20,7 +20,9 @@ import { Cascader } from 'rsuite';
 
 | Property             | Type`(Default)`                                                    | Description                                            |
 | -------------------- | ------------------------------------------------------------------ | ------------------------------------------------------ |
-| classPrefix          | string `('picker-cascader')`                                       | The prefix of the component CSS class                  |
+| appearance           | enum: 'default', 'subtle' `('default')`                            | Set picker appearence                                  |
+| block                | boolean                                                            | Blocking an entire row                                 |
+| classPrefix          | string `('picker')`                                                | The prefix of the component CSS class                  |
 | data \*              | Array&lt;[DataItemType](#DataItemType)&gt;                         | The data of component                                  |
 | disabled             | boolean                                                            | Disabled component                                     |
 | disabledItemValues   | Array&lt;DataItemType.value&gt;                                    | Disabled items                                         |
@@ -46,6 +48,8 @@ import { Cascader } from 'rsuite';
 | placement            | enum: [Placement](#Placement)`('bottomLeft')`                      | The placement of component                             |
 | container            | HTMLElement or (() => HTMLElement)                                 | Sets the rendering container                           |
 | toggleComponentClass | React.ElementType `('a')`                                          | You can use a custom element for this component        |
+| menuWidth            | number                                                             | Sets the width of the menu                             |
+| menuHeight           | number                                                             | Sets the height of the menu                            |
 
 
 ## Types

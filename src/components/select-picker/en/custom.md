@@ -11,6 +11,7 @@
 const instance = (
   <SelectPicker
     data={data}
+    style={{ width: 224 }}
     groupBy="role"
     placeholder="Select User"
     renderMenuItem={(label, item) => {

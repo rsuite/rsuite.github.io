@@ -12,13 +12,14 @@ const instance = (
   <div>
     <CheckTreePicker
       data={data}
-      appearance="primary"
+      style={{ width: 272 }}
       toggleComponentClass={Button}
     />
     <hr />
     <CheckTreePicker
       data={data}
       block
+      style={{ width: 272 }}
       toggleComponentClass={Button}
     />
   </div>

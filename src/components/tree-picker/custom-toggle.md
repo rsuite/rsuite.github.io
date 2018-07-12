@@ -10,7 +10,7 @@
 
 const instance = (
   <div>
-    <TreePicker data={data} appearance="primary" toggleComponentClass={Button} />
+    <TreePicker data={data} toggleComponentClass={Button} />
     <hr />
     <TreePicker data={data} block toggleComponentClass={Button} />
   </div>

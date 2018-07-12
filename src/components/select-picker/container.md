@@ -24,6 +24,7 @@ class Demo extends React.Component {
           }}
         >
           <SelectPicker
+            style={{ width: 224 }}
             container={() => {
               return this.container;
             }}

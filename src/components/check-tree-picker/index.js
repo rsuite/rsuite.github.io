@@ -5,7 +5,7 @@ import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
   id: 'CheckTreePicker',
-  examples: ['basic', 'placement', 'disabled', 'custom', 'custom-toggle', 'async'],
+  examples: ['basic', 'placement', 'disabled', 'custom', 'async'],
   dependencies: {
     Icon,
     Button,

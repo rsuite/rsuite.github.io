@@ -1,18 +1,20 @@
 ### 禁用
 
 <!--start-code-->
+
 ```js
 /**
  * import data from
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/users.js
  */
 
-const instance=(
+const instance = (
   <div>
     <SelectPicker
       data={data}
       defaultValue={'Julius'}
       disabled
+      style={{ width: 224 }}
     />
     <hr />
     <p>禁用选项</p>
@@ -20,10 +22,11 @@ const instance=(
       data={data}
       defaultValue={'Julius'}
       disabledItemValues={['Eugenia', 'Travon', 'Vincenza']}
+      style={{ width: 224 }}
     />
-
   </div>
-)
+);
 ReactDOM.render(instance);
 ```
+
 <!--end-code-->

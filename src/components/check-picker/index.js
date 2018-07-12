@@ -7,10 +7,11 @@ export default createComponentExample({
   id: 'CheckPicker',
   examples: [
     'basic',
+    'appearance',
+    'block',
     'group',
     'placement',
     'custom',
-    'custom-toggle',
     'disabled',
     'searchable',
     'extra-footer',

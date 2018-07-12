@@ -26,6 +26,7 @@ class Demo extends React.Component {
           <Cascader
             valueKey="name"
             labelKey="name"
+            style={{ width: 224 }}
             container={() => {
               return this.container;
             }}

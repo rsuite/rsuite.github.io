@@ -12,6 +12,7 @@ const instance = (
   <TreePicker
     defaultExpandAll
     data={data}
+    style={{ width: 246 }}
     renderTreeNode={nodeData => {
       return (
         <span>

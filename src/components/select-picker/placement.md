@@ -58,13 +58,13 @@ const instance = (
         </tr>
       </tbody>
     </table>
-
     <hr />
-
     <CustomSelectPicker placement="auto" />
-    <CustomSelectPicker placement="autoVerticalRight" />
+    <hr />
+    <CustomSelectPicker placement="autoVerticalRight" />{' '}
     <CustomSelectPicker placement="autoVerticalLeft" />
-    <CustomSelectPicker placement="autoHorizontalTop" />
+    <hr />
+    <CustomSelectPicker placement="autoHorizontalTop" />{' '}
     <CustomSelectPicker placement="autoHorizontalBottom" />
   </div>
 );

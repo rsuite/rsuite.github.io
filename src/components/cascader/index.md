@@ -20,7 +20,9 @@ import { Cascader } from 'rsuite';
 
 | 属性名称             | 类型`(默认值)`                                                     | 描述                                 |
 | -------------------- | ------------------------------------------------------------------ | ------------------------------------ |
-| classPrefix          | string `('picker-cascader')`                                       | 组件 CSS 类的前缀                    |
+| appearance           | enum: 'default', 'subtle' `('default')`                            | 设置外观                             |
+| block                | boolean                                                            | 堵塞整行                             |
+| classPrefix          | string `('picker')`                                                | 组件 CSS 类的前缀                    |
 | data \*              | Array&lt;[DataItemType](#DataItemType)&gt;                         | 组件数据                             |
 | disabled             | boolean                                                            | 禁用组件                             |
 | disabledItemValues   | Array&lt;DataItemType.value&gt;                                    | 禁用选项                             |
@@ -47,6 +49,10 @@ import { Cascader } from 'rsuite';
 | menuClassName        | string                                                             | 选项菜单的 className                 |
 | container            | HTMLElement or (() => HTMLElement)                                 | 设置渲染的容器                       |
 | toggleComponentClass | React.ElementType `('a')`                                          | 为组件自定义元素类型                 |
+| menuWidth            | number                                                             | 设置菜单的宽度                       |
+| menuHeight           | number                                                             | 设置菜单的高度                       |
+
+
 
 ## Types
 

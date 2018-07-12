@@ -65,11 +65,12 @@ const instance = (
       </tbody>
     </table>
     <hr />
-
     <CustomTreePicker placement="auto" />
-    <CustomTreePicker placement="autoVerticalRight" />
+    <hr />
+    <CustomTreePicker placement="autoVerticalRight" />{' '}
     <CustomTreePicker placement="autoVerticalLeft" />
-    <CustomTreePicker placement="autoHorizontalTop" />
+    <hr />
+    <CustomTreePicker placement="autoHorizontalTop" />{' '}
     <CustomTreePicker placement="autoHorizontalBottom" />
   </div>
 );

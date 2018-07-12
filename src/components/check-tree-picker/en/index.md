@@ -20,6 +20,8 @@ import { CheckTreePicker } from 'rsuite';
 
 | Property             | Type `(Default)`                                                           | Description                                                 |
 | -------------------- | -------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| appearance           | enum: 'default', 'subtle' `('default')`                                    | Set picker appearence                                       |
+| block                | boolean                                                                    | Blocking an entire row                                      |
 | value                | Array&lt;any&gt;                                                           | (Controlled) specifies the values of the selected tree node |
 | defaultValue         | Array&lt;any&gt;                                                           | (UnControlled) default values of the selected tree node     |
 | data \*              | Array&lt;Object&gt;                                                        | tree data                                                   |

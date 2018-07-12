@@ -10,7 +10,13 @@
 
 const instance = (
   <div>
-    <Cascader data={data} valueKey="name" labelKey="name" disabled />
+    <Cascader
+      data={data}
+      valueKey="name"
+      labelKey="name"
+      disabled
+      style={{ widht: 224 }}
+    />
     <hr />
     <p>Disabled Option</p>
     <Cascader
@@ -19,6 +25,7 @@ const instance = (
       labelKey="name"
       defaultValue={'虹口区'}
       disabledItemValues={['北京', '广东', '天津']}
+      style={{ widht: 224 }}
     />
   </div>
 );

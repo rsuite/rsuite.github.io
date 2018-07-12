@@ -8,6 +8,8 @@ export default createComponentExample({
   id: 'DatePicker',
   examples: [
     'basic',
+    'appearance',
+    'block',
     'placeholder',
     'inline',
     'format',
@@ -17,8 +19,7 @@ export default createComponentExample({
     'disabled',
     'intl',
     'placement',
-    'custom',
-    'custom-toggle'
+    'custom'
   ],
   dependencies: {
     moment,

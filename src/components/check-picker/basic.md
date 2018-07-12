@@ -9,7 +9,7 @@
  */
 
 const instance=(
-  <CheckPicker data={data} />
+  <CheckPicker data={data} style={{ width: 224 }} />
 )
 ReactDOM.render(instance);
 ```
