@@ -15,8 +15,7 @@ export default createComponentExample({
     'disabled',
     'toolbar',
     'value',
-    'intl',
-    'custom-toggle'
+    'intl'
   ],
   dependencies: {
     moment,

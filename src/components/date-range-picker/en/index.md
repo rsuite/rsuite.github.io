@@ -20,6 +20,8 @@ import { DateRangePicker } from 'rsuite';
 
 | Property             | Type`(default)`                                                                                     | Description                                                                             |
 | -------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| appearance           | enum: 'default', 'subtle' `('default')`                                                             | Set picker appearence                                                                   |
+| block                | boolean                                                                                             | Blocking an entire row                                                                  |
 | value                | Array<moment$Moment>                                                                                | Value (Controlled)                                                                      |
 | defaultValue         | Array<moment$Moment>                                                                                | Default value                                                                           |
 | onChange             | function(`value`:Array<moment$Moment>)                                                              | Callback fired when value changed                                                       |

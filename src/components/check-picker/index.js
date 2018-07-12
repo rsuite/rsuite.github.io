@@ -12,7 +12,6 @@ export default createComponentExample({
     'group',
     'placement',
     'custom',
-    'custom-toggle',
     'disabled',
     'searchable',
     'extra-footer',

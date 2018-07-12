@@ -22,6 +22,8 @@ import { DatePicker } from 'rsuite';
 
 | 属性名称              | 类型`(默认值)`                                        | 描述                                                      |
 | --------------------- | ----------------------------------------------------- | --------------------------------------------------------- |
+| appearance            | enum: 'default', 'subtle' `('default')`               | 设置外观                                                  |
+| block                 | boolean                                               | 堵塞整行                                                  |
 | value                 | moment$Moment                                         | 值`受控`                                                  |
 | defaultValue          | moment$Moment                                         | 默认值                                                    |
 | calendarDefaultDate   | moment$Moment                                         | 日历面板默认呈现的日期时间                                |

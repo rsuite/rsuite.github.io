@@ -18,7 +18,9 @@ import { TreePicker } from 'rsuite';
 
 | Property             | Type `(Default)`                                              | Description                                     |
 | -------------------- | ------------------------------------------------------------- | ----------------------------------------------- |
-| classPrefix          | string`('picker-tree')`                                       | The prefix of the component CSS class           |
+| appearance           | enum: 'default', 'subtle' `('default')`                       | Set picker appearence                           |
+| block                | boolean                                                       | Blocking an entire row                          |
+| classPrefix          | string`('picker')`                                            | The prefix of the component CSS class           |
 | value                | DataItemType.value                                            | Selected value                                  |
 | defaultValue         | DataItemType.value                                            | Default selected Value                          |
 | data \*              | Array&lt;[DataItemType](#DataItemType)&gt;                    | Tree data                                       |

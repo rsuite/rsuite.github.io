@@ -22,6 +22,8 @@ import { DatePicker } from 'rsuite';
 
 | Property              | Type`(default)`                                       | Description                                                                          |
 | --------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| appearance            | enum: 'default', 'subtle' `('default')`               | Set picker appearence                                                                |
+| block                 | boolean                                               | Blocking an entire row                                                               |
 | value                 | moment$Moment                                         | Value (Controlled)                                                                   |
 | defaultValue          | moment$Moment                                         | Default value                                                                        |
 | calendarDefaultDate   | moment$Moment                                         | Calendar panel default presentation date and time                                    |

@@ -8,7 +8,6 @@
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/city.js
  */
 
-
 class AsynExample extends React.Component {
   constructor(props) {
     super(props);
@@ -29,6 +28,7 @@ class AsynExample extends React.Component {
     return (
       <TreePicker
         data={items}
+        style={{ width: 246 }}
         defaultExpandAll
         onOpen={this.handleUpdate}
         onSearch={this.handleUpdate}

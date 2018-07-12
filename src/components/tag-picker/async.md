@@ -3,21 +3,18 @@
 <!--start-code-->
 
 ```js
-/**
- * import data from
- * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/users.js
- */
-
 class AsynExample extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       loading: false,
       items: [],
-      cacheData: []
+      cacheData: [],
+      value: []
     };
     this.handleSearch = this.handleSearch.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentWillMount() {
@@ -56,16 +53,21 @@ class AsynExample extends React.Component {
   handleSearch(word) {
     this.getUsers(word);
   }
+  handleChange(value) {
+    this.setState({ value });
+  }
   render() {
     const { items, loading } = this.state;
     return (
       <TagPicker
         data={items}
         cacheData={this.state.cacheData}
+        value={this.state.value}
         style={{ width: 300 }}
         menuStyle={{ width: 300 }}
         labelKey="login"
         valueKey="id"
+        onChange={this.handleChange}
         onSearch={this.handleSearch}
         onSelect={this.handleSelect}
         renderMenu={menu => {

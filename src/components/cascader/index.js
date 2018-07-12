@@ -14,7 +14,6 @@ export default createComponentExample({
     'block',
     'placement',
     'custom',
-    'custom-toggle',
     'disabled',
     'asyn',
     'container'

@@ -20,9 +20,10 @@ import { SelectPicker } from 'rsuite';
 
 | 属性名称             | 类型`(默认值)`                                               | 描述                                 |
 | -------------------- | ------------------------------------------------------------ | ------------------------------------ |
-| classPrefix          | string `('picker-select')`                                   | 组件 CSS 类的前缀                    |
-| data \*              | Array&lt;[DataItemType](#DataItemType)&gt;                   | 组件数据                             |
+| appearance           | enum: 'default', 'subtle' `('default')`                      | 设置外观                             |
 | block                | boolean                                                      | 堵塞整行                             |
+| classPrefix          | string `('picker')`                                          | 组件 CSS 类的前缀                    |
+| data \*              | Array&lt;[DataItemType](#DataItemType)&gt;                   | 组件数据                             |
 | groupBy              | string                                                       | 设置分组条件在 `data` 中的 `key`     |
 | valueKey             | string `('value')`                                           | 设置选项值在 `data` 中的 `key`       |
 | labelKey             | string `('label')`                                           | 设置选项显示内容在 `data` 中的 `key` |

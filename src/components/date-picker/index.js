@@ -19,8 +19,7 @@ export default createComponentExample({
     'disabled',
     'intl',
     'placement',
-    'custom',
-    'custom-toggle'
+    'custom'
   ],
   dependencies: {
     moment,

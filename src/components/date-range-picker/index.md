@@ -20,6 +20,8 @@ import { DateRangePicker } from 'rsuite';
 
 | 属性名称             | 类型`(默认值)`                                                                                      | 描述                                                            |
 | -------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| appearance           | enum: 'default', 'subtle' `('default')`                                                             | 设置外观                                                        |
+| block                | boolean                                                                                             | 堵塞整行                                                        |
 | value                | Array<moment$Moment>                                                                                | 值 `受控`                                                       |
 | defaultValue         | Array<moment$Moment>                                                                                | 默认值                                                          |
 | onChange             | function(`value`:Array<moment$Moment>)                                                              | 值改变后的回调函数                                              |
