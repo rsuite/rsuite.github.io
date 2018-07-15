@@ -41,7 +41,6 @@ class AsynExample extends React.Component {
     fetch(`https://api.github.com/search/users?q=${word}`)
       .then(response => response.json())
       .then(data => {
-        console.log(data);
         this.setState({
           loading: false,
           items: data.items
