@@ -49,6 +49,7 @@ import { CheckTreePicker } from 'rsuite';
 | renderExtraFooter    | ()=>React.Node                                                                               | 自定义页脚内容                  |
 | placement            | enum: Placement `('bottomLeft')`                                                             | 打开位置                        |
 | menuClassName        | string                                                                                       | 选项菜单的 className            |
+| menuStyle            | object                                                                                       | 应用于菜单 DOM 节点的 style     |
 | container            | HTMLElement or (() => HTMLElement)                                                           | 设置渲染的容器                  |
 | toggleComponentClass | React.ElementType `('a')`                                                                    | 为组件自定义元素类型            |
 
