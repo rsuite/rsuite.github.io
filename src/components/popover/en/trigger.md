@@ -1,6 +1,6 @@
 ### Triggering events
 
-There are three kinds of events that can trigger the message `Popover`: `click`、`focus`、`hover`
+There are three kinds of events that can trigger the message `Popover`: `click`、`focus`、`hover`、`active`
 
 <!--start-code-->
 
@@ -58,6 +58,9 @@ const instance = (
       </Whisper>
       <Whisper placement="top" trigger="hover" speaker={speaker}>
         <Button>Hover</Button>
+      </Whisper>
+      <Whisper placement="top" trigger="active" speaker={speaker}>
+        <Button>Active</Button>
       </Whisper>
     </ButtonToolbar>
     <hr />

@@ -1,6 +1,6 @@
 ### Triggering events
 
-There are three kinds of events that can trigger the message `tooltip`: `click`、`focus`、`hover`
+There are three kinds of events that can trigger the message `tooltip`: `click`、`focus`、`hover`、`active`
 
 <!--start-code-->
 
@@ -20,6 +20,9 @@ const instance = (
     </Whisper>
     <Whisper placement="top" trigger="hover" speaker={tooltip}>
       <Button>Hover</Button>
+    </Whisper>
+    <Whisper placement="top" trigger="active" speaker={tooltip}>
+      <Button>Active</Button>
     </Whisper>
   </ButtonToolbar>
 );

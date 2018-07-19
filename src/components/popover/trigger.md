@@ -1,6 +1,6 @@
 ### 触发事件
 
-有三种事件可以触发提示 `Popover` 的信息: `click`、`focus`、`hover`
+有三种状态可以触发提示 `Popover` 的信息: `click`、`focus`、`hover`、`active`
 
 <!--start-code-->
 
@@ -58,6 +58,9 @@ const instance = (
       </Whisper>
       <Whisper placement="top" trigger="hover" speaker={speaker}>
         <Button>Hover</Button>
+      </Whisper>
+      <Whisper placement="top" trigger="active" speaker={speaker}>
+        <Button>Active</Button>
       </Whisper>
     </ButtonToolbar>
     <hr />

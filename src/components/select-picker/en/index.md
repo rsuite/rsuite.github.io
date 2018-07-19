@@ -47,6 +47,7 @@ import { SelectPicker } from 'rsuite';
 | cleanable            | boolean `(true)`                                             | Whether the option can be emptied.                     |
 | placement            | enum: [Placement](#Placement)`('bottomLeft')`                | The placement of component                             |
 | menuClassName        | string                                                       | A css class to apply to the Menu DOM node.             |
+| menuStyle            | Object                                                       | A style to apply to the Menu DOM node.                 |
 | container            | HTMLElement or (() => HTMLElement)                           | Sets the rendering container                           |
 | toggleComponentClass | React.ElementType `('a')`                                    | You can use a custom element for this component        |
 

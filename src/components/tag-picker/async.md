@@ -23,7 +23,7 @@ class AsynExample extends React.Component {
 
   handleSelect(value, item, event) {
     const { cacheData } = this.state;
-    _.remove(cacheData, v => v === value);
+    _remove(cacheData, v => v === value);
     cacheData.push(item);
     this.setState({
       cacheData

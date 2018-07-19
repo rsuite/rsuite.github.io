@@ -46,6 +46,8 @@ import { CheckTreePicker } from 'rsuite';
 | renderTreeIcon       | (nodeData:Array&lt;Object&gt;)=>React.Node                                 | custom render the icon of tree node                         |
 | renderValue          | (values:Array&lt;Object&gt;, checkedItems:Array&lt;Object&gt;)=>React.Node | custom render placeholder                                   |
 | renderExtraFooter    | ()=>React.Node                                                             | custom render extra footer                                  |
+| menuClassName        | string                                                                     | className for Menu                                          |
+| menuStyle            | object                                                                     | style for Menu                                              |
 | placement            | enum: Placement `('bottomLeft')`                                           | Placement of component                                      |
 | container            | HTMLElement or (() => HTMLElement)                                         | Sets the rendering container                                |
 | toggleComponentClass | React.ElementType `('a')`                                                  | You can use a custom element for this component             |
