@@ -48,6 +48,8 @@ import { TagPicker } from 'rsuite';
 | searchable           | boolean `(true)`                                                 | Whether dispaly search input box                        |
 | cleanable            | boolean `(true)`                                                 | Whether the selected value can be cleared               |
 | placement            | enum: [Placement](#Placement)`('bottomLeft')`                    | The placement of component                              |
+| menuClassName        | string                                                           | A css class to apply to the Menu DOM node.              |
+| menuStyle            | Object                                                           | A style to apply to the Menu DOM node.                  |
 | container            | HTMLElement or (() => HTMLElement)                               | Sets the rendering container                            |
 | toggleComponentClass | React.ElementType `('a')`                                        | You can use a custom element for this component         |
 

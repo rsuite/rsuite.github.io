@@ -46,7 +46,8 @@ import { CheckPicker } from 'rsuite';
 | searchable           | boolean `(true)`                                                 | 可以搜索                             |
 | cleanable            | boolean `(true)`                                                 | 可以清除                             |
 | placement            | enum: [Placement](#Placement)`('bottomLeft')`                    | 位置                                 |
-| menuClassName        | string                                                           | 选项菜单的 className                 |
+| menuClassName        | string                                                           | 应用于菜单 DOM 节点的 css class      |
+| menuStyle            | Object                                                           | 应用于菜单 DOM 节点的 style          |
 | container            | HTMLElement or (() => HTMLElement)                               | 设置渲染的容器                       |
 | toggleComponentClass | React.ElementType `('a')`                                        | 为组件自定义元素类型                 |
 

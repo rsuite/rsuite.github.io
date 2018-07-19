@@ -34,7 +34,7 @@ import { Tooltip, Whisper } from 'rsuite';
 | Property     | Type `(Default)`                                       | Description                     |
 | ------------ | ------------------------------------------------------ | ------------------------------- |
 | placement    | enum: [Placement](#Placement) `('top')`                | Dispaly placement               |
-| trigger      | union: 'click', 'hover', 'focus' `(['hover','focus'])` | Triggering events               |
+| trigger      | union: 'click', 'hover', 'focus', 'active' `(['hover','focus'])` | Triggering events               |
 | delay        | number                                                 | Delay Time                      |
 | delayShow    | number                                                 | Show Delay Time                 |
 | delayHide    | number                                                 | Hidden delay Time               |

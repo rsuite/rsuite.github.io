@@ -32,7 +32,7 @@ import { Tooltip, Whisper } from 'rsuite';
 | 属性名称     | 类型 `(默认值)`                                        | 描述                            |     |
 | ------------ | ------------------------------------------------------ | ------------------------------- | --- |
 | placement    | enum: [Placement](#Placement) `('top')`                | 显示位置                        |     |
-| trigger      | union: 'click', 'hover', 'focus' `(['hover','focus'])` | 触发事件,可以通过数组配置多事件 |     |
+| trigger      | union: 'click', 'hover', 'focus', 'active' `(['hover','focus'])` | 触发事件,可以通过数组配置多事件 |     |
 | delay        | number                                                 | 延迟时间                        |     |
 | delayShow    | number                                                 | 展示的延迟时间                  |     |
 | delayHide    | number                                                 | 隐藏的延迟时间                  |     |

@@ -45,6 +45,8 @@ import { CheckPicker } from 'rsuite';
 | renderExtraFooter    | ()=>React.Node                                                   | Custom render extra footer                              |
 | searchable           | boolean `(true)`                                                 | Whether dispaly search input box                        |
 | cleanable            | boolean `(true)`                                                 | Whether the selected value can be cleared               |
+| menuClassName        | string                                                           | A css class to apply to the Menu DOM node.              |
+| menuStyle            | Object                                                           | A style to apply to the Menu DOM node.                  |
 | placement            | enum: [Placement](#Placement)`('bottomLeft')`                    | The placement of component                              |
 | container            | HTMLElement or (() => HTMLElement)                               | Sets the rendering container                            |
 | toggleComponentClass | React.ElementType `('a')`                                        | You can use a custom element for this component         |
