@@ -21,18 +21,18 @@ import { Nav, Dropdown } from 'rsuite';
 
 ### `<Nav>`
 
-| Property    | Type `(Default)`                                           | Description                                                    |
-| ----------- | ---------------------------------------------------------- | -------------------------------------------------------------- |
-| classPrefix | string `('nav')`                                           | The prefix of the component CSS class                          |
-| children \* | React.ChildrenArray&lt;NavItem or Dropdown&gt;             | The contents of the component.                                 |
-| tabs        | boolean                                                    | Tabbed navigation                                              |
-| pills       | boolean                                                    | Pills navigation                                               |
-| justified   | boolean                                                    | Justified navigation                                           |
-| stacked     | boolean                                                    | Stacked navigation                                             |
-| pullRight   | boolean                                                    | appears on the right.                                          |
-| activeKey   | any                                                        | Active `key`, corresponding to `eventkey` in `<Nav.item>`.     |
+| Property    | Type `(Default)`                                           | Description                                                |
+| ----------- | ---------------------------------------------------------- | ---------------------------------------------------------- |
+| classPrefix | string `('nav')`                                           | The prefix of the component CSS class                      |
+| children \* | React.ChildrenArray&lt;NavItem or Dropdown&gt;             | The contents of the component.                             |
+| tabs        | boolean                                                    | Tabbed navigation                                          |
+| pills       | boolean                                                    | Pills navigation                                           |
+| justified   | boolean                                                    | Justified navigation                                       |
+| stacked     | boolean                                                    | Stacked navigation                                         |
+| pullRight   | boolean                                                    | appears on the right.                                      |
+| activeKey   | any                                                        | Active `key`, corresponding to `eventkey` in `<Nav.item>`. |
 |             |
-| onSelect    | (eventKey: any, event: SyntheticEvent&lt;any&gt;) => void, | Callback function triggered after selection                    |
+| onSelect    | (eventKey: any, event: SyntheticEvent&lt;any&gt;) => void, | Callback function triggered after selection                |
 
 ### `<Nav.Item>`
 
@@ -44,4 +44,4 @@ import { Nav, Dropdown } from 'rsuite';
 | icon           | React.Element&lt;typeof Icon&gt;                           | Sets the icon for the component                       |
 | href           | string                                                     | Link                                                  |
 | onSelect       | (eventKey: any, event: SyntheticEvent&lt;any&gt;) => void, | Select the callback function that the event triggers. |
-| componentClass | React.ElementType                                          | You can use a custom element type for this component        |
+| componentClass | React.ElementType `('a')`                                  | You can use a custom element type for this component  |

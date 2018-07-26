@@ -51,7 +51,7 @@ import { Dropdown } from 'rsuite';
 | disabled       | boolean                                                   | 禁用当前选项           |
 | eventKey       | any                                                       | 当前选项的值           |
 | onSelect       | (eventKey: any, event: SyntheticEvent&lt;any&gt;) => void | 选中当前选项的回调函数 |
-| componentClass | React.ElementType                                         | 为组件自定义元素类型   |
+| componentClass | React.ElementType `('a')`                                 | 为组件自定义元素类型   |
 | icon           | React.Element&lt;typeof Icon&gt;                          | 设置图标               |
 
 ### `<Dropdown.Menu>`
