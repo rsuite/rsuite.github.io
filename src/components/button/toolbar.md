@@ -30,7 +30,7 @@ const instance = (
         <IconButton icon={ <Icon icon="align-right"/> } />
         <IconButton icon={ <Icon icon="align-justify"/> } />
       </ButtonGroup>
-      <IconButton icon={ <Icon icon="chain" /> }  />
+      <IconButton icon={ <Icon icon="link" /> }  />
     </ButtonToolbar>
   </div>
 );
