@@ -23,7 +23,7 @@ import { Nav, Dropdown } from 'rsuite';
 
 | 属性名称    | 类型`(默认值)`                                             | 描述                                          |
 | ----------- | ---------------------------------------------------------- | --------------------------------------------- |
-| classPrefix | string `('nav')`                                           | 组件 CSS 类的前缀                                    |
+| classPrefix | string `('nav')`                                           | 组件 CSS 类的前缀                             |
 | children \* | React.ChildrenArray&lt;NavItem or Dropdown&gt;             | 组件内容                                      |
 | tabs        | boolean                                                    | 标签式导航                                    |
 | pills       | boolean                                                    | 胶囊式导航                                    |
@@ -35,12 +35,12 @@ import { Nav, Dropdown } from 'rsuite';
 
 ### `<Nav.Item>`
 
-| 属性名称       | 类型                                                | 描述                   |
-| -------------- | --------------------------------------------------- | ---------------------- |
-| active         | boolean                                             | 激活状态               |
-| disabled       | boolean                                             | 禁用状态               |
-| children \*    | React.Node                                          | 组件内容               |
-| icon           | React.Element&lt;typeof Icon&gt;                    | 设置图标               |
-| href           | string                                              | 链接                   |
+| 属性名称       | 类型                                                       | 描述                   |
+| -------------- | ---------------------------------------------------------- | ---------------------- |
+| active         | boolean                                                    | 激活状态               |
+| disabled       | boolean                                                    | 禁用状态               |
+| children \*    | React.Node                                                 | 组件内容               |
+| icon           | React.Element&lt;typeof Icon&gt;                           | 设置图标               |
+| href           | string                                                     | 链接                   |
 | onSelect       | (eventKey: any, event: SyntheticEvent&lt;any&gt;) => void, | 选择事件触发的回调函数 |
-| componentClass | React.ElementType                                   | 为组件自定义元素类型   |
+| componentClass | React.ElementType`('a')`                                   | 为组件自定义元素类型   |

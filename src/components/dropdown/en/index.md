@@ -51,7 +51,7 @@ import { Dropdown } from 'rsuite';
 | disabled       | boolean                                                   | Disable the current option                           |
 | eventKey       | any                                                       | The value of the current option                      |
 | onSelect       | (eventKey: any, event: SyntheticEvent&lt;any&gt;) => void | Select the callback function for the current option  |
-| componentClass | React.ElementType                                         | You can use a custom element type for this component |
+| componentClass | React.ElementType`('a')`                                  | You can use a custom element type for this component |
 | icon           | React.Element&lt;typeof Icon&gt;                          | Set the icon                                         |
 
 ### `<Dropdown.Menu>`

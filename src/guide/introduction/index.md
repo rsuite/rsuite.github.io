@@ -30,6 +30,10 @@ RSUITE（React Suite 的简写）是 一套 React 组件库，为后台产品而
 
 [![Travis][build-badge]][build] [![Coverage Status][coverage-badge]][coverage]
 
+## 示例
+
+* https://sample.rsuitejs.com/
+
 ## 社区
 
 与开发团队沟通 [![Discord](https://img.shields.io/badge/Discord-Join%20chat%20%E2%86%92-738bd7.svg)](https://discord.gg/R8mnjwh)

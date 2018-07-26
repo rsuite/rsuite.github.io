@@ -7,13 +7,20 @@ class Demo extends React.Component {
   constructor() {
     super();
     this.state = {
-      expanded: true
+      expanded: true,
+      activeKey: '1'
     };
     this.handleToggle = this.handleToggle.bind(this);
+    this.handleSelect = this.handleSelect.bind(this);
   }
   handleToggle() {
     this.setState({
       expanded: !this.state.expanded
+    });
+  }
+  handleSelect(eventKey) {
+    this.setState({
+      activeKey: eventKey
     });
   }
   render() {
@@ -23,10 +30,15 @@ class Demo extends React.Component {
       <div style={{ width: 250 }}>
         <Toggle onChange={this.handleToggle} checked={expanded} />
         <hr />
-        <Sidenav expanded={expanded} defaultOpenKeys={['3', '4']}>
+        <Sidenav
+          expanded={expanded}
+          defaultOpenKeys={['3', '4']}
+          activeKey={this.state.activeKey}
+          onSelect={this.handleSelect}
+        >
           <Sidenav.Body>
             <Nav>
-              <Nav.Item eventKey="1" active icon={<Icon icon="dashboard" />}>
+              <Nav.Item eventKey="1" icon={<Icon icon="dashboard" />}>
                 Dashboard
               </Nav.Item>
               <Nav.Item eventKey="2" icon={<Icon icon="group" />}>

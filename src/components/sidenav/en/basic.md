@@ -5,10 +5,10 @@
 ```js
 const instance = (
   <div style={{ width: 250 }}>
-    <Sidenav defaultOpenKeys={['3', '4']} defaultActiveKey="2">
+    <Sidenav defaultOpenKeys={['3', '4']} activeKey="1">
       <Sidenav.Body>
         <Nav>
-          <Nav.Item eventKey="1" active icon={<Icon icon="dashboard" />}>
+          <Nav.Item eventKey="1" icon={<Icon icon="dashboard" />}>
             Dashboard
           </Nav.Item>
           <Nav.Item eventKey="2" icon={<Icon icon="group" />}>
@@ -20,7 +20,11 @@ const instance = (
             <Dropdown.Item eventKey="3-3">Loyalty</Dropdown.Item>
             <Dropdown.Item eventKey="3-4">Visit Depth</Dropdown.Item>
           </Dropdown>
-          <Dropdown eventKey="4" title="Settings" icon={<Icon icon="gear-circle" />}>
+          <Dropdown
+            eventKey="4"
+            title="Settings"
+            icon={<Icon icon="gear-circle" />}
+          >
             <Dropdown.Item eventKey="4-1">Applications</Dropdown.Item>
             <Dropdown.Item eventKey="4-2">Channels</Dropdown.Item>
             <Dropdown.Item eventKey="4-3">Versions</Dropdown.Item>
