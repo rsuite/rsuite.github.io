@@ -27,7 +27,7 @@ import { TreePicker } from 'rsuite';
 | valueKey             | string `('value')`                                            | tree 数据结构 value 属性名称    |
 | labelKey             | string `('label')`                                            | tree 数据结构 label 属性名称    |
 | childrenKey          | string `('children')`                                         | tree 数据结构 children 属性名称 |
-| disabledItems        | Array&lt;DataItemType.value&gt;                               | 禁用节点列表                    |
+| disabledItemValues   | Array&lt;DataItemType.value&gt;                               | 禁用选项                        |
 | defaultExpandAll     | boolean                                                       | 默认展开所有节点                |
 | expandAll            | boolean                                                       | (受控)展示/收起所有节点         |
 | inline               | boolean                                                       | 是否内联显示 tree               |

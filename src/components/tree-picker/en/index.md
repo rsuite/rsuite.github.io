@@ -27,7 +27,7 @@ import { TreePicker } from 'rsuite';
 | valueKey             | string `('value')`                                            | Tree data Structure Value property name         |
 | labelKey             | string `('label')`                                            | Tree data structure Label property name         |
 | childrenKey          | string `('children')`                                         | Tree data structure Children property name      |
-| disabledItems        | Array&lt;DataItemType.value&gt;                               | Disable Node list                               |
+| disabledItemValues   | Array&lt;DataItemType.value&gt;                               | Disable item by value                           |
 | defaultExpandAll     | boolean                                                       | Expand all nodes By default                     |
 | expandAll            | boolean                                                       | Expand or unExpand all nodes(Controlled)        |
 | inline               | boolean                                                       | Whether inline display tree                     |

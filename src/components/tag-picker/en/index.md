@@ -27,7 +27,7 @@ import { TagPicker } from 'rsuite';
 | data \*              | Array&lt;DataItemType&gt;                                        | The data of component                                   |
 | cacheData            | Array&lt;[DataItemType](#DataItemType)&gt;                       | Option to cache `value` when searching asynchronously   |
 | disabled             | boolean                                                          | Whether disabled componet                               |
-| disabledItemValues   | Array&lt;DataItemType.value&gt;                                  | Values of disabledItems                                 |
+| disabledItemValues   | Array&lt;DataItemType.value&gt;                                  | Disable item by value                                 |
 | groupBy              | string                                                           | Set group condition key in data                         |
 | valueKey             | string `('value')`                                               | Set value key in data                                   |
 | labelKey             | string `('label')`                                               | Set label key in data                                   |
