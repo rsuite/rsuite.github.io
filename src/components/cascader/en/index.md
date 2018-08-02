@@ -35,7 +35,6 @@ import { Cascader } from 'rsuite';
 | height               | number `(320)`                                                     | The height of Dropdown                                 |
 | onChange             | (value:DataItemType.value, event)=>void                            | Callback fired when value change                       |
 | onSelect             | (item:DataItemType, activePaths: Array, event: DefaultEvent)=>void | Callback fired when item is selected                   |
-| onSearch             | (searchKeyword:string, event)=>void                                | Callback fired when search                             |
 | onOpen               | ()=>void                                                           | Callback fired when open component                     |
 | onClose              | ()=>void                                                           | Callback fired when close component                    |
 | onGroupTitleClick    | (event)=>void                                                      | Callback fired when click the group title              |
