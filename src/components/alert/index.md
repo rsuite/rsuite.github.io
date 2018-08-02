@@ -65,9 +65,9 @@ Alert.config(options:Options);
 
 ```typescript
 type Options = {
-  top: number;
-  duration: number;
-  getContainer: () => React.Element;
+  top?: number;
+  duration?: number;
+  getContainer?: () => HTMLElement;
 };
 ```
 

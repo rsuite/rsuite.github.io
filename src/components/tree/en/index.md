@@ -16,33 +16,24 @@ import { Tree } from 'rsuite';
 
 ### `<Tree>`
 
-| Property         | Type `(Default)`                                     | Description                                 |
-| ---------------- | ---------------------------------------------------- | ------------------------------------------- |
-| classPrefix      | string`('picker')`                                   | The prefix of the component CSS class       |
-| value            | DataItemType.value                                   | Selected value                              |
-|                  |
-| defaultValue     | DataItemType.value                                   | Default selected Value                      |
-|                  |
-| data \*          | Array&lt;[DataItemType](#DataItemType)&gt;           | Tree Data                                   |
-| valueKey         | string `('value')`                                   | Tree data Structure Value property name     |
-| labelKey         | string `('label')`                                   | Tree data structure Label property name     |
-| childrenKey      | string `('children')`                                | Tree data structure Children property name  |
-| disabledItems    | Array&lt;DataItemType.value&gt;                      | Disable Node list                           |
-|                  |
-| defaultExpandAll | boolean                                              | Expand all nodes By default                 |
-| expandAll        | boolean                                              | Expand or unExpand all nodes(Controlled)    |
-| searchKeyword    | string                                               | searchKeyword (Controlled)                  |
-|                  |
-| onExpand         | (activeNode:DataItemType, layer:number)=>void        | Whether inline display tree                 |
-|                  |
-| onSelect         | (activeNode:DataItemType, layer:number, event)=>void | Callback function after selecting tree node |
-|                  |
-| onChange         | (value:DataItemType.value)=>void                     | Callback function for data change           |
-|                  |
-| renderTreeNode   | (nodeData:DataItemType)=>React.Node                  | Custom Render tree Node                     |
-|                  |
-| renderTreeIcon   | (nodeData:DataItemType)=>React.Node                  | Custom Render icon                          |
-|                  |
+| Property           | Type `(Default)`                                     | Description                                 |
+| ------------------ | ---------------------------------------------------- | ------------------------------------------- |
+| classPrefix        | string`('picker')`                                   | The prefix of the component CSS class       |
+| value              | DataItemType.value                                   | Selected value                              |
+| defaultValue       | DataItemType.value                                   | Default selected Value                      |
+| data \*            | Array&lt;[DataItemType](#DataItemType)&gt;           | Tree Data                                   |
+| valueKey           | string `('value')`                                   | Tree data Structure Value property name     |
+| labelKey           | string `('label')`                                   | Tree data structure Label property name     |
+| childrenKey        | string `('children')`                                | Tree data structure Children property name  |
+| disabledItemValues | Array&lt;DataItemType.value&gt;                      | Disable item by value                       |
+| defaultExpandAll   | boolean                                              | Expand all nodes By default                 |
+| expandAll          | boolean                                              | Expand or unExpand all nodes(Controlled)    |
+| searchKeyword      | string                                               | searchKeyword (Controlled)                  |
+| onExpand           | (activeNode:DataItemType, layer:number)=>void        | Whether inline display tree                 |
+| onSelect           | (activeNode:DataItemType, layer:number, event)=>void | Callback function after selecting tree node |
+| onChange           | (value:DataItemType.value)=>void                     | Callback function for data change           |
+| renderTreeNode     | (nodeData:DataItemType)=>React.Node                  | Custom Render tree Node                     |
+| renderTreeIcon     | (nodeData:DataItemType)=>React.Node                  | Custom Render icon                          |
 
 ### DataItemType
 

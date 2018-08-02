@@ -25,7 +25,7 @@ import { CheckPicker } from 'rsuite';
 | classPrefix          | string `('picker')`                                              | The prefix of the component CSS class                   |
 | data \*              | Array&lt;DataItemType&gt;                                        | The data of component                                   |
 | disabled             | boolean                                                          | Whether disabled componet                               |
-| disabledItemValues   | Array&lt;DataItemType.value&gt;                                  | Values of disabledItems                                 |
+| disabledItemValues   | Array&lt;DataItemType.value&gt;                                  | Disable item by value                                 |
 | groupBy              | string                                                           | Set group condition key in data                         |
 | valueKey             | string `('value')`                                               | Set value key in data                                   |
 | labelKey             | string `('label')`                                               | Set label key in data                                   |

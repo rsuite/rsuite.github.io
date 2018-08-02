@@ -35,7 +35,6 @@ import { Cascader } from 'rsuite';
 | height               | number `(320)`                                                     | 设置 Dropdown 的高度                 |
 | onChange             | (value:DataItemType.value, event)=>void                            | `value` 发生改变时的回调函数         |
 | onSelect             | (item:DataItemType, activePaths: Array, event: DefaultEvent)=>void | 选项被点击选择后的回调函数           |
-| onSearch             | (searchKeyword:string, event)=>void                                | 搜索的回调函数                       |
 | onOpen               | ()=>void                                                           | 打开回调函数                         |
 | onClose              | ()=>void                                                           | 关闭回调函数                         |
 | onGroupTitleClick    | (event)=>void                                                      | 点击分组标题的回调函数               |
