@@ -6,3 +6,23 @@
 #body {
   @import './main.less';
 }
+
+.rs-ripple-pond {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+  position: absolute;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.rs-ripple {
+  position: absolute;
+  transition: background 4s;
+  &-rippling {
+    background: red;
+  }
+}
