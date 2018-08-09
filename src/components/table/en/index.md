@@ -83,18 +83,20 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 
 ### `<Table.Pagination>`
 
-| Property       | Type `(Default)`        | Description                                                                            |
-| -------------- | ----------------------- | -------------------------------------------------------------------------------------- |
-| lengthMenu     | Array&lt;number&gt;     | Paging display row number configuration, defaults to 30, 50, 100                       |
-| showLengthMenu | boolean `(true)`        | Display Dropdown menu                                                                  |
-| showInfo       | boolean `(true)`        | Show paging information                                                                |
-| total          | number                  | Total number of data entries                                                           |
-| displayLength  | number `(30)`           | Configure how many lines of entries per page to display, corresponding to `lengthMenu` |
-| onChangePage   | (eventKey:number)=>void | callback function triggered when page changes                                          |
-| onChangeLength | (eventKey:number)=>void | The callback function that triggers when the `lengthmenu` value changes                |
-| prev           | boolean `(true)`        | Show Previous Page button                                                              |
-| next           | boolean `(true)`        | Show Next Page button                                                                  |
-| first          | boolean `(true)`        | Show first page button                                                                 |
-| last           | boolean `(true)`        | Show last Page button                                                                  |
-| maxButtons     | number `(5)`            | Configure the maximum number of display buttons                                        |
-| activePage     | number `(1)`            | Configure the current page number                                                      |
+| Property         | Type `(Default)`                            | Description                                                                            |
+| ---------------- | ------------------------------------------- | -------------------------------------------------------------------------------------- |
+| activePage       | number `(1)`                                | Configure the current page number                                                      |
+| lengthMenu       | Array&lt;number&gt;                         | Paging display row number configuration, defaults to 30, 50, 100                       |
+| showLengthMenu   | boolean `(true)`                            | Display Dropdown menu                                                                  |
+| showInfo         | boolean `(true)`                            | Show paging information                                                                |
+| total            | number                                      | Total number of data entries                                                           |
+| displayLength    | number `(30)`                               | Configure how many lines of entries per page to display, corresponding to `lengthMenu` |
+| onChangePage     | (eventKey: number)=>void                    | callback function triggered when page changes                                          |
+| onChangeLength   | (eventKey: number)=>void                    | The callback function that triggers when the `lengthmenu` value changes                |
+| prev             | boolean `(true)`                            | Show Previous Page button                                                              |
+| next             | boolean `(true)`                            | Show Next Page button                                                                  |
+| first            | boolean `(true)`                            | Show first page button                                                                 |
+| last             | boolean `(true)`                            | Show last Page button                                                                  |
+| maxButtons       | number `(5)`                                | Configure the maximum number of display buttons                                        |
+| renderTotal      | (total: number, activePage: number) => void | Custom total                                                                           |
+| renderLengthMenu | (picker: React.Node) => React.Node          | Custom menu                                                                            |

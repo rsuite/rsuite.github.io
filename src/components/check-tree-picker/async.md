@@ -3,7 +3,6 @@
 <!--start-code-->
 
 ```js
-
 class AsynExample extends React.Component {
   constructor(props) {
     super(props);
@@ -129,6 +128,9 @@ class AsynExample extends React.Component {
         defaultExpandAll
         onOpen={this.handleOpen}
         onExpand={this.handleOnExpand}
+        renderTreeIcon={() => {
+          return <i className="rs-icon rs-icon-user" />;
+        }}
         renderMenu={menu => {
           if (data.length === 0) {
             return (

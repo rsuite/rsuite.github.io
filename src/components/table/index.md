@@ -80,18 +80,20 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 
 ### `<Table.Pagination>`
 
-| 属性名称       | 类型 `(默认值)`         | 描述                                        |
-| -------------- | ----------------------- | ------------------------------------------- |
-| lengthMenu     | Array                   | 分页显示行数配置，默认为 30, 50, 100        |
-| showLengthMenu | boolean `(true)`        | 显示多少行的菜单，默认显示                  |
-| showInfo       | boolean `(true)`        | 显示分页信息                                |
-| total          | number                  | 总数据条目数                                |
-| displayLength  | number `(30)`           | 配置每页显示多少行条目数，对应 `lengthMenu` |
-| onChangePage   | (eventKey:number)=>void | page 改变时候触发的回调函数                 |
-| onChangeLength | (eventKey:number)=>void | `lengthMenu` 值发生改变的时候触发的回调函数 |
-| prev           | boolean `(true)`        | 显示上一页按钮                              |
-| next           | boolean `(true)`        | 显示下一页按钮                              |
-| first          | boolean `(true)`        | 显示第一页按钮                              |
-| last           | boolean `(true)`        | 显示最后一页按钮                            |
-| maxButtons     | number `(5)`            | 配置最多显示按钮数量                        |
-| activePage     | number `(1)`            | 配置当前页号                                |
+| 属性名称         | 类型 `(默认值)`                             | 描述                                        |
+| ---------------- | ------------------------------------------- | ------------------------------------------- |
+| activePage       | number `(1)`                                | 配置当前页号                                |
+| lengthMenu       | Array                                       | 分页显示行数配置，默认为 30, 50, 100        |
+| showLengthMenu   | boolean `(true)`                            | 显示多少行的菜单，默认显示                  |
+| showInfo         | boolean `(true)`                            | 显示分页信息                                |
+| total            | number                                      | 总数据条目数                                |
+| displayLength    | number `(30)`                               | 配置每页显示多少行条目数，对应 `lengthMenu` |
+| onChangePage     | (eventKey: number)=>void                        | page 改变时候触发的回调函数                 |
+| onChangeLength   | (eventKey: number)=>void                        | `lengthMenu` 值发生改变的时候触发的回调函数 |
+| prev             | boolean `(true)`                            | 显示上一页按钮                              |
+| next             | boolean `(true)`                            | 显示下一页按钮                              |
+| first            | boolean `(true)`                            | 显示第一页按钮                              |
+| last             | boolean `(true)`                            | 显示最后一页按钮                            |
+| maxButtons       | number `(5)`                                | 配置最多显示按钮数量                        |
+| renderTotal      | (total: number, activePage: number) => void | 自定义总数                                  |
+| renderLengthMenu | (picker: React.Node) => React.Node          | 自定义菜单                                  |
