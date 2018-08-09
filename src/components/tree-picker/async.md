@@ -7,13 +7,15 @@ class AsynExample extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      data: [],
+      value: '',
     };
     this.handleOpen = this.handleOpen.bind(this);
     this.setLoading = this.setLoading.bind(this);
     this.setTreeData = this.setTreeData.bind(this);
     this.loadData = this.loadData.bind(this);
     this.handleOnExpand = this.handleOnExpand.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   setTreeData(treeNodes, activeNode, children, layer) {
@@ -82,6 +84,12 @@ class AsynExample extends React.Component {
     });
   }
 
+  handleChange(value){
+    this.setState({
+      value
+    })
+  }
+
   handleOpen() {
     if (this.state.data.length === 0) {
       setTimeout(() => {
@@ -107,26 +115,23 @@ class AsynExample extends React.Component {
     }
   }
 
-  renderTreeNode(node) {
+  renderTreeIcon(node, expandIcon) {
     if (node.loading) {
-      return (
-        <span>
-          <Icon icon="spinner" spin />
-          {node.label}
-        </span>
-      );
+      return <Icon icon="spinner" spin />;
     }
-    return node.label;
+    return null;
   }
 
   render() {
-    const { data } = this.state;
+    const { data, value } = this.state;
     return (
       <TreePicker
         data={data}
+        value={value}
         style={{ width: 272 }}
         defaultExpandAll
         onOpen={this.handleOpen}
+        onChange={this.handleChange}
         onExpand={this.handleOnExpand}
         renderMenu={menu => {
           if (data.length === 0) {
@@ -138,7 +143,7 @@ class AsynExample extends React.Component {
           }
           return menu;
         }}
-        renderTreeNode={this.renderTreeNode}
+        renderTreeIcon={this.renderTreeIcon}
       />
     );
   }
