@@ -24,6 +24,7 @@ class PaginationTable extends React.Component {
   }
   handleChangeLength(dataKey) {
     this.setState({
+      page: 1,
       displayLength: dataKey
     });
   }

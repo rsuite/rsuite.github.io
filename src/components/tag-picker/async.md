@@ -15,9 +15,6 @@ class AsynExample extends React.Component {
     this.handleSearch = this.handleSearch.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
     this.handleChange = this.handleChange.bind(this);
-  }
-
-  componentWillMount() {
     this.getUsers('react');
   }
 

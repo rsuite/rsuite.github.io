@@ -16,7 +16,7 @@ export default createComponentExample({
     'placement',
     'custom',
     'disabled',
-    'asyn',
+    'async',
     'container'
   ],
   dependencies: {

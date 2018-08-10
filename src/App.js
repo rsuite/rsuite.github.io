@@ -4,27 +4,23 @@ import get from 'lodash/get';
 import { scrollTop } from 'dom-lib';
 import { Grid } from 'rsuite';
 
-
-const contextTypes = {
-  router: PropTypes.object.isRequired
-};
-
 class App extends React.PureComponent {
+  static contextTypes = {
+    router: PropTypes.object
+  };
   componentDidMount() {
     const { onRemoveLoading } = this.props;
     onRemoveLoading && onRemoveLoading();
-  }
 
-  componentWillReceiveProps(nextProps) {
-    const { location } = this.props;
-    if (get(location, 'pathname') !== get(nextProps, 'location.pathname')) {
+    this.context.router.listen(() => {
       scrollTop(window, 0);
-    }
+    });
   }
 
   render() {
     const pathname = this.props.location.pathname;
-    const className = pathname === '/' || pathname === '/en/' ? 'home-page' : '';
+    const className =
+      pathname === '/' || pathname === '/en/' ? 'home-page' : '';
     return (
       <div className={`doc-page ${className} night`}>
         <Grid className="doc-container" fluid>
@@ -34,7 +30,5 @@ class App extends React.PureComponent {
     );
   }
 }
-
-App.contextTypes = contextTypes;
 
 export default App;

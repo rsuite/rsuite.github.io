@@ -571,9 +571,7 @@ a code {
     bottom: 0;
     background: @base-color;
     height: 2px;
-    transition-property: left, right;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
+    transition: left 0.3s ease-out, right 0.3s ease-out;
   }
   & > a::after,
   &::after {
@@ -738,9 +736,7 @@ path.bg {
     padding: 3px;
     margin-left: -16px;
     cursor: pointer;
-    transition-property: box-shadow, transform;
-    transition-timing-function: ease-in-out;
-    transition-duration: 0.3s;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 
     &:hover {
       box-shadow: @slider-handle-hover-box-shadow;
@@ -889,6 +885,7 @@ path.bg {
     background-color: @B000;
   }
 }
+
 .code-view .field p {
   line-height: 32px;
 }
