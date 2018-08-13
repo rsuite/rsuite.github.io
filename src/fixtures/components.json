@@ -194,8 +194,7 @@
     "name": "Pagination",
     "title": "分页",
     "components": [
-      "Breadcrumb",
-      "Breadcrumb.Item"
+      "Pagination"
     ],
     "designHash": "artboard27"
   },
@@ -204,7 +203,8 @@
     "name": "Breadcrumb",
     "title": "面包屑",
     "components": [
-      "Pagination"
+      "Breadcrumb",
+      "Breadcrumb.Item"
     ],
     "designHash": "artboard21"
   },
