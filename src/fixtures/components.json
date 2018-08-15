@@ -505,17 +505,17 @@
     "id": "animation",
     "name": "Animation",
     "title": "动画",
-    "apis": [
-      "Transition",
-      "Fade",
-      "Collapse"
+    "components": [
+      "Animation.Transition",
+      "Animation.Fade",
+      "Animation.Collapse"
     ]
   },
   {
     "id": "portal",
     "name": "Portal",
     "title": "入口",
-    "apis": [
+    "components": [
       "Portal"
     ]
   },
