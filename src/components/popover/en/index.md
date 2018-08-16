@@ -27,22 +27,22 @@ import { Popover, Whisper } from 'rsuite';
 
 ### `<Whisper>`
 
-| Property     | Type `(Default)`                                       | Description                         |
-| ------------ | ------------------------------------------------------ | ----------------------------------- |
-| placement    | enum: [Placement](#Placement) `('top')`                | Dispaly placement                   |
-| trigger      | union: 'click', 'hover', 'focus', 'active' `(['hover','focus'])` | Triggering events                   |
-| delay        | number                                                 | Delay Time                          |
-| delayShow    | number                                                 | Show Delay Time                     |
-| delayHide    | number                                                 | Hidden delay Time                   |
-| speaker \*   | union: Tooltip, Popover                                | Displayed component                 |
-| onBlur       | () => void                                             | Lose Focus callback function        |
-| onClick      | () => void                                             | Click on the callback function      |
-| onFocus      | () => void                                             | Callback function to get focus      |
-| onMouseLeave | () => void                                             | Mouse leave callback function       |
-| onOpen       | ()=>void                                               | Callback fired when open component  |
-| onClose      | ()=>void                                               | Callback fired when close component |
-| container    | HTMLElement or (() => HTMLElement)                     | Sets the rendering container        |
-| triggerRef   | React.ElementRef                                       | Ref of trigger                      |
+| Property   | Type `(Default)`                                                 | Description                         |
+| ---------- | ---------------------------------------------------------------- | ----------------------------------- |
+| placement  | enum: [Placement](#Placement) `('top')`                          | Dispaly placement                   |
+| trigger    | union: 'click', 'hover', 'focus', 'active' `(['hover','focus'])` | Triggering events                   |
+| delay      | number                                                           | Delay Time                          |
+| delayShow  | number                                                           | Show Delay Time                     |
+| delayHide  | number                                                           | Hidden delay Time                   |
+| speaker \* | union: Tooltip, Popover                                          | Displayed component                 |
+| onBlur     | () => void                                                       | Lose Focus callback function        |
+| onClick    | () => void                                                       | Click on the callback function      |
+| onFocus    | () => void                                                       | Callback function to get focus      |
+| onMouseOut | () => void                                                       | Mouse leave callback function       |
+| onOpen     | ()=>void                                                         | Callback fired when open component  |
+| onClose    | ()=>void                                                         | Callback fired when close component |
+| container  | HTMLElement or (() => HTMLElement)                               | Sets the rendering container        |
+| triggerRef | React.ElementRef                                                 | Ref of trigger                      |
 
 
 ## Types

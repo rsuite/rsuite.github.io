@@ -31,19 +31,19 @@ import { Tooltip, Whisper } from 'rsuite';
 
 ### `<Whisper>`
 
-| Property     | Type `(Default)`                                       | Description                     |
-| ------------ | ------------------------------------------------------ | ------------------------------- |
-| placement    | enum: [Placement](#Placement) `('top')`                | Dispaly placement               |
-| trigger      | union: 'click', 'hover', 'focus', 'active' `(['hover','focus'])` | Triggering events               |
-| delay        | number                                                 | Delay Time                      |
-| delayShow    | number                                                 | Show Delay Time                 |
-| delayHide    | number                                                 | Hidden delay Time               |
-| speaker \*   | union: Tooltip, Popover                                | Displayed component             |
-| onBlur       | () => void                                             | Lose Focus callback function    |
-| onClick      | () => void                                             | Click on the callback function  |
-| onFocus      | () => void                                             | Callback function to get focus  |
-| onMouseLeave | () => void                                             | Mouse leave callback function   |
-| container    | HTMLElement or (() => HTMLElement)                     | Sets the rendering container    |
+| Property   | Type `(Default)`                                                 | Description                    |
+| ---------- | ---------------------------------------------------------------- | ------------------------------ |
+| placement  | enum: [Placement](#Placement) `('top')`                          | Dispaly placement              |
+| trigger    | union: 'click', 'hover', 'focus', 'active' `(['hover','focus'])` | Triggering events              |
+| delay      | number                                                           | Delay Time                     |
+| delayShow  | number                                                           | Show Delay Time                |
+| delayHide  | number                                                           | Hidden delay Time              |
+| speaker \* | union: Tooltip, Popover                                          | Displayed component            |
+| onBlur     | () => void                                                       | Lose Focus callback function   |
+| onClick    | () => void                                                       | Click on the callback function |
+| onFocus    | () => void                                                       | Callback function to get focus |
+| onMouseOut | () => void                                                       | Mouse leave callback function  |
+| container  | HTMLElement or (() => HTMLElement)                               | Sets the rendering container   |
 
 ## Types
 

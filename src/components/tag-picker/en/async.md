@@ -28,13 +28,6 @@ class AsynExample extends React.Component {
   }
 
   getUsers(word) {
-    if (!word) {
-      return;
-    }
-    this.setState({
-      loading: true
-    });
-
     fetch(`https://api.github.com/search/users?q=${word}`)
       .then(response => response.json())
       .then(data => {
@@ -47,6 +40,13 @@ class AsynExample extends React.Component {
   }
 
   handleSearch(word) {
+    if (!word) {
+      return;
+    }
+
+    this.setState({
+      loading: true
+    });
     this.getUsers(word);
   }
   handleChange(value) {

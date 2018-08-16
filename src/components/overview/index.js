@@ -8,6 +8,12 @@ const context = require('./index.md');
 const examples = [];
 const components = menu[1].children.filter(item => item.id !== 'overview');
 
+const Item = ({ name, isComponent }) => (
+  <li>
+    <span className="name">{isComponent ? `<${name}>` : name}</span>
+  </li>
+);
+
 export default locale => {
   const ComponentExample = createComponentExample({ id: 'overview' })(locale);
   const localePath = locale === 'zh' ? '/' : '/en/';
@@ -26,20 +32,21 @@ export default locale => {
               } else {
                 return (
                   <li key={item.id}>
-                    <Link to={`${localePath}components/${item.id}`} className="header">
+                    <Link
+                      to={`${localePath}components/${item.id}`}
+                      className="header"
+                    >
                       {item.name}
                     </Link>
                     <ul className="content">
                       {item.components
-                        ? item.components.map(componentName => (
-                            <li key={componentName}>
-                              <span className="name">
-                                {'<'}
-                                {componentName}
-                                {'>'}
-                              </span>
-                            </li>
+                        ? item.components.map(name => (
+                            <Item name={name} key={name} isComponent />
                           ))
+                        : null}
+
+                      {item.apis
+                        ? item.apis.map(name => <Item name={name} key={name} />)
                         : null}
                     </ul>
                   </li>
