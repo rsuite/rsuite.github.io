@@ -9,7 +9,7 @@ const examples = [];
 const components = menu[1].children.filter(item => item.id !== 'overview');
 
 const Item = ({ name, isComponent }) => (
-  <li key={name}>
+  <li>
     <span className="name">{isComponent ? `<${name}>` : name}</span>
   </li>
 );
@@ -40,15 +40,13 @@ export default locale => {
                     </Link>
                     <ul className="content">
                       {item.components
-                        ? item.components.map(componentName => (
-                            <Item name={componentName} isComponent />
+                        ? item.components.map(name => (
+                            <Item name={name} key={name} isComponent />
                           ))
                         : null}
 
                       {item.apis
-                        ? item.apis.map(componentName => (
-                            <Item name={componentName} />
-                          ))
+                        ? item.apis.map(name => <Item name={name} key={name} />)
                         : null}
                     </ul>
                   </li>
