@@ -22,7 +22,12 @@ const model = Schema.Model({
 const CustomField = ({ name, message, label, accepter, error, ...props }) => (
   <FormGroup className={error ? 'has-error' : ''}>
     <ControlLabel>{label} </ControlLabel>
-    <FormControl name={name} accepter={accepter} errorMessage={error} {...props} />
+    <FormControl
+      name={name}
+      accepter={accepter}
+      errorMessage={error}
+      {...props}
+    />
     <HelpBlock>{message}</HelpBlock>
   </FormGroup>
 );
@@ -108,8 +113,7 @@ class CustomFieldForm extends React.Component {
             label="Status"
             accepter={CheckPicker}
             error={formError.status}
-            toggleComponentClass={Button}
-            style={{ display: 'inline-block' }}
+            style={{ display: 'inline-block', width: 200 }}
             data={[
               { label: 'Todo', value: 'todo' },
               { label: 'Open', value: 'open' },
