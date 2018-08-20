@@ -1,7 +1,7 @@
 ### 受控
 
-
 <!--start-code-->
+
 ```js
 class DateRangePickerValue extends React.Component {
   constructor(props) {
@@ -14,9 +14,10 @@ class DateRangePickerValue extends React.Component {
     return (
       <div className="field">
         <DateRangePicker
-          value={this.state.value}
-          onChange={(value) => {
+          value={null}
+          onChange={value => {
             this.setState({ value });
+            console.log(value);
           }}
         />
       </div>
@@ -26,4 +27,5 @@ class DateRangePickerValue extends React.Component {
 
 ReactDOM.render(<DateRangePickerValue />);
 ```
+
 <!--end-code-->

@@ -41,7 +41,8 @@ class CustomFieldForm extends React.Component {
       browser: 'Chrome',
       status: ['open'],
       level: 1,
-      level2: 1
+      level2: 1,
+      createDate: moment()
     };
     this.state = {
       formValue: formValue,
@@ -73,7 +74,7 @@ class CustomFieldForm extends React.Component {
             console.log(formError, 'formError');
             this.setState({ formError });
           }}
-          formDefaultValue={formValue}
+          formValue={formValue}
           model={model}
         >
           <CustomField
@@ -132,6 +133,13 @@ class CustomFieldForm extends React.Component {
             label="Level"
             style={{ width: 200, margin: '10px 0' }}
             errorMessage={formError.level}
+          />
+
+          <CustomField
+            accepter={DatePicker}
+            name="createDate"
+            label="Create Date"
+            errorMessage={formError.createDate}
           />
 
           <FormGroup>

@@ -31,7 +31,6 @@ class ModalDemo extends React.Component {
     });
   }
   render() {
-    console.log('dddd');
     return (
       <div>
         <Modal show={this.state.show} onHide={this.close} size="xs">
