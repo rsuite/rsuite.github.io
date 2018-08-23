@@ -22,7 +22,12 @@ const model = Schema.Model({
 const CustomField = ({ name, message, label, accepter, error, ...props }) => (
   <FormGroup className={error ? 'has-error' : ''}>
     <ControlLabel>{label} </ControlLabel>
-    <FormControl name={name} accepter={accepter} errorMessage={error} {...props} />
+    <FormControl
+      name={name}
+      accepter={accepter}
+      errorMessage={error}
+      {...props}
+    />
     <HelpBlock>{message}</HelpBlock>
   </FormGroup>
 );
@@ -36,7 +41,8 @@ class CustomFieldForm extends React.Component {
       browser: 'Chrome',
       status: ['open'],
       level: 1,
-      level2: 1
+      level2: 1,
+      createDate: moment()
     };
     this.state = {
       formValue: formValue,
@@ -68,7 +74,7 @@ class CustomFieldForm extends React.Component {
             console.log(formError, 'formError');
             this.setState({ formError });
           }}
-          formDefaultValue={formValue}
+          formValue={formValue}
           model={model}
         >
           <CustomField
@@ -108,8 +114,7 @@ class CustomFieldForm extends React.Component {
             label="Status"
             accepter={CheckPicker}
             error={formError.status}
-            toggleComponentClass={Button}
-            style={{ display: 'inline-block' }}
+            style={{ display: 'inline-block', width: 200 }}
             data={[
               { label: 'Todo', value: 'todo' },
               { label: 'Open', value: 'open' },
@@ -128,6 +133,13 @@ class CustomFieldForm extends React.Component {
             label="Level"
             style={{ width: 200, margin: '10px 0' }}
             errorMessage={formError.level}
+          />
+
+          <CustomField
+            accepter={DatePicker}
+            name="createDate"
+            label="Create Date"
+            errorMessage={formError.createDate}
           />
 
           <FormGroup>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Loadable from 'react-loadable';
+import moment from 'moment';
 
 import {
   HelpBlock,
@@ -28,7 +29,8 @@ import {
   Modal,
   Alert,
   SelectPicker,
-  Slider
+  Slider,
+  DatePicker
 } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
@@ -103,6 +105,8 @@ export default createComponentExample({
     JSONTree,
     JSONView,
     MaskedInput,
-    Slider
+    Slider,
+    DatePicker,
+    moment
   }
 });
