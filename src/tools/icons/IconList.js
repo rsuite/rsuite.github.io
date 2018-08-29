@@ -3,6 +3,55 @@ import { Input, Icon, Alert } from 'rsuite';
 import IconItem from './IconItem';
 import icons from './icons.json';
 
+const newIcons = [
+  // update
+  'more',
+  'reload',
+  'tag',
+  'list',
+  'edit',
+  'share',
+  'copy',
+  'dashboard',
+  'pie-chart',
+  // create
+  'id-info',
+  'setting',
+  'back-arrow',
+  'character-area',
+  'character-authorize',
+  'creative',
+  'data-authorize',
+  'detail',
+  'explore',
+  'export',
+  'file-download',
+  'file-upload',
+  'gear',
+  'id-mapping',
+  'import',
+  'off',
+  'peoples-map',
+  'peoples',
+  'sales',
+  'growth',
+  'project',
+  'public-opinion',
+  'rate',
+  'realtime',
+  'related-map',
+  'search-peoples',
+  'speaker',
+  'tag-area',
+  'tag-authorize',
+  'tag-unauthorize',
+  'task',
+  'trend',
+  'user-info',
+  'views-authorize',
+  'views-unauthorize'
+];
+
 const parseIconByCategory = (obj, conf) => {
   conf.categories.forEach(category => {
     if (obj[category]) {
@@ -24,6 +73,7 @@ class IconList extends React.Component {
       icons: icons
     };
   }
+
   handleCopy = (text, result) => {
     const message = result ? '复制成功' : '复制失败，浏览器不支持此功能';
     Alert.success(message);
@@ -38,7 +88,9 @@ class IconList extends React.Component {
 
     const filterByCatogry = iconConf => {
       const { id, filter = [], categories = [] } = iconConf;
-      const searchKeys = [id, ...filter, ...categories].map(key => key.toUpperCase());
+      const searchKeys = [id, ...filter, ...categories].map(key =>
+        key.toUpperCase()
+      );
       return searchKeys.filter(filterByIconName).length > 0;
     };
 
@@ -48,6 +100,7 @@ class IconList extends React.Component {
       icons
     });
   };
+
   renderIcon(icons) {
     icons = icons.reduce(parseIconByCategory, {});
 
@@ -59,12 +112,20 @@ class IconList extends React.Component {
             <h3 className="icon-list-group-title">{category}</h3>
             {icons[category].map((iconConf, j) => {
               const { id: icon } = iconConf;
-              return <IconItem icon={icon} key={`${j}-${icon}`} handleCopy={this.handleCopy} />;
+              return (
+                <IconItem
+                  icon={icon}
+                  newIcon={newIcons.includes(icon)}
+                  key={`${j}-${icon}`}
+                  handleCopy={this.handleCopy}
+                />
+              );
             })}
           </React.Fragment>
         );
       });
   }
+
   render() {
     const { icons } = this.state;
     return (
