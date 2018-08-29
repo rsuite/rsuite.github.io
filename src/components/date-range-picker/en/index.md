@@ -22,17 +22,17 @@ import { DateRangePicker } from 'rsuite';
 | -------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | appearance           | enum: 'default', 'subtle' `('default')`                                                             | Set picker appearence                                                                   |
 | block                | boolean                                                                                             | Blocking an entire row                                                                  |
-| value                | Array<moment$Moment>                                                                                | Value (Controlled)                                                                      |
-| defaultValue         | Array<moment$Moment>                                                                                | Default value                                                                           |
-| onChange             | function(`value`:Array<moment$Moment>)                                                              | Callback fired when value changed                                                       |
+| value                | Array&lt;Moment&gt;                                                                                | Value (Controlled)                                                                      |
+| defaultValue         | Array&lt;Moment&gt;                                                                                | Default value                                                                           |
+| onChange             | function(`value`:Array&lt;Moment&gt;)                                                              | Callback fired when value changed                                                       |
 | onOpen               | ()=>void                                                                                            | Callback fired when open component                                                      |
 | onClose              | ()=>void                                                                                            | Callback fired when close component                                                     |
-| onOk                 | function(`value`:Array<moment$Moment>)                                                              | Callback fired when clicked OK button                                                   |
+| onOk                 | function(`value`:Array&lt;Moment&gt;)                                                              | Callback fired when clicked OK button                                                   |
 | placeholder          | string                                                                                              | Setting placeholders                                                                    |
 | ranges               | Array<[Range](#Range)> [`(Ranges)`](#Ranges)                                                        | Whortcut config，defeult: `Today`,`Yesterday`，`Last 7 days`                            |
 | disabled             | boolean                                                                                             | Whether disabled the component                                                          |
-| disabledDate         | (date:moment$Moment, selectValue:Array<moment$Moment>, selectedDone:boolean, type:string )=>boolean | Disabled data                                                                           |
-| hoverRange           | unions: "week", "month" or (date: moment$Moment)=> Array<moment$Moment>                             | The date range that will be selected when you click on the date                         |
+| disabledDate         | (<br/> date: Moment,<br/> selectDate: Array&lt;Moment&gt;,<br/> selectedDone: boolean, <br/> target: 'CALENDAR', 'TOOLBAR_BUTTON_OK', 'TOOLBAR_SHORTCUT' <br/>)=>boolean| Disabled data                                                                           |
+| hoverRange           | unions: 'week', 'month' or (date: Moment)=> Array&lt;Moment&gt;                             | The date range that will be selected when you click on the date                         |
 | oneTap               | boolean                                                                                             | Whether to click once on selected date range，Can be used with [hoverRange](#clickmode) |
 | cleanable            | boolean `(true)`                                                                                    | Whether the selected value can be cleared                                               |
 | isoWeek              | boolean                                                                                             | ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day    |
@@ -72,7 +72,7 @@ type Placement =
 type Range = {
   label: React.Node,
   closeOverlay?: boolean,
-  value: moment$Moment | ((date: moment$Moment) => moment$Moment)
+  value: Moment | ((date: Moment) => Moment)
 };
 ```
 

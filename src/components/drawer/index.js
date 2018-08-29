@@ -3,7 +3,6 @@ import {
   ButtonToolbar,
   Button,
   IconButton,
-  Toggle,
   Drawer,
   Icon,
   RadioGroup,
@@ -16,7 +15,6 @@ export default createComponentExample({
   id: 'Drawer',
   examples: ['basic', 'backdrop', 'placement', 'size', 'full'],
   dependencies: {
-    Toggle,
     ButtonToolbar,
     IconButton,
     Button,

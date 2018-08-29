@@ -24,32 +24,32 @@ import { DatePicker } from 'rsuite';
 | --------------------- | ----------------------------------------------------- | --------------------------------------------------------- |
 | appearance            | enum: 'default', 'subtle' `('default')`               | 设置外观                                                  |
 | block                 | boolean                                               | 堵塞整行                                                  |
-| value                 | moment$Moment                                         | 值`受控`                                                  |
-| defaultValue          | moment$Moment                                         | 默认值                                                    |
-| calendarDefaultDate   | moment$Moment                                         | 日历面板默认呈现的日期时间                                |
-| onChange              | (date:moment$Moment)=>void                            | 值改变后的回调函数                                        |
-| onChangeCalendarDate  | (date: moment$Moment, event?: SyntheticEvent) => void | 日历日期改变后的回调函数                                  |
-| onSelect              | (date:moment$Moment)=>void                            | 选择日期或者时间的回调函数                                |
+| value                 | Moment                                         | 值`受控`                                                  |
+| defaultValue          | Moment                                         | 默认值                                                    |
+| calendarDefaultDate   | Moment                                         | 日历面板默认呈现的日期时间                                |
+| onChange              | (date:Moment)=>void                            | 值改变后的回调函数                                        |
+| onChangeCalendarDate  | (date: Moment, event?: SyntheticEvent) => void | 日历日期改变后的回调函数                                  |
+| onSelect              | (date:Moment)=>void                            | 选择日期或者时间的回调函数                                |
 | onOpen                | ()=>void                                              | 打开回调函数                                              |
 | onClose               | ()=>void                                              | 关闭回调函数                                              |
 | onToggleMonthDropdown | (open: boolean) => void                               | 切换到月份视图的回调函数                                  |
 | onToggleTimeDropdown  | (open: boolean) => void                               | 切换到时间视图的回调函数                                  |
-| onPrevMonth           | (date: moment$Moment) => void                         | 切换到上一月的回调函数                                    |
-| onNextMonth           | (date: moment$Moment) => void                         | 切换到下一月的回调函数                                    |
-| onOk                  | (date: moment$Moment, event: SyntheticEvent) => void  | 点击确定后的回调函数                                      |
+| onPrevMonth           | (date: Moment) => void                         | 切换到上一月的回调函数                                    |
+| onNextMonth           | (date: Moment) => void                         | 切换到下一月的回调函数                                    |
+| onOk                  | (date: Moment, event: SyntheticEvent) => void  | 点击确定后的回调函数                                      |
 | placeholder           | string                                                | 没有值时候默认显示内容                                    |
 | format                | string `('YYYY-MM-DD')`                               | 日期显示格式化                                            |
 | locale                | Object [`(Locale)`](#Locale)                          | 本地化对应的语言描述                                      |
 | ranges                | Array<[Range](#Range)> [`(Ranges)`](#Ranges)          | 快捷项配置                                                |
 | inline                | boolean                                               | 默认显示日历面板                                          |
 | disabled              | boolean                                               | 禁用组件                                                  |
-| disabledDate          | (date:moment$Moment)=>boolean                         | 禁用日期                                                  |
-| disabledHours         | (hour:number, date:moment$Moment)=>boolean            | 禁用小时                                                  |
-| disabledMinutes       | (minute:number, date:moment$Moment)=>boolean          | 禁用分钟                                                  |
-| disabledSeconds       | (second:number, date:moment$Moment)=>boolean          | 禁用秒                                                    |
-| hideHours             | (hour:number, date:moment$Moment)=>boolean            | 隐藏小时                                                  |
-| hideMinutes           | (minute:number, date:moment$Moment)=>boolean          | 隐藏分钟                                                  |
-| hideSeconds           | (second:number, date:moment$Moment)=>boolean          | 隐藏秒                                                    |
+| disabledDate          | (date:Moment)=>boolean                         | 禁用日期                                                  |
+| disabledHours         | (hour:number, date:Moment)=>boolean            | 禁用小时                                                  |
+| disabledMinutes       | (minute:number, date:Moment)=>boolean          | 禁用分钟                                                  |
+| disabledSeconds       | (second:number, date:Moment)=>boolean          | 禁用秒                                                    |
+| hideHours             | (hour:number, date:Moment)=>boolean            | 隐藏小时                                                  |
+| hideMinutes           | (minute:number, date:Moment)=>boolean          | 隐藏分钟                                                  |
+| hideSeconds           | (second:number, date:Moment)=>boolean          | 隐藏秒                                                    |
 | cleanable             | boolean `(true)`                                      | 可以清除                                                  |
 | isoWeek               | boolean                                               | ISO 8601 标准， 每个日历星期从星期一开始，星期日为第 7 天 |
 | open                  | boolean                                               | 打开 (受控)                                               |
@@ -69,7 +69,7 @@ import { DatePicker } from 'rsuite';
 type Range = {
   label: React.Node,
   closeOverlay?: boolean,
-  value: moment$Moment | ((date: moment$Moment) => moment$Moment)
+  value: Moment | ((date: Moment) => Moment)
 };
 ```
 
@@ -120,12 +120,12 @@ const Locale = {
 const Ranges = [
   {
     label: 'today',
-    value: moment$Moment(),
+    value: Moment(),
     closeOverlay: true
   },
   {
     label: 'yesterday',
-    value: moment$Moment().add(-1, 'd'),
+    value: Moment().add(-1, 'd'),
     closeOverlay: true
   }
 ];
