@@ -149,7 +149,7 @@ class AsynExample extends React.Component {
       <CheckTreePicker
         data={data}
         value={values}
-        style={{ width: 272 }}
+        style={{ width: 280 }}
         defaultExpandAll
         onOpen={this.handleOpen}
         onExpand={this.handleOnExpand}

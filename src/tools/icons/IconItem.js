@@ -2,6 +2,7 @@
  * Created by Godfery on 2017/3/24.
  */
 import React from 'react';
+import classnames from 'classnames';
 import { Icon } from 'rsuite';
 import Clipboard from 'rsuite-clipboard';
 
@@ -12,10 +13,10 @@ class IconItem extends React.Component {
   };
 
   render() {
-    const { handleCopy, ...props } = this.props;
+    const { handleCopy, newIcon, ...props } = this.props;
     return (
       <Clipboard text={this.props.icon} onCopy={this.handleCopy}>
-        <div className="icon-item">
+        <div className={classnames('icon-item', { 'new-icon': newIcon })}>
           <div className="icon-wrapper">
             <Icon {...props} className="icon-content" />
           </div>

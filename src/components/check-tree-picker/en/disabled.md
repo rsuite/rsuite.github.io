@@ -13,7 +13,7 @@ const instance = (
     <CheckTreePicker data={data} disabled />
     <hr />
     <p>Disabled Option</p>
-    <CheckTreePicker defaultExpandAll data={data} disabledItemValues={[2]} style={{ width: 272 }} />
+    <CheckTreePicker defaultExpandAll data={data} disabledItemValues={[2]} style={{ width: 280 }} />
   </div>
 );
 ReactDOM.render(instance);

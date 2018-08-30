@@ -423,6 +423,23 @@ a code {
     padding: 10px;
     cursor: pointer;
     opacity: 0.8;
+    position: relative;
+
+    &.new-icon:hover .icon-wrapper::before {
+      display: none;
+    }
+
+    &.new-icon .icon-wrapper::before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      background-color: @error-color;
+      top: 12px;
+      right: 12px;
+    }
     .icon-wrapper {
       height: 50px;
       text-align: center;
@@ -724,6 +741,9 @@ path.bg {
   }
   .code-view-toolbar .btn {
     border-style: none;
+  }
+  .code-view-error{
+    max-height: 200px;
   }
 }
 

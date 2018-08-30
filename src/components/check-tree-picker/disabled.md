@@ -10,14 +10,14 @@
 
 const instance = (
   <div>
-    <CheckTreePicker data={data} disabled style={{ width: 272 }} />
+    <CheckTreePicker data={data} disabled style={{ width: 280 }} />
     <hr />
     <p>禁用选项</p>
     <CheckTreePicker
       defaultExpandAll
       data={data}
       disabledItemValues={[2]}
-      style={{ width: 272 }}
+      style={{ width: 280 }}
     />
   </div>
 );

@@ -5,7 +5,15 @@ import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
   id: 'CheckTreePicker',
-  examples: ['basic', 'placement', 'cascade', 'disabled', 'custom', 'async'],
+  examples: [
+    'basic',
+    'appearance',
+    'placement',
+    'cascade',
+    'disabled',
+    'custom',
+    'async'
+  ],
   dependencies: {
     Toggle,
     Icon,
