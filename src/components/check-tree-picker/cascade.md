@@ -35,7 +35,7 @@ class Demo extends React.Component {
           cascade={this.state.cascade}
           defaultValue={[2, 38]}
           data={data}
-          style={{ width: 272 }}
+          style={{ width: 280 }}
         />
       </div>
     );

@@ -5,7 +5,15 @@ import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
   id: 'TreePicker',
-  examples: ['basic', 'placement', 'disabled', 'searchable', 'custom', 'async'],
+  examples: [
+    'basic',
+    'appearance',
+    'placement',
+    'disabled',
+    'searchable',
+    'custom',
+    'async'
+  ],
   dependencies: {
     TreePicker,
     Button,

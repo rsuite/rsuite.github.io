@@ -1,4 +1,4 @@
-### 和按钮组合
+### Appearance
 
 <!--start-code-->
 
@@ -10,17 +10,20 @@
 
 const instance = (
   <div>
-    <CheckTreePicker
+    <TreePicker
+      defaultExpandAll
       data={data}
-      style={{ width: 280 }}
-      toggleComponentClass={Button}
+      appearance="default"
+      placeholder="Default"
+      style={{ width: 246 }}
     />
     <hr />
-    <CheckTreePicker
+    <TreePicker
+      defaultExpandAll
       data={data}
-      block
-      style={{ width: 280 }}
-      toggleComponentClass={Button}
+      appearance="subtle"
+      placeholder="Subtle"
+      style={{ width: 246 }}
     />
   </div>
 );
