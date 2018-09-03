@@ -20,7 +20,8 @@ export default {
     openMenu: 'Open Menu',
     edit: 'Edit the current page',
     newIssues: 'Report Bug',
-    collapseMenu: 'Collapse Menu'
+    collapseMenu: 'Collapse Menu',
+    flow: 'Flow'
   },
   table: {
     'tab.resizable': 'Resizable',
