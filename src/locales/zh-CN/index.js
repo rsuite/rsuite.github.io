@@ -20,7 +20,8 @@ export default {
     openMenu: '展开菜单',
     edit: '编辑当前页面',
     newIssues: '提交Bug',
-    collapseMenu: '折叠菜单'
+    collapseMenu: '折叠菜单',
+    flow: 'Flow'
   },
   table: {
     'tab.resizable': '可调整列宽',

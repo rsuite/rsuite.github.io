@@ -38,6 +38,10 @@ export const getMenu = locale => {
           name: _.get(locale, 'common.intl')
         },
         {
+          id: 'flow',
+          name: _.get(locale, 'common.flow')
+        },
+        {
           id: 'logs',
           name: _.get(locale, 'common.changeLog'),
           target: '_blank',
