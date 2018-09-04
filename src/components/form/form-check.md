@@ -5,22 +5,25 @@
 * `<Form>` 定义一个表单，可以给表单设置 `value` 和 `model`，`model` 是由 `Schema.Model` 创建的数据模型。
 * `<FormControl>` 定义一个 Filed，通过 `name` 属性和 `Schema.Model` 对象的 `key` 对应, 详细参考： 自定义表单组件。
 * `Schema.Model` 定义一个数据模型，详细使用参考 [schema](/components/schema)。
+* 自定义触发校验： `<Form>` 实例提供 [check()](#methods) 与 [checkForField()](#methods) 方法，分别用于触发表单校验和字段校验。
 
 <!--start-code-->
 
 ```js
+const { StringType, NumberType } = Schema.Types;
+
 const model = Schema.Model({
-  name: Schema.Types.StringType().isRequired('This field is required.'),
-  email: Schema.Types.StringType().isEmail(
-    'Please enter a valid email address.'
-  ),
-  age: Schema.Types.NumberType('Please enter a valid number.').range(
+  name: StringType().isRequired('This field is required.'),
+  email: StringType()
+    .isEmail('Please enter a valid email address.')
+    .isRequired('This field is required.'),
+  age: NumberType('Please enter a valid number.').range(
     18,
     30,
     'Please enter a number from 18 to 30'
   ),
-  password: Schema.Types.StringType().isRequired('This field is required.'),
-  verifyPassword: Schema.Types.StringType()
+  password: StringType().isRequired('This field is required.'),
+  verifyPassword: StringType()
     .addRule((value, data) => {
       console.log(data);
 
@@ -60,6 +63,7 @@ class CheckForm extends React.Component {
       formError: {}
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleCheckEmail = this.handleCheckEmail.bind(this);
   }
   handleSubmit() {
     const { formValue } = this.state;
@@ -68,6 +72,12 @@ class CheckForm extends React.Component {
       return;
     }
     console.log(formValue, 'Form Value');
+  }
+
+  handleCheckEmail() {
+    this.form.checkForField('email', checkResult => {
+      console.log(checkResult);
+    });
   }
   render() {
     const { formError, formValue } = this.state;
@@ -87,6 +97,7 @@ class CheckForm extends React.Component {
           model={model}
         >
           <TextField name="name" label="Username" error={formError.name} />
+
           <TextField name="email" label="Email" error={formError.email} />
           <TextField name="age" label="Age" error={formError.age} />
           <TextField
@@ -103,9 +114,13 @@ class CheckForm extends React.Component {
             error={formError.verifyPassword}
           />
 
-          <Button appearance="primary" onClick={this.handleSubmit}>
-            Submit
-          </Button>
+          <ButtonToolbar>
+            <Button appearance="primary" onClick={this.handleSubmit}>
+              Submit
+            </Button>
+
+            <Button onClick={this.handleCheckEmail}>Check Email</Button>
+          </ButtonToolbar>
         </Form>
       </div>
     );

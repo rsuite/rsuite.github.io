@@ -14,7 +14,7 @@ class DateRangePickerValue extends React.Component {
     return (
       <div className="field">
         <DateRangePicker
-          value={null}
+          value={this.state.value}
           onChange={value => {
             this.setState({ value });
             console.log(value);
