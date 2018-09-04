@@ -88,8 +88,8 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | showInfo         | boolean `(true)`                            | 显示分页信息                                |
 | total            | number                                      | 总数据条目数                                |
 | displayLength    | number `(30)`                               | 配置每页显示多少行条目数，对应 `lengthMenu` |
-| onChangePage     | (eventKey: number)=>void                        | page 改变时候触发的回调函数                 |
-| onChangeLength   | (eventKey: number)=>void                        | `lengthMenu` 值发生改变的时候触发的回调函数 |
+| onChangePage     | (eventKey: number)=>void                    | page 改变时候触发的回调函数                 |
+| onChangeLength   | (eventKey: number)=>void                    | `lengthMenu` 值发生改变的时候触发的回调函数 |
 | prev             | boolean `(true)`                            | 显示上一页按钮                              |
 | next             | boolean `(true)`                            | 显示下一页按钮                              |
 | first            | boolean `(true)`                            | 显示第一页按钮                              |
@@ -97,3 +97,4 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | maxButtons       | number `(5)`                                | 配置最多显示按钮数量                        |
 | renderTotal      | (total: number, activePage: number) => void | 自定义总数                                  |
 | renderLengthMenu | (picker: React.Node) => React.Node          | 自定义菜单                                  |
+| disabled         | boolean , (eventKey: any) => boolean        | 禁用分页                                    |
