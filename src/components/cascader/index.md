@@ -37,6 +37,7 @@ import { Cascader } from 'rsuite';
 | onSelect             | (item:DataItemType, activePaths: Array, event: DefaultEvent)=>void | 选项被点击选择后的回调函数           |
 | onOpen               | ()=>void                                                           | 打开回调函数                         |
 | onClose              | ()=>void                                                           | 关闭回调函数                         |
+| onHide               | ()=>void                                                           | 隐藏时的回调函数                     |
 | onGroupTitleClick    | (event)=>void                                                      | 点击分组标题的回调函数               |
 | placeholder          | React.Node `('Select')`                                            | 占位符                               |
 | renderValue          | (label:React.Node, item: DataItemType)=>React.Node                 | 自定义被选中的选项                   |

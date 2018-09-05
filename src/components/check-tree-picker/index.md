@@ -37,8 +37,9 @@ import { CheckTreePicker } from 'rsuite';
 | cleanable            | boolean `(true)`                                                                             | 是否可以清楚                    |
 | searchable           | boolean `(true)`                                                                             | 是否显示搜索框                  |
 | onSearch             | (searchKeyword:string, event)=>boolean                                                       | 搜索回调函数                    |
-| onOpen               | ()=>boolean                                                                                  | 展开的回调函数                  |
-| onClose              | ()=>boolean                                                                                  | 关闭的回调函数                  |
+| onOpen               | ()=>void                                                                                     | 展开的回调函数                  |
+| onClose              | ()=>void                                                                                     | 关闭的回调函数                  |
+| onHide               | ()=>void                                                                                     | 隐藏时的回调函数                |
 | onChange             | (values:Array&lt;DataItemType.value&gt;)=>boolean                                            | 数据改变的回调函数              |
 | onExpand             | (activeNode:DataItemType, layer:number)=>boolean                                             | 树节点展示时的回调              |
 | onSelect             | (activeNode:DataItemType, layer:number, values:Array&lt;DataItemType.value&gt;)=>boolean     | 选择树节点后的回调函数          |

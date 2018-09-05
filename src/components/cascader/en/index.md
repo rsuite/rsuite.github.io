@@ -37,6 +37,7 @@ import { Cascader } from 'rsuite';
 | onSelect             | (item:DataItemType, activePaths: Array, event: DefaultEvent)=>void | Callback fired when item is selected                   |
 | onOpen               | ()=>void                                                           | Callback fired when open component                     |
 | onClose              | ()=>void                                                           | Callback fired when close component                    |
+| onHide               | ()=>void                                                           | Callback fired when hidden                          |
 | onGroupTitleClick    | (event)=>void                                                      | Callback fired when click the group title              |
 | placeholder          | React.Node `('Select')`                                            | Setting  placeholders                                  |
 | renderValue          | (label:React.Node, item: DataItemType)=>React.Node                 | Custom render selected items                           |
