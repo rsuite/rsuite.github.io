@@ -25,7 +25,7 @@ import { CheckPicker } from 'rsuite';
 | classPrefix          | string `('picker')`                                              | The prefix of the component CSS class                   |
 | data \*              | Array&lt;DataItemType&gt;                                        | The data of component                                   |
 | disabled             | boolean                                                          | Whether disabled componet                               |
-| disabledItemValues   | Array&lt;DataItemType.value&gt;                                  | Disable item by value                                 |
+| disabledItemValues   | Array&lt;DataItemType.value&gt;                                  | Disable item by value                                   |
 | groupBy              | string                                                           | Set group condition key in data                         |
 | valueKey             | string `('value')`                                               | Set value key in data                                   |
 | labelKey             | string `('label')`                                               | Set label key in data                                   |
@@ -37,6 +37,7 @@ import { CheckPicker } from 'rsuite';
 | onSearch             | (searchKeyword:string, event)=>void                              | Callback fired when search                              |
 | onOpen               | ()=>void                                                         | Callback fired when open component                      |
 | onClose              | ()=>void                                                         | Callback fired when close component                     |
+| onHide               | ()=>void                                                         | Callback fired when hidden                              |
 | onGroupTitleClick    | (event)=>void                                                    | Callback fired when click the group title               |
 | placeholder          | React.Node `('Select')`                                          | Setting placeholders                                    |
 | renderValue          | (value: Array&lt;any&gt;, items: Array&lt;any&gt;) => React.Node | Custom render selected items                            |

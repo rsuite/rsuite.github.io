@@ -36,12 +36,33 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 | onError          | (formError:Object)=>void                                | Callback fired when error checking                                           |
 | onCheck          | (formError:Object)=>void                                | Callback fired when data cheking                                             |
 
----
 
-> methods
+### Form methods
 
-* check(callback: (formError: Object) => void) => void check form data
-* cleanErrors(callback: () => void) => void clean error message
+-  check
+
+Verify form data.
+
+```js
+check(callback: (formError: Object) => void) => boolean
+```
+
+-  checkForField
+
+Checklist single field value.
+
+```js
+checkForField = (fieldName: string, callback?: (checkResult: Object) => void) => boolean
+```
+
+-  cleanErrors
+
+Clean error message.
+
+```js
+cleanErrors(callback: () => void) => void
+```
+
 
 ### `<FormControl>`
 

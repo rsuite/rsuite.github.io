@@ -4,7 +4,7 @@ import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
   id: 'Pagination',
-  examples: ['basic', 'size', 'advanced'],
+  examples: ['basic', 'size', 'disabled', 'advanced'],
   dependencies: {
     Toggle,
     Icon,

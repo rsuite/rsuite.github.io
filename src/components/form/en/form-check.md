@@ -5,22 +5,25 @@ Form Check needs to be used `<Form>`, `<FormControl>` and `Schema.Model` 。
 * `<Form>` To define a form, you can set `value` and `model` for the form, and `model` is the data model created by `Schema.Model`.
 * `<FormControl>` Define a Filed that corresponds to the `key` of the `Schema.Model` object via the `name` property. For detailed reference: Custom Form Components.
 * `Schema.Model` Define a data model, using the reference [schema](/components/schema).
+* Custom trigger check: `<Form>` instance provides `check` and `checkForField` methods, used to trigger form checksum field validation
 
 <!--start-code-->
 
 ```js
+const { StringType, NumberType } = Schema.Types;
+
 const model = Schema.Model({
-  name: Schema.Types.StringType().isRequired('This field is required.'),
-  email: Schema.Types.StringType().isEmail(
-    'Please enter a valid email address.'
-  ),
-  age: Schema.Types.NumberType('Please enter a valid number.').range(
+  name: StringType().isRequired('This field is required.'),
+  email: StringType()
+    .isEmail('Please enter a valid email address.')
+    .isRequired('This field is required.'),
+  age: NumberType('Please enter a valid number.').range(
     18,
     30,
     'Please enter a number from 18 to 30'
   ),
-  password: Schema.Types.StringType().isRequired('This field is required.'),
-  verifyPassword: Schema.Types.StringType()
+  password: StringType().isRequired('This field is required.'),
+  verifyPassword: StringType()
     .addRule((value, data) => {
       console.log(data);
 
@@ -60,6 +63,7 @@ class CheckForm extends React.Component {
       formError: {}
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleCheckEmail = this.handleCheckEmail.bind(this);
   }
   handleSubmit() {
     const { formValue } = this.state;
@@ -68,6 +72,12 @@ class CheckForm extends React.Component {
       return;
     }
     console.log(formValue, 'Form Value');
+  }
+
+  handleCheckEmail() {
+    this.form.checkForField('email', checkResult => {
+      console.log(checkResult);
+    });
   }
   render() {
     const { formError, formValue } = this.state;
@@ -87,6 +97,7 @@ class CheckForm extends React.Component {
           model={model}
         >
           <TextField name="name" label="Username" error={formError.name} />
+
           <TextField name="email" label="Email" error={formError.email} />
           <TextField name="age" label="Age" error={formError.age} />
           <TextField
@@ -103,9 +114,13 @@ class CheckForm extends React.Component {
             error={formError.verifyPassword}
           />
 
-          <Button appearance="primary" onClick={this.handleSubmit}>
-            Submit
-          </Button>
+          <ButtonToolbar>
+            <Button appearance="primary" onClick={this.handleSubmit}>
+              Submit
+            </Button>
+
+            <Button onClick={this.handleCheckEmail}>Check Email</Button>
+          </ButtonToolbar>
         </Form>
       </div>
     );

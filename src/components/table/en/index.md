@@ -100,3 +100,5 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | maxButtons       | number `(5)`                                | Configure the maximum number of display buttons                                        |
 | renderTotal      | (total: number, activePage: number) => void | Custom total                                                                           |
 | renderLengthMenu | (picker: React.Node) => React.Node          | Custom menu                                                                            |
+| disabled         | boolean , (eventKey: any) => boolean        | Disabled component                                                                     |
+

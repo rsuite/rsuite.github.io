@@ -16,10 +16,11 @@ Schema can define a data model for validating data, and can validate Form compon
 ```js
 import { Schema } from 'rsuite';
 
+const { StringType, NumberType } = Schema.Types;
 const userModel = Schema.Model({
-  username: Schema.Types.StringType().isRequired('User name is required'),
-  email: Schema.Types.StringType().isEmail('Please enter the correct email'),
-  age: Schema.Types.NumberType('Age should be a number').range(
+  username: StringType().isRequired('User name is required'),
+  email: StringType().isEmail('Please enter the correct email'),
+  age: NumberType('Age should be a number').range(
     18,
     30,
     'Age should be 18-30 years old'
@@ -54,47 +55,132 @@ StringType()
   .isRequired('This field is required');
 ```
 
-## Custom validation
+## Custom verification
 
-Customize a rule by using the `addRule` function.
+Customize a rule with the `addRule` function.
 
-If you are validating a string type of data, you can set a regular expression to customize validation by using the `pattern` function.
+If you are validating a string type of data, you can set a regular expression for custom validation by the `pattern` method.
 
 ```js
-const myModel = Schema.Model({
-  field1: Schema.Types.StringType().addRule(value => {
+const model = Schema.Model({
+  field1: StringType().addRule((value, data) => {
     return /^[1-9][0-9]{3}\s?[a-zA-Z]{2}$/.test(value);
-  }, 'Please enter a legal character'),
-  field2: Schema.Types.StringType().pattern(
+  }, 'Please enter legal characters'),
+  field2: StringType().pattern(
     /^[1-9][0-9]{3}\s?[a-zA-Z]{2}$/,
-    'Please enter a legal character'
+    'Please enter legal characters'
   )
+});
+
+model.check({ field1: '', field2: '' });
+
+/**
+{
+  field1: {
+    hasError: true,
+    errorMessage: 'Please enter legal characters'
+  },
+  field2: {
+    hasError: true,
+    errorMessage: 'Please enter legal characters'
+  }
+};
+**/
+```
+
+## Custom verification - multi-field cross validation
+
+E.g: verify that the two passwords are the same.
+
+```js
+const model = Schema.Model({
+  password1: StringType().isRequired('This field required'),
+  password2: StringType().addRule((value, data) => {
+    if (value !== data.password1) {
+      return false;
+    }
+    return true;
+  }, 'The passwords are inconsistent twice')
+});
+
+model.check({ password1: '123456', password2: 'root' });
+
+/**
+{
+  password1: { hasError: false },
+  password2: {
+    hasError: true,
+    errorMessage: 'The passwords are inconsistent twice'
+  }
+};
+**/
+```
+
+## Validate nested objects
+
+Validate nested objects, which can be defined using the `ObjectType().shape` method. E.g:
+
+```js
+const model = Schema.Model({
+  id: NumberType().isRequired('This field required'),
+  name: StringType().isRequired('This field required'),
+  info: ObjectType().shape({
+    email: StringType().isEmail('Should be an email'),
+    age: NumberType().min(18, 'Age should be greater than 18 years old')
+  });
 });
 ```
 
-## Customizing dynamic error messages
-
-For example, to return different error messages through different cases of `value`, refer to the following
+It is more recommended to flatten the object.
 
 ```js
-const myModel = Schema.Model({
-  field1: Schema.Types.StringType().addRule(value => {
-    if (value === 'root') {
-      return {
-        hasError: true,
-        errorMessage: "You can't be the keyword root"
-      };
-    } else if (!/^[a-zA-Z]+$/.test(value)) {
-      return {
-        hasError: true,
-        errorMessage: 'Only English characters'
-      };
-    }
+import { flaser } from 'object-flaser';
 
-    return {
-      hasError: false
-    };
-  })
+const model = Schema.Model({
+  id: NumberType().isRequired('This field required'),
+  name: StringType().isRequired('This field required'),
+  'info.email': StringType().isEmail('Should be an email'),
+  'info.age': NumberType().min(18, 'Age should be greater than 18 years old')
+});
+
+const user = flaser({
+  id: 1,
+  name: 'schema-type',
+  info: {
+    email: 'schema-type@gmail.com',
+    age: 17
+  }
+});
+
+model.check(data);
+```
+
+## Combine
+
+`SchemaModel` provides a static method `combine` that can be combined with multiple `SchemaModel` to return a new `SchemaModel`.
+
+```js
+const model1 = Schema.Model({
+  username: StringType().isRequired('This field required'),
+  email: StringType().isEmail('Should be an email')
+});
+
+const model2 = Schema.Model({
+  username: StringType().minLength(7, "Can't be less than 7 characters"),
+  age: NumberType().range(18, 30, 'Age should be greater than 18 years old')
+});
+
+const model3 = Schema.Model({
+  groupId: NumberType().isRequired('This field required')
+});
+
+const model4 = Schema.Model.combine(model1, model2, model3);
+
+model4.check({
+  username: 'foobar',
+  email: 'foo@bar.com',
+  age: 40,
+  groupId: 1
 });
 ```
 
@@ -111,34 +197,31 @@ const myModel = Schema.Model({
 
 ### StringType
 
-* isRequired()
+* isRequired(errorMessage: string)
 
 ```js
-StringType().isRequired('This field is required');
+StringType().isRequired('This field required');
 ```
 
 * isEmail(errorMessage: string)
 
 ```js
-StringType().isEmail('Please enter the correct email');
+StringType().isEmail('Please input the correct email address');
 ```
 
 * isURL(errorMessage: string)
 
 ```js
-StringType().isURL('Please enter the correct URL');
+StringType().isURL('Please enter the correct URL address');
 ```
 
-* isHex(errorMessage: string)
+* isOneOf(items: Array, errorMessage: string)
 
 ```js
-StringType().isHex('Please enter the correct hexadecimal value color number');
-```
-
-* isOneOf(items: Array&lt;string&gt;, errorMessage: string)
-
-```js
-StringType().isOneOf(['Javascript', 'CSS'], 'You can only enter `Javascript` and `CSS`');
+StringType().isOneOf(
+  ['Javascript', 'CSS'],
+  'Can only type `Javascript` and `CSS`'
+);
 ```
 
 * containsLetter(errorMessage: string)
@@ -150,13 +233,17 @@ StringType().containsLetter('Must contain English characters');
 * containsUppercaseLetter(errorMessage: string)
 
 ```js
-StringType().containsUppercaseLetter('Must contain uppercase English characters');
+StringType().containsUppercaseLetter(
+  'Must contain uppercase English characters'
+);
 ```
 
 * containsLowercaseLetter(errorMessage: string)
 
 ```js
-StringType().containsLowercaseLetter('Must contain lowercase English characters');
+StringType().containsLowercaseLetter(
+  'Must contain lowercase English characters'
+);
 ```
 
 * containsLetterOnly(errorMessage: string)
@@ -171,142 +258,149 @@ StringType().containsLetterOnly('English characters that can only be included');
 StringType().containsNumber('Must contain numbers');
 ```
 
-* pattern(regexp: RegExp , errorMessage: string)
+* pattern(regExp: RegExp, errorMessage: string)
 
 ```js
-StringType().pattern(/^[1-9][0-9]{3}\s?[a-zA-Z]{2}$/, 'Please enter a legal character');
+StringType().pattern(
+  /^[1-9][0-9]{3}\s?[a-zA-Z]{2}$/,
+  'Please enter legal characters'
+);
 ```
 
 * rangeLength(minLength: number, maxLength: number, errorMessage: string)
 
 ```js
-StringType().rangeLength(6, 30, 'The number of characters can only be between 6-30');
+StringType().rangeLength(
+  6,
+  30,
+  'The number of characters can only be between 6 and 30'
+);
 ```
 
 * minLength(minLength: number, errorMessage: string)
 
 ```js
-StringType().minLength(6, 'Requires a minimum of 6 characters');
+StringType().minLength(6, 'Minimum 6 characters required');
 ```
 
 * maxLength(maxLength: number, errorMessage: string)
 
 ```js
-StringType().minLength(30, 'Up to 30 characters');
+StringType().minLength(30, 'The maximum is only 30 characters.');
 ```
 
-* addRule(onValid: (value: string)=>boolean, errorMessage: string)
+* addRule(onValid: Function, errorMessage: string)
 
 ```js
-StringType().addRule(value => {
+StringType().addRule((value, data) => {
   return /^[1-9][0-9]{3}\s?[a-zA-Z]{2}$/.test(value);
-}, 'Please enter a legal character');
+}, 'Please enter a legal character.');
 ```
 
 ### NumberType
 
-* isRequired()
+* isRequired(errorMessage: string)
 
 ```js
-NumberType().isRequired('This field is required');
+NumberType().isRequired('This field required');
 ```
 
 * isInteger(errorMessage: string)
 
 ```js
-NumberType().isInteger('Only integral type');
+NumberType().isInteger('It can only be an integer');
 ```
 
-* isOneOf(items: Array&lt;number&gt;, errorMessage: string)
+* isOneOf(items: Array, errorMessage: string)
 
 ```js
-NumberType().isOneOf([5, 10, 15], 'can only be `5`, `10`, `15`');
+NumberType().isOneOf([5, 10, 15], 'Can only be `5`, `10`, `15`');
 ```
 
-* pattern(regexp: RegExp: , errorMessage: string)
+* pattern(regExp: RegExp, errorMessage: string)
 
 ```js
-NumberType().pattern(/^[1-9][0-9]{3}$/, 'Please enter a legal character');
+NumberType().pattern(/^[1-9][0-9]{3}$/, 'Please enter a legal character.');
 ```
 
 * range(minLength: number, maxLength: number, errorMessage: string)
 
 ```js
-NumberType().range(18, 40, 'Please enter a number between 18-40');
+NumberType().range(18, 40, 'Please enter a number between 18 - 40');
 ```
 
 * min(min: number, errorMessage: string)
 
 ```js
-NumberType().min(18, 'Minimum value 18');
+NumberType().min(18, 'Minimum 18');
 ```
 
-* max(min: number, errorMessage: string)
+* max(max: number, errorMessage: string)
 
 ```js
-NumberType().max(40, 'Maximum Value 40');
+NumberType().max(40, 'Maximum 40');
 ```
 
-* addRule(onValid: (value:number) => boolean, errorMessage: string)
+* addRule(onValid: Function, errorMessage: string)
 
 ```js
-NumberType().addRule(value => {
+NumberType().addRule((value, data) => {
   return value % 5 === 0;
 }, 'Please enter a valid number');
 ```
 
 ### ArrayType
 
-* isRequired()
+* isRequired(errorMessage: string)
 
 ```js
-ArrayType().isRequired('This field is required');
+ArrayType().isRequired('This field required');
 ```
 
 * rangeLength(minLength: number, maxLength: number, errorMessage: string)
 
 ```js
-ArrayType().rangeLength(1, 3, 'Select at least 1, but not more than 3');
+ArrayType().rangeLength(1, 3, 'Choose at least one, but no more than three');
 ```
 
 * minLength(minLength: number, errorMessage: string)
 
 ```js
-ArrayType().minLength(1, 'Select at least 1');
+ArrayType().minLength(1, 'Choose at least one');
 ```
 
 * maxLength(maxLength: number, errorMessage: string)
 
 ```js
-ArrayType().maxLength(3, 'No more than 3');
+ArrayType().maxLength(3, "Can't exceed three");
 ```
 
 * unrepeatable(errorMessage: string)
 
 ```js
-ArrayType().unrepeatable('Duplicate options cannot occur');
+ArrayType().unrepeatable('Duplicate options cannot appear');
 ```
 
-* of(type: Type, errorMessage: string)
+* of(type: Object, errorMessage: string)
 
 ```js
-ArrayType().of(StringType().isEmail(), 'Malformed');
+ArrayType().of(StringType().isEmail(), 'wrong format');
 ```
 
-* addRule(onValid: (value:Array&lt;any&gt;)=>boolean , errorMessage: string)
+* addRule(onValid: Function, errorMessage: string)
 
 ```js
-ArrayType().addRule(value => {
+ArrayType().addRule((value, data) => {
   return value.length % 2 === 0;
-}, 'Good things in pairs');
+}, 'Good things are in pairs');
 ```
 
 ### DateType
 
-* isRequired()
+* isRequired(errorMessage: string)
 
 ```js
-DateType().isRequired('Date cannot be empty');
+DateType().isRequired('This field required');
 ```
 
 * range(min: Date, max: Date, errorMessage: string)
@@ -315,73 +409,73 @@ DateType().isRequired('Date cannot be empty');
 DateType().range(
   new Date('08/01/2017'),
   new Date('08/30/2017'),
-  'Time should be between 08/01/2017-08/30/2017'
+  'Date should be between 08/01/2017 - 08/30/2017'
 );
 ```
 
 * min(min: Date, errorMessage: string)
 
 ```js
-DateType().min(new Date('08/01/2017'), 'The minimum value of the date 08/01/2017');
+DateType().min(new Date('08/01/2017'), 'Minimum date 08/01/2017');
 ```
 
 * max(max: Date, errorMessage: string)
 
 ```js
-DateType().max(new Date('08/30/2017'), 'Max of the date 08/30/2017');
+DateType().max(new Date('08/30/2017'), 'Maximum date 08/30/2017');
 ```
 
-* addRule(onValid: (value: Date)=>boolean, errorMessage: string)
+* addRule(onValid: Function, errorMessage: string)
 
 ```js
-DateType().addRule(value => {
+DateType().addRule((value, data) => {
   return value.getDay() === 2;
-}, 'It's only Tuesday.');
+}, 'Can only choose Tuesday');
 ```
 
 ### ObjectType
 
-* isRequired()
+* isRequired(errorMessage: string)
 
 ```js
-ObjectType().isRequired('The object cannot be empty');
+ObjectType().isRequired('This field required');
 ```
 
-* shape(types: Object)
+* shape(type: Object)
 
 ```js
 ObjectType().shape({
-  email: StringType().isEmail('should be an email'),
-  age: NumberType().min(18, 'Age should be more than 18 years old')
+  email: StringType().isEmail('Should be an email'),
+  age: NumberType().min(18, 'Age should be greater than 18 years old')
 });
 ```
 
-* addRule(onValid: (value: Object)=>boolean, errorMessage: string)
+* addRule(onValid: Function, errorMessage: string)
 
 ```js
-ObjectType().addRule(value => {
+ObjectType().addRule((value, data) => {
   if (value.id || value.email) {
     return true;
   }
   return false;
-}, 'ID and email must have a cannot be empty');
+}, 'Id and email must have one that cannot be empty');
 ```
 
 ### BooleanType
 
-* isRequired()
+* isRequired(errorMessage: string)
 
 ```js
-BooleanType().isRequired('This field is required');
+BooleanType().isRequired('This field required');
 ```
 
-* addRule(onValid: (value)=>boolean, errorMessage: string)
+* addRule(onValid: Function, errorMessage: string)
 
 ```js
-BooleanType().addRule(value => {
+ObjectType().addRule((value, data) => {
   if (typeof value === 'undefined' && A === 10) {
     return false;
   }
   return true;
-}, 'This value must be empty when a equals 10');
+}, 'This value is required when A is equal to 10');
 ```
