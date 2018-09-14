@@ -4,11 +4,12 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
 const markdownRenderer = require('react-markdown-reader').renderer;
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin;
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
-const iconPath = ['./node_modules/rsuite/styles', '../rsuite/styles'].map(relativePath =>
-  path.resolve(__dirname, relativePath)
+const iconPath = ['./node_modules/rsuite/styles', '../rsuite/styles'].map(
+  relativePath => path.resolve(__dirname, relativePath)
 );
 
 const { NODE_ENV, STYLE_DEBUG, ENV_LOCALE } = process.env;
@@ -26,7 +27,16 @@ const getStyleLoader = () => {
   }));
 };
 
-const languages = ['javascript', 'bash', 'xml', 'css', 'less', 'json', 'diff', 'typescript'];
+const languages = [
+  'javascript',
+  'bash',
+  'xml',
+  'css',
+  'less',
+  'json',
+  'diff',
+  'typescript'
+];
 
 module.exports = Object.assign(
   {
@@ -34,7 +44,10 @@ module.exports = Object.assign(
       contentBase: path.join(__dirname, 'public'),
       disableHostCheck: true,
       historyApiFallback: {
-        rewrites: [{ from: /^\/en/, to: '/en/index.html' }, { from: /./, to: '/index.html' }]
+        rewrites: [
+          { from: /^\/en/, to: '/en/index.html' },
+          { from: /./, to: '/index.html' }
+        ]
       },
       compress: true,
       host: '0.0.0.0',
@@ -140,24 +153,27 @@ module.exports = Object.assign(
     },
     plugins: [
       extractLess,
-      new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /zh-cn|en-gb/),
+      new webpack.ContextReplacementPlugin(
+        /moment[\/\\]locale$/,
+        /zh-cn|en-gb/
+      ),
       new webpack.ContextReplacementPlugin(
         /highlight\.js\/lib\/languages$/,
         new RegExp(`^./(${languages.join('|')})$`)
       ),
       new webpack.DefinePlugin({
-        'DEPLOY_ENV': JSON.stringify(process.env.DEPLOY_ENV)
+        DEPLOY_ENV: JSON.stringify(process.env.DEPLOY_ENV)
       }),
       new webpack.NamedModulesPlugin(),
       // new webpack.HotModuleReplacementPlugin(),
       new HtmlwebpackPlugin({
-        title: 'RSUITE | 一套 React 的 UI 组件库',
+        title: 'RSUITE | React Suite | 一套 React 的 UI 组件库',
         chunks: ['polyfills', 'commons', 'app'],
         template: 'src/index.html',
         inject: true
       }),
       new HtmlwebpackPlugin({
-        title: 'RSUITE | A suite of React components',
+        title: 'RSUITE | React Suite | A suite of React components',
         chunks: ['polyfills', 'commons', 'app_en'],
         filename: 'en/index.html',
         template: 'src/index.html',
