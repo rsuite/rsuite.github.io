@@ -162,6 +162,7 @@ module.exports = Object.assign(
         new RegExp(`^./(${languages.join('|')})$`)
       ),
       new webpack.DefinePlugin({
+        //__RSUITE_CLASSNAME_PREFIX__: JSON.stringify('react-suite-'),
         DEPLOY_ENV: JSON.stringify(process.env.DEPLOY_ENV)
       }),
       new webpack.NamedModulesPlugin(),

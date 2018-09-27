@@ -22,10 +22,14 @@ filter.push(
     }
     const localePathName = !!~location.href.indexOf('/en/') ? 'en' : 'zh';
     const localeKey = localStorage.getItem('localeKey') || 'en-US';
-    const isHomePage = location.pathname === '/' || location.pathname === '/en/';
+    const isHomePage =
+      location.pathname === '/' || location.pathname === '/en/';
 
     if (localeKey && isHomePage && shortKey(localeKey) !== localePathName) {
-      location.href = [location.origin, shortKey(localeKey) === 'en' ? 'en/' : ''].join('/');
+      location.href = [
+        location.origin,
+        shortKey(localeKey) === 'en' ? 'en/' : ''
+      ].join('/');
       return;
     }
     resolve();
