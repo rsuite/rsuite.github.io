@@ -4,7 +4,7 @@
 
 ```js
 const instance = (
-  <div className="icon-example-list">
+  <div className="icon-stack-example-list">
     <IconStack size="lg">
       <Icon icon="square" stack="2x" />
       <Icon icon="terminal" stack="1x" inverse />
