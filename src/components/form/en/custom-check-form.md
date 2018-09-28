@@ -4,11 +4,12 @@ In some cases, there is no need for real-time validation of the form data. You c
 
 The default value of `checkTrigger` is `'change'`, options includes:
 
-* `'change'` : trigger verification when data change
-* `'blur'` : trigger verification when component blur
-* `'none'` : Only valid when calling the `check()` method of `<Form>`
+- `'change'` : trigger verification when data change
+- `'blur'` : trigger verification when component blur
+- `'none'` : Only valid when calling the `check()` method of `<Form>`
 
 There are `checkTrigger` properties on the `<Form>` and `<FormControl>` components. You can define the entire form's validation method in `<Form>`. If there is a form component that needs to handle the validation independently, you can Set it on `<FormControl>`.
+
 <!--start-code-->
 
 ```js
@@ -17,14 +18,23 @@ const model = Schema.Model({
     .isEmail('Please enter a valid email address.')
     .isRequired('This field is required.')
 });
-
-const CustomField = ({ name, label, message, accepter, error, ...props }) => (
-  <FormGroup className={error ? 'has-error' : ''}>
-    <ControlLabel>{label} </ControlLabel>
-    <FormControl name={name} accepter={accepter} errorMessage={error} {...props} />
-    <HelpBlock>{message}</HelpBlock>
-  </FormGroup>
-);
+class CustomField extends React.PureComponent {
+  render() {
+    const { name, message, label, accepter, error, ...props } = this.props;
+    return (
+      <FormGroup className={error ? 'has-error' : ''}>
+        <ControlLabel>{label} </ControlLabel>
+        <FormControl
+          name={name}
+          accepter={accepter}
+          errorMessage={error}
+          {...props}
+        />
+        <HelpBlock>{message}</HelpBlock>
+      </FormGroup>
+    );
+  }
+}
 
 class CustomCheckForm extends React.Component {
   constructor(props) {
@@ -78,7 +88,12 @@ class CustomCheckForm extends React.Component {
           model={model}
           checkTrigger={checkTrigger}
         >
-          <CustomField name="name" label="Email" error={formError.name} message="Email address" />
+          <CustomField
+            name="name"
+            label="Email"
+            error={formError.name}
+            message="Email address"
+          />
           <Button appearance="primary" onClick={this.handleSubmit}>
             Submit
           </Button>

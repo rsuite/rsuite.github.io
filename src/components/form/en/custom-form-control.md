@@ -2,8 +2,8 @@
 
 All Data Entry-related components can be used in forms such as `Checkbox`, `SelectPicker`, `Slider`, and so on. But you need to use the `FormControl` component for data management and data association with the `Form` component.
 
-* `FormControl` used to bind data fields in a Form, passing the `name` attribute to the `key` of the Schema.Model object.
-* `FormControl` the default is an `Input` component, which can be set through the ʻaccepter` component.
+- `FormControl` used to bind data fields in a Form, passing the `name` attribute to the `key` of the Schema.Model object.
+- `FormControl` the default is an `Input` component, which can be set through the ʻaccepter` component.
 
 <!--start-code-->
 
@@ -19,18 +19,23 @@ const model = Schema.Model({
   level: NumberType().min(5, 'This field must be greater than 5')
 });
 
-const CustomField = ({ name, message, label, accepter, error, ...props }) => (
-  <FormGroup className={error ? 'has-error' : ''}>
-    <ControlLabel>{label} </ControlLabel>
-    <FormControl
-      name={name}
-      accepter={accepter}
-      errorMessage={error}
-      {...props}
-    />
-    <HelpBlock>{message}</HelpBlock>
-  </FormGroup>
-);
+class CustomField extends React.PureComponent {
+  render() {
+    const { name, message, label, accepter, error, ...props } = this.props;
+    return (
+      <FormGroup className={error ? 'has-error' : ''}>
+        <ControlLabel>{label} </ControlLabel>
+        <FormControl
+          name={name}
+          accepter={accepter}
+          errorMessage={error}
+          {...props}
+        />
+        <HelpBlock>{message}</HelpBlock>
+      </FormGroup>
+    );
+  }
+}
 
 class CustomFieldForm extends React.Component {
   constructor(props) {

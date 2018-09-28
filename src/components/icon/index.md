@@ -3,6 +3,7 @@
 图标组件，除了内置的常用图标外，还可以自定义引入 SVG 图标。
 
 `<Icon>` 通过字体实现的矢量图形。
+`<IconStack>` 实现多个图标叠加。
 
 ## 获取组件
 
@@ -22,7 +23,7 @@ import { Icon } from 'rsuite';
 
 | 属性名称       | 类型 `(默认值)`                    | 描述                                    |
 | -------------- | ---------------------------------- | --------------------------------------- |
-| classPrefix    | string `('icon')`                  | 组件 CSS 类的前缀                              |
+| classPrefix    | string `('icon')`                  | 组件 CSS 类的前缀                       |
 | componentClass | React.ElementType `('i')`          | 为组件自定义元素类型                    |
 | icon \*        | union: string,SvgSymbol            | 使用的 icon 名                          |
 | size           | enum: 'lg', '2x', '3x', '4x', '5x' | 放大图标                                |
@@ -33,3 +34,12 @@ import { Icon } from 'rsuite';
 | spin           | boolean                            | 动态旋转图标                            |
 | pulse          | boolean                            | 动态旋转图标，旋转 8 步                 |
 | svgStyle       | Object                             | 当使用自定义 svg Icon, 设置 svg 的样式  |
+| inverse        | boolean                            | 翻转颜色                                |
+
+
+### `<IconStack>`
+
+| 属性名称    | 类型 `(默认值)`                    | 描述              |
+| ----------- | ---------------------------------- | ----------------- |
+| classPrefix | string `('icon')`                  | 组件 CSS 类的前缀 |
+| size        | enum: 'lg', '2x', '3x', '4x', '5x' | 放大图标          |

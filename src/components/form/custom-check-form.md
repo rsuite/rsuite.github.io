@@ -4,9 +4,9 @@
 
 `checkTrigger` 默认值是 `'change'`， 选项包括：
 
-* `'change'` : 数据改变 `onChange` 的时候会触发数据校验。
-* `'blur'` : 组件失去焦点触发校验
-* `'none'` : 不触发校验，只会在调用 `<Form>` 的 `check()` 方法的时候才会校验
+- `'change'` : 数据改变 `onChange` 的时候会触发数据校验。
+- `'blur'` : 组件失去焦点触发校验
+- `'none'` : 不触发校验，只会在调用 `<Form>` 的 `check()` 方法的时候才会校验
 
 在 `<Form>` 和 `<FormControl>` 组件上都有 `checkTrigger` 属性， 在 `<Form>` 中可以定义整个表单的校验方式，如果有个表单组件需要单独处理校验方式，可以在 `<FormControl>` 上进行设置。
 
@@ -19,13 +19,23 @@ const model = Schema.Model({
     .isRequired('This field is required.')
 });
 
-const CustomField = ({ name, label, message, accepter, error, ...props }) => (
-  <FormGroup className={error ? 'has-error' : ''}>
-    <ControlLabel>{label} </ControlLabel>
-    <FormControl name={name} accepter={accepter} errorMessage={error} {...props} />
-    <HelpBlock>{message}</HelpBlock>
-  </FormGroup>
-);
+class CustomField extends React.PureComponent {
+  render() {
+    const { name, message, label, accepter, error, ...props } = this.props;
+    return (
+      <FormGroup className={error ? 'has-error' : ''}>
+        <ControlLabel>{label} </ControlLabel>
+        <FormControl
+          name={name}
+          accepter={accepter}
+          errorMessage={error}
+          {...props}
+        />
+        <HelpBlock>{message}</HelpBlock>
+      </FormGroup>
+    );
+  }
+}
 
 class CustomCheckForm extends React.Component {
   constructor(props) {
@@ -79,7 +89,12 @@ class CustomCheckForm extends React.Component {
           model={model}
           checkTrigger={checkTrigger}
         >
-          <CustomField name="name" label="邮箱" error={formError.name} message="请输入邮箱地址" />
+          <CustomField
+            name="name"
+            label="邮箱"
+            error={formError.name}
+            message="请输入邮箱地址"
+          />
           <Button appearance="primary" onClick={this.handleSubmit}>
             提交
           </Button>
