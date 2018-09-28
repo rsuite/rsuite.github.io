@@ -27,11 +27,6 @@ module.exports = api => {
       ],
       '@babel/plugin-proposal-nullish-coalescing-operator',
       '@babel/plugin-proposal-do-expressions'
-    ],
-    env: {
-      production: {
-        presets: ['react-optimize']
-      }
-    }
+    ]
   };
 };
