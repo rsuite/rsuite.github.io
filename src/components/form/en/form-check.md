@@ -2,10 +2,10 @@
 
 Form Check needs to be used `<Form>`, `<FormControl>` and `Schema.Model` 。
 
-* `<Form>` To define a form, you can set `value` and `model` for the form, and `model` is the data model created by `Schema.Model`.
-* `<FormControl>` Define a Filed that corresponds to the `key` of the `Schema.Model` object via the `name` property. For detailed reference: Custom Form Components.
-* `Schema.Model` Define a data model, using the reference [schema](/components/schema).
-* Custom trigger check: `<Form>` instance provides `check` and `checkForField` methods, used to trigger form checksum field validation
+- `<Form>` To define a form, you can set `value` and `model` for the form, and `model` is the data model created by `Schema.Model`.
+- `<FormControl>` Define a Filed that corresponds to the `key` of the `Schema.Model` object via the `name` property. For detailed reference: Custom Form Components.
+- `Schema.Model` Define a data model, using the reference [schema](/components/schema).
+- Custom trigger check: `<Form>` instance provides `check` and `checkForField` methods, used to trigger form checksum field validation
 
 <!--start-code-->
 
@@ -36,18 +36,23 @@ const model = Schema.Model({
     .isRequired('This field is required.')
 });
 
-const TextField = ({ name, message, label, accepter, error, ...props }) => (
-  <FormGroup className={error ? 'has-error' : ''}>
-    <ControlLabel>{label} </ControlLabel>
-    <FormControl
-      name={name}
-      accepter={accepter}
-      {...props}
-      errorMessage={error}
-    />
-    <HelpBlock>{message}</HelpBlock>
-  </FormGroup>
-);
+class TextField extends React.PureComponent {
+  render() {
+    const { name, message, label, accepter, error, ...props } = this.props;
+    return (
+      <FormGroup className={error ? 'has-error' : ''}>
+        <ControlLabel>{label} </ControlLabel>
+        <FormControl
+          name={name}
+          accepter={accepter}
+          {...props}
+          errorMessage={error}
+        />
+        <HelpBlock>{message}</HelpBlock>
+      </FormGroup>
+    );
+  }
+}
 
 class CheckForm extends React.Component {
   constructor(props) {

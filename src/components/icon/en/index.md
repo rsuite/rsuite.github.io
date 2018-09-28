@@ -33,3 +33,11 @@ import { Icon } from 'rsuite';
 | spin           | boolean                            | Dynamic rotation icon                                          |
 | pulse          | boolean                            | Use pulse to have it rotate with 8 steps                       |
 | svgStyle       | Object                             | Set SVG style when using custom SVG Icon                       |
+| inverse        | boolean                            | Inverse color                                                  |
+
+### `<IconStack>`
+
+| Property    | Type `(Default)`                   | Description                           |
+| ----------- | ---------------------------------- | ------------------------------------- |
+| classPrefix | string `('icon')`                  | The prefix of the component CSS class |
+| size        | enum: 'lg', '2x', '3x', '4x', '5x' | Sets the icon size                    |

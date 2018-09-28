@@ -2,8 +2,8 @@
 
 所有的 Data Entry 相关的组件都可以在表单中使用，例如 `Checkbox`,`SelectPicker`,`Slider` 等等。 但是需要通过 `FormControl` 组件进行数据管理，实现与 `Form` 组件的数据关联。
 
-* FormControl 用于绑定 Form 中的数据字段，通过 `name` 属性和 Schema.Model 对象的 `key` 对应。
-* FormControl 默认是个 `Input` 组件，可以通过 `accepter` 设置需要的数据录入组件。
+- FormControl 用于绑定 Form 中的数据字段，通过 `name` 属性和 Schema.Model 对象的 `key` 对应。
+- FormControl 默认是个 `Input` 组件，可以通过 `accepter` 设置需要的数据录入组件。
 
 <!--start-code-->
 
@@ -19,18 +19,23 @@ const model = Schema.Model({
   level: NumberType().min(5, 'This field must be greater than 5')
 });
 
-const CustomField = ({ name, message, label, accepter, error, ...props }) => (
-  <FormGroup className={error ? 'has-error' : ''}>
-    <ControlLabel>{label} </ControlLabel>
-    <FormControl
-      name={name}
-      accepter={accepter}
-      errorMessage={error}
-      {...props}
-    />
-    <HelpBlock>{message}</HelpBlock>
-  </FormGroup>
-);
+class CustomField extends React.PureComponent {
+  render() {
+    const { name, message, label, accepter, error, ...props } = this.props;
+    return (
+      <FormGroup className={error ? 'has-error' : ''}>
+        <ControlLabel>{label} </ControlLabel>
+        <FormControl
+          name={name}
+          accepter={accepter}
+          errorMessage={error}
+          {...props}
+        />
+        <HelpBlock>{message}</HelpBlock>
+      </FormGroup>
+    );
+  }
+}
 
 class CustomFieldForm extends React.Component {
   constructor(props) {
