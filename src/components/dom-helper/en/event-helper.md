@@ -9,6 +9,24 @@ off: (target: HTMLElement, eventName: string, listener: Function, capture: boole
 
 ```js
 class Demo extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleOnEvent = this.handleOnEvent.bind(this);
+    this.handleOffEvent = this.handleOffEvent.bind(this);
+  }
+  handleOnEvent() {
+    if (!this.listener) {
+      this.listener = on(this.btn, 'click', () => {
+        alert('click');
+      });
+    }
+  }
+  handleOffEvent() {
+    if (this.listener) {
+      this.listener.off();
+      this.listener = null;
+    }
+  }
   render() {
     return (
       <div>
@@ -23,25 +41,8 @@ class Demo extends React.Component {
         </div>
         <hr />
         <ButtonToolbar>
-          <Button
-            onClick={() => {
-              this.listener = on(this.btn, 'click', () => {
-                alert('click');
-              });
-            }}
-          >
-            on
-          </Button>
-
-          <Button
-            onClick={() => {
-              if (this.listener) {
-                this.listener.off();
-              }
-            }}
-          >
-            off
-          </Button>
+          <Button onClick={this.handleOnEvent}>on</Button>
+          <Button onClick={this.handleOffEvent}>off</Button>
         </ButtonToolbar>
       </div>
     );
