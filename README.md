@@ -4,22 +4,21 @@
 
 Website: http://rsuitejs.com/
 
-## 本地部署
+## Development
 
-首先 Fork https://github.com/rsuite/rsuite 并 clone 到本地。
+First, Fork `https://github.com/rsuite/rsuite` and clone it locally.
 
-```sh
+```zsh
 git clone git@github.com:<YOUR NAME>/rsuite.git
-
 
 cd rsuite
 npm install
 npm run dev
 ```
 
-然后，Fork https://github.com/rsuite/rsuite.github.io 并 clone 到本地。
+Then, Fork `https://github.com/rsuite/rsuite.github.io` and clone it locally.
 
-```sh
+```zsh
 git clone git@github.com:<YOUR NAME>/rsuite.github.io.git
 
 cd rsuite.github.io
