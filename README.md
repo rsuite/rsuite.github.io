@@ -6,22 +6,39 @@ Website: http://rsuitejs.com/
 
 ## Development
 
-First, Fork `https://github.com/rsuite/rsuite` and clone it locally.
+
+
+**First**, Fork `https://github.com/rsuite/rsuite` and clone it locally.
 
 ```zsh
 git clone git@github.com:<YOUR NAME>/rsuite.git
 
 cd rsuite
 npm install
+```
+
+Start `webpack` server
+
+```zsh
 npm run dev
 ```
 
-Then, Fork `https://github.com/rsuite/rsuite.github.io` and clone it locally.
+**Then**, Fork `https://github.com/rsuite/rsuite.github.io` and clone it locally.
 
 ```zsh
 git clone git@github.com:<YOUR NAME>/rsuite.github.io.git
 
 cd rsuite.github.io
 npm install
+```
+
+Start `gulp` task，used to listen for file changes.
+
+```zsh
 npm run dev
 ```
+
+
+**Next**, your show time.
+
+Open url http://127.0.0.1:3200/ in browser.
