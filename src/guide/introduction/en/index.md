@@ -21,7 +21,9 @@ RSUITE Design Prototype and specification, click to [view][rsuite-design]
 
 ## Examples
 
-* https://sample.rsuitejs.com/
+- [Management system][demo-admin]
+- [Use modularized][demo-modular-import]
+- [Use CDN][demo-cdn]
 
 
 ## Changelog
@@ -34,6 +36,10 @@ Detailed changes for each release are documented in the [release notes][release-
 Make sure you've read the [guidelines][contributing] before you start contributing.
 
 Editor preferences are available in the [.prettierrc][prettierrc] for easy use in common code editors. Read more and download plugins at https://prettier.io/.
+
+### Development plan
+
+You can learn about our development plan through [Trello](https://trello.com/b/nsaUoK7S/rsuite) and hope that you can get involved.
 
 
 ## Supporting RSUITE
@@ -75,3 +81,7 @@ RSUITE is [MIT licensed][LICENSE]. Copyright (c) 2016-present, HYPERS.
 [LICENSE]:https://github.com/rsuite/rsuite/blob/master/LICENSE
 [gitter]:https://gitter.im/rsuite/rsuite?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge
 [gitter-svg]:https://badges.gitter.im/rsuite/rsuite.svg
+[demo-admin]:https://github.com/rsuite/rsuite-management-system
+[demo-modular-import]:https://github.com/rsuite/examples/tree/modular/modular-import
+[demo-cdn]:https://github.com/rsuite/examples/tree/master/cdn
+

@@ -25,6 +25,12 @@ const instance = (
     </InputGroup>
 
     <InputGroup inside style={styles}>
+      <InputGroup.Addon>$</InputGroup.Addon>
+      <Input />
+      <InputGroup.Addon>.00</InputGroup.Addon>
+    </InputGroup>
+
+    <InputGroup inside style={styles}>
       <InputGroup.Addon>
         <Icon icon="avatar" />
       </InputGroup.Addon>
