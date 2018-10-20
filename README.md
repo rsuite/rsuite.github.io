@@ -16,8 +16,8 @@ git clone git@github.com:<YOUR NAME>/rsuite.git
 cd rsuite
 npm install
 ```
+Start `gulp` task，used to listen for file changes.
 
-Start `webpack` server
 
 ```zsh
 npm run dev
@@ -32,7 +32,7 @@ cd rsuite.github.io
 npm install
 ```
 
-Start `gulp` task，used to listen for file changes.
+Start `webpack` server
 
 ```zsh
 npm run dev
