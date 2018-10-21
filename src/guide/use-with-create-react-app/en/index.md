@@ -112,6 +112,11 @@ Re-executing `yarn start`, the red button is the configuration was successful
 
 This uses [react-app-rewired][react-app-rewired] and [react-app-rewire-less][react-app-rewire-less] to implement custom themes with [less-loader][less-loader] using `modifyVars` configuration. For more details, see [Customize Theme](/guide/themes).
 
+## Source code
+
+- [examples: create-react-app](https://github.com/rsuite/examples/tree/master/create-react-app)
+
+
 [nvm]: https://github.com/creationix/nvm#installation
 [nvm-windows]: https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows
 [create-react-app]: https://github.com/facebook/create-react-app

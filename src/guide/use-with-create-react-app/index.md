@@ -111,6 +111,11 @@ module.exports = function override(config, env) {
 
 这里使用 [react-app-rewired][react-app-rewired] 和 [react-app-rewire-less][react-app-rewire-less],配合 [less-loader][less-loader] 利用 `modifyVars` 配置实现定制主题。更多方法，详见[定制主题](/guide/themes)。
 
+
+## 源码
+
+- [examples: create-react-app](https://github.com/rsuite/examples/tree/master/create-react-app)
+
 [nvm]: https://github.com/creationix/nvm#installation
 [nvm-windows]: https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows
 [create-react-app]: https://github.com/facebook/create-react-app
