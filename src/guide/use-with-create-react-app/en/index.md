@@ -97,9 +97,11 @@ yarn add react-app-rewired react-app-rewire-less
 ```javascript
 /* config-overrides.js */
 const rewireLess = require('react-app-rewire-less');
+
 module.exports = function override(config, env) {
   config = rewireLess.withLoaderOptions({
-    modifyVars: { '@base-color': '#f44336' }
+    modifyVars: { '@base-color': '#f44336' },
+    javascriptEnabled: true
   })(config, env);
 
   return config;
