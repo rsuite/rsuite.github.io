@@ -87,7 +87,7 @@ yarn add react-app-rewired react-app-rewire-less
 
 ```diff
 - import 'rsuite/dist/styles/rsuite.min.css';
-+ import 'rsuite/styles/less/index.less';
++ import 'rsuite/styles/index.less';
   import { Button } from 'rsuite';
 ```
 
