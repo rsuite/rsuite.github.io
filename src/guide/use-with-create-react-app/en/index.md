@@ -88,7 +88,7 @@ yarn add react-app-rewired react-app-rewire-less
 
 ```diff
 - import 'rsuite/dist/styles/rsuite.min.css';
-+ import 'rsuite/styles/less/index.less';
++ import 'rsuite/styles/index.less';
   import { Button } from 'rsuite';
 ```
 
@@ -97,9 +97,11 @@ yarn add react-app-rewired react-app-rewire-less
 ```javascript
 /* config-overrides.js */
 const rewireLess = require('react-app-rewire-less');
+
 module.exports = function override(config, env) {
   config = rewireLess.withLoaderOptions({
-    modifyVars: { '@base-color': '#f44336' }
+    modifyVars: { '@base-color': '#f44336' },
+    javascriptEnabled: true
   })(config, env);
 
   return config;
@@ -109,6 +111,11 @@ module.exports = function override(config, env) {
 Re-executing `yarn start`, the red button is the configuration was successful
 
 This uses [react-app-rewired][react-app-rewired] and [react-app-rewire-less][react-app-rewire-less] to implement custom themes with [less-loader][less-loader] using `modifyVars` configuration. For more details, see [Customize Theme](/guide/themes).
+
+## Source code
+
+- [examples: create-react-app](https://github.com/rsuite/examples/tree/master/create-react-app)
+
 
 [nvm]: https://github.com/creationix/nvm#installation
 [nvm-windows]: https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows

@@ -87,7 +87,7 @@ yarn add react-app-rewired react-app-rewire-less
 
 ```diff
 - import 'rsuite/dist/styles/rsuite.min.css';
-+ import 'rsuite/styles/less/index.less';
++ import 'rsuite/styles/index.less';
   import { Button } from 'rsuite';
 ```
 
@@ -96,9 +96,11 @@ yarn add react-app-rewired react-app-rewire-less
 ```javascript
 /* config-overrides.js */
 const rewireLess = require('react-app-rewire-less');
+
 module.exports = function override(config, env) {
   config = rewireLess.withLoaderOptions({
-    modifyVars: { '@base-color': '#f44336' }
+    modifyVars: { '@base-color': '#f44336' },
+    javascriptEnabled: true
   })(config, env);
 
   return config;
@@ -108,6 +110,11 @@ module.exports = function override(config, env) {
 重新执行 `yarn start`，看到红色按钮就是配置成功了。
 
 这里使用 [react-app-rewired][react-app-rewired] 和 [react-app-rewire-less][react-app-rewire-less],配合 [less-loader][less-loader] 利用 `modifyVars` 配置实现定制主题。更多方法，详见[定制主题](/guide/themes)。
+
+
+## 源码
+
+- [examples: create-react-app](https://github.com/rsuite/examples/tree/master/create-react-app)
 
 [nvm]: https://github.com/creationix/nvm#installation
 [nvm-windows]: https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows
