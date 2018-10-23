@@ -1,6 +1,16 @@
 import React from 'react';
 import _ from 'lodash';
-import { Col, Nav, Navbar, Divider, Icon, ButtonGroup, Button } from 'rsuite';
+import {
+  Col,
+  Nav,
+  Navbar,
+  Divider,
+  Icon,
+  ButtonGroup,
+  ButtonToolbar,
+  Button,
+  IconButton
+} from 'rsuite';
 
 import PageContainer from '../fixtures/PageContainer';
 import Paragraph from '../fixtures/Paragraph';
@@ -17,6 +27,7 @@ const babelOptions = {
 const CustomCodeView = ({ dependencies, ...rest }) => (
   <CodeView
     {...rest}
+    theme="dark"
     babelOptions={babelOptions}
     buttonClassName="rs-btn-subtle rs-btn-icon-circle"
     dependencies={{ ...dependencies, Paragraph, Divider }}
@@ -29,7 +40,10 @@ const createComponentExample = ({ id, examples = [], dependencies }) => {
     const dist = getDict(locale);
     const componentPath = locale === 'en' ? `${name}/en/` : `${name}/`;
     const context = require(`./${componentPath}index.md`);
-    const componentExamples = examples.map(item => require(`./${componentPath}${item}.md`));
+    const componentExamples = examples.map(item => ({
+      source: require(`./${componentPath}${item}.md`),
+      path: `https://github.com/rsuite/rsuite.github.io/tree/master/src/components/${componentPath}${item}.md`
+    }));
 
     class ComponentExample extends React.Component {
       static defaultProps = {
@@ -38,7 +52,9 @@ const createComponentExample = ({ id, examples = [], dependencies }) => {
 
       constructor(props) {
         super(props);
-        const component = components.find(item => item.id === id || item.name === id);
+        const component = components.find(
+          item => item.id === id || item.name === id
+        );
         const tabIndex = sessionStorage.getItem(`${id}-tab-index`);
         this.state = {
           tabIndex: tabIndex ? +tabIndex : 0,
@@ -57,7 +73,13 @@ const createComponentExample = ({ id, examples = [], dependencies }) => {
 
         const { sorce } = tabExamples[tabIndex];
 
-        return <CustomCodeView key={tabIndex} source={sorce} dependencies={dependencies} />;
+        return (
+          <CustomCodeView
+            key={tabIndex}
+            source={sorce}
+            dependencies={dependencies}
+          />
+        );
       }
 
       renderTabs() {
@@ -103,7 +125,26 @@ const createComponentExample = ({ id, examples = [], dependencies }) => {
           >
             <MarkdownView>{header}</MarkdownView>
             {componentExamples.map((item, index) => (
-              <CustomCodeView key={index} source={item} dependencies={dependencies} />
+              <CustomCodeView
+                key={index}
+                source={item.source}
+                dependencies={dependencies}
+                renderToolbar={showCodeButton => {
+                  return (
+                    <React.Fragment>
+                      {showCodeButton}{' '}
+                      <IconButton
+                        appearance="subtle"
+                        icon={<Icon icon="github" />}
+                        circle
+                        size="xs"
+                        target="_blank"
+                        href={item.path}
+                      />
+                    </React.Fragment>
+                  );
+                }}
+              />
             ))}
             {this.renderTabs()}
             {this.renderExampleByTabIndex()}
