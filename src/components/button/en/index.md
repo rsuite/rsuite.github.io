@@ -21,18 +21,19 @@ import { Button, IconButton, ButtonGroup, ButtonToolbar } from 'rsuite';
 
 ### `<Button>`
 
-| Property       | Type `(Default)`                                                         | Description                                     |
-| -------------- | ------------------------------------------------------------------------ | ----------------------------------------------- |
-| active         | boolean                                                                  | Active state                                    |
-| block          | boolean                                                                  | Display block buttons                           |
-| disabled       | boolean                                                                  | Disabled button                                 |
-| children \*    | React.Node                                                               | The content of the component.                   |
-| size           | enum: 'lg', 'md', 'sm', 'xs' `('md')`                                    | Set button size                                 |
-| appearance     | enum: 'default', 'primary', 'link', 'subtle', 'ghost'<br/> `('default')` | Set button appearence                           |
-| color          | enum: 'red', 'orange','yellow', 'green', <br/>'cyan', 'blue', 'violet'   | Set button color                                |
-| classPrefix    | string `('btn')`                                                         | The prefix of the component CSS class           |
-| componentClass | React.ElementType `('button')`                                           | You can use a custom element for this component |
-| href           | string                                                                   | Redirect url of link button                     |
+| Property       | Type `(Default)`                                                         | Description                                                    |
+| -------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------- |
+| active         | boolean                                                                  | A button can show it is currently the active user selection    |
+| block          | boolean                                                                  | Spans the full width of the Button parent                      |
+| disabled       | boolean                                                                  | A button can show it is currently unable to be interacted with |
+| children \*    | React.Node                                                               | Primary content                                                |
+| size           | enum: 'lg', 'md', 'sm', 'xs' `('md')`                                    | A button can have different sizes                              |
+| appearance     | enum: 'default', 'primary', 'link', 'subtle', 'ghost'<br/> `('default')` | A button can have different appearances                        |
+| color          | enum: 'red', 'orange','yellow', 'green', <br/>'cyan', 'blue', 'violet'   | A button can have different colors                             |
+| classPrefix    | string `('btn')`                                                         | The prefix of the component CSS class                          |
+| componentClass | React.ElementType `('button')`                                           | You can use a custom element for this component                |
+| href           | string                                                                   | Providing a `href` will render an `a` element                  |
+| loading        | boolean                                                                  | A button can show a loading indicator                          |
 
 ### `<IconButton>`
 
