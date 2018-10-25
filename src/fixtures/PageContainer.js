@@ -3,7 +3,18 @@ import PropTypes from 'prop-types';
 import clasNames from 'classnames';
 import { PageProvider, PageNav, PageContent } from 'rsuite-page-nav';
 
-import { Nav, Row, Col, IconButton, Button, Icon, ButtonToolbar, Dropdown } from 'rsuite';
+import {
+  Nav,
+  Row,
+  Col,
+  IconButton,
+  Button,
+  Icon,
+  ButtonToolbar,
+  Dropdown,
+  Tooltip,
+  Whisper
+} from 'rsuite';
 import { design } from './SvgIcons';
 import LanguageSwitchButton from './LanguageSwitchButton';
 
@@ -44,40 +55,59 @@ class PageContainer extends React.Component {
           <Col md={8} xsHidden smHidden>
             <ButtonToolbar className="menu-button">
               {designHash ? (
-                <IconButton
-                  appearance="subtle"
-                  icon={<Icon icon={design} />}
-                  target="_blank"
-                  title={locale.common.design}
-                  href={`/design/index.html#${designHash}`}
-                />
+                <Whisper
+                  placement="bottom"
+                  speaker={<Tooltip>{locale.common.design}</Tooltip>}
+                >
+                  <IconButton
+                    appearance="subtle"
+                    icon={<Icon icon={design} />}
+                    target="_blank"
+                    href={`/design/index.html#${designHash}`}
+                  />
+                </Whisper>
               ) : null}
               {routerId ? (
-                <IconButton
-                  appearance="subtle"
-                  icon={<Icon icon="edit2" />}
-                  target="_blank"
-                  title={locale.common.edit}
-                  href={`https://github.com/rsuite/rsuite.github.io/edit/master/src/${routerId}/index.md`}
-                />
+                <Whisper
+                  placement="bottom"
+                  speaker={<Tooltip>{locale.common.edit}</Tooltip>}
+                >
+                  <IconButton
+                    appearance="subtle"
+                    icon={<Icon icon="edit2" />}
+                    target="_blank"
+                    href={`https://github.com/rsuite/rsuite.github.io/edit/master/src/${routerId}/index.md`}
+                  />
+                </Whisper>
               ) : null}
 
-              <IconButton
-                appearance="subtle"
-                title={locale.common.newIssues}
-                icon={<Icon icon="bug" />}
-                target="_blank"
-                href={' https://github.com/rsuite/rsuite/issues/new'}
+              <Whisper
+                placement="bottom"
+                speaker={<Tooltip>{locale.common.newIssues}</Tooltip>}
+              >
+                <IconButton
+                  appearance="subtle"
+                  icon={<Icon icon="bug" />}
+                  target="_blank"
+                  href={' https://github.com/rsuite/rsuite/issues/new'}
+                />
+              </Whisper>
+
+              <LanguageSwitchButton
+                language={locale.id}
+                onClick={this.handleChangeLanguage}
               />
 
-              <LanguageSwitchButton language={locale.id} onClick={this.handleChangeLanguage} />
-
-              <IconButton
-                appearance="subtle"
-                title={locale.common.collapseMenu}
-                icon={<Icon icon="bars" />}
-                onClick={this.handleNavicon}
-              />
+              <Whisper
+                placement="bottom"
+                speaker={<Tooltip>{locale.common.collapseMenu}</Tooltip>}
+              >
+                <IconButton
+                  appearance="subtle"
+                  icon={<Icon icon="bars" />}
+                  onClick={this.handleNavicon}
+                />
+              </Whisper>
             </ButtonToolbar>
 
             <PageNav
