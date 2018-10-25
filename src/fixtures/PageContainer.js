@@ -18,6 +18,12 @@ import {
 import { design } from './SvgIcons';
 import LanguageSwitchButton from './LanguageSwitchButton';
 
+const style = {
+  iconSvg: {
+    fill: '#8e8e93'
+  }
+};
+
 class PageContainer extends React.Component {
   static contextTypes = {
     router: PropTypes.object.isRequired,
@@ -61,7 +67,7 @@ class PageContainer extends React.Component {
                 >
                   <IconButton
                     appearance="subtle"
-                    icon={<Icon icon={design} />}
+                    icon={<Icon icon={design} style={style.iconSvg} />}
                     target="_blank"
                     href={`/design/index.html#${designHash}`}
                   />
