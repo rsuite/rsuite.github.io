@@ -4,14 +4,14 @@
 
 ```js
 /**
- * import province from
+ * import data from
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/province-simplified.js
  */
 
 function asynGetData(node, callback) {
-  const findNode = findNodeOfTree(province, item => node.id === item.id);
+  const findNode = findNodeOfTree(data, item => node.value === item.value);
   const children = get(findNode, 'children');
-  const data = children.map(item => {
+  const nextData = children.map(item => {
     if (item.children) {
       return {
         ...item,
@@ -22,7 +22,7 @@ function asynGetData(node, callback) {
   });
 
   setTimeout(() => {
-    callback && callback(data);
+    callback && callback(nextData);
   }, 1000);
 }
 
@@ -30,7 +30,7 @@ class AsynExample extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: province.map(item => ({ ...item, children: [] }))
+      data: data.map(item => ({ ...item, children: [] }))
     };
   }
 
@@ -39,16 +39,14 @@ class AsynExample extends React.Component {
       <div className="example-item">
         <Cascader
           data={this.state.data}
-          valueKey="id"
-          labelKey="name"
-          placeholder="请选择"
+          placeholder="Select"
           value={this.state.value}
           style={{ width: 224 }}
           renderMenu={(children, menu, parentNode) => {
             if (children.length === 0) {
               return (
                 <p style={{ padding: 4, color: '#999', textAlign: 'center' }}>
-                  <Icon icon="spinner" spin /> 加载中...
+                  <Icon icon="spinner" spin /> Loading...
                 </p>
               );
             }
@@ -60,7 +58,7 @@ class AsynExample extends React.Component {
                 const nextData = cloneDeep(this.state.data);
                 const selectedNode = findNodeOfTree(
                   nextData,
-                  item => node.id === item.id
+                  item => node.value === item.value
                 );
                 selectedNode.children = children;
                 this.setState({

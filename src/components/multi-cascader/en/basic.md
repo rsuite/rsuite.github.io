@@ -1,4 +1,4 @@
-### Use with the button
+### Default
 
 <!--start-code-->
 
@@ -10,9 +10,11 @@
 
 const instance = (
   <div>
-    <Cascader data={data} toggleComponentClass={Button} />
+    <h5>Cascade: </h5>
+    <MultiCascader data={data} style={{ width: 224 }} />
     <hr />
-    <Cascader data={data} block toggleComponentClass={Button} />
+    <h5>Not cascaded:</h5>
+    <MultiCascader cascade={false} data={data} style={{ width: 224 }} />
   </div>
 );
 ReactDOM.render(instance);

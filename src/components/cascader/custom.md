@@ -11,8 +11,6 @@
 const instance = (
   <Cascader
     data={data}
-    valueKey="name"
-    labelKey="name"
     style={{ widht: 224 }}
     renderMenuItem={(label, item) => {
       return (
@@ -22,7 +20,7 @@ const instance = (
       );
     }}
     renderValue={activePaths => {
-      return activePaths.map(item => item.name).join(' : ');
+      return activePaths.map(item => item.label).join(' : ');
     }}
   />
 );

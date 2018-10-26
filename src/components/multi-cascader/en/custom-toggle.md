@@ -10,9 +10,9 @@
 
 const instance = (
   <div>
-    <Cascader data={data} toggleComponentClass={Button} />
+    <MultiCascader data={data} toggleComponentClass={Button} />
     <hr />
-    <Cascader data={data} block toggleComponentClass={Button} />
+    <MultiCascader data={data} block toggleComponentClass={Button} />
   </div>
 );
 ReactDOM.render(instance);

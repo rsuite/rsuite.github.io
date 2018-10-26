@@ -5,7 +5,7 @@ export default {
     resume: 'A suite of React components',
     advanced: 'Advanced',
     guide: 'Guide',
-    design: 'Design',
+    design: 'Design prototype',
     components: 'Components',
     tools: 'Tools',
     introduction: 'Introduction',
@@ -20,7 +20,8 @@ export default {
     openMenu: 'Open Menu',
     edit: 'Edit the current page',
     newIssues: 'Report Bug',
-    collapseMenu: 'Collapse Menu',
+    collapseMenu: 'Content navigation',
+    changeLanguage: 'Language',
     flow: 'Flow'
   },
   table: {

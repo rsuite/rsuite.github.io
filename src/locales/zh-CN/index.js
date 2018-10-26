@@ -5,7 +5,7 @@ export default {
     resume: '一套 React 的 UI 组件库',
     advanced: '高级功能',
     guide: '新手指南',
-    design: '设计',
+    design: '设计原型',
     components: '组件',
     tools: '工具',
     introduction: '介绍',
@@ -20,7 +20,8 @@ export default {
     openMenu: '展开菜单',
     edit: '编辑当前页面',
     newIssues: '提交Bug',
-    collapseMenu: '折叠菜单',
+    collapseMenu: '内容导航',
+    changeLanguage: '切换语言',
     flow: 'Flow'
   },
   table: {

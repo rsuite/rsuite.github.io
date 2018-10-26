@@ -8,15 +8,15 @@
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/province.js
  */
 
-const CustomCascader = ({ placement }) => (
-  <Cascader data={data} placement={placement} placeholder={placement} />
+const CustomMultiCascader = ({ placement }) => (
+  <MultiCascader data={data} placement={placement} placeholder={placement} />
 );
 
 const instance = (
   <div>
-    <CustomCascader placement="topLeft" />{' '}
-    <CustomCascader placement="bottomLeft" />{' '}
-    <CustomCascader placement="autoVerticalLeft" />
+    <CustomMultiCascader placement="topLeft" />{' '}
+    <CustomMultiCascader placement="bottomLeft" />{' '}
+    <CustomMultiCascader placement="autoVerticalLeft" />
   </div>
 );
 ReactDOM.render(instance);

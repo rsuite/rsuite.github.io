@@ -23,7 +23,7 @@ class Demo extends React.Component {
             height: 500
           }}
         >
-          <Cascader
+          <MultiCascader
             style={{ width: 224 }}
             container={() => {
               return this.container;

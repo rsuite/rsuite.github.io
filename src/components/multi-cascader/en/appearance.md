@@ -1,4 +1,4 @@
-### 外观
+### Appearance
 
 <!--start-code-->
 
@@ -10,14 +10,14 @@
 
 const instance = (
   <div>
-    <Cascader
+    <MultiCascader
       data={data}
       appearance="default"
       placeholder="Default"
       style={{ width: 224 }}
     />
     <hr />
-    <Cascader
+    <MultiCascader
       data={data}
       appearance="subtle"
       placeholder="Subtle"

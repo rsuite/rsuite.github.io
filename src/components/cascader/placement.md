@@ -9,13 +9,7 @@
  */
 
 const CustomCascader = ({ placement }) => (
-  <Cascader
-    data={data}
-    placement={placement}
-    placeholder={placement}
-    valueKey="name"
-    labelKey="name"
-  />
+  <Cascader data={data} placement={placement} placeholder={placement} />
 );
 
 const instance = (

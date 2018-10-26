@@ -8,7 +8,7 @@
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/province.js
  */
 
-const instance = <Cascader block data={data} valueKey="name" labelKey="name" />;
+const instance = <Cascader block data={data} />;
 ReactDOM.render(instance);
 ```
 

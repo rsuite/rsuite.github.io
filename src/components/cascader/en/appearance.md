@@ -12,8 +12,6 @@ const instance = (
   <div>
     <Cascader
       data={data}
-      valueKey="name"
-      labelKey="name"
       appearance="default"
       placeholder="Default"
       style={{ width: 224 }}
@@ -21,8 +19,6 @@ const instance = (
     <hr />
     <Cascader
       data={data}
-      valueKey="name"
-      labelKey="name"
       appearance="subtle"
       placeholder="Subtle"
       style={{ width: 224 }}

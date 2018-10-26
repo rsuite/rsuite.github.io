@@ -1,4 +1,4 @@
-### Use with the button
+### 禁止选择
 
 <!--start-code-->
 
@@ -10,9 +10,12 @@
 
 const instance = (
   <div>
-    <Cascader data={data} toggleComponentClass={Button} />
-    <hr />
-    <Cascader data={data} block toggleComponentClass={Button} />
+    <MultiCascader
+      data={data}
+      block
+      renderValue={(value, items) => value.join(' , ')}
+      uncheckableItemValues={['四川', '贵州', '西藏', '昆明市', '美兰区']}
+    />
   </div>
 );
 ReactDOM.render(instance);

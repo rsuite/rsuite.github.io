@@ -1,4 +1,4 @@
-### Custom options
+### 自定义选项
 
 <!--start-code-->
 
@@ -9,7 +9,7 @@
  */
 
 const instance = (
-  <Cascader
+  <MultiCascader
     data={data}
     style={{ widht: 224 }}
     renderMenuItem={(label, item) => {

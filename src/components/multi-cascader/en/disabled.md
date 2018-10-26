@@ -1,4 +1,4 @@
-### 外观
+### Disabled
 
 <!--start-code-->
 
@@ -10,18 +10,13 @@
 
 const instance = (
   <div>
-    <Cascader
-      data={data}
-      appearance="default"
-      placeholder="Default"
-      style={{ width: 224 }}
-    />
+    <MultiCascader data={data} disabled style={{ widht: 224 }} />
     <hr />
-    <Cascader
+    <p>Disabled Option</p>
+    <MultiCascader
       data={data}
-      appearance="subtle"
-      placeholder="Subtle"
-      style={{ width: 224 }}
+      disabledItemValues={['四川', '贵州', '西藏', '昆明市']}
+      style={{ widht: 224 }}
     />
   </div>
 );

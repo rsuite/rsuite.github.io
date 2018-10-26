@@ -9,7 +9,7 @@
  */
 
 const instance = (
-  <Cascader
+  <MultiCascader
     data={data}
     style={{ widht: 224 }}
     renderMenuItem={(label, item) => {

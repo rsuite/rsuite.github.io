@@ -37,10 +37,9 @@ class AsynExample extends React.Component {
   render() {
     return (
       <div className="example-item">
-        <Cascader
+        <MultiCascader
           data={this.state.data}
           placeholder="请选择"
-          value={this.state.value}
           style={{ width: 224 }}
           renderMenu={(children, menu, parentNode) => {
             if (children.length === 0) {

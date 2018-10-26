@@ -99,10 +99,15 @@ class PageContainer extends React.Component {
                 />
               </Whisper>
 
-              <LanguageSwitchButton
-                language={locale.id}
-                onClick={this.handleChangeLanguage}
-              />
+              <Whisper
+                placement="bottom"
+                speaker={<Tooltip>{locale.common.changeLanguage}</Tooltip>}
+              >
+                <LanguageSwitchButton
+                  language={locale.id}
+                  onClick={this.handleChangeLanguage}
+                />
+              </Whisper>
 
               <Whisper
                 placement="bottom"
