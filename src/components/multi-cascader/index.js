@@ -17,7 +17,6 @@ export default createComponentExample({
     'custom',
     'disabled',
     'uncheckable',
-
     'async',
     'container'
   ],
