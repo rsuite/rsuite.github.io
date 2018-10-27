@@ -26,7 +26,6 @@ import { Cascader } from 'rsuite';
 | data \*              | Array&lt;[DataItemType](#DataItemType)&gt;                         | 组件数据                             |
 | disabled             | boolean                                                            | 禁用组件                             |
 | disabledItemValues   | Array&lt;DataItemType.value&gt;                                    | 禁用选项                             |
-| groupBy              | string                                                             | 设置分组条件在 `data` 中的 `key`     |
 | valueKey             | string `('value')`                                                 | 设置选项值在 `data` 中的 `key`       |
 | labelKey             | string `('label')`                                                 | 设置选项显示内容在 `data` 中的 `key` |
 | childrenKey          | string `('children')`                                              | 设置选项子节点在 `data` 中的 `key`   |
@@ -66,7 +65,7 @@ type Placement = 'bottomLeft' | 'topLeft' | 'autoVerticalLeft';
 
 ```ts
 type DataItemType = {
-  value: any;
+  value: string | number;
   label: React.Node;
   children?: Array<DataItemType>;
 };
