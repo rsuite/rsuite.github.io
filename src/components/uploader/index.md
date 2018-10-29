@@ -52,8 +52,8 @@ import { Uploader } from 'rsuite';
 type FileType = {
   name: string,
   fileKey: number | string,
-  blobFile?: File, // https://developer.mozilla.org/zh-CN/docs/Web/API/File
   status?: 'inited' | 'uploading' | 'error' | 'finished',
-  progress?: number
+  progress?: number,
+  url?: string
 };
 ```
