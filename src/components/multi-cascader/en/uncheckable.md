@@ -13,7 +13,9 @@ const instance = (
     <MultiCascader
       data={data}
       block
-      renderValue={(value, items) => value.join(' , ')}
+      renderValue={(value, selectedItems) =>
+        selectedItems.map(item => item.label).join(' , ')
+      }
       uncheckableItemValues={['1', '2-1']}
     />
   </div>

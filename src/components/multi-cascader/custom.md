@@ -19,9 +19,9 @@ const instance = (
         </div>
       );
     }}
-    renderValue={activePaths => {
-      return activePaths.map(item => item.label).join(' : ');
-    }}
+    renderValue={(value, selectedItems) =>
+      selectedItems.map(item => item.label).join(' , ')
+    }
   />
 );
 ReactDOM.render(instance);
