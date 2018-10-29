@@ -5,7 +5,7 @@
 ```js
 /**
  * import data from
- * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/province.js
+ * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/province-simplified.js
  */
 
 const instance = (
@@ -14,7 +14,7 @@ const instance = (
       data={data}
       block
       renderValue={(value, items) => value.join(' , ')}
-      uncheckableItemValues={['四川', '贵州', '西藏', '昆明市', '美兰区']}
+      uncheckableItemValues={['1', '2-1']}
     />
   </div>
 );
