@@ -31,7 +31,7 @@ const instance = (
       min={64}
       max={1024}
       renderMark={mark => {
-        if (Array.includes([64, 128, 256, 512, 1024], mark)) {
+        if ([64, 128, 256, 512, 1024].includes(mark)) {
           return <span>{mark} GB</span>;
         }
         return null;
