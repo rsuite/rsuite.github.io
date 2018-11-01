@@ -5,7 +5,7 @@ export default {
     resume: 'A suite of React components',
     advanced: 'Advanced',
     guide: 'Guide',
-    design: 'Design prototype',
+    design: 'Design',
     components: 'Components',
     tools: 'Tools',
     introduction: 'Introduction',
