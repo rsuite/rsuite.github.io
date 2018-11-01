@@ -26,6 +26,7 @@ import { Uploader } from 'rsuite';
 | defaultFileList      | Array<FileType>                                                            | 已经上传的文件列表                                                            |
 | data                 | Object                                                                     | 上传所带的参数                                                                |
 | disabled             | boolean                                                                    | 禁用                                                                          |
+| disabledFileItem     | boolean                                                                    | 禁用文件列表                                                                  |
 | multiple             | boolean                                                                    | 允许一次选择多个文件上传                                                      |
 | name                 | string `('file')`                                                          | 上传对应文件的参数名                                                          |
 | timeout              | number                                                                     | 设置上传超时                                                                  |
@@ -43,6 +44,7 @@ import { Uploader } from 'rsuite';
 | onRemove             | (file: FileType) => void                                                   | 在文件列表中，点击删除一个文件的回调函数                                      |
 | onReupload           | (file: FileType) => void                                                   | 在文件列表中，对上传失败的文件，点击重新上传的回调函数                        |
 | toggleComponentClass | React.ElementType `('button')`                                             | 为组件自定义元素类型                                                          |
+| maxPreviewFileSize   | number `(5242880)`                                                         | 设置预览文件最大限制                                                          |
 
 ## Types
 

@@ -38,7 +38,6 @@ import { InputPicker } from 'rsuite';
 | onSearch             | (searchKeyword:string, event)=>void                    | callback function for Search                           |
 | onOpen               | ()=>void                                               | Open callback function                                 |
 | onClose              | ()=>void                                               | Close callback functions                               |
-| onHide               | ()=>void                                               | Callback fired when hidden                             |
 | onGroupTitleClick    | (event)=>void                                          | Click the callback function for the group header       |
 | placeholder          | React.Node `('Select')`                                | Setting placeholders                                   |
 | renderValue          | (value:string, item: DataItemType)=>React.Node         | Custom Render selected options                         |

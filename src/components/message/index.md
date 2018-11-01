@@ -1,4 +1,4 @@
-# Message 消息框 
+# Message 消息框
 
 用于页面中展示重要的提示信息。
 
@@ -27,7 +27,8 @@ import { Message } from 'rsuite';
 | description | React.Node                                             | 消息描述信息         |
 | showIcon    | boolean                                                | 显示图标             |
 | full        | boolean                                                | 撑满容器             |
-| classPrefix | string                                                 | 组件 CSS 类的前缀       |
+| classPrefix | string                                                 | 组件 CSS 类的前缀    |
+| onClose     | () => void                                             | 消息关闭后调用       |
 
 ## 相关组件
 

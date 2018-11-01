@@ -27,3 +27,4 @@ import { InputNumber } from 'rsuite';
 | postfix      | React.Node                                                         | Sets the element displayed on the right side of the component. |
 | disabled     | boolean                                                            | Disabled component                                             |
 | onChange     | (value: any, event: SyntheticInputEvent<HTMLInputElement>) => void | The callback function when value changes                       |
+| size         | enum: 'lg', 'md', 'sm', 'xs' `('md')`                              | An input can have different sizes                              |

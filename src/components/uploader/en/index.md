@@ -26,6 +26,7 @@ import { Uploader } from 'rsuite';
 | defaultFileList      | Array<FileType>                                                            | List of uploaded files                                                                                                                            |
 | data                 | Object                                                                     | Upload the parameters with                                                                                                                        |
 | disabled             | boolean                                                                    | Disabled upload button                                                                                                                            |
+| disabledFileItem     | boolean                                                                    | Disable the file list                                                                                                                             |
 | multiple             | boolean                                                                    | Allow multiple file uploads to be selected at a time                                                                                              |
 | name                 | string `('file')`                                                          | Upload the parameter name of the corresponding file                                                                                               |
 | timeout              | number                                                                     | Set upload timeout                                                                                                                                |
@@ -43,6 +44,7 @@ import { Uploader } from 'rsuite';
 | onRemove             | (file: FileType) => void                                                   | In the file list, click the callback function to delete a file                                                                                    |
 | onReupload           | (file: FileType) => void                                                   | In the file list, for uploading failed files, click the callback function to upload                                                               |
 | toggleComponentClass | React.ElementType `('button')`                                             | You can use a custom element for this component                                                                                                   |
+| maxPreviewFileSize   | number `(5242880)`                                                         | Set the maximum limit for preview files                                                                                                           |
 
 ## Types
 

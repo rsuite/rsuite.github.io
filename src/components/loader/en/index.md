@@ -27,3 +27,4 @@ import { Loader } from 'rsuite';
 | content     | React.Node                              | Custom descriptive text                         |
 | speed       | enum:'fast','normal','slow'`('normal')` | The speed at which the loader rotates           |
 | inverse     | boolean                                 | An alternative dark visual style for the Loader |
+| vertical    | boolean                                 | The icon is displayed vertically with the text  |

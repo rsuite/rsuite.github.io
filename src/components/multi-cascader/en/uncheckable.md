@@ -16,7 +16,7 @@ const instance = (
       renderValue={(value, selectedItems) =>
         selectedItems.map(item => item.label).join(' , ')
       }
-      uncheckableItemValues={['1', '2-1']}
+      uncheckableItemValues={['1', '2', '2-1']}
     />
   </div>
 );

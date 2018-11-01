@@ -23,16 +23,17 @@ import { Input, InputGroup } from 'rsuite';
 
 | 属性名称     | 类型 `(默认值)`                                                    | 描述                     |
 | ------------ | ------------------------------------------------------------------ | ------------------------ |
-| classPrefix  | string `('input')`                                                 | 组件 CSS 类的前缀               |
+| classPrefix  | string `('input')`                                                 | 组件 CSS 类的前缀        |
 | type         | string `('text' )`                                                 | HTML input type.         |
 | value        | number                                                             | 设置值 `受控`            |
 | defaultValue | number                                                             | 设置默认值               |
 | onChange     | (value: any, event: SyntheticInputEvent<HTMLInputElement>) => void | value 发生变化的回调函数 |
-| disabled     |                                                                    | 禁用                     |
+| disabled     | boolean                                                            | 禁用                     |
+| size         | enum: 'lg', 'md', 'sm', 'xs' `('md')`                              | 设置输入框尺寸           |
 
 ### `<InputGroup>`
 
-| 属性名称    | 类型 `(默认值)`          | 描述           |
-| ----------- | ------------------------ | -------------- |
-| classPrefix | string `('input-group')` | 组件 CSS 类的前缀     |
-| inside      | boolean                  | 组合内容在内部 |
+| 属性名称    | 类型 `(默认值)`          | 描述              |
+| ----------- | ------------------------ | ----------------- |
+| classPrefix | string `('input-group')` | 组件 CSS 类的前缀 |
+| inside      | boolean                  | 组合内容在内部    |

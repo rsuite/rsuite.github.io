@@ -23,7 +23,7 @@ import { AutoComplete } from 'rsuite';
 | defaultValue  | string                                                          | 设置默认值 `非受控`                     |
 | onChange      | (value:string, event)=>void                                     | `value` 发生改变时的回调函数            |
 | onSelect      | (item:DataItemType, event)=>void                                | 选项被点击选择后的回调函数              |
-| onHide        | ()=>void                                                        | 隐藏时的回调函数                        |
+| onClose        | ()=>void                                                        | 隐藏时的回调函数                        |
 | placeholder   | React.Node                                                      | 占位符                                  |
 | renderItem    | (label:React.Node, item: DataItemType)=>React.Node              | 自定义被选中的选项                      |
 | menuClassName | string                                                          | 选项菜单的 className                    |
