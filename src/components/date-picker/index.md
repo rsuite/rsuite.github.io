@@ -32,7 +32,6 @@ import { DatePicker } from 'rsuite';
 | onSelect              | (date:Moment)=>void                            | 选择日期或者时间的回调函数                                |
 | onOpen                | ()=>void                                       | 打开回调函数                                              |
 | onClose               | ()=>void                                       | 关闭回调函数                                              |
-| onHide                | ()=>void                                       | 隐藏时的回调函数                                          |
 | onToggleMonthDropdown | (open: boolean) => void                        | 切换到月份视图的回调函数                                  |
 | onToggleTimeDropdown  | (open: boolean) => void                        | 切换到时间视图的回调函数                                  |
 | onPrevMonth           | (date: Moment) => void                         | 切换到上一月的回调函数                                    |

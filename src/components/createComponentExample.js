@@ -9,7 +9,9 @@ import {
   ButtonGroup,
   ButtonToolbar,
   Button,
-  IconButton
+  IconButton,
+  Tooltip,
+  Whisper
 } from 'rsuite';
 
 import PageContainer from '../fixtures/PageContainer';
@@ -132,15 +134,25 @@ const createComponentExample = ({ id, examples = [], dependencies }) => {
                 renderToolbar={showCodeButton => {
                   return (
                     <React.Fragment>
-                      {showCodeButton}{' '}
-                      <IconButton
-                        appearance="subtle"
-                        icon={<Icon icon="github" />}
-                        circle
-                        size="xs"
-                        target="_blank"
-                        href={item.path}
-                      />
+                      <Whisper
+                        placement="top"
+                        speaker={<Tooltip>Show the source</Tooltip>}
+                      >
+                        {showCodeButton}
+                      </Whisper>{' '}
+                      <Whisper
+                        placement="top"
+                        speaker={<Tooltip>See the source on GitHub</Tooltip>}
+                      >
+                        <IconButton
+                          appearance="subtle"
+                          icon={<Icon icon="github" />}
+                          circle
+                          size="xs"
+                          target="_blank"
+                          href={item.path}
+                        />
+                      </Whisper>
                     </React.Fragment>
                   );
                 }}

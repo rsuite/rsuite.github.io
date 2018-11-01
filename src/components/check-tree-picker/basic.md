@@ -8,7 +8,20 @@
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/city.js
  */
 
-const instance = <CheckTreePicker defaultExpandAll data={data} style={{ width: 280 }} />;
+const instance = (
+  <div>
+    <CheckTreePicker defaultExpandAll data={data} style={{ width: 280 }} />
+    <hr />
+    <CheckTreePicker
+      defaultExpandAll
+      data={data}
+      style={{ width: 280 }}
+      renderValue={(value, checkedItems) =>
+        checkedItems.map(item => item.label).join(' , ')
+      }
+    />
+  </div>
+);
 ReactDOM.render(instance);
 ```
 

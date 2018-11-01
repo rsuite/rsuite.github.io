@@ -1,35 +1,106 @@
 export default [
   {
-    name: '北京',
-    id: '1',
-    children: [
-      { name: '区', id: '1-1', children: ['东城区', '西城区', '崇文区', '宣武区', '朝阳区', '丰台区', '石景山区', '海淀区', '门头沟区', '房山区', '通州区', '顺义区', '昌平区', '大兴区', '怀柔区', '平谷区'] },
-      { name: '县', id: '1-2', children: ['密云县', '延庆县'] }
-    ]
-  },
-  {
-    name: '上海',
-    id: '2',
+    value: '1',
+    label: '四川',
     children: [
       {
-        name: '区',
-        id: '2-1',
+        label: '成都市',
+        value: '1-1',
         children: [
-          '黄浦区', '卢湾区', '徐汇区',
-          '长宁区', '静安区', '普陀区', '闸北区', '虹口区',
-          '杨浦区', '闵行区', '宝山区', '嘉定区', '浦东新区',
-          '金山区', '松江区', '青浦区', '南汇区', '奉贤区'
+          { value: '1-1-1', label: '锦江区' },
+          { value: '1-1-2', label: '青羊区' },
+          { value: '1-1-3', label: '金牛区' },
+          { value: '1-1-4', label: '武侯区' },
+          { value: '1-1-5', label: '成华区' }
         ]
       },
-      { name: '县', id: '2-2', children: [{ name: '崇明县', id: '2-2-1' }] }
+      {
+        value: '1-2',
+        label: '自贡市',
+        children: [
+          { value: '1-2-1', label: '自流井区' },
+          { value: '1-2-2', label: '贡井区' },
+          { value: '1-2-3', label: '大安区' },
+          { value: '1-2-4', label: '沿滩区' },
+          { value: '1-2-5', label: '荣　县' },
+          { value: '1-2-6', label: '富顺县' }
+        ]
+      },
+      {
+        value: '1-3',
+        label: '攀枝花市',
+        children: [
+          { value: '1-3-1', label: '东　区' },
+          { value: '1-3-2', label: '西　区' },
+          { value: '1-3-3', label: '仁和区' },
+          { value: '1-3-4', label: '米易县' },
+          { value: '1-3-5', label: '盐边县' }
+        ]
+      }
     ]
   },
   {
-    name: '天津',
-    id: '3',
+    label: '贵州',
+    value: '2',
     children: [
-      { name: '区', id: '3-1', children: ['和平区', '河东区', '河西区', '南开区', '河北区', '红桥区', '塘沽区', '汉沽区', '大港区', '东丽区', '西青区', '津南区', '北辰区', '武清区', '宝坻区'] },
-      { name: '县', id: '3-2', children: ['宁河县', '静海县', '蓟　县'] }
+      {
+        value: '2-1',
+        label: '贵阳市',
+        children: [
+          { value: '2-1-1', label: '南明区' },
+          { value: '2-1-2', label: '云岩区' },
+          { value: '2-1-3', label: '花溪区' },
+          { value: '2-1-4', label: '乌当区' },
+          { value: '2-1-5', label: '白云区' },
+          { value: '2-1-6', label: '小河区' },
+          { value: '2-1-7', label: '开阳县' },
+          { value: '2-1-8', label: '息烽县' },
+          { value: '2-1-9', label: '修文县' },
+          { value: '2-1-10', label: '清镇市' }
+        ]
+      },
+      {
+        value: '2-2',
+        label: '六盘水市',
+        children: [
+          { value: '2-2-1', label: '钟山区' },
+          { value: '2-2-2', label: '六枝特区' },
+          { value: '2-2-3', label: '水城县' },
+          { value: '2-2-4', label: '盘　县' }
+        ]
+      },
+      {
+        value: '2-3',
+        label: '遵义市',
+        children: [
+          { value: '2-3-1', label: '红花岗区' },
+          { value: '2-3-2', label: '汇川区' },
+          { value: '2-3-3', label: '遵义县' },
+          { value: '2-3-4', label: '桐梓县' },
+          { value: '2-3-5', label: '绥阳县' },
+          { value: '2-3-6', label: '正安县' },
+          { value: '2-3-7', label: '道真仡佬族苗族自治县' },
+          { value: '2-3-8', label: '务川仡佬族苗族自治县' },
+          { value: '2-3-9', label: '凤冈县' },
+          { value: '2-3-10', label: '湄潭县' },
+          { value: '2-3-11', label: '余庆县' },
+          { value: '2-3-12', label: '习水县' },
+          { value: '2-3-13', label: '赤水市' },
+          { value: '2-3-14', label: '仁怀市' }
+        ]
+      },
+      {
+        value: '2-4',
+        label: '安顺市',
+        children: [
+          { value: '2-4-1', label: '西秀区' },
+          { value: '2-4-2', label: '平坝县' },
+          { value: '2-4-3', label: '普定县' },
+          { value: '2-4-4', label: '镇宁布依族苗族自治县' },
+          { value: '2-4-5', label: '关岭布依族苗族自治县' },
+          { value: '2-4-6', label: '紫云苗族布依族自治县' }
+        ]
+      }
     ]
   }
 ];

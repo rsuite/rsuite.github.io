@@ -5,14 +5,12 @@
 ```js
 /**
  * import data from
- * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/province.js
+ * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/province-simplified.js
  */
 
 const instance = (
   <Cascader
     data={data}
-    valueKey="name"
-    labelKey="name"
     style={{ widht: 224 }}
     renderMenuItem={(label, item) => {
       return (
@@ -22,7 +20,7 @@ const instance = (
       );
     }}
     renderValue={activePaths => {
-      return activePaths.map(item => item.name).join(' : ');
+      return activePaths.map(item => item.label).join(' : ');
     }}
   />
 );

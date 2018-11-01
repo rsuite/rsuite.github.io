@@ -25,6 +25,7 @@ import { Slider } from 'rsuite';
 | defaultValue    | number                       | 默认值                            |
 | handleClassName | string                       | 应用于手柄 DOM 节点的 css class   |
 | handleTitle     | React.Node                   | 自定义手柄内显示内容              |
+| handleStyle     | Object                       | 附加手柄样式                      |
 | barClassName    | string                       | 应用于滑动条 DOM 节点的 css class |
 | disabled        | boolean                      | 是否禁用                          |
 | graduated       | boolean                      | 显示刻度                          |
@@ -33,5 +34,4 @@ import { Slider } from 'rsuite';
 | vertical        | boolean                      | 垂直滑动                          |
 | onChange        | (value: number) => void      | 数据发生改变的回调函数            |
 | renderMark      | (mark: number) => React.Node | 自定义渲染标尺上的标签            |
-
 

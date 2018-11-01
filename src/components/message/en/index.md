@@ -28,6 +28,9 @@ import { Message } from 'rsuite';
 | showIcon    | boolean                                                | Whether to display an icon.                     |
 | full        | boolean                                                | Fill the container                              |
 | classPrefix | string                                                 | The prefix of the component CSS class.          |
+| onClose     | () => void                                             | Called after the message is closed              |
+
+
 
 ## Related components
 

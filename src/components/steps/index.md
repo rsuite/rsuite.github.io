@@ -1,4 +1,4 @@
-# Steps 步骤条 
+# Steps 步骤条
 
 引导用户按照流程完成任务的导航条。
 
@@ -21,7 +21,7 @@ import { Steps } from 'rsuite';
 
 | 属性名称      | 类型 `(默认值)`                                    | 描述               |
 | ------------- | -------------------------------------------------- | ------------------ |
-| classPrefix   | string `('steps')`                                 | 组件 CSS 类的前缀     |
+| classPrefix   | string `('steps')`                                 | 组件 CSS 类的前缀  |
 | vertical      | boolean                                            | 设置垂直显示       |
 | small         | boolean                                            | 设置小尺寸的步骤条 |
 | current       | number`(0)`                                        | 当前执行步骤       |
@@ -31,7 +31,7 @@ import { Steps } from 'rsuite';
 
 | 属性名称    | 类型 `(默认值)`                      | 描述               |
 | ----------- | ------------------------------------ | ------------------ |
-| classPrefix | string `('steps-item')`              | 组件 CSS 类的前缀     |
+| classPrefix | string `('steps-item')`              | 组件 CSS 类的前缀  |
 | title       | React.Node                           | 设置标题           |
 | description | React.Node                           | 设置描述           |
 | icon        | React.Element&lt;typeof Icon&gt; ,   | 设置小尺寸的步骤条 |

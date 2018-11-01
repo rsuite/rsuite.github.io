@@ -32,7 +32,6 @@ import { DatePicker } from 'rsuite';
 | onSelect              | (date:Moment)=>void                            | Callback fired when date or time is selected                                         |
 | onOpen                | ()=>void                                       | Callback fired when open component                                                   |
 | onClose               | ()=>void                                       | Callback fired when close component                                                  |
-| onHide                | ()=>void                                       | Callback fired when hidden                                                           |
 | onToggleMonthDropdown | (open: boolean) => void                        | Callback function that switches to the month view                                    |
 | onToggleTimeDropdown  | (open: boolean) => void                        | Callback function that switches to the time view                                     |
 | onPrevMonth           | (date: Moment) => void                         | Switch to the callback function for the previous Month                               |

@@ -38,15 +38,15 @@ import { CheckTreePicker } from 'rsuite';
 | seasrchable          | boolean `(true)`                                                           | whether dispaly search input box                            |
 | onChange             | (values:Array&lt;any&gt;)=>boolean                                         | callback fired when value change                            |
 | onExpand             | (activeNode:Object, layer:number)=>boolean                                 | callback fired when tree node expand state changed          |
-| onSelect             | (activeNode::Object, ˝layer:number, values:Array&lt;any&gt;)=>boolean       | callback fired when tree node is selected                   |
+| onSelect             | (activeNode::Object, ˝layer:number, values:Array&lt;any&gt;)=>boolean      | callback fired when tree node is selected                   |
 | onSearch             | (searchKeyword:string, event)=>boolean                                     | callback fired when search                                  |
-| onOpen               | ()=>void                                                                | callback fired when open component                          |
-| onClose              | ()=>void                                                                | callback fired when close component                         |
-| onHide               | ()=>void                                                                   | Callback fired when hidden                                  |
+| onOpen               | ()=>void                                                                   | callback fired when open component                          |
+| onClose              | ()=>void                                                                   | callback fired when close component                         |
 | renderTreeNode       | (nodeData:Array&lt;Object&gt;)=>React.Node                                 | custom render tree node                                     |
 | renderTreeIcon       | (nodeData:Array&lt;Object&gt;)=>React.Node                                 | custom render the icon of tree node                         |
 | renderValue          | (values:Array&lt;Object&gt;, checkedItems:Array&lt;Object&gt;)=>React.Node | custom render placeholder                                   |
 | renderExtraFooter    | ()=>React.Node                                                             | custom render extra footer                                  |
+| renderMenu           | (menu:React.Node)=>React.Node                                              | Customizing the Rendering Menu list                         |
 | menuClassName        | string                                                                     | className for Menu                                          |
 | menuStyle            | object                                                                     | style for Menu                                              |
 | placement            | enum: Placement `('bottomLeft')`                                           | Placement of component                                      |

@@ -5,25 +5,14 @@
 ```js
 /**
  * import data from
- * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/province.js
+ * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/province-simplified.js
  */
 
 const instance = (
   <div>
-    <Cascader
-      data={data}
-      valueKey="name"
-      labelKey="name"
-      toggleComponentClass={Button}
-    />
+    <Cascader data={data} toggleComponentClass={Button} />
     <hr />
-    <Cascader
-      data={data}
-      valueKey="name"
-      labelKey="name"
-      block
-      toggleComponentClass={Button}
-    />
+    <Cascader data={data} block toggleComponentClass={Button} />
   </div>
 );
 ReactDOM.render(instance);

@@ -578,6 +578,24 @@ export const createRouters = (locale, onEnter, onEntered) => {
         />
 
         <Route
+          path="multi-cascader"
+          getComponents={(location, callback) => {
+            onEnter && onEnter();
+            require.ensure([], require => {
+              const getComponent = require('./components/multi-cascader')[
+                'default'
+              ];
+              const component = getComponent(locale);
+              callback && callback(null, component);
+              onEntered && onEntered();
+            });
+          }}
+          onEnter={() => {
+            setTitle('MultiCascader - components');
+          }}
+        />
+
+        <Route
           path="date-picker"
           getComponents={(location, callback) => {
             onEnter && onEnter();

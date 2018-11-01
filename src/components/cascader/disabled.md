@@ -5,26 +5,17 @@
 ```js
 /**
  * import data from
- * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/province.js
+ * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/province-simplified.js
  */
 
 const instance = (
   <div>
-    <Cascader
-      data={data}
-      style={{ width: 224 }}
-      valueKey="name"
-      labelKey="name"
-      disabled
-    />
+    <Cascader data={data} style={{ width: 224 }} disabled />
     <hr />
     <p>禁用选项</p>
     <Cascader
       data={data}
       style={{ width: 224 }}
-      valueKey="name"
-      labelKey="name"
-      defaultValue={'虹口区'}
       disabledItemValues={['北京', '广东', '天津']}
     />
   </div>
