@@ -53,18 +53,20 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | onSortColumn           | (dataKey:string, sortType:string)=>void | Click the callback function of the sort sequence to return the value `sortColumn`, `sortType` |
 | onScroll               | (scrollX:object, scrollY:object)=>void  | Callback function for scroll bar scrolling                                                    |
 
+
 ### `<Table.Column>`
 
-| Property  | Type `(Default)`              | Description                                                                                                 |
-| --------- | ----------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| align     | enum: 'left','center','right' | Alignment                                                                                                   |
-| width     | number                        | Column width                                                                                                |
-| fixed     | boolean                       | Fixed column                                                                                                |
-| resizable | boolean                       | Customizable Resize Column width                                                                            |
-| sortable  | boolean                       | Sortable                                                                                                    |
-| flexGrow  | number                        | Set the column width automatically adjusts, when set `flexGrow` cannot set `resizable` and `width` property |
-| minWidth  | number`(200)`                 | When you use `flexGrow`, you can set a minimum width by `minwidth`                                          |
-| colSpan   | number                        | Merges column cells to merge when the `dataKey` value for the merged column is `null` or `undefined`.       |
+| Property  | Type `(Default)`                                 | Description                                                                                                 |
+| --------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| align     | enum: 'left','center','right'                    | Alignment                                                                                                   |
+| width     | number                                           | Column width                                                                                                |
+| fixed     | boolean                                          | Fixed column                                                                                                |
+| resizable | boolean                                          | Customizable Resize Column width                                                                            |
+| sortable  | boolean                                          | Sortable                                                                                                    |
+| flexGrow  | number                                           | Set the column width automatically adjusts, when set `flexGrow` cannot set `resizable` and `width` property |
+| minWidth  | number`(200)`                                    | When you use `flexGrow`, you can set a minimum width by `minwidth`                                          |
+| colSpan   | number                                           | Merges column cells to merge when the `dataKey` value for the merged column is `null` or `undefined`.       |
+| onResize  | (columnWidth?: number, dataKey?: string) => void | Callback after column width change                                                                          |
 
 
 

@@ -25,7 +25,7 @@ import { AutoComplete } from 'rsuite';
 | defaultValue  | string                                                          | Default value                                                                    |
 | onChange      | (value:string, event)=>void                                     | Called when select an option or input value change, or value of input is changed |
 | onSelect      | (item: DataItemType, event)=>void                               | Called when a option is selected.                                                |
-| onHide        | ()=>void                                                        | Callback fired when hidden                                                       |
+| onClose        | ()=>void                                                        | Callback fired when hidden                                                       |
 | placeholder   | React.Node                                                      | The placeholder of input                                                         |
 | renderItem    | (label:React.Node, item: DataItemType)=>React.Node              | Custom selected option                                                           |
 | selectOnEnter | boolean `(true)`                                                | When set to `false`, the Enter key selection function is invalid                 |

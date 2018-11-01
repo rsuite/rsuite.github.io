@@ -41,13 +41,13 @@ import { CheckPicker } from 'rsuite';
 | onSearch             | (searchKeyword:string, event)=>void                              | Callback fired when search                              |
 | onOpen               | ()=>void                                                         | Callback fired when open component                      |
 | onClose              | ()=>void                                                         | Callback fired when close component                     |
-| onHide               | ()=>void                                                         | Callback fired when hidden                              |
 | onGroupTitleClick    | (event)=>void                                                    | Callback fired when click the group title               |
 | placement            | enum: [Placement](#Placement)`('bottomLeft')`                    | The placement of component                              |
 | placeholder          | React.Node `('Select')`                                          | Setting placeholders                                    |
 | renderValue          | (value: Array&lt;any&gt;, items: Array&lt;any&gt;) => React.Node | Custom render selected items                            |
-| renderMenuItem       | (label:React.Node, item: DataItemType)=>React.Node               | Custom render menuItems                                 |
-| renderMenuGroup      | (groupTitle:React.Node, item:DataItemType)=>React.Node           | Custom render menu Group                                |
+| renderMenu           | (menu:React.Node)=>React.Node                                    | Customizing the Rendering Menu list                     |
+| renderMenuItem       | (label:React.Node, item: DataItemType)=>React.Node               | Custom render menu items                                 |
+| renderMenuGroup      | (groupTitle:React.Node, item:DataItemType)=>React.Node           | Custom render menu group                                |
 | renderExtraFooter    | ()=>React.Node                                                   | Custom render extra footer                              |
 | searchable           | boolean `(true)`                                                 | Whether dispaly search input box                        |
 | sticky               | boolean                                                          | Top the selected option in the options                  |

@@ -244,7 +244,7 @@
       "Radio",
       "RadioGroup"
     ],
-    "designHash": "artboard51"
+    "designHash": "artboard53"
   },
   {
     "id": "input",
@@ -256,7 +256,7 @@
       "InputGroup.Button",
       "InputGroup.Addon"
     ],
-    "designHash": "artboard45"
+    "designHash": "artboard46"
   },
   {
     "id": "input-number",
@@ -265,7 +265,7 @@
     "components": [
       "InputNumber"
     ],
-    "designHash": "artboard48"
+    "designHash": "artboard49"
   },
   {
     "id": "auto-complete",
@@ -283,7 +283,7 @@
     "components": [
       "Toggle"
     ],
-    "designHash": "artboard55"
+    "designHash": "artboard57"
   },
   {
     "id": "input-picker",
@@ -292,7 +292,7 @@
     "components": [
       "InputPicker"
     ],
-    "designHash": "artboard49"
+    "designHash": "artboard50"
   },
   {
     "id": "tag-picker",
@@ -301,7 +301,7 @@
     "components": [
       "TagPicker"
     ],
-    "designHash": "artboard54"
+    "designHash": "artboard56"
   },
   {
     "id": "select-picker",
@@ -310,7 +310,7 @@
     "components": [
       "SelectPicker"
     ],
-    "designHash": "artboard52"
+    "designHash": "artboard54"
   },
   {
     "id": "check-picker",
@@ -328,7 +328,7 @@
     "components": [
       "TreePicker"
     ],
-    "designHash": "artboard56"
+    "designHash": "artboard58"
   },
   {
     "id": "check-tree-picker",
@@ -347,6 +347,15 @@
       "Cascader"
     ],
     "designHash": "artboard33"
+  },
+  {
+    "id": "multi-cascader",
+    "name": "MultiCascader",
+    "title": "级联多项选择器",
+    "components": [
+      "MultiCascader"
+    ],
+    "designHash": "artboard51"
   },
   {
     "id": "date-picker",
@@ -373,7 +382,7 @@
     "components": [
       "Slider"
     ],
-    "designHash": "artboard53"
+    "designHash": "artboard55"
   },
   {
     "id": "uploader",
@@ -382,7 +391,7 @@
     "components": [
       "Uploader"
     ],
-    "designHash": "artboard57"
+    "designHash": "artboard59"
   },
   {
     "group": true,
@@ -401,7 +410,7 @@
       "Table.Cell",
       "Table.Pagination"
     ],
-    "designHash": "artboard59"
+    "designHash": "artboard61"
   },
   {
     "id": "tree",
@@ -427,7 +436,7 @@
       "Panel",
       "PanelGroup"
     ],
-    "designHash": "artboard58"
+    "designHash": "artboard60"
   },
   {
     "id": "timeline",
@@ -437,7 +446,7 @@
       "Timeline",
       "Timeline.Item"
     ],
-    "designHash": "artboard68"
+    "designHash": "artboard70"
   },
   {
     "id": "tag",
@@ -446,7 +455,7 @@
     "components": [
       "Tag"
     ],
-    "designHash": "artboard67"
+    "designHash": "artboard69"
   },
   {
     "group": true,
@@ -484,7 +493,7 @@
       "Content",
       "Sidebar"
     ],
-    "designHash": "artboard70"
+    "designHash": "artboard72"
   },
   {
     "group": true,

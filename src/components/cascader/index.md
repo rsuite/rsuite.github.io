@@ -26,7 +26,6 @@ import { Cascader } from 'rsuite';
 | data \*              | Array&lt;[DataItemType](#DataItemType)&gt;                         | 组件数据                             |
 | disabled             | boolean                                                            | 禁用组件                             |
 | disabledItemValues   | Array&lt;DataItemType.value&gt;                                    | 禁用选项                             |
-| groupBy              | string                                                             | 设置分组条件在 `data` 中的 `key`     |
 | valueKey             | string `('value')`                                                 | 设置选项值在 `data` 中的 `key`       |
 | labelKey             | string `('label')`                                                 | 设置选项显示内容在 `data` 中的 `key` |
 | childrenKey          | string `('children')`                                              | 设置选项子节点在 `data` 中的 `key`   |
@@ -37,7 +36,6 @@ import { Cascader } from 'rsuite';
 | onSelect             | (item:DataItemType, activePaths: Array, event: DefaultEvent)=>void | 选项被点击选择后的回调函数           |
 | onOpen               | ()=>void                                                           | 打开回调函数                         |
 | onClose              | ()=>void                                                           | 关闭回调函数                         |
-| onHide               | ()=>void                                                           | 隐藏时的回调函数                     |
 | onGroupTitleClick    | (event)=>void                                                      | 点击分组标题的回调函数               |
 | placeholder          | React.Node `('Select')`                                            | 占位符                               |
 | renderValue          | (label:React.Node, item: DataItemType)=>React.Node                 | 自定义被选中的选项                   |
@@ -66,7 +64,7 @@ type Placement = 'bottomLeft' | 'topLeft' | 'autoVerticalLeft';
 
 ```ts
 type DataItemType = {
-  value: any;
+  value: string | number;
   label: React.Node;
   children?: Array<DataItemType>;
 };

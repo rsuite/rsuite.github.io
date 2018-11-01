@@ -8,8 +8,8 @@ export default createComponentExample({
   examples: [
     'basic',
     'appearance',
-    'placement',
     'cascade',
+    'placement',
     'disabled',
     'custom',
     'async'

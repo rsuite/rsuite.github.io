@@ -2,8 +2,7 @@ import React from 'react';
 import { Cascader, Button, Icon } from 'rsuite';
 import _ from 'lodash';
 import { findNodeOfTree } from 'rsuite-utils/lib/utils';
-import data from '../../resources/data/province';
-import province from '../../resources/data/province-simplified';
+import data from '../../resources/data/province-simplified';
 
 import createComponentExample from '../createComponentExample';
 
@@ -23,7 +22,6 @@ export default createComponentExample({
     Cascader,
     Button,
     data,
-    province,
     findNodeOfTree,
     Icon,
     get: _.get,

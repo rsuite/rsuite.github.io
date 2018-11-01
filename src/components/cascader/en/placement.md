@@ -5,17 +5,11 @@
 ```js
 /**
  * import data from
- * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/province.js
+ * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/province-simplified.js
  */
 
 const CustomCascader = ({ placement }) => (
-  <Cascader
-    data={data}
-    placement={placement}
-    placeholder={placement}
-    valueKey="name"
-    labelKey="name"
-  />
+  <Cascader data={data} placement={placement} placeholder={placement} />
 );
 
 const instance = (

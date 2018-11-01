@@ -28,7 +28,8 @@ import { Input, InputGroup } from 'rsuite';
 | value        | number                                                             | Value (Controlled)                               |
 | defaultValue | number                                                             | Default value                                    |
 | onChange     | (value: any, event: SyntheticInputEvent<HTMLInputElement>) => void | The callback function in which value is changed. |
-| disabled     |                                                                    | Disabled component                               |
+| disabled     | boolean                                                            | Disabled component                               |
+| size         | enum: 'lg', 'md', 'sm', 'xs' `('md')`                              | An input can have different sizes                |
 
 ### `<InputGroup>`
 

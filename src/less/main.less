@@ -739,8 +739,27 @@ path.bg {
   &:hover {
     border: 1px dashed @H500;
   }
-  .code-view-toolbar .btn {
-    border-style: none;
+  .code-view-toolbar {
+    padding-bottom: 8px;
+
+    > .rs-btn {
+      .btn-md;
+      height: 36px;
+
+      .icon-lg() {
+        @font-size: 20px;
+        height: @font-size;
+        font-size: @font-size;
+      }
+      .rs-icon-code {
+        .icon-lg;
+      }
+
+      > .rs-icon-github {
+        .icon-lg !important;
+        top: -4px !important;
+      }
+    }
   }
   .code-view-error {
     max-height: 200px;
