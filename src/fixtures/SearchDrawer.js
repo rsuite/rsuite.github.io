@@ -22,8 +22,12 @@ class SearchDrawer extends Component {
   }
   initIndex() {
     const { locale } = this.context;
-    const indexKey = _.get(locale, 'id') === 'en-US' ? 'rsuite-en' : 'rsuite-zh';
-    const client = algoliasearch('PTK5IGAK3K', 'dd3a62fc583bb0749dafa15cc61588bf');
+    const indexKey =
+      _.get(locale, 'id') === 'en-US' ? 'rsuite-en' : 'rsuite-zh';
+    const client = algoliasearch(
+      'PTK5IGAK3K',
+      'dd3a62fc583bb0749dafa15cc61588bf'
+    );
     this.index = client.initIndex(indexKey);
   }
   querySearch(query, cb) {
@@ -52,6 +56,7 @@ class SearchDrawer extends Component {
     const { show, onHide } = this.props;
     const { list } = this.state;
     const { locale } = this.context;
+    const path = _.get(locale, 'id') === 'en-US' ? '/en' : '';
 
     return (
       <Drawer placement="left" size="xs" show={show} onHide={onHide}>
@@ -71,7 +76,7 @@ class SearchDrawer extends Component {
               let content = _.get(item, 'content');
               let title = _.get(item, ['_highlightResult', 'title', 'value']);
               title = `${component} > ${title.replace(/`/gi, '')}`;
-              let url = `/components/${component}`;
+              let url = `${path}/components/${component}`;
 
               return (
                 <li key={index}>
@@ -79,7 +84,9 @@ class SearchDrawer extends Component {
                     <Link
                       to={url}
                       onClick={this.handleClick}
-                      dangerouslySetInnerHTML={{ __html: `${title}<p>${content}</p>` }}
+                      dangerouslySetInnerHTML={{
+                        __html: `${title}<p>${content}</p>`
+                      }}
                     />
                   ) : (
                     <Link onClick={this.handleClick} to={url}>
