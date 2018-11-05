@@ -24,18 +24,18 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 
 | Property         | Type `(default)`                                        | Description                                                                                                |
 | ---------------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| classPrefix      | string `('form')`                                       | The prefix of the component CSS class                                                                      |
-| layout           | enum: 'horizontal', 'vertical', 'inline' `('vertical')` | Set the left and right columns of the layout of the elements within the form                               |
-| formValue        | Object                                                  | Value of form (Controlled)                                                                                 |
-| formDefaultValue | Object                                                  | Default value of form                                                                                      |
-| formError        | Object                                                  | Error message of form                                                                                      |
-| fluid            | boolean                                                 | The fluid property allows the Input 100% of the form to fill the container, valid only in vertical layouts |
-| model            | Schema                                                  | SchemaModel Object                                                                                         |
 | checkDelay       | number `(500)`                                          | Delayed processing when data check, unit: millisecond                                                      |
 | checkTrigger     | enum: 'change','blur','none' `('change')`               | Trigger the type of form validation                                                                        |
+| classPrefix      | string `('form')`                                       | The prefix of the component CSS class                                                                      |
+| fluid            | boolean                                                 | The fluid property allows the Input 100% of the form to fill the container, valid only in vertical layouts |
+| formDefaultValue | Object                                                  | Default value of form                                                                                      |
+| formError        | Object                                                  | Error message of form                                                                                      |
+| formValue        | Object                                                  | Value of form (Controlled)                                                                                 |
+| layout           | enum: 'horizontal', 'vertical', 'inline' `('vertical')` | Set the left and right columns of the layout of the elements within the form                               |
+| model            | Schema                                                  | SchemaModel Object                                                                                         |
 | onChange         | (formValue:Object, event:Object)=>void                  | Callback fired when data changing                                                                          |
-| onError          | (formError:Object)=>void                                | Callback fired when error checking                                                                         |
 | onCheck          | (formError:Object)=>void                                | Callback fired when data cheking                                                                           |
+| onError          | (formError:Object)=>void                                | Callback fired when error checking                                                                         |
 
 
 ### Form methods
@@ -69,12 +69,12 @@ cleanErrors(callback: () => void) => void
 
 | Property       | Type`(default)`                  | Description                                                                      |
 | -------------- | -------------------------------- | -------------------------------------------------------------------------------- |
-| classPrefix    | string `('form-control')`        | The prefix of the component CSS class                                            |
-| name \*        | string                           | The name of form-control                                                         |
 | accepter       | React.ElementType `(Input)`      | Proxied components                                                               |
 | checkTrigger   | enum: 'change','blur','none'     | The data validation trigger type, and it wiill overrides the setting on `<Form>` |
+| classPrefix    | string `('form-control')`        | The prefix of the component CSS class                                            |
 | errorMessage   | React.Node                       | Show error messages                                                              |
 | errorPlacement | enum: Placement `('bottomLeft')` | The placement of error messages                                                  |
+| name \*        | string                           | The name of form-control                                                         |
 
 ### `<FormGroup>`
 

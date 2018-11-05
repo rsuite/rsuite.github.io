@@ -19,16 +19,16 @@ import { FlexboxGrid } from 'rsuite';
 
 ### `<FlexboxGrid>`
 
-| Property    | Type`(default)`                                                              | Description            |
-| ----------- | ---------------------------------------------------------------------------- | ---------------------- |
-| classPrefix | string `('flex-box-grid')`                                                   | The prefix of the component CSS class    |
-| align       | enum: 'top' , 'middle' , 'bottom' `('top')`                                  | align                  |
-| justify     | enum : 'start', 'end', 'center', 'space-around', 'space-between' `('start')` | horizontal arrangement |
+| Property    | Type`(default)`                                                              | Description                           |
+| ----------- | ---------------------------------------------------------------------------- | ------------------------------------- |
+| align       | enum: 'top' , 'middle' , 'bottom' `('top')`                                  | align                                 |
+| classPrefix | string `('flex-box-grid')`                                                   | The prefix of the component CSS class |
+| justify     | enum : 'start', 'end', 'center', 'space-around', 'space-between' `('start')` | horizontal arrangement                |
 
 ### `<FlexboxGrid.Item>`
 
-| Property    | Type`(default)`                 | Description             |
-| ----------- | ------------------------------- | ----------------------- |
-| classPrefix | string `('flex-box-grid-item')` | The prefix of the component CSS class     |
-| colspan     | number `(0)`                    | spacing between grids   |
-| order       | number `(0)`                    | grid orders for sorting |
+| Property    | Type`(default)`                 | Description                           |
+| ----------- | ------------------------------- | ------------------------------------- |
+| classPrefix | string `('flex-box-grid-item')` | The prefix of the component CSS class |
+| colspan     | number `(0)`                    | spacing between grids                 |
+| order       | number `(0)`                    | grid orders for sorting               |

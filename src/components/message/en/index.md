@@ -20,15 +20,15 @@ import { Message } from 'rsuite';
 
 | Property    | Type `(Default)`                                       | Description                                     |
 | ----------- | ------------------------------------------------------ | ----------------------------------------------- |
-| type        | enum: 'info', 'success', 'warning', 'error' `('info')` | The type of the message box.                    |
+| classPrefix | string                                                 | The prefix of the component CSS class.          |
 | closable    | boolean                                                | Whether it is possible to close the message box |
 | closeLabel  | string `('Close')`                                     | Closes the prompt text on the button.           |
-| title       | React.Node                                             | The title of the message.                       |
 | description | React.Node                                             | The description information for the message.    |
-| showIcon    | boolean                                                | Whether to display an icon.                     |
 | full        | boolean                                                | Fill the container                              |
-| classPrefix | string                                                 | The prefix of the component CSS class.          |
 | onClose     | () => void                                             | Called after the message is closed              |
+| showIcon    | boolean                                                | Whether to display an icon.                     |
+| title       | React.Node                                             | The title of the message.                       |
+| type        | enum: 'info', 'success', 'warning', 'error' `('info')` | The type of the message box.                    |
 
 
 

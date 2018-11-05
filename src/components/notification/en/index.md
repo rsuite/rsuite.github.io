@@ -85,14 +85,14 @@ type Config{
 
 | Property       | Type `(Default)`                            | Description                                                                                                             |
 | -------------- | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| title \*       | string                                      | The title of the message box                                                                                            |
+| bottom         | number `(24)`                               | The distance from the bottom of the message box                                                                         |
 | description \* | React.Node                                  | The description of the message box                                                                                      |
 | duration       | number `(4500)`                             | message box duration (Unit: milliseconds)                                                                               |
-| placement      | enum: [Placement](#Placement)`('topRight')` | The placement of the message box.                                                                                       |
-| top            | number `(24)`                               | The distance from the top of the message box                                                                            |
-| bottom         | number `(24)`                               | The distance from the bottom of the message box                                                                         |
-| onClose        | ()=>void                                    | Closes the callback function.                                                                                           |
 | key            | string                                      | The message box is uniquely identified, and you must fill out the field if you want to manually remove the message box. |
+| onClose        | ()=>void                                    | Closes the callback function.                                                                                           |
+| placement      | enum: [Placement](#Placement)`('topRight')` | The placement of the message box.                                                                                       |
+| title \*       | string                                      | The title of the message box                                                                                            |
+| top            | number `(24)`                               | The distance from the top of the message box                                                                            |
 
 
 

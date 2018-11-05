@@ -21,6 +21,6 @@ import { Portal } from 'rsuite';
 
 | Property   | Type `(Default)`              | Description                    |
 | ---------- | ----------------------------- | ------------------------------ |
+| children   | React.Node                    | Subcomponents                  |
 | container  | HTMLElement,() => HTMLElement | Render subcomponents Container |
 | onRendered | ()=>void                      | Rendered callback function     |
-| children   | React.Node                    | Subcomponents                  |

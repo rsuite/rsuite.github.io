@@ -22,13 +22,13 @@ import { Panel, PanelGroup } from 'rsuite';
 
 | Property        | Type `(Default)`   | Description                               |
 | --------------- | ------------------ | ----------------------------------------- |
-| bordered        | boolean            | Show border                               |
 | bodyFill        | boolean            | Content area filled with containers       |
+| bordered        | boolean            | Show border                               |
+| classPrefix     | string `('panel')` | The prefix of the component CSS class     |
 | collapsible     | boolean            | Whether it is a collapsible panel         |
-| classPrefix     | string `('panel')` | The prefix of the component CSS class        |
 | defaultExpanded | boolean            | Expand by default                         |
-| expanded        | boolean            | Expand the Panel.                         |
 | eventKey        | any                | The event key corresponding to the panel. |
+| expanded        | boolean            | Expand the Panel.                         |
 | header          | React.Node         | The head displays information.            |
 | id              | string or number   | ID                                        |
 
@@ -37,7 +37,7 @@ import { Panel, PanelGroup } from 'rsuite';
 | Property         | Type `(Default)`                               | Description                                                  |
 | ---------------- | ---------------------------------------------- | ------------------------------------------------------------ |
 | accordion        | boolean                                        | Whether it is a collapsible panel.                           |
-| classPrefix      | string                                         | The prefix of the component CSS class                           |
 | activeKey        | any                                            | Expand the Panel, corresponding to the 'Panel' of 'eventkey' |
+| classPrefix      | string                                         | The prefix of the component CSS class                        |
 | defaultActiveKey | any                                            | The default expansion panel.                                 |
 | onSelect         | (eventKey: any, event: SyntheticEvent) => void | Toggles the callback function for the expand panel           |

@@ -25,16 +25,16 @@ import { Icon } from 'rsuite';
 | -------------- | ---------------------------------- | --------------------------------------- |
 | classPrefix    | string `('icon')`                  | 组件 CSS 类的前缀                       |
 | componentClass | React.ElementType `('i')`          | 为组件自定义元素类型                    |
-| icon \*        | union: string,SvgSymbol            | 使用的 icon 名                          |
-| size           | enum: 'lg', '2x', '3x', '4x', '5x' | 放大图标                                |
-| flip           | enum: 'horizontal', 'vertical'     | 翻转图标                                |
-| stack          | enum: '1x', '2x'                   | 组合多个图标                            |
-| rotate         | number                             | 旋转图标                                |
 | fixedWidth     | boolean                            | 因为有很多图标尺寸参差不齐,固定图标宽度 |
-| spin           | boolean                            | 动态旋转图标                            |
-| pulse          | boolean                            | 动态旋转图标，旋转 8 步                 |
-| svgStyle       | Object                             | 当使用自定义 svg Icon, 设置 svg 的样式  |
+| flip           | enum: 'horizontal', 'vertical'     | 翻转图标                                |
+| icon \*        | union: string,SvgSymbol            | 使用的 icon 名                          |
 | inverse        | boolean                            | 翻转颜色                                |
+| pulse          | boolean                            | 动态旋转图标，旋转 8 步                 |
+| rotate         | number                             | 旋转图标                                |
+| size           | enum: 'lg', '2x', '3x', '4x', '5x' | 放大图标                                |
+| spin           | boolean                            | 动态旋转图标                            |
+| stack          | enum: '1x', '2x'                   | 组合多个图标                            |
+| svgStyle       | Object                             | 当使用自定义 svg Icon, 设置 svg 的样式  |
 
 
 ### `<IconStack>`

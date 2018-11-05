@@ -21,10 +21,10 @@ import { Loader } from 'rsuite';
 | Property    | Type `(Default)`                        | Description                                     |
 | ----------- | --------------------------------------- | ----------------------------------------------- |
 | backdrop    | boolean                                 | Whether the background is displayed             |
-| classPrefix | string                                  | The prefix of the component CSS class           |
-| size        | enum: 'lg', 'md', 'sm', 'xs'`('md')`    | Sets the loader dimensions                      |
 | center      | boolean                                 | Centered in the container                       |
+| classPrefix | string                                  | The prefix of the component CSS class           |
 | content     | React.Node                              | Custom descriptive text                         |
-| speed       | enum:'fast','normal','slow'`('normal')` | The speed at which the loader rotates           |
 | inverse     | boolean                                 | An alternative dark visual style for the Loader |
+| size        | enum: 'lg', 'md', 'sm', 'xs'`('md')`    | Sets the loader dimensions                      |
+| speed       | enum:'fast','normal','slow'`('normal')` | The speed at which the loader rotates           |
 | vertical    | boolean                                 | The icon is displayed vertically with the text  |
