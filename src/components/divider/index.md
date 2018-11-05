@@ -1,4 +1,4 @@
-# Divider 分割线 
+# Divider 分割线
 
 * `<Divider>` 分割线
 
@@ -18,6 +18,6 @@ import { Divider } from 'rsuite';
 
 | 属性名称    | 类型`(默认值)`       | 描述               |
 | ----------- | -------------------- | ------------------ |
-| classPrefix | string `('divider')` | 组件 CSS 类的前缀     |
-| vertical    | boolean              | 垂直分割线         |
 | children    | React.Node           | 设置分割线上的文本 |
+| classPrefix | string `('divider')` | 组件 CSS 类的前缀  |
+| vertical    | boolean              | 垂直分割线         |

@@ -24,18 +24,18 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 
 | 名称             | 类型 `(默认值)`                                         | 描述                                               |
 | ---------------- | ------------------------------------------------------- | -------------------------------------------------- |
-| classPrefix      | string `('form')`                                       | 组件 CSS 类的前缀                                  |
-| layout           | enum: 'horizontal', 'vertical', 'inline' `('vertical')` | 设置表单内的元素左右两栏布局                       |
-| formValue        | object                                                  | 表单的值 `受控组件`                                |
-| formDefaultValue | object                                                  | 表单的初始默认值 `非受控组件`                      |
-| formError        | object                                                  | 表单错误信息                                       |
-| fluid            | boolean                                                 | 让表单中的 Input 100% 撑满容器，只在垂直布局中有效 |
-| model            | Schema                                                  | SchemaModel 对象                                   |
 | checkDelay       | number `(500)`                                          | 数据校验的时候，延迟处理，单位:毫秒                |
 | checkTrigger     | enum: 'change','blur','none' `('change')`               | 触发表单校验的类型                                 |
+| classPrefix      | string `('form')`                                       | 组件 CSS 类的前缀                                  |
+| fluid            | boolean                                                 | 让表单中的 Input 100% 撑满容器，只在垂直布局中有效 |
+| formDefaultValue | object                                                  | 表单的初始默认值 `非受控组件`                      |
+| formError        | object                                                  | 表单错误信息                                       |
+| formValue        | object                                                  | 表单的值 `受控组件`                                |
+| layout           | enum: 'horizontal', 'vertical', 'inline' `('vertical')` | 设置表单内的元素左右两栏布局                       |
+| model            | Schema                                                  | SchemaModel 对象                                   |
 | onChange         | function(formValue:Object, event:Object)                | 数据改变后的回调函数                               |
-| onError          | function(formError:Object)                              | 校验出错的回调函数                                 |
 | onCheck          | function(formError:Object)                              | 数据校验的回调函数                                 |
+| onError          | function(formError:Object)                              | 校验出错的回调函数                                 |
 
 
 ### Form methods
@@ -65,12 +65,12 @@ cleanErrors(callback: () => void) => void
 
 | 名称           | 类型`(默认值)`                   | 描述                                       |
 | -------------- | -------------------------------- | ------------------------------------------ |
-| classPrefix    | string `('form-control')`        | 组件 CSS 类的前缀                          |
-| name \*        | string                           | 表单元素名称                               |
 | accepter       | React.ElementType `(Input)`      | 受代理的组件                               |
 | checkTrigger   | enum: 'change','blur','none'     | 数据校验的触发类型,会覆盖 `<Form>`上的设置 |
+| classPrefix    | string `('form-control')`        | 组件 CSS 类的前缀                          |
 | errorMessage   | React.Node                       | 显示错误信息                               |
 | errorPlacement | enum: Placement `('bottomLeft')` | 错误信息显示位置                           |
+| name \*        | string                           | 表单元素名称                               |
 
 ### `<FormGroup>`
 

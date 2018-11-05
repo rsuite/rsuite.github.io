@@ -20,6 +20,6 @@ import { Portal } from 'rsuite';
 
 | 属性名称   | 类型 `(默认值)`               | 描述             |
 | ---------- | ----------------------------- | ---------------- |
+| children   | React.Node                    | 子组件           |
 | container  | HTMLElement,() => HTMLElement | 渲染子组件的容器 |
 | onRendered | ()=>void                      | 渲染后的回调函数 |
-| children   | React.Node                    | 子组件           |

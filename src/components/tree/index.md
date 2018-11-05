@@ -18,22 +18,22 @@ import { Tree } from 'rsuite';
 
 | 属性名称           | 类型 `(默认值)`                                      | 描述                            |
 | ------------------ | ---------------------------------------------------- | ------------------------------- |
-| classPrefix        | string`('picker')`                                   | 组件 CSS 类的前缀               |
-| value              | DataItemType.value                                   | 当前选中的值                    |
-| defaultValue       | DataItemType.value                                   | 默认选中的值                    |
-| data \*            | Array&lt;[DataItemType](#DataItemType)&gt;           | tree 数据                       |
-| valueKey           | string `('value')`                                   | tree 数据结构 value 属性名称    |
-| labelKey           | string `('label')`                                   | tree 数据结构 label 属性名称    |
 | childrenKey        | string `('children')`                                | tree 数据结构 children 属性名称 |
-| disabledItemValues | Array&lt;DataItemType.value&gt;                      | 禁用选项                        |
+| classPrefix        | string`('picker')`                                   | 组件 CSS 类的前缀               |
+| data \*            | Array&lt;[DataItemType](#DataItemType)&gt;           | tree 数据                       |
 | defaultExpandAll   | boolean                                              | 默认展开所有节点                |
+| defaultValue       | DataItemType.value                                   | 默认选中的值                    |
+| disabledItemValues | Array&lt;DataItemType.value&gt;                      | 禁用选项                        |
 | expandAll          | boolean                                              | (受控)展示/收起所有节点         |
-| searchKeyword      | string                                               | (受控)搜索关键词                |
+| labelKey           | string `('label')`                                   | tree 数据结构 label 属性名称    |
+| onChange           | (value:DataItemType.value)=>void                     | 数据改变的回调函数              |
 | onExpand           | (activeNode:DataItemType, layer:number)=>void        | 树节点展示时的回调              |
 | onSelect           | (activeNode:DataItemType, layer:number, event)=>void | 选择树节点后的回调函数          |
-| onChange           | (value:DataItemType.value)=>void                     | 数据改变的回调函数              |
-| renderTreeNode     | (nodeData:DataItemType)=>React.Node                  | 自定义渲染 tree 节点            |
 | renderTreeIcon     | (nodeData:DataItemType)=>React.Node                  | 自定义渲染 图标                 |
+| renderTreeNode     | (nodeData:DataItemType)=>React.Node                  | 自定义渲染 tree 节点            |
+| searchKeyword      | string                                               | (受控)搜索关键词                |
+| value              | DataItemType.value                                   | 当前选中的值                    |
+| valueKey           | string `('value')`                                   | tree 数据结构 value 属性名称    |
 
 ### DataItemType
 

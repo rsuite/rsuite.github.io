@@ -19,10 +19,10 @@ import { Breadcrumb } from 'rsuite';
 
 ### `<Breadcrumb>`
 
-| 属性名称    | 类型 `(默认值)`                                        | 描述           |
-| ----------- | ------------------------------------------------------ | -------------- |
-| separator   | React.Node `(<i className="icon icon-angle-right" />)` | 分隔符         |
+| 属性名称    | 类型 `(默认值)`                                        | 描述              |
+| ----------- | ------------------------------------------------------ | ----------------- |
 | classPrefix | string `('breadcrumb')`                                | 组件 CSS 类的前缀 |
+| separator   | React.Node `(<i className="icon icon-angle-right" />)` | 分隔符            |
 
 ### `<Breadcrumb.Item>`
 

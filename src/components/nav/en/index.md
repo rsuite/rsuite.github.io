@@ -23,25 +23,25 @@ import { Nav, Dropdown } from 'rsuite';
 
 | Property    | Type `(Default)`                                           | Description                                                |
 | ----------- | ---------------------------------------------------------- | ---------------------------------------------------------- |
-| classPrefix | string `('nav')`                                           | The prefix of the component CSS class                      |
-| children \* | React.ChildrenArray&lt;NavItem or Dropdown&gt;             | The contents of the component.                             |
-| tabs        | boolean                                                    | Tabbed navigation                                          |
-| pills       | boolean                                                    | Pills navigation                                           |
-| justified   | boolean                                                    | Justified navigation                                       |
-| stacked     | boolean                                                    | Stacked navigation                                         |
-| pullRight   | boolean                                                    | appears on the right.                                      |
-| activeKey   | any                                                        | Active `key`, corresponding to `eventkey` in `<Nav.item>`. |
 |             |
+| activeKey   | any                                                        | Active `key`, corresponding to `eventkey` in `<Nav.item>`. |
+| children \* | React.ChildrenArray&lt;NavItem or Dropdown&gt;             | The contents of the component.                             |
+| classPrefix | string `('nav')`                                           | The prefix of the component CSS class                      |
+| justified   | boolean                                                    | Justified navigation                                       |
 | onSelect    | (eventKey: any, event: SyntheticEvent&lt;any&gt;) => void, | Callback function triggered after selection                |
+| pills       | boolean                                                    | Pills navigation                                           |
+| pullRight   | boolean                                                    | appears on the right.                                      |
+| stacked     | boolean                                                    | Stacked navigation                                         |
+| tabs        | boolean                                                    | Tabbed navigation                                          |
 
 ### `<Nav.Item>`
 
 | Property       | Type `(Default)`                                           | Description                                           |
 | -------------- | ---------------------------------------------------------- | ----------------------------------------------------- |
 | active         | boolean                                                    | Activation status                                     |
-| disabled       | boolean                                                    | Disabled status                                       |
 | children \*    | React.Node                                                 | The contents of the component                         |
-| icon           | React.Element&lt;typeof Icon&gt;                           | Sets the icon for the component                       |
-| href           | string                                                     | Link                                                  |
-| onSelect       | (eventKey: any, event: SyntheticEvent&lt;any&gt;) => void, | Select the callback function that the event triggers. |
 | componentClass | React.ElementType `('a')`                                  | You can use a custom element type for this component  |
+| disabled       | boolean                                                    | Disabled status                                       |
+| href           | string                                                     | Link                                                  |
+| icon           | React.Element&lt;typeof Icon&gt;                           | Sets the icon for the component                       |
+| onSelect       | (eventKey: any, event: SyntheticEvent&lt;any&gt;) => void, | Select the callback function that the event triggers. |

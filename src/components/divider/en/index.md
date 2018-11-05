@@ -16,8 +16,8 @@ import { Divider } from 'rsuite';
 
 ### `<Divider>`
 
-| Property    | Type`(default)`      | Description                   |
-| ----------- | -------------------- | ----------------------------- |
-| classPrefix | string `('divider')` | The prefix of the component CSS class           |
-| vertical    | boolean              | Vertical dividing line        |
-| children    | React.Node           | Set text in the dividing line |
+| Property    | Type`(default)`      | Description                           |
+| ----------- | -------------------- | ------------------------------------- |
+| children    | React.Node           | Set text in the dividing line         |
+| classPrefix | string `('divider')` | The prefix of the component CSS class |
+| vertical    | boolean              | Vertical dividing line                |

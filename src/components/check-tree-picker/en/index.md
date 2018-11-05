@@ -22,36 +22,36 @@ import { CheckTreePicker } from 'rsuite';
 | -------------------- | -------------------------------------------------------------------------- | ----------------------------------------------------------- |
 | appearance           | enum: 'default', 'subtle' `('default')`                                    | Set picker appearence                                       |
 | block                | boolean                                                                    | Blocking an entire row                                      |
-| value                | Array&lt;any&gt;                                                           | (Controlled) specifies the values of the selected tree node |
-| defaultValue         | Array&lt;any&gt;                                                           | (UnControlled) default values of the selected tree node     |
-| data \*              | Array&lt;Object&gt;                                                        | tree data                                                   |
-| valueKey             | string `('value')`                                                         | set value key in data                                       |
-| labelKey             | string `('label')`                                                         | set label key in data                                       |
-| childKey             | string `('children')`                                                      | set children key in data                                    |
-| disabledItemValues   | Array&lt;any&gt;                                                           | values of disabled tree node                                |
-| defaultExpandAll     | boolean                                                                    | expand all tree node                                        |
-| expandAll            | boolean                                                                    | Expand or unExpand all nodes(Controlled)                    |
 | cascade              | boolean                                                                    | whether cascade select                                      |
-| placeholder          | React.Node `('Select')`                                                    |                                                             |
-| disabled             | boolean                                                                    | whether disabled                                            |
+| childKey             | string `('children')`                                                      | set children key in data                                    |
 | cleanable            | boolean `(true)`                                                           | whether the selected value can be cleared                   |
-| seasrchable          | boolean `(true)`                                                           | whether dispaly search input box                            |
-| onChange             | (values:Array&lt;any&gt;)=>boolean                                         | callback fired when value change                            |
-| onExpand             | (activeNode:Object, layer:number)=>boolean                                 | callback fired when tree node expand state changed          |
-| onSelect             | (activeNode::Object, ˝layer:number, values:Array&lt;any&gt;)=>boolean      | callback fired when tree node is selected                   |
-| onSearch             | (searchKeyword:string, event)=>boolean                                     | callback fired when search                                  |
-| onOpen               | ()=>void                                                                   | callback fired when open component                          |
-| onClose              | ()=>void                                                                   | callback fired when close component                         |
-| renderTreeNode       | (nodeData:Array&lt;Object&gt;)=>React.Node                                 | custom render tree node                                     |
-| renderTreeIcon       | (nodeData:Array&lt;Object&gt;)=>React.Node                                 | custom render the icon of tree node                         |
-| renderValue          | (values:Array&lt;Object&gt;, checkedItems:Array&lt;Object&gt;)=>React.Node | custom render placeholder                                   |
-| renderExtraFooter    | ()=>React.Node                                                             | custom render extra footer                                  |
-| renderMenu           | (menu:React.Node)=>React.Node                                              | Customizing the Rendering Menu list                         |
+| container            | HTMLElement or (() => HTMLElement)                                         | Sets the rendering container                                |
+| data \*              | Array&lt;Object&gt;                                                        | tree data                                                   |
+| defaultExpandAll     | boolean                                                                    | expand all tree node                                        |
+| defaultValue         | Array&lt;any&gt;                                                           | (UnControlled) default values of the selected tree node     |
+| disabled             | boolean                                                                    | whether disabled                                            |
+| disabledItemValues   | Array&lt;any&gt;                                                           | values of disabled tree node                                |
+| expandAll            | boolean                                                                    | Expand or unExpand all nodes(Controlled)                    |
+| labelKey             | string `('label')`                                                         | set label key in data                                       |
 | menuClassName        | string                                                                     | className for Menu                                          |
 | menuStyle            | object                                                                     | style for Menu                                              |
+| onChange             | (values:Array&lt;any&gt;)=>boolean                                         | callback fired when value change                            |
+| onClose              | ()=>void                                                                   | callback fired when close component                         |
+| onExpand             | (activeNode:Object, layer:number)=>boolean                                 | callback fired when tree node expand state changed          |
+| onOpen               | ()=>void                                                                   | callback fired when open component                          |
+| onSearch             | (searchKeyword:string, event)=>boolean                                     | callback fired when search                                  |
+| onSelect             | (activeNode::Object, ˝layer:number, values:Array&lt;any&gt;)=>boolean      | callback fired when tree node is selected                   |
+| placeholder          | React.Node `('Select')`                                                    |                                                             |
 | placement            | enum: Placement `('bottomLeft')`                                           | Placement of component                                      |
-| container            | HTMLElement or (() => HTMLElement)                                         | Sets the rendering container                                |
+| renderExtraFooter    | ()=>React.Node                                                             | custom render extra footer                                  |
+| renderMenu           | (menu:React.Node)=>React.Node                                              | Customizing the Rendering Menu list                         |
+| renderTreeIcon       | (nodeData:Array&lt;Object&gt;)=>React.Node                                 | custom render the icon of tree node                         |
+| renderTreeNode       | (nodeData:Array&lt;Object&gt;)=>React.Node                                 | custom render tree node                                     |
+| renderValue          | (values:Array&lt;Object&gt;, checkedItems:Array&lt;Object&gt;)=>React.Node | custom render placeholder                                   |
+| seasrchable          | boolean `(true)`                                                           | whether dispaly search input box                            |
 | toggleComponentClass | React.ElementType `('a')`                                                  | You can use a custom element for this component             |
+| value                | Array&lt;any&gt;                                                           | (Controlled) specifies the values of the selected tree node |
+| valueKey             | string `('value')`                                                         | set value key in data                                       |
 
 ## Types
 
