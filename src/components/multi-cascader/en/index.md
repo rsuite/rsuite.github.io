@@ -27,6 +27,7 @@ import { MultiCascader } from 'rsuite';
 | classPrefix           | string `('picker')`                                                                           | The prefix of the component CSS class                     |
 | cleanable             | boolean `(true)`                                                                              | Whether the selected value can be cleared                 |
 | container             | HTMLElement or (() => HTMLElement)                                                            | Sets the rendering container                              |
+| countable             | boolean `(true)`                                                                              | Can count selected options                                |
 | data \*               | Array&lt;[DataItemType](#DataItemType)&gt;                                                    | The data of component                                     |
 | defaultOpen           | boolean                                                                                       | Default value of open property                            |
 | defaultValue          | Array&lt;DataItemType.value&gt;                                                               | Default values of the selected items                      |

@@ -12,6 +12,8 @@ export default createComponentExample({
     'basic',
     'appearance',
     'cascade',
+    'default-value',
+    'controlled',
     'block',
     'placement',
     'custom',

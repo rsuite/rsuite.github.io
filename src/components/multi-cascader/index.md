@@ -27,6 +27,7 @@ import { MultiCascader } from 'rsuite';
 | classPrefix           | string `('picker')`                                                                            | 组件 CSS 类的前缀                    |
 | cleanable             | boolean `(true)`                                                                               | 可以清除                             |
 | container             | HTMLElement or (() => HTMLElement)                                                             | 设置渲染的容器                       |
+| countable             | boolean `(true)`                                                                               | 可以计数已选项                       |
 | data \*               | Array&lt;[DataItemType](#DataItemType)&gt;                                                     | 组件数据                             |
 | defaultOpen           | boolean                                                                                        | 默认打开                             |
 | defaultValue          | Array&lt;DataItemType.value&gt;                                                                | 设置默认值                           |
