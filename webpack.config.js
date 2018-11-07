@@ -193,7 +193,7 @@ module.exports = Object.assign(
     : {
         resolve: {
           alias: {
-            rsuite: path.resolve(__dirname, '../rsuite/lib/index')
+            rsuite: path.resolve(__dirname, '../rsuite')
           }
         }
       }

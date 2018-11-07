@@ -1,8 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { hot } from 'react-hot-loader';
-import { Router, Route, IndexRoute, browserHistory, hashHistory } from 'react-router';
+import {
+  Router,
+  Route,
+  IndexRoute,
+  browserHistory,
+  hashHistory
+} from 'react-router';
 import { IntlProvider } from 'rsuite-intl';
+import { IntlProvider as RSIntlProvider } from 'rsuite';
 
 import App from './App';
 import Home from './Home';
@@ -12,6 +19,8 @@ import ready from './ready';
 import { defateTilte } from './title';
 import { createRouters } from './routers';
 import { getDict } from './locales';
+import zhCN from 'rsuite/lib/IntlProvider/locales/zh_CN';
+import enUS from 'rsuite/lib/IntlProvider/locales/en_US';
 
 if (__DEV__) {
   require('./less/index-dev.less');
@@ -28,15 +37,21 @@ export default locale => {
       const { onEnter, onEntered, onRemoveLoading } = this.props;
       return (
         <IntlProvider locale={getDict(locale)}>
-          <Router history={DEPLOY_ENV === 'gitee' ? hashHistory : browserHistory}>
-            <Route
-              path={locale === 'en' ? '/en/' : '/'}
-              component={props => <App {...props} onRemoveLoading={onRemoveLoading} />}
+          <RSIntlProvider locale={locale === 'en' ? enUS : zhCN}>
+            <Router
+              history={DEPLOY_ENV === 'gitee' ? hashHistory : browserHistory}
             >
-              <IndexRoute component={Home} onEnter={defateTilte} />
-              {createRouters(locale, onEnter, onEntered)}
-            </Route>
-          </Router>
+              <Route
+                path={locale === 'en' ? '/en/' : '/'}
+                component={props => (
+                  <App {...props} onRemoveLoading={onRemoveLoading} />
+                )}
+              >
+                <IndexRoute component={Home} onEnter={defateTilte} />
+                {createRouters(locale, onEnter, onEntered)}
+              </Route>
+            </Router>
+          </RSIntlProvider>
         </IntlProvider>
       );
     }
