@@ -4,7 +4,14 @@ import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
   id: 'Uploader',
-  examples: ['basic', 'picture', 'picture-text', 'file-list', 'disabled'],
+  examples: [
+    'basic',
+    'picture',
+    'picture-text',
+    'file-list',
+    'disabled',
+    'manually'
+  ],
   dependencies: {
     Icon,
     Uploader,
