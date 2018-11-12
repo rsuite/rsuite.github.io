@@ -49,6 +49,7 @@ import { CheckTreePicker } from 'rsuite';
 | renderTreeNode       | (nodeData:DataItemType)=>React.Node                                                          | 自定义渲染 tree 节点            |
 | renderValue          | (values:Array&lt;DataItemType.value&gt;, checkedItems:Array&lt;DataItemType&gt;)=>React.Node | 自定义渲染 placeholder          |
 | searchable           | boolean `(true)`                                                                             | 是否显示搜索框                  |
+| countable            | boolean `(true)`                                                                             | 是否显示已选项的计数            |
 | toggleComponentClass | React.ElementType `('a')`                                                                    | 为组件自定义元素类型            |
 | value                | Array&lt;DataItemType.value&gt;                                                              | 当前选中的值                    |
 | valueKey             | string `('value')`                                                                           | tree 数据结构 value 属性名称    |

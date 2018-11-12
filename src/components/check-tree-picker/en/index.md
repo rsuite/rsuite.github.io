@@ -48,7 +48,8 @@ import { CheckTreePicker } from 'rsuite';
 | renderTreeIcon       | (nodeData:Array&lt;Object&gt;)=>React.Node                                 | custom render the icon of tree node                         |
 | renderTreeNode       | (nodeData:Array&lt;Object&gt;)=>React.Node                                 | custom render tree node                                     |
 | renderValue          | (values:Array&lt;Object&gt;, checkedItems:Array&lt;Object&gt;)=>React.Node | custom render placeholder                                   |
-| seasrchable          | boolean `(true)`                                                           | whether dispaly search input box                            |
+| seasrchable          | boolean `(true)`                                                           | whether display search input box                            |
+| countable            | boolean `(true)`                                                           | whether display counts of checkItems                        |
 | toggleComponentClass | React.ElementType `('a')`                                                  | You can use a custom element for this component             |
 | value                | Array&lt;any&gt;                                                           | (Controlled) specifies the values of the selected tree node |
 | valueKey             | string `('value')`                                                         | set value key in data                                       |
