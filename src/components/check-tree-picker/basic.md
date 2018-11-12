@@ -17,10 +17,8 @@ const instance = (
     <CheckTreePicker
       defaultExpandAll
       data={data}
+      cascade={false}
       style={{ width: 280 }}
-      renderValue={(value, checkedItems) =>
-        checkedItems.map(item => item.label).join(' , ')
-      }
     />
   </div>
 );
