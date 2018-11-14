@@ -70,8 +70,8 @@ class AsynExample extends React.Component {
     return (
       <div className="example-item">
         <MultiCascader
+          block
           placeholder="Select"
-          style={{ width: 224 }}
           data={this.state.data}
           renderMenu={this.renderMenu}
           onSelect={this.handleSelect}

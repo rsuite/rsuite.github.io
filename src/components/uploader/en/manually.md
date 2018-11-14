@@ -1,4 +1,4 @@
-### Upload manually
+### Manually
 
 <!--start-code-->
 

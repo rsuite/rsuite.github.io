@@ -30,6 +30,6 @@ export default createComponentExample({
     Icon,
     Toggle,
     get: _.get,
-    cloneDeep: _.cloneDeep
+    clone: _.cloneDeep
   }
 });
