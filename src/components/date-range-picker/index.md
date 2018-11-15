@@ -16,7 +16,7 @@ import { DateRangePicker } from 'rsuite';
 
 ## Props
 
-### `<DateRangePicker`
+### `<DateRangePicker>`
 
 | 属性名称             | 类型`(默认值)`                                                                                                                                                           | 描述                                                            |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- |
@@ -27,17 +27,18 @@ import { DateRangePicker } from 'rsuite';
 | defaultOpen          | boolean                                                                                                                                                                  | 默认打开                                                        |
 | defaultValue         | Array&lt;Moment&gt;                                                                                                                                                      | 默认值                                                          |
 | disabled             | boolean                                                                                                                                                                  | 禁用组件                                                        |
-| disabledDate         | (<br/> date: Moment,<br/> selectDate: Array&lt;Moment&gt;,<br/> selectedDone: boolean, <br/> target: 'CALENDAR', 'TOOLBAR_BUTTON_OK', 'TOOLBAR_SHORTCUT' <br/>)=>boolean | 禁用日期                                                        |
+| disabledDate         | (<br/>&nbsp;date: Moment,<br/> &nbsp;selectDate: Array&lt;Moment&gt;,<br/> &nbsp;selectedDone: boolean, <br/> &nbsp;target: 'CALENDAR', 'TOOLBAR_BUTTON_OK', 'TOOLBAR_SHORTCUT' <br/>)=>boolean | 禁用日期                                                        |
 | hoverRange           | unions: 'week', 'month' or (date: Moment)=> Array&lt;Moment&gt;                                                                                                          | 点击日期时将选中的日期范围                                      |
 | isoWeek              | boolean                                                                                                                                                                  | ISO 8601 标准， 每个日历星期从星期一开始，星期日为第 7 天       |
 | limitEndYear         | number `(5)`                                                                                                                                                             | 相对当前选择日期，设置可选年份下限                              |
 | limitStartYear       | number `(5)`                                                                                                                                                             | 相对当前选择日期，设置可选年份上限                              |
 | locale               | Object [`(Locale)`](#Locale)                                                                                                                                             | 本地化对应的语言描述                                            |
 | menuClassName        | string                                                                                                                                                                   | 选项菜单的 className                                            |
-| onChange             | function(`value`:Array&lt;Moment&gt;)                                                                                                                                    | 值改变后的回调函数                                              |
+| onChange             | (`value`:Array&lt;Moment&gt;)=>void                                                                                                                                      | 值改变后的回调函数                                              |
 | onClose              | ()=>void                                                                                                                                                                 | 关闭回调函数                                                    |
-| onOk                 | function(`value`:Array&lt;Moment&gt;)                                                                                                                                    | 点击 `确定` 按钮后的回调函数                                    |
+| onOk                 | (`value`:Array&lt;Moment&gt;)=>void                                                                                                                                      | 点击 `确定` 按钮后的回调函数                                    |
 | onOpen               | ()=>void                                                                                                                                                                 | 打开回调函数                                                    |
+| onSelect             | (data:Moment)=>void                                                                                                                                                      | 选择日期的回调函数                                              |
 | oneTap               | boolean                                                                                                                                                                  | 是否点击一次就选定日期范围，可[配合 hoverRange 使用](#单击模式) |
 | open                 | boolean                                                                                                                                                                  | 打开 (受控)                                                     |
 | placeholder          | string                                                                                                                                                                   | 没有值时候默认显示内容                                          |
