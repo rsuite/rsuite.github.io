@@ -8,17 +8,7 @@
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/users.js
  */
 
-const instance = (
-  <div>
-    <CheckPicker data={data} style={{ width: 224 }} />
-    <hr />
-    <CheckPicker
-      data={data}
-      style={{ width: 224 }}
-      renderValue={(value, items) => value.join(' , ')}
-    />
-  </div>
-);
+const instance = <CheckPicker data={data} style={{ width: 224 }} />;
 ReactDOM.render(instance);
 ```
 

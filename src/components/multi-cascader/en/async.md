@@ -10,7 +10,7 @@ function createNode() {
       .slice(0, 3)
       .toUpperCase()}`,
     value: Math.random() * 1e18,
-    children: []
+    children: Math.random() > 0.5 ? [] : null
   };
 }
 
@@ -44,10 +44,12 @@ class AsynExample extends React.Component {
       item => node.value === item.value
     );
 
-    getChildrenByNode(node, children => {
-      selectedNode.children = children;
-      this.setState({ data });
-    });
+    if (selectedNode.children && !selectedNode.children.length) {
+      getChildrenByNode(node, children => {
+        selectedNode.children = children;
+        this.setState({ data });
+      });
+    }
   }
 
   handleChange(value, event) {
@@ -68,8 +70,8 @@ class AsynExample extends React.Component {
     return (
       <div className="example-item">
         <MultiCascader
+          block
           placeholder="Select"
-          style={{ width: 224 }}
           data={this.state.data}
           renderMenu={this.renderMenu}
           onSelect={this.handleSelect}

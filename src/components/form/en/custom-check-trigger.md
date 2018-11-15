@@ -1,14 +1,14 @@
-### 自定义触发校验
+### Custom trigger verification
 
-在某些情况下不需要对表单数据进行实时校验，可以自定义控制校验的方式，配置 `checkTrigger` 参数。
+In some cases, there is no need for real-time validation of the form data. You can customize the way the control is validated and configure the `checkTrigger` parameter.
 
-`checkTrigger` 默认值是 `'change'`， 选项包括：
+The default value of `checkTrigger` is `'change'`, options includes:
 
-- `'change'` : 数据改变 `onChange` 的时候会触发数据校验。
-- `'blur'` : 组件失去焦点触发校验
-- `'none'` : 不触发校验，只会在调用 `<Form>` 的 `check()` 方法的时候才会校验
+- `'change'` : trigger verification when data change
+- `'blur'` : trigger verification when component blur
+- `'none'` : Only valid when calling the `check()` method of `<Form>`
 
-在 `<Form>` 和 `<FormControl>` 组件上都有 `checkTrigger` 属性， 在 `<Form>` 中可以定义整个表单的校验方式，如果有个表单组件需要单独处理校验方式，可以在 `<FormControl>` 上进行设置。
+There are `checkTrigger` properties on the `<Form>` and `<FormControl>` components. You can define the entire form's validation method in `<Form>`. If there is a form component that needs to handle the validation independently, you can Set it on `<FormControl>`.
 
 <!--start-code-->
 
@@ -18,7 +18,6 @@ const model = Schema.Model({
     .isEmail('Please enter a valid email address.')
     .isRequired('This field is required.')
 });
-
 class CustomField extends React.PureComponent {
   render() {
     const { name, message, label, accepter, error, ...props } = this.props;
@@ -85,18 +84,19 @@ class CustomCheckForm extends React.Component {
           onCheck={formError => {
             this.setState({ formError });
           }}
+          formError={formError}
           formDefaultValue={formValue}
           model={model}
           checkTrigger={checkTrigger}
         >
           <CustomField
             name="name"
-            label="邮箱"
+            label="Email"
             error={formError.name}
-            message="请输入邮箱地址"
+            message="Email address"
           />
           <Button appearance="primary" onClick={this.handleSubmit}>
-            提交
+            Submit
           </Button>
         </Form>
       </div>
@@ -109,4 +109,4 @@ ReactDOM.render(<CustomCheckForm />);
 
 <!--end-code-->
 
-> 还可以设置校验延迟时间 `checkDelay`, 默认值为 `500` 毫秒。
+> You can also set the check delay time `checkDelay`, the default value is `500` milliseconds.

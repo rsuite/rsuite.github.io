@@ -26,6 +26,7 @@ import { CheckTreePicker } from 'rsuite';
 | childKey             | string `('children')`                                                                        | tree 数据结构 children 属性名称 |
 | cleanable            | boolean `(true)`                                                                             | 是否可以清楚                    |
 | container            | HTMLElement or (() => HTMLElement)                                                           | 设置渲染的容器                  |
+| countable            | boolean `(true)`                                                                             | 是否显示已选项的计数            |
 | data \*              | Array&lt;[DataItemType](#DataItemType)&gt;                                                   | tree 数据                       |
 | defaultExpandAll     | boolean                                                                                      | 默认展开所有节点                |
 | defaultValue         | Array&lt;DataItemType.value&gt;                                                              | 默认选中的值                    |

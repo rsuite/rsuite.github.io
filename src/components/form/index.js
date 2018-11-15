@@ -73,7 +73,7 @@ export default createComponentExample({
     'form-check',
     'custom-form-control',
     'custom-third-party-libraries',
-    'custom-check-form'
+    'custom-check-trigger'
   ],
   dependencies: {
     Alert,

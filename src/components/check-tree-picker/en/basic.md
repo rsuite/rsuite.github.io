@@ -14,14 +14,11 @@ const instance = (
     <CheckTreePicker defaultExpandAll data={data} style={{ width: 280 }} />
     <hr />
     <h5>Not cascaded:</h5>
-
     <CheckTreePicker
       defaultExpandAll
       data={data}
+      cascade={false}
       style={{ width: 280 }}
-      renderValue={(value, checkedItems) =>
-        checkedItems.map(item => item.label).join(' , ')
-      }
     />
   </div>
 );

@@ -32,6 +32,7 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | data \*                | Array&lt;Object&gt;                     | Table data                                                                                    |
 | defaultExpandAllRows   | boolean                                 | Expand all nodes By default                                                                   |
 | defaultExpandedRowKeys | Array&lt;string&gt;                     | Specify the default expanded row by `rowkey`                                                  |
+| defaultSortType        | enum: 'desc', 'asc'                     | Sort type                                                                                     |
 | expandedRowKeys        | Array&lt;string&gt;                     | Specify the default expanded row by `rowkey` (Controlled)                                     |
 | headerHeight           | number`(40)`                            | Table Header Height                                                                           |
 | height                 | number`(200)`                           | Table height                                                                                  |
@@ -44,13 +45,14 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | onSortColumn           | (dataKey:string, sortType:string)=>void | Click the callback function of the sort sequence to return the value `sortColumn`, `sortType` |
 | renderRowExpanded      | (rowDate?: Object) => React.Node        | Customize what you can do to expand a zone                                                    |
 | renderTreeToggle       | (icon:node,rowData:object)=> node       | Tree table, the callback function in the expanded node                                        |
+| rowClassName           | string , (rowData:object)=>string       | Add an optional extra class name to row                                                       |
 | rowExpandedHeight      | number `(100)`                          | Set the height of an expandable area                                                          |
 | rowHeight              | number`(46)`                            | Row height                                                                                    |
 | rowKey                 | string `('key')`                        | Each row corresponds to the unique `key` in `data`                                            |
 | setRowHeight           | (rowData:object)=> number               | Custom Settings Row Height                                                                    |
 | showHeader             | boolean `(true)`                        | Display header                                                                                |
-| sortColumn             | string                                  | Sort Column Name                                                                              |
-| sortType               | enum: 'desc', 'asc'                     | Sort Type                                                                                     |
+| sortColumn             | string                                  | Sort column name ˝                                                                            |
+| sortType               | enum: 'desc', 'asc'                     | Sort type (Controlled)                                                                        |
 | width                  | number                                  | Table width                                                                                   |
 
 

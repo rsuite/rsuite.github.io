@@ -127,15 +127,6 @@ class AsynExample extends React.Component {
     return node.label;
   }
 
-  handleOnExpand(activeNode, layer) {
-    if (activeNode.children.length === 0) {
-      activeNode.expand && this.setLoading(activeNode, true);
-      this.loadData(activeNode, layer).then(() => {
-        this.setLoading(activeNode, false);
-      });
-    }
-  }
-
   renderTreeIcon(node, expandIcon) {
     if (node.loading) {
       return <Icon icon="spinner" spin />;

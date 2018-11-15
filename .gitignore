@@ -46,3 +46,5 @@ dist
 yarn.lock
 package-lock.json
 /index.html
+test
+webpack.test.config.js

@@ -32,6 +32,7 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | data \*                | Array&lt;Object&gt;                     | 表格数据                                                     |
 | defaultExpandAllRows   | boolean                                 | 默认展开所有节点                                             |
 | defaultExpandedRowKeys | Array&lt;string&gt;                     | 通过 rowKey 指定默认展开的行                                 |
+| defaultSortType        | enum: 'desc', 'asc'                     | 排序类型                                                     |
 | expandedRowKeys        | Array&lt;string&gt;                     | 通过 rowKey 指定展开的行 (受控)                              |
 | headerHeight           | number`(40)`                            | 表头高度                                                     |
 | height                 | number`(200)`                           | 高度                                                         |
@@ -45,14 +46,17 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | onSortColumn           | (dataKey:string, sortType:string)=>void | 点击排序列的回调函数，返回 `sortColumn`, `sortType` 这两个值 |
 | renderRowExpanded      | (rowDate?: Object) => React.Node        | 自定义可以展开区域的内容                                     |
 | renderTreeToggle       | (icon:node,rowData:object)=> node       | 树形表格，在展开节点的回调函数                               |
+| rowClassName           | string , (rowData:object)=>string       | 为行自定义 className                                         |
 | rowExpandedHeight      | number `(100)`                          | 设置可展开区域的高度                                         |
 | rowHeight              | number`(46)`                            | 行高                                                         |
 | rowKey                 | string `('key')`                        | 每一个行对应的 `data` 中的唯一 `key`                         |
 | setRowHeight           | (rowData:object)=> number               | 自定义设置行高                                               |
 | showHeader             | boolean `(true)`                        | 显示表头                                                     |
 | sortColumn             | string                                  | 排序列名称                                                   |
-| sortType               | enum: 'desc', 'asc'                     | 排序类型                                                     |
+| sortType               | enum: 'desc', 'asc'                     | 排序类型（受控）                                             |
 | width                  | number                                  | 宽度                                                         |
+
+
 
 ### `<Table.Column>`
 

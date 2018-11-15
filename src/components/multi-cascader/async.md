@@ -10,7 +10,7 @@ function createNode() {
       .slice(0, 3)
       .toUpperCase()}`,
     value: Math.random() * 1e18,
-    children: []
+    children: Math.random() > 0.5 ? [] : null
   };
 }
 
@@ -25,7 +25,7 @@ function createChildren() {
 function getChildrenByNode(node, callback) {
   setTimeout(() => {
     callback(createChildren());
-  }, 1000);
+  }, 500);
 }
 
 class AsynExample extends React.Component {
@@ -38,19 +38,22 @@ class AsynExample extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
   handleSelect(node) {
-    const data = cloneDeep(this.state.data);
+    const data = clone(this.state.data);
     const selectedNode = findNodeOfTree(
       data,
       item => node.value === item.value
     );
 
-    getChildrenByNode(node, children => {
-      selectedNode.children = children;
-      this.setState({ data });
-    });
+    if (selectedNode.children && !selectedNode.children.length) {
+      getChildrenByNode(node, children => {
+        selectedNode.children = children;
+        this.setState({ data });
+      });
+    }
   }
 
   handleChange(value, event) {
+    console.log(value, 'onChange');
     this.setState({ value });
   }
 
@@ -68,8 +71,8 @@ class AsynExample extends React.Component {
     return (
       <div className="example-item">
         <MultiCascader
+          block
           placeholder="请选择"
-          style={{ width: 224 }}
           data={this.state.data}
           renderMenu={this.renderMenu}
           onSelect={this.handleSelect}
