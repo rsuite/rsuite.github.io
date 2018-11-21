@@ -30,7 +30,8 @@ import {
   Alert,
   SelectPicker,
   Slider,
-  DatePicker
+  DatePicker,
+  Input
 } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
@@ -84,6 +85,7 @@ export default createComponentExample({
     Form,
     FormGroup,
     FormControl,
+    Input,
     InputGroup,
     InputNumber,
     ErrorMessage,
