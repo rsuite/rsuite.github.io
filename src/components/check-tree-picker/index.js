@@ -12,7 +12,8 @@ export default createComponentExample({
     'placement',
     'disabled',
     'custom',
-    'async'
+    'async',
+    'uncheckable'
   ],
   dependencies: {
     Toggle,
