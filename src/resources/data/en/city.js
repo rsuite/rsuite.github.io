@@ -1,422 +1,422 @@
 export default [
   {
-    label: '中国',
+    label: 'China',
     value: 1,
     children: [
       {
-        label: '北京市',
+        label: 'Beijing',
         value: 2
       },
       {
-        label: '福建省',
+        label: 'Fujian',
         value: 3,
         children: [
           {
-            label: '福州市',
+            label: 'Fuzhou',
             value: 36
           },
           {
-            label: '南平市',
+            label: 'Nanping',
             value: 37
           },
           {
-            label: '泉州市',
+            label: 'Quanzhou',
             value: 38
           },
           {
-            label: '莆田市',
+            label: 'Putian',
             value: 39
           }
         ]
       },
       {
-        label: '广东省',
+        label: 'Guangdong',
         value: 4,
         children: [
           {
-            label: '广州市',
+            label: 'Guangzhou',
             value: 45
           },
           {
-            label: '深圳市',
+            label: 'Shenzhen',
             value: 46
           },
           {
-            label: '肇庆市',
+            label: 'Zhaoqing',
             value: 47
           },
           {
-            label: '惠州市',
+            label: 'Huizhou',
             value: 48
           },
           {
-            label: '阳江市',
+            label: 'Yangjiang',
             value: 49
           },
           {
-            label: '茂名市',
+            label: 'Maoming',
             value: 50
           },
           {
-            label: '湛江市',
+            label: 'Zhanjiang',
             value: 51
           },
           {
-            label: '中山市',
+            label: 'Zhongshan',
             value: 52
           },
           {
-            label: '珠海市',
+            label: 'Zhuhai',
             value: 53
           },
           {
-            label: '江门市',
+            label: 'Jiangmen',
             value: 54
           }
         ]
       },
       {
-        label: '内蒙古自治区',
+        label: 'Inner Mongolia',
         value: 5,
         children: [
           {
-            label: '呼和浩特市',
+            label: 'Hohhot',
             value: 66
           },
           {
-            label: '赤峰市',
+            label: 'Chifeng',
             value: 67
           },
           {
-            label: '鄂尔多斯市',
+            label: 'Ordos',
             value: 68
           },
           {
-            label: '乌兰察布市',
+            label: 'Ulanqab',
             value: 69
           },
           {
-            label: '巴彦淖尔市',
+            label: 'Bayan Nur',
             value: 70
           }
         ]
       },
       {
-        label: '香港',
+        label: 'Hong Kong',
         value: 6
       },
       {
-        label: '台湾',
+        label: 'Taiwan',
         value: 7
       },
       {
-        label: '贵州省',
+        label: 'Guizhou',
         value: 8,
         children: [
           {
-            label: '贵阳市',
+            label: 'Guiyang',
             value: 78
           },
           {
-            label: '黔南布依族苗族自治州',
+            label: 'Qiannan',
             value: 79
           },
           {
-            label: '铜仁地区',
+            label: 'Tongren',
             value: 80
           }
         ]
       },
       {
-        label: '宁夏回族自治区',
+        label: 'Ningxia',
         value: 9,
         children: [
           {
-            label: '银川市',
+            label: 'Yinchuan',
             value: 87
           }
         ]
       },
       {
-        label: '江苏省',
+        label: 'Jiangsu',
         value: 11,
         children: [
           {
-            label: '南京市',
+            label: 'Nanjing',
             value: 109
           },
           {
-            label: '常州市',
+            label: 'Changzhou',
             value: 110
           },
           {
-            label: '苏州市',
+            label: 'Suzhou',
             value: 111
           },
           {
-            label: '无锡市',
+            label: 'Wuxi',
             value: 112
           },
           {
-            label: '徐州市',
+            label: 'Xuzhou',
             value: 113
           },
           {
-            label: '连云港市',
+            label: 'Lianyungang',
             value: 114
           },
           {
-            label: '扬州市',
+            label: 'Yangzhou',
             value: 115
           },
           {
-            label: '宿迁市',
+            label: 'Suqian',
             value: 116
           },
           {
-            label: '淮安市',
+            label: 'Huaian',
             value: 117
           },
           {
-            label: '泰州市',
+            label: 'Taizhou',
             value: 118
           },
           {
-            label: '南通市',
+            label: 'Nantong',
             value: 119
           },
           {
-            label: '盐城市',
+            label: 'Yancheng',
             value: 120
           },
           {
-            label: '镇江市',
+            label: 'Zhenjiang',
             value: 121
           }
         ]
       },
       {
-        label: '澳门',
+        label: 'Macao',
         value: 20
       },
       {
-        label: '湖北省',
+        label: 'Hubei',
         value: 21,
         children: [
           {
-            label: '武汉市',
+            label: 'Wuhan',
             value: 214
           },
           {
-            label: '荆州市',
+            label: 'Jingzhou',
             value: 215
           },
           {
-            label: '宜昌市',
+            label: 'Yichang',
             value: 216
           },
           {
-            label: '襄樊市',
+            label: 'Xiangfan',
             value: 217
           },
           {
-            label: '孝感市',
+            label: 'Xiaogan',
             value: 218
           },
           {
-            label: '黄冈市',
+            label: 'Huanggang',
             value: 219
           },
           {
-            label: '黄石市',
+            label: 'Huangshi',
             value: 220
           },
           {
-            label: '咸宁市',
+            label: 'Xianning',
             value: 221
           },
           {
-            label: '荆门市',
+            label: 'Jingmen',
             value: 222
           },
           {
-            label: '神农架林区',
+            label: 'Shennongjia',
             value: 223
           },
           {
-            label: '鄂州市',
+            label: 'Ezhou',
             value: 224
           },
           {
-            label: '随州市',
+            label: 'Suizhou',
             value: 225
           },
           {
-            label: '恩施土家族苗族自治州',
+            label: 'Enshi',
             value: 226
           },
           {
-            label: '十堰市',
+            label: 'Shiyan',
             value: 373
           }
         ]
       },
       {
-        label: '西藏自治区',
+        label: 'Tibet',
         value: 22,
         children: [
           {
-            label: '拉萨市',
+            label: 'Lhasa',
             value: 227
           },
           {
-            label: '日喀则地区',
+            label: 'Shigatse',
             value: 228
           },
           {
-            label: '山南地区',
+            label: 'Shannan,Tibet',
             value: 229
           },
           {
-            label: '林芝地区',
+            label: 'Nyingchi',
             value: 230
           },
           {
-            label: '昌都地区',
+            label: 'Qamdo',
             value: 231
           },
           {
-            label: '那曲地区',
+            label: 'Nagqu',
             value: 232
           },
           {
-            label: '阿里地区',
+            label: 'Ngari,Tibet',
             value: 233
           }
         ]
       },
       {
-        label: '天津市',
+        label: 'Tianjin',
         value: 23
       },
       {
-        label: '上海市',
+        label: 'Shanghai',
         value: 24
       },
       {
-        label: '河北省',
+        label: 'Hebei',
         value: 25,
         children: [
           {
-            label: '石家庄市',
+            label: 'Shijiazhuang',
             value: 234
           },
           {
-            label: '保定市',
+            label: 'Baoding',
             value: 235
           },
           {
-            label: '邯郸市',
+            label: 'Handan',
             value: 236
           }
         ]
       },
       {
-        label: '甘肃省',
+        label: 'Gansu',
         value: 26,
         children: [
           {
-            label: '定西市',
+            label: 'Dingxi',
             value: 245
           },
           {
-            label: '天水市',
+            label: 'Tianshui',
             value: 246
           },
           {
-            label: '兰州市',
+            label: 'Lanzhou',
             value: 247
           }
         ]
       },
       {
-        label: '浙江省',
+        label: 'Zhejiang',
         value: 27,
         children: [
           {
-            label: '杭州市',
+            label: 'Hangzhou',
             value: 257
           },
           {
-            label: '金华市',
+            label: 'Jinhua',
             value: 258
           },
           {
-            label: '丽水市',
+            label: 'Lishui',
             value: 259
           }
         ]
       },
       {
-        label: '吉林省',
+        label: 'Jilin',
         value: 28,
         children: [
           {
-            label: '长春市',
+            label: 'Changchun',
             value: 268
           },
           {
-            label: '吉林市',
+            label: 'Jilin',
             value: 269
           },
           {
-            label: '四平市',
+            label: 'Siping',
             value: 270
           }
         ]
       },
       {
-        label: '江西省',
+        label: 'Jiangxi',
         value: 31,
         children: [
           {
-            label: '南昌市',
+            label: 'Nanchang',
             value: 303
           },
           {
-            label: '九江市',
+            label: 'Jiujiang',
             value: 304
           },
           {
-            label: '景德镇市',
+            label: 'Jingdezhen',
             value: 305
           }
         ]
       },
       {
-        label: '青海省',
+        label: 'Qinghai',
         value: 34,
         children: [
           {
-            label: '西宁市',
+            label: 'Xining',
             value: 348
           },
           {
-            label: '海西蒙古族藏族自治州',
+            label: 'Haixi',
             value: 349
           }
         ]
       },
       {
-        label: '海南省',
+        label: 'Hainan',
         value: 35,
         children: [
           {
-            label: '三亚市',
+            label: 'Sanya',
             value: 356
           },
           {
-            label: '海口市',
+            label: 'Haikou',
             value: 357
           }
         ]
