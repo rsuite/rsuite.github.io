@@ -37,17 +37,10 @@ class AsynExample extends React.Component {
     this.handleSelect = this.handleSelect.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
-  handleSelect(node) {
-    const data = cloneDeep(this.state.data);
-    const selectedNode = findNodeOfTree(
-      data,
-      item => node.value === item.value
-    );
-
-    if (selectedNode.children && !selectedNode.children.length) {
+  handleSelect(node, activePaths, concat, event) {
+    if (node.children && !node.children.length) {
       getChildrenByNode(node, children => {
-        selectedNode.children = children;
-        this.setState({ data });
+        this.setState({ data: concat(this.state.data, children) });
       });
     }
   }

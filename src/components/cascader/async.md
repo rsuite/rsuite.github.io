@@ -25,7 +25,7 @@ function createChildren() {
 function getChildrenByNode(node, callback) {
   setTimeout(() => {
     callback(createChildren());
-  }, 1000);
+  }, 500);
 }
 
 class AsynExample extends React.Component {
@@ -37,17 +37,12 @@ class AsynExample extends React.Component {
     this.handleSelect = this.handleSelect.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
-  handleSelect(node) {
-    const data = cloneDeep(this.state.data);
-    const selectedNode = findNodeOfTree(
-      data,
-      item => node.value === item.value
-    );
-
-    getChildrenByNode(node, children => {
-      selectedNode.children = children;
-      this.setState({ data });
-    });
+  handleSelect(node, activePaths, concat, event) {
+    if (node.children && !node.children.length) {
+      getChildrenByNode(node, children => {
+        this.setState({ data: concat(this.state.data, children) });
+      });
+    }
   }
 
   handleChange(value, event) {
