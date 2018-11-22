@@ -60,7 +60,7 @@ import { TagPicker } from 'rsuite';
 
 ```ts
 type DataItemType = {
-  value: any;
+  value: string;
   label: React.Node;
   groupBy?: string;
 };

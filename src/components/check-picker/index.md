@@ -26,20 +26,20 @@ import { CheckPicker } from 'rsuite';
 | cleanable            | boolean `(true)`                                                 | 可以清除                             |
 | container            | HTMLElement or (() => HTMLElement)                               | 设置渲染的容器                       |
 | data \*              | Array&lt;[DataItemType](#DataItemType)&gt;                       | 组件数据                             |
-| defaultValue         | Array&lt;DataItemType.value&gt;                                  | 设置默认值 `非受控`                  |
+| defaultValue         | Array&lt;string&gt;                                              | 设置默认值 `非受控`                  |
 | disabled             | boolean                                                          | 禁用组件                             |
-| disabledItemValues   | Array&lt;DataItemType.value&gt;                                  | 禁用选项                             |
+| disabledItemValues   | Array&lt;string&gt;                                              | 禁用选项                             |
 | groupBy              | string                                                           | 设置分组条件在 `data` 中的 `key`     |
 | height               | number `(320)`                                                   | 设置 Dropdown 的高度                 |
 | labelKey             | string `('label')`                                               | 设置选项显示内容在 `data` 中的 `key` |
 | menuClassName        | string                                                           | 应用于菜单 DOM 节点的 css class      |
 | menuStyle            | Object                                                           | 应用于菜单 DOM 节点的 style          |
-| onChange             | (value:DataItemType.value, event)=>void                          | `value` 发生改变时的回调函数         |
+| onChange             | (value:string, event)=>void                                      | `value` 发生改变时的回调函数         |
 | onClose              | ()=>void                                                         | 关闭回调函数                         |
 | onGroupTitleClick    | (event)=>void                                                    | 点击分组标题的回调函数               |
 | onOpen               | ()=>void                                                         | 打开回调函数                         |
 | onSearch             | (searchKeyword:string, event)=>void                              | 搜索的回调函数                       |
-| onSelect             | (value:DataItemType.value, item: DataItemType , event)=>void     | 选项被点击选择后的回调函数           |
+| onSelect             | (value:string, item: DataItemType , event)=>void                 | 选项被点击选择后的回调函数           |
 | placeholder          | React.Node `('Select')`                                          | 占位符                               |
 | placement            | enum: [Placement](#Placement)`('bottomLeft')`                    | 位置                                 |
 | renderExtraFooter    | ()=>React.Node                                                   | 自定义页脚内容                       |
@@ -50,7 +50,7 @@ import { CheckPicker } from 'rsuite';
 | searchable           | boolean `(true)`                                                 | 可以搜索                             |
 | sticky               | boolean                                                          | 把选项中已选择的选项置顶在最前面     |
 | toggleComponentClass | React.ElementType `('a')`                                        | 为组件自定义元素类型                 |
-| value                | Array&lt;DataItemType.value&gt;                                  | 设置值 `受控`                        |
+| value                | Array&lt;string&gt;                                              | 设置值 `受控`                        |
 | valueKey             | string `('value')`                                               | 设置选项值在 `data` 中的 `key`       |
 
 ## Types
@@ -78,7 +78,7 @@ type Placement =
 
 ```ts
 type DataItemType = {
-  value: any;
+  value: string;
   label: React.Node;
   groupBy?: string;
 };

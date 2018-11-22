@@ -27,16 +27,16 @@ import { TreePicker } from 'rsuite';
 | data \*              | Array&lt;[DataItemType](#DataItemType)&gt;                    | tree 数据                       |
 | defaultExpandAll     | boolean                                                       | 默认展开所有节点                |
 | defaultOpen          | boolean                                                       | 默认打开                        |
-| defaultValue         | DataItemType.value                                            | 默认选中的值                    |
+| defaultValue         | string                                                        | 默认选中的值                    |
 | disabled             | boolean                                                       | 是否禁用 Picker                 |
-| disabledItemValues   | Array&lt;DataItemType.value&gt;                               | 禁用选项                        |
+| disabledItemValues   | Array&lt;string&gt;                                           | 禁用选项                        |
 | expandAll            | boolean                                                       | (受控)展示/收起所有节点         |
 | inline               | boolean                                                       | 是否内联显示 tree               |
 | labelKey             | string `('label')`                                            | tree 数据结构 label 属性名称    |
 | locale               | object                                                        | 本地语言                        |
 | menuClassName        | string                                                        | 应用于菜单 DOM 节点的 css class |
 | menuStyle            | object                                                        | 应用于菜单 DOM 节点的 style     |
-| onChange             | (value:DataItemType.value)=>void                              | 数据改变的回调函数              |
+| onChange             | (value:string)=>void                                          | 数据改变的回调函数              |
 | onClose              | ()=>void                                                      | 关闭 Dropdown 的回调函数        |
 | onExpand             | (activeNode:DataItemType, layer:number)=>void                 | 树节点展示时的回调              |
 | onOpen               | ()=>void                                                      | 展开 Dropdown 的回调函数        |
@@ -51,7 +51,7 @@ import { TreePicker } from 'rsuite';
 | renderValue          | (activeNode:DataItemType, placeholder:React.Node)=>React.Node | 自定义渲染 placeholder          |
 | seasrchable          | boolean `(true)`                                              | 是否可以搜索                    |
 | toggleComponentClass | React.ElementType `('a')`                                     | 为组件自定义元素类型            |
-| value                | DataItemType.value                                            | 当前选中的值                    |
+| value                | string                                                        | 当前选中的值                    |
 | valueKey             | string `('value')`                                            | tree 数据结构 value 属性名称    |
 
 ## Types
@@ -79,7 +79,7 @@ type Placement =
 
 ```ts
 type DataItemType = {
-  value: any;
+  value: string;
   label: React.Node;
   children?: Array<DataItemType>;
 };

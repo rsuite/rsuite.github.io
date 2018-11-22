@@ -22,24 +22,24 @@ import { Tree } from 'rsuite';
 | classPrefix        | string`('picker')`                                   | The prefix of the component CSS class       |
 | data \*            | Array&lt;[DataItemType](#DataItemType)&gt;           | Tree Data                                   |
 | defaultExpandAll   | boolean                                              | Expand all nodes By default                 |
-| defaultValue       | DataItemType.value                                   | Default selected Value                      |
-| disabledItemValues | Array&lt;DataItemType.value&gt;                      | Disable item by value                       |
+| defaultValue       | string                                               | Default selected Value                      |
+| disabledItemValues | Array&lt;string&gt;                                  | Disable item by value                       |
 | expandAll          | boolean                                              | Expand or unExpand all nodes(Controlled)    |
 | labelKey           | string `('label')`                                   | Tree data structure Label property name     |
-| onChange           | (value:DataItemType.value)=>void                     | Callback function for data change           |
+| onChange           | (value:string)=>void                                 | Callback function for data change           |
 | onExpand           | (activeNode:DataItemType, layer:number)=>void        | Whether inline display tree                 |
 | onSelect           | (activeNode:DataItemType, layer:number, event)=>void | Callback function after selecting tree node |
 | renderTreeIcon     | (nodeData:DataItemType)=>React.Node                  | Custom Render icon                          |
 | renderTreeNode     | (nodeData:DataItemType)=>React.Node                  | Custom Render tree Node                     |
 | searchKeyword      | string                                               | searchKeyword (Controlled)                  |
-| value              | DataItemType.value                                   | Selected value                              |
+| value              | string                                               | Selected value                              |
 | valueKey           | string `('value')`                                   | Tree data Structure Value property name     |
 
 ### DataItemType
 
 ```ts
 type DataItemType = {
-  value: any;
+  value: string;
   label: React.Node;
   children?: Array<DataItemType>;
 };

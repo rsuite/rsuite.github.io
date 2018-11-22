@@ -28,18 +28,18 @@ import { CheckPicker } from 'rsuite';
 | data \*              | Array&lt;DataItemType&gt;                                        | The data of component                                   |
 | defaultValue         | any                                                              | Default values of the selected items                    |
 | disabled             | boolean                                                          | Whether disabled componet                               |
-| disabledItemValues   | Array&lt;DataItemType.value&gt;                                  | Disable item by value                                   |
+| disabledItemValues   | Array&lt;string&gt;                                              | Disable item by value                                   |
 | groupBy              | string                                                           | Set group condition key in data                         |
 | height               | number `(320)`                                                   | The height of Dropdown                                  |
 | labelKey             | string `('label')`                                               | Set label key in data                                   |
 | menuClassName        | string                                                           | A css class to apply to the Menu DOM node.              |
 | menuStyle            | Object                                                           | A style to apply to the Menu DOM node.                  |
-| onChange             | (value:DataItemType.value, event)=>void                          | Callback fired when value change                        |
+| onChange             | (value:string, event)=>void                                      | Callback fired when value change                        |
 | onClose              | ()=>void                                                         | Callback fired when close component                     |
 | onGroupTitleClick    | (event)=>void                                                    | Callback fired when click the group title               |
 | onOpen               | ()=>void                                                         | Callback fired when open component                      |
 | onSearch             | (searchKeyword:string, event)=>void                              | Callback fired when search                              |
-| onSelect             | (value:DataItemType.value, item: DataItemType , event)=>void     | Callback fired when item is selected                    |
+| onSelect             | (value:string, item: DataItemType , event)=>void                 | Callback fired when item is selected                    |
 | placeholder          | React.Node `('Select')`                                          | Setting placeholders                                    |
 | placement            | enum: [Placement](#Placement)`('bottomLeft')`                    | The placement of component                              |
 | renderExtraFooter    | ()=>React.Node                                                   | Custom render extra footer                              |
@@ -78,7 +78,7 @@ type Placement =
 
 ```ts
 type DataItemType = {
-  value: any;
+  value: string;
   label: React.Node;
   groupBy?: string;
 };

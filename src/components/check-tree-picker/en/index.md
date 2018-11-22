@@ -51,7 +51,7 @@ import { CheckTreePicker } from 'rsuite';
 | renderValue           | (values:Array&lt;Object&gt;, checkedItems:Array&lt;Object&gt;)=>React.Node | custom render placeholder                                   |
 | seasrchable           | boolean `(true)`                                                           | whether display search input box                            |
 | toggleComponentClass  | React.ElementType `('a')`                                                  | You can use a custom element for this component             |
-| uncheckableItemValues | Array&lt;DataItemType.value&gt;                                            | Set the option value for the check box not to be rendered   |
+| uncheckableItemValues | Array&lt;string&gt;                                                        | Set the option value for the check box not to be rendered   |
 | value                 | Array&lt;any&gt;                                                           | (Controlled) specifies the values of the selected tree node |
 | valueKey              | string `('value')`                                                         | set value key in data                                       |
 

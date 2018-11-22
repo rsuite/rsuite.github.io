@@ -27,15 +27,15 @@ import { TreePicker } from 'rsuite';
 | data \*              | Array&lt;[DataItemType](#DataItemType)&gt;                    | Tree data                                       |
 | defaultExpandAll     | boolean                                                       | Expand all nodes By default                     |
 | defaultOpen          | boolean                                                       | Open by default                                 |
-| defaultValue         | DataItemType.value                                            | Default selected Value                          |
+| defaultValue         | string                                                        | Default selected Value                          |
 | disabled             | boolean                                                       | Whether to disable Picker                       |
-| disabledItemValues   | Array&lt;DataItemType.value&gt;                               | Disable item by value                           |
+| disabledItemValues   | Array&lt;string&gt;                                           | Disable item by value                           |
 | expandAll            | boolean                                                       | Expand or unExpand all nodes(Controlled)        |
 | inline               | boolean                                                       | Whether inline display tree                     |
 | labelKey             | string `('label')`                                            | Tree data structure Label property name         |
 | menuClassName        | string                                                        | A css class to apply to the Menu DOM node       |
 | menuStyle            | object                                                        | style for Menu                                  |
-| onChange             | (value:DataItemType.value)=>void                              | Callback function for data change               |
+| onChange             | (value:string)=>void                                          | Callback function for data change               |
 | onClose              | ()=>void                                                      | Close Dropdown callback functions               |
 | onExpand             | (activeNode:DataItemType, layer:number)=>void                 | Callback When tree node is displayed            |
 | onOpen               | ()=>void                                                      | Open Dropdown callback function                 |
@@ -50,7 +50,7 @@ import { TreePicker } from 'rsuite';
 | renderValue          | (activeNode:DataItemType, placeholder:React.Node)=>React.Node | Custom Render Placeholder                       |
 | seasrchable          | boolean `(true)`                                              | Set whether you can search                      |
 | toggleComponentClass | React.ElementType `('a')`                                     | You can use a custom element for this component |
-| value                | DataItemType.value                                            | Selected value                                  |
+| value                | string                                                        | Selected value                                  |
 | valueKey             | string `('value')`                                            | Tree data Structure Value property name         |
 
 ## Types
@@ -78,7 +78,7 @@ type Placement =
 
 ```ts
 type DataItemType = {
-  value: any;
+  value: string;
   label: React.Node;
   children?: Array<DataItemType>;
 };
