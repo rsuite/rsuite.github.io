@@ -1,6 +1,6 @@
 import React from 'react';
 import { CheckTreePicker, Button, Icon, Toggle } from 'rsuite';
-import data from '../../resources/data/city';
+import { getCity } from '../../resources/data';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
@@ -15,11 +15,11 @@ export default createComponentExample({
     'async',
     'uncheckable'
   ],
+  getDependencies: getCity,
   dependencies: {
     Toggle,
     Icon,
     Button,
-    CheckTreePicker,
-    data
+    CheckTreePicker
   }
 });

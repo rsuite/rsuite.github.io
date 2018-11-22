@@ -1,6 +1,6 @@
 import React from 'react';
 import { TreePicker, Button, Icon } from 'rsuite';
-import data from '../../resources/data/city';
+import { getCity } from '../../resources/data';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
@@ -14,10 +14,10 @@ export default createComponentExample({
     'custom',
     'async'
   ],
+  getDependencies: getCity,
   dependencies: {
     TreePicker,
     Button,
-    Icon,
-    data
+    Icon
   }
 });
