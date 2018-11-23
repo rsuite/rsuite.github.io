@@ -38,7 +38,7 @@ import { CheckTreePicker } from 'rsuite';
 | menuStyle             | React.CSSProperties                                                                                        | style for Menu                                              |
 | onChange              | (values:Array&lt;string&gt;)=>boolean                                                                      | callback fired when value change                            |
 | onClose               | ()=>void                                                                                                   | callback fired when close component                         |
-| onExpand              | (activeNode:[DataItemType](#types),layer:number)=>boolean                                                  | callback fired when tree node expand state changed          |
+| onExpand              | (activeNode:[DataItemType](#types),layer:number, concat:(data, children)=>Array)=>boolean                  | callback fired when tree node expand state changed          |
 | onOpen                | ()=>void                                                                                                   | callback fired when open component                          |
 | onSearch              | (searchKeyword:string, event)=>boolean                                                                     | callback fired when search                                  |
 | onSelect              | (activeNode:[DataItemType](#types), layer:number, values:Array&lt;string&gt;)=>boolean                     | callback fired when tree node is selected                   |
