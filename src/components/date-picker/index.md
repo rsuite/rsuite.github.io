@@ -56,41 +56,11 @@ import { DatePicker } from 'rsuite';
 | onToggleTimeDropdown  | (open: boolean) => void                        | 切换到时间视图的回调函数                                  |
 | open                  | boolean                                        | 打开 (受控)                                               |
 | placeholder           | string                                         | 没有值时候默认显示内容                                    |
-| placement             | enum: [Placement](#Placement) `('bottomLeft')` | 显示位置                                                  |
-| ranges                | Array<[Range](#Range)> [`(Ranges)`](#Ranges)   | 快捷项配置                                                |
+| placement             | enum: [Placement](#types) `('bottomLeft')`     | 显示位置                                                  |
+| ranges                | Array<[Range](#types)> [`(Ranges)`](#Ranges)   | 快捷项配置                                                |
 | toggleComponentClass  | React.ElementType `('a')`                      | 为组件自定义元素类型                                      |
 | value                 | Moment                                         | 值`受控`                                                  |
 
-## Types
-
-### Range
-
-```js
-type Range = {
-  label: React.Node,
-  closeOverlay?: boolean,
-  value: Moment | ((date: Moment) => Moment)
-};
-```
-
-### Placement
-
-```js
-type Placement =
-  | 'bottomLeft'
-  | 'bottomRight'
-  | 'topLeft'
-  | 'topRight'
-  | 'leftTop'
-  | 'rightTop'
-  | 'leftBottom'
-  | 'rightBottom'
-  | 'auto'
-  | 'autoVerticalLeft'
-  | 'autoVerticalRight'
-  | 'autoHorizontalTop'
-  | 'autoHorizontalBottom';
-```
 
 ## Default
 

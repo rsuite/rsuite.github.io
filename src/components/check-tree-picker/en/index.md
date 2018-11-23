@@ -43,7 +43,7 @@ import { CheckTreePicker } from 'rsuite';
 | onSearch              | (searchKeyword:string, event)=>boolean                                     | callback fired when search                                  |
 | onSelect              | (activeNode::Object, ˝layer:number, values:Array&lt;any&gt;)=>boolean      | callback fired when tree node is selected                   |
 | placeholder           | React.Node `('Select')`                                                    |                                                             |
-| placement             | enum: Placement `('bottomLeft')`                                           | Placement of component                                      |
+| placement             | enum: [Placement](#types) `('bottomLeft')`                                 | Placement of component                                      |
 | renderExtraFooter     | ()=>React.Node                                                             | custom render extra footer                                  |
 | renderMenu            | (menu:React.Node)=>React.Node                                              | Customizing the Rendering Menu list                         |
 | renderTreeIcon        | (nodeData:Array&lt;Object&gt;)=>React.Node                                 | custom render the icon of tree node                         |
@@ -55,26 +55,6 @@ import { CheckTreePicker } from 'rsuite';
 | value                 | Array&lt;any&gt;                                                           | (Controlled) specifies the values of the selected tree node |
 | valueKey              | string `('value')`                                                         | set value key in data                                       |
 
-## Types
-
-### Placement
-
-```js
-type Placement =
-  | 'bottomLeft'
-  | 'bottomRight'
-  | 'topLeft'
-  | 'topRight'
-  | 'leftTop'
-  | 'rightTop'
-  | 'leftBottom'
-  | 'rightBottom'
-  | 'auto'
-  | 'autoVerticalLeft'
-  | 'autoVerticalRight'
-  | 'autoHorizontalTop'
-  | 'autoHorizontalBottom';
-```
 
 ## Related Components
 

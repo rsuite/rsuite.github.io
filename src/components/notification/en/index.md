@@ -83,27 +83,17 @@ type Config{
 }
 ```
 
-| Property       | Type `(Default)`                            | Description                                                                                                             |
-| -------------- | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| bottom         | number `(24)`                               | The distance from the bottom of the message box                                                                         |
-| description \* | React.Node                                  | The description of the message box                                                                                      |
-| duration       | number `(4500)`                             | message box duration (Unit: milliseconds)                                                                               |
-| key            | string                                      | The message box is uniquely identified, and you must fill out the field if you want to manually remove the message box. |
-| onClose        | ()=>void                                    | Closes the callback function.                                                                                           |
-| placement      | enum: [Placement](#Placement)`('topRight')` | The placement of the message box.                                                                                       |
-| title \*       | string                                      | The title of the message box                                                                                            |
-| top            | number `(24)`                               | The distance from the top of the message box                                                                            |
+| Property       | Type `(Default)`                         | Description                                                                                                             |
+| -------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| bottom         | number `(24)`                            | The distance from the bottom of the message box                                                                         |
+| description \* | React.Node                               | The description of the message box                                                                                      |
+| duration       | number `(4500)`                          | message box duration (Unit: milliseconds)                                                                               |
+| key            | string                                   | The message box is uniquely identified, and you must fill out the field if you want to manually remove the message box. |
+| onClose        | ()=>void                                 | Closes the callback function.                                                                                           |
+| placement      | enum: [Placement4](#types)`('topRight')` | The placement of the message box.                                                                                       |
+| title \*       | string                                   | The title of the message box                                                                                            |
+| top            | number `(24)`                            | The distance from the top of the message box                                                                            |
 
-
-
-
-## Types
-
-### Placement
-
-```ts
-type Placement = 'topLeft','topRight','bottomLeft','bottomRight'
-```
 
 ## Related components
 

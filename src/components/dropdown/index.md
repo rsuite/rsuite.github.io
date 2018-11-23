@@ -31,12 +31,12 @@ import { Dropdown } from 'rsuite';
 | onOpen               | () => void                                                | 菜单弹出的回调函数                               |
 | onSelect             | (eventKey: any, event: SyntheticEvent&lt;any&gt;) => void | 选择后的回调函数                                 |
 | onToggle             | (open?: boolean) => void                                  | 菜单状态切换的回调函数                           |
-| placement            | enum: [Placement](#Placement)`('bottomLeft')`             | 菜单显示位置                                     |
+| placement            | enum: [Placement8](#types)`('bottomLeft')`                | 菜单显示位置                                     |
 | renderTitle          | (children?: React.Node) => React.Node                     | 自定义 title                                     |
 | title                | React.Node                                                | 菜单默认显示内容                                 |
 | toggleClassName      | string                                                    | 设置 Toggle 的 className                         |
 | toggleComponentClass | React.ElementType `(Button)`                              | 为组件自定义元素类型                             |
-| trigger              | union: [Trigger](#Trigger) `('click')`                    | 触发事件                                         |
+| trigger              | union: [Trigger](#types) `('click')`                      | 触发事件                                         |
 
 
 ### `<Dropdown.Item>`
@@ -62,24 +62,3 @@ import { Dropdown } from 'rsuite';
 | pullLeft | boolean                          | 子菜单从左侧展开，默认为右侧展开 |
 | title    | string                           | 作为子菜单定义标题               |
 
-## Types
-
-### Placement
-
-```js
-type Placement =
-  | 'bottomLeft'
-  | 'bottomRight'
-  | 'topLeft'
-  | 'topRight'
-  | 'leftTop'
-  | 'rightTop'
-  | 'leftBottom'
-  | 'rightBottom';
-```
-
-### Trigger
-
-```js
-type Trigger = 'click' | 'hover' | 'contextMenu' | Array<'click' | 'hover' | 'contextMenu'>;
-```
