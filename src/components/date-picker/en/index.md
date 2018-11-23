@@ -55,41 +55,11 @@ import { DatePicker } from 'rsuite';
 | onToggleTimeDropdown  | (open: boolean) => void                        | Callback function that switches to the time view                                     |
 | open                  | boolean                                        | Whether open the component                                                           |
 | placeholder           | string                                         | Placeholder                                                                          |
-| placement             | enum: [Placement](#Placement) `('bottomLeft')` | The placement of component                                                           |
-| ranges                | Array<[Range](#Range)> [`(Ranges)`](#Ranges)   | Shortcut config                                                                      |
+| placement             | enum: [Placement](#types) `('bottomLeft')`     | The placement of component                                                           |
+| ranges                | Array<[Range](#types)> [`(Ranges)`](#Ranges)   | Shortcut config                                                                      |
 | toggleComponentClass  | React.ElementType `('a')`                      | You can use a custom element for this component                                      |
 | value                 | Moment                                         | Value (Controlled)                                                                   |
 
-## Types
-
-### Range
-
-```js
-type Range = {
-  label: React.Node,
-  closeOverlay?: boolean,
-  value: Moment | ((date: Moment) => Moment)
-};
-```
-
-### Placement
-
-```js
-type Placement =
-  | 'bottomLeft'
-  | 'bottomRight'
-  | 'topLeft'
-  | 'topRight'
-  | 'leftTop'
-  | 'rightTop'
-  | 'leftBottom'
-  | 'rightBottom'
-  | 'auto'
-  | 'autoVerticalLeft'
-  | 'autoVerticalRight'
-  | 'autoHorizontalTop'
-  | 'autoHorizontalBottom';
-```
 
 ## Default
 

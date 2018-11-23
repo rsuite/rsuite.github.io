@@ -88,7 +88,7 @@
   {
     "id": "modal",
     "name": "Modal",
-    "title": "模态窗口",
+    "title": "模态框",
     "components": [
       "Modal",
       "Modal.Header",

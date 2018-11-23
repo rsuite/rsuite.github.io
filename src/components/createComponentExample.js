@@ -36,7 +36,12 @@ const CustomCodeView = ({ dependencies, ...rest }) => (
   />
 );
 
-const createComponentExample = ({ id, examples = [], dependencies }) => {
+const createComponentExample = ({
+  id,
+  examples = [],
+  getDependencies,
+  dependencies
+}) => {
   return locale => {
     const name = _.kebabCase(id);
     const dist = getDict(locale);
@@ -46,6 +51,12 @@ const createComponentExample = ({ id, examples = [], dependencies }) => {
       source: require(`./${componentPath}${item}.md`),
       path: `https://github.com/rsuite/rsuite.github.io/tree/master/src/components/${componentPath}${item}.md`
     }));
+
+    const extraDependencies = getDependencies ? getDependencies(locale) : null;
+
+    if (extraDependencies) {
+      dependencies = Object.assign(dependencies, extraDependencies);
+    }
 
     class ComponentExample extends React.Component {
       static defaultProps = {

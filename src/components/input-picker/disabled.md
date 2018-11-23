@@ -15,6 +15,7 @@ const instance = (
       defaultValue={'Julius'}
       disabled
       style={{ width: 224 }}
+      menuStyle={{ width: 224 }}
     />
     <hr />
     <p>禁用选项</p>

@@ -2,8 +2,7 @@ import React from 'react';
 import { Cascader, Button, Icon } from 'rsuite';
 import _ from 'lodash';
 import { findNodeOfTree } from 'rsuite-utils/lib/utils';
-import data from '../../resources/data/province-simplified';
-
+import { getProvince } from '../../resources/data';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
@@ -18,13 +17,11 @@ export default createComponentExample({
     'async',
     'container'
   ],
+  getDependencies: getProvince,
   dependencies: {
     Cascader,
     Button,
-    data,
     findNodeOfTree,
-    Icon,
-    get: _.get,
-    cloneDeep: _.cloneDeep
+    Icon
   }
 });

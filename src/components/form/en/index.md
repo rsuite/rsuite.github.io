@@ -67,14 +67,14 @@ cleanErrors(callback: () => void) => void
 
 ### `<FormControl>`
 
-| Property       | Type`(default)`                  | Description                                                                      |
-| -------------- | -------------------------------- | -------------------------------------------------------------------------------- |
-| accepter       | React.ElementType `(Input)`      | Proxied components                                                               |
-| checkTrigger   | enum: 'change','blur','none'     | The data validation trigger type, and it wiill overrides the setting on `<Form>` |
-| classPrefix    | string `('form-control')`        | The prefix of the component CSS class                                            |
-| errorMessage   | React.Node                       | Show error messages                                                              |
-| errorPlacement | enum: Placement `('bottomLeft')` | The placement of error messages                                                  |
-| name \*        | string                           | The name of form-control                                                         |
+| Property       | Type`(default)`                             | Description                                                                      |
+| -------------- | ------------------------------------------- | -------------------------------------------------------------------------------- |
+| accepter       | React.ElementType `(Input)`                 | Proxied components                                                               |
+| checkTrigger   | enum: 'change','blur','none'                | The data validation trigger type, and it wiill overrides the setting on `<Form>` |
+| classPrefix    | string `('form-control')`                   | The prefix of the component CSS class                                            |
+| errorMessage   | React.Node                                  | Show error messages                                                              |
+| errorPlacement | enum: [Placement8](#types) `('bottomLeft')` | The placement of error messages                                                  |
+| name \*        | string                                      | The name of form-control                                                         |
 
 ### `<FormGroup>`
 
@@ -99,18 +99,3 @@ cleanErrors(callback: () => void) => void
 | htmlFor     | string                  | Attribute of the html label tag, defaults to the controlId of the FormGroup |
 | tooltip     | boolean                 | Whether to show through the Tooltip component                               |
 
-## Types
-
-### Placement
-
-```js
-type Placement =
-  | 'bottomLeft'
-  | 'bottomRight'
-  | 'topLeft'
-  | 'topRight'
-  | 'leftTop'
-  | 'rightTop'
-  | 'leftBottom'
-  | 'rightBottom';
-```

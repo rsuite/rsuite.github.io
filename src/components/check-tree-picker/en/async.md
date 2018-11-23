@@ -8,79 +8,34 @@ class AsynExample extends React.Component {
     super(props);
     this.state = {
       data: [],
-      values: []
+      values: [],
+      loadingValues: []
     };
     this.handleOpen = this.handleOpen.bind(this);
-    this.setLoading = this.setLoading.bind(this);
-    this.setTreeData = this.setTreeData.bind(this);
-    this.loadData = this.loadData.bind(this);
     this.handleOnExpand = this.handleOnExpand.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.renderTreeIcon = this.renderTreeIcon.bind(this);
   }
 
-  setTreeData(treeNodes, activeNode, children, layer) {
-    if (layer < 0) {
-      return;
-    }
-
-    const loop = nodes => {
-      nodes.forEach(node => {
-        if (node.value === activeNode.value && activeNode.expand) {
-          node.children = [...node.children, ...children];
-        }
-        if (node.children) {
-          loop(node.children);
-        }
-      });
-    };
-
-    loop(treeNodes);
-
-    this.setState({
-      data: treeNodes
-    });
-  }
-
-  setLoading(activeNode, loading = true) {
-    const { data } = this.state;
-    const nextTreeData = JSON.parse(JSON.stringify(data));
-    const loop = nodes => {
-      nodes.forEach(node => {
-        if (node.value === activeNode.value) {
-          node.loading = loading;
-        }
-        if (node.children) {
-          loop(node.children);
-        }
-      });
-    };
-
-    loop(nextTreeData);
-    this.setState({
-      data: nextTreeData
-    });
-  }
-
-  loadData(activeNode, layer) {
-    const { data } = this.state;
-    const nextTreeData = JSON.parse(JSON.stringify(data));
-    const children = [
-      {
-        label: 'Child Node',
-        value: `${activeNode.refKey}-0`,
-        children: []
-      },
-      {
-        label: 'Child Node',
-        value: `${activeNode.refKey}-1`,
-        children: []
-      }
-    ];
+  getChildren(activeNode) {
     return new Promise(resolve => {
       setTimeout(() => {
-        this.setTreeData(nextTreeData, activeNode, children, layer);
-        resolve();
-      }, 1000);
+        resolve({
+          activeNode,
+          children: [
+            {
+              label: 'Child Node',
+              value: `${activeNode.refKey}-0`,
+              children: []
+            },
+            {
+              label: 'Child Node',
+              value: `${activeNode.refKey}-1`,
+              children: []
+            }
+          ]
+        });
+      }, 2000);
     });
   }
 
@@ -106,29 +61,32 @@ class AsynExample extends React.Component {
     }
   }
 
-  handleOnExpand(activeNode, layer) {
+  handleOnExpand(activeNode, layer, concat) {
+    const { data, loadingValues } = this.state;
     if (activeNode.children.length === 0) {
-      activeNode.expand && this.setLoading(activeNode, true);
-      this.loadData(activeNode, layer).then(() => {
-        this.setLoading(activeNode, false);
+      if (!loadingValues.includes(activeNode.value)) {
+        this.setState({
+          loadingValues: [...loadingValues, activeNode.value]
+        });
+      }
+
+      this.getChildren(activeNode).then(response => {
+        const { activeNode: node, children } = response;
+        this.setState(prevState => {
+          return {
+            data: concat(data, children),
+            loadingValues: prevState.loadingValues.filter(
+              value => value !== node.value
+            )
+          };
+        });
       });
     }
   }
 
-  renderTreeNode(node) {
-    if (node.loading) {
-      return (
-        <span>
-          <Icon icon="spinner" spin />
-          {node.label}
-        </span>
-      );
-    }
-    return node.label;
-  }
-
   renderTreeIcon(node, expandIcon) {
-    if (node.loading) {
+    const { loadingValues } = this.state;
+    if (loadingValues.includes(node.value)) {
       return <Icon icon="spinner" spin />;
     }
     return null;
@@ -160,6 +118,7 @@ class AsynExample extends React.Component {
     );
   }
 }
+
 ReactDOM.render(<AsynExample />);
 ```
 

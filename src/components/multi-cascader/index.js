@@ -2,8 +2,7 @@ import React from 'react';
 import { MultiCascader, Button, Icon, Toggle } from 'rsuite';
 import _ from 'lodash';
 import { findNodeOfTree } from 'rsuite-utils/lib/utils';
-import data from '../../resources/data/province-simplified';
-
+import { getProvince } from '../../resources/data';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
@@ -22,14 +21,13 @@ export default createComponentExample({
     'async',
     'container'
   ],
+  getDependencies: getProvince,
   dependencies: {
     MultiCascader,
     Button,
-    data,
     findNodeOfTree,
     Icon,
     Toggle,
-    get: _.get,
-    clone: _.cloneDeep
+    get: _.get
   }
 });

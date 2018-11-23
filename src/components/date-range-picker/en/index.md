@@ -18,64 +18,34 @@ import { DateRangePicker } from 'rsuite';
 
 ### `<DateRangePicker>`
 
-| Property             | Type`(default)`                                                                                                                                                          | Description                                                                             |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------- |
-| appearance           | enum: 'default', 'subtle' `('default')`                                                                                                                                  | Set picker appearence                                                                   |
-| block                | boolean                                                                                                                                                                  | Blocking an entire row                                                                  |
-| cleanable            | boolean `(true)`                                                                                                                                                         | Whether the selected value can be cleared                                               |
-| container            | HTMLElement or (() => HTMLElement)                                                                                                                                       | Sets the rendering container                                                            |
-| defaultOpen          | boolean                                                                                                                                                                  | Default value of open property                                                          |
-| defaultValue         | Array&lt;Moment&gt;                                                                                                                                                      | Default value                                                                           |
-| disabled             | boolean                                                                                                                                                                  | Whether disabled the component                                                          |
+| Property             | Type`(default)`                                                                                                                                                                              | Description                                                                             |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| appearance           | enum: 'default', 'subtle' `('default')`                                                                                                                                                      | Set picker appearence                                                                   |
+| block                | boolean                                                                                                                                                                                      | Blocking an entire row                                                                  |
+| cleanable            | boolean `(true)`                                                                                                                                                                             | Whether the selected value can be cleared                                               |
+| container            | HTMLElement or (() => HTMLElement)                                                                                                                                                           | Sets the rendering container                                                            |
+| defaultOpen          | boolean                                                                                                                                                                                      | Default value of open property                                                          |
+| defaultValue         | Array&lt;Moment&gt;                                                                                                                                                                          | Default value                                                                           |
+| disabled             | boolean                                                                                                                                                                                      | Whether disabled the component                                                          |
 | disabledDate         | (<br/>&nbsp;date: Moment,<br/>&nbsp;selectDate: Array&lt;Moment&gt;,<br/>&nbsp;selectedDone: boolean, <br/>&nbsp;target: 'CALENDAR', 'TOOLBAR_BUTTON_OK', 'TOOLBAR_SHORTCUT' <br/>)=>boolean | Disabled data                                                                           |
-| hoverRange           | unions: 'week', 'month' or (date: Moment)=> Array&lt;Moment&gt;                                                                                                          | The date range that will be selected when you click on the date                         |
-| isoWeek              | boolean                                                                                                                                                                  | ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day    |
-| limitEndYear         | number `(5)`                                                                                                                                                             | Sets the lower limit of the available year relative to the current selection date       |
-| limitStartYear       | number `(5)`                                                                                                                                                             | Set an optional year limit relative to the current selection date                       |
-| onChange             | (`value`:Array&lt;Moment&gt;)=>void                                                                                                                                      | Callback fired when value changed                                                       |
-| onClose              | ()=>void                                                                                                                                                                 | Callback fired when close component                                                     |
-| onOk                 | (`value`:Array&lt;Moment&gt;)=>void                                                                                                                                      | Callback fired when clicked OK button                                                   |
-| onOpen               | ()=>void                                                                                                                                                                 | Callback fired when open component                                                      |
-| onSelect             | (date:Moment)=>void                                                                                                                                                      | Callback fired when date is selected                                                    |
-| oneTap               | boolean                                                                                                                                                                  | Whether to click once on selected date range，Can be used with [hoverRange](#clickmode) |
-| open                 | boolean                                                                                                                                                                  | whether open the component                                                              |
-| placeholder          | string                                                                                                                                                                   | Setting placeholders                                                                    |
-| placement            | enum: [Placement](#Placement) `('bottomLeft')`                                                                                                                           | The placement of component                                                              |
-| ranges               | Array<[Range](#Range)> [`(Ranges)`](#Ranges)                                                                                                                             | Whortcut config，defeult: `Today`,`Yesterday`，`Last 7 days`                            |
-| toggleComponentClass | React.ElementType `('a')`                                                                                                                                                | You can use a custom element for this component                                         |
-| value                | Array&lt;Moment&gt;                                                                                                                                                      | Value (Controlled)                                                                      |
+| hoverRange           | unions: 'week', 'month' or (date: Moment)=> Array&lt;Moment&gt;                                                                                                                              | The date range that will be selected when you click on the date                         |
+| isoWeek              | boolean                                                                                                                                                                                      | ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day    |
+| limitEndYear         | number `(5)`                                                                                                                                                                                 | Sets the lower limit of the available year relative to the current selection date       |
+| limitStartYear       | number `(5)`                                                                                                                                                                                 | Set an optional year limit relative to the current selection date                       |
+| onChange             | (`value`:Array&lt;Moment&gt;)=>void                                                                                                                                                          | Callback fired when value changed                                                       |
+| onClose              | ()=>void                                                                                                                                                                                     | Callback fired when close component                                                     |
+| onOk                 | (`value`:Array&lt;Moment&gt;)=>void                                                                                                                                                          | Callback fired when clicked OK button                                                   |
+| onOpen               | ()=>void                                                                                                                                                                                     | Callback fired when open component                                                      |
+| onSelect             | (date:Moment)=>void                                                                                                                                                                          | Callback fired when date is selected                                                    |
+| oneTap               | boolean                                                                                                                                                                                      | Whether to click once on selected date range，Can be used with [hoverRange](#clickmode) |
+| open                 | boolean                                                                                                                                                                                      | whether open the component                                                              |
+| placeholder          | string                                                                                                                                                                                       | Setting placeholders                                                                    |
+| placement            | enum: [Placement](#types) `('bottomLeft')`                                                                                                                                                   | The placement of component                                                              |
+| ranges               | Array<[Range](#types)> [`(Ranges)`](#Ranges)                                                                                                                                                 | Whortcut config，defeult: `Today`,`Yesterday`，`Last 7 days`                            |
+| toggleComponentClass | React.ElementType `('a')`                                                                                                                                                                    | You can use a custom element for this component                                         |
+| value                | Array&lt;Moment&gt;                                                                                                                                                                          | Value (Controlled)                                                                      |
 
 
-## Types
-
-### Placement
-
-```js
-type Placement =
-  | 'bottomLeft'
-  | 'bottomRight'
-  | 'topLeft'
-  | 'topRight'
-  | 'leftTop'
-  | 'rightTop'
-  | 'leftBottom'
-  | 'rightBottom'
-  | 'auto'
-  | 'autoVerticalLeft'
-  | 'autoVerticalRight'
-  | 'autoHorizontalTop'
-  | 'autoHorizontalBottom';
-```
-
-### Range
-
-```js
-type Range = {
-  label: React.Node,
-  closeOverlay?: boolean,
-  value: Moment | ((date: Moment) => Moment)
-};
-```
 
 ## Default
 

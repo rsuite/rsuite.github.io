@@ -34,7 +34,7 @@ import { Icon } from 'rsuite';
 | size           | enum: 'lg', '2x', '3x', '4x', '5x' | 放大图标                                |
 | spin           | boolean                            | 动态旋转图标                            |
 | stack          | enum: '1x', '2x'                   | 组合多个图标                            |
-| svgStyle       | Object                             | 当使用自定义 svg Icon, 设置 svg 的样式  |
+| svgStyle       | React.CSSProperties                | 当使用自定义 svg Icon, 设置 svg 的样式  |
 
 
 ### `<IconStack>`

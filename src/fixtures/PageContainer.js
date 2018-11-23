@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clasNames from 'classnames';
 import { PageProvider, PageNav, PageContent } from 'rsuite-page-nav';
+import { on } from 'dom-lib';
 
 import {
   Nav,
@@ -17,6 +18,7 @@ import {
 } from 'rsuite';
 import { design } from './SvgIcons';
 import LanguageSwitchButton from './LanguageSwitchButton';
+import TypesDrawer from './TypesDrawer';
 
 const style = {
   iconSvg: {
@@ -32,9 +34,41 @@ class PageContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hideNav: props.hidePageNav || false
+      hideNav: props.hidePageNav || false,
+      showTypes: false
     };
   }
+  documentListener = null;
+  componentDidMount() {
+    if (!this.documentListener) {
+      this.documentListener = on(
+        document,
+        'click',
+        this.handleDocumentClick,
+        true
+      );
+    }
+  }
+  componentWillUnmount() {
+    if (this.documentListener) {
+      this.documentListener.off();
+    }
+  }
+  handleDocumentClick = e => {
+    const href = e.target.getAttribute('href');
+    if (href === '#types') {
+      e.stopPropagation();
+      e.preventDefault();
+      this.setState({
+        showTypes: true
+      });
+    }
+  };
+  closeShowTypes = () => {
+    this.setState({
+      showTypes: false
+    });
+  };
   handleNavicon = () => {
     this.setState({
       hideNav: !this.state.hideNav
@@ -129,6 +163,7 @@ class PageContainer extends React.Component {
             />
           </Col>
         </Row>
+        <TypesDrawer onHide={this.closeShowTypes} show={this.state.showTypes} />
       </PageProvider>
     );
   }

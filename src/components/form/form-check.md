@@ -38,16 +38,11 @@ const model = Schema.Model({
 
 class TextField extends React.PureComponent {
   render() {
-    const { name, message, label, accepter, error, ...props } = this.props;
+    const { name, message, label, accepter, ...props } = this.props;
     return (
-      <FormGroup className={error ? 'has-error' : ''}>
+      <FormGroup>
         <ControlLabel>{label} </ControlLabel>
-        <FormControl
-          name={name}
-          accepter={accepter}
-          {...props}
-          errorMessage={error}
-        />
+        <FormControl name={name} accepter={accepter} {...props} />
         <HelpBlock>{message}</HelpBlock>
       </FormGroup>
     );
@@ -101,21 +96,15 @@ class CheckForm extends React.Component {
           formValue={formValue}
           model={model}
         >
-          <TextField name="name" label="Username" error={formError.name} />
-          <TextField name="email" label="Email" error={formError.email} />
-          <TextField name="age" label="Age" error={formError.age} />
-          <TextField
-            name="password"
-            label="Password"
-            type="password"
-            error={formError.password}
-          />
+          <TextField name="name" label="Username" />
+          <TextField name="email" label="Email" />
+          <TextField name="age" label="Age" />
+          <TextField name="password" label="Password" type="password" />
 
           <TextField
             name="verifyPassword"
             label="Verify password"
             type="password"
-            error={formError.verifyPassword}
           />
 
           <ButtonToolbar>

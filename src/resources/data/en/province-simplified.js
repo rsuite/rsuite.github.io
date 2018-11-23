@@ -1,253 +1,253 @@
 export default [
   {
     value: '1',
-    label: '四川',
+    label: 'Sichuan',
     children: [
       {
-        label: '成都市',
+        label: 'Chengdu',
         value: '1-1',
         children: [
           {
             value: '1-1-1',
-            label: '锦江区'
+            label: 'Jinjiang'
           },
           {
             value: '1-1-2',
-            label: '青羊区'
+            label: 'Qingyang'
           },
           {
             value: '1-1-3',
-            label: '金牛区'
+            label: 'Jinniu'
           },
           {
             value: '1-1-4',
-            label: '武侯区'
+            label: 'Wuhou'
           },
           {
             value: '1-1-5',
-            label: '成华区'
+            label: 'Chenghua'
           }
         ]
       },
       {
         value: '1-2',
-        label: '自贡市',
+        label: 'Zigong',
         children: [
           {
             value: '1-2-1',
-            label: '自流井区'
+            label: 'Ziliujing'
           },
           {
             value: '1-2-2',
-            label: '贡井区'
+            label: 'Gongjing'
           },
           {
             value: '1-2-3',
-            label: '大安区'
+            label: 'Daan'
           },
           {
             value: '1-2-4',
-            label: '沿滩区'
+            label: 'Yantan'
           },
           {
             value: '1-2-5',
-            label: '荣　县'
+            label: 'Rong County'
           },
           {
             value: '1-2-6',
-            label: '富顺县'
+            label: 'FuShun County'
           }
         ]
       },
       {
         value: '1-3',
-        label: '攀枝花市',
+        label: 'Panzhihua',
         children: [
           {
             value: '1-3-1',
-            label: '东　区'
+            label: 'Dong District'
           },
           {
             value: '1-3-2',
-            label: '西　区'
+            label: 'Xi District'
           },
           {
             value: '1-3-3',
-            label: '仁和区'
+            label: 'Renhe District'
           },
           {
             value: '1-3-4',
-            label: '米易县'
+            label: 'Miyi County'
           },
           {
             value: '1-3-5',
-            label: '盐边县'
+            label: 'Yanbian County'
           }
         ]
       }
     ]
   },
   {
-    label: '贵州',
+    label: 'Guizhou',
     value: '2',
     children: [
       {
         value: '2-1',
-        label: '贵阳市',
+        label: 'Guiyang',
         children: [
           {
             value: '2-1-1',
-            label: '南明区'
+            label: 'Nanming District'
           },
           {
             value: '2-1-2',
-            label: '云岩区'
+            label: 'Yunyan District'
           },
           {
             value: '2-1-3',
-            label: '花溪区'
+            label: 'Huaxi District'
           },
           {
             value: '2-1-4',
-            label: '乌当区'
+            label: 'Wudang District'
           },
           {
             value: '2-1-5',
-            label: '白云区'
+            label: 'Baiyun District'
           },
           {
             value: '2-1-6',
-            label: '小河区'
+            label: 'Xiaohe District'
           },
           {
             value: '2-1-7',
-            label: '开阳县'
+            label: 'Kaiyang County'
           },
           {
             value: '2-1-8',
-            label: '息烽县'
+            label: 'Xifeng County'
           },
           {
             value: '2-1-9',
-            label: '修文县'
+            label: 'Xiuwen County'
           },
           {
             value: '2-1-10',
-            label: '清镇市'
+            label: 'Qingzhen City'
           }
         ]
       },
       {
         value: '2-2',
-        label: '六盘水市',
+        label: 'Liupanshui',
         children: [
           {
             value: '2-2-1',
-            label: '钟山区'
+            label: 'Zhongshan District'
           },
           {
             value: '2-2-2',
-            label: '六枝特区'
+            label: 'Liuzhi Special District'
           },
           {
             value: '2-2-3',
-            label: '水城县'
+            label: 'Shuicheng County'
           },
           {
             value: '2-2-4',
-            label: '盘　县'
+            label: 'Pan County'
           }
         ]
       },
       {
         value: '2-3',
-        label: '遵义市',
+        label: 'Zunyi',
         children: [
           {
             value: '2-3-1',
-            label: '红花岗区'
+            label: 'Honghuagang District'
           },
           {
             value: '2-3-2',
-            label: '汇川区'
+            label: 'Huichuan District'
           },
           {
             value: '2-3-3',
-            label: '遵义县'
+            label: 'Zunyi County'
           },
           {
             value: '2-3-4',
-            label: '桐梓县'
+            label: 'Tongzi County'
           },
           {
             value: '2-3-5',
-            label: '绥阳县'
+            label: 'Suiyang County'
           },
           {
             value: '2-3-6',
-            label: '正安县'
+            label: 'Zhengan County'
           },
           {
             value: '2-3-7',
-            label: '道真仡佬族苗族自治县'
+            label: 'Daozheng Mulao Nationality Autonomous County'
           },
           {
             value: '2-3-8',
-            label: '务川仡佬族苗族自治县'
+            label: 'Wuchuan Gelao and Miao Autonomous County'
           },
           {
             value: '2-3-9',
-            label: '凤冈县'
+            label: 'Fenggang County'
           },
           {
             value: '2-3-10',
-            label: '湄潭县'
+            label: 'Meitan County'
           },
           {
             value: '2-3-11',
-            label: '余庆县'
+            label: 'Yuqing County'
           },
           {
             value: '2-3-12',
-            label: '习水县'
+            label: 'Xishui County'
           },
           {
             value: '2-3-13',
-            label: '赤水市'
+            label: 'Chishui City'
           },
           {
             value: '2-3-14',
-            label: '仁怀市'
+            label: 'Renhuai County'
           }
         ]
       },
       {
         value: '2-4',
-        label: '安顺市',
+        label: 'Anshun',
         children: [
           {
             value: '2-4-1',
-            label: '西秀区'
+            label: 'Xixiu District'
           },
           {
             value: '2-4-2',
-            label: '平坝县'
+            label: 'Pingba Qu'
           },
           {
             value: '2-4-3',
-            label: '普定县'
+            label: 'Puding County'
           },
           {
             value: '2-4-4',
-            label: '镇宁布依族苗族自治县'
+            label: 'Zhenning Buyei and Miao Autonomous County'
           },
           {
             value: '2-4-5',
-            label: '关岭布依族苗族自治县'
+            label: 'Guanling Buyei and Miao Autonomous County'
           },
           {
             value: '2-4-6',
-            label: '紫云苗族布依族自治县'
+            label: 'Ziyun Miao and Buyei Autonomous County'
           }
         ]
       }
