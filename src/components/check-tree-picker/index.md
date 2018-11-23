@@ -36,12 +36,12 @@ import { CheckTreePicker } from 'rsuite';
 | labelKey              | string `('label')`                                                                         | tree 数据结构 label 属性名称    |
 | menuClassName         | string                                                                                     | 选项菜单的 className            |
 | menuStyle             | React.CSSProperties                                                                        | 应用于菜单 DOM 节点的 style     |
-| onChange              | (values:Array&lt;string&gt;)=>boolean                                                      | 数据改变的回调函数              |
+| onChange              | (values:Array&lt;string&gt;)=>void                                                         | 数据改变的回调函数              |
 | onClose               | ()=>void                                                                                   | 关闭的回调函数                  |
-| onExpand              | (activeNode:[DataItemType](#types), layer:number, concat:(data, children)=>Array)=>boolean | 树节点展示时的回调              |
+| onExpand              | (activeNode:[DataItemType](#types), layer:number, concat:(data, children)=>Array)=>void    | 树节点展示时的回调              |
 | onOpen                | ()=>void                                                                                   | 展开的回调函数                  |
-| onSearch              | (searchKeyword:string, event)=>boolean                                                     | 搜索回调函数                    |
-| onSelect              | (activeNode:[DataItemType](#types), layer:number, values:Array&lt;string&gt;)=>boolean     | 选择树节点后的回调函数          |
+| onSearch              | (searchKeyword:string, event)=void                                                         | 搜索回调函数                    |
+| onSelect              | (activeNode:[DataItemType](#types), layer:number, values:Array&lt;string&gt;)=>void        | 选择树节点后的回调函数          |
 | placeholder           | React.Node `('Select')`                                                                    | 占位符                          |
 | placement             | enum: [Placement](#types) `('bottomLeft')`                                                 | 打开位置                        |
 | renderExtraFooter     | ()=>React.Node                                                                             | 自定义页脚内容                  |
