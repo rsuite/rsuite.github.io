@@ -35,7 +35,7 @@ import { TagPicker } from 'rsuite';
 | height               | number `(320)`                                                   | The height of Dropdown                                  |
 | labelKey             | string `('label')`                                               | Set label key in data                                   |
 | menuClassName        | string                                                           | A css class to apply to the Menu DOM node.              |
-| menuStyle            | Object                                                           | A style to apply to the Menu DOM node.                  |
+| menuStyle            | React.CSSProperties                                              | A style to apply to the Menu DOM node.                  |
 | onChange             | (value:string, event)=>void                                      | Callback fired when value change                        |
 | onClose              | ()=>void                                                         | Callback fired when close component                     |
 | onGroupTitleClick    | (event)=>void                                                    | Callback fired when click the group title               |

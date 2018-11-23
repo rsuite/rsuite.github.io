@@ -23,7 +23,7 @@ import { Slider } from 'rsuite';
 | disabled        | boolean                      | 是否禁用                          |
 | graduated       | boolean                      | 显示刻度                          |
 | handleClassName | string                       | 应用于手柄 DOM 节点的 css class   |
-| handleStyle     | Object                       | 附加手柄样式                      |
+| handleStyle     | React.CSSProperties          | 附加手柄样式                      |
 | handleTitle     | React.Node                   | 自定义手柄内显示内容              |
 | max             | number`(100)`                | 滑动范围的最大值                  |
 | min             | number`(0)`                  | 滑动范围的最小值                  |

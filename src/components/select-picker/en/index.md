@@ -33,7 +33,7 @@ import { SelectPicker } from 'rsuite';
 | height               | number `(320)`                                                   | Set the height of the Dropdown                         |
 | labelKey             | string `('label')`                                               | Set options to display the 'key' in 'data'             |
 | menuClassName        | string                                                           | A css class to apply to the Menu DOM node.             |
-| menuStyle            | Object                                                           | A style to apply to the Menu DOM node.                 |
+| menuStyle            | React.CSSProperties                                              | A style to apply to the Menu DOM node.                 |
 | onChange             | (value:string, event)=>void                                      | callback function when value changes                   |
 | onClose              | ()=>void                                                         | Close callback functions                               |
 | onGroupTitleClick    | (event)=>void                                                    | Click the callback function for the group header       |

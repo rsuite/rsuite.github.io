@@ -33,7 +33,7 @@ import { InputPicker } from 'rsuite';
 | height               | number `(320)`                                                   | 设置 Dropdown 的高度                 |
 | labelKey             | string `('label')`                                               | 设置选项显示内容在 `data` 中的 `key` |
 | menuClassName        | string                                                           | 应用于菜单 DOM 节点的 css class      |
-| menuStyle            | Object                                                           | 应用于菜单 DOM 节点的 style          |
+| menuStyle            | React.CSSProperties                                              | 应用于菜单 DOM 节点的 style          |
 | onChange             | (value:string, event)=>void                                      | `value` 发生改变时的回调函数         |
 | onClose              | ()=>void                                                         | 关闭回调函数                         |
 | onGroupTitleClick    | (event)=>void                                                    | 点击分组标题的回调函数               |

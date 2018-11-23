@@ -90,7 +90,7 @@ type Config{
 | key            | string                                   | 消息框唯一标识，如果要手动移除消息框，必须填写该字段 |
 | onClose        | ()=>void                                 | 关闭回调函数                                         |
 | placement      | enum: [Placement4](#types)`('topRight')` | 消息框的位置                                         |
-| style          | Object                                   | 自定义样式                                           |
+| style          | React.CSSProperties                      | 自定义样式                                           |
 | title \*       | string                                   | 标题                                                 |
 | top            | number `(24)`                            | 消息框距离顶部的距离                                 |
 

@@ -35,7 +35,7 @@ import { TreePicker } from 'rsuite';
 | labelKey             | string `('label')`                                                      | tree 数据结构 label 属性名称    |
 | locale               | object                                                                  | 本地语言                        |
 | menuClassName        | string                                                                  | 应用于菜单 DOM 节点的 css class |
-| menuStyle            | object                                                                  | 应用于菜单 DOM 节点的 style     |
+| menuStyle            | React.CSSProperties                                                     | 应用于菜单 DOM 节点的 style     |
 | onChange             | (value:string)=>void                                                    | 数据改变的回调函数              |
 | onClose              | ()=>void                                                                | 关闭 Dropdown 的回调函数        |
 | onExpand             | (activeNode:[DataItemType](#types), layer:number)=>void                 | 树节点展示时的回调              |
