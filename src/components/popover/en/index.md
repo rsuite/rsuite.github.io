@@ -39,37 +39,11 @@ import { Popover, Whisper } from "rsuite";
 | onFocus    | () => void                                                       | Callback function to get focus      |
 | onMouseOut | () => void                                                       | Mouse leave callback function       |
 | onOpen     | ()=>void                                                         | Callback fired when open component  |
-| placement  | enum: [Placement](#Placement) `('top')`                          | Dispaly placement                   |
+| placement  | enum: [PlacementAll](#types) `('top')`                           | Dispaly placement                   |
 | speaker \* | union: Tooltip, Popover                                          | Displayed component                 |
 | trigger    | union: 'click', 'hover', 'focus', 'active' `(['hover','focus'])` | Triggering events                   |
 | triggerRef | React.ElementRef                                                 | Ref of trigger                      |
 
-## Types
-
-### Placement
-
-```js
-type Placement =
-  | "top"
-  | "right"
-  | "bottom"
-  | "left"
-  | "bottomLeft"
-  | "bottomRight"
-  | "topLeft"
-  | "topRight"
-  | "leftTop"
-  | "rightTop"
-  | "leftBottom"
-  | "rightBottom"
-  | "auto"
-  | "autoVertical"
-  | "autoVerticalLeft"
-  | "autoVerticalRight"
-  | "autoHorizontal"
-  | "autoHorizontalTop"
-  | "autoHorizontalBottom";
-```
 
 ## Related components
 

@@ -39,37 +39,10 @@ import { Popover, Whisper } from "rsuite";
 | onFocus    | () => void                                                       | 获取焦点的回调函数              |
 | onMouseOut | () => void                                                       | 鼠标离开的回调函数              |
 | onOpen     | ()=>void                                                         | 打开回调函数                    |
-| placement  | enum: [Placement](#Placement) `('top')`                          | 显示位置                        |
+| placement  | enum: [PlacementAll](#types) `('top')`                           | 显示位置                        |
 | speaker \* | union: Tooltip, Popover                                          | 展示的元素                      |
 | trigger    | union: 'click', 'hover', 'focus', 'active' `(['hover','focus'])` | 触发事件,可以通过数组配置多事件 |
 | triggerRef | React.ElementRef                                                 | trigger 的 ref                  |
-
-## Types
-
-### Placement
-
-```js
-type Placement =
-  | "top"
-  | "right"
-  | "bottom"
-  | "left"
-  | "bottomLeft"
-  | "bottomRight"
-  | "topLeft"
-  | "topRight"
-  | "leftTop"
-  | "rightTop"
-  | "leftBottom"
-  | "rightBottom"
-  | "auto"
-  | "autoVertical"
-  | "autoVerticalLeft"
-  | "autoVerticalRight"
-  | "autoHorizontal"
-  | "autoHorizontalTop"
-  | "autoHorizontalBottom";
-```
 
 ## 相关组件
 

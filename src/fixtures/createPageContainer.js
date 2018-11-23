@@ -1,6 +1,6 @@
 import React from 'react';
 import PageContainer from './PageContainer';
-import MarkdownView from './/MarkdownView';
+import MarkdownView from './MarkdownView';
 
 const createPageContainer = ({ routerId }) => {
   return locale => {

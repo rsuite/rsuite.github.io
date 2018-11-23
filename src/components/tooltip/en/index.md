@@ -41,36 +41,10 @@ import { Tooltip, Whisper } from 'rsuite';
 | onClick    | () => void                                                       | Click on the callback function |
 | onFocus    | () => void                                                       | Callback function to get focus |
 | onMouseOut | () => void                                                       | Mouse leave callback function  |
-| placement  | enum: [Placement](#Placement) `('top')`                          | Dispaly placement              |
+| placement  | enum: [PlacementAll](#types) `('top')`                           | Dispaly placement              |
 | speaker \* | union: Tooltip, Popover                                          | Displayed component            |
 | trigger    | union: 'click', 'hover', 'focus', 'active' `(['hover','focus'])` | Triggering events              |
 
-## Types
-
-### Placement
-
-```js
-type Placement =
-  | 'top'
-  | 'right'
-  | 'bottom'
-  | 'left'
-  | 'bottomLeft'
-  | 'bottomRight'
-  | 'topLeft'
-  | 'topRight'
-  | 'leftTop'
-  | 'rightTop'
-  | 'leftBottom'
-  | 'rightBottom'
-  | 'auto'
-  | 'autoVertical'
-  | 'autoVerticalLeft'
-  | 'autoVerticalRight'
-  | 'autoHorizontal'
-  | 'autoHorizontalTop'
-  | 'autoHorizontalBottom';
-```
 ## Related components
 
 * [`<Popover>`](./popover)
