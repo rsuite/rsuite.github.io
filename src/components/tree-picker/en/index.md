@@ -34,7 +34,7 @@ import { TreePicker } from 'rsuite';
 | inline               | boolean                                                                 | Whether inline display tree                     |
 | labelKey             | string `('label')`                                                      | Tree data structure Label property name         |
 | menuClassName        | string                                                                  | A css class to apply to the Menu DOM node       |
-| menuStyle            | object                                                                  | style for Menu                                  |
+| menuStyle            | React.CSSProperties                                                     | style for Menu                                  |
 | onChange             | (value:string)=>void                                                    | Callback function for data change               |
 | onClose              | ()=>void                                                                | Close Dropdown callback functions               |
 | onExpand             | (activeNode:[DataItemType](#types), layer:number)=>void                 | Callback When tree node is displayed            |

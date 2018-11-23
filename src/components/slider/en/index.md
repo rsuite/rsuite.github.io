@@ -25,7 +25,7 @@ import { Slider } from 'rsuite';
 | disabled        | boolean                      | The disabled of component                     |
 | graduated       | boolean                      | Show Ticks                                    |
 | handleClassName | string                       | A css class to apply to the Handle node       |
-| handleStyle     | Object                       | A css style to apply to the Handle node       |
+| handleStyle     | React.CSSProperties          | A css style to apply to the Handle node       |
 | handleTitle     | React.Node                   | Customizing what is displayed inside a handle |
 | max             | number`(100)`                | Maximum sliding range                         |
 | min             | number`(0)`                  | Minimum value of sliding range                |

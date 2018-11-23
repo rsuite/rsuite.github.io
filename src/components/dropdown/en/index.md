@@ -26,7 +26,7 @@ import { Dropdown } from 'rsuite';
 | classPrefix          | string `('dropdown')`                                     | The prefix of the component CSS class                                                   |
 | disabled             | boolean                                                   | Whether or not component is disabled                                                    |
 | icon                 | React.Element&lt;typeof Icon&gt;                          | Set the icon                                                                            |
-| menuStyle            | Object                                                    | The style of the menu.                                                                  |
+| menuStyle            | React.CSSProperties                                       | The style of the menu.                                                                  |
 | onClose              | () => void                                                | The callback function that the menu closes                                              |
 | onOpen               | () => void                                                | Menu Pop-up callback function                                                           |
 | onSelect             | (eventKey: any, event: SyntheticEvent&lt;any&gt;) => void | Selected callback function                                                              |

@@ -33,7 +33,7 @@ import { Icon } from 'rsuite';
 | size           | enum: 'lg', '2x', '3x', '4x', '5x' | Sets the icon size                                             |
 | spin           | boolean                            | Dynamic rotation icon                                          |
 | stack          | enum: '1x', '2x'                   | Combine multiple icons                                         |
-| svgStyle       | Object                             | Set SVG style when using custom SVG Icon                       |
+| svgStyle       | React.CSSProperties                | Set SVG style when using custom SVG Icon                       |
 
 ### `<IconStack>`
 

@@ -26,7 +26,7 @@ import { Dropdown } from 'rsuite';
 | classPrefix          | string `('dropdown')`                                     | 组件 CSS 类的前缀                                |
 | disabled             | boolean                                                   | 禁用组件                                         |
 | icon                 | React.Element&lt;typeof Icon&gt;                          | 设置图标                                         |
-| menuStyle            | Object                                                    | 菜单样式                                         |
+| menuStyle            | React.CSSProperties                                       | 菜单样式                                         |
 | onClose              | () => void                                                | 菜单关闭的回调函数                               |
 | onOpen               | () => void                                                | 菜单弹出的回调函数                               |
 | onSelect             | (eventKey: any, event: SyntheticEvent&lt;any&gt;) => void | 选择后的回调函数                                 |

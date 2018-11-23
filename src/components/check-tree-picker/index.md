@@ -35,7 +35,7 @@ import { CheckTreePicker } from 'rsuite';
 | expandAll             | boolean                                                                                    | (受控)展示/收起所有节点         |
 | labelKey              | string `('label')`                                                                         | tree 数据结构 label 属性名称    |
 | menuClassName         | string                                                                                     | 选项菜单的 className            |
-| menuStyle             | object                                                                                     | 应用于菜单 DOM 节点的 style     |
+| menuStyle             | React.CSSProperties                                                                        | 应用于菜单 DOM 节点的 style     |
 | onChange              | (values:Array&lt;string&gt;)=>boolean                                                      | 数据改变的回调函数              |
 | onClose               | ()=>void                                                                                   | 关闭的回调函数                  |
 | onExpand              | (activeNode:[DataItemType](#types), layer:number)=>boolean                                 | 树节点展示时的回调              |
