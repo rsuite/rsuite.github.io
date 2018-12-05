@@ -8,13 +8,15 @@
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/city.js
  */
 
-const CustomTreePicker = ({ placement }) => (
+const CustomTreePicker = ({ placement, ...rest }) => (
   <CheckTreePicker
+    style={{ width: 200 }}
     defaultExpandAll
     data={data}
     placement={placement}
     placeholder={placement}
     height={320}
+    {...rest}
   />
 );
 
@@ -67,11 +69,17 @@ const instance = (
     <hr />
     <CustomTreePicker placement="auto" />
     <hr />
-    <CustomTreePicker placement="autoVerticalRight" />{' '}
-    <CustomTreePicker placement="autoVerticalLeft" />
+    <CustomTreePicker
+      placement="autoVerticalRight"
+      style={{ width: 200 }}
+    />{' '}
+    <CustomTreePicker placement="autoVerticalLeft" style={{ width: 200 }} />
     <hr />
-    <CustomTreePicker placement="autoHorizontalTop" />{' '}
-    <CustomTreePicker placement="autoHorizontalBottom" />
+    <CustomTreePicker
+      placement="autoHorizontalTop"
+      style={{ width: 200 }}
+    />{' '}
+    <CustomTreePicker placement="autoHorizontalBottom" style={{ width: 200 }} />
   </div>
 );
 ReactDOM.render(instance);
