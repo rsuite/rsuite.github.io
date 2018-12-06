@@ -10,7 +10,8 @@ export default createComponentExample({
     'picture-text',
     'file-list',
     'disabled',
-    'manually'
+    'manually',
+    'controlled'
   ],
   dependencies: {
     Icon,

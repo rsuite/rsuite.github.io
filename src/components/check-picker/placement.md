@@ -8,8 +8,14 @@
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/users.js
  */
 
-const CustomCheckPicker = ({ placement }) => (
-  <CheckPicker data={data} placement={placement} placeholder={placement} />
+const CustomCheckPicker = ({ placement, ...rest }) => (
+  <CheckPicker
+    style={{ width: 130 }}
+    data={data}
+    placement={placement}
+    placeholder={placement}
+    {...rest}
+  />
 );
 
 const instance = (
@@ -61,11 +67,20 @@ const instance = (
     <hr />
     <CustomCheckPicker placement="auto" />
     <hr />
-    <CustomCheckPicker placement="autoVerticalRight" />{' '}
-    <CustomCheckPicker placement="autoVerticalLeft" />
+    <CustomCheckPicker
+      placement="autoVerticalRight"
+      style={{ width: 200 }}
+    />{' '}
+    <CustomCheckPicker placement="autoVerticalLeft" style={{ width: 200 }} />
     <hr />
-    <CustomCheckPicker placement="autoHorizontalTop" />{' '}
-    <CustomCheckPicker placement="autoHorizontalBottom" />
+    <CustomCheckPicker
+      placement="autoHorizontalTop"
+      style={{ width: 200 }}
+    />{' '}
+    <CustomCheckPicker
+      placement="autoHorizontalBottom"
+      style={{ width: 200 }}
+    />
   </div>
 );
 ReactDOM.render(instance);

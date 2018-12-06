@@ -10,7 +10,7 @@ class ReactLogo extends React.Component {
 
     const runningClassName = running ? 'running' : '';
     return (
-      <div {...props} className="react-logo animated zoomIn">
+      <div {...props} className="react-logo logo-animated zoomIn">
         <svg viewBox="0 0 400 400">
           <path
             className="bg"
