@@ -13,6 +13,14 @@ const instance = (
         Item D
       </Radio>
     </RadioGroup>
+
+    <hr />
+    <RadioGroup name="radioList" inline appearance="picker">
+      <span>Status: </span>
+      <Radio value="A">All</Radio>
+      <Radio value="B">Enbaled</Radio>
+      <Radio value="C">Disabled</Radio>
+    </RadioGroup>
   </FormGroup>
 );
 ReactDOM.render(instance);

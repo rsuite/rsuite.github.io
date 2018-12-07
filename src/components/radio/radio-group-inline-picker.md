@@ -13,6 +13,13 @@ const instance = (
         Item D
       </Radio>
     </RadioGroup>
+    <hr />
+    <RadioGroup name="radioList" inline appearance="picker">
+      <span>状态: </span>
+      <Radio value="A">全部</Radio>
+      <Radio value="B">启用</Radio>
+      <Radio value="C">停用</Radio>
+    </RadioGroup>
   </FormGroup>
 );
 ReactDOM.render(instance);
