@@ -3,6 +3,14 @@
 <!--start-code-->
 
 ```js
+const styles = {
+  radioGroupLabel: {
+    padding: '8px 12px',
+    display: 'inline-block',
+    verticalAlign: 'middle'
+  }
+};
+
 const instance = (
   <FormGroup controlId="radioList">
     <RadioGroup name="radioList" inline appearance="picker">
@@ -16,7 +24,7 @@ const instance = (
 
     <hr />
     <RadioGroup name="radioList" inline appearance="picker">
-      <span>Status: </span>
+      <span style={styles.radioGroupLabel}>Status: </span>
       <Radio value="A">All</Radio>
       <Radio value="B">Enbaled</Radio>
       <Radio value="C">Disabled</Radio>

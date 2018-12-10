@@ -3,6 +3,14 @@
 <!--start-code-->
 
 ```js
+const styles = {
+  radioGroupLabel: {
+    padding: '8px 12px',
+    display: 'inline-block',
+    verticalAlign: 'middle'
+  }
+};
+
 const instance = (
   <FormGroup controlId="radioList">
     <RadioGroup name="radioList" inline appearance="picker">
@@ -15,7 +23,7 @@ const instance = (
     </RadioGroup>
     <hr />
     <RadioGroup name="radioList" inline appearance="picker">
-      <span>状态: </span>
+      <span style={styles.radioGroupLabel}>状态: </span>
       <Radio value="A">全部</Radio>
       <Radio value="B">启用</Radio>
       <Radio value="C">停用</Radio>
