@@ -1,4 +1,4 @@
-### Initial file list
+### Custom file description
 
 <!--start-code-->
 
@@ -22,6 +22,14 @@ const instance = (
     listType="picture-text"
     defaultFileList={fileList}
     action="//jsonplaceholder.typicode.com/posts/"
+    renderFileInfo={(file, fileElement) => {
+      return (
+        <div>
+          <span>File Name: {file.name}</span>
+          <p>File URL: {file.url}</p>
+        </div>
+      );
+    }}
   />
 );
 ReactDOM.render(instance);

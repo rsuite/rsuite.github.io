@@ -1,4 +1,4 @@
-### Initial file list
+### 自定义文件描述
 
 <!--start-code-->
 
@@ -22,6 +22,14 @@ const instance = (
     listType="picture-text"
     defaultFileList={fileList}
     action="//jsonplaceholder.typicode.com/posts/"
+    renderFileInfo={(file, fileElement) => {
+      return (
+        <div>
+          <span>文件名称: {file.name}</span>
+          <p>文件链接: {file.url}</p>
+        </div>
+      );
+    }}
   />
 );
 ReactDOM.render(instance);
