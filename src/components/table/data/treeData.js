@@ -1,70 +1,70 @@
 export default [
   {
-    key: '1',
-    labelName: '汽车',
+    id: '1',
+    labelName: 'Car',
     status: 'ENABLED',
     children: [
       {
-        key: '1-1',
-        labelName: '梅赛德斯-奔驰',
+        id: '1-1',
+        labelName: 'Mercedes Benz',
         status: 'ENABLED',
         count: 460
       },
       {
-        key: '1-2',
+        id: '1-2',
         labelName: 'BMW',
         status: 'ENABLED',
         children: [
           {
-            key: '1-2-1',
-            labelName: '2系',
+            id: '1-2-1',
+            labelName: '2 series',
             status: 'ENABLED',
             count: 103,
             children: [
               {
-                key: '1-2-1-1',
-                labelName: '运动型两厢轿车',
+                id: '1-2-1-1',
+                labelName: 'Sporty hatchback',
                 status: 'DISABLED',
                 count: 502
               },
               {
-                key: '1-2-1-2',
-                labelName: '双门轿跑车',
+                id: '1-2-1-2',
+                labelName: 'Coupe',
                 status: 'ENABLED',
                 count: 502
               },
               {
-                key: '1-2-1-3',
-                labelName: '敞篷跑车',
+                id: '1-2-1-3',
+                labelName: 'Roadster',
                 status: 'DISABLED'
               },
               {
-                key: '1-2-1-4',
-                labelName: '多功能旅行车',
+                id: '1-2-1-4',
+                labelName: 'Multi-function wagon',
                 status: 'DISABLED'
               },
               {
-                key: '1-2-1-5',
-                labelName: '旅行车',
+                id: '1-2-1-5',
+                labelName: 'Station wagon',
                 status: 'DISABLED',
                 count: 34
               }
             ]
           },
           {
-            key: '1-2-2',
-            labelName: '意向客户',
+            id: '1-2-2',
+            labelName: 'The intention of customers',
             status: 'ENABLED',
             count: 364,
             children: [
               {
-                key: '1-2-2-1',
-                labelName: '金融方案',
+                id: '1-2-2-1',
+                labelName: 'Financial plan',
                 status: 'DISABLED'
               },
               {
-                key: '1-2-2-2',
-                labelName: '预约试驾',
+                id: '1-2-2-2',
+                labelName: 'Appointment test drive',
                 status: 'ENABLED'
               }
             ]
@@ -74,43 +74,43 @@ export default [
     ]
   },
   {
-    key: '2',
-    labelName: '游戏',
+    id: '2',
+    labelName: 'Game',
     status: 'ENABLED',
     count: 834,
     children: [
       {
-        key: '2-1',
-        labelName: '网络游戏',
+        id: '2-1',
+        labelName: 'Online game',
         status: 'DISABLED'
       },
       {
-        key: '2-2',
-        labelName: '手机游戏',
+        id: '2-2',
+        labelName: 'Mobile game',
         status: 'ENABLED'
       }
     ]
   },
   {
-    key: '3',
-    labelName: '数码',
+    id: '3',
+    labelName: 'Digital',
     status: 'ENABLED',
     count: 534,
     children: [
       {
-        key: '3-1',
-        labelName: '手机',
+        id: '3-1',
+        labelName: 'Mobile phone',
         status: 'ENABLED',
         children: []
       },
       {
-        key: '3-2',
-        labelName: '电脑',
+        id: '3-2',
+        labelName: 'Computer',
         status: 'DISABLED'
       },
       {
-        key: '3-3',
-        labelName: '手表',
+        id: '3-3',
+        labelName: 'Watch',
         status: 'ENABLED'
       }
     ]

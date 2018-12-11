@@ -5,19 +5,22 @@
 ```js
 const instance = (
   <div className="field">
-    <p>-Select Whole Week</p>
+    <h5>Select Whole Week</h5>
     <DateRangePicker hoverRange="week" ranges={[]} />
-    <p>
-      -Select Whole Week, ISO 8601 standard, each calendar week begins on Monday and Sunday is the
-      seventh day
-    </p>
+    <h5>
+      -Select Whole Week, ISO 8601 standard, each calendar week begins on Monday
+      and Sunday is the seventh day
+    </h5>
     <DateRangePicker hoverRange="week" isoWeek ranges={[]} />
-    <p>-Select Whole Month</p>
+    <h5>Select Whole Month</h5>
     <DateRangePicker hoverRange="month" ranges={[]} />
-    <p>-Custom Select</p>
+    <h5>Custom Select</h5>
     <DateRangePicker
       ranges={[]}
-      hoverRange={date => [date.clone().subtract(1, 'days'), date.clone().add(1, 'days')]}
+      hoverRange={date => [
+        date.clone().subtract(1, 'days'),
+        date.clone().add(1, 'days')
+      ]}
     />
   </div>
 );

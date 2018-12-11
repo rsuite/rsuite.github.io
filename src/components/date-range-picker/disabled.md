@@ -1,44 +1,138 @@
 ### 禁用
 
-
 <!--start-code-->
+
 ```js
+const {
+  allowedMaxDays,
+  allowedDays,
+  allowedRange,
+  beforeToday,
+  afterToday,
+  combine
+} = DateRangePicker;
 
-const DateRangePickerDefault = props => (
+const Demo = props => (
   <div className="field">
-    <p>- 禁用组件: <code>disabled</code></p>
+    <h5>禁用组件</h5>
     <DateRangePicker disabled />
-    <p>- 禁用日期: <code>disabledDate</code></p>
-    <DateRangePicker
-      defaultValue={[moment(), moment().add(10, 'd')]}
-      disabledDate={(date) => date.isAfter(moment())}
-    />
-    <p>- 动态禁用: 控制选择范围 (不能大于今天, 同时时间跨度只能选择 5 天内)</p>
-    <DateRangePicker
-      disabledDate={(date, selectValue, selectedDone, target) => {
 
-        // 如果大于今天则禁用
-        if (date.isAfter(moment(), 'd')) {
-          return true;
-        }
+    <hr />
+    <h5>自定义禁用</h5>
+    <DateRangePicker disabledDate={date => date.isAfter(moment())} />
 
-        /**
-         * 当只选择了一个时间时
-         * 判断选择的时间前后超过5天的时间都禁用
-         */
-        if (target === 'CALENDAR' && selectValue && selectValue[0] && !selectedDone && (
-          selectValue[0].clone().add(-5, 'd').isAfter(date, 'd') ||
-          selectValue[0].clone().add(5, 'd').isBefore(date, 'd')
-        )) {
-          return true;
-        }
+    <hr />
+    <h5>允许最多选择 7 天，其他日期都禁用</h5>
+    <DateRangePicker disabledDate={allowedMaxDays(7)} />
 
-        return false;
-      }}
-    />
+    <hr />
+    <h5>只允许选择 7 天，其他日期都禁用</h5>
+    <DateRangePicker disabledDate={allowedDays(7)} />
+
+    <hr />
+    <h5>只允许一个日期范围，其他日期都禁用</h5>
+    <DateRangePicker disabledDate={allowedRange('2018-12-01', '2019-10-1')} />
+
+    <hr />
+    <h5>禁用今天之前的日期</h5>
+    <DateRangePicker disabledDate={beforeToday()} />
+
+    <hr />
+    <h5>禁用今天之后的日期</h5>
+    <DateRangePicker disabledDate={afterToday()} />
+
+    <hr />
+    <h5>组合: 允许最多选择 7 天, 同时禁用今天之前的日期，其他日期都禁用</h5>
+    <DateRangePicker disabledDate={combine(allowedMaxDays(7), beforeToday())} />
   </div>
 );
 
-ReactDOM.render(<DateRangePickerDefault />);
+ReactDOM.render(<Demo />);
 ```
+
 <!--end-code-->
+
+`disabledDate` 是一个函数类型属性，它会在渲染日历以及选择日期的地方调用，可以根据业务自定义需要禁用的选项。格式如下：
+
+```ts
+disabledDate(
+ date: Moment,              // 用于判断是否需要禁用的日期
+ selectDate: Array<Moment>, // 选择的日期
+ selectedDone: boolean,     // 当前是否选择完成。如果为 false, 则只选择了开始日期，等待选择结束日期
+ target: 'CALENDAR', 'TOOLBAR_BUTTON_OK', 'TOOLBAR_SHORTCUT'   // disabledDate 调用的位置
+) => boolean
+```
+
+为了更方便的设置需要禁用的日期，`DateRangePicker` 提供一些方法方便调用，示例:
+
+```ts
+const { combine } = DateRangePicker;
+
+ReactDOM.render(
+  <DateRangePicker disabledDate={combine(allowedMaxDays(7), beforeToday())} />
+);
+```
+
+**allowedMaxDays**
+
+允许指定的最多天数，其他日期都禁用
+
+```ts
+allowedMaxDays(days: number) => boolean
+```
+
+**allowedDays**
+
+只允许指定的天数，其他日期都禁用
+
+```ts
+allowedDays(days: number) => boolean
+```
+
+**allowedRange**
+
+允许指定的日期范围，其他日期都禁用
+
+```ts
+allowedRange( startDate: string | Moment, endDate: string | Moment) => boolean
+```
+
+**after**
+
+禁用指定日期之后的日期
+
+```ts
+after(date?: string | Moment) => boolean
+```
+
+**afterToday**
+
+禁用今天之后的日期
+
+```ts
+afterToday() => boolean
+```
+
+**before**
+
+禁用指定日期之前的日期
+
+```ts
+before(date?: string | Moment) => boolean
+```
+
+**beforeToday**
+
+禁用今天之前的日期
+
+```ts
+beforeToday() => boolean
+```
+
+**combine**
+
+用于组合多个条件
+
+```ts
+combine(...) => boolean
+```

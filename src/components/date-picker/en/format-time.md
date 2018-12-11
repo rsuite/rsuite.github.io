@@ -4,9 +4,9 @@
 ```js
 const DatePickerInstance = props => (
   <div className="field">
-    <p>- show time</p>
+    <h5> show time</h5>
     <DatePicker format="HH:mm:ss" ranges={[]} />
-    <p>- show hours and minutes</p>
+    <h5> show hours and minutes</h5>
     <DatePicker format="HH:mm" ranges={[]} />
   </div>
 );
