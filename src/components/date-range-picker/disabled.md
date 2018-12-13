@@ -66,7 +66,9 @@ disabledDate(
 为了更方便的设置需要禁用的日期，`DateRangePicker` 提供一些方法方便调用，示例:
 
 ```ts
-const { combine } = DateRangePicker;
+import { DateRangePicker } from 'rsuite';
+
+const { combine, allowedMaxDays, beforeToday } = DateRangePicker;
 
 ReactDOM.render(
   <DateRangePicker disabledDate={combine(allowedMaxDays(7), beforeToday())} />
