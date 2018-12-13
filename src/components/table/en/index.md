@@ -31,9 +31,9 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | cellBordered           | boolean                                 | Show cell border                                                                              |
 | data \*                | Array&lt;Object&gt;                     | Table data                                                                                    |
 | defaultExpandAllRows   | boolean                                 | Expand all nodes By default                                                                   |
-| defaultExpandedRowKeys | Array&lt;string&gt;                     | Specify the default expanded row by `rowkey`                                                  |
+| defaultExpandedRowKeys | string[]                     | Specify the default expanded row by `rowkey`                                                  |
 | defaultSortType        | enum: 'desc', 'asc'                     | Sort type                                                                                     |
-| expandedRowKeys        | Array&lt;string&gt;                     | Specify the default expanded row by `rowkey` (Controlled)                                     |
+| expandedRowKeys        | string[]                     | Specify the default expanded row by `rowkey` (Controlled)                                     |
 | headerHeight           | number`(40)`                            | Table Header Height                                                                           |
 | height                 | number`(200)`                           | Table height                                                                                  |
 | isTree                 | boolean                                 | Show as Tree table                                                                            |

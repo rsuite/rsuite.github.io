@@ -29,7 +29,7 @@ import { TreePicker } from 'rsuite';
 | defaultOpen          | boolean                                                                                 | 默认打开                        |
 | defaultValue         | string                                                                                  | 默认选中的值                    |
 | disabled             | boolean                                                                                 | 是否禁用 Picker                 |
-| disabledItemValues   | Array&lt;string&gt;                                                                     | 禁用选项                        |
+| disabledItemValues   | string[]                                                                                | 禁用选项                        |
 | expandAll            | boolean                                                                                 | (受控)展示/收起所有节点         |
 | inline               | boolean                                                                                 | 是否内联显示 tree               |
 | labelKey             | string `('label')`                                                                      | tree 数据结构 label 属性名称    |
@@ -48,7 +48,7 @@ import { TreePicker } from 'rsuite';
 | renderExtraFooter    | ()=>React.Node                                                                          | 自定义页脚内容                  |
 | renderTreeIcon       | (nodeData:[DataItemType](#types))=>React.Node                                           | 自定义渲染 图标                 |
 | renderTreeNode       | (nodeData:[DataItemType](#types))=>React.Node                                           | 自定义渲染 tree 节点            |
-| renderValue          | (activeNode:[DataItemType](#types), placeholder:React.Node)=>React.Node                 | 自定义渲染 placeholder          |
+| renderValue          | (value:string,item:[DataItemType](#types), selectedElement:React.Node)=>React.Node      | 自定义渲染 placeholder          |
 | seasrchable          | boolean `(true)`                                                                        | 是否可以搜索                    |
 | toggleComponentClass | React.ElementType `('a')`                                                               | 为组件自定义元素类型            |
 | value                | string                                                                                  | 当前选中的值                    |

@@ -13,7 +13,7 @@ const styles = {
 
 const instance = (
   <FormGroup controlId="radioList">
-    <RadioGroup name="radioList" inline appearance="picker">
+    <RadioGroup name="radioList" inline appearance="picker" defaultValue="A">
       <Radio value="A">Item A</Radio>
       <Radio value="B">Item B</Radio>
       <Radio value="C">Item C</Radio>
@@ -23,7 +23,7 @@ const instance = (
     </RadioGroup>
 
     <hr />
-    <RadioGroup name="radioList" inline appearance="picker">
+    <RadioGroup name="radioList" inline appearance="picker" defaultValue="A">
       <span style={styles.radioGroupLabel}>Status: </span>
       <Radio value="A">All</Radio>
       <Radio value="B">Enbaled</Radio>

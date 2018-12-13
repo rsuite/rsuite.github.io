@@ -23,7 +23,7 @@ import { Tree } from 'rsuite';
 | data \*            | Array&lt;[DataItemType](#DataItemType)&gt;           | Tree Data                                   |
 | defaultExpandAll   | boolean                                              | Expand all nodes By default                 |
 | defaultValue       | string                                               | Default selected Value                      |
-| disabledItemValues | Array&lt;string&gt;                                  | Disable item by value                       |
+| disabledItemValues | string[]                                  | Disable item by value                       |
 | expandAll          | boolean                                              | Expand or unExpand all nodes(Controlled)    |
 | labelKey           | string `('label')`                                   | Tree data structure Label property name     |
 | onChange           | (value:string)=>void                                 | Callback function for data change           |

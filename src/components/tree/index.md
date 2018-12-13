@@ -23,7 +23,7 @@ import { Tree } from 'rsuite';
 | data \*            | Array&lt;[DataItemType](#DataItemType)&gt;           | tree 数据                       |
 | defaultExpandAll   | boolean                                              | 默认展开所有节点                |
 | defaultValue       | string                                               | 默认选中的值                    |
-| disabledItemValues | Array&lt;string&gt;                                  | 禁用选项                        |
+| disabledItemValues | string[]                                  | 禁用选项                        |
 | expandAll          | boolean                                              | (受控)展示/收起所有节点         |
 | labelKey           | string `('label')`                                   | tree 数据结构 label 属性名称    |
 | onChange           | (value:string)=>void                                 | 数据改变的回调函数              |

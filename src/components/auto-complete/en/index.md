@@ -19,7 +19,7 @@ import { AutoComplete } from 'rsuite';
 | Property      | Type`(Default)`                                          | Description                                                                      |
 | ------------- | -------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | classPrefix   | string `('auto-complete')`                               | The prefix of the component CSS class                                            |
-| data \*       | Array&lt;string&gt;, Array&lt;[DataItemType](#types)&gt; | The data of component                                                            |
+| data \*       | string[], Array&lt;[DataItemType](#types)&gt; | The data of component                                                            |
 | defaultValue  | string                                                   | Default value                                                                    |
 | disabled      | boolean                                                  | Whether disabled select                                                          |
 | onChange      | (value:string, event)=>void                              | Called when select an option or input value change, or value of input is changed |

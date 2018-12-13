@@ -26,8 +26,8 @@ import { Sidenav } from 'rsuite';
 | appearance      | enum: 'default', 'inverse', 'subtle'                        | 'default' | 菜单外观                                   |
 | classPrefix     | string                                                      | 'sidenav' | 组件 CSS 类的前缀                          |
 | componentClass  | React.ElementType                                           | 'div'     | 为组件自定义元素类型                       |
-| defaultOpenKeys | Array&lt;any&gt;                                            |           | 默认展开菜单, 对应 Dropdown 中 eventKey    |
+| defaultOpenKeys | any[]                                            |           | 默认展开菜单, 对应 Dropdown 中 eventKey    |
 | expanded        | boolean                                                     | true      | 是否是展开 Sidenav                         |
-| onOpenChange    | (openKeys: Array&lt;any&gt;, event: SyntheticEvent) => void |           | 菜单打开发生改变的回调函数                 |
-| onSelect        | (eventKey: Array&lt;any&gt;, event: SyntheticEvent) => void |           | 选择菜单的回调函数                         |
-| openKeys        | Array&lt;any&gt;                                            |           | 打开菜单, 对应 Dropdown 中 eventKey (受控) |
+| onOpenChange    | (openKeys: any[], event: SyntheticEvent) => void |           | 菜单打开发生改变的回调函数                 |
+| onSelect        | (eventKey: any[], event: SyntheticEvent) => void |           | 选择菜单的回调函数                         |
+| openKeys        | any[]                                            |           | 打开菜单, 对应 Dropdown 中 eventKey (受控) |

@@ -13,7 +13,7 @@ const styles = {
 
 const instance = (
   <FormGroup controlId="radioList">
-    <RadioGroup name="radioList" inline appearance="picker">
+    <RadioGroup name="radioList" inline appearance="picker" defaultValue="A">
       <Radio value="A">Item A</Radio>
       <Radio value="B">Item B</Radio>
       <Radio value="C">Item C</Radio>
@@ -22,7 +22,7 @@ const instance = (
       </Radio>
     </RadioGroup>
     <hr />
-    <RadioGroup name="radioList" inline appearance="picker">
+    <RadioGroup name="radioList" inline appearance="picker" defaultValue="A">
       <span style={styles.radioGroupLabel}>状态: </span>
       <Radio value="A">全部</Radio>
       <Radio value="B">启用</Radio>

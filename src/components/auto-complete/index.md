@@ -17,7 +17,7 @@ import { AutoComplete } from 'rsuite';
 | 属性名称      | 类型`(默认值)`                                               | 描述                                    |
 | ------------- | ------------------------------------------------------------ | --------------------------------------- |
 | classPrefix   | string `('auto-complete')`                                   | 组件 CSS 类的前缀                       |
-| data \*       | Array&lt;string&gt;, Array&lt;[DataItemType](#types)&gt;     | 组件数据                                |
+| data \*       | string[], Array&lt;[DataItemType](#types)&gt;     | 组件数据                                |
 | defaultValue  | string                                                       | 设置默认值 `非受控`                     |
 | disabled      | boolean                                                      | 禁用组件                                |
 | menuClassName | string                                                       | 选项菜单的 className                    |

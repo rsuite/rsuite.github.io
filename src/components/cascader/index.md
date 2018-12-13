@@ -30,7 +30,7 @@ import { Cascader } from 'rsuite';
 | defaultOpen          | boolean                                                                                 | 默认打开                             |
 | defaultValue         | string                                                                                  | 设置默认值                           |
 | disabled             | boolean                                                                                 | 禁用组件                             |
-| disabledItemValues   | Array&lt;string&gt;                                                                     | 禁用选项                             |
+| disabledItemValues   | string[]                                                                                | 禁用选项                             |
 | height               | number `(320)`                                                                          | 设置 Dropdown 的高度                 |
 | labelKey             | string `('label')`                                                                      | 设置选项显示内容在 `data` 中的 `key` |
 | menuClassName        | string                                                                                  | 选项菜单的 className                 |
@@ -45,7 +45,7 @@ import { Cascader } from 'rsuite';
 | placeholder          | React.Node `('Select')`                                                                 | 占位符                               |
 | placement            | enum: [PlacementLeft](#types)`('bottomLeft')`                                           | 打开位置                             |
 | renderMenuItem       | (label:React.Node, item: [DataItemType](#types))=>React.Node                            | 自定义选项                           |
-| renderValue          | (label:React.Node, item: [DataItemType](#types))=>React.Node                            | 自定义被选中的选项                   |
+| renderValue          | (value:string, item: [DataItemType](#types), selectedElement:React.Node)=>React.Node    | 自定义被选中的选项                   |
 | toggleComponentClass | React.ElementType `('a')`                                                               | 为组件自定义元素类型                 |
 | value                | string                                                                                  | 设置值（受控）                       |
 | valueKey             | string `('value')`                                                                      | 设置选项值在 `data` 中的 `key`       |
