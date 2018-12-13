@@ -30,7 +30,7 @@ import { Cascader } from 'rsuite';
 | defaultOpen          | boolean                                                                                 | Default value of open property                         |
 | defaultValue         | string                                                                                  | Default values of the selected items                   |
 | disabled             | boolean                                                                                 | Disabled component                                     |
-| disabledItemValues   | Array&lt;string&gt;                                                                     | Disabled items                                         |
+| disabledItemValues   | string[]                                                                                | Disabled items                                         |
 | height               | number `(320)`                                                                          | The height of Dropdown                                 |
 | labelKey             | string `('label')`                                                                      | Set label key in data                                  |
 | menuHeight           | number                                                                                  | Sets the height of the menu                            |
@@ -44,7 +44,7 @@ import { Cascader } from 'rsuite';
 | placeholder          | React.Node `('Select')`                                                                 | Setting placeholders                                   |
 | placement            | enum: [PlacementLeft](#types)`('bottomLeft')`                                           | The placement of component                             |
 | renderMenuItem       | (label:React.Node, item: [DataItemType](#types))=>React.Node                            | Custom render menu items                               |
-| renderValue          | (label:React.Node, item: [DataItemType](#types))=>React.Node                            | Custom render selected items                           |
+| renderValue          | (value: string, item: [DataItemType](#types), selectedElement:React.Node)=>React.Node   | Custom render selected items                           |
 | toggleComponentClass | React.ElementType `('a')`                                                               | You can use a custom element for this component        |
 | value                | string                                                                                  | Specifies the values of the selected items(Controlled) |
 | valueKey             | string `('value')`                                                                      | Set value key in data                                  |

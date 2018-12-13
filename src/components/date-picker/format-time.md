@@ -1,17 +1,18 @@
 ### 只显示时间
 
 <!--start-code-->
+
 ```js
 const DatePickerInstance = props => (
   <div className="field">
-    <p>- 显示时间</p>
+    <h5> 显示时间</h5>
     <DatePicker format="HH:mm:ss" ranges={[]} />
-    <p>- 只显示小时与分钟</p>
+    <h5> 只显示小时与分钟</h5>
     <DatePicker format="HH:mm" ranges={[]} />
   </div>
 );
 
 ReactDOM.render(<DatePickerInstance />);
-
 ```
+
 <!--end-code-->

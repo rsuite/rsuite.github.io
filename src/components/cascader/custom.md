@@ -19,8 +19,8 @@ const instance = (
         </div>
       );
     }}
-    renderValue={activePaths => {
-      return activePaths.map(item => item.label).join(' : ');
+    renderValue={(value, activePaths, activeItemLabel) => {
+      return activePaths.map(item => item.label).join(' > ');
     }}
   />
 );

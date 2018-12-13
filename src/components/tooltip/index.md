@@ -39,7 +39,7 @@ import { Tooltip, Whisper } from 'rsuite';
 | onClick    | () => void                                                       | 点击的回调函数                  |     |
 | onFocus    | () => void                                                       | 获取焦点的回调函数              |     |
 | onMouseOut | () => void                                                       | 鼠标离开的回调函数              |     |
-| placement  | enum: [PlacementAll](#types) `('top')`                           | 显示位置                        |     |
+| placement  | enum: [PlacementAll](#types) `('right')`                           | 显示位置                        |     |
 | speaker \* | union: Tooltip, Popover                                          | 展示的元素                      |     |
 | trigger    | union: 'click', 'hover', 'focus', 'active' `(['hover','focus'])` | 触发事件,可以通过数组配置多事件 |     |
 

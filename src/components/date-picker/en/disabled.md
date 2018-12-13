@@ -8,15 +8,15 @@ Disable is to set a clickable element to be unclickable. Hidden is not display i
 const DatePickerInstance = props => (
   <div className="field">
 
-    <p>- Disable Picker</p>
+    <h5> Disable Picker</h5>
     <DatePicker disabled />
 
-    <p>- Disable Date</p>
+    <h5> Disable Date</h5>
     <DatePicker
       disabledDate={(date) => date.isBefore(moment())}
     />
 
-    <p>- Disable Time</p>
+    <h5> Disable Time</h5>
     <DatePicker
       format="HH:mm:ss"
       ranges={[]}
@@ -26,7 +26,7 @@ const DatePickerInstance = props => (
       disabledSeconds={second => second % 30 !== 0}
     />
 
-    <p>- Hidden Time</p>
+    <h5> Hidden Time</h5>
     <DatePicker
       format="HH:mm:ss"
       ranges={[]}

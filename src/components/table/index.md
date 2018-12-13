@@ -31,9 +31,9 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | cellBordered           | boolean                                 | 单元格边框                                                   |
 | data \*                | Array&lt;Object&gt;                     | 表格数据                                                     |
 | defaultExpandAllRows   | boolean                                 | 默认展开所有节点                                             |
-| defaultExpandedRowKeys | Array&lt;string&gt;                     | 通过 rowKey 指定默认展开的行                                 |
+| defaultExpandedRowKeys | string[]                     | 通过 rowKey 指定默认展开的行                                 |
 | defaultSortType        | enum: 'desc', 'asc'                     | 排序类型                                                     |
-| expandedRowKeys        | Array&lt;string&gt;                     | 通过 rowKey 指定展开的行 (受控)                              |
+| expandedRowKeys        | string[]                     | 通过 rowKey 指定展开的行 (受控)                              |
 | headerHeight           | number`(40)`                            | 表头高度                                                     |
 | height                 | number`(200)`                           | 高度                                                         |
 | isTree                 | boolean                                 | 是否展示为树表格                                             |

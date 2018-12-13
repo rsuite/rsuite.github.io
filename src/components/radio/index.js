@@ -4,7 +4,14 @@ import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
   id: 'Radio',
-  examples: ['basic', 'disabled', 'radio-group', 'radio-group-inline', 'radio-group-controller'],
+  examples: [
+    'basic',
+    'disabled',
+    'radio-group',
+    'radio-group-inline',
+    'radio-group-inline-picker',
+    'radio-group-controller'
+  ],
   dependencies: {
     Form,
     FormGroup,

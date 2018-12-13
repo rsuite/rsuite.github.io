@@ -21,13 +21,12 @@ const instance = (
       );
     }}
     placeholder="选择地区"
-    renderValue={(activeNode, placeholder) => {
-      return activeNode ? (
+    renderValue={(value, item, selectedElement) => {
+
+      return (
         <span>
-          <i className="rs-icon rs-icon-map-marker" /> {activeNode.label}
+          <i className="rs-icon rs-icon-map-marker" /> {item.label}
         </span>
-      ) : (
-        placeholder
       );
     }}
   />

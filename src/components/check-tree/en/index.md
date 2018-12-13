@@ -22,18 +22,18 @@ import { CheckTree } from 'rsuite';
 | childKey              | string `('children')`                                               | Set childrenKey key in data                                 |
 | data \*               | Array&lt;[DataItemType](#types)&gt;                                 | Tree data                                                   |
 | defaultExpandAll      | boolean                                                             | Expand all tree node                                        |
-| defaultValue          | Array&lt;string&gt;                                                 | Default values of the selected tree node                    |
-| disabledItemValues    | Array&lt;string&gt;                                                 | Values of disabled tree node                                |
+| defaultValue          | string[]                                                 | Default values of the selected tree node                    |
+| disabledItemValues    | string[]                                                 | Values of disabled tree node                                |
 | expandAll             | boolean                                                             | Expand or unExpand all nodes(Controlled)                    |
 | labelKey              | string `('label')`                                                  | Set label key in data                                       |
-| onChange              | (values:Array&lt;string&gt;)=>void                                  | Callback fired when value change                            |
+| onChange              | (values:string[])=>void                                  | Callback fired when value change                            |
 | onExpand              | (activeNode:[DataItemType](#types), layer:number)=>void             | Callback fired when tree node expand state changed          |
-| onSelect              | (activeNode:string, layer:number, values:Array&lt;string&gt;)=>void | Callback fired when tree node is selected                   |
+| onSelect              | (activeNode:string, layer:number, values:string[])=>void | Callback fired when tree node is selected                   |
 | renderTreeIcon        | (nodeData:[DataItemType](#types))=>React.Node                       | Custom render the icon in tree node                         |
 | renderTreeNode        | (nodeData:[DataItemType](#types))=>React.Node                       | Custom render tree node                                     |
 | searchKeyword         | string                                                              | searchKeyword (Controlled)                                  |
-| uncheckableItemValues | Array&lt;string&gt;                                                 | Set the option value for the check box not to be rendered   |
-| value                 | Array&lt;string&gt;                                                 | Specifies the values of the selected tree node (Controlled) |
+| uncheckableItemValues | string[]                                                 | Set the option value for the check box not to be rendered   |
+| value                 | string[]                                                 | Specifies the values of the selected tree node (Controlled) |
 | valueKey              | string `('value')`                                                  | Set value key in data                                       |
 
 

@@ -29,7 +29,7 @@ const instance = (
       return (
         <span>
           <span style={{ color: '#575757' }}>
-            <i className="rs-icon rs-icon-map-marker" /> 地区 :
+            <i className="rs-icon rs-icon-map-marker" /> Location :
           </span>{' '}
           {checkedItems.map(item => item.label).join(' , ')}
         </span>

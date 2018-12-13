@@ -29,7 +29,7 @@ import { TreePicker } from 'rsuite';
 | defaultOpen          | boolean                                                                                 | Open by default                                 |
 | defaultValue         | string                                                                                  | Default selected Value                          |
 | disabled             | boolean                                                                                 | Whether to disable Picker                       |
-| disabledItemValues   | Array&lt;string&gt;                                                                     | Disable item by value                           |
+| disabledItemValues   | string[]                                                                                | Disable item by value                           |
 | expandAll            | boolean                                                                                 | Expand or unExpand all nodes(Controlled)        |
 | inline               | boolean                                                                                 | Whether inline display tree                     |
 | labelKey             | string `('label')`                                                                      | Tree data structure Label property name         |
@@ -47,7 +47,7 @@ import { TreePicker } from 'rsuite';
 | renderExtraFooter    | ()=>React.Node                                                                          | Customizing footer Content                      |
 | renderTreeIcon       | (nodeData:[DataItemType](#types))=>React.Node                                           | Custom Render icon                              |
 | renderTreeNode       | (nodeData:[DataItemType](#types))=>React.Node                                           | Custom Render tree Node                         |
-| renderValue          | (activeNode:[DataItemType](#types), placeholder:React.Node)=>React.Node                 | Custom Render Placeholder                       |
+| renderValue          | (value:string,item:[DataItemType](#types), selectedElement:React.Node)=>React.Node      | Custom Render Placeholder                       |
 | seasrchable          | boolean `(true)`                                                                        | Set whether you can search                      |
 | toggleComponentClass | React.ElementType `('a')`                                                               | You can use a custom element for this component |
 | value                | string                                                                                  | Selected value                                  |

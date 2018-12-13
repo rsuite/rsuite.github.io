@@ -9,6 +9,7 @@ export default createComponentExample({
     'picture',
     'picture-text',
     'file-list',
+    'file-list-custom',
     'disabled',
     'manually',
     'controlled'

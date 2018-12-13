@@ -18,14 +18,16 @@ class TreeTable extends React.Component {
     return (
       <div>
         <Table
+          isTree
+          defaultExpandAllRows
+          rowKey="id"
           height={400}
           data={data}
-          isTree
           onExpandChange={(isOpen, rowData) => {
             console.log(isOpen, rowData);
           }}
           renderTreeToggle={(icon, rowData) => {
-            if (rowData.labelName === '手机') {
+            if (rowData.children && rowData.children.length === 0) {
               return <Icon icon="spinner" spin />;
             }
             return icon;
@@ -61,24 +63,26 @@ A tree table, primarily to show structured data, requires a `isTree` attribute t
 ```js
 const data = [
   {
-    labelName: '汽车',
+    id: '1',
+    labelName: 'Car',
     status: 'ENABLED',
     children: [
       {
-        labelName: '梅赛德斯-奔驰',
+        id: '1-1',
+        labelName: 'Mercedes Benz',
         status: 'ENABLED',
         count: 460
       }
     ]
   }
 ];
-<Table data={data} isTree />;
+<Table data={data} isTree rowKey="id" />;
 ```
 
 **Dealing with related properties for a tree table**
 
-* defaultExpandAllRows:boolean :Expand all nodes By default
-* expandedRowKeys (controlled) and defaultExpandedRowKeys are used to configure the rows that need to be expanded. Note that the parameters that these two properties receive are an array of Rowkey in the array.。
-* rowKey : Give each row of data to a unique key, corresponding to a unique value in the key.
-* renderTreeToggle:()=>React.Node : Custom Toggle
-* onExpandChange:(expanded:boolean,rowData:object)=>void: To open/close a node's callback function
+- defaultExpandAllRows:boolean :Expand all nodes By default
+- expandedRowKeys (controlled) and defaultExpandedRowKeys are used to configure the rows that need to be expanded. Note that the parameters that these two properties receive are an array of Rowkey in the array.。
+- rowKey : Give each row of data to a unique key, corresponding to a unique value in the key. (You can set the rowKey in `<Table>`, the default value is 'key')
+- renderTreeToggle:()=>React.Node : Custom Toggle
+- onExpandChange:(expanded:boolean,rowData:object)=>void: To open/close a node's callback function

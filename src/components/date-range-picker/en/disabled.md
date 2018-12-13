@@ -3,48 +3,141 @@
 <!--start-code-->
 
 ```js
-const DateRangePickerDefault = props => (
+const {
+  allowedMaxDays,
+  allowedDays,
+  allowedRange,
+  beforeToday,
+  afterToday,
+  combine
+} = DateRangePicker;
+
+const Demo = props => (
   <div className="field">
-    <p>
-      - Disabled Picker: <code>disabled</code>
-    </p>
+    <h5>Disabled component.</h5>
     <DateRangePicker disabled />
-    <p>
-      - Disabled Date: <code>disabledDate</code>
-    </p>
-    <DateRangePicker
-      defaultValue={[moment(), moment().add(10, 'd')]}
-      disabledDate={date => date.isAfter(moment())}
-    />
-    <p>
-      - Disabled Date: control range (can't be bigger than today, and the time
-      span can only be selected within 5 days)
-    </p>
-    <DateRangePicker
-      disabledDate={(date, selectValue, selectedDone, target) => {
-        // Disabled if larger than today
-        if (date.isAfter(moment(), 'd')) {
-          return true;
-        }
 
-        /**
-         * When only one time is selected
-         * Judgment of the selected time is disabled for more than 5 days before and after
-         */
-        if (target === 'CALENDAR' && selectValue && selectValue[0] && !selectedDone && (
-          selectValue[0].clone().add(-5, 'd').isAfter(date, 'd') ||
-          selectValue[0].clone().add(5, 'd').isBefore(date, 'd')
-        )) {
-          return true;
-        }
+    <hr />
+    <h5>Custom disabled.</h5>
+    <DateRangePicker disabledDate={date => date.isAfter(moment())} />
 
-        return false;
-      }}
-    />
+    <hr />
+    <h5>Allow maximum selection for 7 days, other dates are disabled.</h5>
+    <DateRangePicker disabledDate={allowedMaxDays(7)} />
+
+    <hr />
+    <h5>Only 7 days allowed, other dates are disabled</h5>
+    <DateRangePicker disabledDate={allowedDays(7)} />
+
+    <hr />
+    <h5>Only one date range is allowed, other dates are disabled</h5>
+    <DateRangePicker disabledDate={allowedRange('2018-12-01', '2019-10-1')} />
+
+    <hr />
+    <h5>Disable dates before today</h5>
+    <DateRangePicker disabledDate={beforeToday()} />
+
+    <hr />
+    <h5>Disable dates after today</h5>
+    <DateRangePicker disabledDate={afterToday()} />
+
+    <hr />
+    <h5>
+      Combination: Allow maximum selection for 7 days, while disabling dates
+      before today, other dates are disabled
+    </h5>
+    <DateRangePicker disabledDate={combine(allowedMaxDays(7), beforeToday())} />
   </div>
 );
 
-ReactDOM.render(<DateRangePickerDefault />);
+ReactDOM.render(<Demo />);
 ```
 
 <!--end-code-->
+
+`disabledDate` is a function type property that is called when the calendar is rendered and the date is selected, and the options that need to be disabled can be customized according to the business. The syntax is as follows:
+
+```ts
+disabledDate(
+ date: Moment,              // Date used to determine if disabling is required.
+ selectDate: Array<Moment>, // Date selected.
+ selectedDone: boolean,     // Whether to choose to finish now. If `false`, only the start date is selected, waiting for the selection end date.
+ target: 'CALENDAR', 'TOOLBAR_BUTTON_OK', 'TOOLBAR_SHORTCUT'   // Call the target of the `disabledDate` function
+) => boolean
+```
+
+To make it easier to set the date you want to disable, `DateRangePicker` provides some methods for easy calling, examples:
+
+```ts
+import { DateRangePicker } from 'rsuite';
+
+const { combine, allowedMaxDays, beforeToday } = DateRangePicker;
+
+ReactDOM.render(
+  <DateRangePicker disabledDate={combine(allowedMaxDays(7), beforeToday())} />
+);
+```
+
+**allowedMaxDays**
+
+Allow the maximum number of days specified, other dates are disabled
+
+```ts
+allowedMaxDays(days: number) => boolean
+```
+
+**allowedDays**
+
+Only allowed days are specified, other dates are disabled
+
+```ts
+allowedDays(days: number) => boolean
+```
+
+**allowedRange**
+
+Allow specified date range, other dates are disabled
+
+```ts
+allowedRange( startDate: string | Moment, endDate: string | Moment) => boolean
+```
+
+**after**
+
+Disable dates after the specified date
+
+```ts
+after(date?: string | Moment) => boolean
+```
+
+**afterToday**
+
+Disable dates after today
+
+```ts
+afterToday() => boolean
+```
+
+**before**
+
+Disable dates before the specified date
+
+```ts
+before(date?: string | Moment) => boolean
+```
+
+**beforeToday**
+
+Disable dates before today
+
+```ts
+beforeToday() => boolean
+```
+
+**combine**
+
+Used to combine multiple conditions
+
+```ts
+combine(...) => boolean
+```

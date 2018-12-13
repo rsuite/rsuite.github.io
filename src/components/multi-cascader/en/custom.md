@@ -11,7 +11,7 @@
 const instance = (
   <MultiCascader
     data={data}
-    style={{ widht: 224 }}
+    block
     renderMenuItem={(label, item) => {
       return (
         <div>
@@ -19,9 +19,19 @@ const instance = (
         </div>
       );
     }}
-    renderValue={(value, selectedItems) =>
-      selectedItems.map(item => item.label).join(' , ')
+    placeholder={
+      <span>
+        <i className="rs-icon rs-icon-map-marker" /> Location
+      </span>
     }
+    renderValue={(value, selectedItems, selectedElement) => (
+      <span>
+        <span style={{ color: '#575757' }}>
+          <i className="rs-icon rs-icon-map-marker" /> Location :
+        </span>{' '}
+        {selectedItems.map(item => item.label).join(' , ')}
+      </span>
+    )}
   />
 );
 ReactDOM.render(instance);

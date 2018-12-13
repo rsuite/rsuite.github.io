@@ -3,20 +3,17 @@
 禁用是把一个可点击元素设置为不可点击状态，隐藏是直接在选项中不出现。
 
 <!--start-code-->
-```js
 
+```js
 const DatePickerInstance = props => (
   <div className="field">
-
-    <p>- 禁用组件</p>
+    <h5> 禁用组件</h5>
     <DatePicker disabled />
 
-    <p>- 禁用日期</p>
-    <DatePicker
-      disabledDate={(date) => date.isBefore(moment())}
-    />
+    <h5> 禁用日期</h5>
+    <DatePicker disabledDate={date => date.isBefore(moment())} />
 
-    <p>- 禁用时间</p>
+    <h5> 禁用时间</h5>
     <DatePicker
       format="HH:mm:ss"
       ranges={[]}
@@ -26,7 +23,7 @@ const DatePickerInstance = props => (
       disabledSeconds={second => second % 30 !== 0}
     />
 
-    <p>- 隐藏时间</p>
+    <h5> 隐藏时间</h5>
     <DatePicker
       format="HH:mm:ss"
       ranges={[]}
@@ -38,7 +35,7 @@ const DatePickerInstance = props => (
   </div>
 );
 
-
 ReactDOM.render(<DatePickerInstance />);
 ```
+
 <!--end-code-->
