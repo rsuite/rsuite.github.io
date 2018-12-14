@@ -10,7 +10,7 @@
 
 const CustomTreePicker = ({ placement, ...rest }) => (
   <CheckTreePicker
-    style={{ width: 200 }}
+    style={{ width: 150 }}
     defaultExpandAll
     data={data}
     placement={placement}

@@ -10,7 +10,7 @@
 
 const CustomCheckPicker = ({ placement, ...rest }) => (
   <CheckPicker
-    style={{ width: 130 }}
+    style={{ width: 150 }}
     data={data}
     placement={placement}
     placeholder={placement}
