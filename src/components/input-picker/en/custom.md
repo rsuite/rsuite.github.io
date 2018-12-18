@@ -14,7 +14,7 @@ const instance = (
     groupBy="role"
     placeholder="Select User"
     style={{ width: 224 }}
-    menuStyle={{ width: 224 }}
+
     renderMenuItem={(label, item) => {
       return (
         <div>

@@ -12,7 +12,7 @@ const instance = (
   <SelectPicker
     data={data}
     style={{ width: 224 }}
-    menuStyle={{ width: 224 }}
+
     searchable={false}
   />
 );
