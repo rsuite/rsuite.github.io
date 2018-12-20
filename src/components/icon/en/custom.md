@@ -8,7 +8,7 @@ Custom Icon to render an externally-introduced SVG file.
 /**
  * import * as SvgIcons from '../../fixtures/SvgIcons'
  * import IconLogo from '../../resources/images/logo.svg';
- * IconLogo, SvgIcons 是 import 的外部资源。
+ * IconLogo, SvgIcons is external resources.
  */
 
 const instance = (

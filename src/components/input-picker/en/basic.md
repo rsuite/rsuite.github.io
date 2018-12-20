@@ -9,7 +9,7 @@
  */
 
 const instance = (
-  <InputPicker data={data} style={{ width: 224 }} menuStyle={{ width: 224 }} />
+  <InputPicker data={data} style={{ width: 224 }} />
 );
 ReactDOM.render(instance);
 ```

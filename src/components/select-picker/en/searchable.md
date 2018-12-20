@@ -13,7 +13,7 @@ const instance = (
     data={data}
     searchable={false}
     style={{ width: 224 }}
-    menuStyle={{ width: 224 }}
+
   />
 );
 ReactDOM.render(instance);
