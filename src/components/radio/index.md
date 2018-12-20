@@ -35,6 +35,7 @@ import { Radio, RadioGroup } from 'rsuite';
 
 | 性名称       | 类型`(默认值)`                               | 描述               |
 | ------------ | -------------------------------------------- | ------------------ |
+| appearance   | enum: 'default', 'picker'                    | 设置外观           |
 | defaultValue | any                                          | 默认值             |
 | inline       | boolean                                      | 内联布局           |
 | name         | string                                       | 用于表单对应的名称 |

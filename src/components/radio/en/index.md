@@ -33,10 +33,11 @@ import { Radio, RadioGroup } from 'rsuite';
 
 ### `<RadioGroup>`
 
-| Property     | Type `(Default)`                            | Description                          |
-| ------------ | ------------------------------------------- | ------------------------------------ |
-| defaultValue | any                                         | Default value                        |
-| inline       | boolean                                     | Inline layout                        |
-| name         | string                                      | Name to use for form                 |
-| onChange     | (value:any,event:SyntheticInputEvent)=>void | Callback function with value changed |
-| value        | any                                         | Value (Controlled)                   |
+| Property     | Type `(Default)`                            | Description                                  |
+| ------------ | ------------------------------------------- | -------------------------------------------- |
+| appearance   | enum: 'default', 'picker'                   | A radio group can have different appearances |
+| defaultValue | any                                         | Default value                                |
+| inline       | boolean                                     | Inline layout                                |
+| name         | string                                      | Name to use for form                         |
+| onChange     | (value:any,event:SyntheticInputEvent)=>void | Callback function with value changed         |
+| value        | any                                         | Value (Controlled)                           |
