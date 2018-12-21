@@ -28,13 +28,13 @@ const instance = (
         </div>
       );
     }}
-    renderValue={(label, item) => {
+    renderValue={(value, item) => {
       return (
         <div>
           <span style={{ color: '#575757' }}>
             <i className="rs-icon rs-icon-user" /> User :
           </span>{' '}
-          {label}
+          {value}
         </div>
       );
     }}
