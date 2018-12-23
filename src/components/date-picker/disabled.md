@@ -13,6 +13,12 @@ const DatePickerInstance = props => (
     <h5> 禁用日期</h5>
     <DatePicker disabledDate={date => date.isBefore(moment())} />
 
+    <h5> 禁用月份</h5>
+    <DatePicker
+      disabledDate={date => date.isBefore(moment())}
+      format="YYYY-MM"
+    />
+
     <h5> 禁用时间</h5>
     <DatePicker
       format="HH:mm:ss"

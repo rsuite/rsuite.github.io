@@ -13,7 +13,8 @@ export default createComponentExample({
     'creatable',
     'custom',
     'disabled',
-    'async'
+    'async',
+    'controlled'
   ],
   dependencies: {
     fetch,
