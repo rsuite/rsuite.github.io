@@ -40,8 +40,7 @@ import { DatePicker } from 'rsuite';
 | hideSeconds           | (second:number, date:Moment)=>boolean          | 隐藏秒                                                    |
 | inline                | boolean                                        | 默认显示日历面板                                          |
 | isoWeek               | boolean                                        | ISO 8601 标准， 每个日历星期从星期一开始，星期日为第 7 天 |
-| limitEndYear          | number `(5)`                                   | 相对当前选择日期，设置可选年份下限                        |
-| limitStartYear        | number `(5)`                                   | 相对当前选择日期，设置可选年份上限                        |
+| limitEndYear          | number `(1000)`                                | 相对当前选择日期，设置可选年份下限                        |
 | locale                | Object [`(Locale)`](#Locale)                   | 本地化对应的语言描述                                      |
 | menuClassName         | string                                         | 选项菜单的 className                                      |
 | onChange              | (date:Moment)=>void                            | 值改变后的回调函数                                        |
