@@ -45,7 +45,7 @@ import { SelectPicker } from 'rsuite';
 | renderMenu           | (menu:React.Node)=>React.Node                                                       | 自定义渲染菜单列表                   |
 | renderMenuGroup      | (groupTitle:React.Node, item:[DataItemType](#types))=>React.Node                    | 自定义渲染选项组                     |
 | renderMenuItem       | (label:React.Node, item:[DataItemType](#types))=>React.Node                         | 自定义渲染选项                       |
-| renderValue          | (label:string, item: [DataItemType](#types),selectedElement:React.Node)=>React.Node | 自定义渲染被选中的选项               |
+| renderValue          | (value:string, item: [DataItemType](#types),selectedElement:React.Node)=>React.Node | 自定义渲染被选中的选项               |
 | searchable           | boolean `(true)`                                                                    | 可以搜索                             |
 | toggleComponentClass | React.ElementType `('a')`                                                           | 为组件自定义元素类型                 |
 | value                | string                                                                              | 设置值 `受控`,                       |

@@ -15,7 +15,8 @@ export default createComponentExample({
     'disabled',
     'searchable',
     'async',
-    'container'
+    'container',
+    'controlled'
   ],
   dependencies: {
     SelectPicker,

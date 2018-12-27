@@ -17,7 +17,8 @@ export default createComponentExample({
     'searchable',
     'extra-footer',
     'async',
-    'container'
+    'container',
+    'controlled'
   ],
   dependencies: {
     Checkbox,

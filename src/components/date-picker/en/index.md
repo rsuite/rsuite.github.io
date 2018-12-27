@@ -40,8 +40,7 @@ import { DatePicker } from 'rsuite';
 | hideSeconds           | (second:number, date:Moment)=>boolean          | Hidden seconds                                                                       |
 | inline                | boolean                                        | Display date panel when component initial                                            |
 | isoWeek               | boolean                                        | ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day |
-| limitEndYear          | number `(5)`                                   | Set the lower limit of the available year relative to the current selection date     |
-| limitStartYear        | number `(5)`                                   | Set an optional year limit relative to the current selection date                    |
+| limitEndYear          | number `(1000)`                                | Set the lower limit of the available year relative to the current selection date     |
 | locale                | Object [`(Locale)`](#Locale)                   | i18n config                                                                          |
 | onChange              | (date:Moment)=>void                            | Callback fired when value changed                                                    |
 | onChangeCalendarDate  | (date: Moment, event?: SyntheticEvent) => void | Callback function that changes the calendar date.                                    |

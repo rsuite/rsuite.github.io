@@ -3,17 +3,20 @@
 Disable is to set a clickable element to be unclickable. Hidden is not display in the option.
 
 <!--start-code-->
-```js
 
+```js
 const DatePickerInstance = props => (
   <div className="field">
-
     <h5> Disable Picker</h5>
     <DatePicker disabled />
 
     <h5> Disable Date</h5>
+    <DatePicker disabledDate={date => date.isBefore(moment())} />
+
+    <h5> Disable Month</h5>
     <DatePicker
-      disabledDate={(date) => date.isBefore(moment())}
+      disabledDate={date => date.isBefore(moment())}
+      format="YYYY-MM"
     />
 
     <h5> Disable Time</h5>
@@ -38,7 +41,7 @@ const DatePickerInstance = props => (
   </div>
 );
 
-
 ReactDOM.render(<DatePickerInstance />);
 ```
+
 <!--end-code-->
