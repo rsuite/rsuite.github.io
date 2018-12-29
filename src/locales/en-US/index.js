@@ -36,7 +36,8 @@ export default {
     'tab.edit': 'Editable',
     'tab.loading': 'Loading',
     'tab.colspan': 'Colspan',
-    'tab.summary': 'Summary'
+    'tab.summary': 'Summary',
+    'tab.fixed': 'Fixed Column'
   },
   palette: {
     title: 'Get the product color',

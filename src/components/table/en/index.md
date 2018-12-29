@@ -31,9 +31,9 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | cellBordered           | boolean                                 | Show cell border                                                                              |
 | data \*                | Array&lt;Object&gt;                     | Table data                                                                                    |
 | defaultExpandAllRows   | boolean                                 | Expand all nodes By default                                                                   |
-| defaultExpandedRowKeys | string[]                     | Specify the default expanded row by `rowkey`                                                  |
+| defaultExpandedRowKeys | string[]                                | Specify the default expanded row by `rowkey`                                                  |
 | defaultSortType        | enum: 'desc', 'asc'                     | Sort type                                                                                     |
-| expandedRowKeys        | string[]                     | Specify the default expanded row by `rowkey` (Controlled)                                     |
+| expandedRowKeys        | string[]                                | Specify the default expanded row by `rowkey` (Controlled)                                     |
 | headerHeight           | number`(40)`                            | Table Header Height                                                                           |
 | height                 | number`(200)`                           | Table height                                                                                  |
 | isTree                 | boolean                                 | Show as Tree table                                                                            |
@@ -62,7 +62,7 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | --------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
 | align     | enum: 'left','center','right'                    | Alignment                                                                                                   |
 | colSpan   | number                                           | Merges column cells to merge when the `dataKey` value for the merged column is `null` or `undefined`.       |
-| fixed     | boolean                                          | Fixed column                                                                                                |
+| fixed     | boolean, 'left', 'right'                         | Fixed column                                                                                                |
 | flexGrow  | number                                           | Set the column width automatically adjusts, when set `flexGrow` cannot set `resizable` and `width` property |
 | minWidth  | number`(200)`                                    | When you use `flexGrow`, you can set a minimum width by `minwidth`                                          |
 | onResize  | (columnWidth?: number, dataKey?: string) => void | Callback after column width change                                                                          |
