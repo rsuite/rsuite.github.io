@@ -22,7 +22,7 @@ class TreeTable extends React.Component {
           defaultExpandAllRows
           rowKey="id"
           height={400}
-          data={data}
+          data={[]}
           onExpandChange={(isOpen, rowData) => {
             console.log(isOpen, rowData);
           }}
@@ -33,9 +33,54 @@ class TreeTable extends React.Component {
             return icon;
           }}
         >
-          <Column flexGrow={1}>
+          <Column width={400}>
             <HeaderCell>Label</HeaderCell>
             <Cell dataKey="labelName" />
+          </Column>
+
+          <Column width={100}>
+            <HeaderCell>Status</HeaderCell>
+            <Cell dataKey="status" />
+          </Column>
+
+          <Column width={100}>
+            <HeaderCell>Status</HeaderCell>
+            <Cell dataKey="status" />
+          </Column>
+
+          <Column width={100}>
+            <HeaderCell>Status</HeaderCell>
+            <Cell dataKey="status" />
+          </Column>
+
+          <Column width={100}>
+            <HeaderCell>Status</HeaderCell>
+            <Cell dataKey="status" />
+          </Column>
+
+          <Column width={100}>
+            <HeaderCell>Status</HeaderCell>
+            <Cell dataKey="status" />
+          </Column>
+
+          <Column width={100}>
+            <HeaderCell>Status</HeaderCell>
+            <Cell dataKey="status" />
+          </Column>
+
+          <Column width={100}>
+            <HeaderCell>Status</HeaderCell>
+            <Cell dataKey="status" />
+          </Column>
+
+          <Column width={100}>
+            <HeaderCell>Status</HeaderCell>
+            <Cell dataKey="status" />
+          </Column>
+
+          <Column width={100}>
+            <HeaderCell>Status</HeaderCell>
+            <Cell dataKey="status" />
           </Column>
 
           <Column width={100}>

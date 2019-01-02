@@ -9,7 +9,7 @@
  */
 
 const instance = (
-  <TagPicker data={data} style={{ width: 300 }} menuStyle={{ width: 300 }} />
+  <TagPicker data={data} style={{ width: 300 }}  />
 );
 ReactDOM.render(instance);
 ```

@@ -49,6 +49,7 @@ import { CheckPicker } from 'rsuite';
 | renderValue          | (value: any[], items: any[],selectedElement:React.Node) => React.Node | 自定义被选中的选项                   |
 | searchable           | boolean `(true)`                                                      | 可以搜索                             |
 | sticky               | boolean                                                               | 把选项中已选择的选项置顶在最前面     |
+| sort                 | (isGroup: boolean) => (a: any, b: any) => number                      | 对选项排序                           |
 | toggleComponentClass | React.ElementType `('a')`                                             | 为组件自定义元素类型                 |
 | value                | string[]                                                              | 设置值 `受控`                        |
 | valueKey             | string `('value')`                                                    | 设置选项值在 `data` 中的 `key`       |
