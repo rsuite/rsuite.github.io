@@ -49,6 +49,7 @@ import { TagPicker } from 'rsuite';
 | renderMenuItem       | (label:React.Node, item: [DataItemType](#types))=>React.Node          | Custom render menu items                                |
 | renderValue          | (value: any[], items: any[],selectedElement:React.Node) => React.Node | Custom render selected items                            |
 | searchable           | boolean `(true)`                                                      | Whether dispaly search input box                        |
+| sort                 | (isGroup: boolean) => (a: any, b: any) => number                      | Sort options                                            |
 | toggleComponentClass | React.ElementType `('a')`                                             | You can use a custom element for this component         |
 | value                | any                                                                   | Specifies the values of the selected items (Controlled) |
 | valueKey             | string `('value')`                                                    | Set value key in data                                   |

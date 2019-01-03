@@ -29,6 +29,7 @@ export default locale => {
   const tabExamples = [
     'resizable',
     'fluid-column',
+    'fixed',
     'word-wrap',
     'custom-cell',
     'sort',
