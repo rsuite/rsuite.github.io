@@ -24,6 +24,7 @@ import { Nav, Dropdown } from 'rsuite';
 | 属性名称    | 类型`(默认值)`                                             | 描述                                          |
 | ----------- | ---------------------------------------------------------- | --------------------------------------------- |
 | activeKey   | any                                                        | 激活的 `key`, 对应 `<Nav.Item>` 中 `eventKey` |
+| appearance  | enum: 'default', 'tabs', 'subtle' `('default')`            | 设置外观                                      |
 | children \* | React.ChildrenArray&lt;NavItem or Dropdown&gt;             | 组件内容                                      |
 | classPrefix | string `('nav')`                                           | 组件 CSS 类的前缀                             |
 | justified   | boolean                                                    | 宽度自适应                                    |
@@ -31,7 +32,6 @@ import { Nav, Dropdown } from 'rsuite';
 | pills       | boolean                                                    | 胶囊式导航                                    |
 | pullRight   | boolean                                                    | 显示在右侧                                    |
 | stacked     | boolean                                                    | 垂直导航                                      |
-| tabs        | boolean                                                    | 标签式导航                                    |
 
 ### `<Nav.Item>`
 
