@@ -25,6 +25,7 @@ import { Nav, Dropdown } from 'rsuite';
 | ----------- | ---------------------------------------------------------- | ---------------------------------------------------------- |
 |             |
 | activeKey   | any                                                        | Active `key`, corresponding to `eventkey` in `<Nav.item>`. |
+| appearance  | enum: 'default', 'tabs', 'subtle' `('default')`            | A navigation can have different appearances                |
 | children \* | React.ChildrenArray&lt;NavItem or Dropdown&gt;             | The contents of the component.                             |
 | classPrefix | string `('nav')`                                           | The prefix of the component CSS class                      |
 | justified   | boolean                                                    | Justified navigation                                       |
@@ -32,7 +33,6 @@ import { Nav, Dropdown } from 'rsuite';
 | pills       | boolean                                                    | Pills navigation                                           |
 | pullRight   | boolean                                                    | appears on the right.                                      |
 | stacked     | boolean                                                    | Stacked navigation                                         |
-| tabs        | boolean                                                    | Tabbed navigation                                          |
 
 ### `<Nav.Item>`
 
