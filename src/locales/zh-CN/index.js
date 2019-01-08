@@ -22,7 +22,8 @@ export default {
     newIssues: '提交Bug',
     collapseMenu: '内容导航',
     changeLanguage: '切换语言',
-    flow: 'Flow'
+    flow: 'Flow',
+    extension: '扩展'
   },
   table: {
     'tab.resizable': '可调整列宽',
