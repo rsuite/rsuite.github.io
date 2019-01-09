@@ -4,13 +4,16 @@ In the product development process, components that meet the specified business 
 
 ----
 
-| Name                               | Preview             | Description                                                         |
-| ---------------------------------- | ------------------- | ------------------------------------------------------------------- |
-| [@rsuite/charts][charts]           | [View][charts-docs] | A set of charts based on `rsuite` and `echarts`                     |
-| [@rsuite/schart-form][schart-form] |                     | Form generation and validation based on `schema-typed` and `rsuite` |
+| Name                               | Preview              | Description                                                         |
+| ---------------------------------- | -------------------- | ------------------------------------------------------------------- |
+| [@rsuite/charts][charts]           | [View][charts-docs]  | A set of charts based on `rsuite` and `echarts`                     |
+| [@rsuite/schema-form][schema-form] |                      | Form generation and validation based on `schema-typed` and `rsuite` |
+| [@rsuite/tab-nav][tab-nav]         | [View][tab-nav-docs] | A tab component based on `rsuite` nav enhancements                  |
 
 
 
-[schart-form]:https://github.com/rsuite/schema-form
+[schema-form]:https://github.com/rsuite/schema-form
 [charts]: https://github.com/rsuite/charts
 [charts-docs]: https://charts.rsuitejs.com/
+[tab-nav]: https://github.com/rsuite/tab-nav
+[tab-nav-docs]: https://rsuite.github.io/tab-nav/

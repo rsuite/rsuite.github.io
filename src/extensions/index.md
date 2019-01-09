@@ -5,14 +5,16 @@
 
 ---
 
-| 名称                               | 预览                | 描述                                             |
-| ---------------------------------- | ------------------- | ------------------------------------------------ |
-| [@rsuite/charts][charts]           | [View][charts-docs] | 基于 `rsuite` UI 与 `ECharts` 的一套图表组件     |
-| [@rsuite/schart-form][schart-form] |                     | 基于 `schema-typed` 和 `rsuite` 的表单生成与校验 |
+| 名称                               | 预览                 | 描述                                             |
+| ---------------------------------- | -------------------- | ------------------------------------------------ |
+| [@rsuite/charts][charts]           | [View][charts-docs]  | 基于 `rsuite` UI 与 `ECharts` 的一套图表组件     |
+| [@rsuite/schema-form][schema-form] |                      | 基于 `schema-typed` 和 `rsuite` 的表单生成与校验 |
+| [@rsuite/tab-nav][tab-nav]         | [View][tab-nav-docs] | 基于 `rsuite` Nav 增强功能的选项卡组件           |
 
 
 
-
-[schart-form]:https://github.com/rsuite/schema-form
+[schema-form]:https://github.com/rsuite/schema-form
 [charts]: https://github.com/rsuite/charts
 [charts-docs]: https://charts.rsuitejs.com/
+[tab-nav]: https://github.com/rsuite/tab-nav
+[tab-nav-docs]: https://rsuite.github.io/tab-nav/
