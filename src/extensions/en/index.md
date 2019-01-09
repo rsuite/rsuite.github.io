@@ -4,16 +4,22 @@ In the product development process, components that meet the specified business 
 
 ----
 
-| Name                               | Preview              | Description                                                         |
-| ---------------------------------- | -------------------- | ------------------------------------------------------------------- |
-| [@rsuite/charts][charts]           | [View][charts-docs]  | A set of charts based on `rsuite` and `echarts`                     |
-| [@rsuite/schema-form][schema-form] |                      | Form generation and validation based on `schema-typed` and `rsuite` |
-| [@rsuite/tab-nav][tab-nav]         | [View][tab-nav-docs] | A tab component based on `rsuite` nav enhancements                  |
+| Name                               | Preview                  | Description                                                         |
+| ---------------------------------- | ------------------------ | ------------------------------------------------------------------- |
+| [@rsuite/charts][charts]           | [View][charts-docs]      | A set of charts based on `rsuite` and `echarts`                     |
+| [@rsuite/schema-form][schema-form] | [View][schema-form-docs] | Form generation and validation based on `schema-typed` and `rsuite` |
+| [@rsuite/responsive-nav][nav]      | [View][nav-docs]         | A responsive navigation component                                   |
+| [@rsuite/react-frame][frame]       | [View][frame-docs]       | Management system layout framework based on `rsuite` UI             |
+
 
 
 
 [schema-form]:https://github.com/rsuite/schema-form
+[schema-form-docs]:https://rsuite.github.io/schema-form/
 [charts]: https://github.com/rsuite/charts
 [charts-docs]: https://charts.rsuitejs.com/
-[tab-nav]: https://github.com/rsuite/tab-nav
-[tab-nav-docs]: https://rsuite.github.io/tab-nav/
+[nav]: https://github.com/rsuite/responsive-nav
+[nav-docs]: https://rsuite.github.io/responsive-nav/
+[frame]: https://github.com/rsuite/react-frame
+[frame-docs]: https://rsuite.github.io/react-frame/
+
