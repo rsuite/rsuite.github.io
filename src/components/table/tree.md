@@ -22,7 +22,7 @@ class TreeTable extends React.Component {
           defaultExpandAllRows
           rowKey="id"
           height={400}
-          data={[]}
+          data={data}
           onExpandChange={(isOpen, rowData) => {
             console.log(isOpen, rowData);
           }}
