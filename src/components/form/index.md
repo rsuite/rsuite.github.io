@@ -33,9 +33,9 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 | formValue        | object                                                  | 表单的值 `受控组件`                                |
 | layout           | enum: 'horizontal', 'vertical', 'inline' `('vertical')` | 设置表单内的元素左右两栏布局                       |
 | model            | Schema                                                  | SchemaModel 对象                                   |
-| onChange         | function(formValue:Object, event:Object)                | 数据改变后的回调函数                               |
-| onCheck          | function(formError:Object)                              | 数据校验的回调函数                                 |
-| onError          | function(formError:Object)                              | 校验出错的回调函数                                 |
+| onChange         | (formValue:Object, event:Object) => void                | 数据改变后的回调函数                               |
+| onCheck          | (formError:Object) => void                              | 数据校验的回调函数                                 |
+| onError          | (formError:Object) => void                              | 校验出错的回调函数                                 |
 
 
 ### Form methods

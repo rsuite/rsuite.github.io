@@ -16,13 +16,13 @@ import { Toggle } from 'rsuite';
 
 ### `<Toggle>`
 
-| Property          | Type `(Default)`       | Description                           |
-| ----------------- | ---------------------- | ------------------------------------- |
-| checked           | boolean                | Checked（Controlled）                 |
-| checkedChildren   | node                   | Checked display content               |
-| classPrefix       | string `'toggle'`      | The prefix of the component CSS class |
-| defaultChecked    | boolean                | Default checked                       |
-| disabled          | boolean                | Disabled                              |
-| onChange          | function               | Callback function when state changes  |
-| size              | enum: 'lg', 'md', 'sm' | Toggle size                           |
-| unCheckedChildren | node                   | Unselected display content            |
+| Property          | Type `(Default)`                                  | Description                           |
+| ----------------- | ------------------------------------------------- | ------------------------------------- |
+| checked           | boolean                                           | Checked（Controlled）                 |
+| checkedChildren   | React.Node                                        | Checked display content               |
+| classPrefix       | string `'toggle'`                                 | The prefix of the component CSS class |
+| defaultChecked    | boolean                                           | Default checked                       |
+| disabled          | boolean                                           | Disabled                              |
+| onChange          | (checked: boolean, event: SyntheticEvent) => void | Callback function when state changes  |
+| size              | enum: 'lg', 'md', 'sm'                            | Toggle size                           |
+| unCheckedChildren | React.Node                                        | Unselected display content            |

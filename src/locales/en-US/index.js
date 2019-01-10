@@ -22,7 +22,8 @@ export default {
     newIssues: 'Report Bug',
     collapseMenu: 'Content navigation',
     changeLanguage: 'Language',
-    flow: 'Flow'
+    flow: 'Flow',
+    extension: 'Extensions'
   },
   table: {
     'tab.resizable': 'Resizable',

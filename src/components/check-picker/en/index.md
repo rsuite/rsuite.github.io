@@ -30,10 +30,10 @@ import { CheckPicker } from 'rsuite';
 | disabled             | boolean                                                                | Whether disabled componet                               |
 | disabledItemValues   | string[]                                                               | Disable item by value                                   |
 | groupBy              | string                                                                 | Set group condition key in data                         |
-| height               | number `(320)`                                                         | The height of Dropdown                                  |
 | labelKey             | string `('label')`                                                     | Set label key in data                                   |
 | menuClassName        | string                                                                 | A css class to apply to the Menu DOM node.              |
 | menuStyle            | Object                                                                 | A style to apply to the Menu DOM node.                  |
+| maxHeight            | number `(320)`                                                         | The max height of Dropdown                              |
 | onChange             | (value:string, event)=>void                                            | Callback fired when value change                        |
 | onClose              | ()=>void                                                               | Callback fired when close component                     |
 | onGroupTitleClick    | (event)=>void                                                          | Callback fired when click the group title               |

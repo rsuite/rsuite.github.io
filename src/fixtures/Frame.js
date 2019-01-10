@@ -6,8 +6,9 @@ import TopLevelNav from './TopLevelNav';
 class Frame extends Component {
   constructor(props) {
     super(props);
+    const { showSubmenu } = props;
     this.state = {
-      showSubmenu: true
+      showSubmenu: typeof showSubmenu !== 'undefined' ? showSubmenu : true
     };
   }
   handleToggleMenu = show => {
@@ -27,7 +28,10 @@ class Frame extends Component {
 
     return (
       <div>
-        <TopLevelNav showSubmenu={showSubmenu} onToggleMenu={this.handleToggleMenu} />
+        <TopLevelNav
+          showSubmenu={showSubmenu}
+          onToggleMenu={this.handleToggleMenu}
+        />
         <DocSidebar style={menuStyles} />
         <div className="page-context" style={contextStyle}>
           {this.props.children}

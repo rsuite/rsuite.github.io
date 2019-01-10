@@ -6,10 +6,6 @@
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/components/table/data/users.js
  */
 
-const DateCell = ({ rowData, dataKey, ...props }) => (
-  <Cell {...props}>{rowData[dataKey].toLocaleString()}</Cell>
-);
-
 const NameCell = ({ rowData, dataKey, ...props }) => {
   const speaker = (
     <Popover title="Description">
@@ -68,12 +64,6 @@ const CheckCell = ({ rowData, onChange, checkedKeys, dataKey, ...props }) => (
   </Cell>
 );
 
-const EmailCell = ({ rowData, dataKey, ...props }) => (
-  <Cell {...props}>
-    <a href={`mailto:${rowData[dataKey]}`}>{rowData[dataKey]}</a>
-  </Cell>
-);
-
 const Menu = ({ onSelect }) => (
   <Dropdown.Menu onSelect={onSelect}>
     <Dropdown.Item eventKey={3}>Download As...</Dropdown.Item>
@@ -126,7 +116,11 @@ const ActionCell = ({ rowData, dataKey, ...props }) => {
   }
   return (
     <Cell {...props} className="link-group">
-      <IconButton appearance="subtle" onClick={handleAction} icon={<Icon icon="edit2" />} />
+      <IconButton
+        appearance="subtle"
+        onClick={handleAction}
+        icon={<Icon icon="edit2" />}
+      />
       <Divider vertical />
       <CustomWhisper>
         <IconButton appearance="subtle" icon={<Icon icon="more" />} />
@@ -199,7 +193,11 @@ class CustomColumnTable extends React.Component {
                 />
               </div>
             </HeaderCell>
-            <CheckCell dataKey="id" checkedKeys={checkedKeys} onChange={this.handleCheck} />
+            <CheckCell
+              dataKey="id"
+              checkedKeys={checkedKeys}
+              onChange={this.handleCheck}
+            />
           </Column>
           <Column width={80} align="center">
             <HeaderCell>Avartar</HeaderCell>
@@ -213,7 +211,11 @@ class CustomColumnTable extends React.Component {
 
           <Column width={300}>
             <HeaderCell>Email</HeaderCell>
-            <EmailCell dataKey="email" />
+            <Cell>
+              {rowData => (
+                <a href={`mailto:${rowData.email}`}>{rowData.email}</a>
+              )}
+            </Cell>
           </Column>
 
           <Column width={200}>
@@ -243,29 +245,21 @@ const ImageCell = ({ rowData, dataKey, ...props }) => (
 );
 ```
 
-用的时候：
-
 ```html
-<Column width={200} >
-    <HeaderCell>Avartar</HeaderCell>
-    <ImageCell dataKey="avartar" />
+<Column width={200}>
+  <HeaderCell>Avartar</HeaderCell>
+  <ImageCell dataKey="avartar" />
 </Column>
 ```
 
-比如，要格式化日期，就定义一个 `DateCell` 组件：
+`<Cell>` 的 `children` 支持函数，可以获取到 `rowData` 返回一个新的 `children`
 
-```js
-const DateCell = ({ rowData, dataKey, ...props }) => (
-  <Cell {...props}>{rowData[dataKey].toLocaleString()}</Cell>
-);
-```
-
-用的时候：
+示例：
 
 ```html
-<Column width={200} >
-    <HeaderCell>Action</HeaderCell>
-    <DateCell dataKey="date" />
+<Column width={200}>
+  <HeaderCell>Date</HeaderCell>
+  <Cell>{rowData => rowData.date.toLocaleString()}</Cell>
 </Column>
 ```
 

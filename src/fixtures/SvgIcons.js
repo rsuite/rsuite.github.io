@@ -4,3 +4,4 @@ export tools from '../resources/images/tools.svg';
 export search from '../resources/images/search.svg';
 export discord from '../resources/images/discord.svg';
 export design from '../resources/images/design.svg';
+export extension from '../resources/images/extension.svg';

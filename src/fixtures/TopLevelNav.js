@@ -5,12 +5,25 @@ import classNames from 'classnames';
 import { Link } from 'react-router';
 import { Button, Icon, IconButton, Whisper, Tooltip } from 'rsuite';
 import Logo from './Logo';
-import { guide, component, tools, search, design, lightbulb, lightbulbOn } from './SvgIcons';
+import {
+  guide,
+  component,
+  tools,
+  search,
+  design,
+  extension,
+  lightbulb,
+  lightbulbOn
+} from './SvgIcons';
 import SearchDrawer from './SearchDrawer';
 
 function WithTooltipButton({ children, tip, ...props }) {
   return (
-    <Whisper speaker={<Tooltip>{tip}</Tooltip>} placement="right" trigger="hover">
+    <Whisper
+      speaker={<Tooltip>{tip}</Tooltip>}
+      placement="right"
+      trigger="hover"
+    >
       <Button size="lg" {...props}>
         {children}
       </Button>
@@ -65,11 +78,18 @@ class TopLevelNav extends React.Component {
         to: `${localePath}components/overview`,
         icon: component
       },
+
       {
         key: 'tools',
         tip: _.get(locale, 'common.tools'),
         to: `${localePath}tools/palette`,
         icon: tools
+      },
+      {
+        key: 'extensions',
+        tip: _.get(locale, 'common.extension'),
+        to: `${localePath}extensions`,
+        icon: extension
       }
     ];
 
@@ -113,7 +133,9 @@ class TopLevelNav extends React.Component {
                 icon={item.icon}
                 svgStyle={{
                   ...svgStyle,
-                  fill: router.isActive({ pathname: item.key }) ? '#34c3ff' : '#fff'
+                  fill: router.isActive({ pathname: item.key })
+                    ? '#34c3ff'
+                    : '#fff'
                 }}
                 size="lg"
               />
@@ -132,12 +154,17 @@ class TopLevelNav extends React.Component {
 
             <WithTooltipButton
               tip={
-                showSubmenu ? _.get(locale, 'common.closeMenu') : _.get(locale, 'common.openMenu')
+                showSubmenu
+                  ? _.get(locale, 'common.closeMenu')
+                  : _.get(locale, 'common.openMenu')
               }
               className="icon-btn-circle"
               onClick={this.handleToggleMenu}
             >
-              <Icon icon={showSubmenu ? 'angle-left' : 'angle-right'} size="lg" />
+              <Icon
+                icon={showSubmenu ? 'angle-left' : 'angle-right'}
+                size="lg"
+              />
             </WithTooltipButton>
           </div>
         </div>

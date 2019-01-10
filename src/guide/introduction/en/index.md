@@ -1,23 +1,39 @@
 #  Introduction
 
-[![npm][npm-svg]][npm-home] [![Travis][travis-svg]][travis-home] [![Coverage Status][coverage-svg]][coverage-home] [![Discord][discord-svg]][discord-invite] [![Gitter][gitter-svg]][gitter]
+[![npm][npm-svg]][npm-home] [![Travis][travis-svg]][travis-home] [![Coverage Status][coverage-svg]][coverage-home] [![Gitter][gitter-svg]][gitter]
 
-RSUITE (React Suite) is a set of react component libraries for enterprise system products. Built by HYPERS front-end team and UX team, mainly serving company's big data products.
+React Suite is a set of react component libraries for enterprise system products. Built by HYPERS front-end team and UX team, mainly serving company's big data products.
 
 After three major revisions, a large number of components and rich functionality have been accumulated.
 
-## Browser Compatibility
+## UI Design
+
+RSUITE Design Prototype and specification, click to [view][rsuite-design]
+
+
+
+## Supported Platforms
+
+
+### Browser
+
+React Suite supports the latest, stable releases of all major browsers and platforms. IE<=9 is no longer supported since React Suite 3.0. React Suite is designed and implemented for use on modern desktop browsers rather than mobile browsers.
 
 | IE   | Edge | Firefox | Chrome | Safari |
 | ---- | ---- | ------- | ------ | ------ |
 | >=10 | >=14 | >= 45   | >= 49  | >= 10  |
 
- - IE<=9 is no longer supported since RSUITE 3.0.
- - RSUITE is designed and implemented for use on modern desktop browsers rather than mobile browsers.
 
-## UI Design
+### Server
 
-RSUITE Design Prototype and specification, click to [view][rsuite-design]
+React Suite supports server side rendering. Support [Next.js](https://github.com/zeit/next.js) to build applications.
+
+## Supported development environment
+
+- Supports React 16 +
+- Supports [TypeScript](http://www.typescriptlang.org/)
+- Supports [Flow](https://flow.org/)
+- Supports [Electron](https://electronjs.org/)
 
 ## Examples
 
@@ -29,6 +45,8 @@ RSUITE Design Prototype and specification, click to [view][rsuite-design]
 - [Use in create-react-app][demo-create-react-app]
 - [Use in Flow][demo-flow-app]
 - [Use in TypeScript][demo-typescript-app]
+- [Use in Next.js][demo-ssr-app]
+
 
 ## Changelog
 
@@ -93,3 +111,4 @@ RSUITE is [MIT licensed][LICENSE]. Copyright (c) 2016-present, HYPERS.
 [demo-multiple-themes]:https://github.com/rsuite/examples/tree/master/multiple-themes
 [demo-flow-app]:https://github.com/rsuite/examples/tree/master/flow-app
 [demo-typescript-app]:https://github.com/rsuite/examples/tree/master/typescript-app
+[demo-ssr-app]:https://github.com/rsuite/rsuite-management-system-ssr

@@ -69,6 +69,10 @@ export const getMenu = locale => {
           name: _.get(locale, 'common.icons')
         }
       ]
+    },
+    {
+      id: 'extensions',
+      name: _.get(locale, 'common.extension')
     }
   ];
 };

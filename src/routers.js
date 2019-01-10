@@ -1011,6 +1011,22 @@ export const createRouters = (locale, onEnter, onEntered) => {
           }}
         />
       </Route>
+
+      <Route
+        path="extensions"
+        getComponents={(location, callback) => {
+          onEnter && onEnter();
+          require.ensure([], require => {
+            const getComponent = require('./extensions')['default'];
+            const component = getComponent(locale);
+            callback && callback(null, component);
+            onEntered && onEntered();
+          });
+        }}
+        onEnter={() => {
+          setTitle('Extensions');
+        }}
+      />
     </React.Fragment>
   );
 };
