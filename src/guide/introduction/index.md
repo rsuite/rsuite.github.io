@@ -1,22 +1,38 @@
 # 关于 RSUITE
 
-[![npm][npm-svg]][npm-home] [![Travis][travis-svg]][travis-home] [![Coverage Status][coverage-svg]][travis-home] [![Discord][discord-svg]][discord-invite] [![Gitter][gitter-svg]][gitter]
+[![npm][npm-svg]][npm-home] [![Travis][travis-svg]][travis-home] [![Coverage Status][coverage-svg]][travis-home]  [![Gitter][gitter-svg]][gitter]
 
-RSUITE（React Suite 的简写）是一套 React 组件库，为后台产品而生。由 HYPERS 前端团队与 UX 团队打造，主要服务于公司大数据产品线。经历了三次大的版本更新后，累积了大量的组件和丰富的功能。
+React Suite 是一套 React 组件库，为后台产品而生。由 HYPERS 前端团队与 UX 团队打造，主要服务于公司大数据产品线。经历了三次大的版本更新后，累积了大量的组件和丰富的功能。
 
 
-## 浏览器兼容性
+### UI Design
+
+React Suite 设计原型与规范， [点击查看][rsuite-design]。
+
+
+## 支持的平台
+
+
+### 浏览器
+
+React Suite 支持最新的，稳定版的全部主流浏览器和平台。 从 React Suite 3 开始不支持 IE9 以下版本(包括 IE9)。不推荐在移动端使用。
 
 | IE   | Edge | Firefox | Chrome | Safari |
 | ---- | ---- | ------- | ------ | ------ |
 | >=10 | >=14 | >= 45   | >= 49  | >= 10  |
 
-- 从 RSUITE 3.0 开始不支持 IE9 以下版本(包括 IE9)， 其他现代桌面浏览器都支持。
-- 不推荐在移动端使用。
 
-## UI Design
+### 服务端
 
-RSUITE 设计原型与规范, [点击查看][rsuite-design]
+React Suite 支持服务端渲染， 支持通过 [Next.js](https://github.com/zeit/next.js) 构建应用。
+
+
+## 支持的开发环境
+
+- 支持 React 16 +
+- 支持 [TypeScript](http://www.typescriptlang.org/)
+- 支持 [Flow](https://flow.org/)
+- 支持 [Electron](https://electronjs.org/)
 
 
 ## 示例
@@ -29,6 +45,8 @@ RSUITE 设计原型与规范, [点击查看][rsuite-design]
 - [在 create-react-app 中使用][demo-create-react-app]
 - [在 Flow 中使用][demo-flow-app]
 - [在 TypeScript 中使用][demo-typescript-app]
+- [在 Next.js 中使用][demo-ssr-app]
+
 
 ## 更新日志
 
@@ -91,3 +109,4 @@ RSUITE 基于 [MIT licensed][LICENSE] 发布。
 [demo-multiple-themes]:https://github.com/rsuite/examples/tree/master/multiple-themes
 [demo-flow-app]:https://github.com/rsuite/examples/tree/master/flow-app
 [demo-typescript-app]:https://github.com/rsuite/examples/tree/master/typescript-app
+[demo-ssr-app]:https://github.com/rsuite/rsuite-management-system-ssr

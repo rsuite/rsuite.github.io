@@ -252,7 +252,7 @@ const ImageCell = ({ rowData, dataKey, ...props }) => (
 </Column>
 ```
 
-`Cell` 的 `children` 支持函数，可以获取到 `rowData` 返回一个新的 `children`
+`<Cell>` 的 `children` 支持函数，可以获取到 `rowData` 返回一个新的 `children`
 
 示例：
 

@@ -55,7 +55,7 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | sortColumn             | string                                  | 排序列名称                                                   |
 | sortType               | enum: 'desc', 'asc'                     | 排序类型（受控）                                             |
 | width                  | number                                  | 宽度                                                         |
-
+| wordWrap               | boolean                                 | 单元格自动换行                                             |
 
 
 ### `<Table.Column>`

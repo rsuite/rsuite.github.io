@@ -51,9 +51,11 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | rowKey                 | string `('key')`                        | Each row corresponds to the unique `key` in `data`                                            |
 | setRowHeight           | (rowData:object)=> number               | Custom Settings Row Height                                                                    |
 | showHeader             | boolean `(true)`                        | Display header                                                                                |
-| sortColumn             | string                                  | Sort column name ˝                                                                            |
+| sortColumn             | string                                  | Sort column name                                                                              |
 | sortType               | enum: 'desc', 'asc'                     | Sort type (Controlled)                                                                        |
 | width                  | number                                  | Table width                                                                                   |
+| wordWrap               | boolean                                 | The cell wraps automatically                                                                  |
+
 
 
 ### `<Table.Column>`
