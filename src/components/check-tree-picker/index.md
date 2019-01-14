@@ -23,7 +23,7 @@ import { CheckTreePicker } from 'rsuite';
 | appearance            | enum: 'default', 'subtle' `('default')`                                                                    | 设置外观                        |
 | block                 | boolean                                                                                                    | 堵塞整行                        |
 | cascade               | boolean                                                                                                    | checktree 是否级联选择          |
-| childKey              | string `('children')`                                                                                      | tree 数据结构 children 属性名称 |
+| childrenKey              | string `('children')`                                                                                      | tree 数据结构 children 属性名称 |
 | cleanable             | boolean `(true)`                                                                                           | 是否可以清楚                    |
 | container             | HTMLElement or (() => HTMLElement)                                                                         | 设置渲染的容器                  |
 | countable             | boolean `(true)`                                                                                           | 是否显示已选项的计数            |
