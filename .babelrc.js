@@ -4,6 +4,7 @@ module.exports = api => {
     presets: ['@babel/preset-env', '@babel/preset-react'],
     plugins: [
       'lodash',
+      'date-fns',
       '@babel/plugin-transform-proto-to-assign',
       '@babel/plugin-transform-runtime',
       'react-hot-loader/babel',

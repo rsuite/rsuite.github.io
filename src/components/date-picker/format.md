@@ -9,7 +9,7 @@ const instance = (
     ranges={[
       {
         label: 'Now',
-        value: moment()
+        value: new Date()
       }
     ]}
   />

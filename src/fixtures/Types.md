@@ -40,7 +40,7 @@ type DataItemType = {
 type Range = {
   label: React.Node,
   closeOverlay?: boolean,
-  value: Moment | ((date: Moment) => Moment)
+  value: Date | ((date: Date) => Date)
 };
 ```
 

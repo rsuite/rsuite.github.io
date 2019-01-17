@@ -19,7 +19,7 @@ const Demo = props => (
 
     <hr />
     <h5>自定义禁用</h5>
-    <DateRangePicker disabledDate={date => date.isAfter(moment())} />
+    <DateRangePicker disabledDate={date => isAfter(date, new Date())} />
 
     <hr />
     <h5>允许最多选择 7 天，其他日期都禁用</h5>
@@ -56,8 +56,8 @@ ReactDOM.render(<Demo />);
 
 ```ts
 disabledDate(
- date: Moment,              // 用于判断是否需要禁用的日期
- selectDate: Array<Moment>, // 选择的日期
+ date: Date,              // 用于判断是否需要禁用的日期
+ selectDate: Array<Date>, // 选择的日期
  selectedDone: boolean,     // 当前是否选择完成。如果为 false, 则只选择了开始日期，等待选择结束日期
  target: 'CALENDAR', 'TOOLBAR_BUTTON_OK', 'TOOLBAR_SHORTCUT'   // disabledDate 调用的位置
 ) => boolean
@@ -96,7 +96,7 @@ allowedDays(days: number) => boolean
 允许指定的日期范围，其他日期都禁用
 
 ```ts
-allowedRange( startDate: string | Moment, endDate: string | Moment) => boolean
+allowedRange( startDate: string | Date, endDate: string | Date) => boolean
 ```
 
 **after**
@@ -104,7 +104,7 @@ allowedRange( startDate: string | Moment, endDate: string | Moment) => boolean
 禁用指定日期之后的日期
 
 ```ts
-after(date?: string | Moment) => boolean
+after(date?: string | Date) => boolean
 ```
 
 **afterToday**
@@ -120,7 +120,7 @@ afterToday() => boolean
 禁用指定日期之前的日期
 
 ```ts
-before(date?: string | Moment) => boolean
+before(date?: string | Date) => boolean
 ```
 
 **beforeToday**

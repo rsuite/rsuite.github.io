@@ -1,28 +1,34 @@
 ### Custom Shortcut Options
-<!--start-code-->
-```js
 
+<!--start-code-->
+
+```js
 const DateRangePickerCustomToolbar = props => (
   <div className="field">
     <DateRangePicker
-      ranges={[{
-        label: 'Yesterday',
-        value: [moment().add(-1, 'd'), moment().add(-1, 'd')]
-      }, {
-        label: 'Today',
-        value: [moment(), moment()]
-      }, {
-        label: 'Tomorrow',
-        value: [moment().add(1, 'd'), moment().add(1, 'd')]
-      }, {
-        label: 'Last 7 days',
-        value: [moment().subtract(6, 'days'), moment()]
-      }]}
+      ranges={[
+        {
+          label: 'Yesterday',
+          value: [addDays(new Date(), -1), addDays(new Date(), -1)]
+        },
+        {
+          label: 'Today',
+          value: [new Date(), new Date()]
+        },
+        {
+          label: 'Tomorrow',
+          value: [addDays(new Date(), 1), addDays(new Date(), 1)]
+        },
+        {
+          label: 'Last 7 days',
+          value: [subDays(new Date(), 6), new Date()]
+        }
+      ]}
     />
   </div>
 );
 
 ReactDOM.render(<DateRangePickerCustomToolbar />);
 ```
-<!--end-code-->
 
+<!--end-code-->

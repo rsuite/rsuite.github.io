@@ -153,10 +153,7 @@ module.exports = Object.assign(
     },
     plugins: [
       extractLess,
-      new webpack.ContextReplacementPlugin(
-        /moment[\/\\]locale$/,
-        /zh-cn|en-gb/
-      ),
+
       new webpack.ContextReplacementPlugin(
         /highlight\.js\/lib\/languages$/,
         new RegExp(`^./(${languages.join('|')})$`)

@@ -1,6 +1,5 @@
 import React from 'react';
 import Loadable from 'react-loadable';
-import moment from 'moment';
 
 import {
   HelpBlock,
@@ -108,7 +107,6 @@ export default createComponentExample({
     JSONView,
     MaskedInput,
     Slider,
-    DatePicker,
-    moment
+    DatePicker
   }
 });

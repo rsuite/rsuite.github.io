@@ -11,11 +11,11 @@ const DatePickerInstance = props => (
     <DatePicker disabled />
 
     <h5> 禁用日期</h5>
-    <DatePicker disabledDate={date => date.isBefore(moment())} />
+    <DatePicker disabledDate={date => isBefore(date, new Date())} />
 
     <h5> 禁用月份</h5>
     <DatePicker
-      disabledDate={date => date.isBefore(moment())}
+      disabledDate={date => isBefore(date, new Date())}
       format="YYYY-MM"
     />
 
@@ -23,7 +23,7 @@ const DatePickerInstance = props => (
     <DatePicker
       format="HH:mm:ss"
       ranges={[]}
-      defaultValue={moment('2017-12-12 09:15:30')}
+      defaultValue={new Date('2017-12-12 09:15:30')}
       disabledHours={hour => hour < 8 || hour > 18}
       disabledMinutes={minute => minute % 15 !== 0}
       disabledSeconds={second => second % 30 !== 0}
@@ -33,7 +33,7 @@ const DatePickerInstance = props => (
     <DatePicker
       format="HH:mm:ss"
       ranges={[]}
-      defaultValue={moment('2017-12-12 09:15:30')}
+      defaultValue={new Date('2017-12-12 09:15:30')}
       hideHours={hour => hour < 8 || hour > 18}
       hideMinutes={minute => minute % 15 !== 0}
       hideSeconds={second => second % 30 !== 0}

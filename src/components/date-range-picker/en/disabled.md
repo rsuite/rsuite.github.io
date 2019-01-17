@@ -19,7 +19,7 @@ const Demo = props => (
 
     <hr />
     <h5>Custom disabled.</h5>
-    <DateRangePicker disabledDate={date => date.isAfter(moment())} />
+    <DateRangePicker disabledDate={date => isAfter(date, new Date())} />
 
     <hr />
     <h5>Allow maximum selection for 7 days, other dates are disabled.</h5>
@@ -59,8 +59,8 @@ ReactDOM.render(<Demo />);
 
 ```ts
 disabledDate(
- date: Moment,              // Date used to determine if disabling is required.
- selectDate: Array<Moment>, // Date selected.
+ date: Date,              // Date used to determine if disabling is required.
+ selectDate: Array<Date>, // Date selected.
  selectedDone: boolean,     // Whether to choose to finish now. If `false`, only the start date is selected, waiting for the selection end date.
  target: 'CALENDAR', 'TOOLBAR_BUTTON_OK', 'TOOLBAR_SHORTCUT'   // Call the target of the `disabledDate` function
 ) => boolean
@@ -99,7 +99,7 @@ allowedDays(days: number) => boolean
 Allow specified date range, other dates are disabled
 
 ```ts
-allowedRange( startDate: string | Moment, endDate: string | Moment) => boolean
+allowedRange( startDate: string | Date, endDate: string | Date) => boolean
 ```
 
 **after**
@@ -107,7 +107,7 @@ allowedRange( startDate: string | Moment, endDate: string | Moment) => boolean
 Disable dates after the specified date
 
 ```ts
-after(date?: string | Moment) => boolean
+after(date?: string | Date) => boolean
 ```
 
 **afterToday**
@@ -123,7 +123,7 @@ afterToday() => boolean
 Disable dates before the specified date
 
 ```ts
-before(date?: string | Moment) => boolean
+before(date?: string | Date) => boolean
 ```
 
 **beforeToday**

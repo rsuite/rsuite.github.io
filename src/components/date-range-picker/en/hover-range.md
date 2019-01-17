@@ -17,10 +17,7 @@ const instance = (
     <h5>Custom Select</h5>
     <DateRangePicker
       ranges={[]}
-      hoverRange={date => [
-        date.clone().subtract(1, 'days'),
-        date.clone().add(1, 'days')
-      ]}
+      hoverRange={date => [subDays(date, 1), addDays(date, 1)]}
     />
   </div>
 );

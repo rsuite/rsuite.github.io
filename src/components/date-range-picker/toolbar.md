@@ -1,28 +1,34 @@
 ### 自定义快捷项
-<!--start-code-->
-```js
 
+<!--start-code-->
+
+```js
 const DateRangePickerCustomToolbar = props => (
   <div className="field">
     <DateRangePicker
-      ranges={[{
-        label: '昨天',
-        value: [moment().add(-1, 'd'), moment().add(-1, 'd')]
-      }, {
-        label: '今天',
-        value: [moment(), moment()]
-      }, {
-        label: '明天',
-        value: [moment().add(1, 'd'), moment().add(1, 'd')]
-      }, {
-        label: '最近 7 天',
-        value: [moment().subtract(6, 'days'), moment()]
-      }]}
+      ranges={[
+        {
+          label: '昨天',
+          value: [addDays(new Date(), -1), addDays(new Date(), -1)]
+        },
+        {
+          label: '今天',
+          value: [new Date(), new Date()]
+        },
+        {
+          label: '明天',
+          value: [addDays(new Date(), 1), addDays(new Date(), 1)]
+        },
+        {
+          label: '最近 7 天',
+          value: [subDays(new Date(), 6), new Date()]
+        }
+      ]}
     />
   </div>
 );
 
 ReactDOM.render(<DateRangePickerCustomToolbar />);
 ```
-<!--end-code-->
 
+<!--end-code-->

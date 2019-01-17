@@ -1,5 +1,5 @@
 import React from 'react';
-import moment from 'moment';
+import { addDays, isSameDay, isBefore, subDays } from 'date-fns';
 
 import { DatePicker, Button } from 'rsuite';
 import createComponentExample from '../createComponentExample';
@@ -23,7 +23,10 @@ export default createComponentExample({
     'control'
   ],
   dependencies: {
-    moment,
+    subDays,
+    addDays,
+    isSameDay,
+    isBefore,
     Button,
     DatePicker
   }

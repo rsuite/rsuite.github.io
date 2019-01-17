@@ -7,7 +7,7 @@ class Demo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: moment()
+      value: new Date()
     };
     this.handleChange = this.handleChange.bind(this);
   }
