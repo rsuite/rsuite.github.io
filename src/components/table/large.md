@@ -1,14 +1,16 @@
 ### 虚拟化的大表格
 
+支持 `virtualized`, 有效地呈现大表格数据。
+
 <!--start-code-->
 
 ```js
 class LargeTable extends React.Component {
-
   render() {
     return (
       <div>
         <Table
+          vitrualized
           height={400}
           data={fakeLargeData}
           onRowClick={data => {
@@ -20,7 +22,7 @@ class LargeTable extends React.Component {
             <Cell dataKey="id" />
           </Column>
 
-          <Column width={130} fixed>
+          <Column width={130}>
             <HeaderCell>First Name</HeaderCell>
             <Cell dataKey="firstName" />
           </Column>
@@ -43,34 +45,6 @@ class LargeTable extends React.Component {
           <Column width={200}>
             <HeaderCell>Company Name</HeaderCell>
             <Cell dataKey="companyName" />
-          </Column>
-
-          <Column width={200}>
-            <HeaderCell>Email</HeaderCell>
-            <Cell dataKey="email" />
-          </Column>
-
-          <Column width={200}>
-            <HeaderCell>Email</HeaderCell>
-            <Cell dataKey="email" />
-          </Column>
-
-          <Column width={200} fixed="right">
-            <HeaderCell>Action</HeaderCell>
-
-            <Cell>
-              {rowData => {
-                function handleAction() {
-                  alert(`id:${rowData.id}`);
-                }
-                return (
-                  <span>
-                    <a onClick={handleAction}> Edit </a> |{' '}
-                    <a onClick={handleAction}> Remove </a>
-                  </span>
-                );
-              }}
-            </Cell>
           </Column>
         </Table>
       </div>

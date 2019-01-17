@@ -9,7 +9,7 @@
 export const EditCell = ({ rowData, dataKey, onChange, ...props }) => {
   const editing = rowData.status === 'EDIT';
   return (
-    <Cell className={editing ? 'table-content-editing' : ''} {...props}>
+    <Cell {...props} className={editing ? 'table-content-editing' : ''}>
       {editing ? (
         <input
           className="rs-input"

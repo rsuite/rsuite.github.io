@@ -53,6 +53,7 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | showHeader             | boolean `(true)`                        | Display header                                                                                |
 | sortColumn             | string                                  | Sort column name                                                                              |
 | sortType               | enum: 'desc', 'asc'                     | Sort type (Controlled)                                                                        |
+| virtualized            | boolean                                 | Effectively render large tabular data                                                         |
 | width                  | number                                  | Table width                                                                                   |
 | wordWrap               | boolean                                 | The cell wraps automatically                                                                  |
 
