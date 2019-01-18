@@ -8,6 +8,7 @@ export default createComponentExample({
   id: 'DatePicker',
   examples: [
     'basic',
+    'one-tap',
     'appearance',
     'block',
     'placeholder',

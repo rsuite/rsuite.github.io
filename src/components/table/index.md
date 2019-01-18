@@ -54,9 +54,9 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | showHeader             | boolean `(true)`                        | 显示表头                                                     |
 | sortColumn             | string                                  | 排序列名称                                                   |
 | sortType               | enum: 'desc', 'asc'                     | 排序类型（受控）                                             |
+| virtualized            | boolean                                 | 呈现大表格数据                                               |
 | width                  | number                                  | 宽度                                                         |
-| wordWrap               | boolean                                 | 单元格自动换行                                             |
-
+| wordWrap               | boolean                                 | 单元格自动换行                                               |
 
 ### `<Table.Column>`
 

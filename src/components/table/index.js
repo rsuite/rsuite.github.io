@@ -19,6 +19,9 @@ import fakeTreeData from './data/treeData';
 import fakeDataForColSpan from './data/usersForColSpan';
 import createComponentExample from '../createComponentExample';
 import { getDict } from '../../locales';
+import fakeLargeData from './data/fakeLargeData.json';
+
+
 
 const { HeaderCell, Pagination, Cell, Column } = Table;
 const TablePagination = Pagination;
@@ -45,9 +48,10 @@ export default locale => {
     sorce: require(`./${localePath}${item}.md`)
   }));
 
+
   const ComponentExample = createComponentExample({
     id: 'Table',
-    examples: ['default'],
+    examples: ['default', 'large'],
     dict,
     dependencies: {
       _clone: clone,
@@ -57,6 +61,7 @@ export default locale => {
       fakeData,
       fakeTreeData,
       fakeDataForColSpan,
+      fakeLargeData,
       TablePagination,
       Popover,
       Whisper,

@@ -59,6 +59,23 @@ class FixedColumnTable extends React.Component {
             <HeaderCell>Email</HeaderCell>
             <Cell dataKey="email" />
           </Column>
+          <Column width={120} fixed="right">
+            <HeaderCell>Action</HeaderCell>
+
+            <Cell>
+              {rowData => {
+                function handleAction() {
+                  alert(`id:${rowData.id}`);
+                }
+                return (
+                  <span>
+                    <a onClick={handleAction}> Edit </a> |{' '}
+                    <a onClick={handleAction}> Remove </a>
+                  </span>
+                );
+              }}
+            </Cell>
+          </Column>
         </Table>
       </div>
     );

@@ -1,4 +1,4 @@
-### Click Mode
+### One tap
 
 <!--start-code-->
 

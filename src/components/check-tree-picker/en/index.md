@@ -23,7 +23,7 @@ import { CheckTreePicker } from 'rsuite';
 | appearance            | enum: 'default', 'subtle' `('default')`                                                | Set picker appearence                                       |
 | block                 | boolean                                                                                | Blocking an entire row                                      |
 | cascade               | boolean                                                                                | whether cascade select                                      |
-| childKey              | string `('children')`                                                                  | set children key in data                                    |
+| childrenKey              | string `('children')`                                                                  | set children key in data                                    |
 | cleanable             | boolean `(true)`                                                                       | whether the selected value can be cleared                   |
 | container             | HTMLElement or (() => HTMLElement)                                                     | Sets the rendering container                                |
 | countable             | boolean `(true)`                                                                       | whether display counts of checkItems                        |
