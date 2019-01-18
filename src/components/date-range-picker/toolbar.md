@@ -7,16 +7,16 @@ const DateRangePickerCustomToolbar = props => (
     <DateRangePicker
       ranges={[{
         label: '昨天',
-        value: [moment().add(-1, 'd'), moment().add(-1, 'd')]
+        value: [dateFns.addDays(new Date(), -1), dateFns.addDays(new Date(), -1)]
       }, {
         label: '今天',
-        value: [moment(), moment()]
+        value: [new Date(), new Date()]
       }, {
         label: '明天',
-        value: [moment().add(1, 'd'), moment().add(1, 'd')]
+        value: [dateFns.addDays(new Date(), 1), dateFns.addDays(new Date(), 1)]
       }, {
         label: '最近 7 天',
-        value: [moment().subtract(6, 'days'), moment()]
+        value: [dateFns.subDays(new Date(), 6), new Date()]
       }]}
     />
   </div>

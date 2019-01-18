@@ -7,7 +7,7 @@ class DateRangePickerValue extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: [moment('2017-02-01'), moment('2017-05-20')]
+      value: [new Date('2017-02-01'), new Date('2017-05-20')]
     };
   }
   render() {

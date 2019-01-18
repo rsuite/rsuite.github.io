@@ -1,5 +1,5 @@
 import React from 'react';
-import moment from 'moment';
+import dateFns from 'date-fns';
 import { DateRangePicker, Button, Divider } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
@@ -18,7 +18,7 @@ export default createComponentExample({
     'intl'
   ],
   dependencies: {
-    moment,
+    dateFns,
     Button,
     Divider,
     DateRangePicker

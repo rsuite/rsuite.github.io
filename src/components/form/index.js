@@ -1,6 +1,6 @@
 import React from 'react';
 import Loadable from 'react-loadable';
-import moment from 'moment';
+import dateFns from 'date-fns';
 
 import {
   HelpBlock,
@@ -109,6 +109,6 @@ export default createComponentExample({
     MaskedInput,
     Slider,
     DatePicker,
-    moment
+    dateFns
   }
 });

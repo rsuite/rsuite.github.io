@@ -9,17 +9,17 @@ const instance = (
       ranges={[
         {
           label: 'yesterday',
-          value: moment().add(-1, 'd')
+          value: dateFns.addDays(new Date(), -1)
         },
         {
           label: 'today',
-          value: moment()
+          value: new Date()
         },
         {
           label: 'Prev Day',
           closeOverlay: false,
           value: datePage => {
-            return moment(datePage).add(-1, 'd');
+            return dateFns.add(dateFns.parse(datePage), -1);
           }
         }
       ]}
