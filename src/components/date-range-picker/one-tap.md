@@ -11,11 +11,11 @@ const instance = (
       ranges={[
         {
           label: 'today',
-          value: [moment(), moment()]
+          value: [new Date(), new Date()]
         },
         {
           label: 'yesterday',
-          value: [moment().add(1, 'd'), moment().add(1, 'd')]
+          value: [dateFns.addDays(new Date(), 1), dateFns.addDays(new Date(), 1)]
         }
       ]}
     />
