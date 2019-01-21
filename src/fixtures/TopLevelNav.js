@@ -13,7 +13,8 @@ import {
   design,
   extension,
   lightbulb,
-  lightbulbOn
+  lightbulbOn,
+  gitee
 } from './SvgIcons';
 import SearchDrawer from './SearchDrawer';
 
@@ -150,6 +151,15 @@ class TopLevelNav extends React.Component {
               target="_blank"
             >
               <Icon icon="github" size="lg" />
+            </WithTooltipButton>
+
+            <WithTooltipButton
+              tip="码云"
+              className="icon-btn-circle"
+              href="https://gitee.com/rsuite/rsuite"
+              target="_blank"
+            >
+              <Icon icon={gitee} svgStyle={svgStyle} size="lg" />
             </WithTooltipButton>
 
             <WithTooltipButton
