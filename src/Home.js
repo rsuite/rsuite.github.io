@@ -83,6 +83,16 @@ class Home extends React.Component {
                 GitHub
                 <Icon icon="external-link-square" className="external-link" />
               </a>
+              <a
+                className="hvr-underline-from-center"
+                href="https://gitee.com/rsuite/rsuite"
+                target="_blank"
+              >
+                Gitee
+                <Icon icon="external-link-square" className="external-link" />
+              </a>
+
+
             </div>
             <ReactLogo
               style={{
