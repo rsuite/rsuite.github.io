@@ -31,7 +31,7 @@ import { TreePicker } from 'rsuite';
 | disabled             | boolean                                                                                 | Whether to disable Picker                       |
 | disabledItemValues   | string[]                                                                                | Disable item by value                           |
 | expandAll            | boolean                                                                                 | Expand or unExpand all nodes(Controlled)        |
-| inline               | boolean                                                                                 | Whether inline display tree                     |
+| height               | number `(360px)`                                                                        | height of menu. When `virtualize` is true, you can set the height of menu            |
 | labelKey             | string `('label')`                                                                      | Tree data structure Label property name         |
 | menuClassName        | string                                                                                  | A css class to apply to the Menu DOM node       |
 | menuStyle            | React.CSSProperties                                                                     | style for Menu                                  |
@@ -52,6 +52,7 @@ import { TreePicker } from 'rsuite';
 | toggleComponentClass | React.ElementType `('a')`                                                               | You can use a custom element for this component |
 | value                | string                                                                                  | Selected value                                  |
 | valueKey             | string `('value')`                                                                      | Tree data Structure Value property name         |
+| virtualized          | boolean `(false)`                                                                       | Whether using Virtualized List|
 
 
 ## Related components
