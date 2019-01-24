@@ -8,7 +8,7 @@
  * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/city.js
  */
 
-const instance = <Tree data={data} virtualized height={200}/>;
+const instance = <Tree data={data} virtualized height={200} defaultExpandAll />;
 ReactDOM.render(instance);
 ```
 
