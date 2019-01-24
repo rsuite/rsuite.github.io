@@ -1,4 +1,4 @@
-### Uncheckable
+### 虚拟列表
 
 <!--start-code-->
 
@@ -11,13 +11,11 @@
 const instance = (
   <div>
     <CheckTreePicker
+      virtualized
       defaultExpandAll
-      style={{ width: 280 }}
       data={data}
-      renderValue={(value, selectedItems) =>
-        selectedItems.map(item => item.label).join(' , ')
-      }
-      uncheckableItemValues={[1, 3, 36]}
+      cascade={false}
+      style={{ width: 280 }}
     />
   </div>
 );

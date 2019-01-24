@@ -12,7 +12,8 @@ export default createComponentExample({
     'disabled',
     'searchable',
     'custom',
-    'async'
+    'async',
+    'virtualized'
   ],
   getDependencies: getCity,
   dependencies: {

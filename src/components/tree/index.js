@@ -5,7 +5,7 @@ import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
   id: 'Tree',
-  examples: ['basic'],
+  examples: ['basic', 'virtualized'],
   getDependencies: getCity,
   dependencies: {
     Tree

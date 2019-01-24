@@ -47,7 +47,7 @@ class CustomFieldForm extends React.Component {
       status: ['open'],
       level: 1,
       level2: 1,
-      createDate: moment()
+      createDate: new Date()
     };
     this.state = {
       formValue: formValue,

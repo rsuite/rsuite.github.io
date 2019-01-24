@@ -13,7 +13,8 @@ export default createComponentExample({
     'disabled',
     'custom',
     'async',
-    'uncheckable'
+    'uncheckable',
+    'virtualized'
   ],
   getDependencies: getCity,
   dependencies: {

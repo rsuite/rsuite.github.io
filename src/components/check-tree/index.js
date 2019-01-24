@@ -5,7 +5,7 @@ import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
   id: 'CheckTree',
-  examples: ['basic', 'cascade', 'custom'],
+  examples: ['basic', 'cascade', 'custom', 'virtualized'],
   getDependencies: getCity,
   dependencies: {
     CheckTree,

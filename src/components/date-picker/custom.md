@@ -9,17 +9,17 @@ const instance = (
       ranges={[
         {
           label: '昨天',
-          value: moment().add(-1, 'd')
+          value: dateFns.addDays(-1)
         },
         {
           label: '今天',
-          value: moment()
+          value: new Date()
         },
         {
           label: '前一天',
           closeOverlay: false,
           value: datePage => {
-            return moment(datePage).add(-1, 'd');
+            return dateFns.addDays(dateFns.parse(datePage), -1);
           }
         }
       ]}
