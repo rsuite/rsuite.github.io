@@ -10,7 +10,7 @@ class LargeTable extends React.Component {
     return (
       <div>
         <Table
-          vitrualized
+          virtualized
           height={400}
           data={fakeLargeData}
           onRowClick={data => {
