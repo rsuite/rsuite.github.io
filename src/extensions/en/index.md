@@ -4,12 +4,13 @@ In the product development process, components that meet the specified business 
 
 ----
 
-| Name                               | Preview                  | Description                                                         |
-| ---------------------------------- | ------------------------ | ------------------------------------------------------------------- |
-| [@rsuite/charts][charts]           | [View][charts-docs]      | A set of charts based on `rsuite` and `echarts`                     |
-| [@rsuite/schema-form][schema-form] | [View][schema-form-docs] | Form generation and validation based on `schema-typed` and `rsuite` |
-| [@rsuite/responsive-nav][nav]      | [View][nav-docs]         | A responsive navigation component                                   |
-| [@rsuite/react-frame][frame]       | [View][frame-docs]       | Management system layout framework based on `rsuite` UI             |
+| Name                                           | Preview                        | Description                                                         |
+| ---------------------------------------------- | ------------------------------ | ------------------------------------------------------------------- |
+| [@rsuite/charts][charts]                       | [View][charts-docs]            | A set of charts based on `rsuite` and `echarts`                     |
+| [@rsuite/schema-form][schema-form]             | [View][schema-form-docs]       | Form generation and validation based on `schema-typed` and `rsuite` |
+| [@rsuite/responsive-nav][nav]                  | [View][nav-docs]               | A responsive navigation component                                   |
+| [@rsuite/react-frame][frame]                   | [View][frame-docs]             | Management system layout framework based on `rsuite` UI             |
+| [@rsuite/multi-date-picker][multi-date-picker] | [View][multi-date-picker-docs] | A date picker that can select multiple dates                        |
 
 
 
@@ -22,4 +23,6 @@ In the product development process, components that meet the specified business 
 [nav-docs]: https://rsuite.github.io/responsive-nav/
 [frame]: https://github.com/rsuite/react-frame
 [frame-docs]: https://rsuite.github.io/react-frame/
+[multi-date-picker]: https://github.com/rsuite/multi-date-picker
+[multi-date-picker-docs]:https://rsuite.github.io/multi-date-picker
 
