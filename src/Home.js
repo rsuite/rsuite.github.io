@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { Link } from 'react-router';
 import { addStyle, getHeight, on } from 'dom-lib';
-import { Container, Content, Row, Col, Icon } from 'rsuite';
+import { Container, Content, Row, Col, Icon, Button } from 'rsuite';
 
 import Banner from './fixtures/Banner';
 import Logo from './fixtures/Logo';
@@ -21,7 +21,11 @@ class Home extends React.Component {
     };
   }
   componentDidMount() {
-    this._onWindowResizeListener = on(window, 'resize', this.handleWindowResize);
+    this._onWindowResizeListener = on(
+      window,
+      'resize',
+      this.handleWindowResize
+    );
     this.handleWindowResize();
     const setRunning = setTimeout(() => {
       this.home && this.setState({ running: true });
@@ -61,38 +65,39 @@ class Home extends React.Component {
             </h1>
             <p className="sub-title"> {_.get(locale, 'common.resume')}</p>
             <div className="menu-nav">
-              <Link className="hvr-underline-from-center" to={`${localePath}guide/introduction`}>
+              <Link
+                className="hvr-underline-from-center"
+                to={`${localePath}guide/introduction`}
+              >
                 {_.get(locale, 'common.guide')}
               </Link>
 
-              <Link className="hvr-underline-from-center" to={`${localePath}components/overview`}>
+              <Link
+                className="hvr-underline-from-center"
+                to={`${localePath}components/overview`}
+              >
                 {_.get(locale, 'common.components')}
               </Link>
-              <Link className="hvr-underline-from-center" to={`${localePath}tools/palette`}>
+              <Link
+                className="hvr-underline-from-center"
+                to={`${localePath}tools/palette`}
+              >
                 {_.get(locale, 'common.tools')}
               </Link>
-              <a className="hvr-underline-from-center" href="/design/index.html" target="_blank">
+              <Link
+                className="hvr-underline-from-center"
+                to={`${localePath}extensions`}
+              >
+                {_.get(locale, 'common.extension')}
+              </Link>
+              <a
+                className="hvr-underline-from-center"
+                href="/design/index.html"
+                target="_blank"
+              >
                 {_.get(locale, 'common.design')}
                 <Icon icon="external-link-square" className="external-link" />
               </a>
-              <a
-                className="hvr-underline-from-center"
-                href="https://github.com/rsuite/rsuite"
-                target="_blank"
-              >
-                GitHub
-                <Icon icon="external-link-square" className="external-link" />
-              </a>
-              <a
-                className="hvr-underline-from-center"
-                href="https://gitee.com/rsuite/rsuite"
-                target="_blank"
-              >
-                Gitee
-                <Icon icon="external-link-square" className="external-link" />
-              </a>
-
-
             </div>
             <ReactLogo
               style={{
@@ -107,12 +112,32 @@ class Home extends React.Component {
             />
           </div>
         </Banner>
-        <LanguageSwitchButton
-          language={_.get(locale, 'id')}
-          href={localePath}
-          appearance={'link'}
-          className="btn-switch"
-        />
+
+        <div className="header-toolbar">
+          <Button
+            appearance={'link'}
+            href="https://github.com/rsuite/rsuite"
+            target="_blank"
+          >
+            GitHub
+            <Icon icon="external-link-square" className="external-link" />
+          </Button>
+          <Button
+            appearance={'link'}
+            href="https://gitee.com/rsuite/rsuite"
+            target="_blank"
+          >
+            Gitee
+            <Icon icon="external-link-square" className="external-link" />
+          </Button>
+
+          <LanguageSwitchButton
+            language={_.get(locale, 'id')}
+            href={localePath}
+            appearance={'link'}
+            className="btn-switch"
+          />
+        </div>
         <Content id="index-content" className="box-wrapper" />
       </div>
     );
