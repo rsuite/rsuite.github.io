@@ -2,7 +2,7 @@
 
 用于多项数据选择，支持分组。
 
-* `<CheckPicker>`
+- `<CheckPicker>`
 
 ## 获取组件
 
