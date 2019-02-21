@@ -2,7 +2,7 @@
 
 Used for multiple data selection, support grouping.
 
-* `<CheckPicker>`
+- `<CheckPicker>`
 
 ## Usage
 
@@ -36,6 +36,7 @@ import { CheckPicker } from 'rsuite';
 | maxHeight            | number `(320)`                                                         | The max height of Dropdown                              |
 | onChange             | (value:string, event)=>void                                            | Callback fired when value change                        |
 | onClose              | ()=>void                                                               | Callback fired when close component                     |
+| onClean              | (event:SyntheticEvent)=>void                                           | Callback fired when value clean                         |
 | onGroupTitleClick    | (event)=>void                                                          | Callback fired when click the group title               |
 | onOpen               | ()=>void                                                               | Callback fired when open component                      |
 | onSearch             | (searchKeyword:string, event)=>void                                    | Callback fired when search                              |

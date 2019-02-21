@@ -40,6 +40,7 @@ import { MultiCascader } from 'rsuite';
 | menuWidth             | number `(156)`                                                                                               | 设置菜单的宽度                       |
 | onChange              | (value:string[] , event)=>void                                                                               | `value` 发生改变时的回调函数         |
 | onClose               | ()=>void                                                                                                     | 关闭回调函数                         |
+| onClean               | (event:SyntheticEvent)=>void                                                                                 | 值清理时触发回调                     |
 | onGroupTitleClick     | (event)=>void                                                                                                | 点击分组标题的回调函数               |
 | onOpen                | ()=>void                                                                                                     | 打开回调函数                         |
 | onSelect              | (item:[DataItemType](#types), activePaths: Array, concat:(data, children)=>Array)=>void                      | 选项被点击选择后的回调函数           |

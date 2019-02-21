@@ -2,7 +2,7 @@
 
 For a single data selection, support grouping.
 
-* `<SelectPicker>`
+- `<SelectPicker>`
 
 ## Usage
 
@@ -36,6 +36,7 @@ import { SelectPicker } from 'rsuite';
 | maxHeight            | number `(320)`                                                                      | Set the max height of the Dropdown                     |
 | onChange             | (value:string, event)=>void                                                         | callback function when value changes                   |
 | onClose              | ()=>void                                                                            | Close callback functions                               |
+| onClean              | (event:SyntheticEvent)=>void                                                        | Callback fired when value clean                                       |
 | onGroupTitleClick    | (event)=>void                                                                       | Click the callback function for the group header       |
 | onOpen               | ()=>void                                                                            | Open callback function                                 |
 | onSearch             | (searchKeyword:string, event)=>void                                                 | callback function for Search                           |
@@ -51,4 +52,3 @@ import { SelectPicker } from 'rsuite';
 | toggleComponentClass | React.ElementType `('a')`                                                           | You can use a custom element for this component        |
 | value                | string                                                                              | Value (Controlled)                                     |
 | valueKey             | string `('value')`                                                                  | Set option value 'key' in 'data'                       |
-

@@ -39,6 +39,7 @@ import { TreePicker } from 'rsuite';
 | menuStyle            | React.CSSProperties                                                                     | 应用于菜单 DOM 节点的 style                                                     |
 | onChange             | (value:string)=>void                                                                    | 数据改变的回调函数                                                              |
 | onClose              | ()=>void                                                                                | 关闭 Dropdown 的回调函数                                                        |
+| onClean              | (event:SyntheticEvent)=>void                                                            | 值清理时触发回调                                                                |
 | onExpand             | (activeNode:[DataItemType](#types), layer:number, concat:(data, children)=>Array)=>void | 树节点展示时的回调                                                              |
 | onOpen               | ()=>void                                                                                | 展开 Dropdown 的回调函数                                                        |
 | onSearch             | (searchKeyword:string, event)=>void                                                     | 搜索回调函数                                                                    |
@@ -55,7 +56,6 @@ import { TreePicker } from 'rsuite';
 | value                | string                                                                                  | 当前选中的值                                                                    |
 | valueKey             | string `('value')`                                                                      | tree 数据结构 value 属性名称                                                    |
 | virtualized          | boolean `(false)`                                                                       | 是否开启虚拟列表                                                                |
-
 
 ## 相关组件
 

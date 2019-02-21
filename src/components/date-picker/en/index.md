@@ -2,7 +2,7 @@
 
 To select or input a date or time
 
-* `<DatePicker>`
+- `<DatePicker>`
 
 > When you need to select a date range, it is recommended to use [`<DateRangePicker>`](./date-range-picker)
 
@@ -20,45 +20,45 @@ import { DatePicker } from 'rsuite';
 
 ### `<DatePicker>`
 
-| Property              | Type`(default)`                                | Description                                                                          |
-| --------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------ |
-| appearance            | enum: 'default', 'subtle' `('default')`        | Set picker appearence                                                                |
-| block                 | boolean                                        | Blocking an entire row                                                               |
+| Property              | Type`(default)`                              | Description                                                                          |
+| --------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------ |
+| appearance            | enum: 'default', 'subtle' `('default')`      | Set picker appearence                                                                |
+| block                 | boolean                                      | Blocking an entire row                                                               |
 | calendarDefaultDate   | Date                                         | Calendar panel default presentation date and time                                    |
-| cleanable             | boolean `(true)`                               | Whether the selected value can be cleared                                            |
-| container             | HTMLElement or (() => HTMLElement)             | Sets the rendering container                                                         |
-| defaultOpen           | boolean                                        | Default value of open property                                                       |
+| cleanable             | boolean `(true)`                             | Whether the selected value can be cleared                                            |
+| container             | HTMLElement or (() => HTMLElement)           | Sets the rendering container                                                         |
+| defaultOpen           | boolean                                      | Default value of open property                                                       |
 | defaultValue          | Date                                         | Default value                                                                        |
-| disabled              | boolean                                        | Whether disabled the component                                                       |
+| disabled              | boolean                                      | Whether disabled the component                                                       |
 | disabledDate          | (date:Date)=>boolean                         | Disabled date                                                                        |
 | disabledHours         | (hour:number, date:Date)=>boolean            | Disabled hours                                                                       |
 | disabledMinutes       | (minute:number, date:Date)=>boolean          | Disabled minutes                                                                     |
 | disabledSeconds       | (second:number, date:Date)=>boolean          | Disabled seconds                                                                     |
-| format                | string `('YYYY-MM-DD')`                        | Format date                                                                          |
+| format                | string `('YYYY-MM-DD')`                      | Format date                                                                          |
 | hideHours             | (hour:number, date:Date)=>boolean            | Hidden hours                                                                         |
 | hideMinutes           | (minute:number, date:Date)=>boolean          | Hidden minutes                                                                       |
 | hideSeconds           | (second:number, date:Date)=>boolean          | Hidden seconds                                                                       |
-| inline                | boolean                                        | Display date panel when component initial                                            |
-| isoWeek               | boolean                                        | ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day |
-| limitEndYear          | number `(1000)`                                | Set the lower limit of the available year relative to the current selection date     |
-| locale                | Object [`(Locale)`](#Locale)                   | i18n config                                                                          |
-| onChange              | (date: Date)=>void                            | Callback fired when value changed                                                    |
+| inline                | boolean                                      | Display date panel when component initial                                            |
+| isoWeek               | boolean                                      | ISO 8601 standard, each calendar week begins on Monday and Sunday on the seventh day |
+| limitEndYear          | number `(1000)`                              | Set the lower limit of the available year relative to the current selection date     |
+| locale                | Object [`(Locale)`](#Locale)                 | i18n config                                                                          |
+| onChange              | (date: Date)=>void                           | Callback fired when value changed                                                    |
 | onChangeCalendarDate  | (date: Date, event?: SyntheticEvent) => void | Callback function that changes the calendar date.                                    |
-| onClose               | ()=>void                                       | Callback fired when close component                                                  |
+| onClose               | ()=>void                                     | Callback fired when close component                                                  |
+| onClean               | (event:SyntheticEvent)=>void                 | Callback fired when value clean                                                      |
 | onNextMonth           | (date: Date) => void                         | Switch to the callback function for the next Month                                   |
 | onOk                  | (date: Date, event: SyntheticEvent) => void  | Click the OK callback function                                                       |
-| onOpen                | ()=>void                                       | Callback fired when open component                                                   |
+| onOpen                | ()=>void                                     | Callback fired when open component                                                   |
 | onPrevMonth           | (date: Date) => void                         | Switch to the callback function for the previous Month                               |
-| onSelect              | (date: Date)=>void                            | Callback fired when date or time is selected                                         |
-| onToggleMonthDropdown | (open: boolean) => void                        | Callback function that switches to the month view                                    |
-| onToggleTimeDropdown  | (open: boolean) => void                        | Callback function that switches to the time view                                     |
-| open                  | boolean                                        | Whether open the component                                                           |
-| placeholder           | string                                         | Placeholder                                                                          |
-| placement             | enum: [Placement](#types) `('bottomLeft')`     | The placement of component                                                           |
-| ranges                | Array<[Range](#types)> [`(Ranges)`](#Ranges)   | Shortcut config                                                                      |
-| toggleComponentClass  | React.ElementType `('a')`                      | You can use a custom element for this component                                      |
+| onSelect              | (date: Date)=>void                           | Callback fired when date or time is selected                                         |
+| onToggleMonthDropdown | (open: boolean) => void                      | Callback function that switches to the month view                                    |
+| onToggleTimeDropdown  | (open: boolean) => void                      | Callback function that switches to the time view                                     |
+| open                  | boolean                                      | Whether open the component                                                           |
+| placeholder           | string                                       | Placeholder                                                                          |
+| placement             | enum: [Placement](#types) `('bottomLeft')`   | The placement of component                                                           |
+| ranges                | Array<[Range](#types)> [`(Ranges)`](#Ranges) | Shortcut config                                                                      |
+| toggleComponentClass  | React.ElementType `('a')`                    | You can use a custom element for this component                                      |
 | value                 | Date                                         | Value (Controlled)                                                                   |
-
 
 ## Default
 

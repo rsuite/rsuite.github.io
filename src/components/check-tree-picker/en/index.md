@@ -39,6 +39,7 @@ import { CheckTreePicker } from 'rsuite';
 | menuStyle             | React.CSSProperties                                                                    | style for Menu                                                            |
 | onChange              | (values:string[])=>void                                                                | callback fired when value change                                          |
 | onClose               | ()=>void                                                                               | callback fired when close component                                       |
+| onClean               | (event:SyntheticEvent)=>void                                                           | Callback fired when value clean                                                          |
 | onExpand              | (activeNode:[DataItemType](#types),layer:number, concat:(data, children)=>Array)=>void | callback fired when tree node expand state changed                        |
 | onOpen                | ()=>void                                                                               | callback fired when open component                                        |
 | onSearch              | (searchKeyword:string, event)=>void                                                    | callback fired when search                                                |
@@ -56,7 +57,6 @@ import { CheckTreePicker } from 'rsuite';
 | value                 | string[]                                                                               | (Controlled) specifies the values of the selected tree node               |
 | valueKey              | string `('value')`                                                                     | set value key in data                                                     |
 | virtualized           | boolean `(false)`                                                                      | Whether using Virtualized List                                            |
-
 
 ## Related Components
 

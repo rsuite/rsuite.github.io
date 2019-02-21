@@ -37,6 +37,7 @@ import { Cascader } from 'rsuite';
 | menuWidth            | number                                                                                  | Sets the width of the menu                             |
 | onChange             | (value:string, event)=>void                                                             | Callback fired when value change                       |
 | onClose              | ()=>void                                                                                | Callback fired when close component                    |
+| onClean              | (event:SyntheticEvent)=>void                                                            | Callback fired when value clean                        |
 | onGroupTitleClick    | (event)=>void                                                                           | Callback fired when click the group title              |
 | onOpen               | ()=>void                                                                                | Callback fired when open component                     |
 | onSelect             | (item:[DataItemType](#types), activePaths: Array, concat:(data, children)=>Array)=>void | Callback fired when item is selected                   |
