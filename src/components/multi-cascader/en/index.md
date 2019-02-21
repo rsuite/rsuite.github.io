@@ -2,7 +2,7 @@
 
 Single selection of data with hierarchical relationship structure.
 
-* `<MultiCascader>`
+- `<MultiCascader>`
 
 ## Usage
 
@@ -39,12 +39,14 @@ import { MultiCascader } from 'rsuite';
 | menuWidth             | number `(156)`                                                                                             | Sets the width of the menu                                |
 | onChange              | (value:string[] , event)=>void                                                                             | Callback fired when value change                          |
 | onClose               | ()=>void                                                                                                   | Callback fired when close component                       |
+| onClean               | (event:SyntheticEvent)=>void                                                                               | Callback fired when value clean                                          |
 | onGroupTitleClick     | (event)=>void                                                                                              | Callback fired when click the group title                 |
 | onOpen                | ()=>void                                                                                                   | Callback fired when open component                        |
 | onSelect              | (item:[DataItemType](#types), activePaths: Array, concat:(data, children)=>Array)=>void                    | Callback fired when item is selected                      |
 | open                  | boolean                                                                                                    | Whether open the component                                |
 | placeholder           | React.Node `('Select')`                                                                                    | Setting placeholders                                      |
 | placement             | enum: [PlacementLeft](#types)`('bottomLeft')`                                                              | The placement of component                                |
+| renderMenu            | (children: object[], menu:React.Node, parentNode?: object)=>React.Node                                     | Customizing the Rendering Menu list                       |
 | renderMenuItem        | (label:React.Node, item: [DataItemType](#types))=>React.Node                                               | Custom render menu items                                  |
 | renderValue           | (value:string[],selectedItems: Array&lt;[DataItemType](#types)&gt;,selectedElement:React.Node)=>React.Node | Custom render selected items                              |
 | toggleComponentClass  | React.ElementType `('a')`                                                                                  | You can use a custom element for this component           |

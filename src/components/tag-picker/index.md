@@ -2,7 +2,7 @@
 
 以标签的方式进行多选，同时支持新增选项
 
-* `<TagPicker>`
+- `<TagPicker>`
 
 ## 获取组件
 
@@ -15,7 +15,6 @@ import { TagPicker } from 'rsuite';
 <!--{demo}-->
 
 ## Props
-
 
 ### `<TagPicker>`
 
@@ -37,6 +36,7 @@ import { TagPicker } from 'rsuite';
 | maxHeight            | number `(320)`                                                        | 设置 Dropdown 的最大高度              |
 | onChange             | (value:string, event)=>void                                           | `value` 发生改变时的回调函数          |
 | onClose              | ()=>void                                                              | 关闭回调函数                          |
+| onClean              | (event:SyntheticEvent)=>void                                          | 值清理时触发回调                      |
 | onGroupTitleClick    | (event)=>void                                                         | 点击分组标题的回调函数                |
 | onOpen               | ()=>void                                                              | 打开回调函数                          |
 | onSearch             | (searchKeyword:string, event)=>void                                   | 搜索的回调函数                        |

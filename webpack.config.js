@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const _ = require('lodash');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
@@ -18,13 +19,24 @@ const __PRO__ = NODE_ENV === 'production';
 const extractLess = new ExtractTextPlugin('style.[hash].css');
 
 const getStyleLoader = () => {
-  const sourceMap = STYLE_DEBUG === 'SOURCE' ? '?sourceMap' : '';
-  const loaders = ['css-loader', 'postcss-loader', 'less-loader'];
+  const loaders = [
+    { loader: 'css-loader' },
+    { loader: 'postcss-loader' },
+    {
+      loader: 'less-loader',
+      options: {
+        javascriptEnabled: true
+      }
+    }
+  ];
   const filterLoader = loader =>
-    STYLE_DEBUG === 'STYLE' || __PRO__ ? true : loader !== 'postcss-loader';
-  return loaders.filter(filterLoader).map(loader => ({
-    loader: `${loader}${sourceMap}`
-  }));
+    STYLE_DEBUG === 'STYLE' || __PRO__
+      ? true
+      : loader.loader !== 'postcss-loader';
+  return loaders.filter(filterLoader).map(loader => {
+    _.set(loader, 'options.sourceMap', STYLE_DEBUG === 'SOURCE');
+    return loader;
+  });
 };
 
 const languages = [

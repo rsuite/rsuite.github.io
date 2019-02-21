@@ -2,7 +2,7 @@
 
 用于多项数据选择，支持分组。
 
-* `<CheckPicker>`
+- `<CheckPicker>`
 
 ## 获取组件
 
@@ -36,6 +36,7 @@ import { CheckPicker } from 'rsuite';
 | maxHeight            | number `(320)`                                                        | 设置 Dropdown 的最大高度             |
 | onChange             | (value:string, event)=>void                                           | `value` 发生改变时的回调函数         |
 | onClose              | ()=>void                                                              | 关闭回调函数                         |
+| onClean              | (event:SyntheticEvent)=>void                                          | 值清理时触发回调                     |
 | onGroupTitleClick    | (event)=>void                                                         | 点击分组标题的回调函数               |
 | onOpen               | ()=>void                                                              | 打开回调函数                         |
 | onSearch             | (searchKeyword:string, event)=>void                                   | 搜索的回调函数                       |

@@ -2,7 +2,7 @@
 
 Multi-select by tag and support new options
 
-* `<TagPicker>`
+- `<TagPicker>`
 
 ## Usage
 
@@ -17,8 +17,6 @@ import { TagPicker } from 'rsuite';
 ## Props
 
 ### `<TagPicker>`
-
-
 
 | Property             | Type`(Default)`                                                       | Description                                             |
 | -------------------- | --------------------------------------------------------------------- | ------------------------------------------------------- |
@@ -38,6 +36,7 @@ import { TagPicker } from 'rsuite';
 | maxHeight            | number `(320)`                                                        | The max height of Dropdown                              |
 | onChange             | (value:string, event)=>void                                           | Callback fired when value change                        |
 | onClose              | ()=>void                                                              | Callback fired when close component                     |
+| onClean              | (event:SyntheticEvent)=>void                                          | Callback fired when value clean                         |
 | onGroupTitleClick    | (event)=>void                                                         | Callback fired when click the group title               |
 | onOpen               | ()=>void                                                              | Callback fired when open component                      |
 | onSearch             | (searchKeyword:string, event)=>void                                   | Callback fired when search                              |

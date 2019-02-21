@@ -2,7 +2,7 @@
 
 对有层级关系结构的数据进行多项选择。
 
-* `<MultiCascader>`
+- `<MultiCascader>`
 
 ## 获取组件
 
@@ -40,17 +40,17 @@ import { MultiCascader } from 'rsuite';
 | menuWidth             | number `(156)`                                                                                               | 设置菜单的宽度                       |
 | onChange              | (value:string[] , event)=>void                                                                               | `value` 发生改变时的回调函数         |
 | onClose               | ()=>void                                                                                                     | 关闭回调函数                         |
+| onClean               | (event:SyntheticEvent)=>void                                                                                 | 值清理时触发回调                     |
 | onGroupTitleClick     | (event)=>void                                                                                                | 点击分组标题的回调函数               |
 | onOpen                | ()=>void                                                                                                     | 打开回调函数                         |
 | onSelect              | (item:[DataItemType](#types), activePaths: Array, concat:(data, children)=>Array)=>void                      | 选项被点击选择后的回调函数           |
 | open                  | boolean                                                                                                      | 打开 (受控)                          |
 | placeholder           | React.Node `('Select')`                                                                                      | 占位符                               |
 | placement             | enum: [PlacementLeft](#types)`('bottomLeft')`                                                                | 打开位置                             |
+| renderMenu            | (children: object[], menu:React.Node, parentNode?: object)=>React.Node                                       | 自定义渲染菜单列表                   |
 | renderMenuItem        | (label:React.Node, item: [DataItemType](#types))=>React.Node                                                 | 自定义选项                           |
 | renderValue           | (value:string[],selectedItems: Array&lt;[DataItemType](#types)&gt;,selectedElement:React.Node )=>React.Nodee | 自定义被选中的选项                   |
 | toggleComponentClass  | React.ElementType `('a')`                                                                                    | 为组件自定义元素类型                 |
 | uncheckableItemValues | string[]                                                                                                     | 设置不显示复选框的选项值             |
 | value                 | string[]                                                                                                     | 设置值（受控）                       |
 | valueKey              | string `('value')`                                                                                           | 设置选项值在 `data` 中的 `key`       |
-
-

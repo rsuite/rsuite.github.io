@@ -2,7 +2,7 @@
 
 Single item selector with text box input
 
-* `<InputPicker>`
+- `<InputPicker>`
 
 ## Usage
 
@@ -17,7 +17,6 @@ import { InputPicker } from 'rsuite';
 ## Props
 
 ### `<InputPicker>`
-
 
 | Property             | Type `(Default)`                                                                    | Description                                            |
 | -------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------ |
@@ -37,6 +36,7 @@ import { InputPicker } from 'rsuite';
 | maxHeight            | number `(320)`                                                                      | Set the max height of the Dropdown                     |
 | onChange             | (value:string, event)=>void                                                         | callback function when value changes                   |
 | onClose              | ()=>void                                                                            | Close callback functions                               |
+| onClean              | (event:SyntheticEvent)=>void                                                        | Callback fired when value clean                        |
 | onGroupTitleClick    | (event)=>void                                                                       | Click the callback function for the group header       |
 | onOpen               | ()=>void                                                                            | Open callback function                                 |
 | onSearch             | (searchKeyword:string, event)=>void                                                 | callback function for Search                           |
