@@ -7,15 +7,17 @@
      * Source: http://stackoverflow.com/questions/5560248/programmatically-lighten-or-darken-a-hex-color-or-rgb-and-blend-colors
      * Github: https://github.com/mbitson/mcg
      */
-        var shadeColor = function (color, percent) {var f = parseInt(color.slice(1), 16),
+        var shadeColor = function (color, percent) {var f =
+        parseInt(color.slice(1), 16),
       t = percent < 0 ? 0: 255,
       p = percent < 0 ? percent * -1: percent,
       R = f >> 16,
       G = f >> 8 & 0x00ff,
       B = f & 0x0000FF; return '#' +
         (
-          0x1000000 + (Math.round((t - R) * p) + R) * 0x10000 + (Math.round((t - G) * p) + G) *
-            0x100 + (Math.round((t - B) * p) + B)
+          0x1000000 + (Math.round((t - R) * p) + R) * 0x10000 +
+            (Math.round((t - G) * p) + G) * 0x100 +
+            (Math.round((t - B) * p) + B)
         )
         .toString(16) .slice(1) ;} /**
      * 计算系统颜色
@@ -31,10 +33,10 @@
       '600': -0.125,
       '700': -0.25,
       '800': -0.375,
-      '900': -0.5}; percent = colorConfig[percent] === undefined ? percent: colorConfig[percent] ; var
-        colorValue = color.slice(1) ; colorValue = colorValue.length === 3 ? colorValue.split('') .map(
-          s=>s.repeat(2)
-        ) .join(''): colorValue ; colorValue = colorValue.toLowerCase() ; return shadeColor(
+      '900': -0.5}; percent = colorConfig[percent] === undefined ? percent: colorConfig[percent]
+        ; var colorValue = color.slice(1) ; colorValue = colorValue.length === 3
+        ? colorValue.split('') .map(s=>s.repeat(2)) .join(''): colorValue ; colorValue
+        = colorValue.toLowerCase() ; return shadeColor(
           '#' + colorValue,
           percent
         ) ;}}
@@ -113,7 +115,7 @@
     //#== Radio
     .repaint-input(radio);
     //#== Toggle
-    &-btn-toggle {
+    &-btn-toggle.rs-btn-toggle-checked {
       background-color: @H500;
     }
     //#== Slider
