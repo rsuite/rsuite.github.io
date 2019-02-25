@@ -16,7 +16,7 @@ const instance = (
     <Cascader
       data={data}
       style={{ width: 224 }}
-      disabledItemValues={['北京', '广东', '天津']}
+      disabledItemValues={['2', '1-1']}
     />
   </div>
 );
