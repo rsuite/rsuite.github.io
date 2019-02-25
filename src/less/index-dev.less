@@ -13,36 +13,3 @@
   background-color: @H500;
   color: #fff;
 }
-
-.rs-picker-cascader {
-  &-search-panel {
-    max-height: 300px;
-    overflow: auto;
-  }
-  &-row {
-    cursor: pointer;
-    &:hover {
-      color: #575757;
-      background-color: #ebf9ff;
-    }
-  }
-
-  &-col {
-    padding: 8px 12px;
-    display: inline-block;
-    position: relative;
-    &::after {
-      content: '/';
-      position: absolute;
-      right: 0px;
-    }
-    &:last-child {
-      &::after {
-        content: '';
-      }
-    }
-    strong {
-      color: #34c3ff;
-    }
-  }
-}
