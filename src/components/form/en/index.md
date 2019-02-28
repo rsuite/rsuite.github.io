@@ -2,11 +2,11 @@
 
 A set of components and models that process form data.
 
-* `<Form>` Define a form.
-* `<FormControl>` Define form-control.
-* `<FormGroup>` Define form groups, used for form layout.
-* `<ControlLabel>` title of form-control.
-* `<HelpBlock>` help infomation of form-controll
+- `<Form>` Define a form.
+- `<FormControl>` Define form-control.
+- `<FormGroup>` Define form groups, used for form layout.
+- `<ControlLabel>` title of form-control.
+- `<HelpBlock>` help infomation of form-controll
 
 ## Usage
 
@@ -27,6 +27,7 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 | checkDelay       | number `(500)`                                          | Delayed processing when data check, unit: millisecond                                                      |
 | checkTrigger     | enum: 'change','blur','none' `('change')`               | Trigger the type of form validation                                                                        |
 | classPrefix      | string `('form')`                                       | The prefix of the component CSS class                                                                      |
+| errorFromContext | boolean `(true)`                                        | Error reminders in FormControl are defaulted from Context                                                  |
 | fluid            | boolean                                                 | The fluid property allows the Input 100% of the form to fill the container, valid only in vertical layouts |
 | formDefaultValue | Object                                                  | Default value of form                                                                                      |
 | formError        | Object                                                  | Error message of form                                                                                      |
@@ -37,10 +38,9 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 | onCheck          | (formError:Object)=>void                                | Callback fired when data cheking                                                                           |
 | onError          | (formError:Object)=>void                                | Callback fired when error checking                                                                         |
 
-
 ### Form methods
 
--  check
+- check
 
 Verify form data.
 
@@ -48,22 +48,22 @@ Verify form data.
 check(callback: (formError: Object) => void) => boolean
 ```
 
--  checkForField
+- checkForField
 
 Checklist single field value.
 
 ```js
-checkForField = (fieldName: string, callback?: (checkResult: Object) => void) => boolean
+checkForField = (fieldName: string, callback?: (checkResult: Object) => void) =>
+  boolean;
 ```
 
--  cleanErrors
+- cleanErrors
 
 Clean error message.
 
 ```js
 cleanErrors(callback: () => void) => void
 ```
-
 
 ### `<FormControl>`
 
@@ -98,4 +98,3 @@ cleanErrors(callback: () => void) => void
 | classPrefix | string `('help-block')` | The prefix of the component CSS class                                       |
 | htmlFor     | string                  | Attribute of the html label tag, defaults to the controlId of the FormGroup |
 | tooltip     | boolean                 | Whether to show through the Tooltip component                               |
-

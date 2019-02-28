@@ -2,11 +2,11 @@
 
 一组处理表单数据的组件和模型。
 
-* `<Form>` 定义一个表单。
-* `<FormControl>` 表单控件，定义一个表单字段。
-* `<FormGroup>` 表单控件组，用于表单控件布局
-* `<ControlLabel>` 表单控件对应的标题。
-* `<HelpBlock>` 表单控件对应帮助信息。
+- `<Form>` 定义一个表单。
+- `<FormControl>` 表单控件，定义一个表单字段。
+- `<FormGroup>` 表单控件组，用于表单控件布局
+- `<ControlLabel>` 表单控件对应的标题。
+- `<HelpBlock>` 表单控件对应帮助信息。
 
 ## 获取组件
 
@@ -27,6 +27,7 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 | checkDelay       | number `(500)`                                          | 数据校验的时候，延迟处理，单位:毫秒                |
 | checkTrigger     | enum: 'change','blur','none' `('change')`               | 触发表单校验的类型                                 |
 | classPrefix      | string `('form')`                                       | 组件 CSS 类的前缀                                  |
+| errorFromContext | boolean `(true)`                                        | FormControl 中的错误提醒默认从 Context 获取        |
 | fluid            | boolean                                                 | 让表单中的 Input 100% 撑满容器，只在垂直布局中有效 |
 | formDefaultValue | object                                                  | 表单的初始默认值 `非受控组件`                      |
 | formError        | object                                                  | 表单错误信息                                       |
@@ -37,29 +38,26 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 | onCheck          | (formError:Object) => void                              | 数据校验的回调函数                                 |
 | onError          | (formError:Object) => void                              | 校验出错的回调函数                                 |
 
-
 ### Form methods
 
--  check  检验表单数据
+- check 检验表单数据
 
 ```js
 check(callback: (formError: Object) => void) => boolean
 ```
 
--  checkForField 校验表单单个字段值
+- checkForField 校验表单单个字段值
 
 ```js
-checkForField = (fieldName: string, callback?: (checkResult: Object) => void) => boolean
+checkForField = (fieldName: string, callback?: (checkResult: Object) => void) =>
+  boolean;
 ```
 
-
--  cleanErrors 清除错误信息
-
+- cleanErrors 清除错误信息
 
 ```js
 cleanErrors(callback: () => void) => void
 ```
-
 
 ### `<FormControl>`
 
