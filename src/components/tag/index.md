@@ -3,7 +3,7 @@
 ## 获取组件
 
 ```js
-import { Tag } from 'rsuite';
+import { Tag, TagGroup } from 'rsuite';
 ```
 
 ## 演示
