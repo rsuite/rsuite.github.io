@@ -60,6 +60,12 @@ Information, successes, warnings, errors, respectively, the corresponding color,
 @error-light-color: #fde9ef;
 ```
 
+### Disable ripple animation
+
+```less
+@button-ripple: false;
+```
+
 ## More Custom Configurations
 
 We provide a rich variable, if still unable to meet your customized needs, welcome to our [issue][issue].
