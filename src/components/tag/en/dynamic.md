@@ -77,7 +77,7 @@ class DynamicTag extends React.Component {
   render() {
     const { tags } = this.state;
     return (
-      <div>
+      <TagGroup>
         {tags.map((item, index) => (
           <Tag
             key={index}
@@ -90,7 +90,7 @@ class DynamicTag extends React.Component {
           </Tag>
         ))}
         {this.renderInput()}
-      </div>
+      </TagGroup>
     );
   }
 }

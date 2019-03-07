@@ -4,7 +4,7 @@
 
 ```js
 const instance = (
-  <div>
+  <TagGroup>
     <Tag>Text</Tag>
     <Tag closable>Closable</Tag>
     <Tag>
@@ -12,7 +12,7 @@ const instance = (
         Link
       </a>
     </Tag>
-  </div>
+  </TagGroup>
 );
 
 ReactDOM.render(instance);

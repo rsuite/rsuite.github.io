@@ -30,25 +30,25 @@ class Demo extends React.Component{
 
         <ButtonToolbar>
           <IconButton
-            icon={<Icon icon="angle-left"  />}
+            icon={<Icon icon="angle-right"  />}
             onClick={()=>this.toggleDrawer('left')}
           >
             Left
           </IconButton>
           <IconButton
-            icon={<Icon icon="angle-right"  />}
+            icon={<Icon icon="angle-left"  />}
             onClick={()=>this.toggleDrawer('right')}
           >
             Right
           </IconButton>
           <IconButton
-            icon={<Icon icon="angle-up"  />}
+            icon={<Icon icon="angle-down"  />}
             onClick={()=>this.toggleDrawer('top')}
           >
             Top
           </IconButton>
           <IconButton
-            icon={<Icon icon="angle-down"  />}
+            icon={<Icon icon="angle-up"  />}
             onClick={()=>this.toggleDrawer('bottom')}
           >
             Bottom

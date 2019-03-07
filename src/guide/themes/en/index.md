@@ -60,6 +60,12 @@ Information, successes, warnings, errors, respectively, the corresponding color,
 @error-light-color: #fde9ef;
 ```
 
+### Disable ripple animation
+
+```less
+@button-ripple: false;
+```
+
 ## More Custom Configurations
 
 We provide a rich variable, if still unable to meet your customized needs, welcome to our [issue][issue].
@@ -128,4 +134,4 @@ If you use [`create-react-app`][cra] to create a project, you can modify it with
 [modify variables]: http://lesscss.org/usage/#using-less-in-the-browser-modify-variables
 [rsuite-theme-pallete]: https://github.com/rsuite/rsuite/blob/master/styles/less/constants.less#L32
 [issue]: https://github.com/rsuite/rsuite/issues/new
-[variables.less]: https://github.com/rsuite/rsuite/blob/master/styles/less/variables.less
+[variables.less]: https://github.com/rsuite/rsuite/blob/master/styles/variables.less

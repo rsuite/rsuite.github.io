@@ -58,6 +58,12 @@ rsuite 的样式使用了 [Less][less] 作为开发语言，并且定义了一�
 @error-light-color: #fde9ef;
 ```
 
+### 禁用涟漪动画
+
+```less
+@button-ripple: false;
+```
+
 ## 更多自定义配置
 
 我们提供了丰富变量，如果依然不能满足您的定制需求，欢迎给我们提 [issue][issue]。
@@ -125,4 +131,4 @@ plugins: [
 [modify variables]: http://lesscss.org/usage/#using-less-in-the-browser-modify-variables
 [rsuite-theme-pallete]: https://github.com/rsuite/rsuite/blob/master/styles/less/constants.less#L32
 [issue]: https://github.com/rsuite/rsuite/issues/new
-[variables.less]: https://github.com/rsuite/rsuite/blob/master/styles/less/variables.less
+[variables.less]: https://github.com/rsuite/rsuite/blob/master/styles/variables.less

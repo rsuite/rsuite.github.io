@@ -6,7 +6,7 @@ Tag for categorizing or markup.
 ## Usage
 
 ```js
-import { Tag } from 'rsuite';
+import { Tag, TagGroup } from 'rsuite';
 ```
 
 ## Examples
