@@ -1,5 +1,5 @@
 import React from 'react';
-import { Placeholder } from '../../../../rsuite/lib';
+import { Placeholder } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
