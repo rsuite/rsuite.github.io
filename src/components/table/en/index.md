@@ -2,11 +2,11 @@
 
 A table displays rows of data.
 
-* `<Table>` Table component
-* `<Table.Column>` Table definition column component
-* `<Table.HeaderCell>` Column Header cell component
-* `<Table.Cell>` Cell component
-* `<Table.Pagination>` Table paging component
+- `<Table>` Table component
+- `<Table.Column>` Table definition column component
+- `<Table.HeaderCell>` Column Header cell component
+- `<Table.Cell>` Cell component
+- `<Table.Pagination>` Table paging component
 
 ## Usage
 
@@ -57,8 +57,6 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | width                  | number                                  | Table width                                                                                   |
 | wordWrap               | boolean                                 | The cell wraps automatically                                                                  |
 
-
-
 ### `<Table.Column>`
 
 | Property  | Type `(Default)`                                 | Description                                                                                                 |
@@ -73,12 +71,8 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | sortable  | boolean                                          | Sortable                                                                                                    |
 | width     | number                                           | Column width                                                                                                |
 
-
-
-
 > `sortable` is used to define whether the column is sortable, but depending on what `key` sort needs to set a `dataKey` in `Cell`.
 > The sort here is the service-side sort, so you need to handle the logic in the ' Onsortcolumn ' callback function of `<Table>`, and the callback function returns `sortColumn`, `sortType` values.
-
 
 ### `<Table.Cell>`
 
@@ -90,22 +84,21 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 
 ### `<Table.Pagination>`
 
-| Property         | Type `(Default)`                            | Description                                                                            |
-| ---------------- | ------------------------------------------- | -------------------------------------------------------------------------------------- |
-| activePage       | number `(1)`                                | Configure the current page number                                                      |
-| disabled         | boolean , (eventKey: any) => boolean        | Disabled component                                                                     |
-| displayLength    | number `(30)`                               | Configure how many lines of entries per page to display, corresponding to `lengthMenu` |
-| first            | boolean `(true)`                            | Show first page button                                                                 |
-| last             | boolean `(true)`                            | Show last Page button                                                                  |
-| lengthMenu       | Array&lt;number&gt;                         | Paging display row number configuration, defaults to 30, 50, 100                       |
-| maxButtons       | number `(5)`                                | Configure the maximum number of display buttons                                        |
-| next             | boolean `(true)`                            | Show Next Page button                                                                  |
-| onChangeLength   | (eventKey: number)=>void                    | The callback function that triggers when the `lengthmenu` value changes                |
-| onChangePage     | (eventKey: number)=>void                    | callback function triggered when page changes                                          |
-| prev             | boolean `(true)`                            | Show Previous Page button                                                              |
-| renderLengthMenu | (picker: React.Node) => React.Node          | Custom menu                                                                            |
-| renderTotal      | (total: number, activePage: number) => void | Custom total                                                                           |
-| showInfo         | boolean `(true)`                            | Show paging information                                                                |
-| showLengthMenu   | boolean `(true)`                            | Display Dropdown menu                                                                  |
-| total            | number                                      | Total number of data entries                                                           |
-
+| Property         | Type `(Default)`                                  | Description                                                                            |
+| ---------------- | ------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| activePage       | number `(1)`                                      | Configure the current page number                                                      |
+| disabled         | boolean , (eventKey: any) => boolean              | Disabled component                                                                     |
+| displayLength    | number `(30)`                                     | Configure how many lines of entries per page to display, corresponding to `lengthMenu` |
+| first            | boolean `(true)`                                  | Show first page button                                                                 |
+| last             | boolean `(true)`                                  | Show last Page button                                                                  |
+| lengthMenu       | Array&lt;number&gt;                               | Paging display row number configuration, defaults to 30, 50, 100                       |
+| maxButtons       | number `(5)`                                      | Configure the maximum number of display buttons                                        |
+| next             | boolean `(true)`                                  | Show Next Page button                                                                  |
+| onChangeLength   | (eventKey: number)=>void                          | The callback function that triggers when the `lengthmenu` value changes                |
+| onChangePage     | (eventKey: number)=>void                          | callback function triggered when page changes                                          |
+| prev             | boolean `(true)`                                  | Show Previous Page button                                                              |
+| renderLengthMenu | (picker: React.Node) => React.Node                | Custom menu                                                                            |
+| renderTotal      | (total: number, activePage: number) => React.Node | Custom total                                                                           |
+| showInfo         | boolean `(true)`                                  | Show paging information                                                                |
+| showLengthMenu   | boolean `(true)`                                  | Display Dropdown menu                                                                  |
+| total            | number                                            | Total number of data entries                                                           |
