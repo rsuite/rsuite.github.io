@@ -94,6 +94,13 @@
     "designHash": "artboard18"
   },
   {
+    "id": "placeholder",
+    "name": "Placeholder",
+    "title": "占位符",
+    "components": ["Placeholder.Graph", "Placeholder.Grid","Placeholder.Paragraph"],
+    "designHash": "artboard_placeholder"
+  },
+  {
     "group": true,
     "id": "navigation",
     "name": "Navigation",
