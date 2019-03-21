@@ -6,14 +6,16 @@
 const { Paragraph } = Placeholder;
 const instance = 
   <div>
-    <h3>Default:</h3>
-    <Paragraph />
-    <h3>You can also add a round or square icon to the left:</h3>
-    <Paragraph graph='circle'/>
-    <Paragraph graph='square'/>
-    <h3>You can also customize the number of lines, spacing, etc.:</h3>
-    <Paragraph rows={5} graph active/>
-  </div>
+    <p>Default:</p>
+    <Paragraph style={{marginTop:30}} />
+    <hr/>
+    <p>You can also add a round or square icon to the left:</p>
+    <Paragraph style={{marginTop:30}} graph='circle' />
+    <Paragraph style={{marginTop:30}} graph='square' />
+    <hr/>
+    <p>You can also customize the number of lines, spacing, etc.:</p>
+    <Paragraph style={{marginTop:30}} rows={5} graph active />
+  </div>;
 
 ReactDOM.render(instance);
 

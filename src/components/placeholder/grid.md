@@ -7,7 +7,7 @@ const { Grid } = Placeholder;
 const instance = 
   <div>
     <Grid rows={5} columns={6} active/>
-  </div>
+  </div>;
   
 ReactDOM.render(instance);
 
