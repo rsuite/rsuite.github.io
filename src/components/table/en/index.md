@@ -45,6 +45,8 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | onSortColumn           | (dataKey:string, sortType:string)=>void | Click the callback function of the sort sequence to return the value `sortColumn`, `sortType` |
 | renderRowExpanded      | (rowDate?: Object) => React.Node        | Customize what you can do to expand a zone                                                    |
 | renderTreeToggle       | (icon:node,rowData:object)=> node       | Tree table, the callback function in the expanded node                                        |
+| renderEmpty            | (info: React.Node) => React.Node        | Customized data is empty display content                                                      |
+| renderLoading          | (loading: React.Node) => React.Node     | Customize the display content in the data load                                                |
 | rowClassName           | string , (rowData:object)=>string       | Add an optional extra class name to row                                                       |
 | rowExpandedHeight      | number `(100)`                          | Set the height of an expandable area                                                          |
 | rowHeight              | number`(46)`                            | Row height                                                                                    |
@@ -59,17 +61,18 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 
 ### `<Table.Column>`
 
-| Property  | Type `(Default)`                                 | Description                                                                                                 |
-| --------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
-| align     | enum: 'left','center','right'                    | Alignment                                                                                                   |
-| colSpan   | number                                           | Merges column cells to merge when the `dataKey` value for the merged column is `null` or `undefined`.       |
-| fixed     | boolean, 'left', 'right'                         | Fixed column                                                                                                |
-| flexGrow  | number                                           | Set the column width automatically adjusts, when set `flexGrow` cannot set `resizable` and `width` property |
-| minWidth  | number`(200)`                                    | When you use `flexGrow`, you can set a minimum width by `minwidth`                                          |
-| onResize  | (columnWidth?: number, dataKey?: string) => void | Callback after column width change                                                                          |
-| resizable | boolean                                          | Customizable Resize Column width                                                                            |
-| sortable  | boolean                                          | Sortable                                                                                                    |
-| width     | number                                           | Column width                                                                                                |
+| Property      | Type `(Default)`                                 | Description                                                                                                 |
+| ------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| align         | enum: 'left','center','right'                    | Alignment                                                                                                   |
+| colSpan       | number                                           | Merges column cells to merge when the `dataKey` value for the merged column is `null` or `undefined`.       |
+| fixed         | boolean, 'left', 'right'                         | Fixed column                                                                                                |
+| flexGrow      | number                                           | Set the column width automatically adjusts, when set `flexGrow` cannot set `resizable` and `width` property |
+| minWidth      | number`(200)`                                    | When you use `flexGrow`, you can set a minimum width by `minwidth`                                          |
+| onResize      | (columnWidth?: number, dataKey?: string) => void | Callback after column width change                                                                          |
+| resizable     | boolean                                          | Customizable Resize Column width                                                                            |
+| sortable      | boolean                                          | Sortable                                                                                                    |
+| verticalAlign | enum: 'top', 'middle', 'bottom'                  | Vertical alignment                                                                                          |
+| width         | number                                           | Column width                                                                                                |
 
 > `sortable` is used to define whether the column is sortable, but depending on what `key` sort needs to set a `dataKey` in `Cell`.
 > The sort here is the service-side sort, so you need to handle the logic in the ' Onsortcolumn ' callback function of `<Table>`, and the callback function returns `sortColumn`, `sortType` values.
