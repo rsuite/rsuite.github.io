@@ -1,6 +1,6 @@
 # Uploader 上传文件
 
-* `<Uploader>`
+- `<Uploader>`
 
 ## 获取组件
 
@@ -41,6 +41,7 @@ import { Uploader } from 'rsuite';
 | onSuccess            | (response: Object, file: [FileType](#types)) => void                                                     | 上传成功后的回调函数                                                          |
 | onUpload             | (file: [FileType](#types)) => void                                                                       | 上传文件开始的回调函数                                                        |
 | renderFileInfo       | (file: FileType, fileElement: React.Node) => React.Node                                                  | 自定义渲染文件信息                                                            |
+| removable            | boolean `(true)`                                                                                         | 允许删除上传列表中的文件                                                      |
 | shouldQueueUpdate    | (fileList: Array<[FileType](#types)>, newFile: Array<[FileType](#types)>, [FileType](#types)) => boolean | 允许更新队列。在选择文件后，更新上传文件队列前的校验函数，返回 false 则不更新 |
 | shouldUpload         | (file: [FileType](#types)) => boolean                                                                    | 允许上传文件。在文件上传前的的校验函数，返回 false 则不上传                   |
 | timeout              | number                                                                                                   | 设置上传超时                                                                  |

@@ -46,6 +46,8 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | onSortColumn           | (dataKey:string, sortType:string)=>void | 点击排序列的回调函数，返回 `sortColumn`, `sortType` 这两个值 |
 | renderRowExpanded      | (rowDate?: Object) => React.Node        | 自定义可以展开区域的内容                                     |
 | renderTreeToggle       | (icon:node,rowData:object)=> node       | 树形表格，在展开节点的回调函数                               |
+| renderEmpty            | (info: React.Node) => React.Node        | 自定义渲染数据为空的状态                                     |
+| renderLoading          | (loading: React.Node) => React.Node     | 自定义渲染数据加载中的状态                                   |
 | rowClassName           | string , (rowData:object)=>string       | 为行自定义 className                                         |
 | rowExpandedHeight      | number `(100)`                          | 设置可展开区域的高度                                         |
 | rowHeight              | number`(46)`                            | 行高                                                         |
@@ -60,17 +62,18 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 
 ### `<Table.Column>`
 
-| 属性名称  | 类型 `(默认值)`                                  | 描述                                                                                  |
-| --------- | ------------------------------------------------ | ------------------------------------------------------------------------------------- |
-| align     | enum: 'left','center','right'                    | 对齐方式                                                                              |
-| colSpan   | number                                           | 合并列单元格，当被合并列的 `dataKey` 对应的值为 `null` 或者 `undefined`时，才会合并。 |
-| fixed     | boolean, 'left', 'right'                         | 固定列                                                                                |
-| flexGrow  | number                                           | 设置列宽自动调节，当设置了 `flexGrow` 就不能设置 `resizable` 与 `width` 属性          |
-| minWidth  | number`(200)`                                    | 当使用了 `flexGrow` 以后，可以通过 `minWidth` 设置一个最小宽度                        |
-| onResize  | (columnWidth?: number, dataKey?: string) => void | 列宽改变后的回调                                                                      |
-| resizable | boolean                                          | 可自定义调整列宽                                                                      |
-| sortable  | boolean                                          | 可排序                                                                                |
-| width     | number                                           | 列宽                                                                                  |
+| 属性名称      | 类型 `(默认值)`                                  | 描述                                                                                  |
+| ------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------- |
+| align         | enum: 'left','center','right'                    | 对齐方式                                                                              |
+| colSpan       | number                                           | 合并列单元格，当被合并列的 `dataKey` 对应的值为 `null` 或者 `undefined`时，才会合并。 |
+| fixed         | boolean, 'left', 'right'                         | 固定列                                                                                |
+| flexGrow      | number                                           | 设置列宽自动调节，当设置了 `flexGrow` 就不能设置 `resizable` 与 `width` 属性          |
+| minWidth      | number`(200)`                                    | 当使用了 `flexGrow` 以后，可以通过 `minWidth` 设置一个最小宽度                        |
+| onResize      | (columnWidth?: number, dataKey?: string) => void | 列宽改变后的回调                                                                      |
+| resizable     | boolean                                          | 可自定义调整列宽                                                                      |
+| sortable      | boolean                                          | 可排序                                                                                |
+| verticalAlign | enum: 'top', 'middle', 'bottom'                  | 垂直对齐方式                                                                          |
+| width         | number                                           | 列宽                                                                                  |
 
 > `sortable` 是用来定义该列是否可排序，但是根据什么 `key` 排序需要 在 `Cell` 设置一个 `dataKey`
 > 这里的排序是服务端排序，所以需要在 `<Table>` 的 `onSortColumn` 回调函数中处理逻辑，回调函数会返回 `sortColumn`, `sortType` 这两个值。
