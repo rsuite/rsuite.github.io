@@ -28,6 +28,7 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | ---------------------- | --------------------------------------- | ------------------------------------------------------------ |
 | autoHeight             | boolean                                 | 自动高度                                                     |
 | bordered               | boolean                                 | 表格边框                                                     |
+| bodyRef                | React.ElementRef                        | 表格主体部分上的 ref                   |
 | cellBordered           | boolean                                 | 单元格边框                                                   |
 | data \*                | Array&lt;Object&gt;                     | 表格数据                                                     |
 | defaultExpandAllRows   | boolean                                 | 默认展开所有节点                                             |

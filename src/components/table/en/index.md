@@ -28,6 +28,7 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | ---------------------- | --------------------------------------- | --------------------------------------------------------------------------------------------- |
 | autoHeight             | boolean                                 | Automatic height                                                                              |
 | bordered               | boolean                                 | Show border                                                                                   |
+| bodyRef                | React.ElementRef                        | A ref attached to the table body element                                                      |
 | cellBordered           | boolean                                 | Show cell border                                                                              |
 | data \*                | Array&lt;Object&gt;                     | Table data                                                                                    |
 | defaultExpandAllRows   | boolean                                 | Expand all nodes By default                                                                   |
