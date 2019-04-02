@@ -1,3 +1,7 @@
+## Layouts
+
+---
+
 ### Default
 
 The default is the vertical layout

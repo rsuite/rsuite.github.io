@@ -1,4 +1,6 @@
-### Form Data Check
+## Validations
+
+### Schema Model
 
 Form Check needs to be used `<Form>`, `<FormControl>` and `Schema.Model` 。
 

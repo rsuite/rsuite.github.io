@@ -71,6 +71,7 @@ export default createComponentExample({
     'modal-layout',
     'help-block',
     'error-message',
+    'read-only',
     'form-check',
     'custom-form-control',
     'custom-third-party-libraries',

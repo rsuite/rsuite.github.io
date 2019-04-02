@@ -1,4 +1,4 @@
-### 100 Percent Width
+### Fluid
 
 The `fluid` property allows the Input 100% of the form to fill the container, valid only in vertical layouts.
 

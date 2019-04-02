@@ -38,7 +38,11 @@ class ModalDemo extends React.Component {
             <Modal.Title>New User</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Form fluid onChange={this.handleChange} formValue={this.state.formValue}>
+            <Form
+              fluid
+              onChange={this.handleChange}
+              formValue={this.state.formValue}
+            >
               <FormGroup>
                 <ControlLabel>Username</ControlLabel>
                 <FormControl name="name" />
@@ -55,7 +59,11 @@ class ModalDemo extends React.Component {
               </FormGroup>
               <FormGroup>
                 <ControlLabel>Textarea</ControlLabel>
-                <FormControl rows={5} name="textarea" componentClass="textarea" />
+                <FormControl
+                  rows={5}
+                  name="textarea"
+                  componentClass="textarea"
+                />
               </FormGroup>
             </Form>
           </Modal.Body>

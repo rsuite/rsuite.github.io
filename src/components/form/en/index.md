@@ -14,8 +14,6 @@ A set of components and models that process form data.
 import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 ```
 
-## Examples
-
 <!--{demo}-->
 
 ## Props
@@ -75,6 +73,7 @@ cleanErrors(callback: () => void) => void
 | errorMessage   | React.Node                                  | Show error messages                                                              |
 | errorPlacement | enum: [Placement8](#types) `('bottomLeft')` | The placement of error messages                                                  |
 | name \*        | string                                      | The name of form-control                                                         |
+| readOnly       | boolean                                     | Make the control readonly                                                        |
 
 ### `<FormGroup>`
 

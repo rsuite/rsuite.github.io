@@ -14,8 +14,6 @@
 import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 ```
 
-## 演示
-
 <!--{demo}-->
 
 ## Props
@@ -69,6 +67,7 @@ cleanErrors(callback: () => void) => void
 | errorMessage   | React.Node                       | 显示错误信息                               |
 | errorPlacement | enum: Placement `('bottomLeft')` | 错误信息显示位置                           |
 | name \*        | string                           | 表单元素名称                               |
+| readOnly       | boolean                          | 使控件为只读                               |
 
 ### `<FormGroup>`
 

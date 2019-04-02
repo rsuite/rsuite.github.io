@@ -1,4 +1,4 @@
-### 兼容社区优秀组件
+### 兼容第三方组件
 
 以 [text-mask](https://github.com/text-mask/text-mask) 为例：
 
