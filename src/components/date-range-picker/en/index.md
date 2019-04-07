@@ -4,6 +4,8 @@ Used to quickly select a date range
 
 - `<DateRangePicker>`
 
+If `<DateRangePicker>` does not satisfy the business scenario in which you select the time range, you can use two [`<DatePicker>`](./date-picker#Selection range) combinations.
+
 ## Usage
 
 ```js

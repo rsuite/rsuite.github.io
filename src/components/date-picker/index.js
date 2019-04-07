@@ -1,7 +1,7 @@
 import React from 'react';
 import dateFns from 'date-fns';
 
-import { DatePicker, Button } from 'rsuite';
+import { DatePicker, Button, InputGroup } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
@@ -21,11 +21,13 @@ export default createComponentExample({
     'intl',
     'placement',
     'custom',
-    'control'
+    'control',
+    'range'
   ],
   dependencies: {
     dateFns,
     Button,
-    DatePicker
+    DatePicker,
+    InputGroup
   }
 });

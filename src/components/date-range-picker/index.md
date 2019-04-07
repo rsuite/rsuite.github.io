@@ -4,6 +4,8 @@
 
 - `<DateRangePicker>`
 
+如果 `<DateRangePicker>` 不能满足你选择时间范围的业务场景，可以采用两个 [`<DatePicker>`](./date-picker#选择范围) 组合。
+
 ## 获取组件
 
 ```js
