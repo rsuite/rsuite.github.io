@@ -55,6 +55,7 @@ import { DatePicker } from 'rsuite';
 | onToggleMonthDropdown | (open: boolean) => void                      | 切换到月份视图的回调函数                                  |
 | onToggleTimeDropdown  | (open: boolean) => void                      | 切换到时间视图的回调函数                                  |
 | open                  | boolean                                      | 打开 (受控)                                               |
+| oneTap                | boolean                                      | 一个点击完成选择日期                                      |
 | placeholder           | string                                       | 没有值时候默认显示内容                                    |
 | placement             | enum: [Placement](#types) `('bottomLeft')`   | 显示位置                                                  |
 | ranges                | Array<[Range](#types)> [`(Ranges)`](#Ranges) | 快捷项配置                                                |

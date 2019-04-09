@@ -54,6 +54,7 @@ import { DatePicker } from 'rsuite';
 | onToggleMonthDropdown | (open: boolean) => void                      | Callback function that switches to the month view                                    |
 | onToggleTimeDropdown  | (open: boolean) => void                      | Callback function that switches to the time view                                     |
 | open                  | boolean                                      | Whether open the component                                                           |
+| oneTap                | boolean                                      | One click to complete the selection date                                             |
 | placeholder           | string                                       | Placeholder                                                                          |
 | placement             | enum: [Placement](#types) `('bottomLeft')`   | The placement of component                                                           |
 | ranges                | Array<[Range](#types)> [`(Ranges)`](#Ranges) | Shortcut config                                                                      |
