@@ -14,6 +14,11 @@ const instance = (
       <ControlLabel>readOnly</ControlLabel>
       <FormControl value="React Suite" readOnly />
     </FormGroup>
+
+    <FormGroup>
+      <ControlLabel>plaintext</ControlLabel>
+      <FormControl value="React Suite" plaintext />
+    </FormGroup>
   </Form>
 );
 
