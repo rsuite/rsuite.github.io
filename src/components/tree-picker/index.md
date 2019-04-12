@@ -46,7 +46,7 @@ import { TreePicker } from 'rsuite';
 | onSelect             | (activeNode:[DataItemType](#types), layer:number, event)=>void                          | 选择树节点后的回调函数                                                          |
 | open                 | boolean                                                                                 | 打开（受控）                                                                    |
 | placeholder          | React.Node `('Select')`                                                                 | 占位符                                                                          |
-| placement            | enum: [Placement](#types)`('bottomLeft')`                                               | 打开位置                                                                        |
+| placement            | enum: [Placement](#types)`('bottomStart')`                                               | 打开位置                                                                        |
 | renderExtraFooter    | ()=>React.Node                                                                          | 自定义页脚内容                                                                  |
 | renderTreeIcon       | (nodeData:[DataItemType](#types))=>React.Node                                           | 自定义渲染 图标                                                                 |
 | renderTreeNode       | (nodeData:[DataItemType](#types))=>React.Node                                           | 自定义渲染 tree 节点                                                            |

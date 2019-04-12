@@ -71,7 +71,7 @@ cleanErrors(callback: () => void) => void
 | checkTrigger   | enum: 'change','blur','none'                | The data validation trigger type, and it wiill overrides the setting on `<Form>` |
 | classPrefix    | string `('form-control')`                   | The prefix of the component CSS class                                            |
 | errorMessage   | React.Node                                  | Show error messages                                                              |
-| errorPlacement | enum: [Placement8](#types) `('bottomLeft')` | The placement of error messages                                                  |
+| errorPlacement | enum: [Placement8](#types) `('bottomStart')` | The placement of error messages                                                  |
 | name \*        | string                                      | The name of form-control                                                         |
 | readOnly       | boolean                                     | Make the control readonly                                                        |
 

@@ -19,40 +19,40 @@ const instance = (
         <tr>
           <td />
           <td>
-            <CustomSelectPicker placement="topLeft" />
+            <CustomSelectPicker placement="topStart" />
           </td>
           <td>
-            <CustomSelectPicker placement="topRight" />
+            <CustomSelectPicker placement="topEnd" />
           </td>
           <td />
         </tr>
         <tr>
           <td>
-            <CustomSelectPicker placement="leftTop" />
+            <CustomSelectPicker placement="leftStart" />
           </td>
           <td />
           <td />
           <td>
-            <CustomSelectPicker placement="rightTop" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <CustomSelectPicker placement="leftBottom" />
-          </td>
-          <td />
-          <td />
-          <td>
-            <CustomSelectPicker placement="rightBottom" />
+            <CustomSelectPicker placement="rightStart" />
           </td>
         </tr>
         <tr>
+          <td>
+            <CustomSelectPicker placement="leftEnd" />
+          </td>
+          <td />
           <td />
           <td>
-            <CustomSelectPicker placement="bottomLeft" />
+            <CustomSelectPicker placement="rightEnd" />
+          </td>
+        </tr>
+        <tr>
+          <td />
+          <td>
+            <CustomSelectPicker placement="bottomStart" />
           </td>
           <td>
-            <CustomSelectPicker placement="bottomRight" />
+            <CustomSelectPicker placement="bottomEnd" />
           </td>
           <td />
         </tr>
@@ -61,11 +61,12 @@ const instance = (
     <hr />
     <CustomSelectPicker placement="auto" />
     <hr />
-    <CustomSelectPicker placement="autoVerticalRight" />{' '}
-    <CustomSelectPicker placement="autoVerticalLeft" />
+    <CustomSelectPicker placement="autoVerticalStart" />{' '}
+    <CustomSelectPicker placement="autoVerticalEnd" />
+    
     <hr />
-    <CustomSelectPicker placement="autoHorizontalTop" />{' '}
-    <CustomSelectPicker placement="autoHorizontalBottom" />
+    <CustomSelectPicker placement="autoHorizontalStart" />{' '}
+    <CustomSelectPicker placement="autoHorizontalEnd" />
   </div>
 );
 ReactDOM.render(instance);

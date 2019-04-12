@@ -14,9 +14,9 @@ const CustomMultiCascader = ({ placement }) => (
 
 const instance = (
   <div>
-    <CustomMultiCascader placement="topLeft" />{' '}
-    <CustomMultiCascader placement="bottomLeft" />{' '}
-    <CustomMultiCascader placement="autoVerticalLeft" />
+    <CustomMultiCascader placement="topStart" />{' '}
+    <CustomMultiCascader placement="bottomStart" />{' '}
+    <CustomMultiCascader placement="autoVerticalStart" />
   </div>
 );
 ReactDOM.render(instance);

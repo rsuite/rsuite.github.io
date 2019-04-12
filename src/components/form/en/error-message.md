@@ -9,21 +9,21 @@ Error message can be set in 2 ways:
 
 ```js
 const errorPlacementData = [
-  { label: 'bottomLeft', value: 'bottomLeft' },
-  { label: 'bottomRight', value: 'bottomRight' },
-  { label: 'topLeft', value: 'topLeft' },
-  { label: 'topRight', value: 'topRight' },
-  { label: 'leftTop', value: 'leftTop' },
-  { label: 'rightTop', value: 'rightTop' },
-  { label: 'leftBottom', value: 'leftBottom' },
-  { label: 'rightBottom', value: 'rightBottom' }
+  { label: 'bottomStart', value: 'bottomStart' },
+  { label: 'bottomEnd', value: 'bottomEnd' },
+  { label: 'topStart', value: 'topStart' },
+  { label: 'topEnd', value: 'topEnd' },
+  { label: 'leftStart', value: 'leftStart' },
+  { label: 'rightStart', value: 'rightStart' },
+  { label: 'leftEnd', value: 'leftEnd' },
+  { label: 'rightEnd', value: 'rightEnd' }
 ];
 
 class ErrorMessageDemo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      errorPlacement: 'bottomLeft',
+      errorPlacement: 'bottomStart',
       showError: false
     };
   }

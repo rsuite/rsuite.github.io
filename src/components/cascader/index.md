@@ -45,7 +45,7 @@ import { Cascader } from 'rsuite';
 | onSearch             | (searchKeyword:string, event)=>void                                                     | 搜索的回调函数                       |
 | open                 | boolean                                                                                 | 打开 (受控)                          |
 | placeholder          | React.Node `('Select')`                                                                 | 占位符                               |
-| placement            | enum: [PlacementLeft](#types)`('bottomLeft')`                                           | 打开位置                             |
+| placement            | enum: [PlacementLeft](#types)`('bottomStart')`                                           | 打开位置                             |
 | renderMenu           | (children: object[], menu:React.Node, parentNode?: object)=>React.Node                  | 自定义渲染菜单列表                   |
 | renderMenuItem       | (label:React.Node, item: [DataItemType](#types))=>React.Node                            | 自定义选项                           |
 | renderValue          | (value:string, item: [DataItemType](#types), selectedElement:React.Node)=>React.Node    | 自定义被选中的选项                   |

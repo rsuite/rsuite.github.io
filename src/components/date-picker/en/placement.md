@@ -14,40 +14,40 @@ const instance = (
         <tr>
           <td />
           <td>
-            <CustomDatePicker placement="topLeft" />
+            <CustomDatePicker placement="topStart" />
           </td>
           <td>
-            <CustomDatePicker placement="topRight" />
+            <CustomDatePicker placement="topEnd" />
           </td>
           <td />
         </tr>
         <tr>
           <td>
-            <CustomDatePicker placement="leftTop" />
+            <CustomDatePicker placement="leftStart" />
           </td>
           <td />
           <td />
           <td>
-            <CustomDatePicker placement="rightTop" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <CustomDatePicker placement="leftBottom" />
-          </td>
-          <td />
-          <td />
-          <td>
-            <CustomDatePicker placement="rightBottom" />
+            <CustomDatePicker placement="rightStart" />
           </td>
         </tr>
         <tr>
+          <td>
+            <CustomDatePicker placement="leftEnd" />
+          </td>
+          <td />
           <td />
           <td>
-            <CustomDatePicker placement="bottomLeft" />
+            <CustomDatePicker placement="rightEnd" />
+          </td>
+        </tr>
+        <tr>
+          <td />
+          <td>
+            <CustomDatePicker placement="bottomStart" />
           </td>
           <td>
-            <CustomDatePicker placement="bottomRight" />
+            <CustomDatePicker placement="bottomEnd" />
           </td>
           <td />
         </tr>
@@ -56,11 +56,12 @@ const instance = (
     <hr />
     <CustomDatePicker placement="auto" />
     <hr />
-    <CustomDatePicker placement="autoVerticalRight" />{' '}
-    <CustomDatePicker placement="autoVerticalLeft" />
+    <CustomDatePicker placement="autoVerticalStart" />{' '}
+    <CustomDatePicker placement="autoVerticalEnd" />
+    
     <hr />
-    <CustomDatePicker placement="autoHorizontalTop" />{' '}
-    <CustomDatePicker placement="autoHorizontalBottom" />
+    <CustomDatePicker placement="autoHorizontalStart" />{' '}
+    <CustomDatePicker placement="autoHorizontalEnd" />
   </div>
 );
 ReactDOM.render(instance);

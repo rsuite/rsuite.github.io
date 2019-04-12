@@ -44,7 +44,7 @@ import { TreePicker } from 'rsuite';
 | onSelect             | (activeNode:[DataItemType](#types), layer:number, event)=>void                          | Callback function after selecting tree node                               |
 | open                 | boolean                                                                                 | Open (Controlled)                                                         |
 | placeholder          | React.Node `('Select')`                                                                 | Placeholder                                                               |
-| placement            | enum: [Placement](#types)`('bottomLeft')`                                               | Expand placement                                                          |
+| placement            | enum: [Placement](#types)`('bottomStart')`                                               | Expand placement                                                          |
 | renderExtraFooter    | ()=>React.Node                                                                          | Customizing footer Content                                                |
 | renderTreeIcon       | (nodeData:[DataItemType](#types))=>React.Node                                           | Custom Render icon                                                        |
 | renderTreeNode       | (nodeData:[DataItemType](#types))=>React.Node                                           | Custom Render tree Node                                                   |

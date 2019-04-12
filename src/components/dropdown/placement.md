@@ -19,12 +19,12 @@ const instance = (
       <tr>
         <td></td>
         <td>
-          <Dropdown title="TopLeft" placement="topLeft">
+          <Dropdown title="topStart" placement="topStart">
             {items}
           </Dropdown>
         </td>
         <td>
-          <Dropdown title="TopRight" placement="topRight">
+          <Dropdown title="topEnd" placement="topEnd">
             {items}
           </Dropdown>
         </td>
@@ -32,14 +32,14 @@ const instance = (
       </tr>
       <tr>
         <td>
-          <Dropdown title="LeftTop" placement="leftTop">
+          <Dropdown title="leftStart" placement="leftStart">
             {items}
           </Dropdown>
         </td>
         <td></td>
         <td></td>
         <td>
-          <Dropdown title="RightTop" placement="rightTop">
+          <Dropdown title="rightStart" placement="rightStart">
             {items}
           </Dropdown>
         </td>
@@ -47,14 +47,14 @@ const instance = (
       <tr>
         <td>
 
-          <Dropdown title="LeftBottom" placement="leftBottom">
+          <Dropdown title="leftEnd" placement="leftEnd">
             {items}
           </Dropdown>
         </td>
         <td></td>
         <td></td>
         <td>
-          <Dropdown title="RightBottom" placement="rightBottom">
+          <Dropdown title="rightEnd" placement="rightEnd">
             {items}
           </Dropdown>
         </td>
@@ -62,13 +62,13 @@ const instance = (
       <tr>
         <td></td>
         <td>
-          <Dropdown title="BottomLeft" placement="bottomLeft">
+          <Dropdown title="bottomStart" placement="bottomStart">
             {items}
           </Dropdown>
         </td>
         <td>
 
-          <Dropdown title="BottomRight" placement="bottomRight">
+          <Dropdown title="bottomEnd" placement="bottomEnd">
             {items}
           </Dropdown>
         </td>

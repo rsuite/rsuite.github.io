@@ -24,40 +24,40 @@ const instance = (
         <tr>
           <td />
           <td>
-            <CustomTreePicker placement="topLeft" />
+            <CustomTreePicker placement="topStart" />
           </td>
           <td>
-            <CustomTreePicker placement="topRight" />
+            <CustomTreePicker placement="topEnd" />
           </td>
           <td />
         </tr>
         <tr>
           <td>
-            <CustomTreePicker placement="leftTop" />
+            <CustomTreePicker placement="leftStart" />
           </td>
           <td />
           <td />
           <td>
-            <CustomTreePicker placement="rightTop" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <CustomTreePicker placement="leftBottom" />
-          </td>
-          <td />
-          <td />
-          <td>
-            <CustomTreePicker placement="rightBottom" />
+            <CustomTreePicker placement="rightStart" />
           </td>
         </tr>
         <tr>
+          <td>
+            <CustomTreePicker placement="leftEnd" />
+          </td>
+          <td />
           <td />
           <td>
-            <CustomTreePicker placement="bottomLeft" />
+            <CustomTreePicker placement="rightEnd" />
+          </td>
+        </tr>
+        <tr>
+          <td />
+          <td>
+            <CustomTreePicker placement="bottomStart" />
           </td>
           <td>
-            <CustomTreePicker placement="bottomRight" />
+            <CustomTreePicker placement="bottomEnd" />
           </td>
           <td />
         </tr>
@@ -66,11 +66,12 @@ const instance = (
     <hr />
     <CustomTreePicker placement="auto" />
     <hr />
-    <CustomTreePicker placement="autoVerticalRight" />{' '}
-    <CustomTreePicker placement="autoVerticalLeft" />
+    <CustomTreePicker placement="autoVerticalStart" />{' '}
+    <CustomTreePicker placement="autoVerticalEnd" />
+    
     <hr />
-    <CustomTreePicker placement="autoHorizontalTop" />{' '}
-    <CustomTreePicker placement="autoHorizontalBottom" />
+    <CustomTreePicker placement="autoHorizontalStart" />{' '}
+    <CustomTreePicker placement="autoHorizontalEnd" />
   </div>
 );
 ReactDOM.render(instance);

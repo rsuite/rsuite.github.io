@@ -3,22 +3,22 @@
 ```ts
 type Placement4 = 'top' | 'bottom' | 'right' | 'left';
 type Placement8 =
-  | 'bottomLeft'
-  | 'bottomRight'
-  | 'topLeft'
-  | 'topRight'
-  | 'leftTop'
-  | 'rightTop'
-  | 'leftBottom'
-  | 'rightBottom';
+  | 'bottomStart'
+  | 'bottomEnd'
+  | 'topStart'
+  | 'topEnd'
+  | 'leftStart'
+  | 'leftEnd'
+  | 'rightStart'
+  | 'rightEnd';
 type PlacementAuto =
   | 'auto'
-  | 'autoVerticalLeft'
-  | 'autoVerticalRight'
-  | 'autoHorizontalTop'
-  | 'autoHorizontalBottom';
+  | 'autoVerticalStart'
+  | 'autoVerticalEnd'
+  | 'autoHorizontalStart'
+  | 'autoHorizontalEnd';
 
-type PlacementLeft = 'bottomLeft' | 'topLeft' | 'autoVerticalLeft';
+type PlacementLeft = 'bottomStart' | 'topStart' | 'autoVerticalStart';
 type Placement = Placement8 | PlacementAuto;
 type PlacementAll = Placement4 | Placement8 | PlacementAuto;
 ```

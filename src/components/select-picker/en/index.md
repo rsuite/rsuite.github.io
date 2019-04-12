@@ -42,7 +42,7 @@ import { SelectPicker } from 'rsuite';
 | onSearch             | (searchKeyword:string, event)=>void                                                 | callback function for Search                           |
 | onSelect             | (value:string, item: [DataItemType](#types) , event)=>void                          | option is clicked after the selected callback function |
 | placeholder          | React.Node `('Select')`                                                             | Setting placeholders                                   |
-| placement            | enum: [Placement](#types)`('bottomLeft')`                                           | The placement of component                             |
+| placement            | enum: [Placement](#types)`('bottomStart')`                                           | The placement of component                             |
 | renderMenu           | (menu:React.Node)=>React.Node                                                       | Customizing the Rendering Menu list                    |
 | renderMenuGroup      | (groupTitle:React.Node, item:[DataItemType](#types))=>React.Node                    | Custom Render Options Group                            |
 | renderMenuItem       | (label:React.Node, item:[DataItemType](#types))=>React.Node                         | Custom Render Options                                  |

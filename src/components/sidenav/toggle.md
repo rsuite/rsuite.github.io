@@ -45,7 +45,7 @@ class Demo extends React.Component {
                 User Group
               </Nav.Item>
               <Dropdown
-                placement="rightTop"
+                placement="rightStart"
                 eventKey="3"
                 title="Advanced"
                 icon={<Icon icon="magic" />}
@@ -56,7 +56,7 @@ class Demo extends React.Component {
                 <Dropdown.Item eventKey="3-4">Visit Depth</Dropdown.Item>
               </Dropdown>
               <Dropdown
-                placement="rightTop"
+                placement="rightStart"
                 eventKey="4"
                 title="Settings"
                 icon={<Icon icon="gear-circle" />}

@@ -42,7 +42,7 @@ import { SelectPicker } from 'rsuite';
 | onSearch             | (searchKeyword:string, event)=>void                                                 | 搜索的回调函数                       |
 | onSelect             | (value:string, item: [DataItemType](#types) , event)=>void                          | 选项被点击选择后的回调函数           |
 | placeholder          | React.Node `('Select')`                                                             | 占位符                               |
-| placement            | enum: [Placement](#types)`('bottomLeft')`                                           | 位置                                 |
+| placement            | enum: [Placement](#types)`('bottomStart')`                                           | 位置                                 |
 | renderMenu           | (menu:React.Node)=>React.Node                                                       | 自定义渲染菜单列表                   |
 | renderMenuGroup      | (groupTitle:React.Node, item:[DataItemType](#types))=>React.Node                    | 自定义渲染选项组                     |
 | renderMenuItem       | (label:React.Node, item:[DataItemType](#types))=>React.Node                         | 自定义渲染选项                       |

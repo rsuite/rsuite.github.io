@@ -26,7 +26,7 @@ const NavToggle = ({ expand, onChange }) => {
       <Navbar.Body>
         <Nav>
           <Dropdown
-            placement="topLeft"
+            placement="topStart"
             trigger="click"
             renderTitle={children => {
               return <Icon style={iconStyles} icon="cog" />;
@@ -96,7 +96,7 @@ class Page extends React.Component {
                     trigger="hover"
                     title="Advanced"
                     icon={<Icon icon="magic" />}
-                    placement="rightTop"
+                    placement="rightStart"
                   >
                     <Dropdown.Item eventKey="3-1">Geo</Dropdown.Item>
                     <Dropdown.Item eventKey="3-2">Devices</Dropdown.Item>
@@ -108,7 +108,7 @@ class Page extends React.Component {
                     eventKey="4"
                     trigger="hover"
                     title="Settings"
-                    placement="rightTop"
+                    placement="rightStart"
                     icon={<Icon icon="gear-circle" />}
                   >
                     <Dropdown.Item eventKey="4-1">Applications</Dropdown.Item>

@@ -1,7 +1,7 @@
 ### 位置
 
 * `left` , `top` , `right` , `bottom` 是 4 个方向, 表示显示的位置。
-* `leftTop` , 在 left 后面加了一个 top, 这里的 top 是对齐方式，表示在触发点的左侧显示，同时居上对齐。
+* `leftStart` , 在 left 后面加了一个 top, 这里的 top 是对齐方式，表示在触发点的左侧显示，同时居上对齐。
 
 <!--start-code-->
 
@@ -25,25 +25,25 @@ const instance = (
         <tr>
           <td />
           <td>
-            <CustomComponent placement="topLeft" />
+            <CustomComponent placement="topStart" />
           </td>
           <td>
             <CustomComponent placement="top" />
           </td>
           <td>
-            <CustomComponent placement="topRight" />
+            <CustomComponent placement="topEnd" />
           </td>
           <td />
         </tr>
         <tr>
           <td>
-            <CustomComponent placement="leftTop" />
+            <CustomComponent placement="leftStart" />
           </td>
           <td />
           <td />
           <td />
           <td>
-            <CustomComponent placement="rightTop" />
+            <CustomComponent placement="rightStart" />
           </td>
         </tr>
         <tr>
@@ -60,25 +60,25 @@ const instance = (
 
         <tr>
           <td>
-            <CustomComponent placement="leftBottom" />
+            <CustomComponent placement="leftEnd" />
           </td>
           <td />
           <td />
           <td />
           <td>
-            <CustomComponent placement="rightBottom" />
+            <CustomComponent placement="rightEnd" />
           </td>
         </tr>
         <tr>
           <td />
           <td>
-            <CustomComponent placement="bottomLeft" />
+            <CustomComponent placement="bottomStart" />
           </td>
           <td>
             <CustomComponent placement="bottom" />
           </td>
           <td>
-            <CustomComponent placement="bottomRight" />
+            <CustomComponent placement="bottomEnd" />
           </td>
           <td />
         </tr>
@@ -89,12 +89,13 @@ const instance = (
     <CustomComponent placement="auto" />
     <br />
     <CustomComponent placement="autoVertical" />
-    <CustomComponent placement="autoVerticalRight" />
-    <CustomComponent placement="autoVerticalLeft" />
+    
+    <CustomComponent placement="autoVerticalStart" />
+    <CustomComponent placement="autoVerticalEnd" />
     <br />
     <CustomComponent placement="autoHorizontal" />
-    <CustomComponent placement="autoHorizontalTop" />
-    <CustomComponent placement="autoHorizontalBottom" />
+    <CustomComponent placement="autoHorizontalStart" />
+    <CustomComponent placement="autoHorizontalEnd" />
   </div>
 );
 ReactDOM.render(instance);
