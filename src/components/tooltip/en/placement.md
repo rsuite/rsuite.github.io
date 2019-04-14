@@ -1,7 +1,9 @@
 ### Placement
 
-* `left` , `top` , `right` , `bottom` is in 4 directions, indicating the location of the display.
-* `leftStart` , A top is added to the left, and here is the alignment, which indicates that the left-hand side of the trigger point is displayed and is aligned.
+- `left` , `top` , `right` , `bottom` is in 4 directions, indicating the location of the display.
+- `leftStart` , A start is added to the left, and here start is a logical way, indicating that the alignment is the beginning of the Y axis.
+
+> For a description of start and end, refer to W3C first public working draft about [CSS Logical Properties and Values Level 1](https://www.w3.org/TR/2017/WD-css-logical-1-20170518/).
 
 <!--start-code-->
 
@@ -11,7 +13,10 @@ const CustomComponent = ({ placement }) => (
     trigger="click"
     placement={placement}
     speaker={
-      <Tooltip>This is a ToolTip for simple text hints. It can replace the title property</Tooltip>
+      <Tooltip>
+        This is a ToolTip for simple text hints. It can replace the title
+        property
+      </Tooltip>
     }
   >
     <Button appearance="subtle">{placement}</Button>
@@ -91,7 +96,7 @@ const instance = (
     <CustomComponent placement="autoVertical" />
     <CustomComponent placement="autoVerticalStart" />
     <CustomComponent placement="autoVerticalEnd" />
-    
+
     <br />
     <CustomComponent placement="autoHorizontal" />
     <CustomComponent placement="autoHorizontalStart" />
