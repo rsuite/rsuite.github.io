@@ -103,6 +103,7 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | prev             | boolean `(true)`                                  | Show Previous Page button                                                              |
 | renderLengthMenu | (picker: React.Node) => React.Node                | Custom menu                                                                            |
 | renderTotal      | (total: number, activePage: number) => React.Node | Custom total                                                                           |
+| reverse          | boolean                                           | Reverse start and end position                                                         |
 | showInfo         | boolean `(true)`                                  | Show paging information                                                                |
 | showLengthMenu   | boolean `(true)`                                  | Display Dropdown menu                                                                  |
 | total            | number                                            | Total number of data entries                                                           |

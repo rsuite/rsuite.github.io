@@ -28,7 +28,7 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | ---------------------- | --------------------------------------- | ------------------------------------------------------------ |
 | autoHeight             | boolean                                 | 自动高度                                                     |
 | bordered               | boolean                                 | 表格边框                                                     |
-| bodyRef                | React.ElementRef                        | 表格主体部分上的 ref                   |
+| bodyRef                | React.ElementRef                        | 表格主体部分上的 ref                                         |
 | cellBordered           | boolean                                 | 单元格边框                                                   |
 | data \*                | Array&lt;Object&gt;                     | 表格数据                                                     |
 | defaultExpandAllRows   | boolean                                 | 默认展开所有节点                                             |
@@ -104,6 +104,7 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | prev             | boolean `(true)`                                  | 显示上一页按钮                              |
 | renderLengthMenu | (picker: React.Node) => React.Node                | 自定义菜单                                  |
 | renderTotal      | (total: number, activePage: number) => React.Node | 自定义总数                                  |
+| reverse          | boolean                                           | 调换左右的位置                              |
 | showInfo         | boolean `(true)`                                  | 显示分页信息                                |
 | showLengthMenu   | boolean `(true)`                                  | 显示多少行的菜单，默认显示                  |
 | total            | number                                            | 总数据条目数                                |
