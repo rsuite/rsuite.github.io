@@ -135,7 +135,7 @@ class TopLevelNav extends React.Component {
                 svgStyle={{
                   ...svgStyle,
                   fill: router.isActive({ pathname: item.key })
-                    ? '#34c3ff'
+                    ? '#169de0'
                     : '#fff'
                 }}
                 size="lg"

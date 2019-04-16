@@ -1,7 +1,5 @@
 import React from 'react';
 import {
-  Container,
-  Content,
   Row,
   Col,
   ButtonToolbar,
@@ -12,19 +10,39 @@ import {
   Radio,
   Toggle,
   Slider,
-  Nav,
   Input,
   Panel,
   Loader
 } from 'rsuite';
 import Loadable from 'react-loadable';
-import computeColors from './computeColors';
+import getPalette from './getPalette';
 import ColorPanel from './ColorPanel';
 import ImageToColors from './ImageToColors';
 import MarkdownView from '../../fixtures/MarkdownView';
 import loadJsFile from '../../fixtures/loadJsFile';
 import getLocalePath from '../../fixtures/getLocalePath';
 import PageContainer from '../../fixtures/PageContainer';
+
+const colors = [
+  '#f44336',
+  '#e91e63',
+  '#9c27b0',
+  '#673ab7',
+  '#3f51b5',
+  '#2196f3',
+  '#03a9f4',
+  '#34c3ff',
+  '#009688',
+  '#4caf50',
+  '#8bc34a',
+  '#cddc39',
+  '#ffeb3b',
+  '#ffc107',
+  '#ff9800',
+  '#ff5722',
+  '#795548',
+  '#607d8b'
+];
 
 const SketchPicker = Loadable({
   loader: () => import('react-color/lib/components/sketch/Sketch'),
@@ -45,7 +63,7 @@ export default getLocalePath(localePath => {
       this.lessLoaded = false;
       this.state = {
         showLoading: false,
-        color: '#2196f3'
+        color: '#34c3ff'
       };
     }
 
@@ -97,7 +115,11 @@ export default getLocalePath(localePath => {
 
           <div className="palette-wrapper">
             <div className="palette-panel">
-              <CirclePicker color={color} onChangeComplete={this.handleChangeComplete} />
+              <CirclePicker
+                color={color}
+                colors={colors}
+                onChangeComplete={this.handleChangeComplete}
+              />
               <br />
               <SketchPicker
                 style={{ marginTop: 6 }}
@@ -105,8 +127,9 @@ export default getLocalePath(localePath => {
                 onChangeComplete={this.handleChangeComplete}
               />
             </div>
+
             <div className="panel-color-wrap">
-              <ColorPanel colors={computeColors(color)} />
+              <ColorPanel colors={getPalette(color)} />
             </div>
 
             <div className="palette-preview" id="palettePreview">
@@ -134,7 +157,9 @@ export default getLocalePath(localePath => {
                 <Toggle defaultChecked />
                 <hr />
                 <Slider progress defaultValue={50} />
-                {showLoading ? <Loader backdrop content="loading..." vertical /> : null}
+                {showLoading ? (
+                  <Loader backdrop content="loading..." vertical />
+                ) : null}
               </Panel>
             </div>
           </div>
