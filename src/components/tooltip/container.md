@@ -1,7 +1,5 @@
 ### 容器与防止溢出
 
-`Popover` 会渲染在容器内部，跟随按钮一起滚动。
-
 <!--start-code-->
 
 ```js
@@ -11,10 +9,9 @@
  */
 
 const speaker = (
-  <Popover title="Title" style={{ width: 200 }}>
-    <p>This is a defalut Popover </p>
-    <p>Content</p>
-  </Popover>
+  <Tooltip style={{ width: 120 }}>
+    This is a <i>tooltip</i> .
+  </Tooltip>
 );
 
 class Demo extends React.Component {

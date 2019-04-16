@@ -42,7 +42,8 @@ import { CheckPicker } from 'rsuite';
 | onSearch             | (searchKeyword:string, event)=>void                                    | Callback fired when search                              |
 | onSelect             | (value:string, item: [DataItemType](#types) , event)=>void             | Callback fired when item is selected                    |
 | placeholder          | React.Node `('Select')`                                                | Setting placeholders                                    |
-| placement            | enum: [Placement](#types)`('bottomStart')`                              | The placement of component                              |
+| placement            | enum: [Placement](#types)`('bottomStart')`                             | The placement of component                              |
+| preventOverflow      | boolean                                                                | Prevent floating element overflow                       |
 | renderExtraFooter    | ()=>React.Node                                                         | Custom render extra footer                              |
 | renderMenu           | (menu:React.Node)=>React.Node                                          | Customizing the Rendering Menu list                     |
 | renderMenuGroup      | (groupTitle:React.Node, item:[DataItemType](#types))=>React.Node       | Custom render menu group                                |

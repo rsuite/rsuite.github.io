@@ -1,9 +1,8 @@
 import React from 'react';
-import { Cascader, Button, Icon } from 'rsuite';
-import _ from 'lodash';
-import { findNodeOfTree } from 'rsuite-utils/lib/utils';
+import { Cascader, Button, Icon, RadioGroup, Radio } from 'rsuite';
 import { getProvince } from '../../resources/data';
 import createComponentExample from '../createComponentExample';
+import PreventOverflowContainer from '../../fixtures/PreventOverflowContainer';
 
 export default createComponentExample({
   id: 'Cascader',
@@ -19,9 +18,11 @@ export default createComponentExample({
   ],
   getDependencies: getProvince,
   dependencies: {
+    PreventOverflowContainer,
     Cascader,
     Button,
-    findNodeOfTree,
-    Icon
+    Icon,
+    RadioGroup,
+    Radio
   }
 });

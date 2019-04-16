@@ -18,9 +18,9 @@ type PlacementAuto =
   | 'autoHorizontalStart'
   | 'autoHorizontalEnd';
 
-type PlacementLeft = 'bottomStart' | 'topStart' | 'autoVerticalStart';
 type Placement = Placement8 | PlacementAuto;
 type PlacementAll = Placement4 | Placement8 | PlacementAuto;
+type PlacementStart = 'bottomStart' | 'topStart' | 'autoVerticalStart';
 ```
 
 #### DataItemType

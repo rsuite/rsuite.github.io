@@ -1,36 +1,62 @@
-### 设置容器
+### 容器与防止溢出
 
 <!--start-code-->
 
 ```js
+/**
+ *  PreventOverflowContainer from
+ *  https://github.com/rsuite/rsuite.github.io/blob/master/src/fixtures/PreventOverflowContainer.js
+ */
+
+const placements = [
+  'bottomStart',
+  'bottomEnd',
+  'topStart',
+  'topEnd',
+  'leftStart',
+  'leftEnd',
+  'rightStart',
+  'rightEnd'
+];
+
 class Demo extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      placement: 'bottomStart'
+    };
+  }
   render() {
+    const { placement } = this.state;
     return (
-      <div
-        style={{
-          position: 'relative',
-          height: 200,
-          overflow: 'auto',
-          boxShadow: '#999 1px 1px 5px inset',
-          padding: 50
-        }}
-        ref={ref => {
-          this.container = ref;
-        }}
-      >
-        <div
-          style={{
-            height: 500
+      <div>
+        <RadioGroup
+          name="radioList"
+          inline
+          appearance="picker"
+          value={placement}
+          onChange={placement => {
+            this.setState({ placement });
           }}
         >
-          <CheckPicker
-            style={{ width: 224 }}
-            container={() => {
-              return this.container;
-            }}
-            data={data}
-          />
-        </div>
+          {placements.map(item => (
+            <Radio value={item} key={item}>
+              {item}
+            </Radio>
+          ))}
+        </RadioGroup>
+        <hr />
+        <PreventOverflowContainer>
+          {getContainer => (
+            <CheckPicker
+              preventOverflow
+              placement={placement}
+              style={{ width: 224 }}
+              container={getContainer}
+              data={data}
+            />
+          )}
+        </PreventOverflowContainer>
       </div>
     );
   }

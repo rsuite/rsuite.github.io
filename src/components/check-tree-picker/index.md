@@ -45,7 +45,8 @@ import { CheckTreePicker } from 'rsuite';
 | onSearch              | (searchKeyword:string, event)=void                                                                         | 搜索回调函数                                                                    |
 | onSelect              | (activeNode:[DataItemType](#types), layer:number, values:string[])=>void                                   | 选择树节点后的回调函数                                                          |
 | placeholder           | React.Node `('Select')`                                                                                    | 占位符                                                                          |
-| placement             | enum: [Placement](#types) `('bottomStart')`                                                                 | 打开位置                                                                        |
+| placement             | enum: [Placement](#types) `('bottomStart')`                                                                | 打开位置                                                                        |
+| preventOverflow       | boolean                                                                                                    | 防止浮动元素溢出                                                                |
 | renderExtraFooter     | ()=>React.Node                                                                                             | 自定义页脚内容                                                                  |
 | renderMenu            | (menu: string,React.Node) => React.Node                                                                    | 自定义渲染菜单                                                                  |
 | renderTreeIcon        | (nodeData:[DataItemType](#types))=>React.Node                                                              | 自定义渲染 图标                                                                 |

@@ -1,9 +1,8 @@
 import React from 'react';
-import { MultiCascader, Button, Icon, Toggle } from 'rsuite';
-import _ from 'lodash';
-import { findNodeOfTree } from 'rsuite-utils/lib/utils';
+import { MultiCascader, Button, Icon, Toggle, RadioGroup, Radio } from 'rsuite';
 import { getProvince } from '../../resources/data';
 import createComponentExample from '../createComponentExample';
+import PreventOverflowContainer from '../../fixtures/PreventOverflowContainer';
 
 export default createComponentExample({
   id: 'MultiCascader',
@@ -23,11 +22,12 @@ export default createComponentExample({
   ],
   getDependencies: getProvince,
   dependencies: {
+    RadioGroup,
+    Radio,
     MultiCascader,
     Button,
-    findNodeOfTree,
     Icon,
     Toggle,
-    get: _.get
+    PreventOverflowContainer
   }
 });

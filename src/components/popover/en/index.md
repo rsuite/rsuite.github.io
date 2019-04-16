@@ -8,7 +8,7 @@ When the mouse clicks/moves in, the pop-up pop-up box is used to display more co
 ## Usage
 
 ```js
-import { Popover, Whisper } from "rsuite";
+import { Popover, Whisper } from 'rsuite';
 ```
 
 ## Examples
@@ -27,23 +27,23 @@ import { Popover, Whisper } from "rsuite";
 
 ### `<Whisper>`
 
-| Property   | Type `(Default)`                                                 | Description                         |
-| ---------- | ---------------------------------------------------------------- | ----------------------------------- |
-| container  | HTMLElement or (() => HTMLElement)                               | Sets the rendering container        |
-| delay      | number                                                           | Delay Time                          |
-| delayHide  | number                                                           | Hidden delay Time                   |
-| delayShow  | number                                                           | Show Delay Time                     |
-| onBlur     | () => void                                                       | Lose Focus callback function        |
-| onClick    | () => void                                                       | Click on the callback function      |
-| onClose    | ()=>void                                                         | Callback fired when close component |
-| onFocus    | () => void                                                       | Callback function to get focus      |
-| onMouseOut | () => void                                                       | Mouse leave callback function       |
-| onOpen     | ()=>void                                                         | Callback fired when open component  |
-| placement  | enum: [PlacementAll](#types) `('right')`                           | Dispaly placement                   |
-| speaker \* | union: Tooltip, Popover                                          | Displayed component                 |
-| trigger    | union: 'click', 'hover', 'focus', 'active' `(['hover','focus'])` | Triggering events                   |
-| triggerRef | React.ElementRef                                                 | Ref of trigger                      |
-
+| Property        | Type `(Default)`                                                 | Description                         |
+| --------------- | ---------------------------------------------------------------- | ----------------------------------- |
+| container       | HTMLElement or (() => HTMLElement)                               | Sets the rendering container        |
+| delay           | number                                                           | Delay Time                          |
+| delayHide       | number                                                           | Hidden delay Time                   |
+| delayShow       | number                                                           | Show Delay Time                     |
+| onBlur          | () => void                                                       | Lose Focus callback function        |
+| onClick         | () => void                                                       | Click on the callback function      |
+| onClose         | ()=>void                                                         | Callback fired when close component |
+| onFocus         | () => void                                                       | Callback function to get focus      |
+| onMouseOut      | () => void                                                       | Mouse leave callback function       |
+| onOpen          | ()=>void                                                         | Callback fired when open component  |
+| placement       | enum: [PlacementAll](#types) `('right')`                         | Dispaly placement                   |
+| preventOverflow | boolean                                                          | Prevent floating element overflow   |
+| speaker \*      | union: Tooltip, Popover                                          | Displayed component                 |
+| trigger         | union: 'click', 'hover', 'focus', 'active' `(['hover','focus'])` | Triggering events                   |
+| triggerRef      | React.ElementRef                                                 | Ref of trigger                      |
 
 ## Related components
 

@@ -36,13 +36,14 @@ import { SelectPicker } from 'rsuite';
 | maxHeight            | number `(320)`                                                                      | Set the max height of the Dropdown                     |
 | onChange             | (value:string, event)=>void                                                         | callback function when value changes                   |
 | onClose              | ()=>void                                                                            | Close callback functions                               |
-| onClean              | (event:SyntheticEvent)=>void                                                        | Callback fired when value clean                                       |
+| onClean              | (event:SyntheticEvent)=>void                                                        | Callback fired when value clean                        |
 | onGroupTitleClick    | (event)=>void                                                                       | Click the callback function for the group header       |
 | onOpen               | ()=>void                                                                            | Open callback function                                 |
 | onSearch             | (searchKeyword:string, event)=>void                                                 | callback function for Search                           |
 | onSelect             | (value:string, item: [DataItemType](#types) , event)=>void                          | option is clicked after the selected callback function |
 | placeholder          | React.Node `('Select')`                                                             | Setting placeholders                                   |
-| placement            | enum: [Placement](#types)`('bottomStart')`                                           | The placement of component                             |
+| placement            | enum: [Placement](#types)`('bottomStart')`                                          | The placement of component                             |
+| preventOverflow      | boolean                                                                             | Prevent floating element overflow                      |
 | renderMenu           | (menu:React.Node)=>React.Node                                                       | Customizing the Rendering Menu list                    |
 | renderMenuGroup      | (groupTitle:React.Node, item:[DataItemType](#types))=>React.Node                    | Custom Render Options Group                            |
 | renderMenuItem       | (label:React.Node, item:[DataItemType](#types))=>React.Node                         | Custom Render Options                                  |
