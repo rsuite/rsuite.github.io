@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Loadable from 'react-loadable';
 import dateFns from 'date-fns';
-
 import {
   HelpBlock,
   Form,
@@ -31,9 +30,16 @@ import {
   SelectPicker,
   Slider,
   DatePicker,
-  Input
+  DateRangePicker,
+  Input,
+  TagPicker,
+  InputPicker,
+  Cascader,
+  MultiCascader
 } from 'rsuite';
 import createComponentExample from '../createComponentExample';
+import pickerData from '../../resources/data/users';
+import { getProvince } from '../../resources/data';
 
 const JSONTree = Loadable({
   loader: () => import('react-json-tree'),
@@ -77,6 +83,7 @@ export default createComponentExample({
     'custom-third-party-libraries',
     'custom-check-trigger'
   ],
+  getDependencies: getProvince,
   dependencies: {
     Alert,
     Row,
@@ -110,6 +117,13 @@ export default createComponentExample({
     MaskedInput,
     Slider,
     DatePicker,
-    dateFns
+    DateRangePicker,
+    TagPicker,
+    dateFns,
+    InputPicker,
+    useState,
+    pickerData,
+    Cascader,
+    MultiCascader
   }
 });
