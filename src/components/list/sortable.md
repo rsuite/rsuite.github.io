@@ -2,12 +2,6 @@
 
 <!--start-code-->
 ```js
-const CustomBlock=({children,style,...props})=>
-   <div style={{ padding: '1em 2em',display:'inline-block', ...style}}
-      {...props}
-   >
-      {children}
-   </div>;
 class ListDemo extends React.Component{
   constructor() {
     super();
@@ -19,28 +13,8 @@ class ListDemo extends React.Component{
         {text:'And so are you'},
         {text:'( You can\'t catch me ~ )',disabled:true},
       ],
-      data2: [
-       {text:'网页',},
-       {text:'图片',},
-       {text:'新闻',},
-       {text:'视频',},
-      ],
-      data3: [
-       {text:'item1',},
-       {text:'item2',},
-       {text:'item3',},
-       {text:'item4',},
-       {text:'item5',},
-       {text:'item6',},
-       {text:'item7',},
-       {text:'item8',},
-       {text:'item9',},
-      ],
-     
     };
     this.handleSortEnd = this.handleSortEnd.bind(this);
-    this.handleSortEnd2 = this.handleSortEnd2.bind(this);
-    this.handleSortEnd3 = this.handleSortEnd3.bind(this);
   }
   
   handleSortEnd({oldIndex, newIndex}){
@@ -53,29 +27,9 @@ class ListDemo extends React.Component{
       }
     })
   };
-  handleSortEnd2({oldIndex, newIndex}){
-    this.setState(({data2})=>{
-      const moveData=data2.splice(oldIndex,1);
-      const newData=[...data2];
-      newData.splice(newIndex,0,moveData[0]);
-      return{
-       data2: newData
-      }
-    })
-  };
-  handleSortEnd3({oldIndex, newIndex}){
-    this.setState(({data3})=>{
-      const moveData=data3.splice(oldIndex,1);
-      const newData=[...data3];
-      newData.splice(newIndex,0,moveData[0]);
-      return{
-       data3: newData
-      }
-    })
-  };
   
   render() {
-    const { data, data2, data3} = this.state;
+    const { data} = this.state;
     return (
       <div>
         <List 
@@ -90,48 +44,6 @@ class ListDemo extends React.Component{
             disabled={disabled}
           >
             {text}
-          </List.Item>
-          )
-        }
-        </List>
-        <hr/>
-        <List 
-          axis='x'
-          sortable 
-          onSort={this.handleSortEnd2}
-        >
-        {
-          data2.map(({text,disabled},index)=>
-          <List.Item 
-            key={index}
-            index={index} 
-            disabled={disabled}
-          >
-            <CustomBlock>{text}</CustomBlock>
-          </List.Item>
-          )
-        }
-        </List>      
-        <hr/>
-        <h5>注：Grid仅支持相同尺寸的ListItem</h5>
-        <List 
-          style={{
-            width: 300
-          }}
-          axis='xy'
-          sortable 
-          onSort={this.handleSortEnd3}
-        >
-        {
-          data3.map(({text,disabled},index)=>
-          <List.Item 
-            key={index}
-            index={index} 
-            disabled={disabled}
-          >
-            <CustomBlock>
-              {text}
-            </CustomBlock>
           </List.Item>
           )
         }

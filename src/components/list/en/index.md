@@ -25,8 +25,6 @@ import { List } from 'rsuite';
 | hover              | boolean                                  | hover animation   |
 | sortable           | boolean                                  | can change list item order  |
 | size               | enums: 'lg','md','sm'  `md`              | list items size            |
-| axis               | enums: 'x','y','xy' `y`                  | list items sort direction            |
-| lockAxis           | enums: 'x','y'                           | lock list items sort direction        |
 | autoScroll         | boolean  `true`                          | auto scroll when overflow    |
 | pressDelay         | number `0`                               | delay before trigger sort        |
 | pressThreshold     | number `5`                               | threshold of trigger sort        |

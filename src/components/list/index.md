@@ -25,8 +25,6 @@ import { List } from 'rsuite';
 | hover              | boolean                                  | 是否有鼠标悬停效果   |
 | sortable           | boolean                                  | 是否可以排序        |
 | size               | enums: 'lg','md','sm'  `md`              | 列表大小            |
-| axis               | enums: 'x','y','xy' `y`                  | 列表方向            |
-| lockAxis           | enums: 'x','y'                           | 锁定排序方向        |
 | autoScroll         | boolean  `true`                          | 溢出表格自动滚动    |
 | pressDelay         | number `0`                               | 排序触发延迟        |
 | pressThreshold     | number `5`                               | 排序触发阈值        |

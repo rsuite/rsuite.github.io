@@ -4,7 +4,7 @@ import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
   id: 'List',
-  examples: ['default', 'size', 'bordered', 'hover', 'axis', 'sortable', 'collection', 'custom'],
+  examples: ['default', 'size', 'bordered', 'hover', 'sortable', 'collection', 'custom'],
   dependencies: {
     List,
     Tag,
