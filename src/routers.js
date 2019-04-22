@@ -778,6 +778,22 @@ export const createRouters = (locale, onEnter, onEntered) => {
         />
 
         <Route
+          path="list"
+          getComponents={(location, callback) => {
+            onEnter && onEnter();
+            require.ensure([], require => {
+              const getComponent = require('./components/list')['default'];
+              const component = getComponent(locale);
+              callback && callback(null, component);
+              onEntered && onEntered();
+            });
+          }}
+          onEnter={() => {
+            setTitle('List - components');
+          }}
+        />
+
+        <Route
           path="grid"
           getComponents={(location, callback) => {
             onEnter && onEnter();
