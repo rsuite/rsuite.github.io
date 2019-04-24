@@ -65,15 +65,16 @@ cleanErrors(callback: () => void) => void
 
 ### `<FormControl>`
 
-| Property       | Type`(default)`                             | Description                                                                      |
-| -------------- | ------------------------------------------- | -------------------------------------------------------------------------------- |
-| accepter       | React.ElementType `(Input)`                 | Proxied components                                                               |
-| checkTrigger   | enum: 'change','blur','none'                | The data validation trigger type, and it wiill overrides the setting on `<Form>` |
-| classPrefix    | string `('form-control')`                   | The prefix of the component CSS class                                            |
-| errorMessage   | React.Node                                  | Show error messages                                                              |
+| Property       | Type`(default)`                              | Description                                                                      |
+| -------------- | -------------------------------------------- | -------------------------------------------------------------------------------- |
+| accepter       | React.ElementType `(Input)`                  | Proxied components                                                               |
+| checkTrigger   | enum: 'change','blur','none'                 | The data validation trigger type, and it wiill overrides the setting on `<Form>` |
+| classPrefix    | string `('form-control')`                    | The prefix of the component CSS class                                            |
+| errorMessage   | React.Node                                   | Show error messages                                                              |
 | errorPlacement | enum: [Placement8](#types) `('bottomStart')` | The placement of error messages                                                  |
-| name \*        | string                                      | The name of form-control                                                         |
-| readOnly       | boolean                                     | Make the control readonly                                                        |
+| name \*        | string                                       | The name of form-control                                                         |
+| readOnly       | boolean                                      | Make the control readonly                                                        |
+| plaintext      | boolean                                      | Make the control plaintext                                                       |
 
 ### `<FormGroup>`
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { Link } from 'react-router';
 import { addStyle, getHeight, on } from 'dom-lib';
-import { Container, Content, Row, Col, Icon, Button } from 'rsuite';
+import {  Content, Icon, Button } from 'rsuite';
 
 import Banner from './fixtures/Banner';
 import Logo from './fixtures/Logo';
@@ -61,7 +61,7 @@ class Home extends React.Component {
           <div className="banner-content">
             <h1 className="logo">
               <Logo width={120} />
-              <p style={{ marginTop: 16 }}>RSUITE</p>
+              <p style={{ marginTop: 16 }}>RSUITE v4</p>
             </h1>
             <p className="sub-title"> {_.get(locale, 'common.resume')}</p>
             <div className="menu-nav">
@@ -114,6 +114,7 @@ class Home extends React.Component {
         </Banner>
 
         <div className="header-toolbar">
+          
           <Button
             appearance={'link'}
             href="https://github.com/rsuite/rsuite"

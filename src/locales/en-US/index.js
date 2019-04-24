@@ -45,5 +45,7 @@ export default {
     step1: 'Upload the Logo of the product',
     step2: 'By analyzing the color of the Logo, make the theme color',
     step3: 'Click on the location of the Logo to change the theme color'
-  }
+  },
+  message:
+    'The current version is the V4 preview and can follow our latest developments'
 };

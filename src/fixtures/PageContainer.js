@@ -5,16 +5,14 @@ import { PageProvider, PageNav, PageContent } from 'rsuite-page-nav';
 import { on } from 'dom-lib';
 
 import {
-  Nav,
   Row,
   Col,
   IconButton,
-  Button,
   Icon,
   ButtonToolbar,
-  Dropdown,
   Tooltip,
-  Whisper
+  Whisper,
+  Message
 } from 'rsuite';
 import { design } from './SvgIcons';
 import LanguageSwitchButton from './LanguageSwitchButton';
@@ -74,13 +72,16 @@ class PageContainer extends React.Component {
       hideNav: !this.state.hideNav
     });
   };
+  getLocaleKey() {
+    return this.contex.locale.id;
+  }
   handleChangeLanguage = () => {
-    const { locale } = this.context;
     const pathname = location.pathname.replace('/en/', '');
-    const isEN = locale.id === 'en-US';
+    const isEN = this.getLocaleKey() === 'en-US';
     const nextPathName = isEN ? `/${pathname}` : `/en${pathname}`;
     location.href = `${location.origin}${nextPathName}`;
   };
+
   render() {
     const { children, designHash, routerId, hidePageNav, ...rest } = this.props;
     const { hideNav } = this.state;
@@ -90,6 +91,21 @@ class PageContainer extends React.Component {
       <PageProvider>
         <Row {...rest} className={clasNames({ ['hide-page-nav']: hideNav })}>
           <Col md={24} xs={24} sm={24} className="main-container">
+            <Message
+              showIcon
+              type="warning"
+              description={
+                <div>
+                  <p>
+                    {locale.message}
+                    {' : '}
+                    <a href="https://github.com/rsuite/rsuite/issues/453">
+                      React Suite v4 feature tracking
+                    </a>
+                  </p>
+                </div>
+              }
+            />
             <PageContent>{children}</PageContent>
           </Col>
           <Col md={8} xsHidden smHidden>

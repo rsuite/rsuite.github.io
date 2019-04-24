@@ -59,15 +59,16 @@ cleanErrors(callback: () => void) => void
 
 ### `<FormControl>`
 
-| 名称           | 类型`(默认值)`                   | 描述                                       |
-| -------------- | -------------------------------- | ------------------------------------------ |
-| accepter       | React.ElementType `(Input)`      | 受代理的组件                               |
-| checkTrigger   | enum: 'change','blur','none'     | 数据校验的触发类型,会覆盖 `<Form>`上的设置 |
-| classPrefix    | string `('form-control')`        | 组件 CSS 类的前缀                          |
-| errorMessage   | React.Node                       | 显示错误信息                               |
+| 名称           | 类型`(默认值)`                    | 描述                                       |
+| -------------- | --------------------------------- | ------------------------------------------ |
+| accepter       | React.ElementType `(Input)`       | 受代理的组件                               |
+| checkTrigger   | enum: 'change','blur','none'      | 数据校验的触发类型,会覆盖 `<Form>`上的设置 |
+| classPrefix    | string `('form-control')`         | 组件 CSS 类的前缀                          |
+| errorMessage   | React.Node                        | 显示错误信息                               |
 | errorPlacement | enum: Placement `('bottomStart')` | 错误信息显示位置                           |
-| name \*        | string                           | 表单元素名称                               |
-| readOnly       | boolean                          | 使控件为只读                               |
+| name \*        | string                            | 表单元素名称                               |
+| readOnly       | boolean                           | 使控件为只读                               |
+| plaintext      | boolean                           | 使控件为纯文本                             |
 
 ### `<FormGroup>`
 
