@@ -357,6 +357,13 @@
     "designHash": "artboard69"
   },
   {
+    "id": "list",
+    "name": "List",
+    "title": "列表",
+    "components": ["List", "List.Item"],
+    "designHash": "artboard_list"
+  },
+  {
     "group": true,
     "id": "layout",
     "name": "Layout",
