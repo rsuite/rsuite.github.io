@@ -31,7 +31,7 @@ import { Dropdown } from 'rsuite';
 | onOpen               | () => void                                                | Menu Pop-up callback function                                                           |
 | onSelect             | (eventKey: any, event: SyntheticEvent&lt;any&gt;) => void | Selected callback function                                                              |
 | onToggle             | (open?: boolean) => void                                  | Callback function for menu state switching.                                             |
-| placement            | enum: [Placement8](#types) `('bottomLeft')`               | The placement of Menu                                                                   |
+| placement            | enum: [Placement8](#types) `('bottomStart')`               | The placement of Menu                                                                   |
 | renderTitle          | (children?: React.Node) => React.Node                     | Custom title                                                                            |
 | title                | React.Node                                                | Menu defaults to display content.                                                       |
 | toggleClassName      | string                                                    | A css class to apply to the Toggle DOM node                                             |

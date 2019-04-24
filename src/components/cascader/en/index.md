@@ -44,7 +44,8 @@ import { Cascader } from 'rsuite';
 | onSearch             | (searchKeyword:string, event)=>void                                                     | callback function for Search                           |
 | open                 | boolean                                                                                 | Whether open the component                             |
 | placeholder          | React.Node `('Select')`                                                                 | Setting placeholders                                   |
-| placement            | enum: [PlacementLeft](#types)`('bottomLeft')`                                           | The placement of component                             |
+| placement            | enum: [PlacementStart](#types)`('bottomStart')`                                          | The placement of component                             |
+| preventOverflow      | boolean                                                                                 | Prevent floating element overflow                      |
 | renderMenu           | (children: object[], menu:React.Node, parentNode?: object)=>React.Node                  | Customizing the Rendering Menu list                    |
 | renderMenuItem       | (label:React.Node, item: [DataItemType](#types))=>React.Node                            | Custom render menu items                               |
 | renderValue          | (value: string, item: [DataItemType](#types), selectedElement:React.Node)=>React.Node   | Custom render selected items                           |

@@ -33,7 +33,7 @@ class WithPopover extends React.Component {
   render() {
     return (
       <Whisper
-        placement="bottomLeft"
+        placement="bottomStart"
         trigger="click"
         triggerRef={ref => {
           this.trigger = ref;

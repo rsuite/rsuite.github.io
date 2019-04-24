@@ -25,40 +25,40 @@ const instance = (
         <tr>
           <td />
           <td>
-            <CustomCheckPicker placement="topLeft" />
+            <CustomCheckPicker placement="topStart" />
           </td>
           <td>
-            <CustomCheckPicker placement="topRight" />
+            <CustomCheckPicker placement="topEnd" />
           </td>
           <td />
         </tr>
         <tr>
           <td>
-            <CustomCheckPicker placement="leftTop" />
+            <CustomCheckPicker placement="leftStart" />
           </td>
           <td />
           <td />
           <td>
-            <CustomCheckPicker placement="rightTop" />
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <CustomCheckPicker placement="leftBottom" />
-          </td>
-          <td />
-          <td />
-          <td>
-            <CustomCheckPicker placement="rightBottom" />
+            <CustomCheckPicker placement="rightStart" />
           </td>
         </tr>
         <tr>
+          <td>
+            <CustomCheckPicker placement="leftEnd" />
+          </td>
+          <td />
           <td />
           <td>
-            <CustomCheckPicker placement="bottomLeft" />
+            <CustomCheckPicker placement="rightEnd" />
+          </td>
+        </tr>
+        <tr>
+          <td />
+          <td>
+            <CustomCheckPicker placement="bottomStart" />
           </td>
           <td>
-            <CustomCheckPicker placement="bottomRight" />
+            <CustomCheckPicker placement="bottomEnd" />
           </td>
           <td />
         </tr>
@@ -67,20 +67,18 @@ const instance = (
     <hr />
     <CustomCheckPicker placement="auto" />
     <hr />
+     <CustomCheckPicker placement="autoVerticalStart" style={{ width: 200 }} />{' '}
     <CustomCheckPicker
-      placement="autoVerticalRight"
-      style={{ width: 200 }}
-    />{' '}
-    <CustomCheckPicker placement="autoVerticalLeft" style={{ width: 200 }} />
-    <hr />
-    <CustomCheckPicker
-      placement="autoHorizontalTop"
-      style={{ width: 200 }}
-    />{' '}
-    <CustomCheckPicker
-      placement="autoHorizontalBottom"
+      placement="autoVerticalEnd"
       style={{ width: 200 }}
     />
+   
+    <hr />
+    <CustomCheckPicker
+      placement="autoHorizontalStart"
+      style={{ width: 200 }}
+    />{' '}
+    <CustomCheckPicker placement="autoHorizontalEnd" style={{ width: 200 }} />
   </div>
 );
 ReactDOM.render(instance);

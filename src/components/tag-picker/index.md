@@ -42,7 +42,8 @@ import { TagPicker } from 'rsuite';
 | onSearch             | (searchKeyword:string, event)=>void                                   | 搜索的回调函数                        |
 | onSelect             | (value:string, item: [DataItemType](#types) , event)=>void            | 选项被点击选择后的回调函数            |
 | placeholder          | React.Node `('Select')`                                               | 占位符                                |
-| placement            | enum: [Placement](#types)`('bottomLeft')`                             | 位置                                  |
+| placement            | enum: [Placement](#types)`('bottomStart')`                            | 位置                                  |
+| preventOverflow      | boolean                                                               | 防止浮动元素溢出                      |
 | renderExtraFooter    | ()=>React.Node                                                        | 自定义页脚内容                        |
 | renderMenuGroup      | (groupTitle:React.Node, item:[DataItemType](#types))=>React.Node      | 自定义选项组                          |
 | renderMenuItem       | (label:React.Node, item: [DataItemType](#types))=>React.Node          | 自定义选项                            |

@@ -94,7 +94,7 @@ class CustomWhisper extends React.Component {
   render() {
     return (
       <Whisper
-        placement="autoVerticalLeft"
+        placement="autoVerticalStart"
         trigger="click"
         triggerRef={ref => {
           this.trigger = ref;

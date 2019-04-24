@@ -47,7 +47,8 @@ import { MultiCascader } from 'rsuite';
 | onSearch              | (searchKeyword:string, event)=>void                                                                          | 搜索的回调函数                       |
 | open                  | boolean                                                                                                      | 打开 (受控)                          |
 | placeholder           | React.Node `('Select')`                                                                                      | 占位符                               |
-| placement             | enum: [PlacementLeft](#types)`('bottomLeft')`                                                                | 打开位置                             |
+| placement             | enum: [PlacementStart](#types)`('bottomStart')`                                                              | 打开位置                             |
+| preventOverflow       | boolean                                                                                                      | 防止浮动元素溢出                     |
 | renderMenu            | (children: object[], menu:React.Node, parentNode?: object)=>React.Node                                       | 自定义渲染菜单列表                   |
 | renderMenuItem        | (label:React.Node, item: [DataItemType](#types))=>React.Node                                                 | 自定义选项                           |
 | renderValue           | (value:string[],selectedItems: Array&lt;[DataItemType](#types)&gt;,selectedElement:React.Node )=>React.Nodee | 自定义被选中的选项                   |

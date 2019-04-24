@@ -39,13 +39,14 @@ import { CheckTreePicker } from 'rsuite';
 | menuStyle             | React.CSSProperties                                                                    | style for Menu                                                            |
 | onChange              | (values:string[])=>void                                                                | callback fired when value change                                          |
 | onClose               | ()=>void                                                                               | callback fired when close component                                       |
-| onClean               | (event:SyntheticEvent)=>void                                                           | Callback fired when value clean                                                          |
+| onClean               | (event:SyntheticEvent)=>void                                                           | Callback fired when value clean                                           |
 | onExpand              | (activeNode:[DataItemType](#types),layer:number, concat:(data, children)=>Array)=>void | callback fired when tree node expand state changed                        |
 | onOpen                | ()=>void                                                                               | callback fired when open component                                        |
 | onSearch              | (searchKeyword:string, event)=>void                                                    | callback fired when search                                                |
 | onSelect              | (activeNode:[DataItemType](#types), layer:number, values:string[])=>void               | callback fired when tree node is selected                                 |
 | placeholder           | React.Node `('Select')`                                                                |                                                                           |
-| placement             | enum: [Placement](#types) `('bottomLeft')`                                             | Placement of component                                                    |
+| placement             | enum: [Placement](#types) `('bottomStart')`                                            | Placement of component                                                    |
+| preventOverflow       | boolean                                                                                | Prevent floating element overflow                                         |
 | renderExtraFooter     | ()=>React.Node                                                                         | custom render extra footer                                                |
 | renderMenu            | (menu:React.Node)=>React.Node                                                          | Customizing the Rendering Menu list                                       |
 | renderTreeIcon        | (nodeData:Array&lt;Object&gt;)=>React.Node                                             | custom render the icon of tree node                                       |

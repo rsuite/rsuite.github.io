@@ -56,7 +56,8 @@ import { DatePicker } from 'rsuite';
 | onToggleTimeDropdown  | (open: boolean) => void                      | 切换到时间视图的回调函数                                  |
 | open                  | boolean                                      | 打开 (受控)                                               |
 | placeholder           | string                                       | 没有值时候默认显示内容                                    |
-| placement             | enum: [Placement](#types) `('bottomLeft')`   | 显示位置                                                  |
+| placement             | enum: [Placement](#types) `('bottomStart')`  | 显示位置                                                  |
+| preventOverflow       | boolean                                      | 防止浮动元素溢出                                          |
 | ranges                | Array<[Range](#types)> [`(Ranges)`](#Ranges) | 快捷项配置                                                |
 | toggleComponentClass  | React.ElementType `('a')`                    | 为组件自定义元素类型                                      |
 | value                 | Date                                         | 值`受控`                                                  |

@@ -1,12 +1,17 @@
-### Container
+### Container and prevent overflow
 
 Positioned popover components in scrolling container
 
 <!--start-code-->
 
 ```js
+/**
+ *  PreventOverflowContainer from
+ *  https://github.com/rsuite/rsuite.github.io/blob/master/src/fixtures/PreventOverflowContainer.js
+ */
+
 const speaker = (
-  <Popover title="Title">
+  <Popover title="Title" style={{ width: 200 }}>
     <p>This is a defalut Popover </p>
     <p>Content</p>
   </Popover>
@@ -15,35 +20,19 @@ const speaker = (
 class Demo extends React.Component {
   render() {
     return (
-      <div
-        style={{
-          position: 'relative',
-          height: 200,
-          overflow: 'auto',
-          background: '#f1f1f1',
-          boxShadow: '#999 1px 1px 5px inset',
-          padding: 50
-        }}
-        ref={ref => {
-          this.container = ref;
-        }}
-      >
-        <div
-          style={{
-            height: 500
-          }}
-        >
+      <PreventOverflowContainer height={300}>
+        {getContainer => (
           <Whisper
+            preventOverflow
             trigger="click"
-            container={() => {
-              return this.container;
-            }}
+            container={getContainer}
             speaker={speaker}
+            placement="auto"
           >
             <Button appearance="primary">Click</Button>
           </Whisper>
-        </div>
-      </div>
+        )}
+      </PreventOverflowContainer>
     );
   }
 }

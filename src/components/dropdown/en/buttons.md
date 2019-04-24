@@ -13,7 +13,7 @@ const instance = (
     <ButtonGroup>
       <Button>Save</Button>
       <Dropdown
-        placement="bottomRight"
+        placement="bottomEnd"
         renderTitle={() => {
           return <IconButton icon={<Icon icon="angle-double-down" />} />;
         }}

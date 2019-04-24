@@ -65,7 +65,7 @@ cleanErrors(callback: () => void) => void
 | checkTrigger   | enum: 'change','blur','none'     | 数据校验的触发类型,会覆盖 `<Form>`上的设置 |
 | classPrefix    | string `('form-control')`        | 组件 CSS 类的前缀                          |
 | errorMessage   | React.Node                       | 显示错误信息                               |
-| errorPlacement | enum: Placement `('bottomLeft')` | 错误信息显示位置                           |
+| errorPlacement | enum: Placement `('bottomStart')` | 错误信息显示位置                           |
 | name \*        | string                           | 表单元素名称                               |
 | readOnly       | boolean                          | 使控件为只读                               |
 
@@ -94,12 +94,12 @@ cleanErrors(callback: () => void) => void
 
 ```js
 type Placement =
-  | 'bottomLeft'
-  | 'bottomRight'
-  | 'topLeft'
-  | 'topRight'
-  | 'leftTop'
-  | 'rightTop'
-  | 'leftBottom'
-  | 'rightBottom';
+  | 'bottomStart'
+  | 'bottomEnd'
+  | 'topStart'
+  | 'topEnd'
+  | 'leftStart'
+  | 'rightStart'
+  | 'leftEnd'
+  | 'rightEnd';
 ```

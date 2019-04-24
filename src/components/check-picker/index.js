@@ -1,7 +1,8 @@
 import React from 'react';
-import { CheckPicker, Button, Icon, Checkbox } from 'rsuite';
+import { CheckPicker, Button, Icon, Checkbox, RadioGroup, Radio } from 'rsuite';
 import data from '../../resources/data/users';
 import createComponentExample from '../createComponentExample';
+import PreventOverflowContainer from '../../fixtures/PreventOverflowContainer';
 
 export default createComponentExample({
   id: 'CheckPicker',
@@ -21,10 +22,13 @@ export default createComponentExample({
     'controlled'
   ],
   dependencies: {
+    PreventOverflowContainer,
     Checkbox,
     Button,
     CheckPicker,
     Icon,
-    data
+    data,
+    RadioGroup,
+    Radio
   }
 });

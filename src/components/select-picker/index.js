@@ -1,7 +1,8 @@
 import React from 'react';
-import { SelectPicker, Button, Icon } from 'rsuite';
+import { SelectPicker, Button, Icon, RadioGroup, Radio } from 'rsuite';
 import data from '../../resources/data/users';
 import createComponentExample from '../createComponentExample';
+import PreventOverflowContainer from '../../fixtures/PreventOverflowContainer';
 
 export default createComponentExample({
   id: 'SelectPicker',
@@ -19,9 +20,12 @@ export default createComponentExample({
     'controlled'
   ],
   dependencies: {
+    PreventOverflowContainer,
     SelectPicker,
     Button,
     Icon,
-    data
+    data,
+    RadioGroup,
+    Radio
   }
 });
