@@ -2,11 +2,11 @@
 
 A table displays rows of data.
 
-* `<Table>` Table component
-* `<Table.Column>` Table definition column component
-* `<Table.HeaderCell>` Column Header cell component
-* `<Table.Cell>` Cell component
-* `<Table.Pagination>` Table paging component
+- `<Table>` Table component
+- `<Table.Column>` Table definition column component
+- `<Table.HeaderCell>` Column Header cell component
+- `<Table.Cell>` Cell component
+- `<Table.Pagination>` Table paging component
 
 ## Usage
 
@@ -28,6 +28,7 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | ---------------------- | --------------------------------------- | --------------------------------------------------------------------------------------------- |
 | autoHeight             | boolean                                 | Automatic height                                                                              |
 | bordered               | boolean                                 | Show border                                                                                   |
+| bodyRef                | React.ElementRef                        | A ref attached to the table body element                                                      |
 | cellBordered           | boolean                                 | Show cell border                                                                              |
 | data \*                | Array&lt;Object&gt;                     | Table data                                                                                    |
 | defaultExpandAllRows   | boolean                                 | Expand all nodes By default                                                                   |
@@ -45,6 +46,8 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | onSortColumn           | (dataKey:string, sortType:string)=>void | Click the callback function of the sort sequence to return the value `sortColumn`, `sortType` |
 | renderRowExpanded      | (rowDate?: Object) => React.Node        | Customize what you can do to expand a zone                                                    |
 | renderTreeToggle       | (icon:node,rowData:object)=> node       | Tree table, the callback function in the expanded node                                        |
+| renderEmpty            | (info: React.Node) => React.Node        | Customized data is empty display content                                                      |
+| renderLoading          | (loading: React.Node) => React.Node     | Customize the display content in the data load                                                |
 | rowClassName           | string , (rowData:object)=>string       | Add an optional extra class name to row                                                       |
 | rowExpandedHeight      | number `(100)`                          | Set the height of an expandable area                                                          |
 | rowHeight              | number`(46)`                            | Row height                                                                                    |
@@ -57,28 +60,23 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | width                  | number                                  | Table width                                                                                   |
 | wordWrap               | boolean                                 | The cell wraps automatically                                                                  |
 
-
-
 ### `<Table.Column>`
 
-| Property  | Type `(Default)`                                 | Description                                                                                                 |
-| --------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
-| align     | enum: 'left','center','right'                    | Alignment                                                                                                   |
-| colSpan   | number                                           | Merges column cells to merge when the `dataKey` value for the merged column is `null` or `undefined`.       |
-| fixed     | boolean, 'left', 'right'                         | Fixed column                                                                                                |
-| flexGrow  | number                                           | Set the column width automatically adjusts, when set `flexGrow` cannot set `resizable` and `width` property |
-| minWidth  | number`(200)`                                    | When you use `flexGrow`, you can set a minimum width by `minwidth`                                          |
-| onResize  | (columnWidth?: number, dataKey?: string) => void | Callback after column width change                                                                          |
-| resizable | boolean                                          | Customizable Resize Column width                                                                            |
-| sortable  | boolean                                          | Sortable                                                                                                    |
-| width     | number                                           | Column width                                                                                                |
-
-
-
+| Property      | Type `(Default)`                                 | Description                                                                                                 |
+| ------------- | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| align         | enum: 'left','center','right'                    | Alignment                                                                                                   |
+| colSpan       | number                                           | Merges column cells to merge when the `dataKey` value for the merged column is `null` or `undefined`.       |
+| fixed         | boolean, 'left', 'right'                         | Fixed column                                                                                                |
+| flexGrow      | number                                           | Set the column width automatically adjusts, when set `flexGrow` cannot set `resizable` and `width` property |
+| minWidth      | number`(200)`                                    | When you use `flexGrow`, you can set a minimum width by `minwidth`                                          |
+| onResize      | (columnWidth?: number, dataKey?: string) => void | Callback after column width change                                                                          |
+| resizable     | boolean                                          | Customizable Resize Column width                                                                            |
+| sortable      | boolean                                          | Sortable                                                                                                    |
+| verticalAlign | enum: 'top', 'middle', 'bottom'                  | Vertical alignment                                                                                          |
+| width         | number                                           | Column width                                                                                                |
 
 > `sortable` is used to define whether the column is sortable, but depending on what `key` sort needs to set a `dataKey` in `Cell`.
 > The sort here is the service-side sort, so you need to handle the logic in the ' Onsortcolumn ' callback function of `<Table>`, and the callback function returns `sortColumn`, `sortType` values.
-
 
 ### `<Table.Cell>`
 
@@ -90,22 +88,22 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 
 ### `<Table.Pagination>`
 
-| Property         | Type `(Default)`                            | Description                                                                            |
-| ---------------- | ------------------------------------------- | -------------------------------------------------------------------------------------- |
-| activePage       | number `(1)`                                | Configure the current page number                                                      |
-| disabled         | boolean , (eventKey: any) => boolean        | Disabled component                                                                     |
-| displayLength    | number `(30)`                               | Configure how many lines of entries per page to display, corresponding to `lengthMenu` |
-| first            | boolean `(true)`                            | Show first page button                                                                 |
-| last             | boolean `(true)`                            | Show last Page button                                                                  |
-| lengthMenu       | Array&lt;number&gt;                         | Paging display row number configuration, defaults to 30, 50, 100                       |
-| maxButtons       | number `(5)`                                | Configure the maximum number of display buttons                                        |
-| next             | boolean `(true)`                            | Show Next Page button                                                                  |
-| onChangeLength   | (eventKey: number)=>void                    | The callback function that triggers when the `lengthmenu` value changes                |
-| onChangePage     | (eventKey: number)=>void                    | callback function triggered when page changes                                          |
-| prev             | boolean `(true)`                            | Show Previous Page button                                                              |
-| renderLengthMenu | (picker: React.Node) => React.Node          | Custom menu                                                                            |
-| renderTotal      | (total: number, activePage: number) => void | Custom total                                                                           |
-| showInfo         | boolean `(true)`                            | Show paging information                                                                |
-| showLengthMenu   | boolean `(true)`                            | Display Dropdown menu                                                                  |
-| total            | number                                      | Total number of data entries                                                           |
-
+| Property         | Type `(Default)`                                  | Description                                                                            |
+| ---------------- | ------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| activePage       | number `(1)`                                      | Configure the current page number                                                      |
+| disabled         | boolean , (eventKey: any) => boolean              | Disabled component                                                                     |
+| displayLength    | number `(30)`                                     | Configure how many lines of entries per page to display, corresponding to `lengthMenu` |
+| first            | boolean `(true)`                                  | Show first page button                                                                 |
+| last             | boolean `(true)`                                  | Show last Page button                                                                  |
+| lengthMenu       | Array&lt;number&gt;                               | Paging display row number configuration, defaults to 30, 50, 100                       |
+| maxButtons       | number `(5)`                                      | Configure the maximum number of display buttons                                        |
+| next             | boolean `(true)`                                  | Show Next Page button                                                                  |
+| onChangeLength   | (eventKey: number)=>void                          | The callback function that triggers when the `lengthmenu` value changes                |
+| onChangePage     | (eventKey: number)=>void                          | callback function triggered when page changes                                          |
+| prev             | boolean `(true)`                                  | Show Previous Page button                                                              |
+| renderLengthMenu | (picker: React.Node) => React.Node                | Custom menu                                                                            |
+| renderTotal      | (total: number, activePage: number) => React.Node | Custom total                                                                           |
+| reverse          | boolean                                           | Reverse start and end position                                                         |
+| showInfo         | boolean `(true)`                                  | Show paging information                                                                |
+| showLengthMenu   | boolean `(true)`                                  | Display Dropdown menu                                                                  |
+| total            | number                                            | Total number of data entries                                                           |

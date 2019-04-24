@@ -3,7 +3,7 @@
 An encapsulation of the Nav for the sidebar of the page.
 
 * `<Sidenav>` Side navigation component.
-* `<Sidenav.Header>` Navigates the hender content.
+* `<Sidenav.Header>` Navigates the header content.
 * `<Sidenav.Body>` Navigation body content.
 
 
