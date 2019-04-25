@@ -4,8 +4,10 @@
 
 ## Install and Initialization
 
+Before all start, you may need install [yarn][yarn].
+
 ```bash
-$ npx create-react-app test-app
+$ yarn create react-app test-app
 ```
 
 After execution, the tool will automatically generate a `react` development scaffold and install all dependencies necessary to develop `react`.
@@ -15,9 +17,7 @@ Execute after Setup completes
 $ yarn start
 ```
 
-Then visit `http://0.0.0.0:3000/`, see `Welcome to react` page is installed successfully.
-
-`npx` needs your node version of this machine is higher than 6, you can use [nvm][nvm] (macos/linux) or nvm-windows][nvm-windows] convenient to switch your local node version.
+Open the browser at `http://0.0.0.0:3000/`. It renders a header saying "Welcome to React" on the page.
 
 ## Install rsuite
 
@@ -66,7 +66,7 @@ To use the custom theme feature, you must modify the default configuration of th
 1.  Installation dependencies.
 
 ```bash
-yarn add react-app-rewired react-app-rewire-less
+yarn add react-app-rewired customize-cra less less-loader
 ```
 
 2.  Modify scripts in `package.json`
@@ -96,31 +96,29 @@ yarn add react-app-rewired react-app-rewire-less
 
 ```javascript
 /* config-overrides.js */
-const rewireLess = require('react-app-rewire-less');
+const { override, addLessLoader } = require('customize-cra');
 
-module.exports = function override(config, env) {
-  config = rewireLess.withLoaderOptions({
-    modifyVars: { '@base-color': '#f44336' },
-    javascriptEnabled: true
-  })(config, env);
-
-  return config;
-};
+module.exports = override(
+  addLessLoader({
+    javascriptEnabled: true,
+    modifyVars: { '@base-color': '#f44336' }
+  })
+);
 ```
 
 Re-executing `yarn start`, the red button is the configuration was successful
 
-This uses [react-app-rewired][react-app-rewired] and [react-app-rewire-less][react-app-rewire-less] to implement custom themes with [less-loader][less-loader] using `modifyVars` configuration. For more details, see [Customize Theme](/guide/themes).
+We uses [react-app-rewired][react-app-rewired] and [customize-cra][customize-cra] to implement custom themes with [less-loader][less-loader] using `modifyVars` configuration. For more details, see [Customize Theme](/guide/themes).
 
 ## Source code
 
 - [examples: create-react-app](https://github.com/rsuite/examples/tree/master/create-react-app)
 
-
+[yarn]: https://yarnpkg.com/
 [nvm]: https://github.com/creationix/nvm#installation
 [nvm-windows]: https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows
 [create-react-app]: https://github.com/facebook/create-react-app
 [create-react-app-readme]: https://github.com/facebook/create-react-app/blob/next/README.md
 [react-app-rewired]: https://github.com/timarney/react-app-rewired
-[react-app-rewire-less]: https://github.com/timarney/react-app-rewired/blob/master/packages/react-app-rewire-less/README.md
+[customize-cra]: https://github.com/arackaf/customize-cra
 [less-loader]: https://github.com/webpack-contrib/less-loader
