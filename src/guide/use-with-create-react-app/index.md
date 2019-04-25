@@ -4,8 +4,10 @@
 
 ## 初始化一个项目
 
+在开始之前，你可能需要安装 [yarn][yarn]。
+
 ```bash
-$ npx create-react-app test-app
+$ yarn create react-app test-app
 ```
 
 执行后，工具将自动生成一个 `react` 开发脚手架，并安装开发 `react` 所必须的所有依赖。安装完成后执行
@@ -14,9 +16,7 @@ $ npx create-react-app test-app
 $ yarn start
 ```
 
-然后访问 `http://0.0.0.0:3000/`，看到 Welcome to React 页面就是安装成功了。
-
-**注意**:`npx` 需要你本机的 Node 版本高于 **6** ，你可以使用 [nvm][nvm] (macOS/Linux) 或 [nvm-windows][nvm-windows] 方便的进行切换你本机的 node 版本。
+浏览器会自动打开 `http://0.0.0.0:3000/`，当你看到 `Welcome to React` 页面就是安装成功了。
 
 ## 引入 rsuite
 
@@ -65,7 +65,7 @@ $ yarn add rsuite
 1.  安装必要依赖。
 
 ```bash
-yarn add react-app-rewired react-app-rewire-less
+yarn add react-app-rewired customize-cra less less-loader
 ```
 
 2.  修改 `package.json` 中的脚本
@@ -95,31 +95,29 @@ yarn add react-app-rewired react-app-rewire-less
 
 ```javascript
 /* config-overrides.js */
-const rewireLess = require('react-app-rewire-less');
+const { override, addLessLoader } = require('customize-cra');
 
-module.exports = function override(config, env) {
-  config = rewireLess.withLoaderOptions({
-    modifyVars: { '@base-color': '#f44336' },
-    javascriptEnabled: true
-  })(config, env);
-
-  return config;
-};
+module.exports = override(
+  addLessLoader({
+    javascriptEnabled: true,
+    modifyVars: { '@base-color': '#f44336' }
+  })
+);
 ```
 
 重新执行 `yarn start`，看到红色按钮就是配置成功了。
 
-这里使用 [react-app-rewired][react-app-rewired] 和 [react-app-rewire-less][react-app-rewire-less],配合 [less-loader][less-loader] 利用 `modifyVars` 配置实现定制主题。更多方法，详见[定制主题](/guide/themes)。
-
+这里使用 [react-app-rewired][react-app-rewired] 和 [customize-cra][customize-cra],配合 [less-loader][less-loader] 利用 `modifyVars` 配置实现定制主题。更多方法，详见[定制主题](/guide/themes)。
 
 ## 源码
 
 - [examples: create-react-app](https://github.com/rsuite/examples/tree/master/create-react-app)
 
+[yarn]: https://yarnpkg.com/
 [nvm]: https://github.com/creationix/nvm#installation
 [nvm-windows]: https://github.com/coreybutler/nvm-windows#node-version-manager-nvm-for-windows
 [create-react-app]: https://github.com/facebook/create-react-app
 [create-react-app-readme]: https://github.com/facebook/create-react-app/blob/next/README.md
 [react-app-rewired]: https://github.com/timarney/react-app-rewired
-[react-app-rewire-less]: https://github.com/timarney/react-app-rewired/blob/master/packages/react-app-rewire-less/README.md
+[customize-cra]: https://github.com/arackaf/customize-cra
 [less-loader]: https://github.com/webpack-contrib/less-loader
