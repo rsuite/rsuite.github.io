@@ -114,7 +114,7 @@ export const createRouters = (locale, onEnter, onEntered) => {
             require.ensure([], require => {
               const getComponent = require('./components/notification')[
                 'default'
-                ];
+              ];
               const component = getComponent(locale);
               callback && callback(null, component);
               onEntered && onEntered();
@@ -226,7 +226,9 @@ export const createRouters = (locale, onEnter, onEntered) => {
           getComponents={(location, callback) => {
             onEnter && onEnter();
             require.ensure([], require => {
-              const getComponent = require('./components/placeholder')['default'];
+              const getComponent = require('./components/placeholder')[
+                'default'
+              ];
               const component = getComponent(locale);
               callback && callback(null, component);
               onEntered && onEntered();
@@ -324,7 +326,7 @@ export const createRouters = (locale, onEnter, onEntered) => {
             require.ensure([], require => {
               const getComponent = require('./components/pagination')[
                 'default'
-                ];
+              ];
               const component = getComponent(locale);
               callback && callback(null, component);
               onEntered && onEntered();
@@ -342,7 +344,7 @@ export const createRouters = (locale, onEnter, onEntered) => {
             require.ensure([], require => {
               const getComponent = require('./components/breadcrumb')[
                 'default'
-                ];
+              ];
               const component = getComponent(locale);
               callback && callback(null, component);
               onEntered && onEntered();
@@ -424,7 +426,7 @@ export const createRouters = (locale, onEnter, onEntered) => {
             require.ensure([], require => {
               const getComponent = require('./components/input-number')[
                 'default'
-                ];
+              ];
               const component = getComponent(locale);
               callback && callback(null, component);
               onEntered && onEntered();
@@ -442,7 +444,7 @@ export const createRouters = (locale, onEnter, onEntered) => {
             require.ensure([], require => {
               const getComponent = require('./components/auto-complete')[
                 'default'
-                ];
+              ];
               const component = getComponent(locale);
               callback && callback(null, component);
               onEntered && onEntered();
@@ -476,7 +478,7 @@ export const createRouters = (locale, onEnter, onEntered) => {
             require.ensure([], require => {
               const getComponent = require('./components/input-picker')[
                 'default'
-                ];
+              ];
               const component = getComponent(locale);
               callback && callback(null, component);
               onEntered && onEntered();
@@ -494,7 +496,7 @@ export const createRouters = (locale, onEnter, onEntered) => {
             require.ensure([], require => {
               const getComponent = require('./components/tag-picker')[
                 'default'
-                ];
+              ];
               const component = getComponent(locale);
               callback && callback(null, component);
               onEntered && onEntered();
@@ -512,7 +514,7 @@ export const createRouters = (locale, onEnter, onEntered) => {
             require.ensure([], require => {
               const getComponent = require('./components/select-picker')[
                 'default'
-                ];
+              ];
               const component = getComponent(locale);
               callback && callback(null, component);
               onEntered && onEntered();
@@ -530,7 +532,7 @@ export const createRouters = (locale, onEnter, onEntered) => {
             require.ensure([], require => {
               const getComponent = require('./components/check-picker')[
                 'default'
-                ];
+              ];
               const component = getComponent(locale);
               callback && callback(null, component);
               onEntered && onEntered();
@@ -548,7 +550,7 @@ export const createRouters = (locale, onEnter, onEntered) => {
             require.ensure([], require => {
               const getComponent = require('./components/tree-picker')[
                 'default'
-                ];
+              ];
               const component = getComponent(locale);
               callback && callback(null, component);
               onEntered && onEntered();
@@ -566,7 +568,7 @@ export const createRouters = (locale, onEnter, onEntered) => {
             require.ensure([], require => {
               const getComponent = require('./components/check-tree-picker')[
                 'default'
-                ];
+              ];
               const component = getComponent(locale);
               callback && callback(null, component);
               onEntered && onEntered();
@@ -600,7 +602,7 @@ export const createRouters = (locale, onEnter, onEntered) => {
             require.ensure([], require => {
               const getComponent = require('./components/multi-cascader')[
                 'default'
-                ];
+              ];
               const component = getComponent(locale);
               callback && callback(null, component);
               onEntered && onEntered();
@@ -618,7 +620,7 @@ export const createRouters = (locale, onEnter, onEntered) => {
             require.ensure([], require => {
               const getComponent = require('./components/date-picker')[
                 'default'
-                ];
+              ];
               const component = getComponent(locale);
               callback && callback(null, component);
               onEntered && onEntered();
@@ -636,7 +638,7 @@ export const createRouters = (locale, onEnter, onEntered) => {
             require.ensure([], require => {
               const getComponent = require('./components/date-range-picker')[
                 'default'
-                ];
+              ];
               const component = getComponent(locale);
               callback && callback(null, component);
               onEntered && onEntered();
@@ -718,7 +720,7 @@ export const createRouters = (locale, onEnter, onEntered) => {
             require.ensure([], require => {
               const getComponent = require('./components/check-tree')[
                 'default'
-                ];
+              ];
               const component = getComponent(locale);
               callback && callback(null, component);
               onEntered && onEntered();
@@ -794,6 +796,22 @@ export const createRouters = (locale, onEnter, onEntered) => {
         />
 
         <Route
+          path="calendar"
+          getComponents={(location, callback) => {
+            onEnter && onEnter();
+            require.ensure([], require => {
+              const getComponent = require('./components/calendar')['default'];
+              const component = getComponent(locale);
+              callback && callback(null, component);
+              onEntered && onEntered();
+            });
+          }}
+          onEnter={() => {
+            setTitle('Calendar - components');
+          }}
+        />
+
+        <Route
           path="grid"
           getComponents={(location, callback) => {
             onEnter && onEnter();
@@ -816,7 +834,7 @@ export const createRouters = (locale, onEnter, onEntered) => {
             require.ensure([], require => {
               const getComponent = require('./components/flexbox-grid')[
                 'default'
-                ];
+              ];
               const component = getComponent(locale);
               callback && callback(null, component);
               onEntered && onEntered();
@@ -898,7 +916,7 @@ export const createRouters = (locale, onEnter, onEntered) => {
             require.ensure([], require => {
               const getComponent = require('./components/dom-helper')[
                 'default'
-                ];
+              ];
               const component = getComponent(locale);
               callback && callback(null, component);
               onEntered && onEntered();
@@ -984,7 +1002,7 @@ export const createRouters = (locale, onEnter, onEntered) => {
             require.ensure([], require => {
               const getComponent = require('./guide/use-with-create-react-app')[
                 'default'
-                ];
+              ];
               const component = getComponent(locale);
               callback && callback(null, component);
               onEntered && onEntered();

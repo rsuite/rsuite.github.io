@@ -97,7 +97,11 @@
     "id": "placeholder",
     "name": "Placeholder",
     "title": "占位符",
-    "components": ["Placeholder.Graph", "Placeholder.Grid","Placeholder.Paragraph"],
+    "components": [
+      "Placeholder.Graph",
+      "Placeholder.Grid",
+      "Placeholder.Paragraph"
+    ],
     "designHash": "artboard_placeholder"
   },
   {
@@ -360,8 +364,13 @@
     "id": "list",
     "name": "List",
     "title": "列表",
-    "components": ["List", "List.Item"],
-    "designHash": "artboard_list"
+    "components": ["List", "List.Item"]
+  },
+  {
+    "id": "calendar",
+    "name": "Calendar",
+    "title": "日历",
+    "components": ["Calendar"]
   },
   {
     "group": true,

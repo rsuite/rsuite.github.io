@@ -73,7 +73,7 @@ class PageContainer extends React.Component {
     });
   };
   getLocaleKey() {
-    return this.contex.locale.id;
+    return this.context.locale.id;
   }
   handleChangeLanguage = () => {
     const pathname = location.pathname.replace('/en/', '');
