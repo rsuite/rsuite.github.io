@@ -97,8 +97,18 @@
     "id": "placeholder",
     "name": "Placeholder",
     "title": "占位符",
-    "components": ["Placeholder.Graph", "Placeholder.Grid","Placeholder.Paragraph"],
+    "components": [
+      "Placeholder.Graph",
+      "Placeholder.Grid",
+      "Placeholder.Paragraph"
+    ],
     "designHash": "artboard_placeholder"
+  },
+  {
+    "id": "avatar",
+    "name": "Avatar",
+    "title": "头像",
+    "components": ["Avatar"]
   },
   {
     "group": true,
