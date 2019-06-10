@@ -6,7 +6,7 @@
 const instance = (
   <div>
     <Badge>
-      <Button>NewMessage</Button>
+      <Button>New Message</Button>
     </Badge>
   </div>
 );

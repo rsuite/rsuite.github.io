@@ -1,6 +1,6 @@
 ### Text
 
-You can change the `<Avatar/>` background color and font color by `style`;
+You can change the `<Avatar>` background color and font color by `style`;
 
 <!--start-code-->
 
