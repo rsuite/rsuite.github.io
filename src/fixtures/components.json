@@ -111,6 +111,12 @@
     "components": ["Avatar"]
   },
   {
+    "id": "badge",
+    "name": "Badge",
+    "title": "徽标",
+    "components": ["Badge"]
+  },
+  {
     "group": true,
     "id": "navigation",
     "name": "Navigation",
