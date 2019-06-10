@@ -105,6 +105,12 @@
     "designHash": "artboard_placeholder"
   },
   {
+    "id": "avatar",
+    "name": "Avatar",
+    "title": "头像",
+    "components": ["Avatar"]
+  },
+  {
     "group": true,
     "id": "navigation",
     "name": "Navigation",
