@@ -1,7 +1,7 @@
 import React from 'react';
 import dateFns from 'date-fns';
 
-import { Calendar, Button, Tag } from 'rsuite';
+import { Calendar, Button, Tag, Popover, Whisper } from 'rsuite';
 import createComponentExample from '../createComponentExample';
 
 export default createComponentExample({
@@ -11,6 +11,8 @@ export default createComponentExample({
     dateFns,
     Tag,
     Button,
-    Calendar
+    Calendar,
+    Popover,
+    Whisper
   }
 });

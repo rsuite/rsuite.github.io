@@ -26,18 +26,39 @@ function getTodoList(date) {
 
 function renderCell(date) {
   const list = getTodoList(date);
+  const displayList = list.filter((item, index) => index < 2);
 
   if (list.length) {
+    const moreCount = list.length - displayList.length;
+    const moreItem = (
+      <li>
+        <Whisper
+          placement="top"
+          trigger="click"
+          speaker={
+            <Popover>
+              {list.map((item, index) => (
+                <p key={index}>
+                  <b>{item.time}</b> - {item.title}
+                </p>
+              ))}
+            </Popover>
+          }
+        >
+          <a>{moreCount} more</a>
+        </Whisper>
+      </li>
+    );
+
     return (
-      <div>
-        {list.map((item, index) => (
-          <Tag key={index}>
-            <a target="_blank">
-              <b>{item.time}</b> - {item.title}{' '}
-            </a>
-          </Tag>
+      <ul className="calendar-todo-list">
+        {displayList.map((item, index) => (
+          <li key={index}>
+            <b>{item.time}</b> - {item.title}
+          </li>
         ))}
-      </div>
+        {moreCount ? moreItem : null}
+      </ul>
     );
   }
 
