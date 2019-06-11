@@ -1,5 +1,7 @@
 # Badge
 
+Used for buttons, numbers or status markers next to icons.
+
 ## Usage
 
 ```js

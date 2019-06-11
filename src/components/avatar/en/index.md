@@ -1,5 +1,7 @@
 # Avatar
 
+Used to display an avatar or brand.
+
 ## Usage
 
 ```js
