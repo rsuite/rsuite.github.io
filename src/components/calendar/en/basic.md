@@ -54,7 +54,7 @@ function renderCell(date) {
       <ul className="calendar-todo-list">
         {displayList.map((item, index) => (
           <li key={index}>
-            <b>{item.time}</b> - {item.title}
+            <Badge /> <b>{item.time}</b> - {item.title}
           </li>
         ))}
         {moreCount ? moreItem : null}

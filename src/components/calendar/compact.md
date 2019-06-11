@@ -30,7 +30,7 @@ function renderCell(date) {
   if (list.length) {
     return (
       <div>
-        <a>●</a>
+        <Badge />
       </div>
     );
   }
