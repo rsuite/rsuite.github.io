@@ -28,11 +28,7 @@ function renderCell(date) {
   const list = getTodoList(date);
 
   if (list.length) {
-    return (
-      <div>
-        <Badge />
-      </div>
-    );
+    return <Badge className="calendar-todo-item-badge" />;
   }
 
   return null;
