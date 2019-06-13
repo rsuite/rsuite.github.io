@@ -1,6 +1,6 @@
 ### Image avatar
 
-You can set `alt` for `<Avatar/>` , it make sure avatar show pure text avatar when image load failed.
+You can set `alt` for `<Avatar>` , it make sure avatar show pure text avatar when image load failed.
 
 <!--start-code-->
 

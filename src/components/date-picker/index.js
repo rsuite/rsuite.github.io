@@ -12,7 +12,6 @@ export default createComponentExample({
     'appearance',
     'block',
     'placeholder',
-    'inline',
     'format',
     'format-month',
     'format-time',
