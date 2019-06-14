@@ -52,6 +52,7 @@ import { MultiCascader } from 'rsuite';
 | renderMenuItem        | (label:React.Node, item: [DataItemType](#types))=>React.Node                                               | Custom render menu items                                  |
 | renderValue           | (value:string[],selectedItems: Array&lt;[DataItemType](#types)&gt;,selectedElement:React.Node)=>React.Node | Custom render selected items                              |
 | searchable            | boolean `(true)`                                                                                           | Whether you can search for options.                       |
+| size                  | enum: 'lg', 'md', 'sm', 'xs' `('md')`                                                                      | A picker can have different sizes                         |
 | toggleComponentClass  | React.ElementType `('a')`                                                                                  | You can use a custom element for this component           |
 | uncheckableItemValues | string[]                                                                                                   | Set the option value for the check box not to be rendered |
 | value                 | string[]                                                                                                   | Specifies the values of the selected items(Controlled)    |

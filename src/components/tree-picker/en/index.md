@@ -44,12 +44,13 @@ import { TreePicker } from 'rsuite';
 | onSelect             | (activeNode:[DataItemType](#types), layer:number, event)=>void                          | Callback function after selecting tree node                               |
 | open                 | boolean                                                                                 | Open (Controlled)                                                         |
 | placeholder          | React.Node `('Select')`                                                                 | Placeholder                                                               |
-| placement            | enum: [Placement](#types)`('bottomStart')`                                               | Expand placement                                                          |
+| placement            | enum: [Placement](#types)`('bottomStart')`                                              | Expand placement                                                          |
 | renderExtraFooter    | ()=>React.Node                                                                          | Customizing footer Content                                                |
 | renderTreeIcon       | (nodeData:[DataItemType](#types))=>React.Node                                           | Custom Render icon                                                        |
 | renderTreeNode       | (nodeData:[DataItemType](#types))=>React.Node                                           | Custom Render tree Node                                                   |
 | renderValue          | (value:string,item:[DataItemType](#types), selectedElement:React.Node)=>React.Node      | Custom Render Placeholder                                                 |
 | seasrchable          | boolean `(true)`                                                                        | Set whether you can search                                                |
+| size                 | enum: 'lg', 'md', 'sm', 'xs' `('md')`                                                   | A picker can have different sizes                                         |
 | toggleComponentClass | React.ElementType `('a')`                                                               | You can use a custom element for this component                           |
 | value                | string                                                                                  | Selected value                                                            |
 | valueKey             | string `('value')`                                                                      | Tree data Structure Value property name                                   |

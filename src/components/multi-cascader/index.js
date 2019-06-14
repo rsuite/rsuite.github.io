@@ -9,6 +9,7 @@ export default createComponentExample({
   examples: [
     'basic',
     'appearance',
+    'size',
     'cascade',
     'default-value',
     'controlled',

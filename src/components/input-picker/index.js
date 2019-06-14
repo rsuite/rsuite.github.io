@@ -8,6 +8,7 @@ export default createComponentExample({
   id: 'InputPicker',
   examples: [
     'basic',
+    'size',
     'block',
     'group',
     'creatable',
