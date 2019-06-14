@@ -9,6 +9,7 @@ export default createComponentExample({
   id: 'TagPicker',
   examples: [
     'basic',
+    'size',
     'block',
     'group',
     'creatable',

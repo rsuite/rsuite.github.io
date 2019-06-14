@@ -8,6 +8,7 @@ export default createComponentExample({
   examples: [
     'basic',
     'appearance',
+    'size',
     'block',
     'placeholder',
     'hover-range',

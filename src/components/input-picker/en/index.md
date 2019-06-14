@@ -50,6 +50,7 @@ import { InputPicker } from 'rsuite';
 | renderValue          | (value:string, item: [DataItemType](#types),selectedElement:React.Node)=>React.Node | Custom Render selected options                         |
 | searchable           | boolean `(true)`                                                                    | Whether you can search for options.                    |
 | sort                 | (isGroup: boolean) => (a: any, b: any) => number                                    | Sort options                                           |
+| size                 | enum: 'lg', 'md', 'sm', 'xs' `('md')`                                               | A picker can have different sizes                      |
 | toggleComponentClass | React.ElementType `('a')`                                                           | You can use a custom element for this component        |
 | value                | string                                                                              | Value (Controlled)                                     |
 | valueKey             | string `('value')`                                                                  | Set option value 'key' in 'data'                       |

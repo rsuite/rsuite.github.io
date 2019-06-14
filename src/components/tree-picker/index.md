@@ -46,12 +46,13 @@ import { TreePicker } from 'rsuite';
 | onSelect             | (activeNode:[DataItemType](#types), layer:number, event)=>void                          | 选择树节点后的回调函数                                                          |
 | open                 | boolean                                                                                 | 打开（受控）                                                                    |
 | placeholder          | React.Node `('Select')`                                                                 | 占位符                                                                          |
-| placement            | enum: [Placement](#types)`('bottomStart')`                                               | 打开位置                                                                        |
+| placement            | enum: [Placement](#types)`('bottomStart')`                                              | 打开位置                                                                        |
 | renderExtraFooter    | ()=>React.Node                                                                          | 自定义页脚内容                                                                  |
 | renderTreeIcon       | (nodeData:[DataItemType](#types))=>React.Node                                           | 自定义渲染 图标                                                                 |
 | renderTreeNode       | (nodeData:[DataItemType](#types))=>React.Node                                           | 自定义渲染 tree 节点                                                            |
 | renderValue          | (value:string,item:[DataItemType](#types), selectedElement:React.Node)=>React.Node      | 自定义渲染 placeholder                                                          |
 | seasrchable          | boolean `(true)`                                                                        | 是否可以搜索                                                                    |
+| size                 | enum: 'lg', 'md', 'sm', 'xs' `('md')`                                                   | 设置组件尺寸                                                                    |
 | toggleComponentClass | React.ElementType `('a')`                                                               | 为组件自定义元素类型                                                            |
 | value                | string                                                                                  | 当前选中的值                                                                    |
 | valueKey             | string `('value')`                                                                      | tree 数据结构 value 属性名称                                                    |

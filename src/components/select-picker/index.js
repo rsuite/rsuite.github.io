@@ -9,6 +9,7 @@ export default createComponentExample({
   examples: [
     'basic',
     'appearance',
+    'size',
     'block',
     'group',
     'placement',

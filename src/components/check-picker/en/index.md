@@ -52,6 +52,7 @@ import { CheckPicker } from 'rsuite';
 | searchable           | boolean `(true)`                                                       | Whether dispaly search input box                        |
 | sticky               | boolean                                                                | Top the selected option in the options                  |
 | sort                 | (isGroup: boolean) => (a: any, b: any) => number                       | Sort options                                            |
+| size                 | enum: 'lg', 'md', 'sm', 'xs' `('md')`                                  | A picker can have different sizes                       |
 | toggleComponentClass | React.ElementType `('a')`                                              | You can use a custom element for this component         |
 | value                | any                                                                    | Specifies the values of the selected items (Controlled) |
 | valueKey             | string `('value')`                                                     | Set value key in data                                   |
