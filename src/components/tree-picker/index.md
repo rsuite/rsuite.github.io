@@ -43,7 +43,7 @@ import { TreePicker } from 'rsuite';
 | onExpand             | (activeNode:[DataItemType](#types), layer:number, concat:(data, children)=>Array)=>void | 树节点展示时的回调                                                              |
 | onOpen               | ()=>void                                                                                | 展开 Dropdown 的回调函数                                                        |
 | onSearch             | (searchKeyword:string, event)=>void                                                     | 搜索回调函数                                                                    |
-| onSelect             | (activeNode:[DataItemType](#types), layer:number, event)=>void                          | 选择树节点后的回调函数                                                          |
+| onSelect             | (activeNode:[DataItemType](#types), value:any, event)=>void                             | 选择树节点后的回调函数                                                          |
 | open                 | boolean                                                                                 | 打开（受控）                                                                    |
 | placeholder          | React.Node `('Select')`                                                                 | 占位符                                                                          |
 | placement            | enum: [Placement](#types)`('bottomStart')`                                              | 打开位置                                                                        |

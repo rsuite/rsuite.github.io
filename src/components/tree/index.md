@@ -29,7 +29,7 @@ import { Tree } from 'rsuite';
 | labelKey           | string `('label')`                                   | tree 数据结构 label 属性名称                                                    |
 | onChange           | (value:string)=>void                                 | 数据改变的回调函数                                                              |
 | onExpand           | (activeNode:DataItemType, layer:number)=>void        | 树节点展示时的回调                                                              |
-| onSelect           | (activeNode:DataItemType, layer:number, event)=>void | 选择树节点后的回调函数                                                          |
+| onSelect           | (activeNode:DataItemType, value, event)=>void | 选择树节点后的回调函数                                                          |
 | renderTreeIcon     | (nodeData:DataItemType)=>React.Node                  | 自定义渲染 图标                                                                 |
 | renderTreeNode     | (nodeData:DataItemType)=>React.Node                  | 自定义渲染 tree 节点                                                            |
 | searchKeyword      | string                                               | (受控)搜索关键词                                                                |

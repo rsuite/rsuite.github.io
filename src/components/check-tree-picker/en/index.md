@@ -43,7 +43,7 @@ import { CheckTreePicker } from 'rsuite';
 | onExpand              | (activeNode:[DataItemType](#types),layer:number, concat:(data, children)=>Array)=>void | callback fired when tree node expand state changed                        |
 | onOpen                | ()=>void                                                                               | callback fired when open component                                        |
 | onSearch              | (searchKeyword:string, event)=>void                                                    | callback fired when search                                                |
-| onSelect              | (activeNode:[DataItemType](#types), layer:number, values:string[])=>void               | callback fired when tree node is selected                                 |
+| onSelect              | (activeNode:[DataItemType](#types), value:any, event)=>void                  | callback fired when tree node is selected                                 |
 | placeholder           | React.Node `('Select')`                                                                |                                                                           |
 | placement             | enum: [Placement](#types) `('bottomStart')`                                            | Placement of component                                                    |
 | preventOverflow       | boolean                                                                                | Prevent floating element overflow                                         |

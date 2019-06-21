@@ -41,7 +41,7 @@ import { TreePicker } from 'rsuite';
 | onExpand             | (activeNode:[DataItemType](#types), layer:number, concat:(data, children)=>Array)=>void | Callback When tree node is displayed                                      |
 | onOpen               | ()=>void                                                                                | Open Dropdown callback function                                           |
 | onSearch             | (searchKeyword:string, event)=>void                                                     | Search callback function                                                  |
-| onSelect             | (activeNode:[DataItemType](#types), layer:number, event)=>void                          | Callback function after selecting tree node                               |
+| onSelect             | (activeNode:[DataItemType](#types), value:any, event)=>void                             | Callback function after selecting tree node                               |
 | open                 | boolean                                                                                 | Open (Controlled)                                                         |
 | placeholder          | React.Node `('Select')`                                                                 | Placeholder                                                               |
 | placement            | enum: [Placement](#types)`('bottomStart')`                                              | Expand placement                                                          |
