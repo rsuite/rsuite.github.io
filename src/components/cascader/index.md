@@ -48,7 +48,7 @@ import { Cascader } from 'rsuite';
 | placement            | enum: [PlacementLeft](#types)`('bottomLeft')`                                           | 打开位置                             |
 | renderMenu           | (children: object[], menu:React.Node, parentNode?: object)=>React.Node                  | 自定义渲染菜单列表                   |
 | renderMenuItem       | (label:React.Node, item: [DataItemType](#types))=>React.Node                            | 自定义选项                           |
-| renderValue          | (value:string, item: [DataItemType](#types), selectedElement:React.Node)=>React.Node    | 自定义被选中的选项                   |
+| renderValue          | (value:string, itemPaths:Array, selectedElement:React.Node)=>React.Node                 | 自定义被选中的选项                   |
 | searchable           | boolean `(true)`                                                                        | 可以搜索                             |
 | toggleComponentClass | React.ElementType `('a')`                                                               | 为组件自定义元素类型                 |
 | value                | string                                                                                  | 设置值（受控）                       |

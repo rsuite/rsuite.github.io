@@ -47,7 +47,7 @@ import { Cascader } from 'rsuite';
 | placement            | enum: [PlacementLeft](#types)`('bottomLeft')`                                           | The placement of component                             |
 | renderMenu           | (children: object[], menu:React.Node, parentNode?: object)=>React.Node                  | Customizing the Rendering Menu list                    |
 | renderMenuItem       | (label:React.Node, item: [DataItemType](#types))=>React.Node                            | Custom render menu items                               |
-| renderValue          | (value: string, item: [DataItemType](#types), selectedElement:React.Node)=>React.Node   | Custom render selected items                           |
+| renderValue          | (value: string, itemPaths:Array, selectedElement:React.Node)=>React.Node                | Custom render selected items                           |
 | searchable           | boolean `(true)`                                                                        | Whether you can search for options.                    |
 | toggleComponentClass | React.ElementType `('a')`                                                               | You can use a custom element for this component        |
 | value                | string                                                                                  | Specifies the values of the selected items(Controlled) |
