@@ -39,7 +39,7 @@ class ListDemo extends React.Component{
         {
           data.map(({text,disabled},index)=>
           <List.Item 
-            key={index}
+            key={text}
             index={index} 
             disabled={disabled}
           >
