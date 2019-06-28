@@ -29,11 +29,10 @@ import { List } from 'rsuite';
 | pressDelay         | number `0`                               | 排序触发延迟        |
 | pressThreshold     | number `5`                               | 排序触发阈值        |
 | transitionDuration | number `300`                             | 排序动画持续时间        |
-| onSortStart        | (payload:{ collection: number/string, index:number, node:HTMLElement },event: Event) => void | 排序开始回调        |
-| onSortMove         | (event: Event) => void                   | 排序过程回调        |
-| onSortOver         | (payload:{ collection: number/string, index:number,  newIndex: number,oldIndex: number }) => void | 排序移动元素时的回调        |
-| onSortEnd          | (payload:{ collection: number/string, newIndex: number,oldIndex: number },event: Event) => void | 排序结束回调        |
-| onSort             | (payload:{ collection: number/string, newIndex: number,oldIndex: number },event: Event) => void | 排序结束回调        |
+| onSortStart        | (payload:{ collection: number/string, node:HTMLElement, newIndex: number, oldIndex: number }) => void | 排序开始回调        |
+| onSortMove         | (payload:{ collection: number/string, node:HTMLElement, newIndex: number, oldIndex: number }) => void | 排序移动元素时的回调        |
+| onSortEnd          | (payload:{ collection: number/string, node:HTMLElement, newIndex: number, oldIndex: number }) => void | 排序结束回调        |
+| onSort             | (payload:{ collection: number/string, node:HTMLElement, newIndex: number, oldIndex: number }) => void | 排序结束回调        |
 
 
 ### `<List.Item>`
