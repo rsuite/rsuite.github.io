@@ -29,11 +29,10 @@ import { List } from 'rsuite';
 | pressDelay         | number `0`                               | delay before trigger sort        |
 | pressThreshold     | number `5`                               | threshold of trigger sort        |
 | transitionDuration | number `300`                             | duration of sort animation   |
-| onSortStart        | (payload:{ collection: number/string, index:number, node:HTMLElement },event: Event) => void | callback of beginning of sorting        |
-| onSortMove         | (event: Event) => void                   | callback of moving        |
-| onSortOver         | (payload:{ collection: number/string, index:number,  newIndex: number,oldIndex: number }) => void | callback of moving over a list items       |
-| onSortEnd          | (payload:{ collection: number/string, newIndex: number,oldIndex: number },event: Event) => void | callback of end of sorting        |
-| onSort             | (payload:{ collection: number/string, newIndex: number,oldIndex: number },event: Event) => void | callback of end of sorting        |
+| onSortStart        | (payload:{ collection: number/string, node:HTMLElement, newIndex: number, oldIndex: number }) => void | callback of beginning of sorting        |
+| onSortMove         | (payload:{ collection: number/string, node:HTMLElement, newIndex: number, oldIndex: number }) => void | callback of moving over a list items       |
+| onSortEnd          | (payload:{ collection: number/string, node:HTMLElement, newIndex: number, oldIndex: number }) => void | callback of end of sorting        |
+| onSort             | (payload:{ collection: number/string, node:HTMLElement, newIndex: number, oldIndex: number }) => void | callback of end of sorting        |
 
 ### `<List.Item>`
 
