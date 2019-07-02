@@ -2,8 +2,8 @@
 
 Display the current progress of an operation flow.
 
-* `<Progress.Line>` Linear progress
-* `<Progress.Circle>` Circular Progress
+- `<Progress.Line>` Linear progress
+- `<Progress.Circle>` Circular Progress
 
 ## Usage
 
@@ -27,8 +27,6 @@ import { Progress } from 'rsuite';
 | status      | enum: 'success', 'fail', 'active' | Progress status                       |
 | strokeColor | string                            | Line Color                            |
 | strokeWidth | number                            | Line width                            |
-| trailColor  | string                            | Trail color                           |
-| trailWidth  | number                            | Trail width                           |
 
 ### `<Progress.Circle>`
 

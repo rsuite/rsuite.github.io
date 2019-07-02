@@ -27,8 +27,6 @@ import { Progress } from 'rsuite';
 | status      | enum: 'success', 'fail', 'active' | 进度状态          |
 | strokeColor | string                            | 线条颜色          |
 | strokeWidth | number                            | 线条宽度          |
-| trailColor  | string                            | 背景颜色          |
-| trailWidth  | number                            | 背景宽度          |
 
 ### `<Progress.Circle>`
 
