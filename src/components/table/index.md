@@ -37,6 +37,7 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | expandedRowKeys        | string[]                                | 通过 rowKey 指定展开的行 (受控)                              |
 | headerHeight           | number`(40)`                            | 表头高度                                                     |
 | height                 | number`(200)`                           | 高度                                                         |
+| hover                  | boolean `(true)`                        | 表格的行设置鼠标悬停效果                                     |
 | isTree                 | boolean                                 | 是否展示为树表格                                             |
 | loading                | boolean                                 | 显示 loading 状态                                            |
 | locale                 | object                                  | 本地化语言配置                                               |
