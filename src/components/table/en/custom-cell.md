@@ -155,8 +155,6 @@ class CustomColumnTable extends React.Component {
     this.setState({
       checkedKeys: nextCheckedKeys
     });
-
-    console.log(this.table);
   }
   render() {
     const { data, checkedKeys } = this.state;

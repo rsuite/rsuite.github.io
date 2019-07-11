@@ -19,7 +19,7 @@ const instance = (
           label: 'Prev Day',
           closeOverlay: false,
           value: datePage => {
-            return dateFns.add(dateFns.parse(datePage), -1);
+            return dateFns.addDays(dateFns.parse(datePage), -1);
           }
         }
       ]}

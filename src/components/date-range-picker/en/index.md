@@ -78,20 +78,20 @@ const Locale = {
 const Ranges = [
   {
     label: 'today',
-    value: [setTimingMargin(new Date()), setTimingMargin(new Date(), 'right')]
+    value: [dateFns.startOfDay(new Date()), dateFns.endOfDay(new Date())]
   },
   {
     label: 'yesterday',
     value: [
-      setTimingMargin(dateFns.addDays(new Date(), -1)),
-      setTimingMargin(dateFns.addDays(new Date(), -1), 'right')
+      dateFns.startOfDay(dateFns.addDays(new Date(), -1)),
+      dateFns.endOfDay(dateFns.addDays(new Date(), -1))
     ]
   },
   {
     label: 'last7Days',
     value: [
-      setTimingMargin(dateFns.subDays(new Date(), 6)),
-      setTimingMargin(new Date(), 'right')
+      dateFns.startOfDay(dateFns.subDays(new Date(), 6)),
+      dateFns.endOfDay(new Date())
     ]
   }
 ];

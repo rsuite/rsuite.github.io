@@ -197,7 +197,7 @@ model4.check({
 
 ### StringType
 
-* isRequired(errorMessage: string)
+* isRequired(errorMessage: string, trim: boolean = true)
 
 ```js
 StringType().isRequired('This field required');
