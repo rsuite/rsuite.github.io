@@ -26,7 +26,7 @@ class Demo extends React.Component {
           autoUpload={false}
           action="//jsonplaceholder.typicode.com/posts/"
           onChange={this.handleChange}
-          innerRef={ref => {
+          ref={ref => {
             this.uploader = ref;
           }}
         />

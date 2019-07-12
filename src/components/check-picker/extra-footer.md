@@ -57,7 +57,7 @@ class ExtraFooterExample extends React.Component {
         <CheckPicker
           data={data}
           placeholder="请选择"
-          innerRef={ref => {
+          ref={ref => {
             this.picker = ref;
           }}
           style={{ width: 224 }}
@@ -79,7 +79,7 @@ class ExtraFooterExample extends React.Component {
                 appearance="primary"
                 size="sm"
                 onClick={() => {
-                  this.picker.trigger.hide();
+                  this.picker.close();
                 }}
               >
                 确定
