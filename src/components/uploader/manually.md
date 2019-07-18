@@ -11,6 +11,7 @@ class Demo extends React.Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleUpload = this.handleUpload.bind(this);
+    this.handleReupload = this.handleReupload.bind(this);
   }
 
   handleChange(value) {
@@ -19,6 +20,9 @@ class Demo extends React.Component {
   handleUpload() {
     this.uploader.start();
   }
+  handleReupload(file) {
+    this.uploader.start(file);
+  }
   render() {
     return (
       <div>
@@ -26,6 +30,7 @@ class Demo extends React.Component {
           autoUpload={false}
           action="//jsonplaceholder.typicode.com/posts/"
           onChange={this.handleChange}
+          onReupload={this.handleReupload}
           innerRef={ref => {
             this.uploader = ref;
           }}
