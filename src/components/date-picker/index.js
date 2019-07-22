@@ -21,7 +21,8 @@ export default createComponentExample({
     'intl',
     'placement',
     'custom',
-    'control'
+    'control',
+    'show-week-numbers'
   ],
   dependencies: {
     dateFns,

@@ -15,7 +15,8 @@ export default createComponentExample({
     'disabled',
     'toolbar',
     'value',
-    'intl'
+    'intl',
+    'show-week-numbers'
   ],
   dependencies: {
     dateFns,

@@ -44,6 +44,8 @@ import { DateRangePicker } from 'rsuite';
 | ranges               | Array<[Range](#types)> [`(Ranges)`](#Ranges)                                                                                                                                             | Whortcut config，defeult: `Today`,`Yesterday`，`Last 7 days`                            |
 | toggleComponentClass | React.ElementType `('a')`                                                                                                                                                                | You can use a custom element for this component                                         |
 | value                | Array&lt;Date&gt;                                                                                                                                                                        | Value (Controlled)                                                                      |
+| showWeekNumbers      | boolean                                                                                                                                                                                  | Whether to show week numbers                                                            |
+
 
 ## Default
 
