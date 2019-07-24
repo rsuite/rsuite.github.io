@@ -44,8 +44,8 @@ import { DatePicker } from 'rsuite';
 | locale                | Object [`(Locale)`](#Locale)                 | i18n config                                                                          |
 | onChange              | (date: Date)=>void                           | Callback fired when value changed                                                    |
 | onChangeCalendarDate  | (date: Date, event?: SyntheticEvent) => void | Callback function that changes the calendar date.                                    |
-| onClose               | ()=>void                                     | Callback fired when close component                                                  |
 | onClean               | (event:SyntheticEvent)=>void                 | Callback fired when value clean                                                      |
+| onClose               | ()=>void                                     | Callback fired when close component                                                  |
 | onNextMonth           | (date: Date) => void                         | Switch to the callback function for the next Month                                   |
 | onOk                  | (date: Date, event: SyntheticEvent) => void  | Click the OK callback function                                                       |
 | onOpen                | ()=>void                                     | Callback fired when open component                                                   |
@@ -53,15 +53,15 @@ import { DatePicker } from 'rsuite';
 | onSelect              | (date: Date)=>void                           | Callback fired when date or time is selected                                         |
 | onToggleMonthDropdown | (open: boolean) => void                      | Callback function that switches to the month view                                    |
 | onToggleTimeDropdown  | (open: boolean) => void                      | Callback function that switches to the time view                                     |
-| open                  | boolean                                      | Whether open the component                                                           |
 | oneTap                | boolean                                      | One click to complete the selection date                                             |
+| open                  | boolean                                      | Whether open the component                                                           |
 | placeholder           | string                                       | Placeholder                                                                          |
 | placement             | enum: [Placement](#types) `('bottomStart')`  | The placement of component                                                           |
 | preventOverflow       | boolean                                      | Prevent floating element overflow                                                    |
 | ranges                | Array<[Range](#types)> [`(Ranges)`](#Ranges) | Shortcut config                                                                      |
+| showWeekNumbers       | boolean                                      | Whether to show week numbers                                                         |
 | toggleComponentClass  | React.ElementType `('a')`                    | You can use a custom element for this component                                      |
 | value                 | Date                                         | Value (Controlled)                                                                   |
-| showWeekNumbers       | boolean                                      | Whether to show week numbers                                                         |
 
 ## Default
 

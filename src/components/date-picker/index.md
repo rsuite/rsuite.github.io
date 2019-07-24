@@ -45,8 +45,8 @@ import { DatePicker } from 'rsuite';
 | menuClassName         | string                                       | 选项菜单的 className                                      |
 | onChange              | (date:Date)=>void                            | 值改变后的回调函数                                        |
 | onChangeCalendarDate  | (date: Date, event?: SyntheticEvent) => void | 日历日期改变后的回调函数                                  |
-| onClose               | ()=>void                                     | 关闭回调函数                                              |
 | onClean               | (event:SyntheticEvent)=>void                 | 清除值后的回调函数                                        |
+| onClose               | ()=>void                                     | 关闭回调函数                                              |
 | onNextMonth           | (date: Date) => void                         | 切换到下一月的回调函数                                    |
 | onOk                  | (date: Date, event: SyntheticEvent) => void  | 点击确定后的回调函数                                      |
 | onOpen                | ()=>void                                     | 打开回调函数                                              |
@@ -54,12 +54,13 @@ import { DatePicker } from 'rsuite';
 | onSelect              | (date:Date)=>void                            | 选择日期或者时间的回调函数                                |
 | onToggleMonthDropdown | (open: boolean) => void                      | 切换到月份视图的回调函数                                  |
 | onToggleTimeDropdown  | (open: boolean) => void                      | 切换到时间视图的回调函数                                  |
-| open                  | boolean                                      | 打开 (受控)                                               |
 | oneTap                | boolean                                      | 一个点击完成选择日期                                      |
+| open                  | boolean                                      | 打开 (受控)                                               |
 | placeholder           | string                                       | 没有值时候默认显示内容                                    |
 | placement             | enum: [Placement](#types) `('bottomStart')`  | 显示位置                                                  |
 | preventOverflow       | boolean                                      | 防止浮动元素溢出                                          |
 | ranges                | Array<[Range](#types)> [`(Ranges)`](#Ranges) | 快捷项配置                                                |
+| showWeekNumbers       | boolean                                      | 显示周数量                                                |
 | toggleComponentClass  | React.ElementType `('a')`                    | 为组件自定义元素类型                                      |
 | value                 | Date                                         | 值`受控`                                                  |
 
