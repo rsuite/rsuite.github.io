@@ -103,8 +103,8 @@ class ListDemo extends React.Component {
   render() {
     return (
       <List hover>
-        {data.map(item =>
-          <List.Item>
+        {data.map((item,index)=>
+          <List.Item key={item['title']} index={index}>
             <FlexboxGrid>
               {/*icon*/}
               <FlexboxGrid.Item colspan={2} style={styleCenter}>
