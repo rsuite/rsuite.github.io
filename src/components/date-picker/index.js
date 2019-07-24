@@ -22,7 +22,8 @@ export default createComponentExample({
     'placement',
     'custom',
     'control',
-    'range'
+    'range',
+    'show-week-numbers'
   ],
   dependencies: {
     dateFns,

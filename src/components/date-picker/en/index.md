@@ -61,6 +61,7 @@ import { DatePicker } from 'rsuite';
 | ranges                | Array<[Range](#types)> [`(Ranges)`](#Ranges) | Shortcut config                                                                      |
 | toggleComponentClass  | React.ElementType `('a')`                    | You can use a custom element for this component                                      |
 | value                 | Date                                         | Value (Controlled)                                                                   |
+| showWeekNumbers       | boolean                                      | Whether to show week numbers                                                         |
 
 ## Default
 
