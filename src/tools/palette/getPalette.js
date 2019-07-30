@@ -13,7 +13,7 @@ export default function(primaryColor) {
   const colors = Array.from(new Array(10), (color, index) => {
     const { h, s, v } = tinycolor(primaryColor).toHsv();
     return {
-      name: `@H${index === 0 ? '50' : index * 100}`,
+      name: `@H${index === 0 ? '050' : index * 100}`,
       hex:
         index === PRIMARY_INDEX
           ? primaryColor

@@ -24,24 +24,26 @@ import getLocalePath from '../../fixtures/getLocalePath';
 import PageContainer from '../../fixtures/PageContainer';
 
 const colors = [
-  '#f44336',
+  '#3498FF',
+  '#2575FC',
+  '#0052CC',
+  '#1361AA',
+  '#3F51B5',
+  '#2487C2',
+
+  '#FFEB3B',
+  '#F5A623',
+  '#F44336',
+  '#e54304',
   '#e91e63',
   '#9c27b0',
-  '#673ab7',
-  '#3f51b5',
-  '#2196f3',
-  '#03a9f4',
-  '#34c3ff',
-  '#009688',
-  '#4caf50',
-  '#8bc34a',
-  '#cddc39',
-  '#ffeb3b',
-  '#ffc107',
-  '#ff9800',
-  '#ff5722',
-  '#795548',
-  '#607d8b'
+
+  '#429321',
+  '#4A148C',
+  '#673AB7',
+  '#880061',
+  '#607d8b',
+  '#795548'
 ];
 
 const SketchPicker = Loadable({
@@ -63,7 +65,7 @@ export default getLocalePath(localePath => {
       this.lessLoaded = false;
       this.state = {
         showLoading: false,
-        color: '#34c3ff'
+        color: '#3498FF'
       };
     }
 
