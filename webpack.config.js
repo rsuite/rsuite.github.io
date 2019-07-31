@@ -9,7 +9,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin;
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
-const iconPath = ['./node_modules/rsuite/src/style', '../rsuite/src/style'].map(
+const iconPath = ['./node_modules/rsuite/lib/styles', '../rsuite/src/styles'].map(
   relativePath => path.resolve(__dirname, relativePath)
 );
 

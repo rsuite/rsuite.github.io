@@ -5,7 +5,7 @@
 Create a separate `.less` file as follows, and then introduce this file.
 
 ```less
-@import '~rsuite/styles/less/index.less'; //The default style file.
+@import '~rsuite/lib/styles/index.less'; //The default style file.
 @import 'custom-theme.less'; // Style customization.
 ```
 
