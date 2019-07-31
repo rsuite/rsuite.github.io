@@ -83,11 +83,11 @@ class ColorPanel extends React.Component {
 
             if (contrast >= 4.5) {
               levelNoraml = 'AA';
+              levelLarge = 'AAA';
             }
 
             if (contrast >= 7) {
               levelNoraml = 'AAA';
-              levelLarge = 'AAA';
             }
 
             return (
