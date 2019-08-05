@@ -7,12 +7,14 @@ const _ = require('lodash');
 const readfile = filePath => promisify(fs.readFile)(filePath, 'utf8');
 
 const DESIGN_INDEX_PATH = './public/design/index.html';
-const COMPONENTS_JSON_PATH = './src/fixtures/components.json';
+const COMPONENTS_JSON_PATH = './src/component.config.json';
 
 (async function() {
   const designHtmlData = await readfile(DESIGN_INDEX_PATH);
   const componentsData = JSON.parse(await readfile(COMPONENTS_JSON_PATH));
-  const jsonData = JSON.parse(/\$\(function\(\)\{ SMApp\((.*)\) \}\)\;/.exec(designHtmlData)[1]);
+  const jsonData = JSON.parse(
+    /\$\(function\(\)\{ SMApp\((.*)\) \}\)\;/.exec(designHtmlData)[1]
+  );
   const artboadrsData = _.get(jsonData, 'artboards').map((data, index) => ({
     ...data,
     name: data.name.toLowerCase(),
@@ -21,10 +23,14 @@ const COMPONENTS_JSON_PATH = './src/fixtures/components.json';
   const artboards = _.keyBy(artboadrsData, 'name');
   componentsData.forEach(obj => {
     const { name } = obj;
-    const designHashIndex = _.get(artboards, `${name.toLowerCase()}.index`) || null;
+    const designHashIndex =
+      _.get(artboards, `${name.toLowerCase()}.index`) || null;
     if (designHashIndex) {
       obj.designHash = `artboard${designHashIndex}`;
     }
   });
-  fs.writeFile(COMPONENTS_JSON_PATH, JSON.stringify(componentsData, null, '  '));
+  fs.writeFile(
+    COMPONENTS_JSON_PATH,
+    JSON.stringify(componentsData, null, '  ')
+  );
 })();

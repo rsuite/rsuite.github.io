@@ -9,9 +9,11 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin;
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
-const iconPath = ['./node_modules/rsuite/lib/styles', '../rsuite/src/styles'].map(
-  relativePath => path.resolve(__dirname, relativePath)
-);
+const iconPath = [
+  './node_modules/rsuite/lib/styles',
+  '../rsuite/src/styles'
+].map(relativePath => path.resolve(__dirname, relativePath));
+const resolveToStaticPath = relativePath => path.resolve(__dirname, relativePath);
 
 const { NODE_ENV, STYLE_DEBUG, ENV_LOCALE } = process.env;
 const __PRO__ = NODE_ENV === 'production';
@@ -197,10 +199,17 @@ module.exports = Object.assign(
     devtool: STYLE_DEBUG === 'SOURCE' && 'source-map'
   },
   __PRO__
-    ? {}
+    ? {
+        resolve: {
+          alias: {
+            '@': resolveToStaticPath('./src')
+          }
+        }
+      }
     : {
         resolve: {
           alias: {
+            '@': resolveToStaticPath('./src'),
             rsuite: path.resolve(__dirname, '../rsuite')
           }
         }

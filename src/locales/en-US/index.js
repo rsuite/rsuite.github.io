@@ -2,7 +2,8 @@ export default {
   id: 'en-US',
   common: {
     search: 'Search',
-    resume: 'A suite of React components',
+    resume:
+      'A suite of React components, intimate UI design, and a friendly development experience.',
     advanced: 'Advanced',
     guide: 'Guide',
     design: 'Design',

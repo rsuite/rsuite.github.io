@@ -21,11 +21,9 @@ class App extends React.PureComponent {
     const className =
       pathname === '/' || pathname === '/en/' ? 'home-page' : '';
     return (
-      <div className={`doc-page ${className} night`}>
-        <Grid className="doc-container" fluid>
-          {this.props.children}
-        </Grid>
-      </div>
+      <Grid fluid className={`app-container ${className} night`}>
+        {this.props.children}
+      </Grid>
     );
   }
 }
