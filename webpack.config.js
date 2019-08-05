@@ -13,7 +13,8 @@ const iconPath = [
   './node_modules/rsuite/lib/styles',
   '../rsuite/src/styles'
 ].map(relativePath => path.resolve(__dirname, relativePath));
-const resolveToStaticPath = relativePath => path.resolve(__dirname, relativePath);
+const resolveToStaticPath = relativePath =>
+  path.resolve(__dirname, relativePath);
 
 const { NODE_ENV, STYLE_DEBUG, ENV_LOCALE } = process.env;
 const __PRO__ = NODE_ENV === 'production';
@@ -178,13 +179,13 @@ module.exports = Object.assign(
       new webpack.NamedModulesPlugin(),
       // new webpack.HotModuleReplacementPlugin(),
       new HtmlwebpackPlugin({
-        title: 'RSUITE | React Suite | 一套 React 的 UI 组件库',
+        title: 'React Suite | RSUITE | 一套 React 的 UI 组件库',
         chunks: ['polyfills', 'commons', 'app'],
         template: 'src/index.html',
         inject: true
       }),
       new HtmlwebpackPlugin({
-        title: 'RSUITE | React Suite | A suite of React components',
+        title: 'React Suite | RSUITE | A suite of React components',
         chunks: ['polyfills', 'commons', 'app_en'],
         filename: 'en/index.html',
         template: 'src/index.html',
