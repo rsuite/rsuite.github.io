@@ -34,7 +34,6 @@ node_modules
 .node_repl_history
 
 .vscode
-scripts
 build
 .DS_Store
 lib/

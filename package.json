@@ -16,7 +16,7 @@
     "build-webpack": "NODE_ENV=production  webpack --mode production --progress && cp -R public/* ./dist/ ",
     "build": "npm run clear-dist && npm run build-webpack",
     "build-gitee": "DEPLOY_ENV=gitee npm run build",
-    "parsing-design-docs": "node ./bin/parsingDesignDocs.js",
+    "parsing-design-docs": "node ./scripts/parsing-design-docs.js",
     "algolia": "node scripts/algolia-indices.js",
     "create-router": "node scripts/create-router.js"
   },
