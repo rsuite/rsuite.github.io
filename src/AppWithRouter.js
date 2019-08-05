@@ -12,12 +12,12 @@ import { IntlProvider } from 'rsuite-intl';
 import { IntlProvider as RSIntlProvider } from 'rsuite';
 
 import App from './App';
-import Home from './Home';
-import PageLoader from './fixtures/PageLoader';
+import HomePage from './pages/home';
+import PageLoader from './components/PageLoader';
 
 import ready from './ready';
 import { defateTilte } from './title';
-import { createRouters } from './routers';
+import { createRouters } from './pages/routers';
 import { getDict } from './locales';
 import zhCN from 'rsuite/lib/IntlProvider/locales/zh_CN';
 import enUS from 'rsuite/lib/IntlProvider/locales/en_US';
@@ -47,7 +47,7 @@ export default locale => {
                   <App {...props} onRemoveLoading={onRemoveLoading} />
                 )}
               >
-                <IndexRoute component={Home} onEnter={defateTilte} />
+                <IndexRoute component={HomePage} onEnter={defateTilte} />
                 {createRouters(locale, onEnter, onEntered)}
               </Route>
             </Router>
@@ -61,33 +61,33 @@ export default locale => {
     constructor(props) {
       super(props);
       this.state = {
-        Enter: false
+        enter: false
       };
     }
 
     handleEnter = () => {
       this.setState({
-        Enter: true
+        enter: true
       });
     };
     handleEntered = () => {
       this.setState({
-        Enter: false
+        enter: false
       });
     };
     render() {
       const { onRemoveLoading } = this.props;
-      const { Enter } = this.state;
+      const { enter } = this.state;
 
       return (
-        <div>
-          <PageLoader show={Enter} />
+        <React.Fragment>
+          <PageLoader show={enter} />
           <AppRouters
             onRemoveLoading={onRemoveLoading}
             onEnter={this.handleEnter}
             onEntered={this.handleEntered}
           />
-        </div>
+        </React.Fragment>
       );
     }
   }

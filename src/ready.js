@@ -1,5 +1,4 @@
 import { removeClass } from 'dom-lib';
-import loadJsFile from './fixtures/loadJsFile';
 
 const shortKey = localeKey => {
   try {

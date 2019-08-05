@@ -1,7 +1,7 @@
 import { getDict } from './locales';
 
 const dist = getDict();
-const TITLE = 'RSUITE 3 | React Suite';
+const TITLE = 'React Suite | RSUITE';
 
 export const pageview = title => {
   window._ha &&

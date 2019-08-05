@@ -1,0 +1,82 @@
+import React from 'react';
+import _ from 'lodash';
+import { Icon } from 'rsuite';
+import { guide, component, tools } from '@/components/SvgIcons';
+import components from '@/component.config.json';
+import { getDict } from '@/locales';
+
+const dict = getDict();
+const svgStyle = {
+  width: 22
+};
+
+const getMenu = locale => {
+  return [
+    {
+      id: 'guide',
+      name: _.get(locale, 'common.guide'),
+      icon: <Icon icon={guide} svgStyle={svgStyle} size="3x" />,
+      children: [
+        {
+          id: 'introduction',
+          name: _.get(locale, 'common.introduction')
+        },
+        {
+          id: 'usage',
+          name: _.get(locale, 'common.usage')
+        },
+        {
+          id: 'use-with-create-react-app',
+          name: _.get(locale, 'common.useWithCreateReactApp')
+        },
+        {
+          id: 'themes',
+          name: _.get(locale, 'common.customizeTheme')
+        },
+        {
+          id: 'intl',
+          name: _.get(locale, 'common.intl')
+        },
+        {
+          id: 'flow',
+          name: _.get(locale, 'common.flow')
+        },
+        {
+          id: 'logs',
+          name: _.get(locale, 'common.changeLog'),
+          target: '_blank',
+          url: 'https://github.com/rsuite/rsuite/releases'
+        }
+      ]
+    },
+    {
+      id: 'components',
+      name: _.get(locale, 'common.components'),
+      icon: <Icon icon={component} svgStyle={svgStyle} size="3x" />,
+      children: components
+    },
+    {
+      id: 'tools',
+      name: _.get(locale, 'common.tools'),
+      icon: <Icon icon={tools} svgStyle={svgStyle} />,
+      children: [
+        {
+          id: 'palette',
+          name: _.get(locale, 'common.palette')
+        },
+        {
+          id: 'icons',
+          name: _.get(locale, 'common.icons')
+        }
+      ]
+    },
+    {
+      id: 'extensions',
+      name: _.get(locale, 'common.extension')
+    }
+  ];
+};
+
+export const menu = getMenu(dict);
+
+export default getMenu;

@@ -1,0 +1,55 @@
+@import '~react-markdown-reader/less/highlight';
+
+.markdown {
+  h1 {
+    font-size: 28px;
+    margin-bottom: 22px;
+    code {
+      font-size: 14px;
+      border-radius: 4px;
+    }
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-top: 40px;
+    padding: 10px 0;
+    color: #151515;
+    font-weight: bold;
+  }
+  h3 {
+    font-size: 18px;
+    margin-top: 50px;
+  }
+  h3 code {
+    font-size: 18px !important;
+  }
+  ol,
+  ul {
+    padding: 10px 20px;
+    list-style-type: circle;
+    li {
+      line-height: 26px;
+    }
+  }
+  table {
+    width: 100%;
+    td,
+    th {
+      background: none;
+      border-style: none;
+      border-bottom: 1px dashed #f1f1f1;
+      padding: 10px;
+    }
+  }
+  table th {
+    text-align: left;
+  }
+  blockquote {
+    padding: 10px;
+    margin: 0 0 10px;
+    font-size: 14px;
+    border-left: 5px solid #eee;
+    opacity: 0.8;
+  }
+}
