@@ -24,7 +24,8 @@ export default {
     collapseMenu: 'Content navigation',
     changeLanguage: 'Language',
     flow: 'Flow',
-    extension: 'Extensions'
+    extension: 'Extensions',
+    gettingStarted: 'Getting started'
   },
   table: {
     'tab.resizable': 'Resizable',

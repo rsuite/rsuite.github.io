@@ -3,6 +3,7 @@ import _ from 'lodash';
 import { Link } from 'react-router';
 import { Icon, Navbar, Nav } from 'rsuite';
 import LanguageSwitchButton from '@/components/LanguageSwitchButton';
+import ThemeSwitchButton from '@/components/ThemeSwitchButton';
 import Logo from '@/components/Logo';
 
 const Header = props => {
@@ -16,7 +17,7 @@ const Header = props => {
       <Navbar.Body>
         <Nav>
           <Nav.Item
-            className="hvr-underline-from-center"
+            className="link-spread"
             componentClass={Link}
             to={`${localePath}guide/introduction`}
           >
@@ -24,7 +25,7 @@ const Header = props => {
           </Nav.Item>
 
           <Nav.Item
-            className="hvr-underline-from-center"
+            className="link-spread"
             componentClass={Link}
             to={`${localePath}components/overview`}
           >
@@ -32,7 +33,7 @@ const Header = props => {
           </Nav.Item>
 
           <Nav.Item
-            className="hvr-underline-from-center"
+            className="link-spread"
             componentClass={Link}
             to={`${localePath}tools/palette`}
           >
@@ -40,7 +41,7 @@ const Header = props => {
           </Nav.Item>
 
           <Nav.Item
-            className="hvr-underline-from-center"
+            className="link-spread"
             componentClass={Link}
             to={`${localePath}extensions`}
           >
@@ -48,7 +49,7 @@ const Header = props => {
           </Nav.Item>
 
           <Nav.Item
-            className="hvr-underline-from-center"
+            className="link-spread"
             componentClass={'a'}
             href="/design/index.html"
             target="_blank"
@@ -59,28 +60,22 @@ const Header = props => {
         </Nav>
         <Nav pullRight>
           <Nav.Item
-            componentClass={'a'}
-            href="https://github.com/rsuite/rsuite"
-            target="_blank"
-          >
-            Gitee
-            <Icon icon="external-link-square" className="external-link" />
-          </Nav.Item>
-          <Nav.Item
-            componentClass={'a'}
-            href="https://gitee.com/rsuite/rsuite"
-            target="_blank"
-          >
-            GitHub
-            <Icon icon="external-link-square" className="external-link" />
-          </Nav.Item>
-          <Nav.Item
             componentClass={LanguageSwitchButton}
             language={_.get(locale, 'id')}
             href={localePath}
             appearance={'link'}
             className="btn-switch"
+            title="Change language"
           />
+          {/**
+          <Nav.Item
+            componentClass={ThemeSwitchButton}
+            href={localePath}
+            appearance={'link'}
+            className="btn-switch"
+            title="Toggle light/dark theme"
+          />
+           **/}
         </Nav>
       </Navbar.Body>
     </Navbar>

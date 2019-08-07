@@ -23,7 +23,8 @@ export default {
     collapseMenu: '内容导航',
     changeLanguage: '切换语言',
     flow: 'Flow',
-    extension: '扩展'
+    extension: '扩展',
+    gettingStarted: '开始使用'
   },
   table: {
     'tab.resizable': '可调整列宽',

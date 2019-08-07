@@ -1076,22 +1076,6 @@ export const createRouters = (locale, onEnter, onEntered) => {
             setTitle('Internationalization - guide');
           }}
         />
-
-        <Route
-          path="flow"
-          getComponents={(location, callback) => {
-            onEnter && onEnter();
-            require.ensure([], require => {
-              const getComponent = require('./guide/flow')['default'];
-              const component = getComponent(locale);
-              callback && callback(null, component);
-              onEntered && onEntered();
-            });
-          }}
-          onEnter={() => {
-            setTitle('Flow - guide');
-          }}
-        />
       </Route>
 
       <Route

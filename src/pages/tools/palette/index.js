@@ -150,8 +150,8 @@ export default getLocalePath(localePath => {
                 </CheckboxGroup>
                 <hr />
                 <RadioGroup name="radio" defaultValue="1" inline>
-                  <Radio value="1">Front End</Radio>
-                  <Radio value="2">Back End </Radio>
+                  <Radio value="1">Front end</Radio>
+                  <Radio value="2">Back end </Radio>
                 </RadioGroup>
                 <hr />
                 <Input />

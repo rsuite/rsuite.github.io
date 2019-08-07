@@ -43,7 +43,7 @@ class DocSidebar extends React.PureComponent {
             if (child.group) {
               nodeItems.push(
                 <Nav.Item panel key={child.id}>
-                  {child.name}
+                  # {child.name}
                 </Nav.Item>
               );
               return;

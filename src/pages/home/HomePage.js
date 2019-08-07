@@ -46,6 +46,24 @@ class HomePage extends React.Component {
               <section className="section">
                 <h1 className="title">React Suite</h1>
                 <p className="sub-title"> {_.get(locale, 'common.resume')}</p>
+                <p>
+                  <a href="https://github.com/rsuite/rsuite" target="_blank">
+                    <img
+                      alt="GitHub stars"
+                      src="https://img.shields.io/github/stars/rsuite/rsuite?style=social"
+                    />
+                  </a>
+                  <a
+                    style={{ marginLeft: 10 }}
+                    href="https://gitee.com/rsuite/rsuite/stargazers"
+                    target="_blank"
+                  >
+                    <img
+                      src="https://gitee.com/rsuite/rsuite/badge/star.svg?theme=gray"
+                      alt="star"
+                    />
+                  </a>
+                </p>
 
                 <Button
                   size="lg"
@@ -53,7 +71,7 @@ class HomePage extends React.Component {
                   componentClass="a"
                   href={`${localePath}guide/introduction`}
                 >
-                  Getting started
+                  {_.get(locale, 'common.gettingStarted')}
                 </Button>
               </section>
             </FlexboxGrid.Item>

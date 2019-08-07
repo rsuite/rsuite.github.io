@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'rsuite';
 
-class LanguageSwitchButton extends React.Component {
+class ThemeSwitchButton extends React.Component {
   static defaultProps = {
     appearance: 'subtle'
   };
@@ -9,9 +9,9 @@ class LanguageSwitchButton extends React.Component {
     super(props);
   }
   handleChangeLanguage = () => {
-    const { language, onClick } = this.props;
-    const isEN = language === 'en-US';
-    localStorage.setItem('localeKey', isEN ? 'zh-CN' : 'en-US');
+    const { theme, onClick } = this.props;
+    const isDark = theme === 'dark';
+    localStorage.setItem('themeKey', isDark ? 'light' : 'dark');
     onClick && onClick();
   };
   render() {
@@ -19,17 +19,17 @@ class LanguageSwitchButton extends React.Component {
       return null;
     }
 
-    const { language, appearance, ...rest } = this.props;
+    const { theme, appearance, ...rest } = this.props;
     return (
       <Button
         {...rest}
         appearance={appearance}
         onClick={this.handleChangeLanguage}
       >
-        {language === 'en-US' ? '中文' : 'EN'}
+        {theme === 'dark' ? 'Light' : 'Dark'}
       </Button>
     );
   }
 }
 
-export default LanguageSwitchButton;
+export default ThemeSwitchButton;
