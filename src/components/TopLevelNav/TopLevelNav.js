@@ -29,7 +29,7 @@ function WithTooltipButton({ children, tip, ...props }) {
   );
 }
 
-const iconColor = '#575757';
+const iconColor = '#fff';
 
 const svgStyle = {
   fill: iconColor
@@ -149,7 +149,7 @@ class TopLevelNav extends React.Component {
               href="https://github.com/rsuite/rsuite"
               target="_blank"
             >
-              <Icon icon="github" size="lg" />
+              <Icon icon="github" size="lg" style={{ color: iconColor }} />
             </WithTooltipButton>
 
             <WithTooltipButton
