@@ -9,7 +9,7 @@ const instance = (
       ranges={[
         {
           label: '昨天',
-          value: dateFns.addDays(-1)
+          value: dateFns.addDays(new Date(), -1)
         },
         {
           label: '今天',

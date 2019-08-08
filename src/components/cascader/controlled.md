@@ -16,7 +16,6 @@ class Demo extends React.Component {
     };
     this.handleChange = this.handleChange.bind(this);
   }
-
   handleChange(value) {
     this.setState({
       value

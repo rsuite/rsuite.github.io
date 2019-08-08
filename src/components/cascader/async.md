@@ -40,7 +40,9 @@ class AsynExample extends React.Component {
   handleSelect(node, activePaths, concat, event) {
     if (node.children && !node.children.length) {
       getChildrenByNode(node, children => {
-        this.setState({ data: concat(this.state.data, children) });
+        const nextData = concat(this.state.data, children);
+        console.log(nextData);
+        this.setState({ data: nextData });
       });
     }
   }
@@ -63,8 +65,8 @@ class AsynExample extends React.Component {
     return (
       <div className="example-item">
         <Cascader
+          block
           placeholder="请选择"
-          style={{ width: 224 }}
           data={this.state.data}
           renderMenu={this.renderMenu}
           onSelect={this.handleSelect}
