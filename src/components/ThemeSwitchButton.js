@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'rsuite';
+import { IconButton, Icon } from 'rsuite';
 
 class ThemeSwitchButton extends React.Component {
   static defaultProps = {
@@ -15,20 +15,8 @@ class ThemeSwitchButton extends React.Component {
     onClick && onClick();
   };
   render() {
-    if (DEPLOY_ENV === 'gitee') {
-      return null;
-    }
-
     const { theme, appearance, ...rest } = this.props;
-    return (
-      <Button
-        {...rest}
-        appearance={appearance}
-        onClick={this.handleChangeLanguage}
-      >
-        {theme === 'dark' ? 'Light' : 'Dark'}
-      </Button>
-    );
+    return <Icon icon="moon-o" size="lg" />;
   }
 }
 

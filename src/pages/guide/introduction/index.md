@@ -1,17 +1,14 @@
 # 关于 RSUITE
 
-[![npm][npm-svg]][npm-home] [![Travis][travis-svg]][travis-home] [![Coverage Status][coverage-svg]][travis-home]  [![Gitter][gitter-svg]][gitter]
+[![npm][npm-svg]][npm-home] [![Travis][travis-svg]][travis-home] [![Coverage Status][coverage-svg]][travis-home] [![Gitter][gitter-svg]][gitter]
 
 React Suite 是一套 React 组件库，为后台产品而生。由 HYPERS 前端团队与 UX 团队打造，主要服务于公司大数据产品线。经历了三次大的版本更新后，累积了大量的组件和丰富的功能。
-
 
 ### UI Design
 
 React Suite 设计原型与规范， [点击查看][rsuite-design]。
 
-
 ## 支持的平台
-
 
 ### 浏览器
 
@@ -21,11 +18,9 @@ React Suite 支持最新的，稳定版的全部主流浏览器和平台。 从 
 | ---- | ---- | ------- | ------ | ------ |
 | >=10 | >=14 | >= 45   | >= 49  | >= 10  |
 
-
 ### 服务端
 
 React Suite 支持服务端渲染， 支持通过 [Next.js](https://github.com/zeit/next.js) 构建应用。
-
 
 ## 支持的开发环境
 
@@ -33,7 +28,6 @@ React Suite 支持服务端渲染， 支持通过 [Next.js](https://github.com/z
 - 支持 [TypeScript](http://www.typescriptlang.org/)
 - 支持 [Flow](https://flow.org/)
 - 支持 [Electron](https://electronjs.org/)
-
 
 ## 示例
 
@@ -46,7 +40,7 @@ React Suite 支持服务端渲染， 支持通过 [Next.js](https://github.com/z
 - [在 Flow 中使用][demo-flow-app]
 - [在 TypeScript 中使用][demo-typescript-app]
 - [在 Next.js 中使用][demo-ssr-app]
-
+- [在 UmiJS 中使用][demo-umi-app]
 
 ## 更新日志
 
@@ -72,41 +66,41 @@ React Suite 支持服务端渲染， 支持通过 [Next.js](https://github.com/z
 
 [![opencollective-now][opencollective-svg]][opencollective-home]
 
-
 ## License
 
-RSUITE 基于 [MIT licensed][LICENSE] 发布。
+RSUITE 基于 [MIT licensed][license] 发布。
 
-[readm-cn]:https://github.com/rsuite/rsuite/blob/master/README_zh.md
-[npm-svg]:https://badge.fury.io/js/rsuite.svg
-[npm-home]:https://www.npmjs.com/package/rsuite
-[travis-svg]:https://travis-ci.org/rsuite/rsuite.svg?branch=master
-[travis-home]:https://travis-ci.org/rsuite/rsuite
-[coverage-svg]:https://coveralls.io/repos/github/rsuite/rsuite/badge.svg?branch=master
-[coverage-home]:https://coveralls.io/github/rsuite/rsuite?branch=master
-[discord-svg]:https://img.shields.io/badge/Discord-Join%20chat%20%E2%86%92-738bd7.svg
-[discord-invite]:https://discord.gg/R8mnjwh
-[rsuite-design]:https://rsuitejs.com/design/index.html
-[live-preview-on-codesandbox]:https://codesandbox.io/s/mo7jxvr9x9?from-embed
-[rsuite-doc-guide]:https://rsuitejs.com/guide/introduction
-[rsuite-doc-guide-themes]:https://rsuitejs.com/guide/themes
-[rsuite-doc-guide-intl]:https://rsuitejs.com/guide/intl
-[rsuite-components-overview]:https://rsuitejs.com/components/overview
-[release-notes]:https://github.com/rsuite/rsuite/releases
-[contributing]:https://github.com/rsuite/rsuite/blob/master/CONTRIBUTING.md
-[prettierrc]:https://github.com/rsuite/rsuite/wiki/.prettierrc
-[issues-11]:https://github.com/rsuite/rsuite/issues/11
-[opencollective-svg]:https://opencollective.com/rsuite/tiers/backer.svg?avatarHeight=36
-[opencollective-home]:https://opencollective.com/rsuite
-[LICENSE]:https://github.com/rsuite/rsuite/blob/master/LICENSE
-[gitter]:https://gitter.im/rsuite/rsuite?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge
-[gitter-svg]:https://badges.gitter.im/rsuite/rsuite.svg
-[demo-admin]:https://github.com/rsuite/rsuite-management-system
-[demo-modular-import]:https://github.com/rsuite/examples/tree/master/modular-import
-[demo-cdn]:https://github.com/rsuite/examples/tree/master/cdn
-[demo-create-react-app]:https://github.com/rsuite/examples/tree/master/create-react-app
-[demo-intl-app]:https://github.com/rsuite/examples/tree/master/intl-app
-[demo-multiple-themes]:https://github.com/rsuite/examples/tree/master/multiple-themes
-[demo-flow-app]:https://github.com/rsuite/examples/tree/master/flow-app
-[demo-typescript-app]:https://github.com/rsuite/examples/tree/master/typescript-app
-[demo-ssr-app]:https://github.com/rsuite/rsuite-management-system-ssr
+[readm-cn]: https://github.com/rsuite/rsuite/blob/master/README_zh.md
+[npm-svg]: https://badge.fury.io/js/rsuite.svg
+[npm-home]: https://www.npmjs.com/package/rsuite
+[travis-svg]: https://travis-ci.org/rsuite/rsuite.svg?branch=master
+[travis-home]: https://travis-ci.org/rsuite/rsuite
+[coverage-svg]: https://coveralls.io/repos/github/rsuite/rsuite/badge.svg?branch=master
+[coverage-home]: https://coveralls.io/github/rsuite/rsuite?branch=master
+[discord-svg]: https://img.shields.io/badge/Discord-Join%20chat%20%E2%86%92-738bd7.svg
+[discord-invite]: https://discord.gg/R8mnjwh
+[rsuite-design]: https://rsuitejs.com/design/index.html
+[live-preview-on-codesandbox]: https://codesandbox.io/s/mo7jxvr9x9?from-embed
+[rsuite-doc-guide]: https://rsuitejs.com/guide/introduction
+[rsuite-doc-guide-themes]: https://rsuitejs.com/guide/themes
+[rsuite-doc-guide-intl]: https://rsuitejs.com/guide/intl
+[rsuite-components-overview]: https://rsuitejs.com/components/overview
+[release-notes]: https://github.com/rsuite/rsuite/releases
+[contributing]: https://github.com/rsuite/rsuite/blob/master/CONTRIBUTING.md
+[prettierrc]: https://github.com/rsuite/rsuite/wiki/.prettierrc
+[issues-11]: https://github.com/rsuite/rsuite/issues/11
+[opencollective-svg]: https://opencollective.com/rsuite/tiers/backer.svg?avatarHeight=36
+[opencollective-home]: https://opencollective.com/rsuite
+[license]: https://github.com/rsuite/rsuite/blob/master/LICENSE
+[gitter]: https://gitter.im/rsuite/rsuite?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge
+[gitter-svg]: https://badges.gitter.im/rsuite/rsuite.svg
+[demo-admin]: https://github.com/rsuite/rsuite-management-system
+[demo-modular-import]: https://github.com/rsuite/examples/tree/master/modular-import
+[demo-cdn]: https://github.com/rsuite/examples/tree/master/cdn
+[demo-create-react-app]: https://github.com/rsuite/examples/tree/master/create-react-app
+[demo-intl-app]: https://github.com/rsuite/examples/tree/master/intl-app
+[demo-multiple-themes]: https://github.com/rsuite/examples/tree/master/multiple-themes
+[demo-flow-app]: https://github.com/rsuite/examples/tree/master/flow-app
+[demo-typescript-app]: https://github.com/rsuite/examples/tree/master/typescript-app
+[demo-ssr-app]: https://github.com/rsuite/rsuite-management-system-ssr
+[demo-umi-app]: https://github.com/rsuite/examples/tree/master/umi-app

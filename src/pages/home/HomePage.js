@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-import { Link } from 'react-router';
-import { addStyle, getHeight, on } from 'dom-lib';
-import { Content, Icon, Button, FlexboxGrid, Grid, Row } from 'rsuite';
 
+import { Button, ButtonToolbar, FlexboxGrid, Grid, Row } from 'rsuite';
+
+import TopLevelNav from '@/components/TopLevelNav';
+import LanguageSwitchButton from '@/components/LanguageSwitchButton';
 import Logo from '@/components/Logo';
 import ReactLogo from '@/components/ReactLogo';
-import LanguageSwitchButton from '@/components/LanguageSwitchButton';
 import Header from './Header';
 
 class HomePage extends React.Component {
@@ -33,13 +33,27 @@ class HomePage extends React.Component {
 
     return (
       <Grid
+        className="page-home"
         ref={ref => {
           this.home = ref;
         }}
+        style={{
+          paddingLeft: 64
+        }}
       >
-        <Row>
-          <Header localePath={localePath} locale={locale} />
-        </Row>
+        <TopLevelNav hideToggle />
+
+        <LanguageSwitchButton
+          size="lg"
+          language={_.get(locale, 'id')}
+          href={localePath}
+          style={{
+            position: 'fixed',
+            right: 10,
+            top: 10
+          }}
+        />
+
         <Row>
           <FlexboxGrid align="middle" className="banner">
             <FlexboxGrid.Item colspan={12}>
@@ -47,32 +61,33 @@ class HomePage extends React.Component {
                 <h1 className="title">React Suite</h1>
                 <p className="sub-title"> {_.get(locale, 'common.resume')}</p>
                 <p>
-                  <a href="https://github.com/rsuite/rsuite" target="_blank">
+                  <a
+                    href="https://www.npmjs.com/package/rsuite"
+                    target="_blank"
+                  >
+                    <img alt="npm" src="https://badge.fury.io/js/rsuite.svg" />
+                  </a>
+                  <a
+                    style={{ marginLeft: 10 }}
+                    href="https://github.com/rsuite/rsuite"
+                    target="_blank"
+                  >
                     <img
                       alt="GitHub stars"
                       src="https://img.shields.io/github/stars/rsuite/rsuite?style=social"
                     />
                   </a>
-                  <a
-                    style={{ marginLeft: 10 }}
-                    href="https://gitee.com/rsuite/rsuite/stargazers"
-                    target="_blank"
-                  >
-                    <img
-                      src="https://gitee.com/rsuite/rsuite/badge/star.svg?theme=gray"
-                      alt="star"
-                    />
-                  </a>
                 </p>
-
-                <Button
-                  size="lg"
-                  appearance="primary"
-                  componentClass="a"
-                  href={`${localePath}guide/introduction`}
-                >
-                  {_.get(locale, 'common.gettingStarted')}
-                </Button>
+                <ButtonToolbar>
+                  <Button
+                    size="lg"
+                    appearance="primary"
+                    componentClass="a"
+                    href={`${localePath}guide/introduction`}
+                  >
+                    {_.get(locale, 'common.gettingStarted')}
+                  </Button>
+                </ButtonToolbar>
               </section>
             </FlexboxGrid.Item>
 

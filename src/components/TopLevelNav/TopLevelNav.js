@@ -11,7 +11,9 @@ import {
   search,
   design,
   extension,
-  gitee
+  gitee,
+  lightOn,
+  lightOff
 } from '@/components/SvgIcons';
 import SearchDrawer from '@/components/SearchDrawer';
 
@@ -40,12 +42,14 @@ class TopLevelNav extends React.Component {
     showSubmenu: PropTypes.bool,
     onToggleMenu: PropTypes.func,
     locale: PropTypes.object,
-    router: PropTypes.object.isRequired
+    router: PropTypes.object.isRequired,
+    hideToggle: PropTypes.bool
   };
 
   constructor() {
     super();
     this.state = {
+      light: true,
       search: false
     };
   }
@@ -61,10 +65,10 @@ class TopLevelNav extends React.Component {
     onToggleMenu(show);
   };
   render() {
-    const { children, showSubmenu } = this.props;
+    const { children, showSubmenu, hideToggle } = this.props;
     const { router, locale } = this.context;
     const localePath = _.get(locale, 'id') === 'en-US' ? '/en/' : '/';
-
+    const { light } = this.state;
     const menu = [
       {
         key: 'guide',
@@ -144,6 +148,20 @@ class TopLevelNav extends React.Component {
 
           <div className="nav-menu-bottom">
             <WithTooltipButton
+              tip="Toggle light/dark theme"
+              className="icon-btn-circle"
+              onClick={() => {
+                this.setState({ light: !light });
+              }}
+            >
+              <Icon
+                icon={light ? lightOff : lightOn}
+                svgStyle={svgStyle}
+                size="2x"
+              />
+            </WithTooltipButton>
+
+            <WithTooltipButton
               tip="GitHub"
               className="icon-btn-circle"
               href="https://github.com/rsuite/rsuite"
@@ -161,20 +179,22 @@ class TopLevelNav extends React.Component {
               <Icon icon={gitee} svgStyle={svgStyle} size="lg" />
             </WithTooltipButton>
 
-            <WithTooltipButton
-              tip={
-                showSubmenu
-                  ? _.get(locale, 'common.closeMenu')
-                  : _.get(locale, 'common.openMenu')
-              }
-              className="icon-btn-circle"
-              onClick={this.handleToggleMenu}
-            >
-              <Icon
-                icon={showSubmenu ? 'angle-left' : 'angle-right'}
-                size="lg"
-              />
-            </WithTooltipButton>
+            {hideToggle ? null : (
+              <WithTooltipButton
+                tip={
+                  showSubmenu
+                    ? _.get(locale, 'common.closeMenu')
+                    : _.get(locale, 'common.openMenu')
+                }
+                className="icon-btn-circle"
+                onClick={this.handleToggleMenu}
+              >
+                <Icon
+                  icon={showSubmenu ? 'angle-left' : 'angle-right'}
+                  size="lg"
+                />
+              </WithTooltipButton>
+            )}
           </div>
         </div>
         {children}

@@ -67,15 +67,10 @@ const Header = props => {
             className="btn-switch"
             title="Change language"
           />
-          {/**
-          <Nav.Item
-            componentClass={ThemeSwitchButton}
-            href={localePath}
-            appearance={'link'}
-            className="btn-switch"
-            title="Toggle light/dark theme"
-          />
-           **/}
+
+          <Nav.Item className="btn-switch" title="Toggle light/dark theme">
+            <ThemeSwitchButton />
+          </Nav.Item>
         </Nav>
       </Navbar.Body>
     </Navbar>

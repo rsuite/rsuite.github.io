@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'rsuite';
+import { Button, Whisper, Tooltip } from 'rsuite';
 
 class LanguageSwitchButton extends React.Component {
   static defaultProps = {
