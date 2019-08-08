@@ -12,19 +12,9 @@ class Demo extends React.Component {
   constructor() {
     super();
     this.state = {
-      data: [],
       value: null
     };
     this.handleChange = this.handleChange.bind(this);
-  }
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({ data });
-    }, 2000);
-
-    setTimeout(() => {
-      this.setState({ value: '1-1-3' });
-    }, 1000);
   }
   handleChange(value) {
     this.setState({
@@ -36,7 +26,7 @@ class Demo extends React.Component {
       <Cascader
         value={this.state.value}
         onChange={this.handleChange}
-        data={this.state.data}
+        data={data}
         style={{ width: 224 }}
       />
     );
