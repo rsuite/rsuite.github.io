@@ -1,4 +1,5 @@
 import { removeClass } from 'dom-lib';
+import loadCssFile from '@/utils/loadCssFile';
 
 const shortKey = localeKey => {
   try {
@@ -32,7 +33,8 @@ filter.push(
       return;
     }
     resolve();
-  })
+  }),
+  loadCssFile('/resources/css/theme-default.css', 'theme-default')
 );
 
 export default function ready(callback) {

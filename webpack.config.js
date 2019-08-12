@@ -2,12 +2,15 @@ const path = require('path');
 const fs = require('fs');
 const _ = require('lodash');
 const webpack = require('webpack');
+const merge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const multipleThemesCompile = require('webpack-multiple-themes-compile');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
 const markdownRenderer = require('react-markdown-reader').renderer;
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin;
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
+const HtmlWebpackHandleCssInjectPlugin = require('./scripts/HtmlWebpackHandleCssInjectPlugin');
 
 const iconPath = [
   './node_modules/rsuite/lib/styles',
@@ -53,7 +56,21 @@ const languages = [
   'typescript'
 ];
 
-module.exports = Object.assign(
+const themesConfig = multipleThemesCompile({
+  themesConfig: {
+    default: {},
+    dark: {}
+  },
+  styleLoaders: getStyleLoader(),
+  lessContent: themeName => `// Generate by Script.
+@import '../index${__PRO__ ? '' : '-dev'}.less';
+@import '../themes/${themeName}.less';`,
+  cwd: path.resolve(__dirname, './'), // 将相对目录修改为 webpack.config.js 所在目录
+  cacheDir: './src/less/themes-cache', // 输出目录
+  outputName: themeName => `resources/css/${themeName}.css`
+});
+
+module.exports = merge(
   {
     devServer: {
       contentBase: path.join(__dirname, 'public'),
@@ -81,10 +98,10 @@ module.exports = Object.assign(
     optimization: {
       splitChunks: {
         cacheGroups: {
-          commons: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
             name: 'commons',
-            chunks: 'initial',
-            minChunks: 2
+            chunks: 'all'
           }
         }
       }
@@ -98,14 +115,6 @@ module.exports = Object.assign(
             'babel-loader?babelrc'
           ],
           exclude: /node_modules/
-        },
-        {
-          test: /\.(less|css)$/,
-          loader: extractLess.extract({
-            use: getStyleLoader(),
-            // use style-loader in development
-            fallback: 'style-loader?{attrs:{prop: "value"}}'
-          })
         },
         {
           test: /\.md$/,
@@ -182,14 +191,21 @@ module.exports = Object.assign(
         title: 'React Suite | RSUITE | 一套 React 的 UI 组件库',
         chunks: ['polyfills', 'commons', 'app'],
         template: 'src/index.html',
-        inject: true
+        inject: true,
+        // 排除 themes.js
+        excludeChunks: ['themes']
       }),
       new HtmlwebpackPlugin({
         title: 'React Suite | RSUITE | A suite of React components',
         chunks: ['polyfills', 'commons', 'app_en'],
         filename: 'en/index.html',
         template: 'src/index.html',
-        inject: true
+        inject: true,
+        // 排除 themes.js
+        excludeChunks: ['themes']
+      }),
+      new HtmlWebpackHandleCssInjectPlugin({
+        filter: () => false
       }),
       new LodashModuleReplacementPlugin({
         collections: true,
@@ -199,6 +215,7 @@ module.exports = Object.assign(
     ],
     devtool: STYLE_DEBUG === 'SOURCE' && 'source-map'
   },
+  themesConfig,
   __PRO__
     ? {
         resolve: {
