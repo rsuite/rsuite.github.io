@@ -1,4 +1,21 @@
+// @rootPath inject by webpack.config.js
+
 // modularized
-//@import '../../../rsuite/styles/common';
+//@import '@{rootPath}rsuite/styles/common';
 // integrated
-@import '../../../../rsuite/src/styles/themes/dark/index';
+@import '@{rootPath}rsuite/src/styles/themes/dark/index';
+
+@sidebar-wrapper-bg: @B800;
+@component-overview-content-name-color: @B300;
+@code-view-wrapper-bg: @B800;
+@code-view-wrapper-border-color: @code-view-wrapper-bg;
+@code-view-wrapper-hr-color: @B600;
+@doc-highlight-bg: #1e1e1e;
+
+.page-nav {
+  background: @body-bg;
+
+  .nav-link {
+    color: @text-color;
+  }
+}

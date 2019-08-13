@@ -31,7 +31,10 @@ const getStyleLoader = () => {
     {
       loader: 'less-loader',
       options: {
-        javascriptEnabled: true
+        javascriptEnabled: true,
+        globalVars: {
+          rootPath: __PRO__ ? '~' : '../../../../'
+        }
       }
     }
   ];
@@ -63,8 +66,10 @@ const themesConfig = multipleThemesCompile({
   },
   styleLoaders: getStyleLoader(),
   lessContent: themeName => `// Generate by Script.
-@import '../index${__PRO__ ? '' : '-dev'}.less';
-@import '../themes/${themeName}.less';`,
+@import '../index.less';
+@import '../themes/${themeName}.less';
+
+@theme-name: ${themeName};`,
   cwd: path.resolve(__dirname, './'), // 将相对目录修改为 webpack.config.js 所在目录
   cacheDir: './src/less/themes-cache', // 输出目录
   outputName: themeName => `resources/css/${themeName}.css`
