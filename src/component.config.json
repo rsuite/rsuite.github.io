@@ -5,12 +5,6 @@
     "title": "概览"
   },
   {
-    "id": "html-elements",
-    "name": "Supported HTML Elements",
-    "title": ""
-  },
-
-  {
     "group": true,
     "id": "general",
     "name": "General",

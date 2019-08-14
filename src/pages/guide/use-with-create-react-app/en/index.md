@@ -17,7 +17,7 @@ Execute after Setup completes
 $ yarn start
 ```
 
-Open the browser at `http://0.0.0.0:3000/`. It renders a header saying "Welcome to React" on the page.
+Open the browser at `http://localhost:3000/`. It renders a header saying "Welcome to React" on the page.
 
 ## Install rsuite
 
@@ -112,7 +112,7 @@ We uses [react-app-rewired][react-app-rewired] and [customize-cra][customize-cra
 
 ## Source code
 
-- [examples: create-react-app](https://github.com/rsuite/examples/tree/master/create-react-app)
+- [create-react-app](https://github.com/rsuite/examples/tree/master/create-react-app)
 
 [yarn]: https://yarnpkg.com/
 [nvm]: https://github.com/creationix/nvm#installation

@@ -2,7 +2,7 @@ import React from 'react';
 import { Icon, IconStack, Button, IconButton } from 'rsuite';
 import IconLogo from '@/resources/images/logo.svg';
 import * as SvgIcons from '@/components/SvgIcons';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 
 export default createComponentExample({
   id: 'Icon',

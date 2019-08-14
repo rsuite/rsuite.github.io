@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tag, TagGroup, Icon, IconButton, Input } from 'rsuite';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 
 export default createComponentExample({
   id: 'Tag',

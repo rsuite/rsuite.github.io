@@ -1,7 +1,7 @@
 import React from 'react';
 import { Divider, Button, ButtonGroup } from 'rsuite';
 
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 
 export default createComponentExample({
   id: 'Divider',

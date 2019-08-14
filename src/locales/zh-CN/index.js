@@ -11,6 +11,7 @@ export default {
     introduction: '介绍',
     usage: '如何使用',
     useWithCreateReactApp: '在 create-react-app 中使用',
+    useNextApp: '在 Next.js 中使用',
     customizeTheme: '定制主题',
     intl: '国际化',
     changeLog: '更新日志',
@@ -24,7 +25,8 @@ export default {
     changeLanguage: '切换语言',
     flow: 'Flow',
     extension: '扩展',
-    gettingStarted: '开始使用'
+    gettingStarted: '开始使用',
+    htmlElements: '支持的 HTML 元素'
   },
   table: {
     'tab.resizable': '可调整列宽',

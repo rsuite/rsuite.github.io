@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { Nav, Button, Icon, Dropdown, Row, Col } from 'rsuite';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 
 export default createComponentExample({
   id: 'Nav',

@@ -105,7 +105,7 @@ RSUITE 中使用的图标字体文件都部署在 [jsDelivr CDN](http://cdn.jsde
 
 ### 如何全局修改组件的 className 前缀，`rs-` ？
 
-首先，在你的 `less` 文件中定义 `@ns` 来覆盖默认配置。
+首先，在您的 `less` 文件中定义 `@ns` 来覆盖默认配置。
 
 ```less
 @ns: custom-;
@@ -128,7 +128,7 @@ plugins: [
 global.__RSUITE_CLASSNAME_PREFIX__ = 'custom-';
 ```
 
-> 如果你使用了 [`create-react-app`][cra] 创建项目，可以通过 [`react-app-rewire-less`][rarl] 和 [`react-app-rewire-define-plugin`][rardp] 进行修改。
+> 如果您使用了 [`create-react-app`][cra] 创建项目，可以通过 [`react-app-rewire-less`][rarl] 和 [`react-app-rewire-define-plugin`][rardp] 进行修改。
 
 [cra]: https://github.com/facebook/create-react-app
 [rarl]: https://www.npmjs.com/package/react-app-rewire-less

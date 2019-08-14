@@ -1,6 +1,6 @@
 import React from 'react';
 import { FlexboxGrid, Button, Icon, Divider } from 'rsuite';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 
 export default createComponentExample({
   id: 'FlexboxGrid',

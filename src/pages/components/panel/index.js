@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Icon, Panel, PanelGroup, Table } from 'rsuite';
 import tableData from '../table/data/users';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 
 const { HeaderCell, Pagination, Cell, Column } = Table;
 

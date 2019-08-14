@@ -34,6 +34,7 @@ const CustomCodeView = ({ dependencies, ...rest }) => (
 
 const createComponentExample = ({
   id,
+  category = 'components',
   examples = [],
   getDependencies,
   dependencies
@@ -41,11 +42,11 @@ const createComponentExample = ({
   return locale => {
     const name = _.kebabCase(id);
     const dist = getDict(locale);
-    const componentPath = locale === 'en' ? `${name}/en/` : `${name}/`;
-    const context = require(`./${componentPath}index.md`);
+    const namePath = locale === 'en' ? `${name}/en/` : `${name}/`;
+    const context = require(`@/pages/${category}/${namePath}index.md`);
     const componentExamples = examples.map(item => ({
-      source: require(`./${componentPath}${item}.md`),
-      path: `https://github.com/rsuite/rsuite.github.io/tree/master/src/components/${componentPath}${item}.md`
+      source: require(`@/pages/${category}/${namePath}${item}.md`),
+      path: `https://github.com/rsuite/rsuite.github.io/tree/master/src/${category}/${namePath}${item}.md`
     }));
 
     const extraDependencies = getDependencies ? getDependencies(locale) : null;

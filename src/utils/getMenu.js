@@ -30,6 +30,10 @@ const getMenu = locale => {
           id: 'use-with-create-react-app',
           name: _.get(locale, 'common.useWithCreateReactApp')
         },
+        {
+          id: 'use-next-app',
+          name: _.get(locale, 'common.useNextApp')
+        },
 
         {
           id: 'themes',
@@ -38,6 +42,10 @@ const getMenu = locale => {
         {
           id: 'intl',
           name: _.get(locale, 'common.intl')
+        },
+        {
+          id: 'html-elements',
+          name: _.get(locale, 'common.htmlElements')
         },
         {
           id: 'logs',

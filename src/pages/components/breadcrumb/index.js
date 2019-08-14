@@ -2,7 +2,7 @@ import React from 'react';
 import { Breadcrumb, Icon } from 'rsuite';
 import { Link } from 'react-router';
 
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 
 export default createComponentExample({
   id: 'Breadcrumb',

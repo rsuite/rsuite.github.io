@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, ButtonToolbar } from 'rsuite';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 
 export default createComponentExample({
   id: 'html-elements',

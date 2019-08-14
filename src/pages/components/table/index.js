@@ -17,7 +17,7 @@ import clone from 'lodash/clone';
 import fakeData from './data/users';
 import fakeTreeData from './data/treeData';
 import fakeDataForColSpan from './data/usersForColSpan';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 import { getDict } from '@/locales';
 import fakeLargeData from './data/fakeLargeData.json';
 

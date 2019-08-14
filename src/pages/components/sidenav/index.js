@@ -1,6 +1,6 @@
 import React from 'react';
 import { Sidenav, Nav, Button, Icon, Toggle, Dropdown } from 'rsuite';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 
 export default createComponentExample({
   id: 'Sidenav',

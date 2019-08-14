@@ -1,6 +1,6 @@
 import React from 'react';
 import { List, Tag, Button, Icon, Animation, FlexboxGrid } from 'rsuite';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 
 export default createComponentExample({
   id: 'List',

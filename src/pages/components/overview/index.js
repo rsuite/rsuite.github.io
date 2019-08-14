@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import _ from 'lodash';
 import { menu } from '@/utils/getMenu';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 
 const context = require('./index.md');
 const examples = [];

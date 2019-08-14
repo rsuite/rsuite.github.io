@@ -1,7 +1,7 @@
 import React from 'react';
 import { Cascader, Button, Icon, RadioGroup, Radio } from 'rsuite';
 import { getProvince } from '@/resources/data';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 import PreventOverflowContainer from '@/components/PreventOverflowContainer';
 
 export default createComponentExample({

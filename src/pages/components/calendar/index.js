@@ -2,7 +2,7 @@ import React from 'react';
 import dateFns from 'date-fns';
 
 import { Calendar, Button, Tag, Popover, Whisper, Badge } from 'rsuite';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 
 export default createComponentExample({
   id: 'Calendar',

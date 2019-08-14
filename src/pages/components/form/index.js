@@ -37,7 +37,7 @@ import {
   Cascader,
   MultiCascader
 } from 'rsuite';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 import pickerData from '@/resources/data/users';
 import { getProvince } from '@/resources/data';
 
