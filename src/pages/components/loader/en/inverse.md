@@ -4,7 +4,7 @@
 
 ```js
 const instance = (
-  <div style={{ background: '#000', height: 200 }}>
+  <div id="loaderInverseWrapper" style={{ height: 200 }}>
     <Loader inverse center content="loading..." />
   </div>
 );
