@@ -1046,6 +1046,22 @@ export const createRouters = (locale, onEnter, onEntered) => {
         />
 
         <Route
+          path="use-next-app"
+          getComponents={(location, callback) => {
+            onEnter && onEnter();
+            require.ensure([], require => {
+              const getComponent = require('./guide/use-next-app')['default'];
+              const component = getComponent(locale);
+              callback && callback(null, component);
+              onEntered && onEntered();
+            });
+          }}
+          onEnter={() => {
+            setTitle('Use in Next.js - guide');
+          }}
+        />
+
+        <Route
           path="themes"
           getComponents={(location, callback) => {
             onEnter && onEnter();
@@ -1074,6 +1090,22 @@ export const createRouters = (locale, onEnter, onEntered) => {
           }}
           onEnter={() => {
             setTitle('Internationalization - guide');
+          }}
+        />
+
+        <Route
+          path="html-elements"
+          getComponents={(location, callback) => {
+            onEnter && onEnter();
+            require.ensure([], require => {
+              const getComponent = require('./guide/html-elements')['default'];
+              const component = getComponent(locale);
+              callback && callback(null, component);
+              onEntered && onEntered();
+            });
+          }}
+          onEnter={() => {
+            setTitle('Supported HTML Elements - guide');
           }}
         />
       </Route>

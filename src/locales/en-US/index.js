@@ -12,6 +12,7 @@ export default {
     introduction: 'Introduction',
     usage: 'Usage',
     useWithCreateReactApp: 'Use in create-react-app',
+    useNextApp: 'Use in Next.js',
     customizeTheme: 'Customize theme',
     intl: 'Internationalization',
     changeLog: 'Change log',
@@ -25,7 +26,8 @@ export default {
     changeLanguage: 'Language',
     flow: 'Flow',
     extension: 'Extensions',
-    gettingStarted: 'Getting started'
+    gettingStarted: 'Getting started',
+    htmlElements: 'Supported HTML Elements'
   },
   table: {
     'tab.resizable': 'Resizable',

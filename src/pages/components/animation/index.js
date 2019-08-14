@@ -1,6 +1,6 @@
 import React from 'react';
 import { Animation, Button, ButtonToolbar } from 'rsuite';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 
 const { Fade, Collapse, Bounce, Slide, Transition } = Animation;
 

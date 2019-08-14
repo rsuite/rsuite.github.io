@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, IconButton, ButtonGroup, ButtonToolbar, Panel, Icon } from 'rsuite';
 import * as SvgIcons from '@/components/SvgIcons';
 
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 
 export default createComponentExample({
   id: 'Button',

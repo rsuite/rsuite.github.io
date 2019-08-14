@@ -4,7 +4,7 @@
 
 ## 初始化一个项目
 
-在开始之前，你可能需要安装 [yarn][yarn]。
+在开始之前，您可能需要安装 [yarn][yarn]。
 
 ```bash
 $ yarn create react-app test-app
@@ -16,7 +16,7 @@ $ yarn create react-app test-app
 $ yarn start
 ```
 
-浏览器会自动打开 `http://0.0.0.0:3000/`，当你看到 `Welcome to React` 页面就是安装成功了。
+浏览器会自动打开 `http://localhost:3000/`，当您看到 `Welcome to React` 页面就是安装成功了。
 
 ## 引入 rsuite
 
@@ -56,7 +56,7 @@ $ yarn add rsuite
   export default App;
 ```
 
-之后你会看到一个强调按钮 ，现在你可以继续进行开发了。如果你遇到其他的问题，可以查询 create-react-app 的 [官方文档][create-react-app-readme]。
+之后您会看到一个强调按钮 ，现在您可以继续进行开发了。如果您遇到其他的问题，可以查询 create-react-app 的 [官方文档][create-react-app-readme]。
 
 ## 定制主题
 
@@ -111,7 +111,7 @@ module.exports = override(
 
 ## 源码
 
-- [examples: create-react-app](https://github.com/rsuite/examples/tree/master/create-react-app)
+- [create-react-app](https://github.com/rsuite/examples/tree/master/create-react-app)
 
 [yarn]: https://yarnpkg.com/
 [nvm]: https://github.com/creationix/nvm#installation

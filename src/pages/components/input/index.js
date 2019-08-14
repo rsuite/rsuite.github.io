@@ -1,6 +1,6 @@
 import React from 'react';
 import { Input, InputNumber, InputGroup, Icon, Whisper, Tooltip, Grid, Row, Col } from 'rsuite';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 
 export default createComponentExample({
   id: 'Input',

@@ -1,7 +1,7 @@
 import React from 'react';
 import { CheckPicker, Button, Icon, Checkbox, RadioGroup, Radio } from 'rsuite';
 import data from '@/resources/data/users';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 import PreventOverflowContainer from '@/components/PreventOverflowContainer';
 
 export default createComponentExample({

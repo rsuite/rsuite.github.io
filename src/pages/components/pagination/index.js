@@ -1,6 +1,6 @@
 import React from 'react';
 import { Pagination, Button, Icon, Toggle, Divider } from 'rsuite';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 
 export default createComponentExample({
   id: 'Pagination',

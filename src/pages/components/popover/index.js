@@ -1,6 +1,6 @@
 import React from 'react';
 import { ButtonToolbar, Button, Whisper, Popover } from 'rsuite';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 import PreventOverflowContainer from '@/components/PreventOverflowContainer';
 
 export default createComponentExample({

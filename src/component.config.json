@@ -105,18 +105,6 @@
     "designHash": "artboard_placeholder"
   },
   {
-    "id": "avatar",
-    "name": "Avatar",
-    "title": "头像",
-    "components": ["Avatar"]
-  },
-  {
-    "id": "badge",
-    "name": "Badge",
-    "title": "徽标",
-    "components": ["Badge"]
-  },
-  {
     "group": true,
     "id": "navigation",
     "name": "Navigation",
@@ -325,6 +313,18 @@
     "id": "display",
     "name": "Data Display",
     "title": "数据展示"
+  },
+  {
+    "id": "avatar",
+    "name": "Avatar",
+    "title": "头像",
+    "components": ["Avatar"]
+  },
+  {
+    "id": "badge",
+    "name": "Badge",
+    "title": "徽标",
+    "components": ["Badge"]
   },
   {
     "id": "table",

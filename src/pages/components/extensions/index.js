@@ -1,5 +1,5 @@
 import React from 'react';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 
 export default createComponentExample({
   id: 'Extensions',

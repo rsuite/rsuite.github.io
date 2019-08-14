@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, FormGroup, RadioGroup, Icon, Button, Radio } from 'rsuite';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 
 export default createComponentExample({
   id: 'Radio',

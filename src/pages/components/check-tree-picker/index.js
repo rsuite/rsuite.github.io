@@ -1,7 +1,7 @@
 import React from 'react';
 import { CheckTreePicker, Button, Icon, Toggle } from 'rsuite';
 import { getCity } from '@/resources/data';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 
 export default createComponentExample({
   id: 'CheckTreePicker',

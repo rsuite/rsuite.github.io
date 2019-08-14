@@ -3,7 +3,7 @@ import { TagPicker, Button, Icon } from 'rsuite';
 import _remove from 'lodash/remove';
 import fetch from 'isomorphic-fetch';
 import data from '@/resources/data/users';
-import createComponentExample from '../createComponentExample';
+import createComponentExample from '@/utils/createComponentExample';
 
 export default createComponentExample({
   id: 'TagPicker',
