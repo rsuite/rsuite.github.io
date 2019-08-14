@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 import { Icon } from 'rsuite';
-import { guide, component, tools } from '@/components/SvgIcons';
+import { guide, component, tools, extension } from '@/components/SvgIcons';
 import components from '@/component.config.json';
 import { getDict } from '@/locales';
 
@@ -15,7 +15,7 @@ const getMenu = locale => {
     {
       id: 'guide',
       name: _.get(locale, 'common.guide'),
-      icon: <Icon icon={guide} svgStyle={svgStyle} size="3x" />,
+      icon: <Icon icon={guide} svgStyle={svgStyle} size="lg" />,
       children: [
         {
           id: 'introduction',
@@ -25,10 +25,12 @@ const getMenu = locale => {
           id: 'usage',
           name: _.get(locale, 'common.usage')
         },
+
         {
           id: 'use-with-create-react-app',
           name: _.get(locale, 'common.useWithCreateReactApp')
         },
+
         {
           id: 'themes',
           name: _.get(locale, 'common.customizeTheme')
@@ -48,13 +50,13 @@ const getMenu = locale => {
     {
       id: 'components',
       name: _.get(locale, 'common.components'),
-      icon: <Icon icon={component} svgStyle={svgStyle} size="3x" />,
+      icon: <Icon icon={component} svgStyle={svgStyle} size="lg" />,
       children: components
     },
     {
       id: 'tools',
       name: _.get(locale, 'common.tools'),
-      icon: <Icon icon={tools} svgStyle={svgStyle} />,
+      icon: <Icon icon={tools} svgStyle={svgStyle} size="lg" />,
       children: [
         {
           id: 'palette',
@@ -68,6 +70,7 @@ const getMenu = locale => {
     },
     {
       id: 'extensions',
+      icon: <Icon icon={extension} svgStyle={svgStyle} size="lg" />,
       name: _.get(locale, 'common.extension')
     }
   ];

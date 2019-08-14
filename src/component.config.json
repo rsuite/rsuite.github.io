@@ -5,6 +5,12 @@
     "title": "概览"
   },
   {
+    "id": "html-elements",
+    "name": "Supported HTML Elements",
+    "title": ""
+  },
+
+  {
     "group": true,
     "id": "general",
     "name": "General",
@@ -103,18 +109,6 @@
       "Placeholder.Paragraph"
     ],
     "designHash": "artboard_placeholder"
-  },
-  {
-    "id": "avatar",
-    "name": "Avatar",
-    "title": "头像",
-    "components": ["Avatar"]
-  },
-  {
-    "id": "badge",
-    "name": "Badge",
-    "title": "徽标",
-    "components": ["Badge"]
   },
   {
     "group": true,
@@ -325,6 +319,18 @@
     "id": "display",
     "name": "Data Display",
     "title": "数据展示"
+  },
+  {
+    "id": "avatar",
+    "name": "Avatar",
+    "title": "头像",
+    "components": ["Avatar"]
+  },
+  {
+    "id": "badge",
+    "name": "Badge",
+    "title": "徽标",
+    "components": ["Badge"]
   },
   {
     "id": "table",

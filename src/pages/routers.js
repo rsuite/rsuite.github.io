@@ -28,6 +28,24 @@ export const createRouters = (locale, onEnter, onEntered) => {
         />
 
         <Route
+          path="html-elements"
+          getComponents={(location, callback) => {
+            onEnter && onEnter();
+            require.ensure([], require => {
+              const getComponent = require('./components/html-elements')[
+                'default'
+              ];
+              const component = getComponent(locale);
+              callback && callback(null, component);
+              onEntered && onEntered();
+            });
+          }}
+          onEnter={() => {
+            setTitle('Supported HTML Elements - components');
+          }}
+        />
+
+        <Route
           path="button"
           getComponents={(location, callback) => {
             onEnter && onEnter();
