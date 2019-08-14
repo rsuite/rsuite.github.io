@@ -112,16 +112,6 @@ class TopLevelNav extends React.Component {
             <Icon icon={search} svgStyle={svgStyle} size="lg" />
           </WithTooltipButton>
 
-          <WithTooltipButton
-            tip={_.get(locale, 'common.design')}
-            className="icon-btn-circle"
-            componentClass="a"
-            target="_blank"
-            href="/design/index.html"
-          >
-            <Icon icon={design} svgStyle={svgStyle} size="lg" />
-          </WithTooltipButton>
-
           {menu.map(item => (
             <WithTooltipButton
               tip={item.tip}
@@ -146,6 +136,16 @@ class TopLevelNav extends React.Component {
             </WithTooltipButton>
           ))}
 
+          <WithTooltipButton
+            tip={_.get(locale, 'common.design')}
+            className="icon-btn-circle"
+            componentClass="a"
+            target="_blank"
+            href="/design/index.html"
+          >
+            <Icon icon={design} svgStyle={svgStyle} size="lg" />
+          </WithTooltipButton>
+
           <div className="nav-menu-bottom">
             <WithTooltipButton
               tip="Toggle light/dark theme"
@@ -157,7 +157,7 @@ class TopLevelNav extends React.Component {
               <Icon
                 icon={light ? lightOff : lightOn}
                 svgStyle={svgStyle}
-                size="2x"
+                size="lg"
               />
             </WithTooltipButton>
 
