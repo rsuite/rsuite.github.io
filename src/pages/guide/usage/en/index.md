@@ -67,4 +67,39 @@ $ npm install babel-preset-rsuite --save-dev
 }
 ```
 
+Transforms:
+
+```js
+import { Button } from 'rsuite';
+```
+
+roughly to:
+
+```js
+var _Button = require('rsuite/lib/Button');
+```
+
+#### With styles
+
+.babelrc
+
+```json
+{
+  "presets": [["rsuite", { "style": true, "theme": "dark" }]]
+}
+```
+
+Transforms:
+
+```js
+import { Button } from 'rsuite';
+```
+
+roughly to:
+
+```js
+require('rsuite/lib/Button/styles/themes/dark.less');
+var _Button = require('rsuite/lib/Button');
+```
+
 > Note: If you use webpack [Tree Shaking](https://webpack.js.org/guides/tree-shaking/) in your project, you cannot use it.

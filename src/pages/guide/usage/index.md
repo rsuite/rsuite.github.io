@@ -67,4 +67,39 @@ $ npm install babel-preset-rsuite --save-dev
 }
 ```
 
-> 注意： 如果在项目中使用了 webpack 的 [Tree Shaking](https://webpack.docschina.org/guides/tree-shaking/), 则不能使用该 preset。
+转换以下示例代码：
+
+```js
+import { Button } from 'rsuite';
+```
+
+大概为生成：
+
+```js
+var _Button = require('rsuite/lib/Button');
+```
+
+#### 同时按需加载 styles
+
+.babelrc
+
+```json
+{
+  "presets": [["rsuite", { "style": true, "theme": "dark" }]]
+}
+```
+
+转换以下示例：
+
+```js
+import { Button } from 'rsuite';
+```
+
+大概为生成：
+
+```
+require('rsuite/lib/Button/styles/themes/dark.less');
+var _Button = require('rsuite/lib/Button');
+```
+
+> 注意： 如果在项目中使用了 webpack 的 [Tree Shaking](https://webpack.docschina.org/guides/tree-shaking/), 则不需要使用 babel-preset-rsuite
