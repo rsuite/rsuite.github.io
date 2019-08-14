@@ -175,7 +175,7 @@ class PageContainer extends React.Component {
               showOrderNumber={false}
               width={150}
               scrollBar="left"
-              offset={{ top: 60, right: 30 }}
+              offset={{ top: 80, right: 10 }}
             />
           </Col>
         </Row>

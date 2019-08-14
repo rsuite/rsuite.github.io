@@ -16,6 +16,7 @@ import {
   lightOff
 } from '@/components/SvgIcons';
 import SearchDrawer from '@/components/SearchDrawer';
+import loadCssFile from '@/utils/loadCssFile';
 
 function WithTooltipButton({ children, tip, ...props }) {
   return (
@@ -64,6 +65,25 @@ class TopLevelNav extends React.Component {
     const { onToggleMenu } = this.props;
     onToggleMenu(show);
   };
+
+  loadTheme = themeName => {
+    const themeId = `theme-${themeName}`;
+    loadCssFile(`/resources/css/theme-${themeName}.css`, themeId).then(() => {
+      Array.from(document.querySelectorAll('[id^=theme]')).forEach(css => {
+        if (css.id !== themeId) {
+          css.remove();
+        }
+      });
+    });
+  };
+
+  handleToggleThemeButtonClick = () => {
+    const { light } = this.state;
+    this.setState({ light: !light }, () => {
+      this.loadTheme(this.state.light ? 'default' : 'dark');
+    });
+  };
+
   render() {
     const { children, showSubmenu, hideToggle } = this.props;
     const { router, locale } = this.context;
@@ -150,9 +170,7 @@ class TopLevelNav extends React.Component {
             <WithTooltipButton
               tip="Toggle light/dark theme"
               className="icon-btn-circle"
-              onClick={() => {
-                this.setState({ light: !light });
-              }}
+              onClick={this.handleToggleThemeButtonClick}
             >
               <Icon
                 icon={light ? lightOff : lightOn}

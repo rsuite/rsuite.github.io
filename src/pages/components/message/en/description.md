@@ -8,22 +8,50 @@ const instance = (
     <Message
       type="info"
       title="Informational"
-      description="Additional description and informations about copywriting."
+      description={
+        <p>
+          Additional description and informations about copywriting.
+          <br />
+          <a href="#">This is a Link.</a>
+        </p>
+      }
     />
 
     <Message
       type="success"
       title="Success"
-      description="Detailed description and advices about successful copywriting."
+      description={
+        <p>
+          Additional description and informations about copywriting.
+          <br />
+          <a href="#">This is a Link.</a>
+        </p>
+      }
     />
 
     <Message
       type="warning"
       title="Warning"
-      description="This is a warning notice about copywriting."
+      description={
+        <p>
+          Additional description and informations about copywriting.
+          <br />
+          <a href="#">This is a Link.</a>
+        </p>
+      }
     />
 
-    <Message type="error" title="Error" description="This is an error message about copywriting." />
+    <Message
+      type="error"
+      title="Error"
+      description={
+        <p>
+          Additional description and informations about copywriting.
+          <br />
+          <a href="#">This is a Link.</a>
+        </p>
+      }
+    />
   </div>
 );
 ReactDOM.render(instance);

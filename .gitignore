@@ -46,3 +46,4 @@ yarn.lock
 /index.html
 test
 webpack.test.config.js
+src/less/themes-cache/

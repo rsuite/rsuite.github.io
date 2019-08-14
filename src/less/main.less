@@ -11,7 +11,7 @@
 @import '../components/PageContainer/styles';
 @import '../components/DocSidebar/styles';
 
-@import '../pages//tools/icons/styles';
+@import '../pages/tools/icons/styles';
 @import '../pages/tools/palette/styles';
 @import '../pages/home/styles';
 @import '../pages/components/calendar/styles';
@@ -27,7 +27,7 @@
 
 //@ns: rs-;
 //rewrite base color
-@base-color: #3498ff;
+//@base-color: #3498ff;
 @bg-color: #fff;
 @banner-bg-color: #fff;
 @header-height: 64px;
@@ -41,7 +41,7 @@
 
 .app-container {
   .page-context {
-    padding: 20px;
+    padding: 80px 210px 20px 20px;
     margin-left: 324px;
   }
 }
@@ -92,13 +92,20 @@ pre {
 }
 
 .gitter-open-chat-button {
-  background: #f5f5f5;
-  color: #575757 !important;
+  color: @btn-default-color !important;
+  background: @btn-default-bg;
+
   &:hover,
   &:focus {
-    background: #e8eaf0;
+    color: @btn-default-hover-color;
+    background-color: @btn-default-hover-bg;
   }
 }
+
 .gitter-chat-embed {
   border-left: none;
+}
+
+.page-nav .nav-link::before {
+  background: @divider-border-color;
 }

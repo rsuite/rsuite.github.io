@@ -2,8 +2,7 @@ import React from 'react';
 
 const containerStyle = {
   overflow: 'auto',
-  position: 'relative',
-  boxShadow: '#999 1px 1px 5px inset'
+  position: 'relative'
 };
 const contentStyle = {
   height: '400%',
@@ -27,6 +26,7 @@ class PreventOverflowContainer extends React.Component {
     const { children, height = 500 } = this.props;
     return (
       <div
+        id="preventOverflowContainer"
         style={{ ...containerStyle, height }}
         ref={ref => {
           this.container = ref;

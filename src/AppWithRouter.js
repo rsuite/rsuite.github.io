@@ -22,12 +22,6 @@ import { getDict } from './locales';
 import zhCN from 'rsuite/lib/IntlProvider/locales/zh_CN';
 import enUS from 'rsuite/lib/IntlProvider/locales/en_US';
 
-if (__DEV__) {
-  require('./less/index-dev.less');
-} else {
-  require('./less/index.less');
-}
-
 export default locale => {
   class AppRouters extends React.Component {
     shouldComponentUpdate() {

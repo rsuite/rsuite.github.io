@@ -5,7 +5,7 @@
 
 const data = [
   {
-    title: '20170923-香港自由行@尖沙咀',
+    title: '20170923-Hong Kong independent travel',
     icon: 'image',
     creator: 'Yvnonne',
     date: '2017.10.13 14:50',
@@ -15,7 +15,7 @@ const data = [
     uvRaise: 33
   },
   {
-    title: '庆中秋',
+    title: 'Celebration of the Mid-Autumn festival',
     icon: 'image',
     creator: 'Daibiao',
     date: '2017.10.13 14:50',
@@ -25,7 +25,7 @@ const data = [
     uvRaise: 28
   },
   {
-    title: '直播打篮球',
+    title: 'Live to play basketball',
     icon: 'film',
     creator: 'Bidetoo',
     date: '2017.10.13 14:50',
@@ -35,7 +35,7 @@ const data = [
     uvRaise: 29
   },
   {
-    title: '2018立法院会议直播',
+    title: '2018 the legislature meeting broadcast live',
     icon: 'film',
     creator: 'Yvnonne',
     date: '2017.10.13 14:50',
@@ -45,7 +45,7 @@ const data = [
     uvRaise: 91
   },
   {
-    title: '爱玩客贴片',
+    title: 'Aiwanke paster',
     icon: 'image',
     creator: 'Tony',
     date: '2017.10.13 14:50',
@@ -129,7 +129,7 @@ class ListDemo extends React.Component {
               {/*peak data*/}
               <FlexboxGrid.Item colspan={6} style={styleCenter}>
                 <div style={{ textAlign: 'right' }}>
-                  <div style={slimText}>峰值</div>
+                  <div style={slimText}>Top Value</div>
                   <div style={dataStyle}>{item['peak'].toLocaleString()}</div>
                 </div>
                 {this.renderRaise(item['peakRaise'])}
@@ -137,7 +137,7 @@ class ListDemo extends React.Component {
               {/*uv data*/}
               <FlexboxGrid.Item colspan={6} style={styleCenter}>
                 <div style={{ textAlign: 'right' }}>
-                  <div style={slimText}>独立访问量（UV）</div>
+                  <div style={slimText}>UV</div>
                   <div style={dataStyle}>{item['uv'].toLocaleString()}</div>
                 </div>
                 {this.renderRaise(item['uvRaise'])}
@@ -146,9 +146,9 @@ class ListDemo extends React.Component {
               <FlexboxGrid.Item colspan={4} style={{
                 ...styleCenter
               }}>
-                <a href="#">查看</a>
+                <a href="#">View</a>
                 <span style={{ padding: 5 }}>|</span>
-                <a href="#">编辑</a>
+                <a href="#">Edit</a>
               </FlexboxGrid.Item>
             </FlexboxGrid>
           </List.Item>
