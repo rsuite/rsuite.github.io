@@ -10,6 +10,7 @@ const shortKey = localeKey => {
 };
 
 const filter = [];
+const themeName = localStorage.getItem('theme') || 'default';
 
 /**
  * Determine the current locale and switch to the corresponding path.
@@ -34,7 +35,7 @@ filter.push(
     }
     resolve();
   }),
-  loadCssFile('/resources/css/theme-default.css', 'theme-default')
+  loadCssFile(`/resources/css/theme-${themeName}.css`, `theme-${themeName}`)
 );
 
 export default function ready(callback) {

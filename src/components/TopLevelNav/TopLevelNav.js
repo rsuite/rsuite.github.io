@@ -50,7 +50,7 @@ class TopLevelNav extends React.Component {
   constructor() {
     super();
     this.state = {
-      light: true,
+      light: localStorage.getItem('theme') === 'dark' ? false : true,
       search: false
     };
   }
@@ -67,6 +67,7 @@ class TopLevelNav extends React.Component {
   };
 
   loadTheme = themeName => {
+    localStorage.setItem('theme', themeName);
     const themeId = `theme-${themeName}`;
     loadCssFile(`/resources/css/theme-${themeName}.css`, themeId).then(() => {
       Array.from(document.querySelectorAll('[id^=theme]')).forEach(css => {
