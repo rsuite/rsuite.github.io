@@ -2,9 +2,9 @@
 
 `appearance` 属性设置导航栏外观:
 
-* 'default'(默认值) 默认导航栏。
-* 'inverse' 反色的导航栏。
-* 'subtle' 弱化的导航栏。
+- 'default'(默认值) 默认导航栏。
+- 'inverse' 反色的导航栏。
+- 'subtle' 弱化的导航栏。
 
 <!--start-code-->
 
@@ -54,12 +54,20 @@ class Demo extends React.Component {
   render() {
     const { activeKey } = this.state;
     return (
-      <div>
+      <div className="nav-wrapper">
         <NavBarInstance activeKey={activeKey} onSelect={this.handleSelect} />
         <hr />
-        <NavBarInstance appearance="inverse" activeKey={activeKey} onSelect={this.handleSelect} />
+        <NavBarInstance
+          appearance="inverse"
+          activeKey={activeKey}
+          onSelect={this.handleSelect}
+        />
         <hr />
-        <NavBarInstance appearance="subtle" activeKey={activeKey} onSelect={this.handleSelect} />
+        <NavBarInstance
+          appearance="subtle"
+          activeKey={activeKey}
+          onSelect={this.handleSelect}
+        />
       </div>
     );
   }
