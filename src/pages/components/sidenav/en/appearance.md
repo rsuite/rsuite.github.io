@@ -50,7 +50,7 @@ const SidenavInstance = ({ ...props }) => {
 };
 
 const instance = (
-  <div>
+  <div className="nav-wrapper">
     <SidenavInstance />
     <SidenavInstance appearance="inverse" />
     <SidenavInstance appearance="subtle" />

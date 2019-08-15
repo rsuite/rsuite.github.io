@@ -54,7 +54,7 @@ class Demo extends React.Component {
   render() {
     const { activeKey } = this.state;
     return (
-      <div>
+      <div className="nav-wrapper">
         <NavBarInstance activeKey={activeKey} onSelect={this.handleSelect} />
         <hr />
         <NavBarInstance appearance="inverse" activeKey={activeKey} onSelect={this.handleSelect} />
