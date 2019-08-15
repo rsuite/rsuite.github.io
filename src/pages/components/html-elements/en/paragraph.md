@@ -22,9 +22,6 @@ const instance = (
       <del>This line of text is meant to be treated as deleted text.</del>
     </p>
     <p>
-      <s>This line of text is meant to be treated as no longer accurate.</s>
-    </p>
-    <p>
       <ins>
         This line of text is meant to be treated as an addition to the document.
       </ins>

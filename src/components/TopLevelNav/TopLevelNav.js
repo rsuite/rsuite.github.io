@@ -40,10 +40,13 @@ const svgStyle = {
 
 class TopLevelNav extends React.Component {
   static contextTypes = {
+    locale: PropTypes.object,
+    router: PropTypes.object.isRequired
+  };
+
+  static propTypes = {
     showSubmenu: PropTypes.bool,
     onToggleMenu: PropTypes.func,
-    locale: PropTypes.object,
-    router: PropTypes.object.isRequired,
     hideToggle: PropTypes.bool
   };
 
@@ -68,6 +71,13 @@ class TopLevelNav extends React.Component {
 
   loadTheme = themeName => {
     localStorage.setItem('theme', themeName);
+    const { globalVars = {} } = window.less || {};
+    window.less &&
+      window.less.modifyVars({
+        ...globalVars,
+        '@theme-is-default': themeName === 'default'
+      });
+
     const themeId = `theme-${themeName}`;
     loadCssFile(`/resources/css/theme-${themeName}.css`, themeId).then(() => {
       Array.from(document.querySelectorAll('[id^=theme]')).forEach(css => {

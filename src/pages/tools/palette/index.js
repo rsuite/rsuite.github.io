@@ -26,6 +26,7 @@ import getLocalePath from '@/utils/getLocalePath';
 import SketchPicker from './SketchPicker';
 
 const colors = [
+  '#34C3FF',
   '#3498FF',
   '#2575FC',
   '#0052CC',
@@ -44,8 +45,7 @@ const colors = [
   '#4A148C',
   '#673AB7',
   '#880061',
-  '#607d8b',
-  '#795548'
+  '#607d8b'
 ];
 
 const CirclePicker = Loadable({
@@ -53,7 +53,7 @@ const CirclePicker = Loadable({
   loading: () => <div>loading...</div>
 });
 
-const lessUrl = 'https://cdn.bootcss.com/less.js/2.7.2/less.min.js';
+const lessUrl = 'https://cdn.bootcss.com/less.js/3.9.0/less.min.js';
 
 export default getLocalePath(localePath => {
   class PalettePage extends React.Component {
@@ -71,10 +71,16 @@ export default getLocalePath(localePath => {
      * @return {Promise}
      */
     changeLessColor = color => {
-      return window.less.modifyVars({
-        '@palette-color': color
-      });
+      const globalVars = {
+        '@palette-color': color,
+        '@theme-is-default': this.getThemeIsDefault()
+      };
+      window.less.globalVars = globalVars;
+      window.less.modifyVars(globalVars);
     };
+
+    getThemeIsDefault = () =>
+      ['default', null].includes(localStorage.getItem('theme'));
 
     handleChangeComplete = ({ hex: color }) => {
       this.setState({ color });
@@ -85,8 +91,10 @@ export default getLocalePath(localePath => {
         window.less = {
           async: true,
           logLevel: 0,
+          javascriptEnabled: true,
           globalVars: {
-            '@palette-color': this.state.color
+            '@palette-color': this.state.color,
+            '@theme-is-default': this.getThemeIsDefault()
           }
         };
         this.setState({

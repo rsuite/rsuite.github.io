@@ -1301,6 +1301,13 @@
   @H700: color(~`palette('@{H500}', 700) `);
   @H800: color(~`palette('@{H500}', 800) `);
   @H900: color(~`palette('@{H500}', 900) `);
+  @theme-default: boolean(@theme-is-default);
+  @link-color: if(@theme-default, @H700, @H500);
+  @link-hover-color: if(@theme-default, @H800, @H600);
+  @link-active-color: if(@theme-default, @H900, @H700);
+  @btn-primary-bg: if(@theme-default, @H500, @H700);
+  @btn-primary-hover-bg: if(@theme-default, @H600, @H600);
+  @btn-primary-active-bg: if(@theme-default, @H700, @H500);
   .repaint-input(@name) {
     &-@{name}-wrapper::before {
       border-color: @H500;
@@ -1319,23 +1326,23 @@
   .@{ns} {
     //#== Button
     &-btn-primary {
-      background-color: @H500;
+      background-color: @btn-primary-bg;
       &:hover,
       &:focus {
-        background-color: @H600;
+        background-color: @btn-primary-hover-bg;
       }
       &:active {
-        background-color: @H700;
+        background-color: @btn-primary-active-bg;
       }
     }
     &-btn-link {
-      color: @H700;
+      color: @link-color;
       &:hover,
       &:focus {
-        color: @H800;
+        color: @link-hover-color;
       }
       &:active {
-        color: @H900;
+        color: @link-active-color;
       }
     }
     &-nav-item-active a {
@@ -1346,16 +1353,16 @@
       border-color: @H500;
     }
     &-btn-ghost {
-      color: @H700;
-      border-color: @H700;
+      color: @link-color;
+      border-color: @link-color;
       &:hover,
       &:focus {
-        color: @H800;
-        border-color: @H800;
+        color: @link-hover-color;
+        border-color: @link-hover-color;
       }
       &:active {
-        color: @H900;
-        border-color: @H900;
+        color: @link-active-color;
+        border-color: @link-active-color;
       }
     }
     //#== Checkbox
