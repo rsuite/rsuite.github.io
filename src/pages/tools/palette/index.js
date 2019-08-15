@@ -12,7 +12,8 @@ import {
   Slider,
   Input,
   Panel,
-  Loader
+  Loader,
+  FlexboxGrid
 } from 'rsuite';
 import Loadable from 'react-loadable';
 import getPalette from './getPalette';
@@ -22,6 +23,7 @@ import MarkdownView from '@/components/MarkdownView';
 import PageContainer from '@/components/PageContainer';
 import loadJsFile from '@/utils/loadJsFile';
 import getLocalePath from '@/utils/getLocalePath';
+import SketchPicker from './SketchPicker';
 
 const colors = [
   '#3498FF',
@@ -45,11 +47,6 @@ const colors = [
   '#607d8b',
   '#795548'
 ];
-
-const SketchPicker = Loadable({
-  loader: () => import('react-color/lib/components/sketch/Sketch'),
-  loading: () => <div>loading...</div>
-});
 
 const CirclePicker = Loadable({
   loader: () => import('react-color/lib/components/circle/Circle'),
@@ -115,54 +112,54 @@ export default getLocalePath(localePath => {
             </Col>
           </Row>
 
-          <div className="palette-wrapper">
-            <div className="palette-panel">
-              <CirclePicker
-                color={color}
-                colors={colors}
-                onChangeComplete={this.handleChangeComplete}
-              />
-              <br />
+          <div className="row-split">
+            <div className="col-side">
+              <div className="circle-picker-wrapper">
+                <CirclePicker
+                  color={color}
+                  colors={colors}
+                  onChangeComplete={this.handleChangeComplete}
+                />
+              </div>
               <SketchPicker
-                style={{ marginTop: 6 }}
                 color={color}
                 onChangeComplete={this.handleChangeComplete}
               />
+              <div className="panel-color-wrap">
+                <ColorPanel colors={getPalette(color)} />
+              </div>
             </div>
-
-            <div className="panel-color-wrap">
-              <ColorPanel colors={getPalette(color)} />
-            </div>
-
-            <div className="palette-preview" id="palettePreview">
-              <Panel header={<h3>Preview</h3>} bordered>
-                <ButtonToolbar>
-                  <Button appearance="default">Default</Button>
-                  <Button appearance="primary">Primary</Button>
-                  <Button appearance="link">Link</Button>
-                  <Button appearance="ghost">Ghost</Button>
-                </ButtonToolbar>
-                <hr />
-                <CheckboxGroup name="check" defaultValue={['1', '2']} inline>
-                  <Checkbox value="1">Javascript</Checkbox>
-                  <Checkbox value="2">CSS</Checkbox>
-                  <Checkbox value="3">HTML</Checkbox>
-                </CheckboxGroup>
-                <hr />
-                <RadioGroup name="radio" defaultValue="1" inline>
-                  <Radio value="1">Front end</Radio>
-                  <Radio value="2">Back end </Radio>
-                </RadioGroup>
-                <hr />
-                <Input />
-                <hr />
-                <Toggle defaultChecked />
-                <hr />
-                <Slider progress defaultValue={50} />
-                {showLoading ? (
-                  <Loader backdrop content="loading..." vertical />
-                ) : null}
-              </Panel>
+            <div className="col-content">
+              <div className="palette-preview" id="palettePreview">
+                <Panel header={<h3>Preview</h3>} bordered>
+                  <ButtonToolbar>
+                    <Button appearance="default">Default</Button>
+                    <Button appearance="primary">Primary</Button>
+                    <Button appearance="link">Link</Button>
+                    <Button appearance="ghost">Ghost</Button>
+                  </ButtonToolbar>
+                  <hr />
+                  <CheckboxGroup name="check" defaultValue={['1', '2']} inline>
+                    <Checkbox value="1">Javascript</Checkbox>
+                    <Checkbox value="2">CSS</Checkbox>
+                    <Checkbox value="3">HTML</Checkbox>
+                  </CheckboxGroup>
+                  <hr />
+                  <RadioGroup name="radio" defaultValue="1" inline>
+                    <Radio value="1">Front end</Radio>
+                    <Radio value="2">Back end </Radio>
+                  </RadioGroup>
+                  <hr />
+                  <Input />
+                  <hr />
+                  <Toggle defaultChecked />
+                  <hr />
+                  <Slider progress defaultValue={50} />
+                  {showLoading ? (
+                    <Loader backdrop content="loading..." vertical />
+                  ) : null}
+                </Panel>
+              </div>
             </div>
           </div>
 

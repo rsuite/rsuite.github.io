@@ -1,26 +1,27 @@
-.palette-wrapper {
+.row-split {
   display: flex;
   flex-direction: row;
-  .palette-panel {
-    width: 276px;
+  .col-side {
+    width: 360px;
   }
-  .palette-preview {
-    margin-left: 10px;
-    padding: 0 10px;
-    .rs-panel {
-      position: relative;
-    }
+  .col-content {
+    flex-grow: 1;
   }
+}
 
-  .panel-color-wrap {
-    margin-left: -10px;
-    .panel-color {
-      th,
-      td {
-        text-align: left;
-        padding: 11px;
-        font-family: 'DejaVu Sans Mono';
-      }
+.palette-preview {
+  .rs-panel {
+    position: relative;
+    height: 578px;
+  }
+}
+.panel-color-wrap {
+  .panel-color {
+    th,
+    td {
+      text-align: left;
+      padding: 11px;
+      font-family: 'DejaVu Sans Mono';
     }
   }
 }
@@ -45,11 +46,36 @@
   border: 1px solid #000;
 }
 
-.sketch-picker {
-  border: 1px solid #ddd;
-  box-shadow: none !important;
-  width: 220px !important;
-  * {
-    box-sizing: unset;
+.circle-picker-wrapper {
+  display: inline-block;
+  vertical-align: top;
+}
+.sketch-picker-wrapper {
+  margin-left: 20px;
+  display: inline-block;
+  position: relative;
+  .sketch-color-review {
+    padding: 5px;
+    background: rgb(255, 255, 255);
+    border-radius: 1px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .sketch-color-value {
+    width: 68px;
+    height: 100px;
+    border-radius: 2px;
+  }
+  .sketch-picker-overlay {
+    position: absolute;
+    z-index: 2;
+  }
+  .sketch-picker-backdrop {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
   }
 }
