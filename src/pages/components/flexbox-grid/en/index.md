@@ -2,8 +2,8 @@
 
 Grid layout component implemented via CSS Flexbox, providing 24 grids.
 
-* `<FlexboxGrid>`
-* `<FlexboxGrid.Item>`
+- `<FlexboxGrid>`
+- `<FlexboxGrid.Item>`
 
 ## Usage
 
@@ -27,8 +27,9 @@ import { FlexboxGrid } from 'rsuite';
 
 ### `<FlexboxGrid.Item>`
 
-| Property    | Type`(default)`                 | Description                           |
-| ----------- | ------------------------------- | ------------------------------------- |
-| classPrefix | string `('flex-box-grid-item')` | The prefix of the component CSS class |
-| colspan     | number `(0)`                    | spacing between grids                 |
-| order       | number `(0)`                    | grid orders for sorting               |
+| Property       | Type`(default)`                 | Description                                     |
+| -------------- | ------------------------------- | ----------------------------------------------- |
+| classPrefix    | string `('flex-box-grid-item')` | The prefix of the component CSS class           |
+| colspan        | number `(0)`                    | spacing between grids                           |
+| order          | number `(0)`                    | grid orders for sorting                         |
+| componentClass | React.ElementType `('div')`     | You can use a custom element for this component |
