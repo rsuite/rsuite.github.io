@@ -2,8 +2,8 @@
 
 通过 CSS Flexbox 实现的栅格布局组件，提供 24 栅格。
 
-* `<FlexboxGrid>`
-* `<FlexboxGrid.Item>`
+- `<FlexboxGrid>`
+- `<FlexboxGrid.Item>`
 
 ## 获取组件
 
@@ -27,8 +27,9 @@ import { FlexboxGrid } from 'rsuite';
 
 ### `<FlexboxGrid.Item>`
 
-| 属性名称    | 类型`(默认值)`                  | 描述               |
-| ----------- | ------------------------------- | ------------------ |
-| classPrefix | string `('flex-box-grid-item')` | 组件 CSS 类的前缀  |
-| colspan     | number `(0)`                    | 栅格占位格数       |
-| order       | number `(0)`                    | 栅格顺序，用于排序 |
+| 属性名称       | 类型`(默认值)`                  | 描述                 |
+| -------------- | ------------------------------- | -------------------- |
+| classPrefix    | string `('flex-box-grid-item')` | 组件 CSS 类的前缀    |
+| colspan        | number `(0)`                    | 栅格占位格数         |
+| order          | number `(0)`                    | 栅格顺序，用于排序   |
+| componentClass | React.ElementType `('div')`     | 为组件自定义元素类型 |
