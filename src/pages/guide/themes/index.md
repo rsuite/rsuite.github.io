@@ -5,7 +5,7 @@
 新建一个单独的 `less` 文件如下，再引入这个文件。
 
 ```less
-@import '~rsuite/styles/less/index.less'; //引入默认的样式文件
+@import '~rsuite/lib/styles/index.less'; //引入默认的样式文件
 @import 'custom-theme.less'; // 进行样式定制
 ```
 
