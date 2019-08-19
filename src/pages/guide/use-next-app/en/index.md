@@ -102,7 +102,7 @@ $ yarn dev
 
 Open the browser and visit `http://localhost:3000/`, you can see the application of React Suite page, and then start your development journey.
 
-## Source code
+## Examples
 
 - [next-app](https://github.com/rsuite/examples/tree/master/next-app)
 - [rsuite-management-system-ssr](https://github.com/rsuite/rsuite-management-system-ssr)

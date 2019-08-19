@@ -26,7 +26,8 @@ export default {
     flow: 'Flow',
     extension: '扩展',
     gettingStarted: '开始使用',
-    htmlElements: '支持的 HTML 元素'
+    htmlElements: '支持的 HTML 元素',
+    modularized: '按需加载'
   },
   table: {
     'tab.resizable': '可调整列宽',

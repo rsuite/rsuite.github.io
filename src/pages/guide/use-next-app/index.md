@@ -102,7 +102,7 @@ $ yarn dev
 
 在浏览器中访问 `http://localhost:3000/`，就可以看到应用 React Suite 的页面了，接下来就开始您的开发之旅。
 
-## 源码
+## 示例
 
 - [next-app](https://github.com/rsuite/examples/tree/master/next-app)
 - [rsuite-management-system-ssr](https://github.com/rsuite/rsuite-management-system-ssr)

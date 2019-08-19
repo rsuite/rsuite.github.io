@@ -1062,6 +1062,22 @@ export const createRouters = (locale, onEnter, onEntered) => {
         />
 
         <Route
+          path="modularized"
+          getComponents={(location, callback) => {
+            onEnter && onEnter();
+            require.ensure([], require => {
+              const getComponent = require('./guide/modularized')['default'];
+              const component = getComponent(locale);
+              callback && callback(null, component);
+              onEntered && onEntered();
+            });
+          }}
+          onEnter={() => {
+            setTitle('Modularized - guide');
+          }}
+        />
+
+        <Route
           path="themes"
           getComponents={(location, callback) => {
             onEnter && onEnter();
