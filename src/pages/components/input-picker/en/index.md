@@ -48,6 +48,7 @@ import { InputPicker } from 'rsuite';
 | renderMenuGroup      | (groupTitle:React.Node, item:[DataItemType](#types))=>React.Node                    | Custom Render Options Group                            |
 | renderMenuItem       | (label:React.Node, item:[DataItemType](#types))=>React.Node                         | Custom Render Options                                  |
 | renderValue          | (value:string, item: [DataItemType](#types),selectedElement:React.Node)=>React.Node | Custom Render selected options                         |
+| renderExtraFooter    | ()=>React.Node                                                                      | custom render extra footer                             |
 | searchable           | boolean `(true)`                                                                    | Whether you can search for options.                    |
 | sort                 | (isGroup: boolean) => (a: any, b: any) => number                                    | Sort options                                           |
 | size                 | enum: 'lg', 'md', 'sm', 'xs' `('md')`                                               | A picker can have different sizes                      |
