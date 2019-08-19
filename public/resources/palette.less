@@ -1181,6 +1181,7 @@
 }
 // It's hack way to make this function will be compiled preferentially by less
 .tinyColorMixin();
+
 .color-palette-mixin {
   @functions: ~`(function() {
     // Primary color number.
@@ -1291,9 +1292,26 @@
 }
 // It's hack way to make this function will be compiled preferentially by less
 .color-palette-mixin();
+
+.calc-font-color() {
+  @functions: ~`(function(){
+    this.calcFontColor = function(color){
+      var black = '#575757';
+      var white = '#ffffff';
+      var a = tinycolor.readability(color,black);
+      var b = tinycolor.readability(color,white);
+      return a > b ? black : white;
+    };
+  })()`;
+}
+
+// It's hack way to make this function will be compiled preferentially by less
+.calc-font-color();
+
 .inner-active-shadow(@shadow-color:@checkbox-default-border-color) {
   box-shadow: 0 0 0 2px fadeOut(@shadow-color, 60%);
 }
+
 #palettePreview {
   @ns: rs;
   @H500: @palette-color;
@@ -1308,6 +1326,8 @@
   @btn-primary-bg: if(@theme-default, @H500, @H700);
   @btn-primary-hover-bg: if(@theme-default, @H600, @H600);
   @btn-primary-active-bg: if(@theme-default, @H700, @H500);
+  @readable-color: color(~`calcFontColor('@{H500}') `);
+
   .repaint-input(@name) {
     &-@{name}-wrapper::before {
       border-color: @H500;
@@ -1323,10 +1343,13 @@
       .inner-active-shadow(@H500);
     }
   }
+
   .@{ns} {
     //#== Button
     &-btn-primary {
       background-color: @btn-primary-bg;
+      color:@readable-color;
+
       &:hover,
       &:focus {
         background-color: @btn-primary-hover-bg;
