@@ -1,6 +1,6 @@
 function getLocalePath(callback) {
   return locale => {
-    const localePath = locale === 'en' ? `${name}/en/` : `${name}/`;
+    const localePath = locale === 'en' ? '/en/' : '/';
     return callback(localePath);
   };
 }
