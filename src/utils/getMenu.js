@@ -36,6 +36,11 @@ const getMenu = locale => {
         },
 
         {
+          id: 'modularized',
+          name: _.get(locale, 'common.modularized')
+        },
+
+        {
           id: 'themes',
           name: _.get(locale, 'common.customizeTheme')
         },

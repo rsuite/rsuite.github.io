@@ -54,7 +54,7 @@ Then edit the `./pages/index.js` file and change it to:
 import React from 'react';
 import Head from 'next/head';
 import { Button } from 'rsuite';
-import 'rsuite/styles/less/index.less';
+import 'rsuite/lib/styles/index.less';
 
 const Home = () => (
   <div>
@@ -102,7 +102,7 @@ $ yarn dev
 
 Open the browser and visit `http://localhost:3000/`, you can see the application of React Suite page, and then start your development journey.
 
-## Source code
+## Examples
 
 - [next-app](https://github.com/rsuite/examples/tree/master/next-app)
 - [rsuite-management-system-ssr](https://github.com/rsuite/rsuite-management-system-ssr)

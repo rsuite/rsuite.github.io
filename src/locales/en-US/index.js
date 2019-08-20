@@ -27,7 +27,8 @@ export default {
     flow: 'Flow',
     extension: 'Extensions',
     gettingStarted: 'Getting started',
-    htmlElements: 'Supported HTML Elements'
+    htmlElements: 'Supported HTML Elements',
+    modularized: 'Use modularized'
   },
   table: {
     'tab.resizable': 'Resizable',
