@@ -123,6 +123,15 @@ module.exports = merge(
 );
 ```
 
+如果您使用了 `html-webpack-plugin`, 为了避免把所有的样式引入到 html 中，需要额外添加 `excludeChunks` 参数，排除主题相关 CSS。
+
+```diff
+ new HtmlwebpackPlugin({
+   ...
++  excludeChunks: ['themes']
+ })
+```
+
 - **最后**，在运行 Webpack 命令以后，就会生成多套 CSS，根据自己的业务要求，在不同的主题环境下引入对应的 CSS，就实现了多主题切换。具体详细的实现可以参考示例项目 [multiple-themes][multiple-themes]
 
 ```
@@ -190,8 +199,6 @@ global.__RSUITE_CLASSNAME_PREFIX__ = 'custom-';
 ```
 
 > 如果您使用了 [`create-react-app`][cra] 创建项目，可以通过 [`react-app-rewire-less`][rarl] 和 [`react-app-rewire-define-plugin`][rardp] 进行修改。详见[在 create-react-app 中使用][use-with-create-app]。
-
-### 如何使用 webpack 编译多套 css 主题？
 
 [cra]: https://github.com/facebook/create-react-app
 [rarl]: https://www.npmjs.com/package/react-app-rewire-less
