@@ -131,7 +131,133 @@ If it is rendered through the server, add the following code in `server.js`:
 global.__RSUITE_CLASSNAME_PREFIX__ = 'custom-';
 ```
 
-If you use [`create-react-app`][cra] to create a project, you can modify it with [`react-app-rewire-less`][rarl] and [`react-app-rewire-define-plugin`][rardp].
+If you use [`create-react-app`][cra] to create a project, you can modify it with [`react-app-rewire-less`][rarl] and [`react-app-rewire-define-plugin`][rardp]. For more details, see [Use in create-react-app][use-with-create-app].
+
+### How to compile multiple themes with webpack ?
+
+You can easily compile multiple sets of css styles for your project using [webpack-multiple-themes-compile][webpack-multiple-themes-compile] .
+
+#### Example
+
+Set the following directory structure
+
+```
+.
+├── src
+│   ├── App.js
+│   ├── index.html
+│   ├── index.js
+│   └── less
+│       └── index.less
+└── webpack.config.js
+```
+
+The original `webpack.config.js` file content is as follows:
+
+```javascript
+const extractLess = new ExtractTextPlugin(`resources/style.[hash].css`);
+
+module.exports = {
+  output: {
+    path: outPutPath,
+    filename: '[name].js',
+    chunkFilename: '[name].js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.less$/,
+        loader: extractLess.extract({
+          use: [
+            {
+              loader: 'css-loader'
+            },
+            {
+              loader: 'less-loader?javascriptEnabled=true'
+            }
+          ]
+        })
+      }
+    ]
+  },
+  plugins: [
+    new HtmlwebpackPlugin({
+      title: 'RSUITE multiple themes examples',
+      template: 'src/index.html',
+      inject: true
+    })
+  ]
+  // Other options
+};
+```
+
+- Modify the configuration and pass the `*.less` file to `webpack-multiple-themes-compile`.
+
+```diff
+- const extractLess = new ExtractTextPlugin(`resources/style.[hash].css`);
+
+- module.exports = {
++ const commonConfig = {
+  output: {
+    path: outPutPath,
+    filename: '[name].js',
+    chunkFilename: '[name].js'
+  },
+  module: {
+-   rules: [
+-     {
+-       test: /\.less$/,
+-       loader: extractLess.extract({
+-         use: [
+-           {
+-             loader: 'css-loader'
+-           },
+-           {
+-             loader: 'less-loader?javascriptEnabled=true'
+-           }
+          ]
+        })
+      }
+    ]
+  },
+  plugins: [
+    new HtmlwebpackPlugin({
+      title: 'RSUITE multiple themes examples',
+      template: 'src/index.html',
+      inject: true,
++     excludeChunks: ['themes']
+    })
+  ]
+  // Other options
+};
+
+
++ const themeConfig = multipleThemesCompile({
++   themesConfig: {
++     default: {},
++     red: {
++       base-color:'#F44336'
++     }
++   },
++   styleLoaders: [
++     { loader: 'css-loader' },
++     {
++       loader: 'less-loader?javascriptEnabled=true'
++     }
++   ],
++   cwd: path.resolve('./')
++ });
+```
+
+- Since [webpack-multiple-themes-compile][webpack-multiple-themes-compile] doesn't known what the default theme you need to load, you need to import the theme file by yourself.
+
+```
+loadCssFile('./theme-default.css');
+```
+
+#### Source code
+
+- [multiple-themes][multiple-themes]
 
 [cra]: https://github.com/facebook/create-react-app
 [rarl]: https://www.npmjs.com/package/react-app-rewire-less
@@ -141,3 +267,6 @@ If you use [`create-react-app`][cra] to create a project, you can modify it with
 [rsuite-theme-pallete]: https://github.com/rsuite/rsuite/blob/master/styles/less/constants.less#L32
 [issue]: https://github.com/rsuite/rsuite/issues/new
 [variables.less]: https://github.com/rsuite/rsuite/blob/master/styles/variables.less
+[use-with-create-app]: /en/guide/use-with-create-react-app#Customize%20Theme
+[webpack-multiple-themes-compile]: https://github.com/rsuite/webpack-multiple-themes-compile
+[multiple-themes]: https://github.com/rsuite/examples/tree/master/multiple-themes

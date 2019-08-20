@@ -128,7 +128,133 @@ plugins: [
 global.__RSUITE_CLASSNAME_PREFIX__ = 'custom-';
 ```
 
-> 如果您使用了 [`create-react-app`][cra] 创建项目，可以通过 [`react-app-rewire-less`][rarl] 和 [`react-app-rewire-define-plugin`][rardp] 进行修改。
+> 如果您使用了 [`create-react-app`][cra] 创建项目，可以通过 [`react-app-rewire-less`][rarl] 和 [`react-app-rewire-define-plugin`][rardp] 进行修改。详见[在 create-react-app 中使用][use-with-create-app]。
+
+### 如何使用 webpack 编译多套 css 主题？
+
+您可以很容易的使用 [webpack-multiple-themes-compile][webpack-multiple-themes-compile] 为项目编译多套 css 样式。
+
+#### 例子
+
+设定以下目录结构
+
+```
+.
+├── src
+│   ├── App.js
+│   ├── index.html
+│   ├── index.js
+│   └── less
+│       └── index.less
+└── webpack.config.js
+```
+
+原始 `webpack.config.js` 内容如下
+
+```javascript
+const extractLess = new ExtractTextPlugin(`resources/style.[hash].css`);
+
+module.exports = {
+  output: {
+    path: outPutPath,
+    filename: '[name].js',
+    chunkFilename: '[name].js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.less$/,
+        loader: extractLess.extract({
+          use: [
+            {
+              loader: 'css-loader'
+            },
+            {
+              loader: 'less-loader?javascriptEnabled=true'
+            }
+          ]
+        })
+      }
+    ]
+  },
+  plugins: [
+    new HtmlwebpackPlugin({
+      title: 'RSUITE multiple themes examples',
+      template: 'src/index.html',
+      inject: true
+    })
+  ]
+  // 其他配置
+};
+```
+
+- 修改配置，将 `*.less` 文件交由 `webpack-multiple-themes-compile` 处理。
+
+```diff
+- const extractLess = new ExtractTextPlugin(`resources/style.[hash].css`);
+
+- module.exports = {
++ const commonConfig = {
+  output: {
+    path: outPutPath,
+    filename: '[name].js',
+    chunkFilename: '[name].js'
+  },
+  module: {
+-   rules: [
+-     {
+-       test: /\.less$/,
+-       loader: extractLess.extract({
+-         use: [
+-           {
+-             loader: 'css-loader'
+-           },
+-           {
+-             loader: 'less-loader?javascriptEnabled=true'
+-           }
+          ]
+        })
+      }
+    ]
+  },
+  plugins: [
+    new HtmlwebpackPlugin({
+      title: 'RSUITE multiple themes examples',
+      template: 'src/index.html',
+      inject: true,
++     excludeChunks: ['themes']
+    })
+  ]
+  // 其他配置
+};
+
+
++ const themeConfig = multipleThemesCompile({
++   themesConfig: {
++     default: {},
++     red: {
++       base-color:'#F44336'
++     }
++   },
++   styleLoaders: [
++     { loader: 'css-loader' },
++     {
++       loader: 'less-loader?javascriptEnabled=true'
++     }
++   ],
++   cwd: path.resolve('./')
++ });
+```
+
+- 由于 [webpack-multiple-themes-compile][webpack-multiple-themes-compile] 不知道您需要加载的默认主题是什么，所以您需要引入您的样式文件。
+
+```
+loadCssFile('./theme-default.css');
+```
+
+#### 源码
+
+- [multiple-themes][multiple-themes]
 
 [cra]: https://github.com/facebook/create-react-app
 [rarl]: https://www.npmjs.com/package/react-app-rewire-less
@@ -138,3 +264,6 @@ global.__RSUITE_CLASSNAME_PREFIX__ = 'custom-';
 [rsuite-theme-pallete]: https://github.com/rsuite/rsuite/blob/master/styles/less/constants.less#L32
 [issue]: https://github.com/rsuite/rsuite/issues/new
 [variables.less]: https://github.com/rsuite/rsuite/blob/master/styles/variables.less
+[use-with-create-app]: /guide/use-with-create-react-app#定制主题
+[webpack-multiple-themes-compile]: https://github.com/rsuite/webpack-multiple-themes-compile
+[multiple-themes]: https://github.com/rsuite/examples/tree/master/multiple-themes
