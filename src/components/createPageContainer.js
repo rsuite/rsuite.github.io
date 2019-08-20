@@ -4,7 +4,7 @@ import MarkdownView from './MarkdownView';
 
 const createPageContainer = ({ routerId }) => {
   return locale => {
-    const localePath = locale === 'en' ? `${name}/en/` : `${name}/`;
+    const localePath = locale === 'en' ? '/en/' : '/';
     const content = require(`@/pages/${routerId}${localePath}index.md`);
     class PageContainerWithContent extends React.Component {
       render() {
