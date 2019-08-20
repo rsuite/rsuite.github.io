@@ -48,6 +48,7 @@ import { SelectPicker } from 'rsuite';
 | renderMenuGroup      | (groupTitle:React.Node, item:[DataItemType](#types))=>React.Node                    | 自定义渲染选项组                     |
 | renderMenuItem       | (label:React.Node, item:[DataItemType](#types))=>React.Node                         | 自定义渲染选项                       |
 | renderValue          | (value:string, item: [DataItemType](#types),selectedElement:React.Node)=>React.Node | 自定义渲染被选中的选项               |
+| renderExtraFooter    | ()=>React.Node                                                                      | 自定义页脚内容                       |
 | searchable           | boolean `(true)`                                                                    | 可以搜索                             |
 | sort                 | (isGroup: boolean) => (a: any, b: any) => number                                    | 对选项排序                           |
 | size                 | enum: 'lg', 'md', 'sm', 'xs' `('md')`                                               | 设置组件尺寸                         |

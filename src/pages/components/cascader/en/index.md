@@ -49,6 +49,7 @@ import { Cascader } from 'rsuite';
 | renderMenu           | (children: object[], menu:React.Node, parentNode?: object)=>React.Node                  | Customizing the Rendering Menu list                    |
 | renderMenuItem       | (label:React.Node, item: [DataItemType](#types))=>React.Node                            | Custom render menu items                               |
 | renderValue          | (value: string, itemPaths:Array, selectedElement:React.Node)=>React.Node                | Custom render selected items                           |
+| renderExtraFooter    | ()=>React.Node                                                                          | custom render extra footer                             |
 | searchable           | boolean `(true)`                                                                        | Whether you can search for options.                    |
 | size                 | enum: 'lg', 'md', 'sm', 'xs' `('md')`                                                   | A picker can have different sizes                      |
 | toggleComponentClass | React.ElementType `('a')`                                                               | You can use a custom element for this component        |

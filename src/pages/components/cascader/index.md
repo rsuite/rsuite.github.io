@@ -50,6 +50,7 @@ import { Cascader } from 'rsuite';
 | renderMenu           | (children: object[], menu:React.Node, parentNode?: object)=>React.Node                  | 自定义渲染菜单列表                   |
 | renderMenuItem       | (label:React.Node, item: [DataItemType](#types))=>React.Node                            | 自定义选项                           |
 | renderValue          | (value:string, itemPaths:Array, selectedElement:React.Node)=>React.Node                 | 自定义被选中的选项                   |
+| renderExtraFooter    | ()=>React.Node                                                                          | 自定义页脚内容                       |
 | searchable           | boolean `(true)`                                                                        | 可以搜索                             |
 | size                 | enum: 'lg', 'md', 'sm', 'xs' `('md')`                                                   | 设置组件尺寸                         |
 | toggleComponentClass | React.ElementType `('a')`                                                               | 为组件自定义元素类型                 |
