@@ -112,6 +112,46 @@ model.check({ password1: '123456', password2: 'root' });
 **/
 ```
 
+## 自定义验证 - 异步校验
+
+例如，校验邮箱是否重复
+
+```js
+function asyncCheckEmail(email) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      if (email === 'foo@domain.com') {
+        resolve(false);
+      } else {
+        resolve(true);
+      }
+    }, 500);
+  });
+}
+
+const model = SchemaModel({
+  email: StringType()
+    .isEmail('请输入正确的邮箱')
+    .addRule((value, data) => {
+      return asyncCheckEmail(value);
+    }, '邮箱地址已经存在')
+    .isRequired('该字段不能为空')
+});
+
+model.checkAsync({ email: 'foo@domain.com' }).then(result => {
+  console.log(result);
+});
+
+/**
+{
+  email: {
+    hasError: true,
+    errorMessage: '邮箱地址已经存在'
+  }
+};
+**/
+```
+
 ## 嵌套对象
 
 对于复杂的嵌套的 Object , 可以使用 ObjectType().shape 方法进行定义，比如：
@@ -461,3 +501,16 @@ ObjectType().addRule((value, data) => {
   return true;
 }, '当 A 等于 10 的时候，该值必须为空');
 ```
+
+## ⚠️ 注意事项
+
+默认检查优先级：
+
+- 1.isRequired
+- 2.所有其他校验规则按顺序执行
+
+如果 `addRule` 的第三个参数是 `true`，则检查的优先级如下：
+
+- 1.addRule
+- 2.isRequired
+- 3.预定义规则（如果未设置 `isRequired`，并且值为空，则不执行规则）
