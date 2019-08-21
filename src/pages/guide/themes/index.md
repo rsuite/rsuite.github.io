@@ -64,11 +64,81 @@ rsuite 的样式使用了 [Less][less] 作为开发语言，并且定义了一�
 @button-ripple: false;
 ```
 
-## 更多自定义配置
+### 更多自定义配置
 
-我们提供了丰富变量，如果依然不能满足您的定制需求，欢迎给我们提 [issue][issue]。
+我们提供了[各种场景的变量][variables.less]，如果依然不能满足您的定制需求，欢迎给我们提 [issue][issue]。
 
-> 详见: [variables.less][variables.less]。
+## Webpack 编译多主题方案
+
+React Suite 提供了一个 Webpack 辅助工具 [webpack-multiple-themes-compile][webpack-multiple-themes-compile]，
+可以在项目编译时候根据配置生成多套 CSS 文件，然后在不同的主题环境引入不同的 CSS 文件，实现多主题切换效果。实现的原理是基于 Less 的变量替换方式，所以必须要依赖于 Less 编译，我们通过以下一个示例进行说明。
+
+- **首先**，我们看一下默认情况下通过 Webpack 把 Less 编译成 CSS 的配置如下:
+
+```js
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const extractLess = new ExtractTextPlugin(`style.[hash].css`);
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.less$/,
+        loader: extractLess.extract({
+          use: [
+            { loader: 'css-loader' },
+            { loader: 'less-loader?javascriptEnabled=true' }
+          ]
+        })
+      }
+    ]
+  }
+  // ...其他配置
+};
+```
+
+- **然后**，将 Less 文件交由 `webpack-multiple-themes-compile` 处理，配置 `themesConfig` 参数定义主题下需要的变量。
+
+```js
+const merge = require('webpack-merge');
+const multipleThemesCompile = require('webpack-multiple-themes-compile');
+
+const webpackConfigs = {
+  // There is another options.
+};
+
+module.exports = merge(
+  webpackConfigs,
+  multipleThemesCompile({
+    themesConfig: {
+      default: {},
+      green: {
+        'base-color': '#008000'
+      },
+      yellow: {
+        'base-color': '#ffff00'
+      }
+    }
+  })
+);
+```
+
+如果您使用了 `html-webpack-plugin`, 为了避免把所有的样式引入到 html 中，需要额外添加 `excludeChunks` 参数，排除主题相关 CSS。
+
+```diff
+ new HtmlwebpackPlugin({
+   ...
++  excludeChunks: ['themes']
+ })
+```
+
+- **最后**，在运行 Webpack 命令以后，就会生成多套 CSS，根据自己的业务要求，在不同的主题环境下引入对应的 CSS，就实现了多主题切换。具体详细的实现可以参考示例项目 [multiple-themes][multiple-themes]
+
+```
+├── theme-default.css
+├── theme-green.css
+└── theme-yellow.css
+```
 
 ## 常见问题
 
@@ -129,132 +199,6 @@ global.__RSUITE_CLASSNAME_PREFIX__ = 'custom-';
 ```
 
 > 如果您使用了 [`create-react-app`][cra] 创建项目，可以通过 [`react-app-rewire-less`][rarl] 和 [`react-app-rewire-define-plugin`][rardp] 进行修改。详见[在 create-react-app 中使用][use-with-create-app]。
-
-### 如何使用 webpack 编译多套 css 主题？
-
-您可以很容易的使用 [webpack-multiple-themes-compile][webpack-multiple-themes-compile] 为项目编译多套 css 样式。
-
-#### 例子
-
-设定以下目录结构
-
-```
-.
-├── src
-│   ├── App.js
-│   ├── index.html
-│   ├── index.js
-│   └── less
-│       └── index.less
-└── webpack.config.js
-```
-
-原始 `webpack.config.js` 内容如下
-
-```javascript
-const extractLess = new ExtractTextPlugin(`resources/style.[hash].css`);
-
-module.exports = {
-  output: {
-    path: outPutPath,
-    filename: '[name].js',
-    chunkFilename: '[name].js'
-  },
-  module: {
-    rules: [
-      {
-        test: /\.less$/,
-        loader: extractLess.extract({
-          use: [
-            {
-              loader: 'css-loader'
-            },
-            {
-              loader: 'less-loader?javascriptEnabled=true'
-            }
-          ]
-        })
-      }
-    ]
-  },
-  plugins: [
-    new HtmlwebpackPlugin({
-      title: 'RSUITE multiple themes examples',
-      template: 'src/index.html',
-      inject: true
-    })
-  ]
-  // 其他配置
-};
-```
-
-- 修改配置，将 `*.less` 文件交由 `webpack-multiple-themes-compile` 处理。
-
-```diff
-- const extractLess = new ExtractTextPlugin(`resources/style.[hash].css`);
-
-- module.exports = {
-+ const commonConfig = {
-  output: {
-    path: outPutPath,
-    filename: '[name].js',
-    chunkFilename: '[name].js'
-  },
-  module: {
--   rules: [
--     {
--       test: /\.less$/,
--       loader: extractLess.extract({
--         use: [
--           {
--             loader: 'css-loader'
--           },
--           {
--             loader: 'less-loader?javascriptEnabled=true'
--           }
-          ]
-        })
-      }
-    ]
-  },
-  plugins: [
-    new HtmlwebpackPlugin({
-      title: 'RSUITE multiple themes examples',
-      template: 'src/index.html',
-      inject: true,
-+     excludeChunks: ['themes']
-    })
-  ]
-  // 其他配置
-};
-
-
-+ const themeConfig = multipleThemesCompile({
-+   themesConfig: {
-+     default: {},
-+     red: {
-+       base-color:'#F44336'
-+     }
-+   },
-+   styleLoaders: [
-+     { loader: 'css-loader' },
-+     {
-+       loader: 'less-loader?javascriptEnabled=true'
-+     }
-+   ],
-+   cwd: path.resolve('./')
-+ });
-```
-
-- 由于 [webpack-multiple-themes-compile][webpack-multiple-themes-compile] 不知道您需要加载的默认主题是什么，所以您需要引入您的样式文件。
-
-```
-loadCssFile('./theme-default.css');
-```
-
-#### 源码
-
-- [multiple-themes][multiple-themes]
 
 [cra]: https://github.com/facebook/create-react-app
 [rarl]: https://www.npmjs.com/package/react-app-rewire-less

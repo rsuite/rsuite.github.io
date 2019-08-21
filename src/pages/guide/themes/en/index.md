@@ -66,11 +66,80 @@ Information, successes, warnings, errors, respectively, the corresponding color,
 @button-ripple: false;
 ```
 
-## More Custom Configurations
+### More Custom Configurations
 
-We provide a rich variable, if still unable to meet your customized needs, welcome to our [issue][issue].
+We provide a rich [variable][variables.less], if still unable to meet your customized needs, welcome to our [issue][issue].
 
-> See: [variables.less][variables.less]。
+## Webpack compiles multiple themes
+
+React Suite provides a Webpack assist tool [webpack-multiple-themes-compile][webpack-multiple-themes-compile], which can generate multiple sets of CSS files according to the configuration when the project is compiled, and then introduce different CSS files in different theme environments to achieve multi-theme switching effect. The principle of implementation is based on the substitution of Less's variables, so it must rely on Less compilation, we will illustrate it by the following example.
+
+- **First**, let's look at the configuration of compiling Less into CSS by Webpack by default:
+
+```js
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const extractLess = new ExtractTextPlugin(`style.[hash].css`);
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.less$/,
+        loader: extractLess.extract({
+          use: [
+            { loader: 'css-loader' },
+            { loader: 'less-loader?javascriptEnabled=true' }
+          ]
+        })
+      }
+    ]
+  }
+  // ...Other configurations.
+};
+```
+
+- **Then**, hand the Less file to `webpack-multiple-themes-compile` and configure the `themesConfig` parameter to define the variables needed under the theme.
+
+```js
+const merge = require('webpack-merge');
+const multipleThemesCompile = require('webpack-multiple-themes-compile');
+
+const webpackConfigs = {
+  // There is another options.
+};
+
+module.exports = merge(
+  webpackConfigs,
+  multipleThemesCompile({
+    themesConfig: {
+      default: {},
+      green: {
+        'base-color': '#008000'
+      },
+      yellow: {
+        'base-color': '#ffff00'
+      }
+    }
+  })
+);
+```
+
+If you use `html-webpack-plugin`, in order to avoid introducing all styles into html, you need to add the `excludeChunks` parameter to exclude topic-related CSS.
+
+```diff
+ new HtmlwebpackPlugin({
+   ...
++  excludeChunks: ['themes']
+ })
+```
+
+- **Finally**, after running the Webpack command, multiple sets of CSS will be generated, and corresponding CSS will be introduced in different theme environments according to their own business requirements, thus implementing multi-topic switching. For detailed implementation, please refer to the example project [multiple-themes][multiple-themes]
+
+```
+├── theme-default.css
+├── theme-green.css
+└── theme-yellow.css
+```
 
 ## FAQ
 
@@ -132,132 +201,6 @@ global.__RSUITE_CLASSNAME_PREFIX__ = 'custom-';
 ```
 
 If you use [`create-react-app`][cra] to create a project, you can modify it with [`react-app-rewire-less`][rarl] and [`react-app-rewire-define-plugin`][rardp]. For more details, see [Use in create-react-app][use-with-create-app].
-
-### How to compile multiple themes with webpack ?
-
-You can easily compile multiple sets of css styles for your project using [webpack-multiple-themes-compile][webpack-multiple-themes-compile] .
-
-#### Example
-
-Set the following directory structure
-
-```
-.
-├── src
-│   ├── App.js
-│   ├── index.html
-│   ├── index.js
-│   └── less
-│       └── index.less
-└── webpack.config.js
-```
-
-The original `webpack.config.js` file content is as follows:
-
-```javascript
-const extractLess = new ExtractTextPlugin(`resources/style.[hash].css`);
-
-module.exports = {
-  output: {
-    path: outPutPath,
-    filename: '[name].js',
-    chunkFilename: '[name].js'
-  },
-  module: {
-    rules: [
-      {
-        test: /\.less$/,
-        loader: extractLess.extract({
-          use: [
-            {
-              loader: 'css-loader'
-            },
-            {
-              loader: 'less-loader?javascriptEnabled=true'
-            }
-          ]
-        })
-      }
-    ]
-  },
-  plugins: [
-    new HtmlwebpackPlugin({
-      title: 'RSUITE multiple themes examples',
-      template: 'src/index.html',
-      inject: true
-    })
-  ]
-  // Other options
-};
-```
-
-- Modify the configuration and pass the `*.less` file to `webpack-multiple-themes-compile`.
-
-```diff
-- const extractLess = new ExtractTextPlugin(`resources/style.[hash].css`);
-
-- module.exports = {
-+ const commonConfig = {
-  output: {
-    path: outPutPath,
-    filename: '[name].js',
-    chunkFilename: '[name].js'
-  },
-  module: {
--   rules: [
--     {
--       test: /\.less$/,
--       loader: extractLess.extract({
--         use: [
--           {
--             loader: 'css-loader'
--           },
--           {
--             loader: 'less-loader?javascriptEnabled=true'
--           }
-          ]
-        })
-      }
-    ]
-  },
-  plugins: [
-    new HtmlwebpackPlugin({
-      title: 'RSUITE multiple themes examples',
-      template: 'src/index.html',
-      inject: true,
-+     excludeChunks: ['themes']
-    })
-  ]
-  // Other options
-};
-
-
-+ const themeConfig = multipleThemesCompile({
-+   themesConfig: {
-+     default: {},
-+     red: {
-+       base-color:'#F44336'
-+     }
-+   },
-+   styleLoaders: [
-+     { loader: 'css-loader' },
-+     {
-+       loader: 'less-loader?javascriptEnabled=true'
-+     }
-+   ],
-+   cwd: path.resolve('./')
-+ });
-```
-
-- Since [webpack-multiple-themes-compile][webpack-multiple-themes-compile] doesn't known what the default theme you need to load, you need to import the theme file by yourself.
-
-```
-loadCssFile('./theme-default.css');
-```
-
-#### Source code
-
-- [multiple-themes][multiple-themes]
 
 [cra]: https://github.com/facebook/create-react-app
 [rarl]: https://www.npmjs.com/package/react-app-rewire-less
