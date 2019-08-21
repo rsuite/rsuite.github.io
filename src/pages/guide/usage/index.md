@@ -1,11 +1,13 @@
-# 如何使用
+# 快速开始 ⚡️
+
+在开始之前，您至少需要掌握前端开发基础知识以及 React 的核心概念，如果在学习过程中遇到问题，可以在开发者社区与大家讨论。
 
 ## 安装
 
-首先需要在本地正确安装和配置 Node.js 环境。
+首先需要在本地正确安装 NPM 环境，通过 npm 安装 rsuite。
 
 ```bash
-$ npm install rsuite --save
+$ npm i rsuite --save
 ```
 
 如果您在使用 yarn 也可以通过 yarn 安装:
@@ -33,7 +35,7 @@ function App() {
 ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
-## 预览
+## 在线示例
 
 <iframe src="https://codesandbox.io/embed/k9v972q3lr" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 

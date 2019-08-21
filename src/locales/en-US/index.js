@@ -10,7 +10,7 @@ export default {
     components: 'Components',
     tools: 'Tools',
     introduction: 'Introduction',
-    usage: 'Usage',
+    usage: 'Quick Start',
     useWithCreateReactApp: 'Use in create-react-app',
     useNextApp: 'Use in Next.js',
     customizeTheme: 'Customize theme',

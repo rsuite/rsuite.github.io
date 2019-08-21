@@ -1,19 +1,37 @@
-# Customize theme
+# Customize theme 🎨
 
-## Import less
+Depending on the product's variability, React Suite provides flexible configurable parameters on the theme design.
 
-Create a separate `.less` file as follows, and then introduce this file.
+## Light/Dark theme
+
+React Suite offers Light and Dark 2 sets of themes that you can use depending on the needs of your product or the environment in which you operate.
+
+**☀️ Light**
 
 ```less
-@import '~rsuite/lib/styles/index.less'; //The default style file.
-@import 'custom-theme.less'; // Style customization.
+@import '~rsuite/lib/styles/themes/default.less';
+// @import '~rsuite/dist/styles/rsuite-default.css'
 ```
 
-If you use [webpack](http://webpack.github.io/) to build your project, you need to configure [less-loader](https://github.com/webpack-contrib/less-loader) 。
+**🌙 Dark**
+
+```less
+@import '~rsuite/lib/styles/themes/dark.less';
+// @import '~rsuite/dist/styles/rsuite-dark.css'
+```
 
 ## For customization
 
 The RSUITE style uses [Less][less] as the development language and defines a series of variables that can be customized using [Modify Variables][modify variables]. This includes but is not limited to customizing theme colors, resizing component fillet radii, modifying font styles, replacing auxiliary colors, and so on. The code in the following example is a new action in `custom-theme.less`.
+
+### Import less
+
+Create a separate `.less` file as follows, and then introduce this file.
+
+```less
+@import '~rsuite/lib/styles/themes/default.less'; //The default style file.
+@import 'custom-theme.less'; // Style customization.
+```
 
 ### Custom Theme Colors
 

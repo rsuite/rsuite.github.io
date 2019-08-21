@@ -9,7 +9,7 @@ export default {
     components: '组件',
     tools: '工具',
     introduction: '介绍',
-    usage: '如何使用',
+    usage: '快速开始',
     useWithCreateReactApp: '在 create-react-app 中使用',
     useNextApp: '在 Next.js 中使用',
     customizeTheme: '定制主题',

@@ -1,11 +1,13 @@
-# Usage
+# Quick Start ⚡️
+
+Before you start using it, you need to master at least the basics of front-end development and the core concepts of React. If you encounter problems during the learning process, you can discuss them in the developer community.
 
 ## Install
 
-You first need to install and configure the `Node.js` environment properly locally.
+First you need to properly install the NPM environment locally and install rsuite via npm.
 
 ```bash
-$ npm install rsuite --save
+$ npm i rsuite --save
 ```
 
 If you are using yarn you can also install through yarn:
@@ -33,7 +35,7 @@ function App() {
 ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
-## Preview
+## Online example
 
 <iframe src="https://codesandbox.io/embed/k9v972q3lr" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
