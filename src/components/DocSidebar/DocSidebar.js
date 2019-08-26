@@ -50,7 +50,7 @@ class DocSidebar extends React.PureComponent {
             }
 
             const title =
-              _.get(locale, 'id') === 'en-US' ? null : (
+              _.get(locale, 'id') === 'en-US' || !child.title ? null : (
                 <span className="title-zh">{child.title}</span>
               );
 

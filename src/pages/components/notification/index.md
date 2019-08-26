@@ -2,11 +2,13 @@
 
 用于全局通知，悬浮在页面角落。
 
-* `Notification.open` 默认通知。
-* `Notification.info` 信息通知。
-* `Notification.success` 成功信息通知。
-* `Notification.warning` 警告信息通知。
-* `Notification.error` 错误信息通知。
+- `Notification.open` 打开一个默认通知。
+- `Notification.info` 打开一个信息通知。
+- `Notification.success` 打开一个表示成功信息的通知。
+- `Notification.warning` 打开一个表示警告信息的通知。
+- `Notification.error` 打开一个表示错误信息的通知。
+- `Notification.close` 关闭一个通知。
+- `Notification.closeAll` 关闭所有通知。
 
 ## 获取组件
 
@@ -22,63 +24,58 @@ import { Notification } from 'rsuite';
 
 ### `Notification.open`
 
-```
-Notification.open(config: Config);
+```ts
+Notification.open(props: NotificationProps);
 ```
 
 ### `Notification.info`
 
-```
-Notification.info(config: Config);
+```ts
+Notification.info(props: NotificationProps);
 ```
 
 ### `Notification.success`
 
-```
-Notification.success(config: Config);
+```ts
+Notification.success(props: NotificationProps);
 ```
 
 ### `Notification.warning`
 
-```
-Notification.warning(config: Config);
+```ts
+Notification.warning(props: NotificationProps);
 ```
 
 ### `Notification.error`
 
-### `Notification.remove`
-
-```
-Notification.remove(key: string);
+```ts
+Notification.error(props: NotificationProps);
 ```
 
-手动移除消息框
+### `Notification.close`
 
-```js
-Notification.open({
-  title: 'Title',
-  description: 'Message',
-  key: 'myNotification'
-});
+```ts
+Notification.close(key?: string);
+```
 
-Notification.remove('myNotification');
+### `Notification.closeAll`
+
+```ts
+Notification.closeAll();
 ```
 
 ## Types
 
-### Config
-
-```typescript
-type Config{
-  title:string,
-  description:React.ElementType,
-  duration?:number,
-  placement?:string,
-  top?:number,
-  bottom?:number,
-  onClose?:()=>void,
-  style?:Object,
-  key?:string
+```ts
+interface NotificationProps {
+  title: React.ReactNode;
+  description: React.ReactNode;
+  duration?: number;
+  placement?: string;
+  top?: number;
+  bottom?: number;
+  key?: string;
+  onClose?: () => void;
 }
 ```
 
@@ -96,7 +93,7 @@ type Config{
 
 ## 相关组件
 
-* [`<Popover>`](./popover) 弹出框
-* [`<Tooltip>`](./tooltip) 文字提示
-* [`<Message>`](./message) 消息框
-* [`<Alert`>](./alert) 提醒框
+- [`<Popover>`](./popover) 弹出框
+- [`<Tooltip>`](./tooltip) 文字提示
+- [`<Message>`](./message) 消息框
+- [`<Alert`>](./alert) 提醒框

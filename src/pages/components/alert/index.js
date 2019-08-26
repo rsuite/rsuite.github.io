@@ -4,7 +4,7 @@ import createComponentExample from '@/utils/createComponentExample';
 
 export default createComponentExample({
   id: 'Alert',
-  examples: ['basic', 'duration'],
+  examples: ['basic', 'duration', 'close'],
   dependencies: {
     ButtonToolbar,
     Button,

@@ -2,12 +2,13 @@
 
 For global notifications, suspended in the corner of the page.
 
-* `Notification.open` default notification.
-* `Notification.info` information notice.
-* `Notification.success` successful information notification.
-* `Notification.warning` warning information
-* `Notification.error` error message notification.
-
+- `Notification.open` Open a default notification.
+- `Notification.info` Open a info notification.
+- `Notification.success` Open a notification that means success information.
+- `Notification.warning` Open a notification that means warning information.
+- `Notification.error` Open a notification that means error information.
+- `Notification.close` Close a notification.
+- `Notification.closeAll` Close all notifications.
 
 ## Usage
 
@@ -23,63 +24,58 @@ import { Notification } from 'rsuite';
 
 ### `Notification.open`
 
-```
-Notification.open(config: Config);
+```ts
+Notification.open(props: NotificationProps);
 ```
 
 ### `Notification.info`
 
-```
-Notification.info(config: Config);
+```ts
+Notification.info(props: NotificationProps);
 ```
 
 ### `Notification.success`
 
-```
-Notification.success(config: Config);
+```ts
+Notification.success(props: NotificationProps);
 ```
 
 ### `Notification.warning`
 
-```
-Notification.warning(config: Config);
+```ts
+Notification.warning(props: NotificationProps);
 ```
 
 ### `Notification.error`
 
-### `Notification.remove`
-
-```
-Notification.remove(key: string);
+```ts
+Notification.error(props: NotificationProps);
 ```
 
-Removes a message box.
+### `Notification.close`
 
-```js
-Notification.open({
-  title: 'Title',
-  description: 'Message',
-  key: 'myNotification'
-});
+```ts
+Notification.close(key?: string);
+```
 
-Notification.remove('myNotification');
+### `Notification.closeAll`
+
+```ts
+Notification.closeAll();
 ```
 
 ## Types
 
-### Config
-
-```typescript
-type Config{
-  title:string,
-  description:React.ElementType,
-  duration?:number,
-  placement?:string,
-  top?:number,
-  bottom?:number,
-  onClose?:()=>void,
-  style?:Object,
-  key?:string
+```ts
+interface NotificationProps {
+  title: React.ReactNode;
+  description: React.ReactNode;
+  duration?: number;
+  placement?: string;
+  top?: number;
+  bottom?: number;
+  key?: string;
+  onClose?: () => void;
 }
 ```
 
@@ -94,11 +90,9 @@ type Config{
 | title \*       | string                                   | The title of the message box                                                                                            |
 | top            | number `(24)`                            | The distance from the top of the message box                                                                            |
 
-
 ## Related components
 
-* [`<Popover>`](./popover)
-* [`<Tooltip>`](./tooltip)
-* [`<Message>`](./message)
-* [`<Alert`>](./alert)
-
+- [`<Popover>`](./popover)
+- [`<Tooltip>`](./tooltip)
+- [`<Message>`](./message)
+- [`<Alert`>](./alert)

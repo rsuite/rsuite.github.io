@@ -1,8 +1,8 @@
-# 关于 RSUITE
+# 关于 React Suite
 
 [![npm][npm-svg]][npm-home] [![Travis][travis-svg]][travis-home] [![Coverage Status][coverage-svg]][travis-home] [![Gitter][gitter-svg]][gitter]
 
-React Suite 是一套 React 组件库，为后台产品而生。由 HYPERS 前端团队与 UX 团队打造，主要服务于公司大数据产品线。经历了三次大的版本更新后，累积了大量的组件和丰富的功能。
+React Suite 是一套 React 组件库，为中后台产品而生。致力于创造出贴心的交互设计，同时为开发者提供了友好的开发体验。
 
 ### UI Design
 

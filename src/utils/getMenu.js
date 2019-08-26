@@ -54,6 +54,18 @@ const getMenu = locale => {
         },
         {
           id: 'logs',
+          name: _.get(locale, 'common.v3'),
+          target: '_blank',
+          url: 'https://v3.rsuitejs.com/'
+        },
+        {
+          id: 'logs',
+          name: _.get(locale, 'common.v2'),
+          target: '_blank',
+          url: 'https://v2.rsuitejs.com/'
+        },
+        {
+          id: 'logs',
           name: _.get(locale, 'common.changeLog'),
           target: '_blank',
           url: 'https://github.com/rsuite/rsuite/releases'

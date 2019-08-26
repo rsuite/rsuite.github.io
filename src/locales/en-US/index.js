@@ -28,7 +28,9 @@ export default {
     extension: 'Extensions',
     gettingStarted: 'Getting started',
     htmlElements: 'Supported HTML Elements',
-    modularized: 'Use modularized'
+    modularized: 'Use modularized',
+    v2: 'Version 2.*',
+    v3: 'Version 3.*'
   },
   table: {
     'tab.resizable': 'Resizable',

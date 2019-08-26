@@ -4,8 +4,6 @@ import _ from 'lodash';
 import { menu } from '@/utils/getMenu';
 import createComponentExample from '@/utils/createComponentExample';
 
-const context = require('./index.md');
-const examples = [];
 const components = menu[1].children.filter(item => item.id !== 'overview');
 
 const Item = ({ name, isComponent }) => (
@@ -26,7 +24,7 @@ export default locale => {
               if (item.group) {
                 return (
                   <li className="title" key={item.id}>
-                    <h2 id={item.name}>{item.name}</h2>
+                    <h4 id={item.name}># {item.name}</h4>
                   </li>
                 );
               } else {
@@ -37,6 +35,11 @@ export default locale => {
                       className="header"
                     >
                       {item.name}
+                      {locale === 'zh' ? (
+                        <span>
+                          <br /> ({item.title})
+                        </span>
+                      ) : null}
                     </Link>
                     <ul className="content">
                       {item.components

@@ -1,14 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-
 import { Button, ButtonToolbar, FlexboxGrid, Grid, Row } from 'rsuite';
-
 import TopLevelNav from '@/components/TopLevelNav';
 import LanguageSwitchButton from '@/components/LanguageSwitchButton';
 import Logo from '@/components/Logo';
 import ReactLogo from '@/components/ReactLogo';
-import Header from './Header';
 
 class HomePage extends React.Component {
   static contextTypes = {

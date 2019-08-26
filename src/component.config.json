@@ -428,6 +428,8 @@
     "components": [
       "Animation.Transition",
       "Animation.Fade",
+      "Animation.Bounce",
+      "Animation.Slide",
       "Animation.Collapse"
     ]
   },

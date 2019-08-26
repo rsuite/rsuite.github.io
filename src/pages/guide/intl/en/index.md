@@ -1,6 +1,6 @@
 # Internationalization
 
-`rsuite` in the component's internal copy default to English, if you need to set other languages, can be configured through `<Intlprovider>`.
+The language in the React Suite component defaults to English. If you need to set another language, you can configure it with `<IntlProvider>`.
 
 ## Usage
 
@@ -16,11 +16,19 @@ ReactDOM.render(
 );
 ```
 
-Supported languages: [locales](https://github.com/rsuite/rsuite/tree/master/src/IntlProvider/locales)
+## Supported languages
+
+| Language name | Description         |
+| ------------- | ------------------- |
+| zh_CN         | Simplified Chinese  |
+| zh_TW         | traditional Chinese |
+| en_GB         | English             |
+| en_US         | American English    |
+| pt_BR         | Portuguese (Brazil) |
 
 ## Expand or modify language
 
-Refer to the configuration in [default](https://github.com/rsuite/rsuite/blob/master/src/IntlProvider/locales/default.js) to make a new configuration, Pass the new configuration to the `locale` property of `<Intlprovider>`.
+You can refer to the configuration in the [default language](https://github.com/rsuite/rsuite/blob/master/src/IntlProvider/locales/default.js) file to make a new language pack passed to the `<IntlProvider>` component via the locale property.
 
 ## Used with react-intl
 

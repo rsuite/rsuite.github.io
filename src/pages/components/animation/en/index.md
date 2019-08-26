@@ -2,9 +2,11 @@
 
 Handling animation components
 
-- `Animation.Fade`.
-- `Animation.Collapse`.
-- `Animation.Transition`.
+- `<Animation.Fade>`
+- `<Animation.Collapse>`
+- `<Animation.Bounce>`
+- `<Animation.Slide>`
+- `<Animation.Transition>`
 
 When Transition fails to meet business needs，you can try [react-transition-group](https://github.com/reactjs/react-transition-group)
 

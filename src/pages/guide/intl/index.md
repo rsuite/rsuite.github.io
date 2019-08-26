@@ -1,6 +1,6 @@
 # 国际化
 
-`rsuite` 在组件内部文案默认为英文，如果需要设置其他其他语言，可以通过 `<IntlProvider />` 进行配置。
+React Suite 组件中的语言默认为英语。 如果需要设置其他语言，可以使用 `<IntlProvider>`进行配置。
 
 ## 使用示例
 
@@ -16,11 +16,19 @@ ReactDOM.render(
 );
 ```
 
-目前支持的语言: [locales](https://github.com/rsuite/rsuite/tree/master/src/IntlProvider/locales)
+## 目前支持的语言
+
+| 语言名称 | 描述           |
+| -------- | -------------- |
+| zh_CN    | 简体中文       |
+| zh_TW    | 繁体中文       |
+| en_GB    | 英语           |
+| en_US    | 美式英语       |
+| pt_BR    | 葡萄牙语(巴西) |
 
 ## 扩展或者修改语言
 
-参考 [default](https://github.com/rsuite/rsuite/blob/master/src/IntlProvider/locales/default.js) 中的配置，做一个新的配置，把新的配置，传递给 `<IntlProvider>` 的 `locale` 属性。
+您可以参考 [默认语言文件](https://github.com/rsuite/rsuite/blob/master/src/IntlProvider/locales/default.js) 中的配置，做一个新的语言包通过 `locale` 属性传递给 `<IntlProvider>` 组件。
 
 ## 与 react-intl 同时使用
 

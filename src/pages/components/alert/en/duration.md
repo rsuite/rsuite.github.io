@@ -1,6 +1,6 @@
-### Delay Off
+### Duration
 
-Duration is an optional item. When set to 0, it is not automatically turned off.
+Duration is an optional item. When set to 0, it is not automatically turned close.
 
 ```
 Alert.info(content: string, duration?: number, onClose?: () => void);

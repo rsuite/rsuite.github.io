@@ -2,9 +2,7 @@
 
 [![npm][npm-svg]][npm-home] [![Travis][travis-svg]][travis-home] [![Coverage Status][coverage-svg]][coverage-home] [![Gitter][gitter-svg]][gitter]
 
-React Suite is a set of react component libraries for enterprise system products. Built by HYPERS front-end team and UX team, mainly serving company's big data products.
-
-After three major revisions, a large number of components and rich functionality have been accumulated.
+React Suite is a library of React components. Committed to creating intimate interactive designs while providing developers with a friendly development experience.
 
 ## UI Design
 
