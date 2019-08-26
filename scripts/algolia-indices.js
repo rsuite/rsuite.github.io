@@ -1,7 +1,8 @@
 const util = require('util');
 const fs = require('fs');
 const _ = require('lodash');
-const components = require('../src/fixtures/components.json');
+const algoliasearch = require('algoliasearch');
+const components = require('../src/component.config.json');
 
 const items = components.filter(item => !item.group && item.id !== 'overview');
 const readFile = util.promisify(fs.readFile);
@@ -24,6 +25,7 @@ async function getIndices(locale) {
     }
 
     indices.push({
+      objectID: item.id,
       component: item.id,
       title: locale === 'zh' ? `${item.name} ${item.title}` : item.name,
       anchor: item.id,
@@ -38,11 +40,17 @@ const { ALGOLIA_APP_ID, ALGOLIA_SECRET } = process.env;
 
 if (ALGOLIA_APP_ID && ALGOLIA_SECRET) {
   const client = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_SECRET);
+
   function uploadIndices(locale = zh) {
     getIndices(locale).then(indices => {
       const reposIndex = client.initIndex(`rsuite-${locale}`);
       reposIndex.clearIndex();
-      reposIndex.saveObjects(indices);
+      reposIndex.saveObjects(indices, (err, content) => {
+        if (err) {
+          throw err;
+        }
+        console.log(content);
+      });
     });
   }
 
