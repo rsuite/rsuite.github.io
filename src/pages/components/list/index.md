@@ -27,7 +27,6 @@ import { List } from 'rsuite';
 | size               | enums: 'lg','md','sm'  `md`              | 列表大小            |
 | autoScroll         | boolean  `true`                          | 溢出表格自动滚动    |
 | pressDelay         | number `0`                               | 排序触发延迟        |
-| pressThreshold     | number `5`                               | 排序触发阈值        |
 | transitionDuration | number `300`                             | 排序动画持续时间        |
 | onSortStart        | (payload:{ collection: number/string, node:HTMLElement, newIndex: number, oldIndex: number }) => void | 排序开始回调        |
 | onSortMove         | (payload:{ collection: number/string, node:HTMLElement, newIndex: number, oldIndex: number }) => void | 排序移动元素时的回调        |

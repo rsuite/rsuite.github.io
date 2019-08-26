@@ -27,7 +27,6 @@ import { List } from 'rsuite';
 | size               | enums: 'lg','md','sm'  `md`              | list items size            |
 | autoScroll         | boolean  `true`                          | auto scroll when overflow    |
 | pressDelay         | number `0`                               | delay before trigger sort        |
-| pressThreshold     | number `5`                               | threshold of trigger sort        |
 | transitionDuration | number `300`                             | duration of sort animation   |
 | onSortStart        | (payload:{ collection: number/string, node:HTMLElement, newIndex: number, oldIndex: number }) => void | callback of beginning of sorting        |
 | onSortMove         | (payload:{ collection: number/string, node:HTMLElement, newIndex: number, oldIndex: number }) => void | callback of moving over a list items       |
