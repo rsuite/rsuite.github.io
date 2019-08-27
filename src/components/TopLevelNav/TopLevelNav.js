@@ -47,6 +47,7 @@ class TopLevelNav extends React.Component {
   static propTypes = {
     showSubmenu: PropTypes.bool,
     onToggleMenu: PropTypes.func,
+    onChangeTheme: PropTypes.func,
     hideToggle: PropTypes.bool
   };
 
@@ -91,7 +92,9 @@ class TopLevelNav extends React.Component {
   handleToggleThemeButtonClick = () => {
     const { light } = this.state;
     this.setState({ light: !light }, () => {
-      this.loadTheme(this.state.light ? 'default' : 'dark');
+      const themeName = this.state.light ? 'default' : 'dark';
+      this.loadTheme(themeName);
+      this.props.onChangeTheme(themeName);
     });
   };
 
@@ -172,7 +175,7 @@ class TopLevelNav extends React.Component {
             className="icon-btn-circle"
             componentClass="a"
             target="_blank"
-            href="/design/index.html"
+            href="/design/default/index.html"
           >
             <Icon icon={design} svgStyle={svgStyle} size="lg" />
           </WithTooltipButton>
