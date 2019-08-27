@@ -14,84 +14,152 @@
     "id": "button",
     "name": "Button",
     "title": "按钮",
-    "components": ["Button", "ButtonGroup", "IconButton"],
-    "designHash": "artboard1"
+    "components": [
+      "Button",
+      "ButtonGroup",
+      "IconButton"
+    ],
+    "designHash": {
+      "default": "1",
+      "dark": "1"
+    }
   },
   {
     "id": "icon",
     "name": "Icon",
     "title": "图标",
-    "components": ["Icon"]
+    "components": [
+      "Icon"
+    ]
   },
   {
     "id": "tooltip",
     "name": "Tooltip",
     "title": "文字提示",
-    "components": ["Tooltip", "Whisper"],
-    "designHash": "artboard19"
+    "components": [
+      "Tooltip",
+      "Whisper"
+    ],
+    "designHash": {
+      "default": "19",
+      "dark": "19"
+    }
   },
   {
     "id": "popover",
     "name": "Popover",
     "title": "弹出框",
-    "components": ["Popover", "Whisper"],
-    "designHash": "artboard17"
+    "components": [
+      "Popover",
+      "Whisper"
+    ],
+    "designHash": {
+      "default": "17",
+      "dark": "17"
+    }
   },
   {
     "id": "alert",
     "name": "Alert",
     "title": "提醒框",
-    "components": ["Alert"],
-    "designHash": "artboard0"
+    "components": [
+      "Alert"
+    ],
+    "designHash": {
+      "default": "0",
+      "dark": "0"
+    }
   },
   {
     "id": "notification",
     "name": "Notification",
     "title": "通知框",
-    "components": ["Notification"],
-    "designHash": "artboard16"
+    "components": [
+      "Notification"
+    ],
+    "designHash": {
+      "default": "16",
+      "dark": "16"
+    }
   },
   {
     "id": "message",
     "name": "Message",
     "title": "消息框",
-    "components": ["Message"],
-    "designHash": "artboard14"
+    "components": [
+      "Message"
+    ],
+    "designHash": {
+      "default": "14",
+      "dark": null
+    }
   },
   {
     "id": "loader",
     "name": "Loader",
     "title": "加载器",
-    "components": ["Loader"],
-    "designHash": "artboard13"
+    "components": [
+      "Loader"
+    ],
+    "designHash": {
+      "default": "13",
+      "dark": "13"
+    }
   },
   {
     "id": "modal",
     "name": "Modal",
     "title": "模态框",
-    "components": ["Modal", "Modal.Header", "Modal.Body", "Modal.Footer"],
-    "designHash": "artboard15"
+    "components": [
+      "Modal",
+      "Modal.Header",
+      "Modal.Body",
+      "Modal.Footer"
+    ],
+    "designHash": {
+      "default": "15",
+      "dark": "15"
+    }
   },
   {
     "id": "drawer",
     "name": "Drawer",
     "title": "抽屉",
-    "components": ["Drawer", "Drawer.Header", "Drawer.Body", "Drawer.Footer"],
-    "designHash": "artboard11"
+    "components": [
+      "Drawer",
+      "Drawer.Header",
+      "Drawer.Body",
+      "Drawer.Footer"
+    ],
+    "designHash": {
+      "default": "11",
+      "dark": "11"
+    }
   },
   {
     "id": "divider",
     "name": "Divider",
     "title": "分割线",
-    "components": ["Divider"],
-    "designHash": "artboard10"
+    "components": [
+      "Divider"
+    ],
+    "designHash": {
+      "default": "10",
+      "dark": "10"
+    }
   },
   {
     "id": "progress",
     "name": "Progress",
     "title": "进度条",
-    "components": ["Progress.Line", "Progress.Circle"],
-    "designHash": "artboard18"
+    "components": [
+      "Progress.Line",
+      "Progress.Circle"
+    ],
+    "designHash": {
+      "default": "18",
+      "dark": "18"
+    }
   },
   {
     "id": "placeholder",
@@ -101,8 +169,7 @@
       "Placeholder.Graph",
       "Placeholder.Grid",
       "Placeholder.Paragraph"
-    ],
-    "designHash": "artboard_placeholder"
+    ]
   },
   {
     "group": true,
@@ -114,50 +181,96 @@
     "id": "dropdown",
     "name": "Dropdown",
     "title": "下拉菜单",
-    "components": ["Dropdown", "Dropdown.Item", "Dropdown.Menu"],
-    "designHash": "artboard21"
+    "components": [
+      "Dropdown",
+      "Dropdown.Item",
+      "Dropdown.Menu"
+    ],
+    "designHash": {
+      "default": "21",
+      "dark": "21"
+    }
   },
   {
     "id": "nav",
     "name": "Nav",
     "title": "导航",
-    "components": ["Nav", "Nav.Item", "Nav.Dropdown"],
-    "designHash": "artboard22"
+    "components": [
+      "Nav",
+      "Nav.Item",
+      "Nav.Dropdown"
+    ],
+    "designHash": {
+      "default": "22",
+      "dark": "22"
+    }
   },
   {
     "id": "navbar",
     "name": "Navbar",
     "title": "导航栏",
-    "components": ["Navbar", "Navbar.Header", "Navbar.Brand", "Navbar.Body"],
-    "designHash": "artboard24"
+    "components": [
+      "Navbar",
+      "Navbar.Header",
+      "Navbar.Brand",
+      "Navbar.Body"
+    ],
+    "designHash": {
+      "default": "24",
+      "dark": "24"
+    }
   },
   {
     "id": "sidenav",
     "name": "Sidenav",
     "title": "侧导航",
-    "components": ["Sidenav", "Sidenav.Header", "Sidenav.Body"],
-    "designHash": "artboard27"
+    "components": [
+      "Sidenav",
+      "Sidenav.Header",
+      "Sidenav.Body"
+    ],
+    "designHash": {
+      "default": "27",
+      "dark": "27"
+    }
   },
   {
     "id": "steps",
     "name": "Steps",
     "title": "步骤条",
-    "components": ["Steps", "Steps.Item"],
-    "designHash": "artboard30"
+    "components": [
+      "Steps",
+      "Steps.Item"
+    ],
+    "designHash": {
+      "default": "30",
+      "dark": "30"
+    }
   },
   {
     "id": "pagination",
     "name": "Pagination",
     "title": "分页",
-    "components": ["Pagination"],
-    "designHash": "artboard26"
+    "components": [
+      "Pagination"
+    ],
+    "designHash": {
+      "default": "26",
+      "dark": "26"
+    }
   },
   {
     "id": "breadcrumb",
     "name": "Breadcrumb",
     "title": "面包屑",
-    "components": ["Breadcrumb", "Breadcrumb.Item"],
-    "designHash": "artboard20"
+    "components": [
+      "Breadcrumb",
+      "Breadcrumb.Item"
+    ],
+    "designHash": {
+      "default": "20",
+      "dark": "20"
+    }
   },
   {
     "group": true,
@@ -175,21 +288,37 @@
       "FormGroup",
       "ControlLabel",
       "HelpBlock"
-    ]
+    ],
+    "designHash": {
+      "default": "44",
+      "dark": "42"
+    }
   },
   {
     "id": "checkbox",
     "name": "Checkbox",
     "title": "复选框",
-    "components": ["Checkbox", "CheckboxGroup"],
-    "designHash": "artboard33"
+    "components": [
+      "Checkbox",
+      "CheckboxGroup"
+    ],
+    "designHash": {
+      "default": "36",
+      "dark": "34"
+    }
   },
   {
     "id": "radio",
     "name": "Radio",
     "title": "单选框",
-    "components": ["Radio", "RadioGroup"],
-    "designHash": "artboard52"
+    "components": [
+      "Radio",
+      "RadioGroup"
+    ],
+    "designHash": {
+      "default": "57",
+      "dark": "55"
+    }
   },
   {
     "id": "input",
@@ -201,112 +330,190 @@
       "InputGroup.Button",
       "InputGroup.Addon"
     ],
-    "designHash": "artboard45"
+    "designHash": {
+      "default": "49",
+      "dark": "47"
+    }
   },
   {
     "id": "input-number",
     "name": "InputNumber",
     "title": "数字输入框",
-    "components": ["InputNumber"],
-    "designHash": "artboard48"
+    "components": [
+      "InputNumber"
+    ],
+    "designHash": {
+      "default": "52",
+      "dark": "50"
+    }
   },
   {
     "id": "auto-complete",
     "name": "AutoComplete",
     "title": "自动完成控件",
-    "components": ["AutoComplete"],
-    "designHash": "artboard31"
+    "components": [
+      "AutoComplete"
+    ],
+    "designHash": {
+      "default": "31",
+      "dark": "31"
+    }
   },
   {
     "id": "toggle",
     "name": "Toggle",
     "title": "开关",
-    "components": ["Toggle"],
-    "designHash": "artboard57"
+    "components": [
+      "Toggle"
+    ],
+    "designHash": {
+      "default": "62",
+      "dark": "60"
+    }
   },
   {
     "id": "input-picker",
     "name": "InputPicker",
     "title": "输入选择器",
-    "components": ["InputPicker"],
-    "designHash": "artboard49"
+    "components": [
+      "InputPicker"
+    ],
+    "designHash": {
+      "default": "53",
+      "dark": "51"
+    }
   },
   {
     "id": "tag-picker",
     "name": "TagPicker",
     "title": "标签选择器",
-    "components": ["TagPicker"],
-    "designHash": "artboard56"
+    "components": [
+      "TagPicker"
+    ],
+    "designHash": {
+      "default": "61",
+      "dark": "59"
+    }
   },
   {
     "id": "select-picker",
     "name": "SelectPicker",
     "title": "单项选择器",
-    "components": ["SelectPicker"],
-    "designHash": "artboard54"
+    "components": [
+      "SelectPicker"
+    ],
+    "designHash": {
+      "default": "59",
+      "dark": "57"
+    }
   },
   {
     "id": "check-picker",
     "name": "CheckPicker",
     "title": "多项选择器",
-    "components": ["CheckPicker"],
-    "designHash": "artboard34"
+    "components": [
+      "CheckPicker"
+    ],
+    "designHash": {
+      "default": "37",
+      "dark": "35"
+    }
   },
   {
     "id": "tree-picker",
     "name": "TreePicker",
     "title": "树形单项选择器",
-    "components": ["TreePicker"],
-    "designHash": "artboard58"
+    "components": [
+      "TreePicker"
+    ],
+    "designHash": {
+      "default": "63",
+      "dark": "61"
+    }
   },
   {
     "id": "check-tree-picker",
     "name": "CheckTreePicker",
     "title": "树形多项选择器",
-    "components": ["CheckTreePicker"],
-    "designHash": "artboard35"
+    "components": [
+      "CheckTreePicker"
+    ],
+    "designHash": {
+      "default": "38",
+      "dark": "36"
+    }
   },
   {
     "id": "cascader",
     "name": "Cascader",
     "title": "级联选择器",
-    "components": ["Cascader"],
-    "designHash": "artboard32"
+    "components": [
+      "Cascader"
+    ],
+    "designHash": {
+      "default": "32",
+      "dark": "32"
+    }
   },
   {
     "id": "multi-cascader",
     "name": "MultiCascader",
     "title": "级联多项选择器",
-    "components": ["MultiCascader"],
-    "designHash": "artboard50"
+    "components": [
+      "MultiCascader"
+    ],
+    "designHash": {
+      "default": "55",
+      "dark": "53"
+    }
   },
   {
     "id": "date-picker",
     "name": "DatePicker",
     "title": "日期选择器",
-    "components": ["DatePicker"],
-    "designHash": "artboard36"
+    "components": [
+      "DatePicker"
+    ],
+    "designHash": {
+      "default": "39",
+      "dark": "37"
+    }
   },
   {
     "id": "date-range-picker",
     "name": "DateRangePicker",
     "title": "日期范围选择器",
-    "components": ["DateRangePicker"],
-    "designHash": "artboard40"
+    "components": [
+      "DateRangePicker"
+    ],
+    "designHash": {
+      "default": "43",
+      "dark": "41"
+    }
   },
   {
     "id": "slider",
     "name": "Slider",
     "title": "滑动输入控件",
-    "components": ["Slider"],
-    "designHash": "artboard55"
+    "components": [
+      "Slider"
+    ],
+    "designHash": {
+      "default": "60",
+      "dark": "58"
+    }
   },
   {
     "id": "uploader",
     "name": "Uploader",
     "title": "上传控件",
-    "components": ["Uploader"],
-    "designHash": "artboard59"
+    "components": [
+      "Uploader"
+    ],
+    "designHash": {
+      "default": "64",
+      "dark": "62"
+    }
   },
   {
     "group": true,
@@ -318,13 +525,25 @@
     "id": "avatar",
     "name": "Avatar",
     "title": "头像",
-    "components": ["Avatar"]
+    "components": [
+      "Avatar"
+    ],
+    "designHash": {
+      "default": "65",
+      "dark": "63"
+    }
   },
   {
     "id": "badge",
     "name": "Badge",
     "title": "徽标",
-    "components": ["Badge"]
+    "components": [
+      "Badge"
+    ],
+    "designHash": {
+      "default": "66",
+      "dark": "64"
+    }
   },
   {
     "id": "table",
@@ -337,52 +556,89 @@
       "Table.Cell",
       "Table.Pagination"
     ],
-    "designHash": "artboard61"
+    "designHash": {
+      "default": "70",
+      "dark": "68"
+    }
   },
   {
     "id": "tree",
     "name": "Tree",
     "title": "树形控件",
-    "components": ["Tree"]
+    "components": [
+      "Tree"
+    ]
   },
   {
     "id": "check-tree",
     "name": "CheckTree",
     "title": "树形多选控件",
-    "components": ["CheckTree"]
+    "components": [
+      "CheckTree"
+    ]
   },
   {
     "id": "panel",
     "name": "Panel",
     "title": "面板",
-    "components": ["Panel", "PanelGroup"],
-    "designHash": "artboard60"
+    "components": [
+      "Panel",
+      "PanelGroup"
+    ],
+    "designHash": {
+      "default": "69",
+      "dark": "67"
+    }
   },
   {
     "id": "timeline",
     "name": "Timeline",
     "title": "时间轴",
-    "components": ["Timeline", "Timeline.Item"],
-    "designHash": "artboard70"
+    "components": [
+      "Timeline",
+      "Timeline.Item"
+    ],
+    "designHash": {
+      "default": "79",
+      "dark": "77"
+    }
   },
   {
     "id": "tag",
     "name": "Tag",
     "title": "标签",
-    "components": ["Tag"],
-    "designHash": "artboard69"
+    "components": [
+      "Tag"
+    ],
+    "designHash": {
+      "default": "78",
+      "dark": "76"
+    }
   },
   {
     "id": "list",
     "name": "List",
     "title": "列表",
-    "components": ["List", "List.Item"]
+    "components": [
+      "List",
+      "List.Item"
+    ],
+    "designHash": {
+      "default": "67",
+      "dark": "65"
+    }
   },
   {
     "id": "calendar",
     "name": "Calendar",
     "title": "日历",
-    "components": ["Calendar"]
+    "components": [
+      "Calendar"
+    ],
+    "designHash": {
+      "default": "96",
+      "dark": "94"
+    }
   },
   {
     "group": true,
@@ -394,20 +650,36 @@
     "id": "grid",
     "name": "Grid",
     "title": "栅格",
-    "components": ["Grid", "Row", "Col"]
+    "components": [
+      "Grid",
+      "Row",
+      "Col"
+    ]
   },
   {
     "id": "flexbox-grid",
     "name": "FlexboxGrid",
     "title": "弹性栅格",
-    "components": ["FlexboxGrid", "FlexboxGrid.Item"]
+    "components": [
+      "FlexboxGrid",
+      "FlexboxGrid.Item"
+    ]
   },
   {
     "id": "container",
     "name": "Container",
     "title": "容器布局",
-    "components": ["Container", "Header", "Footer", "Content", "Sidebar"],
-    "designHash": "artboard71"
+    "components": [
+      "Container",
+      "Header",
+      "Footer",
+      "Content",
+      "Sidebar"
+    ],
+    "designHash": {
+      "default": "80",
+      "dark": "78"
+    }
   },
   {
     "group": true,
@@ -419,7 +691,10 @@
     "id": "schema",
     "name": "Schema",
     "title": "数据模型",
-    "apis": ["Schema.Model", "Schema.Types"]
+    "apis": [
+      "Schema.Model",
+      "Schema.Types"
+    ]
   },
   {
     "id": "animation",
@@ -437,12 +712,16 @@
     "id": "portal",
     "name": "Portal",
     "title": "入口",
-    "components": ["Portal"]
+    "components": [
+      "Portal"
+    ]
   },
   {
     "id": "dom-helper",
     "name": "DOMHelper",
     "title": "DOM 助手",
-    "apis": ["DOMHelper"]
+    "apis": [
+      "DOMHelper"
+    ]
   }
 ]
