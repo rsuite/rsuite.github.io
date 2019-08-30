@@ -1,5 +1,7 @@
 ### Duration
 
+Duration is an optional item. When set to 0, it is not automatically turned close.
+
 <!--start-code-->
 
 ```js
