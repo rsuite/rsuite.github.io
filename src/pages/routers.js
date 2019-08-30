@@ -1,16 +1,16 @@
 import React from 'react';
-import { Route } from 'react-router';
+import { Route, IndexRedirect } from 'react-router';
 import Frame from '@/components/Frame';
-import getMenu from '@/utils/getMenu';
-import { getDict } from '@/locales';
 import { setTitle } from '@/title';
 
 export const createRouters = (locale, onEnter, onEntered) => {
-  const menu = getMenu(getDict(locale));
+  const localePath = locale === 'en' ? '/en/' : '/';
 
   return (
     <React.Fragment>
       <Route path="components" component={Frame}>
+        <IndexRedirect to={`${localePath}/components/overview`} />
+
         <Route
           path="overview"
           getComponents={(location, callback) => {
@@ -961,6 +961,8 @@ export const createRouters = (locale, onEnter, onEntered) => {
       </Route>
 
       <Route path="tools" component={Frame}>
+        <IndexRedirect to={`${localePath}/tools/palette`} />
+
         <Route
           path="palette"
           getComponents={(location, callback) => {
@@ -1139,6 +1141,19 @@ export const createRouters = (locale, onEnter, onEntered) => {
         }}
         onEnter={() => {
           setTitle('Extensions');
+        }}
+      />
+
+      <Route
+        path="*"
+        getComponents={(location, callback) => {
+          onEnter && onEnter();
+          require.ensure([], require => {
+            const getComponent = require('./error/index')['default'];
+            const component = getComponent(locale);
+            callback && callback(null, component);
+            onEntered && onEntered();
+          });
         }}
       />
     </React.Fragment>
