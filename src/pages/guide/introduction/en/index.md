@@ -60,8 +60,8 @@ You can learn about our development plan through [Trello](https://trello.com/b/n
 
 If you like RSUITE, you can show your support by either
 
-- Starring this repo
-- [Leaving a comment here][issues-11] if you are using RSUITE in your project (like we do :smile:)
+- [![rsuite-stars][rsuite-stars]](https://github.com/rsuite/rsuite) this repo
+- [Leaving a comment here][issues-11] if you are using RSUITE in your project (like we do 😄)
 - [Becoming a backer][opencollective-home] on OpenCollective
 
 [![opencollective-now][opencollective-svg]][opencollective-home]
@@ -104,3 +104,4 @@ RSUITE is [MIT licensed][license]. Copyright (c) 2016-present, HYPERS.
 [demo-typescript-app]: https://github.com/rsuite/examples/tree/master/typescript-app
 [demo-ssr-app]: https://github.com/rsuite/rsuite-management-system-ssr
 [demo-umi-app]: https://github.com/rsuite/examples/tree/master/umi-app
+[rsuite-stars]: https://img.shields.io/github/stars/rsuite/rsuite?style=social
