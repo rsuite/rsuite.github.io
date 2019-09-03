@@ -12,11 +12,15 @@ React Suite 设计原型与规范， [点击查看][rsuite-design]。
 
 ### 浏览器
 
-React Suite 支持最新的，稳定版的全部主流浏览器和平台。 从 React Suite 3 开始不支持 IE9 以下版本(包括 IE9)。不推荐在移动端使用。
+React Suite 支持最新的，稳定版的全部主流浏览器和平台。
 
-| IE   | Edge | Firefox | Chrome | Safari |
-| ---- | ---- | ------- | ------ | ------ |
-| >=10 | >=14 | >= 45   | >= 49  | >= 10  |
+- 我们对 IE10 提供有限度的支持，部分样式和动画在 IE10 下的变现会有所简化。对于 IE 系列浏览器，需要提供使用 Polyfill 进行支持，我们建议您使用 [babel-preset-env][babel-preset-env] 来处理浏览器的兼容性问题。
+- 从 React Suite 3 开始** 不支持 IE9 以下版本(包括 IE9) ** 。
+- 不推荐在移动端使用。
+
+| <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" /></br>IE | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" /></br>Edge | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" /></br>Firefox | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" /> </br>Chrome | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" /></br>Safari | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/electron/electron_48x48.png" alt="Electron" width="24px" height="24px" /></br>Electron |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| >=10                                                                                                                                                 | >= 14                                                                                                                                                  | >= 45                                                                                                                                                         | >=49                                                                                                                                                       | >=10                                                                                                                                                      | last 2 versions                                                                                                                                                   |
 
 ### 服务端
 
@@ -104,3 +108,4 @@ RSUITE 基于 [MIT licensed][license] 发布。
 [demo-typescript-app]: https://github.com/rsuite/examples/tree/master/typescript-app
 [demo-ssr-app]: https://github.com/rsuite/rsuite-management-system-ssr
 [demo-umi-app]: https://github.com/rsuite/examples/tree/master/umi-app
+[babel-preset-env]: https://babeljs.io/docs/en/babel-preset-env
