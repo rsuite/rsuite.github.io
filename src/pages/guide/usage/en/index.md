@@ -4,7 +4,9 @@ Before you start using it, you need to master at least the basics of front-end d
 
 ## Install
 
-First you need to properly install the NPM environment locally and install rsuite via npm.
+### Using npm or yarn
+
+We recommend using npm or yarn to install.First you need to properly install the NPM environment locally and install rsuite via npm.
 
 ```bash
 $ npm i rsuite --save
@@ -14,6 +16,19 @@ If you are using yarn you can also install through yarn:
 
 ```bash
 $ yarn add rsuite
+```
+
+### Using CDN
+
+Add `script` and `link` tags in your browser and use the global variable `rsuite`. We provide relevant file in rsuite's npm package. You can also download these files directly from [![cdnjs][cdnjs-badge]][cdnjs-home]、[![jsDelivr][jsdelivr-badge]][jsdelivr-home] or [UNPKG][unpkg-home] .
+
+```
+<!-- Import styles -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rsuite@4.0.0-alpha.6/dist/styles/rsuite-default.min.css">
+<!-- Or import dark styles -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rsuite@4.0.0-alpha.6/dist/styles/rsuite-dark.min.css">
+<!-- Import library -->
+<script src="https://cdn.jsdelivr.net/npm/rsuite@4.0.0-alpha.6/dist/rsuite.min.js"></script>
 ```
 
 ## Examples
@@ -42,4 +57,9 @@ ReactDOM.render(<App />, document.getElementById('root'));
 - [Use in create-react-app](use-with-create-react-app)
 - [Use in Next.js](use-next-app)
 
+[cdnjs-badge]: https://img.shields.io/cdnjs/v/rsuite.svg?style=flat-square
+[cdnjs-home]: https://cdnjs.com/libraries/rsuite
+[jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/rsuite/badge
+[jsdelivr-home]: https://www.jsdelivr.com/package/npm/rsuite
+[unpkg-home]: https://unpkg.com/browse/rsuite/dist/
 [gitter-home]: https://gitter.im/rsuite/rsuite
