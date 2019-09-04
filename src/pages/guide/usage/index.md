@@ -1,6 +1,6 @@
 # 快速开始 ⚡️
 
-在开始之前，您至少需要掌握前端开发基础知识以及 React 的核心概念，如果在学习过程中遇到问题，可以在开发者社区与大家讨论。
+在开始之前，您至少需要掌握前端开发基础知识以及 React 的核心概念，如果在学习过程中遇到问题，可以在[开发者社区][wechat-entry]与大家讨论。
 
 ## 安装
 
@@ -62,3 +62,4 @@ ReactDOM.render(<App />, document.getElementById('root'));
 [jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/rsuite/badge
 [jsdelivr-home]: https://www.jsdelivr.com/package/npm/rsuite
 [unpkg-home]: https://unpkg.com/browse/rsuite/dist/
+[wechat-entry]: https://github.com/rsuite/rsuite/blob/master/README_zh.md#%E6%94%AF%E6%8C%81-react-suite

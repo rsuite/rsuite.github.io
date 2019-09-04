@@ -29,7 +29,9 @@ export default {
     htmlElements: '支持的 HTML 元素',
     modularized: '按需加载',
     v2: '2.* 版本',
-    v3: '3.* 版本'
+    v3: '3.* 版本',
+    notFount: '该页面无法显示（404）',
+    goHomePage: '返回首页'
   },
   table: {
     'tab.resizable': '可调整列宽',

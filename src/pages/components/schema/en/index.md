@@ -2,14 +2,14 @@
 
 Schema can define a data model for validating data, and can validate Form component data.
 
-* Schema.Model Defining Data Model objects
-* Schema.Types Provides a set of data types：
-  * StringType
-  * NumberType
-  * ArrayType
-  * DateType
-  * ObjectType
-  * BooleanType
+- Schema.Model Defining Data Model objects
+- Schema.Types Provides a set of data types：
+  - StringType
+  - NumberType
+  - ArrayType
+  - DateType
+  - ObjectType
+  - BooleanType
 
 ## Usage
 
@@ -116,6 +116,46 @@ model.check({ password1: '123456', password2: 'root' });
 **/
 ```
 
+## Custom verification - Asynchronous check
+
+For example, verify that the mailbox is duplicated
+
+```js
+function asyncCheckEmail(email) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      if (email === 'foo@domain.com') {
+        resolve(false);
+      } else {
+        resolve(true);
+      }
+    }, 500);
+  });
+}
+
+const model = SchemaModel({
+  email: StringType()
+    .isEmail('Please input the correct email address')
+    .addRule((value, data) => {
+      return asyncCheckEmail(value);
+    }, 'Email address already exists')
+    .isRequired('This field cannot be empty')
+});
+
+model.checkAsync({ email: 'foo@domain.com' }).then(result => {
+  console.log(result);
+});
+
+/**
+{
+  email: {
+    hasError: true,
+    errorMessage: 'Email address already exists'
+  }
+};
+**/
+```
+
 ## Validate nested objects
 
 Validate nested objects, which can be defined using the `ObjectType().shape` method. E.g:
@@ -188,34 +228,34 @@ model4.check({
 
 ---
 
-* `StringType`
-* `NumberType`
-* `ArrayType`
-* `DateType`
-* `ObjectType`
-* `BooleanType`
+- `StringType`
+- `NumberType`
+- `ArrayType`
+- `DateType`
+- `ObjectType`
+- `BooleanType`
 
 ### StringType
 
-* isRequired(errorMessage: string, trim: boolean = true)
+- isRequired(errorMessage: string, trim: boolean = true)
 
 ```js
 StringType().isRequired('This field required');
 ```
 
-* isEmail(errorMessage: string)
+- isEmail(errorMessage: string)
 
 ```js
 StringType().isEmail('Please input the correct email address');
 ```
 
-* isURL(errorMessage: string)
+- isURL(errorMessage: string)
 
 ```js
 StringType().isURL('Please enter the correct URL address');
 ```
 
-* isOneOf(items: Array, errorMessage: string)
+- isOneOf(items: Array, errorMessage: string)
 
 ```js
 StringType().isOneOf(
@@ -224,13 +264,13 @@ StringType().isOneOf(
 );
 ```
 
-* containsLetter(errorMessage: string)
+- containsLetter(errorMessage: string)
 
 ```js
 StringType().containsLetter('Must contain English characters');
 ```
 
-* containsUppercaseLetter(errorMessage: string)
+- containsUppercaseLetter(errorMessage: string)
 
 ```js
 StringType().containsUppercaseLetter(
@@ -238,7 +278,7 @@ StringType().containsUppercaseLetter(
 );
 ```
 
-* containsLowercaseLetter(errorMessage: string)
+- containsLowercaseLetter(errorMessage: string)
 
 ```js
 StringType().containsLowercaseLetter(
@@ -246,19 +286,19 @@ StringType().containsLowercaseLetter(
 );
 ```
 
-* containsLetterOnly(errorMessage: string)
+- containsLetterOnly(errorMessage: string)
 
 ```js
 StringType().containsLetterOnly('English characters that can only be included');
 ```
 
-* containsNumber(errorMessage: string)
+- containsNumber(errorMessage: string)
 
 ```js
 StringType().containsNumber('Must contain numbers');
 ```
 
-* pattern(regExp: RegExp, errorMessage: string)
+- pattern(regExp: RegExp, errorMessage: string)
 
 ```js
 StringType().pattern(
@@ -267,7 +307,7 @@ StringType().pattern(
 );
 ```
 
-* rangeLength(minLength: number, maxLength: number, errorMessage: string)
+- rangeLength(minLength: number, maxLength: number, errorMessage: string)
 
 ```js
 StringType().rangeLength(
@@ -277,19 +317,19 @@ StringType().rangeLength(
 );
 ```
 
-* minLength(minLength: number, errorMessage: string)
+- minLength(minLength: number, errorMessage: string)
 
 ```js
 StringType().minLength(6, 'Minimum 6 characters required');
 ```
 
-* maxLength(maxLength: number, errorMessage: string)
+- maxLength(maxLength: number, errorMessage: string)
 
 ```js
 StringType().maxLength(30, 'The maximum is only 30 characters.');
 ```
 
-* addRule(onValid: Function, errorMessage: string)
+- addRule(onValid: Function, errorMessage: string)
 
 ```js
 StringType().addRule((value, data) => {
@@ -299,49 +339,49 @@ StringType().addRule((value, data) => {
 
 ### NumberType
 
-* isRequired(errorMessage: string)
+- isRequired(errorMessage: string)
 
 ```js
 NumberType().isRequired('This field required');
 ```
 
-* isInteger(errorMessage: string)
+- isInteger(errorMessage: string)
 
 ```js
 NumberType().isInteger('It can only be an integer');
 ```
 
-* isOneOf(items: Array, errorMessage: string)
+- isOneOf(items: Array, errorMessage: string)
 
 ```js
 NumberType().isOneOf([5, 10, 15], 'Can only be `5`, `10`, `15`');
 ```
 
-* pattern(regExp: RegExp, errorMessage: string)
+- pattern(regExp: RegExp, errorMessage: string)
 
 ```js
 NumberType().pattern(/^[1-9][0-9]{3}$/, 'Please enter a legal character.');
 ```
 
-* range(minLength: number, maxLength: number, errorMessage: string)
+- range(minLength: number, maxLength: number, errorMessage: string)
 
 ```js
 NumberType().range(18, 40, 'Please enter a number between 18 - 40');
 ```
 
-* min(min: number, errorMessage: string)
+- min(min: number, errorMessage: string)
 
 ```js
 NumberType().min(18, 'Minimum 18');
 ```
 
-* max(max: number, errorMessage: string)
+- max(max: number, errorMessage: string)
 
 ```js
 NumberType().max(40, 'Maximum 40');
 ```
 
-* addRule(onValid: Function, errorMessage: string)
+- addRule(onValid: Function, errorMessage: string)
 
 ```js
 NumberType().addRule((value, data) => {
@@ -351,43 +391,43 @@ NumberType().addRule((value, data) => {
 
 ### ArrayType
 
-* isRequired(errorMessage: string)
+- isRequired(errorMessage: string)
 
 ```js
 ArrayType().isRequired('This field required');
 ```
 
-* rangeLength(minLength: number, maxLength: number, errorMessage: string)
+- rangeLength(minLength: number, maxLength: number, errorMessage: string)
 
 ```js
 ArrayType().rangeLength(1, 3, 'Choose at least one, but no more than three');
 ```
 
-* minLength(minLength: number, errorMessage: string)
+- minLength(minLength: number, errorMessage: string)
 
 ```js
 ArrayType().minLength(1, 'Choose at least one');
 ```
 
-* maxLength(maxLength: number, errorMessage: string)
+- maxLength(maxLength: number, errorMessage: string)
 
 ```js
 ArrayType().maxLength(3, "Can't exceed three");
 ```
 
-* unrepeatable(errorMessage: string)
+- unrepeatable(errorMessage: string)
 
 ```js
 ArrayType().unrepeatable('Duplicate options cannot appear');
 ```
 
-* of(type: Object, errorMessage: string)
+- of(type: Object, errorMessage: string)
 
 ```js
 ArrayType().of(StringType().isEmail(), 'wrong format');
 ```
 
-* addRule(onValid: Function, errorMessage: string)
+- addRule(onValid: Function, errorMessage: string)
 
 ```js
 ArrayType().addRule((value, data) => {
@@ -397,13 +437,13 @@ ArrayType().addRule((value, data) => {
 
 ### DateType
 
-* isRequired(errorMessage: string)
+- isRequired(errorMessage: string)
 
 ```js
 DateType().isRequired('This field required');
 ```
 
-* range(min: Date, max: Date, errorMessage: string)
+- range(min: Date, max: Date, errorMessage: string)
 
 ```js
 DateType().range(
@@ -413,19 +453,19 @@ DateType().range(
 );
 ```
 
-* min(min: Date, errorMessage: string)
+- min(min: Date, errorMessage: string)
 
 ```js
 DateType().min(new Date('08/01/2017'), 'Minimum date 08/01/2017');
 ```
 
-* max(max: Date, errorMessage: string)
+- max(max: Date, errorMessage: string)
 
 ```js
 DateType().max(new Date('08/30/2017'), 'Maximum date 08/30/2017');
 ```
 
-* addRule(onValid: Function, errorMessage: string)
+- addRule(onValid: Function, errorMessage: string)
 
 ```js
 DateType().addRule((value, data) => {
@@ -435,13 +475,13 @@ DateType().addRule((value, data) => {
 
 ### ObjectType
 
-* isRequired(errorMessage: string)
+- isRequired(errorMessage: string)
 
 ```js
 ObjectType().isRequired('This field required');
 ```
 
-* shape(type: Object)
+- shape(type: Object)
 
 ```js
 ObjectType().shape({
@@ -450,7 +490,7 @@ ObjectType().shape({
 });
 ```
 
-* addRule(onValid: Function, errorMessage: string)
+- addRule(onValid: Function, errorMessage: string)
 
 ```js
 ObjectType().addRule((value, data) => {
@@ -463,13 +503,13 @@ ObjectType().addRule((value, data) => {
 
 ### BooleanType
 
-* isRequired(errorMessage: string)
+- isRequired(errorMessage: string)
 
 ```js
 BooleanType().isRequired('This field required');
 ```
 
-* addRule(onValid: Function, errorMessage: string)
+- addRule(onValid: Function, errorMessage: string)
 
 ```js
 ObjectType().addRule((value, data) => {
@@ -479,3 +519,16 @@ ObjectType().addRule((value, data) => {
   return true;
 }, 'This value is required when A is equal to 10');
 ```
+
+## ⚠️ Notes
+
+Default check priority:
+
+- 1.isRequired
+- 2.All other checks are executed in sequence
+
+If the third argument to addRule is `true`, the priority of the check is as follows:
+
+- 1.addRule
+- 2.isRequired
+- 3.Predefined rules (if there is no isRequired, value is empty, the rule is not executed)

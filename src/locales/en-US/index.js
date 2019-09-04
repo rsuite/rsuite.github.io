@@ -30,7 +30,9 @@ export default {
     htmlElements: 'Supported HTML Elements',
     modularized: 'Use modularized',
     v2: 'Version 2.*',
-    v3: 'Version 3.*'
+    v3: 'Version 3.*',
+    notFount: 'Page not found(404)',
+    goHomePage: 'Return to homepage.'
   },
   table: {
     'tab.resizable': 'Resizable',

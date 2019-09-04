@@ -1,6 +1,6 @@
 # Quick Start ⚡️
 
-Before you start using it, you need to master at least the basics of front-end development and the core concepts of React. If you encounter problems during the learning process, you can discuss them in the developer community.
+Before you start using it, you need to master at least the basics of front-end development and the core concepts of React. If you encounter problems during the learning process, you can discuss them in the [developer community][gitter-home].
 
 ## Install
 
@@ -62,3 +62,4 @@ ReactDOM.render(<App />, document.getElementById('root'));
 [jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/rsuite/badge
 [jsdelivr-home]: https://www.jsdelivr.com/package/npm/rsuite
 [unpkg-home]: https://unpkg.com/browse/rsuite/dist/
+[gitter-home]: https://gitter.im/rsuite/rsuite
