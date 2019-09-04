@@ -42,12 +42,11 @@ const model = Schema.Model({
 
 class TextField extends React.PureComponent {
   render() {
-    const { name, message, label, accepter, ...props } = this.props;
+    const { name, label, accepter, ...props } = this.props;
     return (
       <FormGroup>
         <ControlLabel>{label} </ControlLabel>
         <FormControl name={name} accepter={accepter} {...props} />
-        <HelpBlock>{message}</HelpBlock>
       </FormGroup>
     );
   }

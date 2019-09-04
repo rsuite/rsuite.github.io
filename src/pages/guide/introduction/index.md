@@ -64,7 +64,7 @@ React Suite 支持服务端渲染， 支持通过 [Next.js](https://github.com/z
 
 如果您喜欢 RSUITE，可以通过以下方式支持我们
 
-- Star 这个项目
+- [![rsuite-stars][rsuite-stars]](https://github.com/rsuite/rsuite) 这个项目
 - 如果您在您的项目中使用了 RSUITE，欢迎在这里[留言][issues-11]！
 - 在 [OpenCollective](https://opencollective.com/rsuite#) 上赞助我们
 
@@ -109,3 +109,4 @@ RSUITE 基于 [MIT licensed][license] 发布。
 [demo-ssr-app]: https://github.com/rsuite/rsuite-management-system-ssr
 [demo-umi-app]: https://github.com/rsuite/examples/tree/master/umi-app
 [babel-preset-env]: https://babeljs.io/docs/en/babel-preset-env
+[rsuite-stars]: https://img.shields.io/github/stars/rsuite/rsuite?style=social

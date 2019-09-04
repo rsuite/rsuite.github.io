@@ -79,6 +79,7 @@ export default createComponentExample({
     'error-message',
     'read-only',
     'form-check',
+    'form-check-async',
     'custom-form-control',
     'custom-third-party-libraries',
     'custom-check-trigger'
