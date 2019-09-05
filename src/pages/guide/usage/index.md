@@ -18,19 +18,6 @@ $ npm i rsuite --save
 $ yarn add rsuite
 ```
 
-### CDN 引用
-
-您也可以在浏览器中使用 `script` 和 `link` 标签直接引入文件，并使用全局变量 `rsuite`。我们在 npm 发布包内 `rsiute/dist` 目录提供了相关的文件。您也可以通过 [![cdnjs][cdnjs-badge]][cdnjs-home]、[![jsDelivr][jsdelivr-badge]][jsdelivr-home] 或 [UNPKG][unpkg-home] 进行下载。
-
-```
-<!-- 引入默认样式 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rsuite@4.0.0-alpha.6/dist/styles/rsuite-dark.min.css">
-<!-- 引入 Dark 主题样式 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/rsuite@4.0.0-alpha.6/dist/styles/rsuite-default.min.css">
-<!-- 引入组件库 -->
-<script src="https://cdn.jsdelivr.net/npm/rsuite@4.0.0-alpha.6/dist/rsuite.min.js"></script>
-```
-
 ## 代码示例
 
 以下是一个简单的例子，使用一个默认按钮组件。
@@ -57,9 +44,4 @@ ReactDOM.render(<App />, document.getElementById('root'));
 - [在 create-react-app 中使用](use-with-create-react-app)
 - [在 Next.js 中使用](use-next-app)
 
-[cdnjs-badge]: https://img.shields.io/cdnjs/v/rsuite.svg?style=flat-square
-[cdnjs-home]: https://cdnjs.com/libraries/rsuite
-[jsdelivr-badge]: https://data.jsdelivr.com/v1/package/npm/rsuite/badge
-[jsdelivr-home]: https://www.jsdelivr.com/package/npm/rsuite
-[unpkg-home]: https://unpkg.com/browse/rsuite/dist/
 [wechat-entry]: https://github.com/rsuite/rsuite/blob/master/README_zh.md#%E6%94%AF%E6%8C%81-react-suite
