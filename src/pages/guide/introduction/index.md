@@ -64,7 +64,7 @@ React Suite 支持服务端渲染， 支持通过 [Next.js](https://github.com/z
 
 如果您喜欢 RSUITE，可以通过以下方式支持我们
 
-- [![rsuite-stars][rsuite-stars]](https://github.com/rsuite/rsuite) 这个项目
+- Star 这个项目 [![rsuite-stars][rsuite-stars]](https://github.com/rsuite/rsuite) 
 - 如果您在您的项目中使用了 RSUITE，欢迎在这里[留言][issues-11]！
 - 在 [OpenCollective](https://opencollective.com/rsuite#) 上赞助我们
 

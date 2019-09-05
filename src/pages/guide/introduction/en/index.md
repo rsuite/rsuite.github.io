@@ -64,7 +64,7 @@ You can learn about our development plan through [Trello](https://trello.com/b/n
 
 If you like RSUITE, you can show your support by either
 
-- [![rsuite-stars][rsuite-stars]](https://github.com/rsuite/rsuite) this repo
+- Star this repo [![rsuite-stars][rsuite-stars]](https://github.com/rsuite/rsuite)
 - [Leaving a comment here][issues-11] if you are using RSUITE in your project (like we do 😄)
 - [Becoming a backer][opencollective-home] on OpenCollective
 
