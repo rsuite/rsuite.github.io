@@ -5,7 +5,7 @@
 ```js
 const instance = (
   <div className="field">
-    <h5>Select Single Day</h5>
+    <p>Select Single Day</p>
     <DateRangePicker
       oneTap
       ranges={[
@@ -19,9 +19,9 @@ const instance = (
         }
       ]}
     />
-    <h5>Select Single Week</h5>
+    <p>Select Single Week</p>
     <DateRangePicker oneTap hoverRange="week" ranges={[]} />
-    <h5>Select Single Month</h5>
+    <p>Select Single Month</p>
     <DateRangePicker oneTap hoverRange="month" ranges={[]} />
   </div>
 );

@@ -14,38 +14,38 @@ const {
 
 const Demo = props => (
   <div className="field">
-    <h5>Disabled component.</h5>
+    <p>Disabled component.</p>
     <DateRangePicker disabled />
 
     <hr />
-    <h5>Custom disabled.</h5>
+    <p>Custom disabled.</p>
     <DateRangePicker disabledDate={date => dateFns.isAfter(date, new Date())} />
 
     <hr />
-    <h5>Allow maximum selection for 7 days, other dates are disabled.</h5>
+    <p>Allow maximum selection for 7 days, other dates are disabled.</p>
     <DateRangePicker disabledDate={allowedMaxDays(7)} />
 
     <hr />
-    <h5>Only 7 days allowed, other dates are disabled</h5>
+    <p>Only 7 days allowed, other dates are disabled</p>
     <DateRangePicker disabledDate={allowedDays(7)} />
 
     <hr />
-    <h5>Only one date range is allowed, other dates are disabled</h5>
+    <p>Only one date range is allowed, other dates are disabled</p>
     <DateRangePicker disabledDate={allowedRange('2018-12-01', '2019-10-1')} />
 
     <hr />
-    <h5>Disable dates before today</h5>
+    <p>Disable dates before today</p>
     <DateRangePicker disabledDate={beforeToday()} />
 
     <hr />
-    <h5>Disable dates after today</h5>
+    <p>Disable dates after today</p>
     <DateRangePicker disabledDate={afterToday()} />
 
     <hr />
-    <h5>
+    <p>
       Combination: Allow maximum selection for 7 days, while disabling dates
       before today, other dates are disabled
-    </h5>
+    </p>
     <DateRangePicker disabledDate={combine(allowedMaxDays(7), beforeToday())} />
   </div>
 );

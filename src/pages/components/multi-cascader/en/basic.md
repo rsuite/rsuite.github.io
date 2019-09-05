@@ -10,10 +10,10 @@
 
 const instance = (
   <div>
-    <h5>Cascade: </h5>
+    <p>Cascade: </p>
     <MultiCascader data={data} style={{ width: 224 }} />
     <hr />
-    <h5>Not cascaded:</h5>
+    <p>Not cascaded:</p>
     <MultiCascader cascade={false} data={data} style={{ width: 224 }} />
   </div>
 );

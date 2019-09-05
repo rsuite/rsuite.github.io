@@ -12,7 +12,7 @@ const instance = (
   <div>
     <InputPicker data={data} groupBy="role" style={{ width: 224 }} />
     <hr />
-    <h5>Sort:</h5>
+    <p>Sort:</p>
     <InputPicker
       data={data}
       groupBy="role"

@@ -10,10 +10,10 @@
 
 const instance = (
   <div>
-    <h5>级联：</h5>
+    <p>级联：</p>
     <CheckTreePicker defaultExpandAll data={data} style={{ width: 280 }} />
     <hr />
-    <h5>非级联：</h5>
+    <p>非级联：</p>
     <CheckTreePicker
       defaultExpandAll
       data={data}

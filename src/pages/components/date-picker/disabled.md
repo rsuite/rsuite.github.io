@@ -7,19 +7,19 @@
 ```js
 const DatePickerInstance = props => (
   <div className="field">
-    <h5> 禁用组件</h5>
+    <p> 禁用组件</p>
     <DatePicker disabled />
 
-    <h5> 禁用日期</h5>
+    <p> 禁用日期</p>
     <DatePicker disabledDate={date => dateFns.isBefore(date, new Date())} />
 
-    <h5> 禁用月份</h5>
+    <p> 禁用月份</p>
     <DatePicker
       disabledDate={date => dateFns.isBefore(date, new Date())}
       format="YYYY-MM"
     />
 
-    <h5> 禁用时间</h5>
+    <p> 禁用时间</p>
     <DatePicker
       format="HH:mm:ss"
       ranges={[]}
@@ -29,7 +29,7 @@ const DatePickerInstance = props => (
       disabledSeconds={second => second % 30 !== 0}
     />
 
-    <h5> 隐藏时间</h5>
+    <p> 隐藏时间</p>
     <DatePicker
       format="HH:mm:ss"
       ranges={[]}

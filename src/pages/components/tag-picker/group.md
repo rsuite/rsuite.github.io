@@ -12,7 +12,7 @@ const instance = (
   <div>
     <TagPicker data={data} groupBy="role" style={{ width: 300 }} />
     <hr />
-    <h5>排序:</h5>
+    <p>排序:</p>
     <TagPicker
       data={data}
       groupBy="role"

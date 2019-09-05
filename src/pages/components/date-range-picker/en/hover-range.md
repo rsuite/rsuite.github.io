@@ -5,16 +5,16 @@
 ```js
 const instance = (
   <div className="field">
-    <h5>Select Whole Week</h5>
+    <p>Select Whole Week</p>
     <DateRangePicker hoverRange="week" ranges={[]} />
-    <h5>
+    <p>
       -Select Whole Week, ISO 8601 standard, each calendar week begins on Monday
       and Sunday is the seventh day
-    </h5>
+    </p>
     <DateRangePicker hoverRange="week" isoWeek ranges={[]} />
-    <h5>Select Whole Month</h5>
+    <p>Select Whole Month</p>
     <DateRangePicker hoverRange="month" ranges={[]} />
-    <h5>Custom Select</h5>
+    <p>Custom Select</p>
     <DateRangePicker
       ranges={[]}
       hoverRange={date => [dateFns.subDays(date, 1), dateFns.addDays(date, 1)]}

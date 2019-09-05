@@ -10,10 +10,10 @@
 
 const instance = (
   <div>
-    <h5>Cascade:</h5>
+    <p>Cascade:</p>
     <CheckTreePicker defaultExpandAll data={data} style={{ width: 280 }} />
     <hr />
-    <h5>Not cascaded:</h5>
+    <p>Not cascaded:</p>
     <CheckTreePicker
       defaultExpandAll
       data={data}

@@ -10,14 +10,14 @@
 
 const instance = (
   <div>
-    <h5>级联：</h5>
+    <p>级联：</p>
     <MultiCascader
       data={data}
       style={{ width: 224 }}
       defaultValue={['1-1', '1-2', '1-3']}
     />
     <hr />
-    <h5>非级联：</h5>
+    <p>非级联：</p>
     <MultiCascader
       data={data}
       style={{ width: 224 }}

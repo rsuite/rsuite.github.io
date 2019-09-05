@@ -5,9 +5,9 @@
 ```js
 const DatePickerInstance = props => (
   <div className="field">
-    <h5> 显示时间</h5>
+    <p> 显示时间</p>
     <DatePicker format="HH:mm:ss" ranges={[]} />
-    <h5> 只显示小时与分钟</h5>
+    <p> 只显示小时与分钟</p>
     <DatePicker format="HH:mm" ranges={[]} />
   </div>
 );

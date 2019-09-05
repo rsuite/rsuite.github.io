@@ -14,35 +14,35 @@ const {
 
 const Demo = props => (
   <div className="field">
-    <h5>禁用组件</h5>
+    <p>禁用组件</p>
     <DateRangePicker disabled />
 
     <hr />
-    <h5>自定义禁用</h5>
+    <p>自定义禁用</p>
     <DateRangePicker disabledDate={date => dateFns.isAfter(date, new Date())} />
 
     <hr />
-    <h5>允许最多选择 7 天，其他日期都禁用</h5>
+    <p>允许最多选择 7 天，其他日期都禁用</p>
     <DateRangePicker disabledDate={allowedMaxDays(7)} />
 
     <hr />
-    <h5>只允许选择 7 天，其他日期都禁用</h5>
+    <p>只允许选择 7 天，其他日期都禁用</p>
     <DateRangePicker disabledDate={allowedDays(7)} />
 
     <hr />
-    <h5>只允许一个日期范围，其他日期都禁用</h5>
+    <p>只允许一个日期范围，其他日期都禁用</p>
     <DateRangePicker disabledDate={allowedRange('2018-12-01', '2019-10-1')} />
 
     <hr />
-    <h5>禁用今天之前的日期</h5>
+    <p>禁用今天之前的日期</p>
     <DateRangePicker disabledDate={beforeToday()} />
 
     <hr />
-    <h5>禁用今天之后的日期</h5>
+    <p>禁用今天之后的日期</p>
     <DateRangePicker disabledDate={afterToday()} />
 
     <hr />
-    <h5>组合: 允许最多选择 7 天, 同时禁用今天之前的日期，其他日期都禁用</h5>
+    <p>组合: 允许最多选择 7 天, 同时禁用今天之前的日期，其他日期都禁用</p>
     <DateRangePicker disabledDate={combine(allowedMaxDays(7), beforeToday())} />
   </div>
 );

@@ -12,7 +12,7 @@ const instance = (
   <div>
     <CheckPicker data={data} groupBy="role" style={{ width: 224 }} />
     <hr />
-    <h5>排序:</h5>
+    <p>排序:</p>
     <CheckPicker
       data={data}
       groupBy="role"
