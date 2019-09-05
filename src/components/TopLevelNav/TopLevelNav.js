@@ -91,10 +91,11 @@ class TopLevelNav extends React.Component {
 
   handleToggleThemeButtonClick = () => {
     const { light } = this.state;
+    const { onChangeTheme } = this.props;
     this.setState({ light: !light }, () => {
       const themeName = this.state.light ? 'default' : 'dark';
       this.loadTheme(themeName);
-      this.props.onChangeTheme(themeName);
+      onChangeTheme && onChangeTheme(themeName);
     });
   };
 
