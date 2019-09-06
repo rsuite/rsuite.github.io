@@ -12,15 +12,18 @@ React Suite 设计原型与规范， [点击查看][rsuite-design]。
 
 ### 浏览器
 
-React Suite 支持最新的，稳定版的全部主流浏览器和平台。
+- React Suite 支持所有主流的现代浏览器。
 
-- 我们对 IE10 提供有限度的支持，部分样式和动画在 IE10 下的变现会有所简化。对于 IE 系列浏览器，需要提供使用 Polyfill 进行支持，我们建议您使用 [babel-preset-env][babel-preset-env] 来处理浏览器的兼容性问题。
+| <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" /></br>IE | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" /></br>Edge | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" /></br>Firefox | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" /> </br>Chrome | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" /></br>Safari |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| >=10                                                                                                                                                 | >= 14                                                                                                                                                  | >= 45                                                                                                                                                         | >=49                                                                                                                                                       | >=10                                                                                                                                                      |
+
 - 从 React Suite 3 开始** 不支持 IE9 以下版本(包括 IE9) ** 。
-- 不推荐在移动端使用。
+- 我们对 IE10 的支持采取了优雅降级的方式，部分样式和动画的表现会有所简化。
 
-| <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" /></br>IE | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" /></br>Edge | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" /></br>Firefox | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" /> </br>Chrome | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" /></br>Safari | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/electron/electron_48x48.png" alt="Electron" width="24px" height="24px" /></br>Electron |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| >=10                                                                                                                                                 | >= 14                                                                                                                                                  | >= 45                                                                                                                                                         | >=49                                                                                                                                                       | >=10                                                                                                                                                      | last 2 versions                                                                                                                                                   |
+  > 注意：对于 IE 系列浏览器，需要提供使用 Polyfill 进行支持，我们建议您使用 [babel-preset-env][babel-preset-env] 来处理浏览器的兼容性问题。
+
+- 不推荐在移动端使用。
 
 ### 服务端
 
@@ -64,7 +67,7 @@ React Suite 支持服务端渲染， 支持通过 [Next.js](https://github.com/z
 
 如果您喜欢 RSUITE，可以通过以下方式支持我们
 
-- [![rsuite-stars][rsuite-stars]](https://github.com/rsuite/rsuite) 这个项目
+- Star 这个项目 [![rsuite-stars][rsuite-stars]](https://github.com/rsuite/rsuite)
 - 如果您在您的项目中使用了 RSUITE，欢迎在这里[留言][issues-11]！
 - 在 [OpenCollective](https://opencollective.com/rsuite#) 上赞助我们
 

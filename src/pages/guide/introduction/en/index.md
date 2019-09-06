@@ -12,15 +12,18 @@ RSUITE Design Prototype and specification, click to [view][rsuite-design]
 
 ### Browser
 
-React Suite supports the latest, stable releases of all major browsers and platforms.
+- React Suite supports all major modern browsers.
 
-- We offer limited support for IE10, and some styles and animations are simplified in IE10. For IE series browsers, you need to provide support using Polyfill. We recommend using [babel-preset-env][babel-preset-env] to handle browser compatibility issues.
+| <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" /></br>IE | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" /></br>Edge | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" /></br>Firefox | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" /> </br>Chrome | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" /></br>Safari |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| >=10                                                                                                                                                 | >= 14                                                                                                                                                  | >= 45                                                                                                                                                         | >=49                                                                                                                                                       | >=10                                                                                                                                                      |
+
 - ** IE<=9 is no longer supported ** since React Suite 3.0.
-- React Suite is designed and implemented for use on modern desktop browsers rather than mobile browsers.
+- Our support for IE10 has been gracefully downgraded, and some styles and animations have been simplified.
 
-| <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" /></br>IE | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" /></br>Edge | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" /></br>Firefox | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" /> </br>Chrome | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" /></br>Safari | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/electron/electron_48x48.png" alt="Electron" width="24px" height="24px" /></br>Electron |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| >=10                                                                                                                                                 | >= 14                                                                                                                                                  | >= 45                                                                                                                                                         | >=49                                                                                                                                                       | >=10                                                                                                                                                      | last 2 versions                                                                                                                                                   |
+  > Notice: For IE series browsers, you need to provide support using Polyfill. We recommend using [babel-preset-env][babel-preset-env] to handle browser compatibility issues.
+
+- React Suite is designed and implemented for use on modern desktop browsers rather than mobile browsers.
 
 ### Server
 
@@ -64,7 +67,7 @@ You can learn about our development plan through [Trello](https://trello.com/b/n
 
 If you like RSUITE, you can show your support by either
 
-- [![rsuite-stars][rsuite-stars]](https://github.com/rsuite/rsuite) this repo
+- Star this repo [![rsuite-stars][rsuite-stars]](https://github.com/rsuite/rsuite)
 - [Leaving a comment here][issues-11] if you are using RSUITE in your project (like we do 😄)
 - [Becoming a backer][opencollective-home] on OpenCollective
 
