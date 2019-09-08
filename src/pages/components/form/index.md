@@ -41,20 +41,40 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 - check 检验表单数据
 
 ```js
-check(callback: (formError: Object) => void) => boolean
+check: (callback?: (formError: E) => void) => boolean;
+```
+
+- checkAsync 异步检验表单数据
+
+```js
+checkAsync: () => Promise<any>;
 ```
 
 - checkForField 校验表单单个字段值
 
 ```js
-checkForField = (fieldName: string, callback?: (checkResult: Object) => void) =>
-  boolean;
+checkForField: (
+    fieldName: keyof T,
+    callback?: (checkResult: CheckResult<errorMsg>) => void
+  ) => boolean;
+```
+
+- checkForFieldAsync 异步校验表单单个字段值
+
+```js
+checkForFieldAsync: (fieldName: keyof T) => Promise<CheckResult>;
 ```
 
 - cleanErrors 清除错误信息
 
 ```js
 cleanErrors(callback: () => void) => void
+```
+
+- cleanErrorForFiled 清除单个字段错误信息
+
+```js
+cleanErrorForFiled: (fieldName: keyof E, callback?: () => void) => void;
 ```
 
 ### `<FormControl>`

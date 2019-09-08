@@ -43,7 +43,15 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 Verify form data.
 
 ```js
-check(callback: (formError: Object) => void) => boolean
+check: (callback?: (formError: E) => void) => boolean;
+```
+
+- checkAsync
+
+Asynchronously check form data
+
+```js
+checkAsync: () => Promise<any>;
 ```
 
 - checkForField
@@ -51,8 +59,18 @@ check(callback: (formError: Object) => void) => boolean
 Checklist single field value.
 
 ```js
-checkForField = (fieldName: string, callback?: (checkResult: Object) => void) =>
-  boolean;
+checkForField: (
+    fieldName: keyof T,
+    callback?: (checkResult: CheckResult<errorMsg>) => void
+  ) => boolean;
+```
+
+- checkForFieldAsync
+
+Asynchronous check form single field value
+
+```js
+checkForFieldAsync: (fieldName: keyof T) => Promise<CheckResult>;
 ```
 
 - cleanErrors
@@ -61,6 +79,14 @@ Clean error message.
 
 ```js
 cleanErrors(callback: () => void) => void
+```
+
+- cleanErrorForFiled
+
+Clear single field error message
+
+```js
+cleanErrorForFiled: (fieldName: keyof E, callback?: () => void) => void;
 ```
 
 ### `<FormControl>`
