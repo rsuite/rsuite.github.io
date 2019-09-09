@@ -9,27 +9,27 @@ React Suite offers Light and Dark 2 sets of themes that you can use depending on
 **☀️ Light**
 
 ```less
-@import '~rsuite/lib/styles/themes/default.less';
+@import '~rsuite/lib/styles/themes/default/index.less';
 // @import '~rsuite/dist/styles/rsuite-default.css'
 ```
 
 **🌙 Dark**
 
 ```less
-@import '~rsuite/lib/styles/themes/dark.less';
+@import '~rsuite/lib/styles/themes/dark/index.less';
 // @import '~rsuite/dist/styles/rsuite-dark.css'
 ```
 
 ## For customization
 
-The RSUITE style uses [Less][less] as the development language and defines a series of variables that can be customized using [Modify Variables][modify variables]. This includes but is not limited to customizing theme colors, resizing component fillet radii, modifying font styles, replacing auxiliary colors, and so on. The code in the following example is a new action in `custom-theme.less`.
+The React Suite style uses [Less][less] as the development language and defines a series of variables that can be customized using [Modify Variables][modify variables]. This includes but is not limited to customizing theme colors, resizing component fillet radii, modifying font styles, replacing auxiliary colors, and so on. The code in the following example is a new action in `custom-theme.less`.
 
 ### Import less
 
 Create a separate `.less` file as follows, and then introduce this file.
 
 ```less
-@import '~rsuite/lib/styles/themes/default.less'; //The default style file.
+@import '~rsuite/lib/styles/themes/default/index.less'; //The default style file.
 @import 'custom-theme.less'; // Style customization.
 ```
 

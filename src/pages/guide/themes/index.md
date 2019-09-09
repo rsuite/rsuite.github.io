@@ -1,4 +1,5 @@
-# 定制主题  🎨 
+# 定制主题 🎨
+
 根据产品的差异性，React Suite 在主题设计上提供灵活的可配置参数。
 
 ## Light/Dark 主题
@@ -8,14 +9,14 @@ React Suite 默认提供了 Light 与 Dark 两套主题，您可以根据产品�
 **☀️ Light**
 
 ```less
-@import '~rsuite/lib/styles/themes/default.less';
+@import '~rsuite/lib/styles/themes/default/index.less';
 // @import '~rsuite/dist/styles/rsuite-default.css' 或者引入 CSS
 ```
 
 **🌙 Dark**
 
 ```less
-@import '~rsuite/lib/styles/themes/dark.less';
+@import '~rsuite/lib/styles/themes/dark/index.less';
 // @import '~rsuite/dist/styles/rsuite-dark.css' 或者引入 CSS
 ```
 
@@ -28,7 +29,7 @@ React Suite 的样式使用了 [Less][less] 作为样式的预处理，并且定
 新建一个单独的 Less 文件如下，再引入这个文件。
 
 ```less
-@import '~rsuite/lib/styles/themes/default.less'; //引入默认的样式文件
+@import '~rsuite/lib/styles/themes/default/index.less'; //引入默认的样式文件
 @import 'custom-theme.less'; // 进行样式定制
 ```
 
