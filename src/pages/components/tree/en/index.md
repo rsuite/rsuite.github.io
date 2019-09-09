@@ -16,26 +16,27 @@ import { Tree } from 'rsuite';
 
 ### `<Tree>`
 
-| Property           | Type `(Default)`                              | Description                                                               |
-| ------------------ | --------------------------------------------- | ------------------------------------------------------------------------- |
-| childrenKey        | string `('children')`                         | Tree data structure Children property name                                |
-| classPrefix        | string`('picker')`                            | The prefix of the component CSS class                                     |
-| data \*            | Array&lt;[DataItemType](#DataItemType)&gt;    | Tree Data                                                                 |
-| defaultExpandAll   | boolean                                       | Expand all nodes By default                                               |
-| defaultValue       | string                                        | Default selected Value                                                    |
-| disabledItemValues | string[]                                      | Disable item by value                                                     |
-| expandAll          | boolean                                       | Expand or unExpand all nodes(Controlled)                                  |
-| height             | number `(360px)`                              | height of menu. When `virtualize` is true, you can set the height of menu |
-| labelKey           | string `('label')`                            | Tree data structure Label property name                                   |
-| onChange           | (value:string)=>void                          | Callback function for data change                                         |
-| onExpand           | (activeNode:DataItemType, layer:number)=>void | Whether inline display tree                                               |
-| onSelect           | (activeNode:DataItemType, value, event)=>void | Callback function after selecting tree node                               |
-| renderTreeIcon     | (nodeData:DataItemType)=>React.Node           | Custom Render icon                                                        |
-| renderTreeNode     | (nodeData:DataItemType)=>React.Node           | Custom Render tree Node                                                   |
-| searchKeyword      | string                                        | searchKeyword (Controlled)                                                |
-| value              | string                                        | Selected value                                                            |
-| valueKey           | string `('value')`                            | Tree data Structure Value property name                                   |
-| virtualized        | boolean `(false)`                             | Whether using Virtualized List                                            |
+| Property                | Type `(Default)`                                                                                    | Description                                                               |
+| ----------------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| childrenKey             | string `('children')`                                                                               | Tree data structure Children property name                                |
+| classPrefix             | string`('picker')`                                                                                  | The prefix of the component CSS class                                     |
+| data \*                 | Array&lt;[DataItemType](#DataItemType)&gt;                                                          | Tree Data                                                                 |
+| defaultExpandAll        | boolean                                                                                             | Expand all nodes By default                                               |
+| defaultExpandItemValues | any []                                                                                              | Set the value of the default expanded node                                |
+| defaultValue            | string                                                                                              | Default selected Value                                                    |
+| disabledItemValues      | string[]                                                                                            | Disable item by value                                                     |
+| expandItemValues        | any []                                                                                              | Set the value of the expanded node (controlled)                           |
+| height                  | number `(360px)`                                                                                    | height of menu. When `virtualize` is true, you can set the height of menu |
+| labelKey                | string `('label')`                                                                                  | Tree data structure Label property name                                   |
+| onChange                | (value:string)=>void                                                                                | Callback function for data change                                         |
+| onExpand                | (expandItemValues: any [], activeNode:[DataItemType](#types), concat:(data, children)=>Array)=>void | Callback When tree node is displayed                                      |
+| onSelect                | (activeNode:DataItemType, value, event)=>void                                                       | Callback function after selecting tree node                               |
+| renderTreeIcon          | (nodeData:DataItemType)=>React.Node                                                                 | Custom Render icon                                                        |
+| renderTreeNode          | (nodeData:DataItemType)=>React.Node                                                                 | Custom Render tree Node                                                   |
+| searchKeyword           | string                                                                                              | searchKeyword (Controlled)                                                |
+| value                   | string                                                                                              | Selected value                                                            |
+| valueKey                | string `('value')`                                                                                  | Tree data Structure Value property name                                   |
+| virtualized             | boolean `(false)`                                                                                   | Whether using Virtualized List                                            |
 
 ### DataItemType
 

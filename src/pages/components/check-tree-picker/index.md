@@ -41,7 +41,7 @@ import { CheckTreePicker } from 'rsuite';
 | onChange                | (values:string[])=>void                                                                                    | 数据改变的回调函数                                                              |
 | onClose                 | ()=>void                                                                                                   | 关闭的回调函数                                                                  |
 | onClean                 | (event:SyntheticEvent)=>void                                                                               | 值清理时触发回调                                                                |
-| onExpand                | (activeNode:[DataItemType](#types), layer:number, concat:(data, children)=>Array)=>void                    | 树节点展示时的回调                                                              |
+| onExpand                | (expandItemValues: any [], activeNode:[DataItemType](#types), concat:(data, children)=>Array)=>void        | 树节点展示时的回调                                                              |
 | onOpen                  | ()=>void                                                                                                   | 展开的回调函数                                                                  |
 | onSearch                | (searchKeyword:string, event)=void                                                                         | 搜索回调函数                                                                    |
 | onSelect                | (activeNode:[DataItemType](#types),value:any, event)=>void                                                 | 选择树节点后的回调函数                                                          |

@@ -16,26 +16,27 @@ import { Tree } from 'rsuite';
 
 ### `<Tree>`
 
-| 属性名称           | 类型 `(默认值)`                                      | 描述                                                                            |
-| ------------------ | ---------------------------------------------------- | ------------------------------------------------------------------------------- |
-| childrenKey        | string `('children')`                                | tree 数据结构 children 属性名称                                                 |
-| classPrefix        | string`('picker')`                                   | 组件 CSS 类的前缀                                                               |
-| data \*            | Array&lt;[DataItemType](#DataItemType)&gt;           | tree 数据                                                                       |
-| defaultExpandAll   | boolean                                              | 默认展开所有节点                                                                |
-| defaultValue       | string                                               | 默认选中的值                                                                    |
-| disabledItemValues | string[]                                             | 禁用选项                                                                        |
-| expandAll          | boolean                                              | (受控)展示/收起所有节点                                                         |
-| height             | number `(360px)`                                     | menu 的高度。当设置了 virtualized 为 true 时， 可以通过 height 控制 menu 的高度 |
-| labelKey           | string `('label')`                                   | tree 数据结构 label 属性名称                                                    |
-| onChange           | (value:string)=>void                                 | 数据改变的回调函数                                                              |
-| onExpand           | (activeNode:DataItemType, layer:number)=>void        | 树节点展示时的回调                                                              |
-| onSelect           | (activeNode:DataItemType, value, event)=>void | 选择树节点后的回调函数                                                          |
-| renderTreeIcon     | (nodeData:DataItemType)=>React.Node                  | 自定义渲染 图标                                                                 |
-| renderTreeNode     | (nodeData:DataItemType)=>React.Node                  | 自定义渲染 tree 节点                                                            |
-| searchKeyword      | string                                               | (受控)搜索关键词                                                                |
-| value              | string                                               | 当前选中的值                                                                    |
-| valueKey           | string `('value')`                                   | tree 数据结构 value 属性名称                                                    |
-| virtualized        | boolean `(false)`                                    | 是否开启虚拟列表                                                                |
+| 属性名称                | 类型 `(默认值)`                                                                                     | 描述                                                                            |
+| ----------------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| childrenKey             | string `('children')`                                                                               | tree 数据结构 children 属性名称                                                 |
+| classPrefix             | string`('picker')`                                                                                  | 组件 CSS 类的前缀                                                               |
+| data \*                 | Array&lt;[DataItemType](#DataItemType)&gt;                                                          | tree 数据                                                                       |
+| defaultExpandAll        | boolean                                                                                             | 默认展开所有节点                                                                |
+| defaultValue            | string                                                                                              | 默认选中的值                                                                    |
+| defaultExpandItemValues | any []                                                                                              | 设置默认展开节点的值                                                            |
+| disabledItemValues      | string[]                                                                                            | 禁用选项                                                                        |
+| expandItemValues        | any []                                                                                              | 设置展开节点的值（受控）                                                        |
+| height                  | number `(360px)`                                                                                    | menu 的高度。当设置了 virtualized 为 true 时， 可以通过 height 控制 menu 的高度 |
+| labelKey                | string `('label')`                                                                                  | tree 数据结构 label 属性名称                                                    |
+| onChange                | (value:string)=>void                                                                                | 数据改变的回调函数                                                              |
+| onExpand                | (expandItemValues: any [], activeNode:[DataItemType](#types), concat:(data, children)=>Array)=>void | 树节点展示时的回调                                                              |
+| onSelect                | (activeNode:DataItemType, value, event)=>void                                                       | 选择树节点后的回调函数                                                          |
+| renderTreeIcon          | (nodeData:DataItemType)=>React.Node                                                                 | 自定义渲染 图标                                                                 |
+| renderTreeNode          | (nodeData:DataItemType)=>React.Node                                                                 | 自定义渲染 tree 节点                                                            |
+| searchKeyword           | string                                                                                              | (受控)搜索关键词                                                                |
+| value                   | string                                                                                              | 当前选中的值                                                                    |
+| valueKey                | string `('value')`                                                                                  | tree 数据结构 value 属性名称                                                    |
+| virtualized             | boolean `(false)`                                                                                   | 是否开启虚拟列表                                                                |
 
 ### DataItemType
 
