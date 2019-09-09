@@ -104,21 +104,6 @@ class PageContainer extends React.Component {
                 className={classnames({ ['hide-page-nav']: hideNav })}
               >
                 <Col md={24} xs={24} sm={24} className="main-container">
-                  <Message
-                    showIcon
-                    type="warning"
-                    description={
-                      <div>
-                        <p>
-                          {locale.message}
-                          {' : '}
-                          <a href="https://github.com/rsuite/rsuite/issues/453">
-                            React Suite v4 feature tracking
-                          </a>
-                        </p>
-                      </div>
-                    }
-                  />
                   <PageContent>{children}</PageContent>
                 </Col>
                 <Col md={8} xsHidden smHidden>

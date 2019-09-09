@@ -53,6 +53,5 @@ export default {
     step1: '上传产品的 Logo',
     step2: '通过分析 Logo 中的配色，制作主题颜色',
     step3: '点击 Logo 合适的位置，改变主题颜色'
-  },
-  message: '当前版本是 V4 预览版，关注我们最新的开发进度'
+  }
 };
