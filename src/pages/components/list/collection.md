@@ -1,4 +1,5 @@
 ### 分组排序
+> 必须给 List.Item 传入 `index` (组内唯一)
 
 <!--start-code-->
 ```js

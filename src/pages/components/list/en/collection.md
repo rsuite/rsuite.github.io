@@ -1,4 +1,5 @@
 ### Collection Sort
+> `index` of List.Item is required. (be unique in the collection)
 
 <!--start-code-->
 ```js
