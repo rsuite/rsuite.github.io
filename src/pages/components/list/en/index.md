@@ -37,6 +37,6 @@ import { List } from 'rsuite';
 
 | Property      | Type `(Default)`                                 | Description                      |
 | ------------- | ------------------------------------------------ | ---------------------------------- |
-| index        | number(required)                                     | index of item(must be unique in the collection)        |
+| index        | number(required when sortable)                    | index of item(must be unique in the collection)        |
 | collection   | number/string `0`                               | collection of list item                     |
 | disabled     | boolean                                         | not allowed to move this item         |
