@@ -1,4 +1,5 @@
 ### 可排序
+> 必须给 List.Item 传入 `index` (组内唯一)
 
 <!--start-code-->
 ```js
@@ -11,7 +12,6 @@ class ListDemo extends React.Component{
         {text:'Violets are blue',},
         {text:'Sugar is sweet',},
         {text:'And so are you'},
-        {text:'( You can\'t catch me ~ )',disabled:true},
       ],
     };
     this.handleSortEnd = this.handleSortEnd.bind(this);
@@ -41,7 +41,6 @@ class ListDemo extends React.Component{
           <List.Item 
             key={index}
             index={index} 
-            disabled={disabled}
           >
             {text}
           </List.Item>
