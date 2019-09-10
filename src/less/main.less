@@ -10,6 +10,7 @@
 @import '../components/Logo/styles';
 @import '../components/PageContainer/styles';
 @import '../components/DocSidebar/styles';
+@import '../components/LanguageSwitchButton/styles';
 
 @import '../pages/tools/icons/styles';
 @import '../pages/tools/palette/styles';
@@ -35,15 +36,27 @@
 @media-xs: 768px;
 @media-md: 992px;
 @scrollbar-width: 10px;
+@top-level-nav-height: 48px;
 
 .main-container {
   padding-right: 180px;
+
+  @media (max-width: @media-xs) {
+    margin-top: @top-level-nav-height + 28px;
+  }
 }
 
 .app-container {
   .page-context {
-    padding: 20px 210px 20px 20px;
-    margin-left: 324px;
+    @media (max-width: @media-xs) {
+      margin-left: 0 !important;
+      padding: 15px;
+    }
+
+    @media (min-width: @media-xs) {
+      padding: 20px 210px 20px 20px;
+      margin-left: 324px;
+    }
   }
 }
 
@@ -95,6 +108,25 @@ pre {
 .gitter-open-chat-button {
   color: @btn-default-color !important;
   background: @btn-default-bg;
+
+  @media (max-width: @media-xs) {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    text-indent: -999px;
+    box-shadow: @default-box-shadow;
+
+    &::before {
+      font-family: 'rsuite-icon-font' !important;
+      content: '\F086';
+      position: absolute;
+      right: -489px;
+      font-size: 20px;
+      width: 20px;
+      z-index: 999;
+      top: 6px;
+    }
+  }
 
   &:hover,
   &:focus {

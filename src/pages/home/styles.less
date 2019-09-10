@@ -1,4 +1,23 @@
 .page-home {
+  position: relative;
+
+  @media (max-width: @media-xs) {
+    padding-top: @top-level-nav-height;
+
+    .language-switch-button-wrapper {
+      display: block;
+      text-align: right;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (min-width: @media-xs) {
+    &.rs-grid-container {
+      padding-left: 64px;
+    }
+  }
+
   .header {
     text-align: right;
     padding-top: 10px;
@@ -6,19 +25,63 @@
 
   .banner {
     height: calc(100vh - 56px);
-    .section {
-      padding-left: 60px;
+    flex-flow: wrap-reverse;
+
+    @media (min-width: @media-xs) {
+      flex-flow: nowrap;
     }
+
+    @media (max-width: @media-xs) {
+      align-items: flex-end;
+
+      .react-logo {
+        width: 90%;
+        margin: 0 auto;
+        height: auto;
+      }
+
+      .logo-react-suite .rsuite-logo {
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: calc(50% - 68px);
+      }
+    }
+
+    .logo-react-suite-wrapper {
+      pointer-events: none;
+    }
+
     .title {
       font-family: 'Raleway', 'Hiragino Sans GB', sans-serif;
       font-weight: bold;
+
+      @media (max-width: @media-xs) {
+        font-size: 30px;
+        line-height: 36px;
+      }
     }
+
     .sub-title {
       margin: 20px 0;
-      font-size: 22px;
+      font-size: 14px;
+
+      @media (min-width: @media-xs) {
+        font-size: 22px;
+      }
     }
+
     .rs-btn-toolbar {
       margin-top: 50px;
+    }
+
+    .section {
+      text-align: center;
+
+      @media (min-width: @media-xs) {
+        padding-left: 60px;
+        text-align: left;
+      }
     }
   }
 

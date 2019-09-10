@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, Whisper, Tooltip } from 'rsuite';
+import classnames from 'classnames';
+import { Button } from 'rsuite';
 
 class LanguageSwitchButton extends React.Component {
   static defaultProps = {
@@ -19,10 +20,11 @@ class LanguageSwitchButton extends React.Component {
       return null;
     }
 
-    const { language, appearance, ...rest } = this.props;
+    const { language, appearance, className, ...rest } = this.props;
     return (
       <Button
         {...rest}
+        className={classnames('language-switch-button', className)}
         appearance={appearance}
         onClick={this.handleChangeLanguage}
       >

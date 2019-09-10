@@ -59,7 +59,13 @@ class SearchDrawer extends Component {
     const path = _.get(locale, 'id') === 'en-US' ? '/en' : '';
 
     return (
-      <Drawer placement="left" size="xs" show={show} onHide={onHide}>
+      <Drawer
+        className="search-drawer"
+        placement="left"
+        size="xs"
+        show={show}
+        onHide={onHide}
+      >
         <Drawer.Header>
           <Drawer.Title>{_.get(locale, 'common.search')}</Drawer.Title>
         </Drawer.Header>

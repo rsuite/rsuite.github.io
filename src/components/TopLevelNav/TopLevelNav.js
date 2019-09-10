@@ -131,6 +131,15 @@ class TopLevelNav extends React.Component {
         icon: extension
       }
     ];
+    const renderSearchButton = className => (
+      <WithTooltipButton
+        tip={_.get(locale, 'common.search')}
+        className={`icon-btn-circle ${className}`}
+        onClick={this.showSearchDrawer}
+      >
+        <Icon icon={search} svgStyle={svgStyle} size="lg" />
+      </WithTooltipButton>
+    );
 
     return (
       <div className="top-level-nav">
@@ -139,13 +148,7 @@ class TopLevelNav extends React.Component {
         </Link>
 
         <div className="top-level-nav-menu">
-          <WithTooltipButton
-            tip={_.get(locale, 'common.search')}
-            className="icon-btn-circle"
-            onClick={this.showSearchDrawer}
-          >
-            <Icon icon={search} svgStyle={svgStyle} size="lg" />
-          </WithTooltipButton>
+          {renderSearchButton('visible-xs')}
 
           {menu.map(item => (
             <WithTooltipButton
@@ -180,6 +183,8 @@ class TopLevelNav extends React.Component {
           >
             <Icon icon={design} svgStyle={svgStyle} size="lg" />
           </WithTooltipButton>
+
+          {renderSearchButton('hidden-xs')}
 
           <div className="nav-menu-bottom">
             <WithTooltipButton

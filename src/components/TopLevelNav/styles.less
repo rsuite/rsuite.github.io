@@ -1,20 +1,53 @@
 .top-level-nav {
   background: @B900;
-  position: fixed;
-  padding: 10px;
-  width: 64px;
+  position: absolute;
+  width: 100vw;
   left: 0;
   top: 0;
-  bottom: 0;
-  z-index: 10;
+
+  .page-home & {
+    @media (max-width: @media-xs) {
+      left: -5px;
+    }
+  }
+
+  @media (min-width: @media-xs) {
+    position: fixed;
+    padding: 10px;
+    width: 64px;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+
+  &-menu {
+    //display: inline-block;
+    float: right;
+
+    @media (min-width: @media-xs) {
+      float: none;
+      margin-top: 20px;
+    }
+
+    .btn {
+      &:active,
+      &:focus {
+        color: white;
+        background: inherit;
+      }
+    }
+  }
 
   .logo-sm {
     margin-left: 9px;
-    margin-top: 5px;
+    margin-top: 9px;
+
+    @media (min-width: @media-xs) {
+      margin-top: 5px;
+    }
   }
 
   .icon-btn-circle {
-    margin-bottom: 6px;
     background: none;
     border: none;
     padding: 12px;
@@ -22,6 +55,29 @@
     color: #fff;
     width: 42px;
     height: 42px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+
+    @media (min-width: @media-xs) {
+      margin-top: 0px;
+      margin-bottom: 6px;
+    }
+
+    &.visible-xs {
+      display: none;
+
+      @media (min-width: @media-xs) {
+        display: inline-block;
+      }
+    }
+
+    &.hidden-xs {
+      display: inline-block;
+
+      @media (min-width: @media-xs) {
+        display: none;
+      }
+    }
 
     .@{ns}icon {
       line-height: 18px;
@@ -41,16 +97,6 @@
       background: transparent;
     }
   }
-  &-menu {
-    margin-top: 20px;
-    .btn {
-      &:active,
-      &:focus {
-        color: white;
-        background: inherit;
-      }
-    }
-  }
 
   .nav-menu-bottom {
     position: absolute;
@@ -58,5 +104,10 @@
     left: 0;
     padding: 9px;
     text-align: center;
+    display: none;
+
+    @media (min-width: @media-xs) {
+      display: block;
+    }
   }
 }
