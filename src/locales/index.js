@@ -7,9 +7,13 @@ const dict = {
 };
 
 export function getDict(locale) {
-  if (locale === 'en') {
+  const localeKey = localStorage.getItem('localeKey');
+  const key = locale ? locale : localeKey;
+
+  if (key === 'en' || key === 'en-US') {
     return en;
   }
+
   return zh;
 }
 
