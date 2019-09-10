@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { Link } from 'react-router';
 import { Button, Icon, Whisper, Tooltip } from 'rsuite';
+import { isMobile } from 'react-device-detect';
 import Logo from '@/components/Logo';
 import {
   guide,
@@ -19,6 +20,13 @@ import SearchDrawer from '@/components/SearchDrawer';
 import loadCssFile from '@/utils/loadCssFile';
 
 function WithTooltipButton({ children, tip, ...props }) {
+  if (isMobile) {
+    return (
+      <Button size="lg" {...props}>
+        {children}
+      </Button>
+    );
+  }
   return (
     <Whisper
       speaker={<Tooltip>{tip}</Tooltip>}
