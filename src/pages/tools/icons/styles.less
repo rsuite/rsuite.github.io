@@ -11,13 +11,17 @@
   }
   .icon-item {
     display: inline-block;
-    width: 120px;
+    width: 33.33%;
     vertical-align: top;
     margin-bottom: 1rem;
     padding: 10px;
     cursor: pointer;
     opacity: 0.8;
     position: relative;
+
+    @media (min-width: @media-xs) {
+      width: 120px;
+    }
 
     &.new-icon:hover .icon-wrapper::before {
       display: none;

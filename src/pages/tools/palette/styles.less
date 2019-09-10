@@ -1,11 +1,19 @@
 .row-split {
-  display: flex;
-  flex-direction: row;
-  .col-side {
-    width: 360px;
-  }
   .col-content {
-    flex-grow: 1;
+    margin-top: 20px;
+  }
+  @media (min-width: @media-xs) {
+    display: flex;
+    flex-direction: row;
+
+    .col-side {
+      width: 360px;
+    }
+
+    .col-content {
+      flex-grow: 1;
+      margin-top: 0;
+    }
   }
 }
 

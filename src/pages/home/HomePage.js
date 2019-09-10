@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-import { Button, ButtonToolbar, FlexboxGrid, Grid, Row } from 'rsuite';
+import { Button, ButtonToolbar, FlexboxGrid, Grid, Row, Col } from 'rsuite';
 import TopLevelNav from '@/components/TopLevelNav';
 import LanguageSwitchButton from '@/components/LanguageSwitchButton';
 import Logo from '@/components/Logo';
@@ -34,26 +34,21 @@ class HomePage extends React.Component {
         ref={ref => {
           this.home = ref;
         }}
-        style={{
-          paddingLeft: 64
-        }}
       >
         <TopLevelNav hideToggle />
 
-        <LanguageSwitchButton
-          size="lg"
-          language={_.get(locale, 'id')}
-          href={localePath}
-          style={{
-            position: 'fixed',
-            right: 10,
-            top: 10
-          }}
-        />
+        <span className="language-switch-button-wrapper">
+          <LanguageSwitchButton
+            size="lg"
+            language={_.get(locale, 'id')}
+            href={localePath}
+            className="home-page"
+          />
+        </span>
 
         <Row>
           <FlexboxGrid align="middle" className="banner">
-            <FlexboxGrid.Item colspan={12}>
+            <FlexboxGrid.Item componentClass={Col} colspan={24} md={12}>
               <section className="section">
                 <h1 className="title">React Suite</h1>
                 <p className="sub-title"> {_.get(locale, 'common.resume')}</p>
@@ -88,7 +83,7 @@ class HomePage extends React.Component {
               </section>
             </FlexboxGrid.Item>
 
-            <FlexboxGrid.Item colspan={12}>
+            <FlexboxGrid.Item className="logo-react-suite-wrapper" componentClass={Col} colspan={24} md={12}>
               <div className="section logo-react-suite">
                 <Logo width={120} />
                 <ReactLogo running={this.state.running} />

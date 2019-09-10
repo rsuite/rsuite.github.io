@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { Link } from 'react-router';
 import { Button, Icon, Whisper, Tooltip } from 'rsuite';
+import { isMobile } from 'react-device-detect';
 import Logo from '@/components/Logo';
 import {
   guide,
@@ -19,6 +20,13 @@ import SearchDrawer from '@/components/SearchDrawer';
 import loadCssFile from '@/utils/loadCssFile';
 
 function WithTooltipButton({ children, tip, ...props }) {
+  if (isMobile) {
+    return (
+      <Button size="lg" {...props}>
+        {children}
+      </Button>
+    );
+  }
   return (
     <Whisper
       speaker={<Tooltip>{tip}</Tooltip>}
@@ -131,6 +139,15 @@ class TopLevelNav extends React.Component {
         icon: extension
       }
     ];
+    const renderSearchButton = className => (
+      <WithTooltipButton
+        tip={_.get(locale, 'common.search')}
+        className={`icon-btn-circle ${className}`}
+        onClick={this.showSearchDrawer}
+      >
+        <Icon icon={search} svgStyle={svgStyle} size="lg" />
+      </WithTooltipButton>
+    );
 
     return (
       <div className="top-level-nav">
@@ -139,13 +156,7 @@ class TopLevelNav extends React.Component {
         </Link>
 
         <div className="top-level-nav-menu">
-          <WithTooltipButton
-            tip={_.get(locale, 'common.search')}
-            className="icon-btn-circle"
-            onClick={this.showSearchDrawer}
-          >
-            <Icon icon={search} svgStyle={svgStyle} size="lg" />
-          </WithTooltipButton>
+          {renderSearchButton('visible-xs')}
 
           {menu.map(item => (
             <WithTooltipButton
@@ -180,6 +191,8 @@ class TopLevelNav extends React.Component {
           >
             <Icon icon={design} svgStyle={svgStyle} size="lg" />
           </WithTooltipButton>
+
+          {renderSearchButton('hidden-xs')}
 
           <div className="nav-menu-bottom">
             <WithTooltipButton
