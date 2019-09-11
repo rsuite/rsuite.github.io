@@ -223,9 +223,9 @@ global.__RSUITE_CLASSNAME_PREFIX__ = 'custom-';
 [rardp]: https://www.npmjs.com/package/react-app-rewire-define-plugin
 [less]: http://lesscss.org/
 [modify variables]: http://lesscss.org/usage/#using-less-in-the-browser-modify-variables
-[rsuite-theme-pallete]: https://github.com/rsuite/rsuite/blob/master/styles/less/constants.less#L32
+[rsuite-theme-pallete]: https://github.com/rsuite/rsuite/blob/master/src/styles/constants.less#L32
 [issue]: https://github.com/rsuite/rsuite/issues/new
-[variables.less]: https://github.com/rsuite/rsuite/blob/master/styles/variables.less
+[variables.less]: https://github.com/rsuite/rsuite/blob/master/src/styles/variables.less
 [use-with-create-app]: /guide/use-with-create-react-app#定制主题
 [webpack-multiple-themes-compile]: https://github.com/rsuite/webpack-multiple-themes-compile
 [multiple-themes]: https://github.com/rsuite/examples/tree/master/multiple-themes

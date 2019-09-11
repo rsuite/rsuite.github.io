@@ -87,7 +87,7 @@ yarn add react-app-rewired customize-cra less less-loader
 3.  Edit `./src/App.js`
 
 ```diff
-- import 'rsuite/dist/styles/rsuite.css';
+- import 'rsuite/dist/styles/rsuite-default.css';
 + import 'rsuite/lib/styles/index.less';
   import { Button } from 'rsuite';
 ```
