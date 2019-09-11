@@ -46,7 +46,7 @@ const createComponentExample = ({
     const context = require(`@/pages/${category}/${namePath}index.md`);
     const componentExamples = examples.map(item => ({
       source: require(`@/pages/${category}/${namePath}${item}.md`),
-      path: `https://github.com/rsuite/rsuite.github.io/tree/master/src/${category}/${namePath}${item}.md`
+      path: `https://github.com/rsuite/rsuite.github.io/tree/master/src/pages/${category}/${namePath}${item}.md`
     }));
 
     const extraDependencies = getDependencies ? getDependencies(locale) : null;
