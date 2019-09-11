@@ -6,6 +6,7 @@ import TopLevelNav from '@/components/TopLevelNav';
 import LanguageSwitchButton from '@/components/LanguageSwitchButton';
 import Logo from '@/components/Logo';
 import ReactLogo from '@/components/ReactLogo';
+import { Link } from 'react-router';
 
 class HomePage extends React.Component {
   static contextTypes = {
@@ -74,8 +75,8 @@ class HomePage extends React.Component {
                   <Button
                     size="lg"
                     appearance="primary"
-                    componentClass="a"
-                    href={`${localePath}guide/introduction`}
+                    componentClass={Link}
+                    to={`${localePath}guide/introduction`}
                   >
                     {_.get(locale, 'common.gettingStarted')}
                   </Button>
