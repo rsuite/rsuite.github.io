@@ -32,7 +32,7 @@ And then edit `./src/App.js`
 - import logo from './logo.svg';
   import './App.css';
 
-+ import 'rsuite/dist/styles/rsuite.css';
++ import 'rsuite/dist/styles/rsuite-default.css';
 + import { Button } from 'rsuite';
 
   class App extends Component {
