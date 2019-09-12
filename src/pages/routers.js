@@ -1126,6 +1126,23 @@ export const createRouters = (locale, onEnter, onEntered) => {
             setTitle('Supported HTML Elements - guide');
           }}
         />
+
+        <Route
+          path="v3-to-v4"
+          getComponents={(location, callback) => {
+            onEnter && onEnter();
+            require.ensure([], require => {
+              const getComponent = require('./guide/v3-to-v4')['default'];
+              const component = getComponent(locale);
+              callback && callback(null, component);
+              onEntered && onEntered();
+            });
+          }}
+          onEnter={() => {
+            setTitle('Supported HTML Elements - guide');
+          }}
+        />
+
       </Route>
 
       <Route
