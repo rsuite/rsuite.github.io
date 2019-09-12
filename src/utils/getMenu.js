@@ -53,6 +53,10 @@ const getMenu = locale => {
           name: _.get(locale, 'common.htmlElements')
         },
         {
+          id: 'v3-to-v4',
+          name: _.get(locale, 'common.v3ToV4')
+        },
+        {
           id: 'logs',
           name: _.get(locale, 'common.v3'),
           target: '_blank',

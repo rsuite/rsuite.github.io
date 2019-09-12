@@ -30,6 +30,7 @@ export default {
     modularized: '按需加载',
     v2: '2.* 版本',
     v3: '3.* 版本',
+    v3ToV4: 'V3 升级到 V4 注意事项',
     notFount: '该页面无法显示（404）',
     goHomePage: '返回首页'
   },
