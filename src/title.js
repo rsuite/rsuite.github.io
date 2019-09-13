@@ -1,7 +1,7 @@
 import { getDict } from './locales';
 
 const dist = getDict();
-const TITLE = 'React Suite | RSUITE';
+const TITLE = 'React Suite | React components';
 
 export const pageview = title => {
   window._ha &&
@@ -18,7 +18,6 @@ export const setTitle = title => {
 };
 
 export const defateTilte = () => {
-  const newTitle = `${TITLE} | ${dist.common.resume}`;
-  document.title = newTitle;
-  pageview(newTitle);
+  document.title = TITLE;
+  pageview(TITLE);
 };

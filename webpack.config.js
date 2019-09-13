@@ -193,7 +193,8 @@ module.exports = merge(
       new webpack.NamedModulesPlugin(),
       // new webpack.HotModuleReplacementPlugin(),
       new HtmlwebpackPlugin({
-        title: 'React Suite | RSUITE | 一套 React 的 UI 组件库',
+        title: 'React Suite | React Components',
+        description: '一套 React 的 UI 组件库，贴心的 UI 设计，友好的开发体验',
         chunks: ['polyfills', 'commons', 'app'],
         template: 'src/index.html',
         inject: true,
@@ -201,7 +202,8 @@ module.exports = merge(
         excludeChunks: ['themes']
       }),
       new HtmlwebpackPlugin({
-        title: 'React Suite | RSUITE | A suite of React components',
+        title: 'React Suite | React Components',
+        description: 'A suite of React components, sensible UI design, and a friendly development experience',
         chunks: ['polyfills', 'commons', 'app_en'],
         filename: 'en/index.html',
         template: 'src/index.html',
