@@ -1,5 +1,5 @@
 ### 分组排序
-> 必须给 List.Item 传入 `index` (组内唯一)
+> 每个 `collection` 的位置独立， 必须给 List.Item 传入 `index` (组内唯一)
 
 <!--start-code-->
 ```js
