@@ -1,5 +1,5 @@
 ### Collection Sort
-> `index` of List.Item is required. (be unique in the collection)
+> `colection` has its own space, `index` of List.Item is required. (be unique in the collection)
 
 <!--start-code-->
 ```js
