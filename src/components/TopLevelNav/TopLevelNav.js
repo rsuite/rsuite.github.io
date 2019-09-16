@@ -75,7 +75,7 @@ class TopLevelNav extends React.Component {
   };
   handleToggleMenu = (event, show) => {
     const { onToggleMenu } = this.props;
-    onToggleMenu(show);
+    onToggleMenu && onToggleMenu(show);
   };
 
   loadTheme = themeName => {
