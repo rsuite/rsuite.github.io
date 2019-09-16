@@ -38,6 +38,6 @@ npm install
 npm run dev
 ```
 
-**之后**，在你的浏览器中打开 http://127.0.0.1:3200/，开始你的表演。
+**之后**，在你的浏览器中打开 http://127.0.0.1:3200/ ，开始你的表演。
 
-[readm-en]: https://github.com/rsuite/rsuite/blob/master/README.md
+[readm-en]: https://github.com/rsuite/rsuite.github.io/blob/master/README.md
