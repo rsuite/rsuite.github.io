@@ -1,4 +1,4 @@
-### Diasbeld and read only
+### Disabled and read only
 
 <!--start-code-->
 
