@@ -3,7 +3,7 @@
 ```js
 /**
  * import fakeDataForColSpan from
- * https://github.com/rsuite/rsuite.github.io/blob/master/src/components/table/data/usersForColSpan.js
+ * https://github.com/rsuite/rsuite.github.io/blob/master/src/pages/components/table/data/usersForColSpan.js
  */
 
 class ColspanTable extends React.Component {
