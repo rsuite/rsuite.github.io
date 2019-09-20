@@ -52,13 +52,19 @@ class HomePage extends React.Component {
             <FlexboxGrid.Item componentClass={Col} colspan={24} md={12}>
               <section className="section">
                 <h1 className="title">React Suite</h1>
-                <p className="sub-title"> {_.get(locale, 'common.resume')}</p>
+                <p className="sub-title">
+                  {' '}
+                  {_.get(locale, 'common.resume')}
+                </p>
                 <p>
                   <a
                     href="https://www.npmjs.com/package/rsuite"
                     target="_blank"
                   >
-                    <img alt="npm" src="https://badge.fury.io/js/rsuite.svg" />
+                    <img
+                      alt="npm"
+                      src="https://badge.fury.io/js/rsuite.svg"
+                    />
                   </a>
                   <a
                     style={{ marginLeft: 10 }}
@@ -84,9 +90,14 @@ class HomePage extends React.Component {
               </section>
             </FlexboxGrid.Item>
 
-            <FlexboxGrid.Item className="logo-react-suite-wrapper" componentClass={Col} colspan={24} md={12}>
+            <FlexboxGrid.Item
+              className="logo-react-suite-wrapper"
+              componentClass={Col}
+              colspan={24}
+              md={12}
+            >
               <div className="section logo-react-suite">
-                <Logo width={120} />
+                <Logo width={120} height={138} />
                 <ReactLogo running={this.state.running} />
               </div>
             </FlexboxGrid.Item>

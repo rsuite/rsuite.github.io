@@ -16,6 +16,9 @@ export default ({ width, height, className = '' }) => {
         viewBox="0 0 120 138"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
+        width="100%"
+        height="100%"
+        preserveAspectRatio="xMidYMin slice"
       >
         <title>React Suite</title>
         <defs>
