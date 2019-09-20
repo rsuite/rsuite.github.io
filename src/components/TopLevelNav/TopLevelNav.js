@@ -152,7 +152,7 @@ class TopLevelNav extends React.Component {
     return (
       <div className="top-level-nav">
         <Link to={`${localePath}`}>
-          <Logo width={26} className="logo-sm" />
+          <Logo width={26} height={30} className="logo-sm" />
         </Link>
 
         <div className="top-level-nav-menu">
@@ -244,7 +244,10 @@ class TopLevelNav extends React.Component {
           </div>
         </div>
         {children}
-        <SearchDrawer show={this.state.search} onHide={this.hideSearchDrawer} />
+        <SearchDrawer
+          show={this.state.search}
+          onHide={this.hideSearchDrawer}
+        />
       </div>
     );
   }
