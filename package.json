@@ -13,12 +13,13 @@
     "dev-styles-source": "STYLE_DEBUG=SOURCE npm run dev",
     "dev-test": "webpack-dev-server --mode development --progress --hot --config webpack.test.config.js",
     "clear-dist": "rm -rf dist",
-    "build-webpack": "NODE_ENV=production  webpack --mode production --progress && cp -R public/* ./dist/ ",
+    "build-webpack": "NODE_ENV=production  webpack --mode production --progress && cp -R -a public/. ./dist/",
     "build": "npm run clear-dist && npm run build-webpack",
     "build-gitee": "DEPLOY_ENV=gitee npm run build",
     "parsing-design-docs": "node ./scripts/parsing-design-docs.js",
     "algolia": "node scripts/algolia-indices.js",
-    "create-router": "node scripts/create-router.js"
+    "create-router": "node scripts/create-router.js",
+    "deploy-gitee": "npm run build-gitee && node scripts/publish-gittee.js"
   },
   "keywords": [
     "react",
@@ -108,6 +109,7 @@
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "^1.1.11",
     "fs-promise": "^0.5.0",
+    "gh-pages": "^2.1.1",
     "glob": "^7.0.3",
     "highlight.js": "^9.4.0",
     "html-loader": "^0.4.3",
