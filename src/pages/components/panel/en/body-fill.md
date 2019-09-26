@@ -4,7 +4,7 @@
 
 ```js
 const instance = (
-  <Panel header={<h3>User List</h3>} bordered bodyFill>
+  <Panel header="User List" bordered bodyFill>
     <Table height={400} data={tableData}>
       <Column width={70} align="center" fixed>
         <HeaderCell>Id</HeaderCell>

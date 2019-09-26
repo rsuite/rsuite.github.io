@@ -4,7 +4,7 @@
 
 ```js
 const instance = (
-  <Panel header={<h3>Panel title</h3>}>
+  <Panel header="Panel title">
     <Paragraph />
   </Panel>
 );
