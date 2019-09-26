@@ -7,7 +7,7 @@
 ```js
 /**
  * import data from
- * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/city.js
+ * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/city-simplified.js
  */
 
 class Demo extends React.Component {

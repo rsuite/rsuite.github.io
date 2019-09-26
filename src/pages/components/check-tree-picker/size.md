@@ -5,7 +5,7 @@
 ```js
 /**
  * import data from
- * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/city.js
+ * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/city-simplified.js
  */
 
 const styles = { width: 280, display: 'block', marginBottom: 10 };
