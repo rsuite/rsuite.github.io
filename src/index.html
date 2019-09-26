@@ -10,7 +10,18 @@
     <link  rel="stylesheet/less" type="text/css" href="/resources/palette.less" />
     <link rel="stylesheet" href="/resources/docsearch.min.css" />
     <script type="text/javascript" src="/resources/babel.min.js"  ></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=Object.getPrototypeOf%2CArray.from%2Cdefault%2CArray.prototype.includes"></script>
+    
+    <script>
+      (function(){
+        var ua = window.navigator.userAgent;
+        if(ua.indexOf('MSIE ')>0||ua.indexOf('Trident/')>0){
+          var s=document.createElement('script');
+          var f=document.getElementsByTagName('script')[0];
+          s.src="https://polyfill.io/v3/polyfill.min.js?features=Object.getPrototypeOf%2CArray.from%2Cdefault%2CArray.prototype.includes";
+          f.parentNode.insertBefore(s, f);
+        }
+      }())
+    </script>
   </head>
 
   <body class="body-loading" id="body">
