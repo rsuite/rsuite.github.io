@@ -1,4 +1,4 @@
-### Diasbled State
+### Disabled State
 
 You can disable the entire component or disable individual options by configuring the `disabled` property.
 
