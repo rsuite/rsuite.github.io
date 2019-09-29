@@ -1,6 +1,6 @@
 {
   "name": "rsuite-docs",
-  "version": "4.0.0",
+  "version": "4.0.2-doc.20190929",
   "description": "RSUITE components built with React",
   "main": "lib/index.js",
   "directories": {

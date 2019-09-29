@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- version: <%= htmlWebpackPlugin.options.version %> -->
     <meta charset="UTF-8" />
     <title><%= htmlWebpackPlugin.options.title %></title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,7 +13,11 @@
     <script type="text/javascript" src="/resources/babel.min.js"  ></script>
     
     <script>
+      
       (function(){
+
+        localStorage.setItem('version','<%= htmlWebpackPlugin.options.version %>');
+
         var ua = window.navigator.userAgent;
         if(ua.indexOf('MSIE ')>0||ua.indexOf('Trident/')>0){
           var s=document.createElement('script');

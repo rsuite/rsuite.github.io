@@ -11,6 +11,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin;
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const HtmlWebpackHandleCssInjectPlugin = require('./scripts/HtmlWebpackHandleCssInjectPlugin');
+const package = require('./package.json');
 
 const iconPath = [
   './node_modules/rsuite/lib/styles',
@@ -193,6 +194,7 @@ module.exports = merge(
       new webpack.NamedModulesPlugin(),
       // new webpack.HotModuleReplacementPlugin(),
       new HtmlwebpackPlugin({
+        version: package.version,
         title: 'React Suite | React Components',
         description: '一套 React 的 UI 组件库，贴心的 UI 设计，友好的开发体验',
         chunks: ['polyfills', 'commons', 'app'],
@@ -202,8 +204,10 @@ module.exports = merge(
         excludeChunks: ['themes']
       }),
       new HtmlwebpackPlugin({
+        version: package.version,
         title: 'React Suite | React Components',
-        description: 'A suite of React components, sensible UI design, and a friendly development experience',
+        description:
+          'A suite of React components, sensible UI design, and a friendly development experience',
         chunks: ['polyfills', 'commons', 'app_en'],
         filename: 'en/index.html',
         template: 'src/index.html',
