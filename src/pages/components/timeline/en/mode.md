@@ -1,31 +1,46 @@
-### Custom dot
+### Custom mode
 
 <!--start-code-->
 
 ```js
-const instance = (
-  <Timeline>
-    <Timeline.Item dot={<Icon icon="check-circle" style={{ color: 'green' }} />}>
+const ModeTimeline = ({ mode }) => (
+  <Timeline mode={mode}>
+    <Timeline.Item>
       <p>2018-03-01</p>
       <p>Your order starts processing</p>
     </Timeline.Item>
-    <Timeline.Item dot={<Icon icon="exclamation-triangle" style={{ color: 'orange' }} />}>
+    <Timeline.Item>
       <p>2018-03-02</p>
       <p>Order out of stock</p>
     </Timeline.Item>
-    <Timeline.Item dot={<Icon icon="info-circle" style={{ color: 'blue' }} />}>
+    <Timeline.Item>
       <p>2018-03-10</p>
       <p>Arrival</p>
     </Timeline.Item>
-    <Timeline.Item dot={<Icon icon="check-circle" style={{ color: 'green' }} />}>
+    <Timeline.Item>
       <p>2018-03-12</p>
       <p>Order out of the library</p>
     </Timeline.Item>
-    <Timeline.Item dot={<Icon icon="spinner" spin style={{ borderRadius:'50%' }} />}>
+    <Timeline.Item>
       <p>2018-03-15</p>
       <p>Sending you a piece</p>
     </Timeline.Item>
   </Timeline>
+);
+const instance = (
+  <Grid fluid>
+    <Row>
+      <Col xs={8}>
+        <ModeTimeline mode="left" />
+      </Col>
+      <Col xs={8}>
+        <ModeTimeline mode="alternate" />
+      </Col>
+      <Col xs={8}>
+        <ModeTimeline mode="right" />
+      </Col>
+    </Row>
+  </Grid>
 );
 
 ReactDOM.render(instance);

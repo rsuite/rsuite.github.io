@@ -16,11 +16,13 @@ import { Timeline } from 'rsuite';
 
 ### `<Timeline>`
 
-| 属性名称       | 类型`(默认值)`                           | 描述                 |
-| -------------- | ---------------------------------------- | -------------------- |
-| children \*    | React.ChildrenArray&lt;Timeline.Item&gt; | 组件的内容           |
-| classPrefix    | string `('timeline')`                    | 组件 CSS 类的前缀    |
-| componentClass | React.ElementType `('ul')`               | 为组件自定义元素类型 |
+| 属性名称       | 类型`(默认值)`                              | 描述                   |
+| -------------- | ------------------------------------------- | ---------------------- |
+| children \*    | React.ChildrenArray&lt;Timeline.Item&gt;    | 组件的内容             |
+| classPrefix    | string `('timeline')`                       | 组件 CSS 类的前缀      |
+| componentClass | React.ElementType `('ul')`                  | 为组件自定义元素类型   |
+| mode           | enum: 'left','right','alternate' `('left')` | 时间轴和内容的相对位置 |
+| timeWidth      | number                                      | 时间轴时间的宽度       |
 
 ### `<Timeline.Item>`
 
@@ -30,3 +32,4 @@ import { Timeline } from 'rsuite';
 | classPrefix    | string `('timeline-item')` | 组件 CSS 类的前缀    |
 | componentClass | React.ElementType `('li')` | 为组件自定义元素类型 |
 | dot            | React.Node                 | 自定义时间轴点       |
+| time           | React.Node                 | 自定义时间轴时间     |

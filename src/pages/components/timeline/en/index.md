@@ -2,7 +2,6 @@
 
 Vertical display timeline.
 
-
 ## Usage
 
 ```js
@@ -17,15 +16,15 @@ import { Timeline } from 'rsuite';
 
 ### `<Timeline>`
 
-
-| Property       | Type `(Default)`                         | Description                                          |
-| -------------- | ---------------------------------------- | ---------------------------------------------------- |
-| children \*    | React.ChildrenArray&lt;Timeline.Item&gt; | The content of the component                         |
-| classPrefix    | string `('timeline')`                    | The prefix of the component CSS class                |
-| componentClass | React.ElementType `('ul')`               | You can use a custom element type for this component |
+| Property       | Type `(Default)`                            | Description                                          |
+| -------------- | ------------------------------------------- | ---------------------------------------------------- |
+| children \*    | React.ChildrenArray&lt;Timeline.Item&gt;    | The content of the component                         |
+| classPrefix    | string `('timeline')`                       | The prefix of the component CSS class                |
+| componentClass | React.ElementType `('ul')`                  | You can use a custom element type for this component |
+| mode           | enum: 'left','right','alternate' `('left')` | Timeline content show mode                           |
+| timeWidth      | number                                      | Customizing the Timeline time width                  |
 
 ### `<Timeline.Item>`
-
 
 | Property       | Type `(Default)`           | Description                                          |
 | -------------- | -------------------------- | ---------------------------------------------------- |
@@ -33,3 +32,4 @@ import { Timeline } from 'rsuite';
 | classPrefix    | string `('timeline-item')` | The prefix of the component CSS class                |
 | componentClass | React.ElementType `('li')` | You can use a custom element type for this component |
 | dot            | React.Node                 | Customizing the Timeline item                        |
+| time           | React.Node                 | Customizing the Timeline time                        |
