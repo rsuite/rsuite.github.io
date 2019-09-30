@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { Nav, Button, Icon, Dropdown, Row, Col } from 'rsuite';
+import { Nav, Button, Icon, Dropdown, Row, Col, Slider } from 'rsuite';
+import ResponsiveNav from '@rsuite/responsive-nav';
 import createComponentExample from '@/utils/createComponentExample';
 
 export default createComponentExample({
@@ -13,9 +14,13 @@ export default createComponentExample({
     'justified',
     'dropdown',
     'icon',
-    'with-router'
+    'with-router',
+    'responsive-nav',
+    'removable-nav'
   ],
   dependencies: {
+    Slider,
+    ResponsiveNav,
     Dropdown,
     Icon,
     Button,

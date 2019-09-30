@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
+    "@rsuite/responsive-nav": "0.0.3",
     "algoliasearch": "^3.24.9",
     "color": "^3.1.2",
     "date-fns": "^1.30.1",
