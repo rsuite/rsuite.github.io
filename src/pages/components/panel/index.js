@@ -10,12 +10,14 @@ export default createComponentExample({
   examples: [
     'basic',
     'bordered',
+    'shaded',
     'no-header',
     'collapsible',
     'body-fill',
     'panel-group',
     'accordion-group',
-    'accordion-group-active'
+    'accordion-group-active',
+    'card'
   ],
   dependencies: {
     Table,
