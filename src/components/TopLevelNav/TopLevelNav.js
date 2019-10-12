@@ -14,10 +14,13 @@ import {
   extension,
   gitee,
   lightOn,
-  lightOff
+  lightOff,
+  rtl,
+  ltr
 } from '@/components/SvgIcons';
 import SearchDrawer from '@/components/SearchDrawer';
 import loadCssFile from '@/utils/loadCssFile';
+import { DirectionContext } from '@/App';
 
 function WithTooltipButton({ children, tip, ...props }) {
   if (isMobile) {
@@ -28,15 +31,19 @@ function WithTooltipButton({ children, tip, ...props }) {
     );
   }
   return (
-    <Whisper
-      speaker={<Tooltip>{tip}</Tooltip>}
-      placement="right"
-      trigger="hover"
-    >
-      <Button size="lg" {...props}>
-        {children}
-      </Button>
-    </Whisper>
+    <DirectionContext.Consumer>
+      {({ direction }) => (
+        <Whisper
+          speaker={<Tooltip>{tip}</Tooltip>}
+          placement={direction === 'ltr' ? 'right' : 'left'}
+          trigger="hover"
+        >
+          <Button size="lg" {...props}>
+            {children}
+          </Button>
+        </Whisper>
+      )}
+    </DirectionContext.Consumer>
   );
 }
 
@@ -150,105 +157,127 @@ class TopLevelNav extends React.Component {
     );
 
     return (
-      <div className="top-level-nav">
-        <Link to={`${localePath}`}>
-          <Logo width={26} height={30} className="logo-sm" />
-        </Link>
+      <DirectionContext.Consumer>
+        {({ direction, handleToggleDirection }) => {
+          return (
+            <div className="top-level-nav">
+              <Link to={`${localePath}`}>
+                <Logo width={26} height={30} className="logo-sm" />
+              </Link>
 
-        <div className="top-level-nav-menu">
-          {renderSearchButton('visible-xs')}
+              <div className="top-level-nav-menu">
+                {renderSearchButton('visible-xs')}
 
-          {menu.map(item => (
-            <WithTooltipButton
-              tip={item.tip}
-              key={item.key}
-              className="icon-btn-circle"
-              componentClass={Link}
-              to={item.to}
-              onClick={event => {
-                this.handleToggleMenu(event, true);
-              }}
-            >
-              <Icon
-                icon={item.icon}
-                svgStyle={{
-                  ...svgStyle,
-                  fill: router.isActive({ pathname: item.key })
-                    ? '#169de0'
-                    : iconColor
-                }}
-                size="lg"
+                {menu.map(item => (
+                  <WithTooltipButton
+                    tip={item.tip}
+                    key={item.key}
+                    className="icon-btn-circle"
+                    componentClass={Link}
+                    to={item.to}
+                    onClick={event => {
+                      this.handleToggleMenu(event, true);
+                    }}
+                  >
+                    <Icon
+                      icon={item.icon}
+                      svgStyle={{
+                        ...svgStyle,
+                        fill: router.isActive({ pathname: item.key })
+                          ? '#169de0'
+                          : iconColor
+                      }}
+                      size="lg"
+                    />
+                  </WithTooltipButton>
+                ))}
+
+                <WithTooltipButton
+                  tip={_.get(locale, 'common.design')}
+                  className="icon-btn-circle"
+                  componentClass="a"
+                  target="_blank"
+                  href="/design/default/index.html"
+                >
+                  <Icon icon={design} svgStyle={svgStyle} size="lg" />
+                </WithTooltipButton>
+
+                {renderSearchButton('hidden-xs')}
+
+                <div className="nav-menu-bottom">
+                  <WithTooltipButton
+                    tip="Toggle light/dark theme"
+                    className="icon-btn-circle"
+                    onClick={this.handleToggleThemeButtonClick}
+                  >
+                    <Icon
+                      icon={light ? lightOff : lightOn}
+                      svgStyle={svgStyle}
+                      size="lg"
+                    />
+                  </WithTooltipButton>
+
+                  <WithTooltipButton
+                    tip="Toggle RTL/LTR"
+                    className="icon-btn-circle"
+                    onClick={handleToggleDirection}
+                  >
+                    <Icon
+                      icon={direction === 'ltr' ? rtl : ltr}
+                      svgStyle={svgStyle}
+                      size="lg"
+                    />
+                  </WithTooltipButton>
+
+                  <WithTooltipButton
+                    tip="GitHub"
+                    className="icon-btn-circle"
+                    href="https://github.com/rsuite/rsuite"
+                    target="_blank"
+                  >
+                    <Icon
+                      icon="github"
+                      size="lg"
+                      style={{ color: iconColor }}
+                    />
+                  </WithTooltipButton>
+
+                  <WithTooltipButton
+                    tip="码云"
+                    className="icon-btn-circle"
+                    href="https://gitee.com/rsuite/rsuite"
+                    target="_blank"
+                  >
+                    <Icon icon={gitee} svgStyle={svgStyle} size="lg" />
+                  </WithTooltipButton>
+
+                  {hideToggle ? null : (
+                    <WithTooltipButton
+                      tip={
+                        showSubmenu
+                          ? _.get(locale, 'common.closeMenu')
+                          : _.get(locale, 'common.openMenu')
+                      }
+                      className="icon-btn-circle"
+                      onClick={this.handleToggleMenu}
+                    >
+                      <Icon
+                        icon={showSubmenu ? 'angle-left' : 'angle-right'}
+                        size="lg"
+                      />
+                    </WithTooltipButton>
+                  )}
+                </div>
+              </div>
+              {children}
+              <SearchDrawer
+                show={this.state.search}
+                onHide={this.hideSearchDrawer}
               />
-            </WithTooltipButton>
-          ))}
-
-          <WithTooltipButton
-            tip={_.get(locale, 'common.design')}
-            className="icon-btn-circle"
-            componentClass="a"
-            target="_blank"
-            href="/design/default/index.html"
-          >
-            <Icon icon={design} svgStyle={svgStyle} size="lg" />
-          </WithTooltipButton>
-
-          {renderSearchButton('hidden-xs')}
-
-          <div className="nav-menu-bottom">
-            <WithTooltipButton
-              tip="Toggle light/dark theme"
-              className="icon-btn-circle"
-              onClick={this.handleToggleThemeButtonClick}
-            >
-              <Icon
-                icon={light ? lightOff : lightOn}
-                svgStyle={svgStyle}
-                size="lg"
-              />
-            </WithTooltipButton>
-
-            <WithTooltipButton
-              tip="GitHub"
-              className="icon-btn-circle"
-              href="https://github.com/rsuite/rsuite"
-              target="_blank"
-            >
-              <Icon icon="github" size="lg" style={{ color: iconColor }} />
-            </WithTooltipButton>
-
-            <WithTooltipButton
-              tip="码云"
-              className="icon-btn-circle"
-              href="https://gitee.com/rsuite/rsuite"
-              target="_blank"
-            >
-              <Icon icon={gitee} svgStyle={svgStyle} size="lg" />
-            </WithTooltipButton>
-
-            {hideToggle ? null : (
-              <WithTooltipButton
-                tip={
-                  showSubmenu
-                    ? _.get(locale, 'common.closeMenu')
-                    : _.get(locale, 'common.openMenu')
-                }
-                className="icon-btn-circle"
-                onClick={this.handleToggleMenu}
-              >
-                <Icon
-                  icon={showSubmenu ? 'angle-left' : 'angle-right'}
-                  size="lg"
-                />
-              </WithTooltipButton>
-            )}
-          </div>
-        </div>
-        {children}
-        <SearchDrawer
-          show={this.state.search}
-          onHide={this.hideSearchDrawer}
-        />
-      </div>
+            </div>
+          );
+        }}
+      </DirectionContext.Consumer>
     );
   }
 }
