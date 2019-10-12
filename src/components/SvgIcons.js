@@ -8,3 +8,5 @@ export extension from '../resources/images/extension.svg';
 export gitee from '../resources/images/gitee.svg';
 export lightOn from '../resources/images/light-on.svg';
 export lightOff from '../resources/images/light-off.svg';
+export rtl from '../resources/images/rtl.svg';
+export ltr from '../resources/images/ltr.svg';
