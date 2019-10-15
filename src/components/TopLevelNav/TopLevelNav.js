@@ -20,7 +20,7 @@ import {
 } from '@/components/SvgIcons';
 import SearchDrawer from '@/components/SearchDrawer';
 import loadCssFile from '@/utils/loadCssFile';
-import { DirectionContext } from '@/App';
+import { DirectionContext } from '@/AppWithRouter';
 
 function WithTooltipButton({ children, tip, ...props }) {
   if (isMobile) {

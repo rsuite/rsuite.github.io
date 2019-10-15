@@ -22,31 +22,59 @@ import { getDict } from './locales';
 import zhCN from 'rsuite/lib/IntlProvider/locales/zh_CN';
 import enUS from 'rsuite/lib/IntlProvider/locales/en_US';
 
+export const DirectionContext = React.createContext({
+  direction: localStorage.getItem('direction') || 'ltr'
+});
+
+const html = document.querySelector('html');
+
 export default locale => {
   class AppRouters extends React.Component {
-    shouldComponentUpdate() {
-      return false;
+    constructor(props) {
+      super(props);
+      const direction = localStorage.getItem('direction') || 'ltr';
+      this.state = {
+        direction
+      };
+      html.dir = direction;
     }
+    handleToggleDirection = () => {
+      const direction = this.state.direction === 'ltr' ? 'rtl' : 'ltr';
+      this.setState({ direction });
+      html.dir = direction;
+      localStorage.setItem('direction', direction);
+    };
     render() {
       const { onEnter, onEntered, onRemoveLoading } = this.props;
+      const { direction } = this.state;
       return (
-        <IntlProvider locale={getDict(locale)}>
-          <RSIntlProvider locale={locale === 'en' ? enUS : zhCN}>
-            <Router
-              history={DEPLOY_ENV === 'gitee' ? hashHistory : browserHistory}
+        <DirectionContext.Provider
+          value={{
+            direction,
+            handleToggleDirection: this.handleToggleDirection
+          }}
+        >
+          <IntlProvider locale={getDict(locale)}>
+            <RSIntlProvider
+              locale={locale === 'en' ? enUS : zhCN}
+              rtl={this.state.direction === 'rtl'}
             >
-              <Route
-                path={locale === 'en' ? '/en/' : '/'}
-                component={props => (
-                  <App {...props} onRemoveLoading={onRemoveLoading} />
-                )}
+              <Router
+                history={DEPLOY_ENV === 'gitee' ? hashHistory : browserHistory}
               >
-                <IndexRoute component={HomePage} onEnter={defateTilte} />
-                {createRouters(locale, onEnter, onEntered)}
-              </Route>
-            </Router>
-          </RSIntlProvider>
-        </IntlProvider>
+                <Route
+                  path={locale === 'en' ? '/en/' : '/'}
+                  component={props => (
+                    <App {...props} onRemoveLoading={onRemoveLoading} />
+                  )}
+                >
+                  <IndexRoute component={HomePage} onEnter={defateTilte} />
+                  {createRouters(locale, onEnter, onEntered)}
+                </Route>
+              </Router>
+            </RSIntlProvider>
+          </IntlProvider>
+        </DirectionContext.Provider>
       );
     }
   }
