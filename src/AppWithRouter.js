@@ -22,9 +22,7 @@ import { getDict } from './locales';
 import zhCN from 'rsuite/lib/IntlProvider/locales/zh_CN';
 import enUS from 'rsuite/lib/IntlProvider/locales/en_US';
 
-export const DirectionContext = React.createContext({
-  direction: localStorage.getItem('direction') || 'ltr'
-});
+import { DirectionContext } from '@/components/Context';
 
 const html = document.querySelector('html');
 
@@ -38,12 +36,14 @@ export default locale => {
       };
       html.dir = direction;
     }
+
     handleToggleDirection = () => {
       const direction = this.state.direction === 'ltr' ? 'rtl' : 'ltr';
       this.setState({ direction });
       html.dir = direction;
       localStorage.setItem('direction', direction);
     };
+
     render() {
       const { onEnter, onEntered, onRemoveLoading } = this.props;
       const { direction } = this.state;
