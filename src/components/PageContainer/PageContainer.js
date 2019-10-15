@@ -18,7 +18,7 @@ import {
 import { design } from '../SvgIcons';
 import LanguageSwitchButton from '../LanguageSwitchButton';
 import TypesDrawer from '../TypesDrawer';
-import { DirectionContext } from '@/App';
+import { DirectionContext } from '@/components/Context';
 
 const style = {
   iconSvg: {
