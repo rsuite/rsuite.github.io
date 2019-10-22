@@ -98,18 +98,10 @@ class HomePage extends React.Component {
           </FlexboxGrid>
         </Row>
         <Row>
-          <div
-            style={{
-              textAlign: 'right',
-              color: '#aaa',
-              position: 'fixed',
-              width: '100%',
-              left: 0,
-              bottom: 0,
-              padding: '5px 10px'
-            }}
-          >
-            <span>沪 ICP 备 12011101 号 - 10</span>
+          <div className="footerbar">
+            <a href="http://beian.miit.gov.cn" target="_blank">
+              沪 ICP 备 12011101 号 - 10
+            </a>
           </div>
         </Row>
       </Grid>
