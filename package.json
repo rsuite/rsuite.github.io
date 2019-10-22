@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
+    "@rsuite/document-nav": "^1.0.5",
     "@rsuite/responsive-nav": "0.0.3",
     "algoliasearch": "^3.24.9",
     "color": "^3.1.2",
@@ -61,7 +62,6 @@
     "react-text-mask": "^5.4.1",
     "rsuite": "^4.0.3",
     "rsuite-intl": "^1.0.4",
-    "rsuite-page-nav": "^1.1.7",
     "tinycolor2": "^1.4.1"
   },
   "devDependencies": {

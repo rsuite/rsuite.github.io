@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { PageProvider, PageNav, PageContent } from 'rsuite-page-nav';
+import {
+  NavProvider as PageProvider,
+  Nav as PageNav,
+  Content as PageContent
+} from '@rsuite/document-nav';
 import { on } from 'dom-lib';
 import { ThemeContext } from '../Frame';
 
@@ -12,8 +16,7 @@ import {
   Icon,
   ButtonToolbar,
   Tooltip,
-  Whisper,
-  Message
+  Whisper
 } from 'rsuite';
 import { design } from '../SvgIcons';
 import LanguageSwitchButton from '../LanguageSwitchButton';
@@ -100,7 +103,7 @@ class PageContainer extends React.Component {
           <ThemeContext.Consumer>
             {({ theme }) => {
               const designHash = designHashConfig[theme];
-              console.log(direction);
+              const rtl = direction === 'rtl';
               return (
                 <PageProvider>
                   <Row
@@ -185,9 +188,10 @@ class PageContainer extends React.Component {
                         showOrderNumber={false}
                         width={150}
                         scrollBar="left"
+                        rtl={rtl}
                         offset={{
                           top: 80,
-                          [direction === 'rtl' ? 'left' : 'right']: 10
+                          [rtl ? 'left' : 'right']: 10
                         }}
                       />
                     </Col>

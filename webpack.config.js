@@ -39,11 +39,7 @@ const getStyleLoader = () => {
       }
     }
   ];
-  const filterLoader = loader =>
-    STYLE_DEBUG === 'STYLE' || __PRO__
-      ? true
-      : loader.loader !== 'postcss-loader';
-  return loaders.filter(filterLoader).map(loader => {
+  return loaders.map(loader => {
     _.set(loader, 'options.sourceMap', STYLE_DEBUG === 'SOURCE');
     return loader;
   });
