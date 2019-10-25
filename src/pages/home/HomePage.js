@@ -53,7 +53,7 @@ class HomePage extends React.Component {
               <section className="section">
                 <h1 className="title">React Suite</h1>
                 <p className="sub-title"> {_.get(locale, 'common.resume')}</p>
-                <p>
+                <p className="home-page-badge-wrap">
                   <a
                     href="https://www.npmjs.com/package/rsuite"
                     target="_blank"
