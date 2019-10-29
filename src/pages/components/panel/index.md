@@ -8,7 +8,7 @@
 ## 获取组件
 
 ```js
-import { Panel, PanelGroup } from "rsuite";
+import { Panel, PanelGroup } from 'rsuite';
 ```
 
 ## 演示
@@ -23,6 +23,7 @@ import { Panel, PanelGroup } from "rsuite";
 | --------------- | ------------------ | ------------------ |
 | bodyFill        | boolean            | 内容区域撑满容器   |
 | bordered        | boolean            | 显示线框           |
+| shaded          | boolean            | 显示阴影           |
 | classPrefix     | string `('panel')` | 组件 CSS 类的前缀  |
 | collapsible     | boolean            | 可折叠的           |
 | defaultExpanded | boolean            | 默认展开           |

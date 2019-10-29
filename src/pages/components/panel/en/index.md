@@ -3,8 +3,8 @@
 A content panel that supports folding panels.
 The Panel can have all the ' Data Display ' components and can be used as a container for the form.
 
-* `<Panel>`
-* `<PanelGroup>`
+- `<Panel>`
+- `<PanelGroup>`
 
 ## Usage
 
@@ -24,6 +24,7 @@ import { Panel, PanelGroup } from 'rsuite';
 | --------------- | ------------------ | ----------------------------------------- |
 | bodyFill        | boolean            | Content area filled with containers       |
 | bordered        | boolean            | Show border                               |
+| shaded          | boolean            | With shadow                               |
 | classPrefix     | string `('panel')` | The prefix of the component CSS class     |
 | collapsible     | boolean            | Whether it is a collapsible panel         |
 | defaultExpanded | boolean            | Expand by default                         |
