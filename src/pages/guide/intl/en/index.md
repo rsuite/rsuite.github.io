@@ -20,11 +20,12 @@ ReactDOM.render(
 
 | Language name | Description         |
 | ------------- | ------------------- |
-| zh_CN         | Simplified Chinese  |
-| zh_TW         | traditional Chinese |
 | en_GB         | English             |
 | en_US         | American English    |
+| ko_KR         | Korean              |
 | pt_BR         | Portuguese (Brazil) |
+| zh_CN         | Simplified Chinese  |
+| zh_TW         | traditional Chinese |
 
 ## Expand or modify language
 
