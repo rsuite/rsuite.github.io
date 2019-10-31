@@ -7,11 +7,11 @@ const instance = (
   <div>
     <Badge />
 
-    <Badge style={{ marginLeft: 20, background: '#4caf50' }} />
+    <Badge style={{ background: '#4caf50' }} />
 
-    <Badge style={{ marginLeft: 20 }} content="99+" />
+    <Badge content="99+" />
 
-    <Badge style={{ marginLeft: 20 }} content="NEW" />
+    <Badge content="NEW" />
   </div>
 );
 

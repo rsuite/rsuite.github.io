@@ -22,7 +22,6 @@ class CustomSlider extends React.Component {
 
     return (
       <div className="doc-example">
-        人群扩展:
         <div style={{ width: 200, marginLeft: 20 }}>
           <Slider
             min={0}

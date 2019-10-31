@@ -1,31 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <!-- version: <%= htmlWebpackPlugin.options.version %> -->
     <meta charset="UTF-8" />
     <title><%= htmlWebpackPlugin.options.title %></title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="<%= htmlWebpackPlugin.options.description %>" />
+    <meta
+      name="description"
+      content="<%= htmlWebpackPlugin.options.description %>"
+    />
     <link rel="stylesheet" type="text/css" href="/resources/loading.css" />
-    <link  rel="stylesheet/less" type="text/css" href="/resources/palette.less" />
+    <link
+      rel="stylesheet/less"
+      type="text/css"
+      href="/resources/palette.less"
+    />
     <link rel="stylesheet" href="/resources/docsearch.min.css" />
-    <script type="text/javascript" src="/resources/babel.min.js"  ></script>
-    
-    <script>
-      
-      (function(){
+    <script type="text/javascript" src="/resources/babel.min.js"></script>
 
-        localStorage.setItem('version','<%= htmlWebpackPlugin.options.version %>');
+    <script>
+      (function() {
+        localStorage.setItem(
+          'version',
+          '<%= htmlWebpackPlugin.options.version %>'
+        );
 
         var ua = window.navigator.userAgent;
-        if(ua.indexOf('MSIE ')>0||ua.indexOf('Trident/')>0){
-          var s=document.createElement('script');
-          var f=document.getElementsByTagName('script')[0];
-          s.src="https://polyfill.io/v3/polyfill.min.js?features=Object.getPrototypeOf%2CArray.from%2Cdefault%2CArray.prototype.includes";
+        if (ua.indexOf('MSIE ') > 0 || ua.indexOf('Trident/') > 0) {
+          var s = document.createElement('script');
+          var f = document.getElementsByTagName('script')[0];
+          s.src =
+            'https://polyfill.io/v3/polyfill.min.js?features=Object.getPrototypeOf%2CArray.from%2Cdefault%2CArray.prototype.includes';
           f.parentNode.insertBefore(s, f);
         }
-      }())
+      })();
     </script>
   </head>
 
@@ -43,16 +52,30 @@
     </div>
     <div id="root"></div>
     <script>
-      (function (i, d, t, o, u, h, s, f) {
-        i[t] = i[t] || [], i[t].push(h); i[h] = i[h] || function () {
-          return (i[h].q = i[h].q || []).push(arguments)
-        }; s = d.createElement(o); s.src = u;
-        s.async = 1; f = d.getElementsByTagName(o)[0]; f.parentNode.insertBefore(s, f);
-      })(window, document, "HyperAnalyticsObject", "script", "//t.hypers.com.cn/hwt.js?v=1.9", "_ha");
-      _ha("create", "5156", {
+      (function(i, d, t, o, u, h, s, f) {
+        (i[t] = i[t] || []), i[t].push(h);
+        i[h] =
+          i[h] ||
+          function() {
+            return (i[h].q = i[h].q || []).push(arguments);
+          };
+        s = d.createElement(o);
+        s.src = u;
+        s.async = 1;
+        f = d.getElementsByTagName(o)[0];
+        f.parentNode.insertBefore(s, f);
+      })(
+        window,
+        document,
+        'HyperAnalyticsObject',
+        'script',
+        '//t.hypers.com.cn/hwt.js?v=1.9',
+        '_ha'
+      );
+      _ha('create', '5156', {
         auto_track: true
       });
-      _ha("send", "pageview");
+      _ha('send', 'pageview');
     </script>
 
     <script>
@@ -60,7 +83,10 @@
         room: 'rsuite/rsuite'
       };
     </script>
-    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-</body>
-
+    <script
+      src="https://sidecar.gitter.im/dist/sidecar.v1.js"
+      async
+      defer
+    ></script>
+  </body>
 </html>
