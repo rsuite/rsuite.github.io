@@ -844,6 +844,22 @@ export const createRouters = (locale, onEnter, onEntered) => {
         />
 
         <Route
+          path="carousel"
+          getComponents={(location, callback) => {
+            onEnter && onEnter();
+            require.ensure([], require => {
+              const getComponent = require('./components/carousel')['default'];
+              const component = getComponent(locale);
+              callback && callback(null, component);
+              onEntered && onEntered();
+            });
+          }}
+          onEnter={() => {
+            setTitle('Carousel - components');
+          }}
+        />
+
+        <Route
           path="grid"
           getComponents={(location, callback) => {
             onEnter && onEnter();
@@ -1142,7 +1158,6 @@ export const createRouters = (locale, onEnter, onEntered) => {
             setTitle('Supported HTML Elements - guide');
           }}
         />
-
       </Route>
 
       <Route
