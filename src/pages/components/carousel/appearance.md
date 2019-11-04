@@ -13,6 +13,15 @@ const styles = {
 function App() {
   const [placement, setPlacement] = React.useState('bottom');
   const [shape, setShape] = React.useState('dot');
+
+  function updatePlacement(value) {
+    setPlacement(value);
+  }
+
+  function updateShape(value) {
+    setShape(value);
+  }
+
   return (
     <div>
       <RadioGroup
@@ -20,9 +29,9 @@ function App() {
         inline
         appearance="picker"
         defaultValue={placement}
-        onChange={setPlacement}
+        onChange={updatePlacement}
       >
-        <span style={styles.radioGroupLabel}>位置: </span>
+        <span style={styles.radioGroupLabel}>Placement: </span>
         <Radio value="top">Top</Radio>
         <Radio value="bottom">Bottom</Radio>
         <Radio value="left">Left</Radio>
@@ -34,9 +43,9 @@ function App() {
         inline
         appearance="picker"
         defaultValue={shape}
-        onChange={setShape}
+        onChange={updateShape}
       >
-        <span style={styles.radioGroupLabel}>形状: </span>
+        <span style={styles.radioGroupLabel}>Shape: </span>
         <Radio value="dot">Dot</Radio>
         <Radio value="bar">Bar</Radio>
       </RadioGroup>

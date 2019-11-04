@@ -22,7 +22,7 @@ function App() {
         defaultValue={placement}
         onChange={setPlacement}
       >
-        <span style={styles.radioGroupLabel}>位置: </span>
+        <span style={styles.radioGroupLabel}>Placement: </span>
         <Radio value="top">Top</Radio>
         <Radio value="bottom">Bottom</Radio>
         <Radio value="left">Left</Radio>
@@ -36,7 +36,7 @@ function App() {
         defaultValue={shape}
         onChange={setShape}
       >
-        <span style={styles.radioGroupLabel}>形状: </span>
+        <span style={styles.radioGroupLabel}>Shape: </span>
         <Radio value="dot">Dot</Radio>
         <Radio value="bar">Bar</Radio>
       </RadioGroup>
