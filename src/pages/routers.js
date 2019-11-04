@@ -926,6 +926,22 @@ export const createRouters = (locale, onEnter, onEntered) => {
         />
 
         <Route
+          path="affix"
+          getComponents={(location, callback) => {
+            onEnter && onEnter();
+            require.ensure([], require => {
+              const getComponent = require('./components/affix')['default'];
+              const component = getComponent(locale);
+              callback && callback(null, component);
+              onEntered && onEntered();
+            });
+          }}
+          onEnter={() => {
+            setTitle('Affix - components');
+          }}
+        />
+
+        <Route
           path="animation"
           getComponents={(location, callback) => {
             onEnter && onEnter();

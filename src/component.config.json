@@ -570,6 +570,12 @@
     "apis": ["Schema.Model", "Schema.Types"]
   },
   {
+    "id": "affix",
+    "name": "Affix",
+    "title": "固定位置",
+    "components": ["Affix"]
+  },
+  {
     "id": "animation",
     "name": "Animation",
     "title": "动画",

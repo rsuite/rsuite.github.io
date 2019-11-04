@@ -9,7 +9,7 @@ const instance = (
       <Button>New Message</Button>
     </Badge>
 
-    <Badge style={{ marginLeft: 20 }} content="NEW">
+    <Badge content="NEW">
       <Button>New Message</Button>
     </Badge>
   </div>

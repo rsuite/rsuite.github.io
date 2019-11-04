@@ -2,7 +2,8 @@
 @import './ie-polyfill';
 @import './code-view';
 @import './markdown';
-
+@import './rtl';
+@import '~@rsuite/document-nav/lib/less/index.less';
 @import '../components/SearchDrawer/styles';
 @import '../components/Stars/styles';
 @import '../components/ReactLogo/styles';
@@ -11,7 +12,6 @@
 @import '../components/PageContainer/styles';
 @import '../components/DocSidebar/styles';
 @import '../components/LanguageSwitchButton/styles';
-
 @import '../pages/tools/icons/styles';
 @import '../pages/tools/palette/styles';
 @import '../pages/home/styles';
@@ -38,6 +38,7 @@
 @media-md: 992px;
 @scrollbar-width: 10px;
 @top-level-nav-height: 48px;
+@doc-nav-active-color: @link-color;
 
 .main-container {
   padding-right: 180px;
@@ -83,6 +84,7 @@ pre {
   td {
     padding: 4px;
   }
+
   tr td:first-child {
     text-align: right;
   }
@@ -91,11 +93,13 @@ pre {
 .json-tree-wrapper {
   background: rgb(0, 43, 54) !important;
   margin-bottom: 20px !important;
+
   .rs-panel-heading {
     background: #06232c;
     border-radius: 6px;
     color: #fff;
   }
+
   .rs-panel-body {
     padding: 0px 4px 8px 10px;
   }
@@ -146,11 +150,16 @@ pre {
   }
 }
 
+/* rtl:begin:ignore */
+.gitter-open-chat-button {
+  right: inherit;
+}
+
 .gitter-chat-embed {
   border-left: none;
 }
 
-.page-nav .nav-link::before {
+.document-nav .nav-link::before {
   background: @divider-border-color;
 }
 

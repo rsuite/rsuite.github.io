@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 import DocSidebar from './DocSidebar';
 import TopLevelNav from './TopLevelNav';
+import { DirectionContext } from '@/components/Context';
 
 export const ThemeContext = React.createContext({
   theme: localStorage.getItem('theme') || 'default'
@@ -35,24 +36,32 @@ class Frame extends Component {
     const menuStyles = {
       width: showSubmenu ? 260 : 0
     };
-    const contextStyle = {
-      marginLeft: showSubmenu ? 324 : 80
-    };
 
     return (
-      <ThemeContext.Provider value={{ theme }}>
-        <div>
-          <TopLevelNav
-            showSubmenu={showSubmenu}
-            onToggleMenu={this.handleToggleMenu}
-            onChangeTheme={this.handleChangeTheme}
-          />
-          <DocSidebar style={menuStyles} />
-          <div className="page-context" style={contextStyle}>
-            {this.props.children}
-          </div>
-        </div>
-      </ThemeContext.Provider>
+      <DirectionContext.Consumer>
+        {({ direction }) => {
+          const contextStyle = {
+            [`margin${direction === 'rtl' ? 'Right' : 'Left'}`]: showSubmenu
+              ? 324
+              : 80
+          };
+          return (
+            <ThemeContext.Provider value={{ theme }}>
+              <div>
+                <TopLevelNav
+                  showSubmenu={showSubmenu}
+                  onToggleMenu={this.handleToggleMenu}
+                  onChangeTheme={this.handleChangeTheme}
+                />
+                <DocSidebar style={menuStyles} />
+                <div className="page-context" style={contextStyle}>
+                  {this.props.children}
+                </div>
+              </div>
+            </ThemeContext.Provider>
+          );
+        }}
+      </DirectionContext.Consumer>
     );
   }
 }

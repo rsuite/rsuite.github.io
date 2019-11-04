@@ -1,4 +1,4 @@
-### 禁用
+### 禁用与不可选
 
 <!--start-code-->
 
@@ -12,12 +12,20 @@ const instance = (
   <div>
     <CheckTreePicker data={data} disabled style={{ width: 280 }} />
     <hr />
-    <p>禁用选项</p>
+    <p>Disabled item</p>
     <CheckTreePicker
       defaultExpandAll
       data={data}
-      disabledItemValues={[2]}
+      disabledItemValues={[1, 3, 36]}
       style={{ width: 280 }}
+    />
+    <hr />
+    <p>Uncheckable</p>
+    <CheckTreePicker
+      defaultExpandAll
+      style={{ width: 280 }}
+      data={data}
+      uncheckableItemValues={[1, 3, 36]}
     />
   </div>
 );
