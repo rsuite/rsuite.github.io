@@ -12,6 +12,7 @@ const styles = {
 };
 function App() {
   const [placement, setPlacement] = React.useState('bottom');
+  const [shape, setShape] = React.useState('dot');
   return (
     <div>
       <RadioGroup
@@ -32,14 +33,14 @@ function App() {
         name="radioList"
         inline
         appearance="picker"
-        defaultValue={placement}
-        onChange={setPlacement}
+        defaultValue={shape}
+        onChange={setShape}
       >
         <span style={styles.radioGroupLabel}>形状: </span>
         <Radio value="dot">Dot</Radio>
         <Radio value="bar">Bar</Radio>
       </RadioGroup>
-      <Carousel placement={placement} className="custom-slider">
+      <Carousel key={`${placement}.${shape}`} placement={placement} shape={shape} className="custom-slider">
         <img
           src="https://via.placeholder.com/600x250/8f8e94/FFFFFF?text=1"
           height="250"
