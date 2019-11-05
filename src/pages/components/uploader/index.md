@@ -27,6 +27,7 @@ import { Uploader } from 'rsuite';
 | disabled             | boolean                                                                                                  | 禁用                                                                          |
 | disabledFileItem     | boolean                                                                                                  | 禁用文件列表                                                                  |
 | fileList             | Array<[FileType](#types)>                                                                                | 已经上传的文件列表 （受控）                                                   |
+| fileListVisible      | boolean`(true)`                                                                                          | 显示文件列表                                                                  |
 | headers              | Object                                                                                                   | 设置上传的请求头部                                                            |
 | listType             | menu: 'text' , 'picture-text' , 'picture' `('text')`                                                     | 上传列表的样式                                                                |
 | maxPreviewFileSize   | number `(5242880)`                                                                                       | 设置预览文件最大限制                                                          |
@@ -40,8 +41,8 @@ import { Uploader } from 'rsuite';
 | onReupload           | (file: [FileType](#types)) => void                                                                       | 在文件列表中，对上传失败的文件，点击重新上传的回调函数                        |
 | onSuccess            | (response: Object, file: [FileType](#types)) => void                                                     | 上传成功后的回调函数                                                          |
 | onUpload             | (file: [FileType](#types)) => void                                                                       | 上传文件开始的回调函数                                                        |
-| renderFileInfo       | (file: FileType, fileElement: React.Node) => React.Node                                                  | 自定义渲染文件信息                                                            |
 | removable            | boolean `(true)`                                                                                         | 允许删除上传列表中的文件                                                      |
+| renderFileInfo       | (file: FileType, fileElement: React.Node) => React.Node                                                  | 自定义渲染文件信息                                                            |
 | shouldQueueUpdate    | (fileList: Array<[FileType](#types)>, newFile: Array<[FileType](#types)>, [FileType](#types)) => boolean | 允许更新队列。在选择文件后，更新上传文件队列前的校验函数，返回 false 则不更新 |
 | shouldUpload         | (file: [FileType](#types)) => boolean                                                                    | 允许上传文件。在文件上传前的的校验函数，返回 false 则不上传                   |
 | timeout              | number                                                                                                   | 设置上传超时                                                                  |
