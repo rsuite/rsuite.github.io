@@ -5,19 +5,19 @@
 ```js
 const TimelineWithTime = ({ align }) => (
   <Timeline align={align}>
-    <Timeline.Item time="2018-03-01 16:27:42">
+    <Timeline.Item time="November 5, 2019 16:27">
       Your order starts processing
     </Timeline.Item>
-    <Timeline.Item time="2018-03-01 16:28:43">
+    <Timeline.Item time="November 5, 2019 18:00">
       Your order to be ready for delivery
     </Timeline.Item>
-    <Timeline.Item time="2018-03-01 16:28:45">
+    <Timeline.Item time="Yesterday 16:28">
       Your parcel has been out of the library
     </Timeline.Item>
-    <Timeline.Item time="2018-03-02 02:34:41">
+    <Timeline.Item time="Today 02:34">
       Send to Shanghai Hongkou Company
     </Timeline.Item>
-    <Timeline.Item time="2018-03-02 15:05:29">
+    <Timeline.Item time="Today 15:05">
       Sending you a piece
     </Timeline.Item>
   </Timeline>

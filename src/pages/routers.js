@@ -1144,6 +1144,22 @@ export const createRouters = (locale, onEnter, onEntered) => {
         />
 
         <Route
+          path="rtl"
+          getComponents={(location, callback) => {
+            onEnter && onEnter();
+            require.ensure([], require => {
+              const getComponent = require('./guide/rtl')['default'];
+              const component = getComponent(locale);
+              callback && callback(null, component);
+              onEntered && onEntered();
+            });
+          }}
+          onEnter={() => {
+            setTitle('Right-to-left - guide');
+          }}
+        />
+
+        <Route
           path="html-elements"
           getComponents={(location, callback) => {
             onEnter && onEnter();

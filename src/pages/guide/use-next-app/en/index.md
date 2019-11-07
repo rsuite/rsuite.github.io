@@ -102,6 +102,37 @@ $ yarn dev
 
 Open the browser and visit `http://localhost:3000/`, you can see the application of React Suite page, and then start your development journey.
 
+## Navigation component and Link combination
+
+There are some navigation components in the rsuite component, such as `Dropdown`, `Nav`, `Breadcrumb`, which are used in conjunction with the `Link` component of `Next.js` to use the `renderItem` method.
+
+```jsx
+import Link from 'next/link';
+import { Nav } from 'rsuite';
+
+function Navigation() {
+  return (
+    <Nav>
+      <Nav.Item
+        renderItem={item => {
+          return <Link href="/">{item}</Link>;
+        }}
+      >
+        Home
+      </Nav.Item>
+
+      <Nav.Item
+        renderItem={item => {
+          return <Link href="/about">{item}</Link>;
+        }}
+      >
+        About
+      </Nav.Item>
+    </Nav>
+  );
+}
+```
+
 ## Examples
 
 - [next-app](https://github.com/rsuite/examples/tree/master/next-app)

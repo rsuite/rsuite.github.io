@@ -15,6 +15,7 @@ export default {
     useNextApp: 'Use in Next.js',
     customizeTheme: 'Customize theme',
     intl: 'Internationalization',
+    rtl: 'Right-to-left',
     changeLog: 'Change log',
     palette: 'Palette',
     icons: 'Icons',

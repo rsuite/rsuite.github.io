@@ -102,6 +102,37 @@ $ yarn dev
 
 在浏览器中访问 `http://localhost:3000/`，就可以看到应用 React Suite 的页面了，接下来就开始您的开发之旅。
 
+## 导航组件与 Link 组合
+
+在 rsuite 组件中有一些导航组件，比如 `Dropdown`、`Nav`、`Breadcrumb`，在与 `Next.js` 的 `Link`组件组合使用的时候，需要用到 `renderItem` 方法。
+
+```jsx
+import Link from 'next/link';
+import { Nav } from 'rsuite';
+
+function Navigation() {
+  return (
+    <Nav>
+      <Nav.Item
+        renderItem={item => {
+          return <Link href="/">{item}</Link>;
+        }}
+      >
+        Home
+      </Nav.Item>
+
+      <Nav.Item
+        renderItem={item => {
+          return <Link href="/about">{item}</Link>;
+        }}
+      >
+        About
+      </Nav.Item>
+    </Nav>
+  );
+}
+```
+
 ## 示例
 
 - [next-app](https://github.com/rsuite/examples/tree/master/next-app)
