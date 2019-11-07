@@ -18,7 +18,7 @@ import { Badge } from 'rsuite';
 
 | Property    | Type`(Default)`          | Description                                                |
 | ----------- | ------------------------ | ---------------------------------------------------------- |
-| classPrefix | string `('badge')`       | The prefix of the component CSS class                      |
 | children    | React.Node               | Be wrapped component                                       |
+| classPrefix | string `('badge')`       | The prefix of the component CSS class                      |
 | content     | string,number,React.Node | Content info                                               |
 | maxCount    | number`99`               | Max count number（Only valid if `content` is type number） |

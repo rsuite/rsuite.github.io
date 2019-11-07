@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Icon, Panel, PanelGroup, Table } from 'rsuite';
+import { Button, Icon, Panel, PanelGroup, Table, Grid, Row, Col } from 'rsuite';
 import tableData from '../table/data/users';
 import createComponentExample from '@/utils/createComponentExample';
 
@@ -10,7 +10,10 @@ export default createComponentExample({
   examples: [
     'basic',
     'bordered',
+    'shaded',
     'no-header',
+    'card',
+    'card-grid',
     'collapsible',
     'body-fill',
     'panel-group',
@@ -27,6 +30,9 @@ export default createComponentExample({
     Pagination,
     Cell,
     Column,
+    Grid,
+    Row,
+    Col,
     tableData
   }
 });

@@ -49,6 +49,10 @@ const getMenu = locale => {
           name: _.get(locale, 'common.intl')
         },
         {
+          id: 'rtl',
+          name: _.get(locale, 'common.rtl')
+        },
+        {
           id: 'html-elements',
           name: _.get(locale, 'common.htmlElements')
         },

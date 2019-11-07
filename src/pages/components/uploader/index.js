@@ -1,5 +1,5 @@
 import React from 'react';
-import { Uploader, Icon, Button } from 'rsuite';
+import { Uploader, Icon, Button, Loader, Alert } from 'rsuite';
 import createComponentExample from '@/utils/createComponentExample';
 
 export default createComponentExample({
@@ -8,6 +8,7 @@ export default createComponentExample({
     'basic',
     'picture',
     'picture-text',
+    'avatar',
     'file-list',
     'file-list-custom',
     'disabled',
@@ -17,6 +18,8 @@ export default createComponentExample({
   dependencies: {
     Icon,
     Uploader,
-    Button
+    Button,
+    Loader,
+    Alert
   }
 });
