@@ -72,6 +72,8 @@ interface NotificationProps {
   description: React.ReactNode;
   duration?: number;
   placement?: string;
+  className?: string;
+  style?: React.CSSProperties;
   top?: number;
   bottom?: number;
   key?: string;
