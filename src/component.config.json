@@ -524,6 +524,12 @@
     }
   },
   {
+    "id": "carousel",
+    "name": "Carousel",
+    "title": "轮播",
+    "components": ["Carousel"]
+  },
+  {
     "group": true,
     "id": "layout",
     "name": "Layout",
