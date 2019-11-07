@@ -139,7 +139,7 @@ class PageContainer extends React.Component {
                               appearance="subtle"
                               icon={<Icon icon="edit2" />}
                               target="_blank"
-                              href={`https://github.com/rsuite/rsuite.github.io/edit/master/src/${routerId}/index.md`}
+                              href={`https://github.com/rsuite/rsuite.github.io/edit/master/src/pages/${routerId}/index.md`}
                             />
                           </Whisper>
                         ) : null}
@@ -152,9 +152,7 @@ class PageContainer extends React.Component {
                             appearance="subtle"
                             icon={<Icon icon="bug" />}
                             target="_blank"
-                            href={
-                              ' https://github.com/rsuite/rsuite/issues/new'
-                            }
+                            href={'https://github.com/rsuite/rsuite/issues/new'}
                           />
                         </Whisper>
 
