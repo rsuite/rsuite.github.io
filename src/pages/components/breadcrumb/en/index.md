@@ -2,8 +2,8 @@
 
 Used to display the current page path and quickly return to the history page.
 
-* `<Breadcrumb>`
-* `<Breadcrumb.Item>`
+- `<Breadcrumb>`
+- `<Breadcrumb.Item>`
 
 ## Usage
 
@@ -26,7 +26,8 @@ import { Breadcrumb } from 'rsuite';
 
 ### `<Breadcrumb.Item>`
 
-| Property       | Type `(Default)`           | Description                                     |
-| -------------- | -------------------------- | ----------------------------------------------- |
-| active         | boolean                    | Active state                                    |
-| componentClass | React.ElementType `('ol')` | You can use a custom element for this component |
+| Property       | Type `(Default)`              | Description                                     |
+| -------------- | ----------------------------- | ----------------------------------------------- |
+| active         | boolean                       | Active state                                    |
+| componentClass | React.ElementType `('ol')`    | You can use a custom element for this component |
+| renderItem     | (item:React.Node)=>React.Node | Custom rendering item                           |

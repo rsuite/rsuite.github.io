@@ -4,8 +4,8 @@ Provides a list of various forms of navigation menus, which can be landscape and
 
 Contains the following components:
 
-* `<Nav>`
-* `<Nav.Item>`
+- `<Nav>`
+- `<Nav.Item>`
 
 ## Usage
 
@@ -45,3 +45,4 @@ import { Nav, Dropdown } from 'rsuite';
 | href           | string                                                     | Link                                                  |
 | icon           | React.Element&lt;typeof Icon&gt;                           | Sets the icon for the component                       |
 | onSelect       | (eventKey: any, event: SyntheticEvent&lt;any&gt;) => void, | Select the callback function that the event triggers. |
+| renderItem     | (item:React.Node)=>React.Node                              | Custom rendering item                                 |
