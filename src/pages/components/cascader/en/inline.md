@@ -1,0 +1,17 @@
+### Inline
+
+<!--start-code-->
+
+```js
+/**
+ * import data from
+ * https://github.com/rsuite/rsuite.github.io/blob/master/src/resources/data/province-simplified.js
+ */
+
+const instance = (
+  <Cascader inline data={data} searchable={false} menuHeight="auto" />
+);
+ReactDOM.render(instance);
+```
+
+<!--end-code-->
