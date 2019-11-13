@@ -49,7 +49,9 @@ export default {
     'tab.loading': 'Loading',
     'tab.colspan': 'Colspan',
     'tab.summary': 'Summary',
-    'tab.fixed': 'Fixed Column'
+    'tab.fixed': 'Fixed Column',
+    'tab.auto-height': 'Auto Height',
+    'tab.affix-header': 'Affix Header'
   },
   palette: {
     title: 'Get the product color',
