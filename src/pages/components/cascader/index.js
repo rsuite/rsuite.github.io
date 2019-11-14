@@ -16,7 +16,8 @@ export default createComponentExample({
     'disabled',
     'async',
     'controlled',
-    'container'
+    'container',
+    'inline'
   ],
   getDependencies: getProvince,
   dependencies: {

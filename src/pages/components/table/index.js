@@ -21,8 +21,6 @@ import createComponentExample from '@/utils/createComponentExample';
 import { getDict } from '@/locales';
 import fakeLargeData from './data/fakeLargeData.json';
 
-
-
 const { HeaderCell, Pagination, Cell, Column } = Table;
 const TablePagination = Pagination;
 
@@ -42,12 +40,13 @@ export default locale => {
     'edit',
     'loading',
     'colspan',
-    'summary'
+    'summary',
+    'auto-height',
+    'affix-header'
   ].map(item => ({
     title: dict.table[`tab.${item}`],
     sorce: require(`./${localePath}${item}.md`)
   }));
-
 
   const ComponentExample = createComponentExample({
     id: 'Table',

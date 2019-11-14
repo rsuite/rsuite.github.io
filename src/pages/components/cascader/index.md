@@ -32,25 +32,26 @@ import { Cascader } from 'rsuite';
 | disabled             | boolean                                                                                 | 禁用组件                             |
 | disabledItemValues   | string[]                                                                                | 禁用选项                             |
 | height               | number `(320)`                                                                          | 设置 Dropdown 的高度                 |
+| inline               | boolean                                                                                 | 在组件初始后直接展示菜单             |
 | labelKey             | string `('label')`                                                                      | 设置选项显示内容在 `data` 中的 `key` |
 | menuClassName        | string                                                                                  | 选项菜单的 className                 |
 | menuHeight           | number                                                                                  | 设置菜单的高度                       |
 | menuWidth            | number                                                                                  | 设置菜单的宽度                       |
 | onChange             | (value:string, event)=>void                                                             | `value` 发生改变时的回调函数         |
-| onClose              | ()=>void                                                                                | 关闭回调函数                         |
 | onClean              | (event:SyntheticEvent)=>void                                                            | 清除值后的回调函数                   |
+| onClose              | ()=>void                                                                                | 关闭回调函数                         |
 | onGroupTitleClick    | (event)=>void                                                                           | 点击分组标题的回调函数               |
 | onOpen               | ()=>void                                                                                | 打开回调函数                         |
-| onSelect             | (item:[DataItemType](#types), activePaths: Array, concat:(data, children)=>Array)=>void | 选项被点击选择后的回调函数           |
 | onSearch             | (searchKeyword:string, event)=>void                                                     | 搜索的回调函数                       |
+| onSelect             | (item:[DataItemType](#types), activePaths: Array, concat:(data, children)=>Array)=>void | 选项被点击选择后的回调函数           |
 | open                 | boolean                                                                                 | 打开 (受控)                          |
 | placeholder          | React.Node `('Select')`                                                                 | 占位符                               |
 | placement            | enum: [PlacementStart](#types)`('bottomStart')`                                         | 打开位置                             |
 | preventOverflow      | boolean                                                                                 | 防止浮动元素溢出                     |
+| renderExtraFooter    | ()=>React.Node                                                                          | 自定义页脚内容                       |
 | renderMenu           | (children: object[], menu:React.Node, parentNode?: object)=>React.Node                  | 自定义渲染菜单列表                   |
 | renderMenuItem       | (label:React.Node, item: [DataItemType](#types))=>React.Node                            | 自定义选项                           |
 | renderValue          | (value:string, itemPaths:Array, selectedElement:React.Node)=>React.Node                 | 自定义被选中的选项                   |
-| renderExtraFooter    | ()=>React.Node                                                                          | 自定义页脚内容                       |
 | searchable           | boolean `(true)`                                                                        | 可以搜索                             |
 | size                 | enum: 'lg', 'md', 'sm', 'xs' `('md')`                                                   | 设置组件尺寸                         |
 | toggleComponentClass | React.ElementType `('a')`                                                               | 为组件自定义元素类型                 |

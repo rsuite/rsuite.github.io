@@ -48,7 +48,9 @@ export default {
     'tab.loading': '加载中',
     'tab.colspan': '合并单元格',
     'tab.summary': '汇总',
-    'tab.fixed': '锁定列'
+    'tab.fixed': '锁定列',
+    'tab.auto-height': '自动高度',
+    'tab.affix-header': '固定表头'
   },
   palette: {
     title: '分析产品商标颜色',
