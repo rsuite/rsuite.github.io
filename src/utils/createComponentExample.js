@@ -103,7 +103,7 @@ const createComponentExample = ({
           <div>
             <h3>{dist.common.advanced} </h3>
 
-            <ButtonGroup size="xs">
+            <ButtonGroup size="xs" className="menu-tabs">
               {tabExamples.map((item, index) => (
                 <Button
                   key={index}
@@ -121,7 +121,7 @@ const createComponentExample = ({
         );
       }
       render() {
-        const { tabExamples = [], children } = this.props;
+        const { children } = this.props;
 
         const { designHash, routerId } = this.state;
         const docs = context.split('<!--{demo}-->');
