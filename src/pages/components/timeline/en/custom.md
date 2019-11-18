@@ -62,6 +62,10 @@ ReactDOM.render(instance);
 }
 
 .custom-timeline .rs-timeline-item-custom-dot .rs-icon {
+  position: absolute;
+  background: #fff;
+  top: 0;
+  left: -2px;
   border: 2px solid #ddd;
   width: 40px;
   height: 40px;
