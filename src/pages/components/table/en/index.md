@@ -26,6 +26,7 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 
 | Property               | Type `(Default)`                        | Description                                                                                   |
 | ---------------------- | --------------------------------------- | --------------------------------------------------------------------------------------------- |
+| affixHeader            | boolean,number                          | Affix the table header to the specified location on the page                                  |
 | autoHeight             | boolean                                 | Automatic height                                                                              |
 | bordered               | boolean                                 | Show border                                                                                   |
 | bodyRef                | React.ElementRef                        | A ref attached to the table body element                                                      |
