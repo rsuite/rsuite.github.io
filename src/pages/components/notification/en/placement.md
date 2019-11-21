@@ -1,25 +1,25 @@
-
 ### Placement
 
 <!--start-code-->
-```js
 
-function open(placement){
+```js
+function open(placement) {
   Notification.open({
-      title: placement,
-      placement,
-      description: <Paragraph style={{ width: 320 }} rows={3} />
+    title: placement,
+    placement,
+    description: <Paragraph style={{ width: 320 }} rows={3} />
   });
 }
 
 const instance = (
   <ButtonToolbar>
-    <Button onClick={()=>open('topLeft')}> Top Left </Button>
-    <Button onClick={()=>open('topRight')}> Top Right </Button>
-    <Button onClick={()=>open('bottomLeft')}> Bottom Left </Button>
-    <Button onClick={()=>open('bottomRight')}> Bottom Right </Button>
+    <Button onClick={() => open('topStart')}> Top Start </Button>
+    <Button onClick={() => open('topEnd')}> Top End </Button>
+    <Button onClick={() => open('bottomStart')}> Bottom Start </Button>
+    <Button onClick={() => open('bottomEnd')}> Bottom End </Button>
   </ButtonToolbar>
 );
 ReactDOM.render(instance);
 ```
+
 <!--end-code-->
