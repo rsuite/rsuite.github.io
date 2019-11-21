@@ -7,7 +7,6 @@ import {
   Content as PageContent
 } from '@rsuite/document-nav';
 import { on } from 'dom-lib';
-import { ThemeContext } from '../Frame';
 
 import {
   Row,
@@ -21,7 +20,7 @@ import {
 import { design } from '../SvgIcons';
 import LanguageSwitchButton from '../LanguageSwitchButton';
 import TypesDrawer from '../TypesDrawer';
-import { DirectionContext } from '@/components/Context';
+import { ThemeContext } from '@/components/Context';
 
 const style = {
   iconSvg: {
@@ -98,112 +97,104 @@ class PageContainer extends React.Component {
     const { hideNav } = this.state;
     const { locale } = this.context;
     return (
-      <DirectionContext.Consumer>
-        {({ direction }) => (
-          <ThemeContext.Consumer>
-            {({ theme }) => {
-              const designHash = designHashConfig[theme];
-              const rtl = direction === 'rtl';
-              return (
-                <PageProvider>
-                  <Row
-                    {...rest}
-                    className={classnames({ ['hide-page-nav']: hideNav })}
-                  >
-                    <Col md={24} xs={24} sm={24} className="main-container">
-                      <PageContent>{children}</PageContent>
-                    </Col>
-                    <Col md={8} xsHidden smHidden>
-                      <ButtonToolbar className="menu-button">
-                        {designHash ? (
-                          <Whisper
-                            placement="bottom"
-                            speaker={<Tooltip>{locale.common.design}</Tooltip>}
-                          >
-                            <IconButton
-                              appearance="subtle"
-                              icon={
-                                <Icon icon={design} style={style.iconSvg} />
-                              }
-                              target="_blank"
-                              href={`/design/${theme}/index.html#artboard${designHash}`}
-                            />
-                          </Whisper>
-                        ) : null}
-                        {routerId ? (
-                          <Whisper
-                            placement="bottom"
-                            speaker={<Tooltip>{locale.common.edit}</Tooltip>}
-                          >
-                            <IconButton
-                              appearance="subtle"
-                              icon={<Icon icon="edit2" />}
-                              target="_blank"
-                              href={`https://github.com/rsuite/rsuite.github.io/edit/master/src/pages/${routerId}/index.md`}
-                            />
-                          </Whisper>
-                        ) : null}
+      <ThemeContext.Consumer>
+        {({ theme, direction }) => {
+          const designHash = designHashConfig[theme];
+          const rtl = direction === 'rtl';
+          return (
+            <PageProvider>
+              <Row
+                {...rest}
+                className={classnames({ ['hide-page-nav']: hideNav })}
+              >
+                <Col md={24} xs={24} sm={24} className="main-container">
+                  <PageContent>{children}</PageContent>
+                </Col>
+                <Col md={8} xsHidden smHidden>
+                  <ButtonToolbar className="menu-button">
+                    {designHash ? (
+                      <Whisper
+                        placement="bottom"
+                        speaker={<Tooltip>{locale.common.design}</Tooltip>}
+                      >
+                        <IconButton
+                          appearance="subtle"
+                          icon={<Icon icon={design} style={style.iconSvg} />}
+                          target="_blank"
+                          href={`/design/${theme}/index.html#artboard${designHash}`}
+                        />
+                      </Whisper>
+                    ) : null}
+                    {routerId ? (
+                      <Whisper
+                        placement="bottom"
+                        speaker={<Tooltip>{locale.common.edit}</Tooltip>}
+                      >
+                        <IconButton
+                          appearance="subtle"
+                          icon={<Icon icon="edit2" />}
+                          target="_blank"
+                          href={`https://github.com/rsuite/rsuite.github.io/edit/master/src/pages/${routerId}/index.md`}
+                        />
+                      </Whisper>
+                    ) : null}
 
-                        <Whisper
-                          placement="bottom"
-                          speaker={<Tooltip>{locale.common.newIssues}</Tooltip>}
-                        >
-                          <IconButton
-                            appearance="subtle"
-                            icon={<Icon icon="bug" />}
-                            target="_blank"
-                            href={'https://github.com/rsuite/rsuite/issues/new'}
-                          />
-                        </Whisper>
-
-                        <Whisper
-                          placement="bottom"
-                          speaker={
-                            <Tooltip>{locale.common.changeLanguage}</Tooltip>
-                          }
-                        >
-                          <LanguageSwitchButton
-                            language={locale.id}
-                            onClick={this.handleChangeLanguage}
-                          />
-                        </Whisper>
-
-                        <Whisper
-                          placement="bottom"
-                          speaker={
-                            <Tooltip>{locale.common.collapseMenu}</Tooltip>
-                          }
-                        >
-                          <IconButton
-                            appearance="subtle"
-                            icon={<Icon icon="bars" />}
-                            onClick={this.handleNavicon}
-                          />
-                        </Whisper>
-                      </ButtonToolbar>
-
-                      <PageNav
-                        showOrderNumber={false}
-                        width={150}
-                        scrollBar="left"
-                        rtl={rtl}
-                        offset={{
-                          top: 80,
-                          [rtl ? 'left' : 'right']: 10
-                        }}
+                    <Whisper
+                      placement="bottom"
+                      speaker={<Tooltip>{locale.common.newIssues}</Tooltip>}
+                    >
+                      <IconButton
+                        appearance="subtle"
+                        icon={<Icon icon="bug" />}
+                        target="_blank"
+                        href={'https://github.com/rsuite/rsuite/issues/new'}
                       />
-                    </Col>
-                  </Row>
-                  <TypesDrawer
-                    onHide={this.closeShowTypes}
-                    show={this.state.showTypes}
+                    </Whisper>
+
+                    <Whisper
+                      placement="bottom"
+                      speaker={
+                        <Tooltip>{locale.common.changeLanguage}</Tooltip>
+                      }
+                    >
+                      <LanguageSwitchButton
+                        language={locale.id}
+                        onClick={this.handleChangeLanguage}
+                      />
+                    </Whisper>
+
+                    <Whisper
+                      placement="bottom"
+                      speaker={<Tooltip>{locale.common.collapseMenu}</Tooltip>}
+                    >
+                      <IconButton
+                        appearance="subtle"
+                        icon={<Icon icon="bars" />}
+                        onClick={this.handleNavicon}
+                      />
+                    </Whisper>
+                  </ButtonToolbar>
+
+                  <PageNav
+                    showOrderNumber={false}
+                    width={150}
+                    scrollBar="left"
+                    rtl={rtl}
+                    offset={{
+                      top: 80,
+                      [rtl ? 'left' : 'right']: 10
+                    }}
                   />
-                </PageProvider>
-              );
-            }}
-          </ThemeContext.Consumer>
-        )}
-      </DirectionContext.Consumer>
+                </Col>
+              </Row>
+              <TypesDrawer
+                onHide={this.closeShowTypes}
+                show={this.state.showTypes}
+              />
+            </PageProvider>
+          );
+        }}
+      </ThemeContext.Consumer>
     );
   }
 }

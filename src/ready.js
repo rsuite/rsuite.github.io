@@ -1,5 +1,6 @@
 import { removeClass } from 'dom-lib';
 import loadCssFile from '@/utils/loadCssFile';
+import { readTheme, getThemeCssPath, getThemeId } from '@/utils/themeHelpers';
 
 const shortKey = localeKey => {
   try {
@@ -10,7 +11,7 @@ const shortKey = localeKey => {
 };
 
 const filter = [];
-const themeName = localStorage.getItem('theme') || 'default';
+const [themeName, direction] = readTheme();
 
 /**
  * Determine the current locale and switch to the corresponding path.
@@ -35,7 +36,7 @@ filter.push(
     }
     resolve();
   }),
-  loadCssFile(`/resources/css/theme-${themeName}.css`, `theme-${themeName}`)
+  loadCssFile(getThemeCssPath(themeName, direction), getThemeId(themeName, direction))
 );
 
 export default function ready(callback) {
