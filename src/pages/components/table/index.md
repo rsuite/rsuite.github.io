@@ -26,9 +26,10 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 
 | 属性名称               | 类型 `(默认值)`                         | 描述                                                         |
 | ---------------------- | --------------------------------------- | ------------------------------------------------------------ |
+| affixHeader            | boolean,number                          | 将标头固定到页面上的指定位置                                 |
 | autoHeight             | boolean                                 | 自动高度                                                     |
-| bordered               | boolean                                 | 表格边框                                                     |
 | bodyRef                | React.ElementRef                        | 表格主体部分上的 ref                                         |
+| bordered               | boolean                                 | 表格边框                                                     |
 | cellBordered           | boolean                                 | 单元格边框                                                   |
 | data \*                | Array&lt;Object&gt;                     | 表格数据                                                     |
 | defaultExpandAllRows   | boolean                                 | 默认展开所有节点                                             |
@@ -46,10 +47,10 @@ const { Column, HeaderCell, Cell, Pagination } = Table;
 | onRowClick             | (rowData:object)=>void                  | 行点击后的回调函数， 返回 `rowDate`                          |
 | onScroll               | (scrollX:object, scrollY:object)=>void  | 滚动条滚动时候的回调函数                                     |
 | onSortColumn           | (dataKey:string, sortType:string)=>void | 点击排序列的回调函数，返回 `sortColumn`, `sortType` 这两个值 |
-| renderRowExpanded      | (rowDate?: Object) => React.Node        | 自定义可以展开区域的内容                                     |
-| renderTreeToggle       | (icon:node,rowData:object)=> node       | 树形表格，在展开节点的回调函数                               |
 | renderEmpty            | (info: React.Node) => React.Node        | 自定义渲染数据为空的状态                                     |
 | renderLoading          | (loading: React.Node) => React.Node     | 自定义渲染数据加载中的状态                                   |
+| renderRowExpanded      | (rowDate?: Object) => React.Node        | 自定义可以展开区域的内容                                     |
+| renderTreeToggle       | (icon:node,rowData:object)=> node       | 树形表格，在展开节点的回调函数                               |
 | rowClassName           | string , (rowData:object)=>string       | 为行自定义 className                                         |
 | rowExpandedHeight      | number `(100)`                          | 设置可展开区域的高度                                         |
 | rowHeight              | number`(46)`                            | 行高                                                         |
