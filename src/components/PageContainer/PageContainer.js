@@ -98,8 +98,8 @@ class PageContainer extends React.Component {
     const { locale } = this.context;
     return (
       <ThemeContext.Consumer>
-        {({ theme, direction }) => {
-          const designHash = designHashConfig[theme];
+        {({ theme: [themeName, direction] }) => {
+          const designHash = designHashConfig[themeName];
           const rtl = direction === 'rtl';
           return (
             <PageProvider>
@@ -121,7 +121,7 @@ class PageContainer extends React.Component {
                           appearance="subtle"
                           icon={<Icon icon={design} style={style.iconSvg} />}
                           target="_blank"
-                          href={`/design/${theme}/index.html#artboard${designHash}`}
+                          href={`/design/${themeName}/index.html#artboard${designHash}`}
                         />
                       </Whisper>
                     ) : null}

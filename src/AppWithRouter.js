@@ -22,7 +22,12 @@ import { getDict } from './locales';
 import zhCN from 'rsuite/lib/IntlProvider/locales/zh_CN';
 import enUS from 'rsuite/lib/IntlProvider/locales/en_US';
 import loadCssFile from '@/utils/loadCssFile';
-import { readTheme, writeTheme, getThemeCssPath, getThemeId } from '@/utils/themeHelpers';
+import {
+  readTheme,
+  writeTheme,
+  getThemeCssPath,
+  getThemeId
+} from '@/utils/themeHelpers';
 import { ThemeContext } from '@/components/Context';
 
 const html = document.querySelector('html');
@@ -42,7 +47,7 @@ export default locale => {
     }
 
     loadTheme = (themeName, direction) => {
-      writeTheme(themeName,direction);
+      writeTheme(themeName, direction);
       const { globalVars = {} } = window.less || {};
       window.less &&
         window.less.modifyVars({
@@ -51,7 +56,7 @@ export default locale => {
         });
       html.dir = direction;
       const themeId = getThemeId(themeName, direction);
-      loadCssFile(getThemeCssPath(themeName, direction),themeId).then(() => {
+      loadCssFile(getThemeCssPath(themeName, direction), themeId).then(() => {
         Array.from(document.querySelectorAll('[id^=theme]')).forEach(css => {
           if (css.id !== themeId) {
             css.remove();
@@ -74,11 +79,10 @@ export default locale => {
 
     render() {
       const { onEnter, onEntered, onRemoveLoading } = this.props;
-      const { direction } = this.state;
       return (
         <ThemeContext.Provider
           value={{
-            direction,
+            theme: readTheme(),
             handleToggleDirection: this.handleToggleDirection,
             handleToggleTheme: this.handleToggleTheme
           }}
