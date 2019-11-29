@@ -28,7 +28,7 @@ class Frame extends Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ theme, direction }) => {
+        {({ theme: [, direction] }) => {
           const contextStyle = {
             [`margin${direction === 'rtl' ? 'Right' : 'Left'}`]: showSubmenu
               ? 324

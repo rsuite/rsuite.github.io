@@ -20,7 +20,7 @@ import {
 } from '@/components/SvgIcons';
 import SearchDrawer from '@/components/SearchDrawer';
 import { readThemeName } from '@/utils/themeHelpers';
-import { ThemeContext} from '@/components/Context';
+import { ThemeContext } from '@/components/Context';
 
 function WithTooltipButton({ children, tip, ...props }) {
   if (isMobile) {
@@ -125,7 +125,11 @@ class TopLevelNav extends React.Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ theme, direction, handleToggleDirection, handleToggleTheme }) => {
+        {({
+          theme: [themeName, direction],
+          handleToggleDirection,
+          handleToggleTheme
+        }) => {
           return (
             <div className="top-level-nav">
               <Link to={`${localePath}`}>
@@ -178,7 +182,7 @@ class TopLevelNav extends React.Component {
                     onClick={handleToggleTheme}
                   >
                     <Icon
-                      icon={theme === 'dark' ? lightOff : lightOn}
+                      icon={themeName === 'dark' ? lightOff : lightOn}
                       svgStyle={svgStyle}
                       size="lg"
                     />
