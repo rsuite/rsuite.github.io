@@ -24,6 +24,7 @@ import PageContainer from '@/components/PageContainer';
 import loadJsFile from '@/utils/loadJsFile';
 import getLocalePath from '@/utils/getLocalePath';
 import SketchPicker from './SketchPicker';
+import { readThemeName } from '@/utils/themeHelpers';
 
 const colors = [
   '#34C3FF',
@@ -80,7 +81,7 @@ export default getLocalePath(localePath => {
     };
 
     getThemeIsDefault = () =>
-      ['default', null].includes(localStorage.getItem('theme'));
+      ['default', null].includes(readThemeName());
 
     handleChangeComplete = ({ hex: color }) => {
       this.setState({ color });

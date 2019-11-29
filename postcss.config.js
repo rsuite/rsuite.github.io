@@ -12,12 +12,6 @@ optimizeCss &&
     })
   );
 
-plugins.push(
-  require('postcss-rtl')({
-    // onlyDirection: 'rtl'
-  })
-);
-
 optimizeCss &&
   plugins.push(
     require('cssnano')({
