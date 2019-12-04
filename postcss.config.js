@@ -19,7 +19,7 @@ optimizeCss &&
         'default',
         {
           discardComments: {
-            removeAll: !__DEBUG__
+            removeAll: false
           }
         }
       ]
