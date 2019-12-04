@@ -129,7 +129,7 @@
     "react-hot-loader": "^4.3.4",
     "rimraf": "^2.5.2",
     "rsuite-clipboard": "^2.0.1",
-    "rtlcss": "^2.4.0",
+    "rtlcss": "^2.4.1",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0",
     "style-loader": "^0.20.3",
