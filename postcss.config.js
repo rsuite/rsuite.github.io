@@ -12,12 +12,6 @@ optimizeCss &&
     })
   );
 
-plugins.push(
-  require('postcss-rtl')({
-    // onlyDirection: 'rtl'
-  })
-);
-
 optimizeCss &&
   plugins.push(
     require('cssnano')({
@@ -25,7 +19,7 @@ optimizeCss &&
         'default',
         {
           discardComments: {
-            removeAll: !__DEBUG__
+            removeAll: false
           }
         }
       ]

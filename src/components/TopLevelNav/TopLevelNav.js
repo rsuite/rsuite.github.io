@@ -19,8 +19,8 @@ import {
   ltr
 } from '@/components/SvgIcons';
 import SearchDrawer from '@/components/SearchDrawer';
-import loadCssFile from '@/utils/loadCssFile';
-import { DirectionContext } from '@/components/Context';
+import { readThemeName } from '@/utils/themeHelpers';
+import { ThemeContext } from '@/components/Context';
 
 function WithTooltipButton({ children, tip, ...props }) {
   if (isMobile) {
@@ -31,19 +31,15 @@ function WithTooltipButton({ children, tip, ...props }) {
     );
   }
   return (
-    <DirectionContext.Consumer>
-      {({ direction }) => (
-        <Whisper
-          speaker={<Tooltip>{tip}</Tooltip>}
-          placement={direction === 'ltr' ? 'right' : 'left'}
-          trigger="hover"
-        >
-          <Button size="lg" {...props}>
-            {children}
-          </Button>
-        </Whisper>
-      )}
-    </DirectionContext.Consumer>
+    <Whisper
+      speaker={<Tooltip>{tip}</Tooltip>}
+      placement="right"
+      trigger="hover"
+    >
+      <Button size="lg" {...props}>
+        {children}
+      </Button>
+    </Whisper>
   );
 }
 
@@ -69,7 +65,7 @@ class TopLevelNav extends React.Component {
   constructor() {
     super();
     this.state = {
-      light: localStorage.getItem('theme') === 'dark' ? false : true,
+      light: readThemeName() === 'dark' ? false : true,
       search: false
     };
   }
@@ -83,35 +79,6 @@ class TopLevelNav extends React.Component {
   handleToggleMenu = (event, show) => {
     const { onToggleMenu } = this.props;
     onToggleMenu && onToggleMenu(show);
-  };
-
-  loadTheme = themeName => {
-    localStorage.setItem('theme', themeName);
-    const { globalVars = {} } = window.less || {};
-    window.less &&
-      window.less.modifyVars({
-        ...globalVars,
-        '@theme-is-default': themeName === 'default'
-      });
-
-    const themeId = `theme-${themeName}`;
-    loadCssFile(`/resources/css/theme-${themeName}.css`, themeId).then(() => {
-      Array.from(document.querySelectorAll('[id^=theme]')).forEach(css => {
-        if (css.id !== themeId) {
-          css.remove();
-        }
-      });
-    });
-  };
-
-  handleToggleThemeButtonClick = () => {
-    const { light } = this.state;
-    const { onChangeTheme } = this.props;
-    this.setState({ light: !light }, () => {
-      const themeName = this.state.light ? 'default' : 'dark';
-      this.loadTheme(themeName);
-      onChangeTheme && onChangeTheme(themeName);
-    });
   };
 
   render() {
@@ -157,8 +124,12 @@ class TopLevelNav extends React.Component {
     );
 
     return (
-      <DirectionContext.Consumer>
-        {({ direction, handleToggleDirection }) => {
+      <ThemeContext.Consumer>
+        {({
+          theme: [themeName, direction],
+          handleToggleDirection,
+          handleToggleTheme
+        }) => {
           return (
             <div className="top-level-nav">
               <Link to={`${localePath}`}>
@@ -208,10 +179,10 @@ class TopLevelNav extends React.Component {
                   <WithTooltipButton
                     tip="Toggle light/dark theme"
                     className="icon-btn-circle"
-                    onClick={this.handleToggleThemeButtonClick}
+                    onClick={handleToggleTheme}
                   >
                     <Icon
-                      icon={light ? lightOff : lightOn}
+                      icon={themeName === 'dark' ? lightOff : lightOn}
                       svgStyle={svgStyle}
                       size="lg"
                     />
@@ -277,7 +248,7 @@ class TopLevelNav extends React.Component {
             </div>
           );
         }}
-      </DirectionContext.Consumer>
+      </ThemeContext.Consumer>
     );
   }
 }

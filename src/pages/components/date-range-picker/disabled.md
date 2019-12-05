@@ -31,7 +31,7 @@ const Demo = props => (
 
     <hr />
     <p>只允许一个日期范围，其他日期都禁用</p>
-    <DateRangePicker disabledDate={allowedRange('2018-12-01', '2019-10-1')} />
+    <DateRangePicker disabledDate={allowedRange('2018-12-01', '2019-10-01')} />
 
     <hr />
     <p>禁用今天之前的日期</p>

@@ -114,9 +114,9 @@ pre {
 .gitter-open-chat-button {
   color: @btn-default-color !important;
   background: @btn-default-bg;
-  border-top-left-radius: 0.5em;
-  border-bottom-left-radius: 0.5em;
+  border-radius: 0.5em 0 0 0.5em;
   bottom: 40px;
+  left:auto;
   right: 0px;
   padding: 1em 2em;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.12), 0 0 10px rgba(0, 0, 0, 0.06);
@@ -152,15 +152,10 @@ pre {
 }
 
 /* rtl:begin:ignore */
-.gitter-open-chat-button {
-  right: inherit;
-}
-
 .gitter-chat-embed {
   border-left: none;
 }
 /* rtl:end:ignore */
-
 .document-nav .nav-link::before {
   background: @divider-border-color;
 }

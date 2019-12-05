@@ -31,7 +31,7 @@ const Demo = props => (
 
     <hr />
     <p>Only one date range is allowed, other dates are disabled</p>
-    <DateRangePicker disabledDate={allowedRange('2018-12-01', '2019-10-1')} />
+    <DateRangePicker disabledDate={allowedRange('2018-12-01', '2019-10-01')} />
 
     <hr />
     <p>Disable dates before today</p>

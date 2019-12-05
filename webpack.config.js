@@ -11,6 +11,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin;
 const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 const HtmlWebpackHandleCssInjectPlugin = require('./scripts/HtmlWebpackHandleCssInjectPlugin');
+const RTLCSSPlugin = require('./scripts/RTLCSSPlugin');
 const package = require('./package.json');
 
 const iconPath = [
@@ -22,13 +23,12 @@ const resolveToStaticPath = relativePath =>
 
 const { NODE_ENV, STYLE_DEBUG, ENV_LOCALE } = process.env;
 const __PRO__ = NODE_ENV === 'production';
-
+const cssPath = 'resources/css';
 const extractLess = new ExtractTextPlugin('style.[hash].css');
 
 const getStyleLoader = () => {
   const loaders = [
     { loader: 'css-loader' },
-    { loader: 'postcss-loader' },
     {
       loader: 'less-loader',
       options: {
@@ -69,7 +69,7 @@ const themesConfig = multipleThemesCompile({
 @theme-name: ${themeName};`,
   cwd: path.resolve(__dirname, './'), // 将相对目录修改为 webpack.config.js 所在目录
   cacheDir: './src/less/themes-cache', // 输出目录
-  outputName: themeName => `resources/css/${themeName}.css`
+  outputName: themeName => `${cssPath}/${themeName}.css`
 });
 
 module.exports = merge(
@@ -217,6 +217,9 @@ module.exports = merge(
       new LodashModuleReplacementPlugin({
         collections: true,
         paths: true
+      }),
+      new RTLCSSPlugin({
+        path: cssPath
       })
       //new BundleAnalyzerPlugin({ openAnalyzer: false })
     ],
