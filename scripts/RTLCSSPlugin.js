@@ -1,5 +1,7 @@
 const path = require('path');
 const rtlcss = require('rtlcss');
+const postcss = require('postcss');
+const { plugins } = require('../postcss.config');
 
 class RTLCSSPlugin {
   constructor(options) {
@@ -7,7 +9,23 @@ class RTLCSSPlugin {
   }
 
   apply(compiler) {
+    const taskQueue = [];
     compiler.hooks.emit.tapAsync('RTLCSSPlugin', (compilation, callback) => {
+      const postCssProcess = (content, assetName) =>
+        postcss(plugins)
+          .process(content)
+          .then(result => {
+            compilation.assets[assetName] = {
+              source: function() {
+                return result.css;
+              },
+              size: function() {
+                return result.css.length;
+              }
+            };
+          })
+          .catch(error => Promise.reject(error));
+
       try {
         // Explore each chunk (build output):
         compilation.chunks.forEach(chunk => {
@@ -20,24 +38,26 @@ class RTLCSSPlugin {
               (!cssPath || cssPath === directory) &&
               path.extname(filename) === '.css'
             ) {
-              const rtl = rtlcss.process(compilation.assets[filename].source());
-              compilation.assets[
-                `${directory}/${path.basename(filename, '.css')}.rtl.css`
-              ] = {
-                source: function() {
-                  return rtl;
-                },
-                size: function() {
-                  return rtl.length;
-                }
-              };
+              const cssContent = compilation.assets[filename].source();
+              taskQueue.push(postCssProcess(cssContent, filename));
+              taskQueue.push(
+                postCssProcess(
+                  rtlcss.process(cssContent),
+                  `${directory}/${path.basename(filename, '.css')}.rtl.css`
+                )
+              );
             }
           });
         });
       } catch (e) {
         console.error(e);
       }
-      callback();
+
+      Promise.all(taskQueue)
+        .catch(error => {
+          console.log(error);
+        })
+        .finally(() => callback());
     });
   }
 }

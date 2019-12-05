@@ -29,7 +29,6 @@ const extractLess = new ExtractTextPlugin('style.[hash].css');
 const getStyleLoader = () => {
   const loaders = [
     { loader: 'css-loader' },
-    { loader: 'postcss-loader' },
     {
       loader: 'less-loader',
       options: {
