@@ -56,8 +56,9 @@ class RTLCSSPlugin {
       Promise.all(taskQueue)
         .catch(error => {
           console.log(error);
+          callback();
         })
-        .finally(() => callback());
+        .then(() => callback());
     });
   }
 }
