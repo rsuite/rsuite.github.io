@@ -28,9 +28,9 @@ type NatifictionPlacement = 'topStart' | 'topEnd' | 'bottomStart' | 'bottomEnd';
 
 ```ts
 type DataItemType = {
-  value: string;
-  label: React.Node;
-  children?: Array<DataItemType>;
+  value: string; // property value is the value of valueKey 
+  label: React.Node; // property value is the vaue of labelKey
+  children?: Array<DataItemType>; // property value is the value of childrenKey
   groupBy?: string;
 };
 ```
