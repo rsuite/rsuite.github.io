@@ -1,0 +1,10 @@
+**/node_modules
+
+# visual studio code
+.history
+*.log
+
+# misc
+.DS_Store
+npm-debug.log*
+yarn-error.log
