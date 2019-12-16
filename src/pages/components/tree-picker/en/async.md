@@ -61,7 +61,7 @@ class AsynExample extends React.Component {
     }
   }
 
-  handleOnExpand(activeNode, layer, concat) {
+  handleOnExpand(expandItemValues, activeNode, concat) {
     const { data, loadingValues } = this.state;
     if (activeNode.children.length === 0) {
       if (!loadingValues.includes(activeNode.value)) {
