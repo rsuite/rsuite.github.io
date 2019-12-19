@@ -33,6 +33,7 @@ import { Popover, Whisper } from 'rsuite';
 | delay           | number                                                           | Delay Time                          |
 | delayHide       | number                                                           | Hidden delay Time                   |
 | delayShow       | number                                                           | Show Delay Time                     |
+| full            | boolean                                                          | The content full the container      |
 | onBlur          | () => void                                                       | Lose Focus callback function        |
 | onClick         | () => void                                                       | Click on the callback function      |
 | onClose         | ()=>void                                                         | Callback fired when close component |

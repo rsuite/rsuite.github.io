@@ -55,3 +55,4 @@ import { InputPicker } from 'rsuite';
 | toggleComponentClass | React.ElementType `('a')`                                                           | You can use a custom element for this component        |
 | value                | string                                                                              | Value (Controlled)                                     |
 | valueKey             | string `('value')`                                                                  | Set option value 'key' in 'data'                       |
+| virtualized          | boolean `(true)`                                                                    | Whether using Virtualized List                         |
