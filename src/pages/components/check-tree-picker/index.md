@@ -29,8 +29,8 @@ import { CheckTreePicker } from 'rsuite';
 | countable               | boolean `(true)`                                                                                           | 是否显示已选项的计数                                                            |
 | data \*                 | Array&lt;[DataItemType](#types)&gt;                                                                        | tree 数据                                                                       |
 | defaultExpandAll        | boolean                                                                                                    | 默认展开所有节点                                                                |
-| defaultValue            | string[]                                                                                                   | 默认选中的值                                                                    |
 | defaultExpandItemValues | any []                                                                                                     | 设置默认展开节点的值                                                            |
+| defaultValue            | string[]                                                                                                   | 默认选中的值                                                                    |
 | disabled                | boolean                                                                                                    | 是否禁用 Picker                                                                 |
 | disabledItemValues      | string[]                                                                                                   | 禁用选项                                                                        |
 | expandItemValues        | any []                                                                                                     | 设置展开节点的值（受控）                                                        |
@@ -39,8 +39,8 @@ import { CheckTreePicker } from 'rsuite';
 | menuClassName           | string                                                                                                     | 选项菜单的 className                                                            |
 | menuStyle               | React.CSSProperties                                                                                        | 应用于菜单 DOM 节点的 style                                                     |
 | onChange                | (values:string[])=>void                                                                                    | 数据改变的回调函数                                                              |
-| onClose                 | ()=>void                                                                                                   | 关闭的回调函数                                                                  |
 | onClean                 | (event:SyntheticEvent)=>void                                                                               | 值清理时触发回调                                                                |
+| onClose                 | ()=>void                                                                                                   | 关闭的回调函数                                                                  |
 | onExpand                | (expandItemValues: any [], activeNode:[DataItemType](#types), concat:(data, children)=>Array)=>void        | 树节点展示时的回调                                                              |
 | onOpen                  | ()=>void                                                                                                   | 展开的回调函数                                                                  |
 | onSearch                | (searchKeyword:string, event)=void                                                                         | 搜索回调函数                                                                    |

@@ -54,3 +54,4 @@ import { TagPicker } from 'rsuite';
 | toggleComponentClass | React.ElementType `('a')`                                             | You can use a custom element for this component         |
 | value                | any                                                                   | Specifies the values of the selected items (Controlled) |
 | valueKey             | string `('value')`                                                    | Set value key in data                                   |
+| virtualized          | boolean `(true)`                                                      | Whether using Virtualized List                          |

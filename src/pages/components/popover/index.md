@@ -33,6 +33,7 @@ import { Popover, Whisper } from 'rsuite';
 | delay           | number                                                           | 延迟时间                        |
 | delayHide       | number                                                           | 隐藏的延迟时间                  |
 | delayShow       | number                                                           | 展示的延迟时间                  |
+| full            | boolean                                                          | 撑满容器                        |
 | onBlur          | () => void                                                       | 失去焦点回调函数                |
 | onClick         | () => void                                                       | 点击的回调函数                  |
 | onClose         | ()=>void                                                         | 关闭回调函数                    |
