@@ -24,6 +24,7 @@ ReactDOM.render(
 | en_US         | American English    |
 | ko_KR         | Korean              |
 | pt_BR         | Portuguese (Brazil) |
+| ru_RU         | Russian             |
 | zh_CN         | Simplified Chinese  |
 | zh_TW         | traditional Chinese |
 
