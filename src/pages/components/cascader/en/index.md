@@ -56,3 +56,4 @@ import { Cascader } from 'rsuite';
 | toggleComponentClass | React.ElementType `('a')`                                                               | You can use a custom element for this component                  |
 | value                | string                                                                                  | Specifies the values of the selected items(Controlled)           |
 | valueKey             | string `('value')`                                                                      | Set value key in data                                            |
+| parentSelectable     | boolean                                                                                 | Make parent node selectable                                      |

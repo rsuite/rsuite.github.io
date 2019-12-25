@@ -4,7 +4,7 @@ import createComponentExample from '@/utils/createComponentExample';
 
 export default createComponentExample({
   id: 'Affix',
-  examples: ['basic', 'top'],
+  examples: ['container'],
   dependencies: {
     ButtonToolbar,
     Button,
