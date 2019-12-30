@@ -4,7 +4,7 @@
 
 ```js
 const instance = (
-  <div>
+  <div style={{ padding: 20 }}>
     <Slider defaultValue={50} min={10} step={10} max={100} graduated />
 
     <br />
