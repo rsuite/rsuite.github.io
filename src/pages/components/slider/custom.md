@@ -11,7 +11,7 @@ class CustomSlider extends React.Component {
     };
   }
   render() {
-    const labels = ['无', '精准', '相似', '模糊'];
+    const labels = ['A', 'B', 'C', 'D'];
     const { value } = this.state;
     const handleStyle = {
       color: '#fff',
@@ -21,7 +21,7 @@ class CustomSlider extends React.Component {
     };
 
     return (
-      <div className="doc-example">
+      <div >
         <div style={{ width: 200, marginLeft: 20 }}>
           <Slider
             min={0}

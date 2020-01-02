@@ -1,40 +1,131 @@
-### 显示值
+### 显示值(受控的)
 
 <!-- start-code -->
 
 ```js
-class ValueSlider extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: 0
-    };
-  }
-
-  render() {
-    const { value } = this.state;
-    return (
-      <div className="doc-example">
-        <Row>
-          <Col md={6}>
-            <Slider
-              style={{ marginTop: 16 }}
-              value={value}
-              onChange={value => {
-                console.log(value);
-                this.setState({ value });
-              }}
-            />
-          </Col>
-          <Col md={2}>
-            <Input value={value} />
-          </Col>
-        </Row>
-      </div>
-    );
-  }
+function Example1() {
+  const [value, setValue] = React.useState(0);
+  return (
+    <Row>
+      <Col md={10}>
+        <Slider
+          progress
+          style={{ marginTop: 16 }}
+          value={value}
+          onChange={value => {
+            setValue(value);
+          }}
+        />
+      </Col>
+      <Col md={4}>
+        <InputNumber
+          min={0}
+          max={100}
+          value={value}
+          onChange={value => {
+            setValue(value);
+          }}
+        />
+      </Col>
+    </Row>
+  );
 }
-ReactDOM.render(<ValueSlider />);
+
+function Example2() {
+  const [value, setValue] = React.useState([10, 50]);
+  return (
+    <Row>
+      <Col md={10}>
+        <RangeSlider
+          progress
+          style={{ marginTop: 16 }}
+          value={value}
+          onChange={value => {
+            setValue(value);
+          }}
+        />
+      </Col>
+      <Col md={8}>
+        <InputGroup>
+          <InputNumber
+            min={0}
+            max={100}
+            value={value[0]}
+            onChange={nextValue => {
+              const [start, end] = value;
+              if (nextValue > end) {
+                return;
+              }
+              setValue([nextValue, end]);
+            }}
+          />
+          <InputGroup.Addon>to</InputGroup.Addon>
+          <InputNumber
+            min={0}
+            max={100}
+            value={value[1]}
+            onChange={nextValue => {
+              const [start, end] = value;
+              if (start > nextValue) {
+                return;
+              }
+              setValue([start, nextValue]);
+            }}
+          />
+        </InputGroup>
+      </Col>
+    </Row>
+  );
+}
+
+function Example3() {
+  const [value, setValue] = React.useState([10, 100]);
+  return (
+    <Row>
+      <p>固定其中一个选项</p>
+      <Col md={10}>
+        <RangeSlider
+          progress
+          style={{ marginTop: 16 }}
+          value={value}
+          onChange={value => {
+            setValue([value[0], 100]);
+          }}
+        />
+      </Col>
+      <Col md={8}>
+        <InputGroup>
+          <InputNumber
+            min={0}
+            max={100}
+            value={value[0]}
+            onChange={nextValue => {
+              const [start, end] = value;
+              if (nextValue > end) {
+                return;
+              }
+              setValue([nextValue, end]);
+            }}
+          />
+          <InputGroup.Addon>to</InputGroup.Addon>
+          <InputNumber min={0} max={100} value={value[1]} disabled />
+        </InputGroup>
+      </Col>
+    </Row>
+  );
+}
+
+const instance = (
+  <div>
+    <Example1 />
+    <hr />
+    <Example2 />
+    <hr />
+    <Example3 />
+  </div>
+);
+
+ReactDOM.render(instance);
 ```
 
 <!-- end-code -->

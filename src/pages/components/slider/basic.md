@@ -3,7 +3,7 @@
 <!--start-code-->
 
 ```js
-const instance = <Slider style={{ width: 100 }} />;
+const instance = <Slider />;
 ReactDOM.render(instance);
 ```
 
