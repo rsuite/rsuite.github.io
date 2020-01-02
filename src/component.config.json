@@ -407,7 +407,7 @@
     "id": "slider",
     "name": "Slider",
     "title": "滑动输入控件",
-    "components": ["Slider"],
+    "components": ["Slider", "RangeSlider"],
     "designHash": {
       "default": "61",
       "dark": "61"
