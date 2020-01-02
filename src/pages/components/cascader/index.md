@@ -57,3 +57,4 @@ import { Cascader } from 'rsuite';
 | toggleComponentClass | React.ElementType `('a')`                                                               | 为组件自定义元素类型                 |
 | value                | string                                                                                  | 设置值（受控）                       |
 | valueKey             | string `('value')`                                                                      | 设置选项值在 `data` 中的 `key`       |
+| parentSelectable     | boolean                                                                                 | 设置父节点为可选                     |

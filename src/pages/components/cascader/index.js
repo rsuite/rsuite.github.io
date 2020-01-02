@@ -12,6 +12,7 @@ export default createComponentExample({
     'size',
     'block',
     'placement',
+    'parent-selectable',
     'custom',
     'disabled',
     'async',
