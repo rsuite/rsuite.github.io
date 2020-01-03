@@ -4,7 +4,7 @@
 
 ## 使用步骤
 
-### 1.HTML
+### 1.HTML 设置
 
 确保在 body 上设置了 dir 属性：
 
@@ -12,22 +12,27 @@
 <body dir="rtl"></body>
 ```
 
-## 2.IntlProvider
+### 2.配置 IntlProvider
 
 在 IntlProvider 组件上设置 rtl 属性，配置所有组件支持 RTL。
 
 ```jsx
-ReactDOM.render(
-  <IntlProvider rtl>
-    <App />
-  </IntlProvider>,
-  document.getElementById('root')
-);
+function RTL(props) {
+  return <IntlProvider rtl>{props.children}</IntlProvider>;
+}
 ```
 
-## 3.postcss-rtl
+### 3.CSS 后处理
 
-您需要这个通过 `postcss-rtl`插件来翻转样式。
+CSS 的后处理我们推荐两种方式，您可以根据自己开发环境的情况，任选其中一种。
+
+**方式 1：RTLCSS 框架**
+
+使用 `rtlcss` 可以为 RTL 属性规则生成独立的 CSS 文件。 详细的使用方式参考: https://rtlcss.com/learn/
+
+**方式 2：PostCSS-RTL 插件**
+
+如果在您的开发环境中使用了 `postcss`, 就可以通过 `postcss-rtl` 生成具有翻转属性的 RTL 规则，它会让两个规则生成在同一个文件中。
 
 ```
 npm i postcss

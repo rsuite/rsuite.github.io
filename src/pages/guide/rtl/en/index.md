@@ -2,7 +2,7 @@
 
 In order to support the habits of languages ​​such as Arabic and Hebrew, the UI of the language read from right to left (RTL).
 
-## Usage
+## Steps
 
 ### 1.HTML
 
@@ -12,22 +12,27 @@ Make sure the `dir` attribute is set on the body:
 <body dir="rtl"></body>
 ```
 
-## 2.IntlProvider
+### 2.IntlProvider
 
-Set the rtl attribute on the IntlProvider component to configure all components to support RTL.
+Set the `rtl` props on the IntlProvider component to configure all components to support RTL.
 
 ```jsx
-ReactDOM.render(
-  <IntlProvider rtl>
-    <App />
-  </IntlProvider>,
-  document.getElementById('root')
-);
+function RTL(props) {
+  return <IntlProvider rtl>{props.children}</IntlProvider>;
+}
 ```
 
-## 3.postcss-rtl
+### 3.Post-Processing CSS
 
-You need to flip the style with the `postcss-rtl` plugin.
+We recommend two methods for CSS post-processing, you can choose one of them according to the situation of your development environment.
+
+- **Method 1: RTLCSS framework**
+
+Use `rtlcss` to generate separate CSS files for RTL attribute rules. Detailed usage reference: https://rtlcss.com/learn/
+
+- **Method 2: PostCSS-RTL plugin**
+
+If you use postcss in your development environment, you can use postcss-rtl to generate RTL rules with rollover properties. Use one file for both directions.
 
 ```bash
 npm i postcss
