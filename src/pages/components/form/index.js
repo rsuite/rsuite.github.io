@@ -78,6 +78,7 @@ export default createComponentExample({
     'help-block',
     'error-message',
     'read-only',
+    'form-check-default',
     'form-check',
     'form-check-async',
     'custom-form-control',

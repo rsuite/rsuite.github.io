@@ -1,7 +1,3 @@
-## 数据校验
-
----
-
 ### 数据模型
 
 表单校验需要用到 `<Form>`, `<FormControl>` 组件， 和 `Schema.Model` 。
